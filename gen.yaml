@@ -1,5 +1,7 @@
 configVersion: 1.0.0
 generation:
+  baseServerUrl: https://api.whylabsapp.com
+  telemetryEnabled: false
   comments:
     disableComments: false
     omitDescriptionIfSummaryPresent: false
@@ -9,12 +11,12 @@ generation:
   tagNamespacingDisabled: false
 java:
   version: 0.0.1
-  artifactID: Songbird
-  companyEmail: info@mycompany.com
-  companyName: My Company
-  companyURL: www.mycompany.com
+  artifactID: WhyLabs
+  companyEmail: info@whylabs.ai
+  companyName: WhyLabs
+  companyURL: www.whylabs.ai
   githubURL: github.com/owner/repo
-  groupID: demo
+  groupID: ai.whylabs
   maxMethodParams: 0
   ossrhURL: https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/
   projectName: Songbird
