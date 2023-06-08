@@ -24,7 +24,7 @@ public class Application {
                 .build();
 
             PostMonitorConfigValidationJobResponse res = sdk.admin.postMonitorConfigValidationJob(new PostMonitorConfigValidationJobSecurity("provident") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {

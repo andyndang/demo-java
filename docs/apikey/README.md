@@ -38,7 +38,7 @@ public class Application {
             }};            
 
             CreateApiKeyResponse res = sdk.apiKey.createApiKey(req, new CreateApiKeySecurity("quibusdam") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -74,7 +74,7 @@ public class Application {
             GetApiKeyRequest req = new GetApiKeyRequest("fh4dUNV3WQ", "org-123");            
 
             GetApiKeyResponse res = sdk.apiKey.getApiKey(req, new GetApiKeySecurity("unde") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -112,7 +112,7 @@ public class Application {
             }};            
 
             ListApiKeysResponse res = sdk.apiKey.listApiKeys(req, new ListApiKeysSecurity("nulla") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -148,7 +148,7 @@ public class Application {
             RevokeApiKeyRequest req = new RevokeApiKeyRequest("HMiFAgQeNb", "org-123", "user-123");            
 
             RevokeApiKeyResponse res = sdk.apiKey.revokeApiKey(req, new RevokeApiKeySecurity("corrupti") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {

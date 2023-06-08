@@ -73,7 +73,7 @@ public class Application {
             }};            
 
             CreateMembershipResponse res = sdk.internal.createMembership(req, new CreateMembershipSecurity("qui") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -119,7 +119,7 @@ public class Application {
             }};            
 
             CreateOrganizationResponse res = sdk.internal.createOrganization(req, new CreateOrganizationSecurity("cum") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -155,7 +155,7 @@ public class Application {
             ai.whylabs.WhyLabs.models.shared.CreateUserRequest req = new CreateUserRequest("esse");            
 
             CreateUserResponse res = sdk.internal.createUser(req, new CreateUserSecurity("ipsum") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -191,7 +191,7 @@ public class Application {
             DeleteOrganizationRequest req = new DeleteOrganizationRequest("excepturi");            
 
             DeleteOrganizationResponse res = sdk.internal.deleteOrganization(req, new DeleteOrganizationSecurity("aspernatur") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -227,7 +227,7 @@ public class Application {
             GetAWSMarketplaceMetadataRequest req = new GetAWSMarketplaceMetadataRequest("perferendis");            
 
             GetAWSMarketplaceMetadataResponse res = sdk.internal.getAWSMarketplaceMetadata(req, new GetAWSMarketplaceMetadataSecurity("ad") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -263,7 +263,7 @@ public class Application {
             GetApiKeyRequest req = new GetApiKeyRequest("fh4dUNV3WQ", "org-123");            
 
             GetApiKeyResponse res = sdk.internal.getApiKey(req, new GetApiKeySecurity("natus") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -302,7 +302,7 @@ public class Application {
             }};            
 
             GetConnectionResponse res = sdk.internal.getConnection(req, new GetConnectionSecurity("dolor") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -338,7 +338,7 @@ public class Application {
             GetDefaultMembershipForEmailRequest req = new GetDefaultMembershipForEmailRequest("natus");            
 
             GetDefaultMembershipForEmailResponse res = sdk.internal.getDefaultMembershipForEmail(req, new GetDefaultMembershipForEmailSecurity("laboriosam") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -374,7 +374,7 @@ public class Application {
             GetFeatureFlagsRequest req = new GetFeatureFlagsRequest("hic", "saepe");            
 
             GetFeatureFlagsResponse res = sdk.internal.getFeatureFlags(req, new GetFeatureFlagsSecurity("fuga") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -410,7 +410,7 @@ public class Application {
             GetMembershipsRequest req = new GetMembershipsRequest("in");            
 
             GetMembershipsResponse res = sdk.internal.getMemberships(req, new GetMembershipsSecurity("corporis") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -446,7 +446,7 @@ public class Application {
             GetMembershipsByEmailRequest req = new GetMembershipsByEmailRequest("iste");            
 
             GetMembershipsByEmailResponse res = sdk.internal.getMembershipsByEmail(req, new GetMembershipsByEmailSecurity("iure") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -482,7 +482,7 @@ public class Application {
             GetMembershipsByOrgRequest req = new GetMembershipsByOrgRequest("saepe");            
 
             GetMembershipsByOrgResponse res = sdk.internal.getMembershipsByOrg(req, new GetMembershipsByOrgSecurity("quidem") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -518,7 +518,7 @@ public class Application {
             GetMonitorConfigV3VersionRequest req = new GetMonitorConfigV3VersionRequest("model-123", "org-123", "4920545486e2a4cdf0f770c09748e663");            
 
             GetMonitorConfigV3VersionResponse res = sdk.internal.getMonitorConfigV3Version(req, new GetMonitorConfigV3VersionSecurity("architecto") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -554,7 +554,7 @@ public class Application {
             GetNotificationSettingsRequest req = new GetNotificationSettingsRequest("ipsa");            
 
             GetNotificationSettingsResponse res = sdk.internal.getNotificationSettings(req, new GetNotificationSettingsSecurity("reiciendis") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -590,7 +590,7 @@ public class Application {
             GetOrganizationRequest req = new GetOrganizationRequest("est");            
 
             GetOrganizationResponse res = sdk.internal.getOrganization(req, new GetOrganizationSecurity("mollitia") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -626,7 +626,7 @@ public class Application {
             GetUserRequest req = new GetUserRequest("laborum");            
 
             GetUserResponse res = sdk.internal.getUser(req, new GetUserSecurity("dolores") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -662,7 +662,7 @@ public class Application {
             GetUserByEmailRequest req = new GetUserByEmailRequest("dolorem");            
 
             GetUserByEmailResponse res = sdk.internal.getUserByEmail(req, new GetUserByEmailSecurity("corporis") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -700,7 +700,7 @@ public class Application {
             }};            
 
             ListApiKeysResponse res = sdk.internal.listApiKeys(req, new ListApiKeysSecurity("explicabo") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -739,7 +739,7 @@ public class Application {
             }};            
 
             ListJobsResponse res = sdk.internal.listJobs(req, new ListJobsSecurity("omnis") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -775,7 +775,7 @@ public class Application {
             ListMonitorConfigV3VersionsRequest req = new ListMonitorConfigV3VersionsRequest("model-123", "org-123");            
 
             ListMonitorConfigV3VersionsResponse res = sdk.internal.listMonitorConfigV3Versions(req, new ListMonitorConfigV3VersionsSecurity("nemo") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -808,7 +808,7 @@ public class Application {
                 .build();
 
             ListOrganizationsResponse res = sdk.internal.listOrganizations(new ListOrganizationsSecurity("minima") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -846,7 +846,7 @@ public class Application {
             ListSegmentsRequest req = new ListSegmentsRequest("model-123", "org-123");            
 
             ListSegmentsResponse res = sdk.internal.listSegments(req, new ListSegmentsSecurity("excepturi") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -895,7 +895,7 @@ public class Application {
             }};            
 
             PartiallyUpdateOrgResponse res = sdk.internal.partiallyUpdateOrg(req, new PartiallyUpdateOrgSecurity("culpa") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -941,7 +941,7 @@ public class Application {
             }};            
 
             PartiallyUpdateOrganizationResponse res = sdk.internal.partiallyUpdateOrganization(req, new PartiallyUpdateOrganizationSecurity("architecto") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -974,7 +974,7 @@ public class Application {
                 .build();
 
             PostMonitorConfigValidationJobResponse res = sdk.internal.postMonitorConfigValidationJob(new PostMonitorConfigValidationJobSecurity("mollitia") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -1012,7 +1012,7 @@ public class Application {
             }};            
 
             ProvisionAWSMarketplaceNewUserResponse res = sdk.internal.provisionAWSMarketplaceNewUser(req, new ProvisionAWSMarketplaceNewUserSecurity("mollitia") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -1048,7 +1048,7 @@ public class Application {
             ai.whylabs.WhyLabs.models.shared.ProvisionDatabricksConnectionRequest req = new ProvisionDatabricksConnectionRequest("occaecati", false, "numquam");            
 
             ProvisionDatabricksConnectionResponse res = sdk.internal.provisionDatabricksConnection(req, new ProvisionDatabricksConnectionSecurity("commodi") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -1087,7 +1087,7 @@ public class Application {
             }};            
 
             ProvisionNewUserResponse res = sdk.internal.provisionNewUser(req, new ProvisionNewUserSecurity("quia") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -1132,7 +1132,7 @@ public class Application {
                             }};, "model-123", "org-123");            
 
             PutRequestMonitorRunConfigResponse res = sdk.internal.putRequestMonitorRunConfig(req, new PutRequestMonitorRunConfigSecurity("animi") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -1171,7 +1171,7 @@ public class Application {
             }};            
 
             RefreshConnectionResponse res = sdk.internal.refreshConnection(req, new RefreshConnectionSecurity("quo") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -1210,7 +1210,7 @@ public class Application {
             }};            
 
             RegisterDatabricksConnectionResponse res = sdk.internal.registerDatabricksConnection(req, new RegisterDatabricksConnectionSecurity("temporibus") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -1246,7 +1246,7 @@ public class Application {
             ai.whylabs.WhyLabs.models.shared.RemoveMembershipRequest req = new RemoveMembershipRequest("laborum", "quasi");            
 
             RemoveMembershipByEmailResponse res = sdk.internal.removeMembershipByEmail(req, new RemoveMembershipByEmailSecurity("reiciendis") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -1285,7 +1285,7 @@ public class Application {
             }};            
 
             RunJobResponse res = sdk.internal.runJob(req, new RunJobSecurity("praesentium") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -1321,7 +1321,7 @@ public class Application {
             ai.whylabs.WhyLabs.models.shared.SetDefaultMembershipRequest req = new SetDefaultMembershipRequest("voluptatibus", "ipsa");            
 
             SetDefaultMembershipResponse res = sdk.internal.setDefaultMembership(req, new SetDefaultMembershipSecurity("omnis") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -1398,7 +1398,7 @@ public class Application {
             }};            
 
             UpdateConnectionResponse res = sdk.internal.updateConnection(req, new UpdateConnectionSecurity("reprehenderit") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -1435,7 +1435,7 @@ public class Application {
             ai.whylabs.WhyLabs.models.shared.UpdateMembershipRequest req = new UpdateMembershipRequest("ut", "maiores", Role.ADMIN);            
 
             UpdateMembershipByEmailResponse res = sdk.internal.updateMembershipByEmail(req, new UpdateMembershipByEmailSecurity("corporis") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -1494,7 +1494,7 @@ public class Application {
                             }};, "praesentium");            
 
             UpdateNotificationSettingsResponse res = sdk.internal.updateNotificationSettings(req, new UpdateNotificationSettingsSecurity("rem") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -1544,7 +1544,7 @@ public class Application {
             }};            
 
             UpdateOrgResponse res = sdk.internal.updateOrg(req, new UpdateOrgSecurity("repudiandae") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -1589,7 +1589,7 @@ public class Application {
             }};            
 
             UpdateOrganizationResponse res = sdk.internal.updateOrganization(req, new UpdateOrganizationSecurity("itaque") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -1627,7 +1627,7 @@ public class Application {
             }};            
 
             UpdateUserResponse res = sdk.internal.updateUser(req, new UpdateUserSecurity("est") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -1663,7 +1663,7 @@ public class Application {
             WhyLabsSearchRequest req = new WhyLabsSearchRequest("quibusdam");            
 
             WhyLabsSearchResponse res = sdk.internal.whyLabsSearch(req, new WhyLabsSearchSecurity("explicabo") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -1703,7 +1703,7 @@ public class Application {
             }};            
 
             WhyLabsSearchIndexingResponse res = sdk.internal.whyLabsSearchIndexing(req, new WhyLabsSearchIndexingSecurity("quibusdam") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {

@@ -34,7 +34,7 @@ public class Application {
             }};            
 
             GetConnectionResponse res = sdk.databricks.getConnection(req, new GetConnectionSecurity("error") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -73,7 +73,7 @@ public class Application {
             }};            
 
             ListJobsResponse res = sdk.databricks.listJobs(req, new ListJobsSecurity("iure") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -112,7 +112,7 @@ public class Application {
             }};            
 
             RefreshConnectionResponse res = sdk.databricks.refreshConnection(req, new RefreshConnectionSecurity("ipsa") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -151,7 +151,7 @@ public class Application {
             }};            
 
             RunJobResponse res = sdk.databricks.runJob(req, new RunJobSecurity("molestiae") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -196,7 +196,7 @@ public class Application {
             }};            
 
             UpdateConnectionResponse res = sdk.databricks.updateConnection(req, new UpdateConnectionSecurity("iusto") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {

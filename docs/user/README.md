@@ -30,7 +30,7 @@ public class Application {
             ai.whylabs.WhyLabs.models.shared.CreateUserRequest req = new CreateUserRequest("cum");            
 
             CreateUserResponse res = sdk.user.createUser(req, new CreateUserSecurity("voluptate") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -66,7 +66,7 @@ public class Application {
             GetUserRequest req = new GetUserRequest("dignissimos");            
 
             GetUserResponse res = sdk.user.getUser(req, new GetUserSecurity("reiciendis") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -102,7 +102,7 @@ public class Application {
             GetUserByEmailRequest req = new GetUserByEmailRequest("amet");            
 
             GetUserByEmailResponse res = sdk.user.getUserByEmail(req, new GetUserByEmailSecurity("dolorum") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -140,7 +140,7 @@ public class Application {
             }};            
 
             UpdateUserResponse res = sdk.user.updateUser(req, new UpdateUserSecurity("ipsa") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {

@@ -29,7 +29,7 @@ public class Application {
             DeleteDatasetMetadataRequest req = new DeleteDatasetMetadataRequest("model-123", "org-123");            
 
             DeleteDatasetMetadataResponse res = sdk.datasetMetadata.deleteDatasetMetadata(req, new DeleteDatasetMetadataSecurity("excepturi") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -65,7 +65,7 @@ public class Application {
             GetDatasetMetadataRequest req = new GetDatasetMetadataRequest("model-123", "org-123");            
 
             GetDatasetMetadataResponse res = sdk.datasetMetadata.getDatasetMetadata(req, new GetDatasetMetadataSecurity("nisi") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -101,7 +101,7 @@ public class Application {
             PutDatasetMetadataRequest req = new PutDatasetMetadataRequest("recusandae", "model-123", "org-123");            
 
             PutDatasetMetadataResponse res = sdk.datasetMetadata.putDatasetMetadata(req, new PutDatasetMetadataSecurity("temporibus") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {

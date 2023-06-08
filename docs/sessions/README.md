@@ -82,7 +82,7 @@ public class Application {
             ClaimGuestSessionRequest req = new ClaimGuestSessionRequest("iste", "dolorum");            
 
             ClaimGuestSessionResponse res = sdk.sessions.claimGuestSession(req, new ClaimGuestSessionSecurity("deleniti") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -239,7 +239,7 @@ public class Application {
             GetSessionRequest req = new GetSessionRequest("hic");            
 
             GetSessionResponse res = sdk.sessions.getSession(req, new GetSessionSecurity("excepturi") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {

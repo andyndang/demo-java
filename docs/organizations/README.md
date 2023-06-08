@@ -45,7 +45,7 @@ public class Application {
             }};            
 
             CreateOrganizationResponse res = sdk.organizations.createOrganization(req, new CreateOrganizationSecurity("ea") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -81,7 +81,7 @@ public class Application {
             DeleteOrganizationRequest req = new DeleteOrganizationRequest("excepturi");            
 
             DeleteOrganizationResponse res = sdk.organizations.deleteOrganization(req, new DeleteOrganizationSecurity("odit") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -117,7 +117,7 @@ public class Application {
             GetAWSMarketplaceMetadataRequest req = new GetAWSMarketplaceMetadataRequest("ea");            
 
             GetAWSMarketplaceMetadataResponse res = sdk.organizations.getAWSMarketplaceMetadata(req, new GetAWSMarketplaceMetadataSecurity("accusantium") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -153,7 +153,7 @@ public class Application {
             GetOrganizationRequest req = new GetOrganizationRequest("ab");            
 
             GetOrganizationResponse res = sdk.organizations.getOrganization(req, new GetOrganizationSecurity("maiores") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -186,7 +186,7 @@ public class Application {
                 .build();
 
             ListOrganizationsResponse res = sdk.organizations.listOrganizations(new ListOrganizationsSecurity("quidem") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -235,7 +235,7 @@ public class Application {
             }};            
 
             PartiallyUpdateOrgResponse res = sdk.organizations.partiallyUpdateOrg(req, new PartiallyUpdateOrgSecurity("autem") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -281,7 +281,7 @@ public class Application {
             }};            
 
             PartiallyUpdateOrganizationResponse res = sdk.organizations.partiallyUpdateOrganization(req, new PartiallyUpdateOrganizationSecurity("pariatur") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -331,7 +331,7 @@ public class Application {
             }};            
 
             UpdateOrgResponse res = sdk.organizations.updateOrg(req, new UpdateOrgSecurity("perferendis") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -376,7 +376,7 @@ public class Application {
             }};            
 
             UpdateOrganizationResponse res = sdk.organizations.updateOrganization(req, new UpdateOrganizationSecurity("aut") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {

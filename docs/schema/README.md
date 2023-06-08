@@ -27,7 +27,7 @@ public class Application {
             GetMonitorConfigSchemaRequest req = new GetMonitorConfigSchemaRequest("org-123");            
 
             GetMonitorConfigSchemaResponse res = sdk.schema.getMonitorConfigSchema(req, new GetMonitorConfigSchemaSecurity("facilis") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {

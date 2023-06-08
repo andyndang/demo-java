@@ -13,7 +13,8 @@ class SDKConfiguration {
 	public String serverUrl;
 	public int serverIdx = 0;
 	public String language = "java";
-	public String sdkVersion = "1.0.0";
-	public String genVersion = "2.35.9";
+	public String openapiDocVersion = "0.1";
+	public String sdkVersion = "1.1.0";
+	public String genVersion = "2.37.0";
 	
 }

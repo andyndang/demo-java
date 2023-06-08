@@ -27,7 +27,7 @@ public class Application {
             GetFeatureFlagsRequest req = new GetFeatureFlagsRequest("hic", "optio");            
 
             GetFeatureFlagsResponse res = sdk.featureFlags.getFeatureFlags(req, new GetFeatureFlagsSecurity("totam") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {

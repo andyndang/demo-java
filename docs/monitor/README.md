@@ -39,7 +39,7 @@ public class Application {
             DeleteAnalyzerRequest req = new DeleteAnalyzerRequest("drift-analyzer", "model-123", "org-123");            
 
             DeleteAnalyzerResponse res = sdk.monitor.deleteAnalyzer(req, new DeleteAnalyzerSecurity("nihil") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -75,7 +75,7 @@ public class Application {
             DeleteMonitorRequest req = new DeleteMonitorRequest("model-123", "drift-monitor-123", "org-123");            
 
             DeleteMonitorResponse res = sdk.monitor.deleteMonitor(req, new DeleteMonitorSecurity("magnam") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -111,7 +111,7 @@ public class Application {
             GetAnalyzerRequest req = new GetAnalyzerRequest("drift-analyzer", "model-123", "org-123");            
 
             GetAnalyzerResponse res = sdk.monitor.getAnalyzer(req, new GetAnalyzerSecurity("distinctio") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -147,7 +147,7 @@ public class Application {
             GetMonitorRequest req = new GetMonitorRequest("model-123", "drift-monitor-123", "org-123");            
 
             GetMonitorResponse res = sdk.monitor.getMonitor(req, new GetMonitorSecurity("id") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -186,7 +186,7 @@ public class Application {
             }};            
 
             GetMonitorConfigV3Response res = sdk.monitor.getMonitorConfigV3(req, new GetMonitorConfigV3Security("labore") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -222,7 +222,7 @@ public class Application {
             GetMonitorConfigV3VersionRequest req = new GetMonitorConfigV3VersionRequest("model-123", "org-123", "4920545486e2a4cdf0f770c09748e663");            
 
             GetMonitorConfigV3VersionResponse res = sdk.monitor.getMonitorConfigV3Version(req, new GetMonitorConfigV3VersionSecurity("labore") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -258,7 +258,7 @@ public class Application {
             ListMonitorConfigV3VersionsRequest req = new ListMonitorConfigV3VersionsRequest("model-123", "org-123");            
 
             ListMonitorConfigV3VersionsResponse res = sdk.monitor.listMonitorConfigV3Versions(req, new ListMonitorConfigV3VersionsSecurity("suscipit") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -294,7 +294,7 @@ public class Application {
             PatchMonitorConfigV3Request req = new PatchMonitorConfigV3Request("natus", "model-123", "org-123");            
 
             PatchMonitorConfigV3Response res = sdk.monitor.patchMonitorConfigV3(req, new PatchMonitorConfigV3Security("nobis") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -330,7 +330,7 @@ public class Application {
             PutAnalyzerRequest req = new PutAnalyzerRequest("eum", "drift-analyzer", "model-123", "org-123");            
 
             PutAnalyzerResponse res = sdk.monitor.putAnalyzer(req, new PutAnalyzerSecurity("vero") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -366,7 +366,7 @@ public class Application {
             PutMonitorRequest req = new PutMonitorRequest("aspernatur", "model-123", "drift-monitor-123", "org-123");            
 
             PutMonitorResponse res = sdk.monitor.putMonitor(req, new PutMonitorSecurity("architecto") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -402,7 +402,7 @@ public class Application {
             PutMonitorConfigV3Request req = new PutMonitorConfigV3Request("magnam", "model-123", "org-123");            
 
             PutMonitorConfigV3Response res = sdk.monitor.putMonitorConfigV3(req, new PutMonitorConfigV3Security("et") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -448,7 +448,7 @@ public class Application {
                             }};, "model-123", "org-123");            
 
             PutRequestMonitorRunConfigResponse res = sdk.monitor.putRequestMonitorRunConfig(req, new PutRequestMonitorRunConfigSecurity("sint") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -486,7 +486,7 @@ public class Application {
             }};            
 
             ValidateMonitorConfigV3Response res = sdk.monitor.validateMonitorConfigV3(req, new ValidateMonitorConfigV3Security("mollitia") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {

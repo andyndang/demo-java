@@ -42,7 +42,7 @@ public class Application {
                             }};, "model-123", "org-123");            
 
             LogAsyncResponse res = sdk.log.logAsync(req, new LogAsyncSecurity("perferendis") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -82,7 +82,7 @@ public class Application {
                             }};, "model-123", "org-123");            
 
             LogReferenceResponse res = sdk.log.logReference(req, new LogReferenceSecurity("ipsam") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {

@@ -28,7 +28,7 @@ public class Application {
             GetColumnWeightsRequest req = new GetColumnWeightsRequest("model-123", "org-123");            
 
             GetColumnWeightsResponse res = sdk.featureWeights.getColumnWeights(req, new GetColumnWeightsSecurity("occaecati") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
@@ -64,7 +64,7 @@ public class Application {
             PutColumnWeightsRequest req = new PutColumnWeightsRequest("fugit", "model-123", "org-123");            
 
             PutColumnWeightsResponse res = sdk.featureWeights.putColumnWeights(req, new PutColumnWeightsSecurity("deleniti") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
+                apiKeyAuth = "";
             }});
 
             if (res.statusCode == 200) {
