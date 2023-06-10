@@ -59,9 +59,9 @@ public class NotificationAction {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payload")
-    public java.util.Map<String, Object> payload;
+    public NotificationActionPayload payload;
 
-    public NotificationAction withPayload(java.util.Map<String, Object> payload) {
+    public NotificationAction withPayload(NotificationActionPayload payload) {
         this.payload = payload;
         return this;
     }

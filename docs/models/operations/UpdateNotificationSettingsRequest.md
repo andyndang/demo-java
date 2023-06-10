@@ -1,0 +1,9 @@
+# UpdateNotificationSettingsRequest
+
+
+## Fields
+
+| Field                                                                                                | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `notificationSettings`                                                                               | [ai.whylabs.WhyLabs.models.shared.NotificationSettings](../../models/shared/NotificationSettings.md) | :heavy_check_mark:                                                                                   | N/A                                                                                                  |
+| `orgId`                                                                                              | *String*                                                                                             | :heavy_check_mark:                                                                                   | N/A                                                                                                  |

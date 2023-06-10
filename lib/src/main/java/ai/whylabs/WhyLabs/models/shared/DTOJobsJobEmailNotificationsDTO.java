@@ -20,27 +20,27 @@ public class DTOJobsJobEmailNotificationsDTO {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onFailure")
-    public java.util.Map<String, Object>[] onFailure;
+    public DTOJobsJobEmailNotificationsDTOOnFailure[] onFailure;
 
-    public DTOJobsJobEmailNotificationsDTO withOnFailure(java.util.Map<String, Object>[] onFailure) {
+    public DTOJobsJobEmailNotificationsDTO withOnFailure(DTOJobsJobEmailNotificationsDTOOnFailure[] onFailure) {
         this.onFailure = onFailure;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onStart")
-    public java.util.Map<String, Object>[] onStart;
+    public DTOJobsJobEmailNotificationsDTOOnStart[] onStart;
 
-    public DTOJobsJobEmailNotificationsDTO withOnStart(java.util.Map<String, Object>[] onStart) {
+    public DTOJobsJobEmailNotificationsDTO withOnStart(DTOJobsJobEmailNotificationsDTOOnStart[] onStart) {
         this.onStart = onStart;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onSuccess")
-    public java.util.Map<String, Object>[] onSuccess;
+    public DTOJobsJobEmailNotificationsDTOOnSuccess[] onSuccess;
 
-    public DTOJobsJobEmailNotificationsDTO withOnSuccess(java.util.Map<String, Object>[] onSuccess) {
+    public DTOJobsJobEmailNotificationsDTO withOnSuccess(DTOJobsJobEmailNotificationsDTOOnSuccess[] onSuccess) {
         this.onSuccess = onSuccess;
         return this;
     }

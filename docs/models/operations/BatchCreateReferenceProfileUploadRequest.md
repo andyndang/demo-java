@@ -1,0 +1,9 @@
+# BatchCreateReferenceProfileUploadRequest
+
+
+## Fields
+
+| Field                                                                                                        | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `batchLogReferenceRequest`                                                                                   | [ai.whylabs.WhyLabs.models.shared.BatchLogReferenceRequest](../../models/shared/BatchLogReferenceRequest.md) | :heavy_check_mark:                                                                                           | N/A                                                                                                          |
+| `sessionId`                                                                                                  | *String*                                                                                                     | :heavy_check_mark:                                                                                           | N/A                                                                                                          |

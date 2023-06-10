@@ -101,9 +101,9 @@ public class DTOJobsNewClusterDTO {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("initScripts")
-    public java.util.Map<String, Object>[] initScripts;
+    public DTOJobsNewClusterDTOInitScripts[] initScripts;
 
-    public DTOJobsNewClusterDTO withInitScripts(java.util.Map<String, Object>[] initScripts) {
+    public DTOJobsNewClusterDTO withInitScripts(DTOJobsNewClusterDTOInitScripts[] initScripts) {
         this.initScripts = initScripts;
         return this;
     }
@@ -182,9 +182,9 @@ public class DTOJobsNewClusterDTO {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sshPublicKeys")
-    public java.util.Map<String, Object>[] sshPublicKeys;
+    public DTOJobsNewClusterDTOSshPublicKeys[] sshPublicKeys;
 
-    public DTOJobsNewClusterDTO withSshPublicKeys(java.util.Map<String, Object>[] sshPublicKeys) {
+    public DTOJobsNewClusterDTO withSshPublicKeys(DTOJobsNewClusterDTOSshPublicKeys[] sshPublicKeys) {
         this.sshPublicKeys = sshPublicKeys;
         return this;
     }

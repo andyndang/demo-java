@@ -36,9 +36,9 @@ public class PostMonitorConfigValidationJobResponse {
      * PostMonitorConfigValidationJob default response
      */
     
-    public java.util.Map<String, Object> void_;
+    public ai.whylabs.WhyLabs.models.shared.Void void_;
 
-    public PostMonitorConfigValidationJobResponse withVoid(java.util.Map<String, Object> void_) {
+    public PostMonitorConfigValidationJobResponse withVoid(ai.whylabs.WhyLabs.models.shared.Void void_) {
         this.void_ = void_;
         return this;
     }

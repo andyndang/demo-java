@@ -29,9 +29,9 @@ public class DTOJobsSparkJarTaskDTO {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
-    public java.util.Map<String, Object>[] parameters;
+    public DTOJobsSparkJarTaskDTOParameters[] parameters;
 
-    public DTOJobsSparkJarTaskDTO withParameters(java.util.Map<String, Object>[] parameters) {
+    public DTOJobsSparkJarTaskDTO withParameters(DTOJobsSparkJarTaskDTOParameters[] parameters) {
         this.parameters = parameters;
         return this;
     }

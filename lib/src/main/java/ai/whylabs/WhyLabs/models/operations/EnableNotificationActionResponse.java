@@ -36,9 +36,9 @@ public class EnableNotificationActionResponse {
      * EnableNotificationAction default response
      */
     
-    public java.util.Map<String, Object> void_;
+    public ai.whylabs.WhyLabs.models.shared.Void void_;
 
-    public EnableNotificationActionResponse withVoid(java.util.Map<String, Object> void_) {
+    public EnableNotificationActionResponse withVoid(ai.whylabs.WhyLabs.models.shared.Void void_) {
         this.void_ = void_;
         return this;
     }

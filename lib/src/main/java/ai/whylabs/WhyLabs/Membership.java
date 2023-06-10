@@ -8,7 +8,6 @@ import ai.whylabs.WhyLabs.utils.HTTPClient;
 import ai.whylabs.WhyLabs.utils.HTTPRequest;
 import ai.whylabs.WhyLabs.utils.JSON;
 import ai.whylabs.WhyLabs.utils.SerializedBody;
-import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.net.http.HttpResponse;
 import java.nio.charset.StandardCharsets;
@@ -417,7 +416,7 @@ public class Membership {
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
+                ai.whylabs.WhyLabs.models.shared.Void out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), ai.whylabs.WhyLabs.models.shared.Void.class);
                 res.void_ = out;
             }
         }

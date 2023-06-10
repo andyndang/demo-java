@@ -1,0 +1,10 @@
+# DTOJobsSparkJarTaskDTO
+
+
+## Fields
+
+| Field                                                                                             | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `jarUri`                                                                                          | *String*                                                                                          | :heavy_minus_sign:                                                                                | N/A                                                                                               |
+| `mainClassName`                                                                                   | *String*                                                                                          | :heavy_minus_sign:                                                                                | N/A                                                                                               |
+| `parameters`                                                                                      | List<[DTOJobsSparkJarTaskDTOParameters](../../models/shared/DTOJobsSparkJarTaskDTOParameters.md)> | :heavy_minus_sign:                                                                                | N/A                                                                                               |

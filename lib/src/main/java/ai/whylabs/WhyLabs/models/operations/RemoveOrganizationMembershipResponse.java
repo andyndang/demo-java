@@ -36,9 +36,9 @@ public class RemoveOrganizationMembershipResponse {
      * RemoveOrganizationMembership default response
      */
     
-    public java.util.Map<String, Object> void_;
+    public ai.whylabs.WhyLabs.models.shared.Void void_;
 
-    public RemoveOrganizationMembershipResponse withVoid(java.util.Map<String, Object> void_) {
+    public RemoveOrganizationMembershipResponse withVoid(ai.whylabs.WhyLabs.models.shared.Void void_) {
         this.void_ = void_;
         return this;
     }
