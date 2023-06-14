@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * OrganizationSummary - Summary about an organization
  */
+
 public class OrganizationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain")

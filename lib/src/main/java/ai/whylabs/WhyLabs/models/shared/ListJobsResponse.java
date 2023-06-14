@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * ListJobsResponse - ListJobs default response
  */
+
 public class ListJobsResponse {
     @JsonProperty("jobs")
     public DTOJobsJobDTO[] jobs;

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * ColumnSchema - Column schema for a given column
  */
+
 public class ColumnSchema {
     /**
      * We can classify these columns into various grouping. Currently we only support 'input' and 'output'

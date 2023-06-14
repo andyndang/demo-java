@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * BatchLogSessionReferenceResponse - Response payload for uploading reference profile.
  */
+
 public class BatchLogSessionReferenceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("observatoryUrl")

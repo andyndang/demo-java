@@ -7,6 +7,7 @@ package ai.whylabs.WhyLabs.models.operations;
 import ai.whylabs.WhyLabs.utils.SpeakeasyMetadata;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+
 public class RegisterDatabricksConnectionSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-API-Key")
     public String apiKeyAuth;

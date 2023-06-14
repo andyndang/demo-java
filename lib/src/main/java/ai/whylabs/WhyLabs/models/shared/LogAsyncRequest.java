@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * LogAsyncRequest - Request payload for LogAsync.
  */
+
 public class LogAsyncRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datasetTimestamp")

@@ -7,6 +7,7 @@ package ai.whylabs.WhyLabs.models.operations;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
+
 public class ListModelsResponse {
     
     public String contentType;

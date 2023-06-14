@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * GetNotificationSettingsResponse - Response for getting notification settings
  */
+
 public class GetNotificationSettingsResponse {
     /**
      * Settings that control how and when notifications are delivered.

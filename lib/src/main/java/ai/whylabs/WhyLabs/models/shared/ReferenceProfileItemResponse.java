@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * ReferenceProfileItemResponse - A single reference item response.
  */
+
 public class ReferenceProfileItemResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alias")

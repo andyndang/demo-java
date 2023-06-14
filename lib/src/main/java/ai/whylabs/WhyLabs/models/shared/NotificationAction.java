@@ -16,6 +16,7 @@ import java.time.OffsetDateTime;
 /**
  * NotificationAction - GetNotificationAction default response
  */
+
 public class NotificationAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonSerialize(using = DateTimeSerializer.class)

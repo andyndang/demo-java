@@ -6,6 +6,7 @@ package ai.whylabs.WhyLabs.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+
 public class SetDefaultMembershipRequest {
     @JsonProperty("orgId")
     public String orgId;

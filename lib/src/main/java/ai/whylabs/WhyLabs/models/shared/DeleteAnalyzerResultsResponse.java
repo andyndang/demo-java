@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * DeleteAnalyzerResultsResponse - The [DeleteAnalyzerResultsResponse] if operation succeeds
  */
+
 public class DeleteAnalyzerResultsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")

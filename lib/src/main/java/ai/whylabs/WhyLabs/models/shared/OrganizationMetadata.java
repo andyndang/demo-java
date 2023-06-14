@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * OrganizationMetadata - Metadata about an organization
  */
+
 public class OrganizationMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTime")

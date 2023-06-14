@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * NotificationSettings - Settings that control how and when notifications are delivered.
  */
+
 public class NotificationSettings {
     /**
      * Combination of all possible schedule types, a hacky workaround for bugs in generated clients that use polymorphic types.

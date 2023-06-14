@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * LogReferenceRequest - Request payload for LogReference.
  */
+
 public class LogReferenceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alias")

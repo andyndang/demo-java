@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * Membership - Response for the get memberships
  */
+
 public class Membership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("default")

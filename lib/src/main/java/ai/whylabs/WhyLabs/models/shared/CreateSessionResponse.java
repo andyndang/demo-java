@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * CreateSessionResponse - Response for creating sessions
  */
+
 public class CreateSessionResponse {
     /**
      * Token for the created session, to be passsed into other session APIs.

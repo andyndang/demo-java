@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * PagerDutyNotificationAction - Pager Duty payload for Notification Actions
  */
+
 public class PagerDutyNotificationAction {
     @JsonProperty("pagerDutyKey")
     public String pagerDutyKey;

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * SearchResponse - WhyLabs Search default response
  */
+
 public class SearchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")

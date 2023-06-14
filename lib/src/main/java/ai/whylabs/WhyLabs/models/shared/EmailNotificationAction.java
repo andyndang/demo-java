@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * EmailNotificationAction - Email payload for Notification Actions
  */
+
 public class EmailNotificationAction {
     @JsonProperty("email")
     public String email;

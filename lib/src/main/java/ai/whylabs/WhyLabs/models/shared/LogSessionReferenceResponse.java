@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * LogSessionReferenceResponse - Response payload for uploading reference profile.
  */
+
 public class LogSessionReferenceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alias")

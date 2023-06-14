@@ -6,6 +6,7 @@ package ai.whylabs.WhyLabs.models.shared;
 
 
 
+
 public class DTOJobsJobEmailNotificationsDTOOnFailure {
     public DTOJobsJobEmailNotificationsDTOOnFailure(){}
 }
