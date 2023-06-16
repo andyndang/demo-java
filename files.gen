@@ -21,7 +21,6 @@ lib/src/main/java/ai/whylabs/WhyLabs/Sessions.java
 lib/src/main/java/ai/whylabs/WhyLabs/User.java
 lib/src/main/java/ai/whylabs/WhyLabs/Songbird.java
 .gitattributes
-.gitignore
 gradle/wrapper/gradle-wrapper.jar
 gradle/wrapper/gradle-wrapper.properties
 gradlew
