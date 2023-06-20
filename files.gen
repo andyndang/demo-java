@@ -442,6 +442,8 @@ lib/src/main/java/ai/whylabs/WhyLabs/models/shared/ColumnSchema.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/ListModelsResponse.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/ActionType.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/NotificationAction.java
+lib/src/main/java/ai/whylabs/WhyLabs/models/shared/NotificationRelationshipItem.java
+lib/src/main/java/ai/whylabs/WhyLabs/models/shared/NotificationRelationshipType.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/NotificationActionPayload.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/EmailNotificationAction.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/PagerDutyNotificationAction.java
@@ -868,6 +870,8 @@ docs/models/shared/ColumnSchema.md
 docs/models/shared/ListModelsResponse.md
 docs/models/shared/ActionType.md
 docs/models/shared/NotificationAction.md
+docs/models/shared/NotificationRelationshipItem.md
+docs/models/shared/NotificationRelationshipType.md
 docs/models/shared/NotificationActionPayload.md
 docs/models/shared/EmailNotificationAction.md
 docs/models/shared/PagerDutyNotificationAction.md

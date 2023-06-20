@@ -68,6 +68,15 @@ public class NotificationAction {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("references")
+    public NotificationRelationshipItem[] references;
+
+    public NotificationAction withReferences(NotificationRelationshipItem[] references) {
+        this.references = references;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public ActionType type;
 
