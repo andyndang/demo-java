@@ -20,6 +20,15 @@ public class NotificationRelationshipItem {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("itemDisplayName")
+    public String itemDisplayName;
+
+    public NotificationRelationshipItem withItemDisplayName(String itemDisplayName) {
+        this.itemDisplayName = itemDisplayName;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemId")
     public String itemId;
 
