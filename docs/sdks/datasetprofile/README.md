@@ -7,6 +7,7 @@
 * [deleteDatasetProfiles](#deletedatasetprofiles) - Deletes a set of dataset profiles
 * [deleteReferenceProfile](#deletereferenceprofile) - Delete a single reference profile
 * [getReferenceProfile](#getreferenceprofile) - Returns a single reference profile
+* [hideSegments](#hidesegments) - Hides a list of segments
 * [listReferenceProfiles](#listreferenceprofiles) - Returns a list for reference profiles
 * [listSegments](#listsegments) - Returns a list of segments
 
@@ -304,6 +305,64 @@ public class Application {
 **[ai.whylabs.WhyLabs.models.operations.GetReferenceProfileResponse](../../models/operations/GetReferenceProfileResponse.md)**
 
 
+## hideSegments
+
+Returns a list of segments that were hidden for a dataset.
+
+        
+
+### Example Usage
+
+```java
+package hello.world;
+
+import ai.whylabs.WhyLabs.Songbird;
+import ai.whylabs.WhyLabs.models.operations.HideSegmentsRequest;
+import ai.whylabs.WhyLabs.models.operations.HideSegmentsResponse;
+import ai.whylabs.WhyLabs.models.operations.HideSegmentsSecurity;
+import ai.whylabs.WhyLabs.models.shared.SegmentsListRequest;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            Songbird sdk = Songbird.builder()
+                .build();
+
+            HideSegmentsRequest req = new HideSegmentsRequest(                new SegmentsListRequest() {{
+                                segments = new String[]{{
+                                    add("officia"),
+                                    add("occaecati"),
+                                    add("fugit"),
+                                }};
+                            }};, "model-123", "org-123");            
+
+            HideSegmentsResponse res = sdk.datasetProfile.hideSegments(req, new HideSegmentsSecurity("deleniti") {{
+                apiKeyAuth = "";
+            }});
+
+            if (res.statusCode == 200) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                    | [ai.whylabs.WhyLabs.models.operations.HideSegmentsRequest](../../models/operations/HideSegmentsRequest.md)   | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `security`                                                                                                   | [ai.whylabs.WhyLabs.models.operations.HideSegmentsSecurity](../../models/operations/HideSegmentsSecurity.md) | :heavy_check_mark:                                                                                           | The security requirements to use for the request.                                                            |
+
+
+### Response
+
+**[ai.whylabs.WhyLabs.models.operations.HideSegmentsResponse](../../models/operations/HideSegmentsResponse.md)**
+
+
 ## listReferenceProfiles
 
 Returns a list of Reference Profiles.
@@ -331,7 +390,7 @@ public class Application {
                 toEpoch = 1893456000000L;
             }};            
 
-            ListReferenceProfilesResponse res = sdk.datasetProfile.listReferenceProfiles(req, new ListReferenceProfilesSecurity("nam") {{
+            ListReferenceProfilesResponse res = sdk.datasetProfile.listReferenceProfiles(req, new ListReferenceProfilesSecurity("hic") {{
                 apiKeyAuth = "";
             }});
 
@@ -382,7 +441,7 @@ public class Application {
 
             ListSegmentsRequest req = new ListSegmentsRequest("model-123", "org-123");            
 
-            ListSegmentsResponse res = sdk.datasetProfile.listSegments(req, new ListSegmentsSecurity("officia") {{
+            ListSegmentsResponse res = sdk.datasetProfile.listSegments(req, new ListSegmentsSecurity("optio") {{
                 apiKeyAuth = "";
             }});
 

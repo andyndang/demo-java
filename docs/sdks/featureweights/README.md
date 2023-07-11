@@ -27,7 +27,7 @@ public class Application {
 
             GetColumnWeightsRequest req = new GetColumnWeightsRequest("model-123", "org-123");            
 
-            GetColumnWeightsResponse res = sdk.featureWeights.getColumnWeights(req, new GetColumnWeightsSecurity("occaecati") {{
+            GetColumnWeightsResponse res = sdk.featureWeights.getColumnWeights(req, new GetColumnWeightsSecurity("totam") {{
                 apiKeyAuth = "";
             }});
 
@@ -74,9 +74,9 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            PutColumnWeightsRequest req = new PutColumnWeightsRequest("fugit", "model-123", "org-123");            
+            PutColumnWeightsRequest req = new PutColumnWeightsRequest("beatae", "model-123", "org-123");            
 
-            PutColumnWeightsResponse res = sdk.featureWeights.putColumnWeights(req, new PutColumnWeightsSecurity("deleniti") {{
+            PutColumnWeightsResponse res = sdk.featureWeights.putColumnWeights(req, new PutColumnWeightsSecurity("commodi") {{
                 apiKeyAuth = "";
             }});
 

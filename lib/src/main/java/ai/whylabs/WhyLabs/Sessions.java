@@ -141,15 +141,15 @@ public class Sessions {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         ai.whylabs.WhyLabs.models.operations.CreateDatasetProfileUploadResponse res = new ai.whylabs.WhyLabs.models.operations.CreateDatasetProfileUploadResponse(contentType, httpRes.statusCode()) {{
-            asyncLogResponse = null;
+            createDatasetProfileUploadResponse = null;
         }};
         res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                ai.whylabs.WhyLabs.models.shared.AsyncLogResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), ai.whylabs.WhyLabs.models.shared.AsyncLogResponse.class);
-                res.asyncLogResponse = out;
+                ai.whylabs.WhyLabs.models.shared.CreateDatasetProfileUploadResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), ai.whylabs.WhyLabs.models.shared.CreateDatasetProfileUploadResponse.class);
+                res.createDatasetProfileUploadResponse = out;
             }
         }
 

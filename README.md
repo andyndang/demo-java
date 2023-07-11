@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'ai.whylabs.WhyLabs:Songbird:1.10.1'
+implementation 'ai.whylabs.WhyLabs:Songbird:1.11.0'
 ```
 <!-- End SDK Installation -->
 
@@ -76,6 +76,7 @@ public class Application {
 * [deleteDatasetProfiles](docs/sdks/datasetprofile/README.md#deletedatasetprofiles) - Deletes a set of dataset profiles
 * [deleteReferenceProfile](docs/sdks/datasetprofile/README.md#deletereferenceprofile) - Delete a single reference profile
 * [getReferenceProfile](docs/sdks/datasetprofile/README.md#getreferenceprofile) - Returns a single reference profile
+* [hideSegments](docs/sdks/datasetprofile/README.md#hidesegments) - Hides a list of segments
 * [listReferenceProfiles](docs/sdks/datasetprofile/README.md#listreferenceprofiles) - Returns a list for reference profiles
 * [listSegments](docs/sdks/datasetprofile/README.md#listsegments) - Returns a list of segments
 
@@ -107,6 +108,7 @@ public class Application {
 * [getOrganization](docs/sdks/internal/README.md#getorganization) - Get the metadata about an organization.
 * [getUser](docs/sdks/internal/README.md#getuser) - Get a user by their id.
 * [getUserByEmail](docs/sdks/internal/README.md#getuserbyemail) - Get a user by their email.
+* [hideSegments](docs/sdks/internal/README.md#hidesegments) - Hides a list of segments
 * [listApiKeys](docs/sdks/internal/README.md#listapikeys) - List API key metadata for a given organization and user
 * [listJobs](docs/sdks/internal/README.md#listjobs) - List all of the jobs in a workspace.
 * [listMonitorConfigV3Versions](docs/sdks/internal/README.md#listmonitorconfigv3versions) - List the monitor config document versions for a given dataset.

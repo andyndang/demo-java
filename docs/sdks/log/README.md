@@ -28,20 +28,16 @@ public class Application {
                 .build();
 
             LogAsyncRequest req = new LogAsyncRequest(                new LogAsyncRequest() {{
-                                datasetTimestamp = 289406L;
+                                datasetTimestamp = 369808L;
                                 segmentTags = new ai.whylabs.WhyLabs.models.shared.SegmentTag[]{{
                                     add(new SegmentTag() {{
-                                        key = "qui";
-                                        value = "aliquid";
-                                    }}),
-                                    add(new SegmentTag() {{
-                                        key = "cupiditate";
-                                        value = "quos";
+                                        key = "fugit";
+                                        value = "dolorum";
                                     }}),
                                 }};
                             }};, "model-123", "org-123");            
 
-            LogAsyncResponse res = sdk.log.logAsync(req, new LogAsyncSecurity("perferendis") {{
+            LogAsyncResponse res = sdk.log.logAsync(req, new LogAsyncSecurity("excepturi") {{
                 apiKeyAuth = "";
             }});
 
@@ -90,11 +86,11 @@ public class Application {
                 .build();
 
             LogReferenceRequest req = new LogReferenceRequest(                new LogReferenceRequest() {{
-                                alias = "magni";
-                                datasetTimestamp = 828940L;
+                                alias = "tempora";
+                                datasetTimestamp = 703737L;
                             }};, "model-123", "org-123");            
 
-            LogReferenceResponse res = sdk.log.logReference(req, new LogReferenceSecurity("ipsam") {{
+            LogReferenceResponse res = sdk.log.logReference(req, new LogReferenceSecurity("tempore") {{
                 apiKeyAuth = "";
             }});
 

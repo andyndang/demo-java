@@ -763,6 +763,54 @@ public class Internal {
     }
 
     /**
+     * Hides a list of segments
+     * Returns a list of segments that were hidden for a dataset.
+     * 
+     *         
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public ai.whylabs.WhyLabs.models.operations.HideSegmentsResponse hideSegments(ai.whylabs.WhyLabs.models.operations.HideSegmentsRequest request, ai.whylabs.WhyLabs.models.operations.HideSegmentsSecurity security) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.HideSegmentsRequest.class, baseUrl, "/v0/organizations/{org_id}/dataset-profiles/models/{dataset_id}/segments/hide", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = ai.whylabs.WhyLabs.utils.Utils.serializeRequestBody(request, "segmentsListRequest", "json");
+        if (serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
+        req.setBody(serializedRequestBody);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
+        
+        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        ai.whylabs.WhyLabs.models.operations.HideSegmentsResponse res = new ai.whylabs.WhyLabs.models.operations.HideSegmentsResponse(contentType, httpRes.statusCode()) {{
+            response = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (true) {
+            if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                ai.whylabs.WhyLabs.models.shared.Response out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), ai.whylabs.WhyLabs.models.shared.Response.class);
+                res.response = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
      * List API key metadata for a given organization and user
      * Returns the API key metadata for a given organization and user
      * @param request the request object containing all of the parameters for the API call

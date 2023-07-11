@@ -9,22 +9,22 @@ import java.net.http.HttpResponse;
 
 
 public class CreateDatasetProfileUploadResponse {
-    /**
-     * CreateDatasetProfileUpload default response
-     */
-    
-    public ai.whylabs.WhyLabs.models.shared.AsyncLogResponse asyncLogResponse;
-
-    public CreateDatasetProfileUploadResponse withAsyncLogResponse(ai.whylabs.WhyLabs.models.shared.AsyncLogResponse asyncLogResponse) {
-        this.asyncLogResponse = asyncLogResponse;
-        return this;
-    }
-    
     
     public String contentType;
 
     public CreateDatasetProfileUploadResponse withContentType(String contentType) {
         this.contentType = contentType;
+        return this;
+    }
+    
+    /**
+     * CreateDatasetProfileUpload default response
+     */
+    
+    public ai.whylabs.WhyLabs.models.shared.CreateDatasetProfileUploadResponse createDatasetProfileUploadResponse;
+
+    public CreateDatasetProfileUploadResponse withCreateDatasetProfileUploadResponse(ai.whylabs.WhyLabs.models.shared.CreateDatasetProfileUploadResponse createDatasetProfileUploadResponse) {
+        this.createDatasetProfileUploadResponse = createDatasetProfileUploadResponse;
         return this;
     }
     

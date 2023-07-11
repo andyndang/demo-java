@@ -18,7 +18,7 @@ public class ListSegmentsResponse {
     }
     
     /**
-     * The metadata for the summarized dataset profile including paths to JSON and protobuf data
+     * The list of segments for the dataset profile
      */
     
     public ai.whylabs.WhyLabs.models.shared.SegmentListResponse segmentListResponse;

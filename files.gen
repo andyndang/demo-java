@@ -97,6 +97,9 @@ lib/src/main/java/ai/whylabs/WhyLabs/models/operations/DeleteReferenceProfileRes
 lib/src/main/java/ai/whylabs/WhyLabs/models/operations/GetReferenceProfileSecurity.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/operations/GetReferenceProfileRequest.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/operations/GetReferenceProfileResponse.java
+lib/src/main/java/ai/whylabs/WhyLabs/models/operations/HideSegmentsSecurity.java
+lib/src/main/java/ai/whylabs/WhyLabs/models/operations/HideSegmentsRequest.java
+lib/src/main/java/ai/whylabs/WhyLabs/models/operations/HideSegmentsResponse.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/operations/ListReferenceProfilesSecurity.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/operations/ListReferenceProfilesRequest.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/operations/ListReferenceProfilesResponse.java
@@ -386,6 +389,7 @@ lib/src/main/java/ai/whylabs/WhyLabs/models/shared/SegmentTag.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/DeleteAnalyzerResultsResponse.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/DeleteDatasetProfilesResponse.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/ReferenceProfileItemResponse.java
+lib/src/main/java/ai/whylabs/WhyLabs/models/shared/SegmentsListRequest.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/SegmentListResponse.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/EntityWeightRecord.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/SegmentWeight.java
@@ -451,6 +455,7 @@ lib/src/main/java/ai/whylabs/WhyLabs/models/shared/SlackNotificationAction.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/BatchLogSessionReferenceResponse.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/LogSessionReferenceResponse.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/BatchLogReferenceRequest.java
+lib/src/main/java/ai/whylabs/WhyLabs/models/shared/CreateDatasetProfileUploadResponse.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/CreateSessionResponse.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/CreateSessionRequest.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/GetSessionResponse.java
@@ -525,6 +530,9 @@ docs/models/operations/DeleteReferenceProfileResponse.md
 docs/models/operations/GetReferenceProfileSecurity.md
 docs/models/operations/GetReferenceProfileRequest.md
 docs/models/operations/GetReferenceProfileResponse.md
+docs/models/operations/HideSegmentsSecurity.md
+docs/models/operations/HideSegmentsRequest.md
+docs/models/operations/HideSegmentsResponse.md
 docs/models/operations/ListReferenceProfilesSecurity.md
 docs/models/operations/ListReferenceProfilesRequest.md
 docs/models/operations/ListReferenceProfilesResponse.md
@@ -814,6 +822,7 @@ docs/models/shared/SegmentTag.md
 docs/models/shared/DeleteAnalyzerResultsResponse.md
 docs/models/shared/DeleteDatasetProfilesResponse.md
 docs/models/shared/ReferenceProfileItemResponse.md
+docs/models/shared/SegmentsListRequest.md
 docs/models/shared/SegmentListResponse.md
 docs/models/shared/EntityWeightRecord.md
 docs/models/shared/SegmentWeight.md
@@ -879,6 +888,7 @@ docs/models/shared/SlackNotificationAction.md
 docs/models/shared/BatchLogSessionReferenceResponse.md
 docs/models/shared/LogSessionReferenceResponse.md
 docs/models/shared/BatchLogReferenceRequest.md
+docs/models/shared/CreateDatasetProfileUploadResponse.md
 docs/models/shared/CreateSessionResponse.md
 docs/models/shared/CreateSessionRequest.md
 docs/models/shared/GetSessionResponse.md
