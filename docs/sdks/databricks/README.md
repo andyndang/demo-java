@@ -29,11 +29,11 @@ public class Application {
                 .build();
 
             ai.whylabs.WhyLabs.models.shared.GetConnectionRequest req = new GetConnectionRequest() {{
-                orgId = "illum";
-                workspaceId = "vel";
+                orgId = "deserunt";
+                workspaceId = "suscipit";
             }};            
 
-            GetConnectionResponse res = sdk.databricks.getConnection(req, new GetConnectionSecurity("error") {{
+            GetConnectionResponse res = sdk.databricks.getConnection(req, new GetConnectionSecurity("iure") {{
                 apiKeyAuth = "";
             }});
 
@@ -81,11 +81,11 @@ public class Application {
                 .build();
 
             ai.whylabs.WhyLabs.models.shared.ListJobsRequest req = new ListJobsRequest() {{
-                orgId = "deserunt";
-                workspaceId = "suscipit";
+                orgId = "magnam";
+                workspaceId = "debitis";
             }};            
 
-            ListJobsResponse res = sdk.databricks.listJobs(req, new ListJobsSecurity("iure") {{
+            ListJobsResponse res = sdk.databricks.listJobs(req, new ListJobsSecurity("ipsa") {{
                 apiKeyAuth = "";
             }});
 
@@ -133,11 +133,11 @@ public class Application {
                 .build();
 
             ai.whylabs.WhyLabs.models.shared.RefreshConnectionRequest req = new RefreshConnectionRequest() {{
-                orgId = "magnam";
-                workspaceId = "debitis";
+                orgId = "delectus";
+                workspaceId = "tempora";
             }};            
 
-            RefreshConnectionResponse res = sdk.databricks.refreshConnection(req, new RefreshConnectionSecurity("ipsa") {{
+            RefreshConnectionResponse res = sdk.databricks.refreshConnection(req, new RefreshConnectionSecurity("suscipit") {{
                 apiKeyAuth = "";
             }});
 
@@ -184,12 +184,12 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.RunJobRequest req = new RunJobRequest(963663L) {{
-                orgId = "tempora";
-                workspaceId = "suscipit";
+            ai.whylabs.WhyLabs.models.shared.RunJobRequest req = new RunJobRequest(477665L) {{
+                orgId = "minus";
+                workspaceId = "placeat";
             }};            
 
-            RunJobResponse res = sdk.databricks.runJob(req, new RunJobSecurity("molestiae") {{
+            RunJobResponse res = sdk.databricks.runJob(req, new RunJobSecurity("voluptatum") {{
                 apiKeyAuth = "";
             }});
 
@@ -241,13 +241,13 @@ public class Application {
                 changes = new UpdateConnectionChanges() {{
                     connected = false;
                     demo = false;
-                    orgId = "minus";
+                    orgId = "iusto";
                 }};;
-                orgId = "placeat";
-                workspaceId = "voluptatum";
+                orgId = "excepturi";
+                workspaceId = "nisi";
             }};            
 
-            UpdateConnectionResponse res = sdk.databricks.updateConnection(req, new UpdateConnectionSecurity("iusto") {{
+            UpdateConnectionResponse res = sdk.databricks.updateConnection(req, new UpdateConnectionSecurity("recusandae") {{
                 apiKeyAuth = "";
             }});
 

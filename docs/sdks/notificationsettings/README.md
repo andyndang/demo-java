@@ -38,9 +38,9 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            AddNotificationActionRequest req = new AddNotificationActionRequest("eum", "user-action", "org-123", ActionType.EMAIL);            
+            AddNotificationActionRequest req = new AddNotificationActionRequest("pariatur", "user-action", "org-123", ActionType.EMAIL);            
 
-            AddNotificationActionResponse res = sdk.notificationSettings.addNotificationAction(req, new AddNotificationActionSecurity("necessitatibus") {{
+            AddNotificationActionResponse res = sdk.notificationSettings.addNotificationAction(req, new AddNotificationActionSecurity("consequuntur") {{
                 apiKeyAuth = "";
             }});
 
@@ -89,7 +89,7 @@ public class Application {
 
             DeleteNotificationActionRequest req = new DeleteNotificationActionRequest("user-action", "org-123");            
 
-            DeleteNotificationActionResponse res = sdk.notificationSettings.deleteNotificationAction(req, new DeleteNotificationActionSecurity("odit") {{
+            DeleteNotificationActionResponse res = sdk.notificationSettings.deleteNotificationAction(req, new DeleteNotificationActionSecurity("praesentium") {{
                 apiKeyAuth = "";
             }});
 
@@ -138,7 +138,7 @@ public class Application {
 
             DisableNotificationActionRequest req = new DisableNotificationActionRequest("user-action", "org-123");            
 
-            DisableNotificationActionResponse res = sdk.notificationSettings.disableNotificationAction(req, new DisableNotificationActionSecurity("nemo") {{
+            DisableNotificationActionResponse res = sdk.notificationSettings.disableNotificationAction(req, new DisableNotificationActionSecurity("natus") {{
                 apiKeyAuth = "";
             }});
 
@@ -187,7 +187,7 @@ public class Application {
 
             EnableNotificationActionRequest req = new EnableNotificationActionRequest("user-action", "org-123");            
 
-            EnableNotificationActionResponse res = sdk.notificationSettings.enableNotificationAction(req, new EnableNotificationActionSecurity("quasi") {{
+            EnableNotificationActionResponse res = sdk.notificationSettings.enableNotificationAction(req, new EnableNotificationActionSecurity("magni") {{
                 apiKeyAuth = "";
             }});
 
@@ -236,7 +236,7 @@ public class Application {
 
             GetNotificationActionRequest req = new GetNotificationActionRequest("user-action", "org-123");            
 
-            GetNotificationActionResponse res = sdk.notificationSettings.getNotificationAction(req, new GetNotificationActionSecurity("iure") {{
+            GetNotificationActionResponse res = sdk.notificationSettings.getNotificationAction(req, new GetNotificationActionSecurity("sunt") {{
                 apiKeyAuth = "";
             }});
 
@@ -283,9 +283,9 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            GetNotificationSettingsRequest req = new GetNotificationSettingsRequest("doloribus");            
+            GetNotificationSettingsRequest req = new GetNotificationSettingsRequest("quo");            
 
-            GetNotificationSettingsResponse res = sdk.notificationSettings.getNotificationSettings(req, new GetNotificationSettingsSecurity("debitis") {{
+            GetNotificationSettingsResponse res = sdk.notificationSettings.getNotificationSettings(req, new GetNotificationSettingsSecurity("illum") {{
                 apiKeyAuth = "";
             }});
 
@@ -334,7 +334,7 @@ public class Application {
 
             ListNotificationActionsRequest req = new ListNotificationActionsRequest("org-123");            
 
-            ListNotificationActionsResponse res = sdk.notificationSettings.listNotificationActions(req, new ListNotificationActionsSecurity("eius") {{
+            ListNotificationActionsResponse res = sdk.notificationSettings.listNotificationActions(req, new ListNotificationActionsSecurity("pariatur") {{
                 apiKeyAuth = "";
             }});
 
@@ -382,9 +382,9 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            PutNotificationActionRequest req = new PutNotificationActionRequest("maxime", "user-action", "org-123", ActionType.PAGER_DUTY);            
+            PutNotificationActionRequest req = new PutNotificationActionRequest("maxime", "user-action", "org-123", ActionType.SLACK);            
 
-            PutNotificationActionResponse res = sdk.notificationSettings.putNotificationAction(req, new PutNotificationActionSecurity("facilis") {{
+            PutNotificationActionResponse res = sdk.notificationSettings.putNotificationAction(req, new PutNotificationActionSecurity("excepturi") {{
                 apiKeyAuth = "";
             }});
 
@@ -433,7 +433,7 @@ public class Application {
 
             TestNotificationActionRequest req = new TestNotificationActionRequest("user-action", "org-123");            
 
-            TestNotificationActionResponse res = sdk.notificationSettings.testNotificationAction(req, new TestNotificationActionSecurity("in") {{
+            TestNotificationActionResponse res = sdk.notificationSettings.testNotificationAction(req, new TestNotificationActionSecurity("odit") {{
                 apiKeyAuth = "";
             }});
 
@@ -481,9 +481,9 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            UpdateNotificationActionRequest req = new UpdateNotificationActionRequest("architecto", "user-action", "org-123", ActionType.EMAIL);            
+            UpdateNotificationActionRequest req = new UpdateNotificationActionRequest("ea", "user-action", "org-123", ActionType.EMAIL);            
 
-            UpdateNotificationActionResponse res = sdk.notificationSettings.updateNotificationAction(req, new UpdateNotificationActionSecurity("repudiandae") {{
+            UpdateNotificationActionResponse res = sdk.notificationSettings.updateNotificationAction(req, new UpdateNotificationActionSecurity("ab") {{
                 apiKeyAuth = "";
             }});
 
@@ -535,27 +535,27 @@ public class Application {
                 .build();
 
             UpdateNotificationSettingsRequest req = new UpdateNotificationSettingsRequest(                new NotificationSettings() {{
-                                emailSettings = new UberNotificationSchedule(NotificationSqsMessageCadence.DAILY, false) {{
+                                emailSettings = new UberNotificationSchedule(NotificationSqsMessageCadence.INDIVIDUAL, false) {{
                                     dayOfWeek = NotificationSettingsDay.THURSDAY;
-                                    local24HourOfDay = 469249;
-                                    localMinuteOfHour = 998848;
-                                    localTimezone = "quibusdam";
+                                    local24HourOfDay = 373291;
+                                    localMinuteOfHour = 453543;
+                                    localTimezone = "autem";
                                 }};;
-                                pagerDutySettings = new UberNotificationSchedule(NotificationSqsMessageCadence.HOURLY, false) {{
-                                    dayOfWeek = NotificationSettingsDay.SATURDAY;
-                                    local24HourOfDay = 868126;
-                                    localMinuteOfHour = 37559;
-                                    localTimezone = "consequuntur";
+                                pagerDutySettings = new UberNotificationSchedule(NotificationSqsMessageCadence.WEEKLY, false) {{
+                                    dayOfWeek = NotificationSettingsDay.SUNDAY;
+                                    local24HourOfDay = 866383;
+                                    localMinuteOfHour = 365496;
+                                    localTimezone = "voluptatibus";
                                 }};;
-                                slackSettings = new UberNotificationSchedule(NotificationSqsMessageCadence.WEEKLY, false) {{
-                                    dayOfWeek = NotificationSettingsDay.THURSDAY;
-                                    local24HourOfDay = 166847;
-                                    localMinuteOfHour = 123820;
-                                    localTimezone = "quo";
+                                slackSettings = new UberNotificationSchedule(NotificationSqsMessageCadence.HOURLY, false) {{
+                                    dayOfWeek = NotificationSettingsDay.FRIDAY;
+                                    local24HourOfDay = 230742;
+                                    localMinuteOfHour = 11714;
+                                    localTimezone = "cumque";
                                 }};;
-                            }};, "illum");            
+                            }};, "corporis");            
 
-            UpdateNotificationSettingsResponse res = sdk.notificationSettings.updateNotificationSettings(req, new UpdateNotificationSettingsSecurity("pariatur") {{
+            UpdateNotificationSettingsResponse res = sdk.notificationSettings.updateNotificationSettings(req, new UpdateNotificationSettingsSecurity("hic") {{
                 apiKeyAuth = "";
             }});
 
@@ -601,7 +601,7 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            GetEmailNotificationActionPayloadResponse res = sdk.notificationSettings.getEmailNotificationActionPayload(new GetEmailNotificationActionPayloadSecurity("maxime") {{
+            GetEmailNotificationActionPayloadResponse res = sdk.notificationSettings.getEmailNotificationActionPayload(new GetEmailNotificationActionPayloadSecurity("libero") {{
                 apiKeyAuth = "";
             }});
 
@@ -646,7 +646,7 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            GetPagerDutyNotificationActionPayloadResponse res = sdk.notificationSettings.getPagerDutyNotificationActionPayload(new GetPagerDutyNotificationActionPayloadSecurity("ea") {{
+            GetPagerDutyNotificationActionPayloadResponse res = sdk.notificationSettings.getPagerDutyNotificationActionPayload(new GetPagerDutyNotificationActionPayloadSecurity("nobis") {{
                 apiKeyAuth = "";
             }});
 
@@ -691,7 +691,7 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            GetSlackNotificationActionPayloadResponse res = sdk.notificationSettings.getSlackNotificationActionPayload(new GetSlackNotificationActionPayloadSecurity("excepturi") {{
+            GetSlackNotificationActionPayloadResponse res = sdk.notificationSettings.getSlackNotificationActionPayload(new GetSlackNotificationActionPayloadSecurity("dolores") {{
                 apiKeyAuth = "";
             }});
 

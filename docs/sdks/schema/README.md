@@ -26,7 +26,7 @@ public class Application {
 
             GetMonitorConfigSchemaRequest req = new GetMonitorConfigSchemaRequest("org-123");            
 
-            GetMonitorConfigSchemaResponse res = sdk.schema.getMonitorConfigSchema(req, new GetMonitorConfigSchemaSecurity("porro") {{
+            GetMonitorConfigSchemaResponse res = sdk.schema.getMonitorConfigSchema(req, new GetMonitorConfigSchemaSecurity("dolor") {{
                 apiKeyAuth = "";
             }});
 

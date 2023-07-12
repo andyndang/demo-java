@@ -49,6 +49,9 @@ lib/src/main/java/ai/whylabs/WhyLabs/utils/SpeakeasyMetadata.java
 lib/src/main/java/ai/whylabs/WhyLabs/utils/Types.java
 lib/src/main/java/ai/whylabs/WhyLabs/utils/Utils.java
 settings.gradle
+lib/src/main/java/ai/whylabs/WhyLabs/models/operations/GenerateReportSecurity.java
+lib/src/main/java/ai/whylabs/WhyLabs/models/operations/GenerateReportRequest.java
+lib/src/main/java/ai/whylabs/WhyLabs/models/operations/GenerateReportResponse.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/operations/PostMonitorConfigValidationJobSecurity.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/operations/PostMonitorConfigValidationJobResponse.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/operations/CreateApiKeySecurity.java
@@ -339,6 +342,9 @@ lib/src/main/java/ai/whylabs/WhyLabs/models/operations/CreateSessionResponse.jav
 lib/src/main/java/ai/whylabs/WhyLabs/models/operations/GetSessionSecurity.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/operations/GetSessionRequest.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/operations/GetSessionResponse.java
+lib/src/main/java/ai/whylabs/WhyLabs/models/shared/AdminReportResponse.java
+lib/src/main/java/ai/whylabs/WhyLabs/models/shared/AdminReportTimePeriod.java
+lib/src/main/java/ai/whylabs/WhyLabs/models/shared/AdminReportType.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/Void.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/UserApiKey.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/UserApiKeyResponse.java
@@ -482,6 +488,9 @@ docs/sdks/search/README.md
 docs/sdks/sessions/README.md
 docs/sdks/user/README.md
 USAGE.md
+docs/models/operations/GenerateReportSecurity.md
+docs/models/operations/GenerateReportRequest.md
+docs/models/operations/GenerateReportResponse.md
 docs/models/operations/PostMonitorConfigValidationJobSecurity.md
 docs/models/operations/PostMonitorConfigValidationJobResponse.md
 docs/models/operations/CreateApiKeySecurity.md
@@ -772,6 +781,9 @@ docs/models/operations/CreateSessionResponse.md
 docs/models/operations/GetSessionSecurity.md
 docs/models/operations/GetSessionRequest.md
 docs/models/operations/GetSessionResponse.md
+docs/models/shared/AdminReportResponse.md
+docs/models/shared/AdminReportTimePeriod.md
+docs/models/shared/AdminReportType.md
 docs/models/shared/Void.md
 docs/models/shared/UserApiKey.md
 docs/models/shared/UserApiKeyResponse.md

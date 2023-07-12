@@ -28,16 +28,24 @@ public class Application {
                 .build();
 
             LogAsyncRequest req = new LogAsyncRequest(                new LogAsyncRequest() {{
-                                datasetTimestamp = 369808L;
+                                datasetTimestamp = 896039L;
                                 segmentTags = new ai.whylabs.WhyLabs.models.shared.SegmentTag[]{{
                                     add(new SegmentTag() {{
-                                        key = "fugit";
-                                        value = "dolorum";
+                                        key = "officia";
+                                        value = "dolor";
+                                    }}),
+                                    add(new SegmentTag() {{
+                                        key = "debitis";
+                                        value = "a";
+                                    }}),
+                                    add(new SegmentTag() {{
+                                        key = "dolorum";
+                                        value = "in";
                                     }}),
                                 }};
                             }};, "model-123", "org-123");            
 
-            LogAsyncResponse res = sdk.log.logAsync(req, new LogAsyncSecurity("excepturi") {{
+            LogAsyncResponse res = sdk.log.logAsync(req, new LogAsyncSecurity("in") {{
                 apiKeyAuth = "";
             }});
 
@@ -86,11 +94,11 @@ public class Application {
                 .build();
 
             LogReferenceRequest req = new LogReferenceRequest(                new LogReferenceRequest() {{
-                                alias = "tempora";
-                                datasetTimestamp = 703737L;
+                                alias = "illum";
+                                datasetTimestamp = 978571L;
                             }};, "model-123", "org-123");            
 
-            LogReferenceResponse res = sdk.log.logReference(req, new LogReferenceSecurity("tempore") {{
+            LogReferenceResponse res = sdk.log.logReference(req, new LogReferenceSecurity("rerum") {{
                 apiKeyAuth = "";
             }});
 

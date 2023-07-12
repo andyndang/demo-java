@@ -43,7 +43,7 @@ public class Application {
                 modelType = ModelType.CLASSIFICATION;
             }};            
 
-            CreateModelResponse res = sdk.models.createModel(req, new CreateModelSecurity("occaecati") {{
+            CreateModelResponse res = sdk.models.createModel(req, new CreateModelSecurity("magnam") {{
                 apiKeyAuth = "";
             }});
 
@@ -92,7 +92,7 @@ public class Application {
 
             DeactivateModelRequest req = new DeactivateModelRequest("model-123", "org-123");            
 
-            DeactivateModelResponse res = sdk.models.deactivateModel(req, new DeactivateModelSecurity("enim") {{
+            DeactivateModelResponse res = sdk.models.deactivateModel(req, new DeactivateModelSecurity("distinctio") {{
                 apiKeyAuth = "";
             }});
 
@@ -141,7 +141,7 @@ public class Application {
 
             DeleteEntitySchemaRequest req = new DeleteEntitySchemaRequest("model-123", "org-123");            
 
-            DeleteEntitySchemaResponse res = sdk.models.deleteEntitySchema(req, new DeleteEntitySchemaSecurity("accusamus") {{
+            DeleteEntitySchemaResponse res = sdk.models.deleteEntitySchema(req, new DeleteEntitySchemaSecurity("id") {{
                 apiKeyAuth = "";
             }});
 
@@ -190,7 +190,7 @@ public class Application {
 
             DeleteEntitySchemaColumnRequest req = new DeleteEntitySchemaColumnRequest("feature-123", "model-123", "org-123");            
 
-            DeleteEntitySchemaColumnResponse res = sdk.models.deleteEntitySchemaColumn(req, new DeleteEntitySchemaColumnSecurity("delectus") {{
+            DeleteEntitySchemaColumnResponse res = sdk.models.deleteEntitySchemaColumn(req, new DeleteEntitySchemaColumnSecurity("labore") {{
                 apiKeyAuth = "";
             }});
 
@@ -239,7 +239,7 @@ public class Application {
 
             DeleteEntitySchemaMetricRequest req = new DeleteEntitySchemaMetricRequest("model-123", "feature-123", "org-123");            
 
-            DeleteEntitySchemaMetricResponse res = sdk.models.deleteEntitySchemaMetric(req, new DeleteEntitySchemaMetricSecurity("quidem") {{
+            DeleteEntitySchemaMetricResponse res = sdk.models.deleteEntitySchemaMetric(req, new DeleteEntitySchemaMetricSecurity("labore") {{
                 apiKeyAuth = "";
             }});
 
@@ -288,7 +288,7 @@ public class Application {
 
             GetEntitySchemaRequest req = new GetEntitySchemaRequest("model-123", "org-123");            
 
-            GetEntitySchemaResponse res = sdk.models.getEntitySchema(req, new GetEntitySchemaSecurity("provident") {{
+            GetEntitySchemaResponse res = sdk.models.getEntitySchema(req, new GetEntitySchemaSecurity("suscipit") {{
                 apiKeyAuth = "";
             }});
 
@@ -337,7 +337,7 @@ public class Application {
 
             GetEntitySchemaColumnRequest req = new GetEntitySchemaColumnRequest("feature-123", "model-123", "org-123");            
 
-            GetEntitySchemaColumnResponse res = sdk.models.getEntitySchemaColumn(req, new GetEntitySchemaColumnSecurity("nam") {{
+            GetEntitySchemaColumnResponse res = sdk.models.getEntitySchemaColumn(req, new GetEntitySchemaColumnSecurity("natus") {{
                 apiKeyAuth = "";
             }});
 
@@ -386,7 +386,7 @@ public class Application {
 
             GetModelRequest req = new GetModelRequest("model-123", "org-123");            
 
-            GetModelResponse res = sdk.models.getModel(req, new GetModelSecurity("id") {{
+            GetModelResponse res = sdk.models.getModel(req, new GetModelSecurity("nobis") {{
                 apiKeyAuth = "";
             }});
 
@@ -435,7 +435,7 @@ public class Application {
 
             ListModelsRequest req = new ListModelsRequest("org-123");            
 
-            ListModelsResponse res = sdk.models.listModels(req, new ListModelsSecurity("blanditiis") {{
+            ListModelsResponse res = sdk.models.listModels(req, new ListModelsSecurity("eum") {{
                 apiKeyAuth = "";
             }});
 
@@ -487,39 +487,44 @@ public class Application {
                 .build();
 
             PutEntitySchemaRequest req = new PutEntitySchemaRequest(                new EntitySchema(                new java.util.HashMap<String, ai.whylabs.WhyLabs.models.shared.ColumnSchema>() {{
-                                                put("sapiente", new ColumnSchema("input", "fractional", "discrete") {{
+                                                put("aspernatur", new ColumnSchema("input", "fractional", "discrete") {{
                                                     classifier = "input";
                                                     dataType = "fractional";
                                                     discreteness = "discrete";
                                                 }});
-                                                put("amet", new ColumnSchema("input", "fractional", "discrete") {{
+                                                put("architecto", new ColumnSchema("input", "fractional", "discrete") {{
                                                     classifier = "input";
                                                     dataType = "fractional";
                                                     discreteness = "discrete";
                                                 }});
-                                                put("deserunt", new ColumnSchema("input", "fractional", "discrete") {{
+                                                put("magnam", new ColumnSchema("input", "fractional", "discrete") {{
+                                                    classifier = "input";
+                                                    dataType = "fractional";
+                                                    discreteness = "discrete";
+                                                }});
+                                                put("et", new ColumnSchema("input", "fractional", "discrete") {{
                                                     classifier = "input";
                                                     dataType = "fractional";
                                                     discreteness = "discrete";
                                                 }});
                                             }}) {{
                                 metadata = new SchemaMetadata() {{
-                                    author = "nisi";
-                                    updatedTimestamp = 423855L;
-                                    version = 618809L;
+                                    author = "excepturi";
+                                    updatedTimestamp = 354047L;
+                                    version = 590873L;
                                 }};;
                                 metrics = new java.util.HashMap<String, ai.whylabs.WhyLabs.models.shared.MetricSchema>() {{
-                                    put("molestiae", new MetricSchema("estimated_prediction", "median", "estimated_prediction.median") {{
+                                    put("sint", new MetricSchema("estimated_prediction", "median", "estimated_prediction.median") {{
                                         column = "estimated_prediction";
                                         defaultMetric = "median";
                                         label = "estimated_prediction.median";
                                     }});
-                                    put("perferendis", new MetricSchema("estimated_prediction", "median", "estimated_prediction.median") {{
+                                    put("accusantium", new MetricSchema("estimated_prediction", "median", "estimated_prediction.median") {{
                                         column = "estimated_prediction";
                                         defaultMetric = "median";
                                         label = "estimated_prediction.median";
                                     }});
-                                    put("nihil", new MetricSchema("estimated_prediction", "median", "estimated_prediction.median") {{
+                                    put("mollitia", new MetricSchema("estimated_prediction", "median", "estimated_prediction.median") {{
                                         column = "estimated_prediction";
                                         defaultMetric = "median";
                                         label = "estimated_prediction.median";
@@ -527,7 +532,7 @@ public class Application {
                                 }};
                             }};, "model-123", "org-123");            
 
-            PutEntitySchemaResponse res = sdk.models.putEntitySchema(req, new PutEntitySchemaSecurity("magnam") {{
+            PutEntitySchemaResponse res = sdk.models.putEntitySchema(req, new PutEntitySchemaSecurity("reiciendis") {{
                 apiKeyAuth = "";
             }});
 
@@ -577,7 +582,7 @@ public class Application {
 
             PutEntitySchemaColumnRequest req = new PutEntitySchemaColumnRequest(                new ColumnSchema("input", "fractional", "discrete");, "feature-123", "model-123", "org-123");            
 
-            PutEntitySchemaColumnResponse res = sdk.models.putEntitySchemaColumn(req, new PutEntitySchemaColumnSecurity("distinctio") {{
+            PutEntitySchemaColumnResponse res = sdk.models.putEntitySchemaColumn(req, new PutEntitySchemaColumnSecurity("mollitia") {{
                 apiKeyAuth = "";
             }});
 
@@ -627,7 +632,7 @@ public class Application {
 
             PutEntitySchemaMetricRequest req = new PutEntitySchemaMetricRequest(                new MetricSchema("estimated_prediction", "median", "estimated_prediction.median");, "model-123", "org-123");            
 
-            PutEntitySchemaMetricResponse res = sdk.models.putEntitySchemaMetric(req, new PutEntitySchemaMetricSecurity("id") {{
+            PutEntitySchemaMetricResponse res = sdk.models.putEntitySchemaMetric(req, new PutEntitySchemaMetricSecurity("ad") {{
                 apiKeyAuth = "";
             }});
 
@@ -680,7 +685,7 @@ public class Application {
                 modelType = ModelType.CLASSIFICATION;
             }};            
 
-            UpdateModelResponse res = sdk.models.updateModel(req, new UpdateModelSecurity("labore") {{
+            UpdateModelResponse res = sdk.models.updateModel(req, new UpdateModelSecurity("eum") {{
                 apiKeyAuth = "";
             }});
 

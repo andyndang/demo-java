@@ -38,36 +38,57 @@ public class Application {
                 .build();
 
             CreateReferenceProfileRequest req = new CreateReferenceProfileRequest(                new CreateReferenceProfileRequest() {{
-                                alias = "ab";
-                                datasetTimestamp = 337396L;
+                                alias = "deserunt";
+                                datasetTimestamp = 20218L;
                                 segments = new ai.whylabs.WhyLabs.models.shared.Segment[]{{
                                     add(new Segment() {{
                                         tags = new ai.whylabs.WhyLabs.models.shared.SegmentTag[]{{
                                             add(new SegmentTag() {{
-                                                key = "perferendis";
-                                                value = "ipsam";
+                                                key = "sapiente";
+                                                value = "quo";
                                             }}),
                                             add(new SegmentTag() {{
-                                                key = "repellendus";
-                                                value = "sapiente";
+                                                key = "odit";
+                                                value = "at";
                                             }}),
                                             add(new SegmentTag() {{
-                                                key = "quo";
-                                                value = "odit";
+                                                key = "at";
+                                                value = "maiores";
+                                            }}),
+                                            add(new SegmentTag() {{
+                                                key = "molestiae";
+                                                value = "quod";
+                                            }}),
+                                        }};
+                                    }}),
+                                    add(new Segment() {{
+                                        tags = new ai.whylabs.WhyLabs.models.shared.SegmentTag[]{{
+                                            add(new SegmentTag() {{
+                                                key = "esse";
+                                                value = "totam";
+                                            }}),
+                                            add(new SegmentTag() {{
+                                                key = "porro";
+                                                value = "dolorum";
+                                            }}),
+                                            add(new SegmentTag() {{
+                                                key = "dicta";
+                                                value = "nam";
+                                            }}),
+                                            add(new SegmentTag() {{
+                                                key = "officia";
+                                                value = "occaecati";
                                             }}),
                                         }};
                                     }}),
                                 }};
                                 tags = new String[]{{
-                                    add("at"),
-                                    add("maiores"),
-                                    add("molestiae"),
-                                    add("quod"),
+                                    add("deleniti"),
                                 }};
-                                version = "quod";
+                                version = "hic";
                             }};, "model-123", "org-123");            
 
-            CreateReferenceProfileResponse res = sdk.datasetProfile.createReferenceProfile(req, new CreateReferenceProfileSecurity("esse") {{
+            CreateReferenceProfileResponse res = sdk.datasetProfile.createReferenceProfile(req, new CreateReferenceProfileSecurity("optio") {{
                 apiKeyAuth = "";
             }});
 
@@ -176,7 +197,7 @@ public class Application {
                 profileStartTimestamp = 1577836800000L;
             }};            
 
-            DeleteDatasetProfilesResponse res = sdk.datasetProfile.deleteDatasetProfiles(req, new DeleteDatasetProfilesSecurity("porro") {{
+            DeleteDatasetProfilesResponse res = sdk.datasetProfile.deleteDatasetProfiles(req, new DeleteDatasetProfilesSecurity("beatae") {{
                 apiKeyAuth = "";
             }});
 
@@ -227,7 +248,7 @@ public class Application {
 
             DeleteReferenceProfileRequest req = new DeleteReferenceProfileRequest("model-123", "org-123", "ref-xxy");            
 
-            DeleteReferenceProfileResponse res = sdk.datasetProfile.deleteReferenceProfile(req, new DeleteReferenceProfileSecurity("dolorum") {{
+            DeleteReferenceProfileResponse res = sdk.datasetProfile.deleteReferenceProfile(req, new DeleteReferenceProfileSecurity("commodi") {{
                 apiKeyAuth = "";
             }});
 
@@ -278,7 +299,7 @@ public class Application {
 
             GetReferenceProfileRequest req = new GetReferenceProfileRequest("model-123", "org-123", "ref-xxy");            
 
-            GetReferenceProfileResponse res = sdk.datasetProfile.getReferenceProfile(req, new GetReferenceProfileSecurity("dicta") {{
+            GetReferenceProfileResponse res = sdk.datasetProfile.getReferenceProfile(req, new GetReferenceProfileSecurity("molestiae") {{
                 apiKeyAuth = "";
             }});
 
@@ -330,13 +351,12 @@ public class Application {
 
             HideSegmentsRequest req = new HideSegmentsRequest(                new SegmentsListRequest() {{
                                 segments = new String[]{{
-                                    add("officia"),
-                                    add("occaecati"),
-                                    add("fugit"),
+                                    add("qui"),
+                                    add("impedit"),
                                 }};
                             }};, "model-123", "org-123");            
 
-            HideSegmentsResponse res = sdk.datasetProfile.hideSegments(req, new HideSegmentsSecurity("deleniti") {{
+            HideSegmentsResponse res = sdk.datasetProfile.hideSegments(req, new HideSegmentsSecurity("cum") {{
                 apiKeyAuth = "";
             }});
 
@@ -390,7 +410,7 @@ public class Application {
                 toEpoch = 1893456000000L;
             }};            
 
-            ListReferenceProfilesResponse res = sdk.datasetProfile.listReferenceProfiles(req, new ListReferenceProfilesSecurity("hic") {{
+            ListReferenceProfilesResponse res = sdk.datasetProfile.listReferenceProfiles(req, new ListReferenceProfilesSecurity("esse") {{
                 apiKeyAuth = "";
             }});
 
@@ -441,7 +461,7 @@ public class Application {
 
             ListSegmentsRequest req = new ListSegmentsRequest("model-123", "org-123");            
 
-            ListSegmentsResponse res = sdk.datasetProfile.listSegments(req, new ListSegmentsSecurity("optio") {{
+            ListSegmentsResponse res = sdk.datasetProfile.listSegments(req, new ListSegmentsSecurity("ipsum") {{
                 apiKeyAuth = "";
             }});
 

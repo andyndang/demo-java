@@ -2,7 +2,59 @@
 
 ### Available Operations
 
+* [generateReport](#generatereport) - Generate an admin report
 * [postMonitorConfigValidationJob](#postmonitorconfigvalidationjob) - Create a monitor config validation job for all configs
+
+## generateReport
+
+Generate an admin report
+
+### Example Usage
+
+```java
+package hello.world;
+
+import ai.whylabs.WhyLabs.Songbird;
+import ai.whylabs.WhyLabs.models.operations.GenerateReportRequest;
+import ai.whylabs.WhyLabs.models.operations.GenerateReportResponse;
+import ai.whylabs.WhyLabs.models.operations.GenerateReportSecurity;
+import ai.whylabs.WhyLabs.models.shared.AdminReportTimePeriod;
+import ai.whylabs.WhyLabs.models.shared.AdminReportType;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            Songbird sdk = Songbird.builder()
+                .build();
+
+            GenerateReportRequest req = new GenerateReportRequest(AdminReportType.SESSIONS, AdminReportTimePeriod.YEAR);            
+
+            GenerateReportResponse res = sdk.admin.generateReport(req, new GenerateReportSecurity("quibusdam") {{
+                apiKeyAuth = "";
+            }});
+
+            if (res.statusCode == 200) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                        | [ai.whylabs.WhyLabs.models.operations.GenerateReportRequest](../../models/operations/GenerateReportRequest.md)   | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| `security`                                                                                                       | [ai.whylabs.WhyLabs.models.operations.GenerateReportSecurity](../../models/operations/GenerateReportSecurity.md) | :heavy_check_mark:                                                                                               | The security requirements to use for the request.                                                                |
+
+
+### Response
+
+**[ai.whylabs.WhyLabs.models.operations.GenerateReportResponse](../../models/operations/GenerateReportResponse.md)**
+
 
 ## postMonitorConfigValidationJob
 
@@ -23,7 +75,7 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            PostMonitorConfigValidationJobResponse res = sdk.admin.postMonitorConfigValidationJob(new PostMonitorConfigValidationJobSecurity("provident") {{
+            PostMonitorConfigValidationJobResponse res = sdk.admin.postMonitorConfigValidationJob(new PostMonitorConfigValidationJobSecurity("unde") {{
                 apiKeyAuth = "";
             }});
 

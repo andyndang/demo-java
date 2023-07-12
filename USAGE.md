@@ -3,8 +3,11 @@
 package hello.world;
 
 import ai.whylabs.WhyLabs.Songbird;
-import ai.whylabs.WhyLabs.models.operations.PostMonitorConfigValidationJobResponse;
-import ai.whylabs.WhyLabs.models.operations.PostMonitorConfigValidationJobSecurity;
+import ai.whylabs.WhyLabs.models.operations.GenerateReportRequest;
+import ai.whylabs.WhyLabs.models.operations.GenerateReportResponse;
+import ai.whylabs.WhyLabs.models.operations.GenerateReportSecurity;
+import ai.whylabs.WhyLabs.models.shared.AdminReportTimePeriod;
+import ai.whylabs.WhyLabs.models.shared.AdminReportType;
 
 public class Application {
     public static void main(String[] args) {
@@ -12,7 +15,9 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            PostMonitorConfigValidationJobResponse res = sdk.admin.postMonitorConfigValidationJob(new PostMonitorConfigValidationJobSecurity("corrupti") {{
+            GenerateReportRequest req = new GenerateReportRequest(AdminReportType.SESSIONS, AdminReportTimePeriod.MONTH);            
+
+            GenerateReportResponse res = sdk.admin.generateReport(req, new GenerateReportSecurity("provident") {{
                 apiKeyAuth = "";
             }});
 

@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'ai.whylabs.WhyLabs:Songbird:1.11.0'
+implementation 'ai.whylabs.WhyLabs:Songbird:1.11.1'
 ```
 <!-- End SDK Installation -->
 
@@ -16,8 +16,11 @@ implementation 'ai.whylabs.WhyLabs:Songbird:1.11.0'
 package hello.world;
 
 import ai.whylabs.WhyLabs.Songbird;
-import ai.whylabs.WhyLabs.models.operations.PostMonitorConfigValidationJobResponse;
-import ai.whylabs.WhyLabs.models.operations.PostMonitorConfigValidationJobSecurity;
+import ai.whylabs.WhyLabs.models.operations.GenerateReportRequest;
+import ai.whylabs.WhyLabs.models.operations.GenerateReportResponse;
+import ai.whylabs.WhyLabs.models.operations.GenerateReportSecurity;
+import ai.whylabs.WhyLabs.models.shared.AdminReportTimePeriod;
+import ai.whylabs.WhyLabs.models.shared.AdminReportType;
 
 public class Application {
     public static void main(String[] args) {
@@ -25,7 +28,9 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            PostMonitorConfigValidationJobResponse res = sdk.admin.postMonitorConfigValidationJob(new PostMonitorConfigValidationJobSecurity("corrupti") {{
+            GenerateReportRequest req = new GenerateReportRequest(AdminReportType.SESSIONS, AdminReportTimePeriod.MONTH);            
+
+            GenerateReportResponse res = sdk.admin.generateReport(req, new GenerateReportSecurity("provident") {{
                 apiKeyAuth = "";
             }});
 
@@ -46,6 +51,7 @@ public class Application {
 
 ### [admin](docs/sdks/admin/README.md)
 
+* [generateReport](docs/sdks/admin/README.md#generatereport) - Generate an admin report
 * [postMonitorConfigValidationJob](docs/sdks/admin/README.md#postmonitorconfigvalidationjob) - Create a monitor config validation job for all configs
 
 ### [apiKey](docs/sdks/apikey/README.md)
@@ -95,6 +101,7 @@ public class Application {
 * [createOrganization](docs/sdks/internal/README.md#createorganization) - Create an organization
 * [createUser](docs/sdks/internal/README.md#createuser) - Create a user.
 * [deleteOrganization](docs/sdks/internal/README.md#deleteorganization) - Delete an org
+* [generateReport](docs/sdks/internal/README.md#generatereport) - Generate an admin report
 * [getAWSMarketplaceMetadata](docs/sdks/internal/README.md#getawsmarketplacemetadata) - Get marketplace metadata for an org if any exists.
 * [getApiKey](docs/sdks/internal/README.md#getapikey) - Get an api key by its id
 * [getConnection](docs/sdks/internal/README.md#getconnection) - Get the connection metadata for a given org
