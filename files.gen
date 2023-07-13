@@ -206,6 +206,9 @@ lib/src/main/java/ai/whylabs/WhyLabs/models/operations/WhyLabsSearchRequest.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/operations/WhyLabsSearchResponse.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/operations/WhyLabsSearchIndexingSecurity.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/operations/WhyLabsSearchIndexingResponse.java
+lib/src/main/java/ai/whylabs/WhyLabs/models/operations/GetProfileObservatoryLinkSecurity.java
+lib/src/main/java/ai/whylabs/WhyLabs/models/operations/GetProfileObservatoryLinkRequest.java
+lib/src/main/java/ai/whylabs/WhyLabs/models/operations/GetProfileObservatoryLinkResponse.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/operations/LogAsyncSecurity.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/operations/LogAsyncRequest.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/operations/LogAsyncResponse.java
@@ -342,8 +345,9 @@ lib/src/main/java/ai/whylabs/WhyLabs/models/operations/CreateSessionResponse.jav
 lib/src/main/java/ai/whylabs/WhyLabs/models/operations/GetSessionSecurity.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/operations/GetSessionRequest.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/operations/GetSessionResponse.java
+lib/src/main/java/ai/whylabs/WhyLabs/models/operations/GetSessionProfileObservatoryLinkRequest.java
+lib/src/main/java/ai/whylabs/WhyLabs/models/operations/GetSessionProfileObservatoryLinkResponse.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/AdminReportResponse.java
-lib/src/main/java/ai/whylabs/WhyLabs/models/shared/AdminReportTimePeriod.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/AdminReportType.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/Void.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/UserApiKey.java
@@ -437,6 +441,8 @@ lib/src/main/java/ai/whylabs/WhyLabs/models/shared/SearchResponse.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/EntitySearchResult.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/SearchIndexRequest.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/SearchIndexType.java
+lib/src/main/java/ai/whylabs/WhyLabs/models/shared/GetProfileObservatoryLinkResponse.java
+lib/src/main/java/ai/whylabs/WhyLabs/models/shared/GetProfileObservatoryLinkRequest.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/AsyncLogResponse.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/LogAsyncRequest.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/LogReferenceResponse.java
@@ -645,6 +651,9 @@ docs/models/operations/WhyLabsSearchRequest.md
 docs/models/operations/WhyLabsSearchResponse.md
 docs/models/operations/WhyLabsSearchIndexingSecurity.md
 docs/models/operations/WhyLabsSearchIndexingResponse.md
+docs/models/operations/GetProfileObservatoryLinkSecurity.md
+docs/models/operations/GetProfileObservatoryLinkRequest.md
+docs/models/operations/GetProfileObservatoryLinkResponse.md
 docs/models/operations/LogAsyncSecurity.md
 docs/models/operations/LogAsyncRequest.md
 docs/models/operations/LogAsyncResponse.md
@@ -781,8 +790,9 @@ docs/models/operations/CreateSessionResponse.md
 docs/models/operations/GetSessionSecurity.md
 docs/models/operations/GetSessionRequest.md
 docs/models/operations/GetSessionResponse.md
+docs/models/operations/GetSessionProfileObservatoryLinkRequest.md
+docs/models/operations/GetSessionProfileObservatoryLinkResponse.md
 docs/models/shared/AdminReportResponse.md
-docs/models/shared/AdminReportTimePeriod.md
 docs/models/shared/AdminReportType.md
 docs/models/shared/Void.md
 docs/models/shared/UserApiKey.md
@@ -876,6 +886,8 @@ docs/models/shared/SearchResponse.md
 docs/models/shared/EntitySearchResult.md
 docs/models/shared/SearchIndexRequest.md
 docs/models/shared/SearchIndexType.md
+docs/models/shared/GetProfileObservatoryLinkResponse.md
+docs/models/shared/GetProfileObservatoryLinkRequest.md
 docs/models/shared/AsyncLogResponse.md
 docs/models/shared/LogAsyncRequest.md
 docs/models/shared/LogReferenceResponse.md

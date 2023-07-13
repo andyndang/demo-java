@@ -8,6 +8,7 @@
 * [createReferenceProfileUpload](#createreferenceprofileupload) - Create a reference profile upload for a given session.
 * [createSession](#createsession) - Create a new session that can be used to upload dataset profiles from whylogs for display in whylabs.
 * [getSession](#getsession) - Get information about a session.
+* [getSessionProfileObservatoryLink](#getsessionprofileobservatorylink) - Get observatory links for profiles in a given session. A max of 3 profiles can be viewed a a time.
 
 ## batchCreateReferenceProfileUpload
 
@@ -33,15 +34,11 @@ public class Application {
             BatchCreateReferenceProfileUploadRequest req = new BatchCreateReferenceProfileUploadRequest(                new BatchLogReferenceRequest() {{
                                 references = new ai.whylabs.WhyLabs.models.shared.LogReferenceRequest[]{{
                                     add(new LogReferenceRequest() {{
-                                        alias = "dignissimos";
-                                        datasetTimestamp = 970237L;
-                                    }}),
-                                    add(new LogReferenceRequest() {{
-                                        alias = "amet";
-                                        datasetTimestamp = 680545L;
+                                        alias = "dolorum";
+                                        datasetTimestamp = 254356L;
                                     }}),
                                 }};
-                            }};, "numquam");            
+                            }};, "veritatis");            
 
             BatchCreateReferenceProfileUploadResponse res = sdk.sessions.batchCreateReferenceProfileUpload(req);
 
@@ -87,9 +84,9 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            ClaimGuestSessionRequest req = new ClaimGuestSessionRequest("veritatis", "ipsa");            
+            ClaimGuestSessionRequest req = new ClaimGuestSessionRequest("ipsa", "ipsa");            
 
-            ClaimGuestSessionResponse res = sdk.sessions.claimGuestSession(req, new ClaimGuestSessionSecurity("ipsa") {{
+            ClaimGuestSessionResponse res = sdk.sessions.claimGuestSession(req, new ClaimGuestSessionSecurity("iure") {{
                 apiKeyAuth = "";
             }});
 
@@ -138,18 +135,18 @@ public class Application {
                 .build();
 
             CreateDatasetProfileUploadRequest req = new CreateDatasetProfileUploadRequest(                new LogAsyncRequest() {{
-                                datasetTimestamp = 434417L;
+                                datasetTimestamp = 487838L;
                                 segmentTags = new ai.whylabs.WhyLabs.models.shared.SegmentTag[]{{
                                     add(new SegmentTag() {{
-                                        key = "quaerat";
-                                        value = "accusamus";
+                                        key = "accusamus";
+                                        value = "quidem";
                                     }}),
                                     add(new SegmentTag() {{
-                                        key = "quidem";
-                                        value = "voluptatibus";
+                                        key = "voluptatibus";
+                                        value = "voluptas";
                                     }}),
                                 }};
-                            }};, "voluptas");            
+                            }};, "natus");            
 
             CreateDatasetProfileUploadResponse res = sdk.sessions.createDatasetProfileUpload(req);
 
@@ -196,9 +193,9 @@ public class Application {
                 .build();
 
             CreateReferenceProfileUploadRequest req = new CreateReferenceProfileUploadRequest(                new LogReferenceRequest() {{
-                                alias = "natus";
-                                datasetTimestamp = 179603L;
-                            }};, "atque");            
+                                alias = "eos";
+                                datasetTimestamp = 542499L;
+                            }};, "sit");            
 
             CreateReferenceProfileUploadResponse res = sdk.sessions.createReferenceProfileUpload(req);
 
@@ -243,7 +240,7 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.CreateSessionRequest req = new CreateSessionRequest("sit");            
+            ai.whylabs.WhyLabs.models.shared.CreateSessionRequest req = new CreateSessionRequest("fugiat");            
 
             CreateSessionResponse res = sdk.sessions.createSession(req);
 
@@ -289,9 +286,9 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            GetSessionRequest req = new GetSessionRequest("fugiat");            
+            GetSessionRequest req = new GetSessionRequest("ab");            
 
-            GetSessionResponse res = sdk.sessions.getSession(req, new GetSessionSecurity("ab") {{
+            GetSessionResponse res = sdk.sessions.getSession(req, new GetSessionSecurity("soluta") {{
                 apiKeyAuth = "";
             }});
 
@@ -316,4 +313,61 @@ public class Application {
 ### Response
 
 **[ai.whylabs.WhyLabs.models.operations.GetSessionResponse](../../models/operations/GetSessionResponse.md)**
+
+
+## getSessionProfileObservatoryLink
+
+Get observatory links for profiles in a given session. A max of 3 profiles can be viewed a a time.
+
+### Example Usage
+
+```java
+package hello.world;
+
+import ai.whylabs.WhyLabs.Songbird;
+import ai.whylabs.WhyLabs.models.operations.GetSessionProfileObservatoryLinkRequest;
+import ai.whylabs.WhyLabs.models.operations.GetSessionProfileObservatoryLinkResponse;
+import ai.whylabs.WhyLabs.models.shared.GetProfileObservatoryLinkRequest;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            Songbird sdk = Songbird.builder()
+                .build();
+
+            GetSessionProfileObservatoryLinkRequest req = new GetSessionProfileObservatoryLinkRequest(                new GetProfileObservatoryLinkRequest() {{
+                                batchProfileTimestamps = new Long[]{{
+                                    add(478596L),
+                                    add(453697L),
+                                    add(677082L),
+                                }};
+                                referenceProfileIds = new String[]{{
+                                    add("omnis"),
+                                    add("necessitatibus"),
+                                    add("distinctio"),
+                                }};
+                            }};, "asperiores");            
+
+            GetSessionProfileObservatoryLinkResponse res = sdk.sessions.getSessionProfileObservatoryLink(req);
+
+            if (res.statusCode == 200) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                                          | Type                                                                                                                                               | Required                                                                                                                                           | Description                                                                                                                                        |
+| -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                          | [ai.whylabs.WhyLabs.models.operations.GetSessionProfileObservatoryLinkRequest](../../models/operations/GetSessionProfileObservatoryLinkRequest.md) | :heavy_check_mark:                                                                                                                                 | The request object to use for the request.                                                                                                         |
+
+
+### Response
+
+**[ai.whylabs.WhyLabs.models.operations.GetSessionProfileObservatoryLinkResponse](../../models/operations/GetSessionProfileObservatoryLinkResponse.md)**
 

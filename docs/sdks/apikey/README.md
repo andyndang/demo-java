@@ -38,7 +38,7 @@ public class Application {
                 }};
             }};            
 
-            CreateApiKeyResponse res = sdk.apiKey.createApiKey(req, new CreateApiKeySecurity("corrupti") {{
+            CreateApiKeyResponse res = sdk.apiKey.createApiKey(req, new CreateApiKeySecurity("unde") {{
                 apiKeyAuth = "";
             }});
 
@@ -87,7 +87,7 @@ public class Application {
 
             GetApiKeyRequest req = new GetApiKeyRequest("fh4dUNV3WQ", "org-123");            
 
-            GetApiKeyResponse res = sdk.apiKey.getApiKey(req, new GetApiKeySecurity("illum") {{
+            GetApiKeyResponse res = sdk.apiKey.getApiKey(req, new GetApiKeySecurity("nulla") {{
                 apiKeyAuth = "";
             }});
 
@@ -138,7 +138,7 @@ public class Application {
                 userId = "user-123";
             }};            
 
-            ListApiKeysResponse res = sdk.apiKey.listApiKeys(req, new ListApiKeysSecurity("vel") {{
+            ListApiKeysResponse res = sdk.apiKey.listApiKeys(req, new ListApiKeysSecurity("corrupti") {{
                 apiKeyAuth = "";
             }});
 
@@ -187,7 +187,7 @@ public class Application {
 
             RevokeApiKeyRequest req = new RevokeApiKeyRequest("HMiFAgQeNb", "org-123", "user-123");            
 
-            RevokeApiKeyResponse res = sdk.apiKey.revokeApiKey(req, new RevokeApiKeySecurity("error") {{
+            RevokeApiKeyResponse res = sdk.apiKey.revokeApiKey(req, new RevokeApiKeySecurity("illum") {{
                 apiKeyAuth = "";
             }});
 

@@ -27,9 +27,9 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.CreateUserRequest req = new CreateUserRequest("soluta");            
+            ai.whylabs.WhyLabs.models.shared.CreateUserRequest req = new CreateUserRequest("nihil");            
 
-            CreateUserResponse res = sdk.user.createUser(req, new CreateUserSecurity("dolorum") {{
+            CreateUserResponse res = sdk.user.createUser(req, new CreateUserSecurity("ipsum") {{
                 apiKeyAuth = "";
             }});
 
@@ -76,9 +76,9 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            GetUserRequest req = new GetUserRequest("iusto");            
+            GetUserRequest req = new GetUserRequest("voluptate");            
 
-            GetUserResponse res = sdk.user.getUser(req, new GetUserSecurity("voluptate") {{
+            GetUserResponse res = sdk.user.getUser(req, new GetUserSecurity("id") {{
                 apiKeyAuth = "";
             }});
 
@@ -125,9 +125,9 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            GetUserByEmailRequest req = new GetUserByEmailRequest("dolorum");            
+            GetUserByEmailRequest req = new GetUserByEmailRequest("saepe");            
 
-            GetUserByEmailResponse res = sdk.user.getUserByEmail(req, new GetUserByEmailSecurity("deleniti") {{
+            GetUserByEmailResponse res = sdk.user.getUserByEmail(req, new GetUserByEmailSecurity("eius") {{
                 apiKeyAuth = "";
             }});
 
@@ -174,11 +174,11 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.User req = new User("omnis", "necessitatibus") {{
-                preferences = "distinctio";
+            ai.whylabs.WhyLabs.models.shared.User req = new User("aspernatur", "perferendis") {{
+                preferences = "amet";
             }};            
 
-            UpdateUserResponse res = sdk.user.updateUser(req, new UpdateUserSecurity("asperiores") {{
+            UpdateUserResponse res = sdk.user.updateUser(req, new UpdateUserSecurity("optio") {{
                 apiKeyAuth = "";
             }});
 

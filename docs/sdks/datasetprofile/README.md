@@ -38,25 +38,33 @@ public class Application {
                 .build();
 
             CreateReferenceProfileRequest req = new CreateReferenceProfileRequest(                new CreateReferenceProfileRequest() {{
-                                alias = "deserunt";
-                                datasetTimestamp = 20218L;
+                                alias = "quis";
+                                datasetTimestamp = 87129L;
                                 segments = new ai.whylabs.WhyLabs.models.shared.Segment[]{{
                                     add(new Segment() {{
                                         tags = new ai.whylabs.WhyLabs.models.shared.SegmentTag[]{{
                                             add(new SegmentTag() {{
-                                                key = "sapiente";
-                                                value = "quo";
+                                                key = "ipsam";
+                                                value = "repellendus";
                                             }}),
+                                        }};
+                                    }}),
+                                    add(new Segment() {{
+                                        tags = new ai.whylabs.WhyLabs.models.shared.SegmentTag[]{{
                                             add(new SegmentTag() {{
-                                                key = "odit";
-                                                value = "at";
+                                                key = "quo";
+                                                value = "odit";
                                             }}),
                                             add(new SegmentTag() {{
                                                 key = "at";
-                                                value = "maiores";
+                                                value = "at";
                                             }}),
                                             add(new SegmentTag() {{
-                                                key = "molestiae";
+                                                key = "maiores";
+                                                value = "molestiae";
+                                            }}),
+                                            add(new SegmentTag() {{
+                                                key = "quod";
                                                 value = "quod";
                                             }}),
                                         }};
@@ -64,31 +72,25 @@ public class Application {
                                     add(new Segment() {{
                                         tags = new ai.whylabs.WhyLabs.models.shared.SegmentTag[]{{
                                             add(new SegmentTag() {{
-                                                key = "esse";
-                                                value = "totam";
+                                                key = "totam";
+                                                value = "porro";
                                             }}),
                                             add(new SegmentTag() {{
-                                                key = "porro";
-                                                value = "dolorum";
-                                            }}),
-                                            add(new SegmentTag() {{
-                                                key = "dicta";
-                                                value = "nam";
-                                            }}),
-                                            add(new SegmentTag() {{
-                                                key = "officia";
-                                                value = "occaecati";
+                                                key = "dolorum";
+                                                value = "dicta";
                                             }}),
                                         }};
                                     }}),
                                 }};
                                 tags = new String[]{{
-                                    add("deleniti"),
+                                    add("officia"),
+                                    add("occaecati"),
+                                    add("fugit"),
                                 }};
-                                version = "hic";
+                                version = "deleniti";
                             }};, "model-123", "org-123");            
 
-            CreateReferenceProfileResponse res = sdk.datasetProfile.createReferenceProfile(req, new CreateReferenceProfileSecurity("optio") {{
+            CreateReferenceProfileResponse res = sdk.datasetProfile.createReferenceProfile(req, new CreateReferenceProfileSecurity("hic") {{
                 apiKeyAuth = "";
             }});
 
@@ -142,7 +144,7 @@ public class Application {
                 startTimestamp = 1577836800000L;
             }};            
 
-            DeleteAnalyzerResultsResponse res = sdk.datasetProfile.deleteAnalyzerResults(req, new DeleteAnalyzerResultsSecurity("totam") {{
+            DeleteAnalyzerResultsResponse res = sdk.datasetProfile.deleteAnalyzerResults(req, new DeleteAnalyzerResultsSecurity("optio") {{
                 apiKeyAuth = "";
             }});
 
@@ -197,7 +199,7 @@ public class Application {
                 profileStartTimestamp = 1577836800000L;
             }};            
 
-            DeleteDatasetProfilesResponse res = sdk.datasetProfile.deleteDatasetProfiles(req, new DeleteDatasetProfilesSecurity("beatae") {{
+            DeleteDatasetProfilesResponse res = sdk.datasetProfile.deleteDatasetProfiles(req, new DeleteDatasetProfilesSecurity("totam") {{
                 apiKeyAuth = "";
             }});
 
@@ -248,7 +250,7 @@ public class Application {
 
             DeleteReferenceProfileRequest req = new DeleteReferenceProfileRequest("model-123", "org-123", "ref-xxy");            
 
-            DeleteReferenceProfileResponse res = sdk.datasetProfile.deleteReferenceProfile(req, new DeleteReferenceProfileSecurity("commodi") {{
+            DeleteReferenceProfileResponse res = sdk.datasetProfile.deleteReferenceProfile(req, new DeleteReferenceProfileSecurity("beatae") {{
                 apiKeyAuth = "";
             }});
 
@@ -299,7 +301,7 @@ public class Application {
 
             GetReferenceProfileRequest req = new GetReferenceProfileRequest("model-123", "org-123", "ref-xxy");            
 
-            GetReferenceProfileResponse res = sdk.datasetProfile.getReferenceProfile(req, new GetReferenceProfileSecurity("molestiae") {{
+            GetReferenceProfileResponse res = sdk.datasetProfile.getReferenceProfile(req, new GetReferenceProfileSecurity("commodi") {{
                 apiKeyAuth = "";
             }});
 
@@ -351,12 +353,12 @@ public class Application {
 
             HideSegmentsRequest req = new HideSegmentsRequest(                new SegmentsListRequest() {{
                                 segments = new String[]{{
+                                    add("modi"),
                                     add("qui"),
-                                    add("impedit"),
                                 }};
                             }};, "model-123", "org-123");            
 
-            HideSegmentsResponse res = sdk.datasetProfile.hideSegments(req, new HideSegmentsSecurity("cum") {{
+            HideSegmentsResponse res = sdk.datasetProfile.hideSegments(req, new HideSegmentsSecurity("impedit") {{
                 apiKeyAuth = "";
             }});
 
@@ -410,7 +412,7 @@ public class Application {
                 toEpoch = 1893456000000L;
             }};            
 
-            ListReferenceProfilesResponse res = sdk.datasetProfile.listReferenceProfiles(req, new ListReferenceProfilesSecurity("esse") {{
+            ListReferenceProfilesResponse res = sdk.datasetProfile.listReferenceProfiles(req, new ListReferenceProfilesSecurity("cum") {{
                 apiKeyAuth = "";
             }});
 
@@ -461,7 +463,7 @@ public class Application {
 
             ListSegmentsRequest req = new ListSegmentsRequest("model-123", "org-123");            
 
-            ListSegmentsResponse res = sdk.datasetProfile.listSegments(req, new ListSegmentsSecurity("ipsum") {{
+            ListSegmentsResponse res = sdk.datasetProfile.listSegments(req, new ListSegmentsSecurity("esse") {{
                 apiKeyAuth = "";
             }});
 

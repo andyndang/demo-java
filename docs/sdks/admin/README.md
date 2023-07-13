@@ -18,7 +18,6 @@ import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.GenerateReportRequest;
 import ai.whylabs.WhyLabs.models.operations.GenerateReportResponse;
 import ai.whylabs.WhyLabs.models.operations.GenerateReportSecurity;
-import ai.whylabs.WhyLabs.models.shared.AdminReportTimePeriod;
 import ai.whylabs.WhyLabs.models.shared.AdminReportType;
 
 public class Application {
@@ -27,9 +26,9 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            GenerateReportRequest req = new GenerateReportRequest(AdminReportType.SESSIONS, AdminReportTimePeriod.YEAR);            
+            GenerateReportRequest req = new GenerateReportRequest(AdminReportType.SESSIONS);            
 
-            GenerateReportResponse res = sdk.admin.generateReport(req, new GenerateReportSecurity("quibusdam") {{
+            GenerateReportResponse res = sdk.admin.generateReport(req, new GenerateReportSecurity("provident") {{
                 apiKeyAuth = "";
             }});
 
@@ -75,7 +74,7 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            PostMonitorConfigValidationJobResponse res = sdk.admin.postMonitorConfigValidationJob(new PostMonitorConfigValidationJobSecurity("unde") {{
+            PostMonitorConfigValidationJobResponse res = sdk.admin.postMonitorConfigValidationJob(new PostMonitorConfigValidationJobSecurity("distinctio") {{
                 apiKeyAuth = "";
             }});
 

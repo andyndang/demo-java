@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'ai.whylabs.WhyLabs:Songbird:1.11.1'
+implementation 'ai.whylabs.WhyLabs:Songbird:1.12.0'
 ```
 <!-- End SDK Installation -->
 
@@ -19,7 +19,6 @@ import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.GenerateReportRequest;
 import ai.whylabs.WhyLabs.models.operations.GenerateReportResponse;
 import ai.whylabs.WhyLabs.models.operations.GenerateReportSecurity;
-import ai.whylabs.WhyLabs.models.shared.AdminReportTimePeriod;
 import ai.whylabs.WhyLabs.models.shared.AdminReportType;
 
 public class Application {
@@ -28,9 +27,9 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            GenerateReportRequest req = new GenerateReportRequest(AdminReportType.SESSIONS, AdminReportTimePeriod.MONTH);            
+            GenerateReportRequest req = new GenerateReportRequest(AdminReportType.SESSIONS);            
 
-            GenerateReportResponse res = sdk.admin.generateReport(req, new GenerateReportSecurity("provident") {{
+            GenerateReportResponse res = sdk.admin.generateReport(req, new GenerateReportSecurity("corrupti") {{
                 apiKeyAuth = "";
             }});
 
@@ -145,6 +144,7 @@ public class Application {
 
 ### [log](docs/sdks/log/README.md)
 
+* [getProfileObservatoryLink](docs/sdks/log/README.md#getprofileobservatorylink) - Get observatory links for profiles in a given org/model. A max of 3 profiles can be viewed a a time.
 * [logAsync](docs/sdks/log/README.md#logasync) - Like /log, except this api doesn't take the actual profile content. It returns an upload link that can be used to upload the profile to.
 * [logReference](docs/sdks/log/README.md#logreference) - Returns a presigned URL for uploading the reference profile to.
 
@@ -252,6 +252,7 @@ public class Application {
 * [createReferenceProfileUpload](docs/sdks/sessions/README.md#createreferenceprofileupload) - Create a reference profile upload for a given session.
 * [createSession](docs/sdks/sessions/README.md#createsession) - Create a new session that can be used to upload dataset profiles from whylogs for display in whylabs.
 * [getSession](docs/sdks/sessions/README.md#getsession) - Get information about a session.
+* [getSessionProfileObservatoryLink](docs/sdks/sessions/README.md#getsessionprofileobservatorylink) - Get observatory links for profiles in a given session. A max of 3 profiles can be viewed a a time.
 
 ### [user](docs/sdks/user/README.md)
 

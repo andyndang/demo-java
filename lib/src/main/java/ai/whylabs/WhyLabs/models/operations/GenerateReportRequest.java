@@ -20,19 +20,7 @@ public class GenerateReportRequest {
         return this;
     }
     
-    /**
-     * A time period for the admin report.
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=time_period")
-    public ai.whylabs.WhyLabs.models.shared.AdminReportTimePeriod timePeriod;
-
-    public GenerateReportRequest withTimePeriod(ai.whylabs.WhyLabs.models.shared.AdminReportTimePeriod timePeriod) {
-        this.timePeriod = timePeriod;
-        return this;
-    }
-    
-    public GenerateReportRequest(@JsonProperty("report_type") ai.whylabs.WhyLabs.models.shared.AdminReportType reportType, @JsonProperty("time_period") ai.whylabs.WhyLabs.models.shared.AdminReportTimePeriod timePeriod) {
+    public GenerateReportRequest(@JsonProperty("report_type") ai.whylabs.WhyLabs.models.shared.AdminReportType reportType) {
         this.reportType = reportType;
-        this.timePeriod = timePeriod;
   }
 }

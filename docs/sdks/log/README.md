@@ -2,8 +2,70 @@
 
 ### Available Operations
 
+* [getProfileObservatoryLink](#getprofileobservatorylink) - Get observatory links for profiles in a given org/model. A max of 3 profiles can be viewed a a time.
 * [logAsync](#logasync) - Like /log, except this api doesn't take the actual profile content. It returns an upload link that can be used to upload the profile to.
 * [logReference](#logreference) - Returns a presigned URL for uploading the reference profile to.
+
+## getProfileObservatoryLink
+
+Get observatory links for profiles in a given org/model. A max of 3 profiles can be viewed a a time.
+
+### Example Usage
+
+```java
+package hello.world;
+
+import ai.whylabs.WhyLabs.Songbird;
+import ai.whylabs.WhyLabs.models.operations.GetProfileObservatoryLinkRequest;
+import ai.whylabs.WhyLabs.models.operations.GetProfileObservatoryLinkResponse;
+import ai.whylabs.WhyLabs.models.operations.GetProfileObservatoryLinkSecurity;
+import ai.whylabs.WhyLabs.models.shared.GetProfileObservatoryLinkRequest;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            Songbird sdk = Songbird.builder()
+                .build();
+
+            GetProfileObservatoryLinkRequest req = new GetProfileObservatoryLinkRequest(                new GetProfileObservatoryLinkRequest() {{
+                                batchProfileTimestamps = new Long[]{{
+                                    add(396098L),
+                                    add(592042L),
+                                    add(896039L),
+                                }};
+                                referenceProfileIds = new String[]{{
+                                    add("officia"),
+                                    add("dolor"),
+                                    add("debitis"),
+                                }};
+                            }};, "a", "dolorum");            
+
+            GetProfileObservatoryLinkResponse res = sdk.log.getProfileObservatoryLink(req, new GetProfileObservatoryLinkSecurity("in") {{
+                apiKeyAuth = "";
+            }});
+
+            if (res.statusCode == 200) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
+| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                              | [ai.whylabs.WhyLabs.models.operations.GetProfileObservatoryLinkRequest](../../models/operations/GetProfileObservatoryLinkRequest.md)   | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
+| `security`                                                                                                                             | [ai.whylabs.WhyLabs.models.operations.GetProfileObservatoryLinkSecurity](../../models/operations/GetProfileObservatoryLinkSecurity.md) | :heavy_check_mark:                                                                                                                     | The security requirements to use for the request.                                                                                      |
+
+
+### Response
+
+**[ai.whylabs.WhyLabs.models.operations.GetProfileObservatoryLinkResponse](../../models/operations/GetProfileObservatoryLinkResponse.md)**
+
 
 ## logAsync
 
@@ -28,24 +90,28 @@ public class Application {
                 .build();
 
             LogAsyncRequest req = new LogAsyncRequest(                new LogAsyncRequest() {{
-                                datasetTimestamp = 896039L;
+                                datasetTimestamp = 449198L;
                                 segmentTags = new ai.whylabs.WhyLabs.models.shared.SegmentTag[]{{
                                     add(new SegmentTag() {{
-                                        key = "officia";
-                                        value = "dolor";
+                                        key = "maiores";
+                                        value = "rerum";
                                     }}),
                                     add(new SegmentTag() {{
-                                        key = "debitis";
-                                        value = "a";
+                                        key = "dicta";
+                                        value = "magnam";
                                     }}),
                                     add(new SegmentTag() {{
-                                        key = "dolorum";
-                                        value = "in";
+                                        key = "cumque";
+                                        value = "facere";
+                                    }}),
+                                    add(new SegmentTag() {{
+                                        key = "ea";
+                                        value = "aliquid";
                                     }}),
                                 }};
                             }};, "model-123", "org-123");            
 
-            LogAsyncResponse res = sdk.log.logAsync(req, new LogAsyncSecurity("in") {{
+            LogAsyncResponse res = sdk.log.logAsync(req, new LogAsyncSecurity("laborum") {{
                 apiKeyAuth = "";
             }});
 
@@ -94,11 +160,11 @@ public class Application {
                 .build();
 
             LogReferenceRequest req = new LogReferenceRequest(                new LogReferenceRequest() {{
-                                alias = "illum";
-                                datasetTimestamp = 978571L;
+                                alias = "accusamus";
+                                datasetTimestamp = 249796L;
                             }};, "model-123", "org-123");            
 
-            LogReferenceResponse res = sdk.log.logReference(req, new LogReferenceSecurity("rerum") {{
+            LogReferenceResponse res = sdk.log.logReference(req, new LogReferenceSecurity("occaecati") {{
                 apiKeyAuth = "";
             }});
 
