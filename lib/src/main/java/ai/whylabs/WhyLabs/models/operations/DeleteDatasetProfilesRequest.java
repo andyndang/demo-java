@@ -43,7 +43,7 @@ public class DeleteDatasetProfilesRequest {
     }
     
     /**
-     * Optional, scope deleting profiles more recent than the timestamp
+     * Optional, scope deleting profiles older than the timestamp
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=profile_end_timestamp")
     public Long profileEndTimestamp;
@@ -54,7 +54,7 @@ public class DeleteDatasetProfilesRequest {
     }
     
     /**
-     * Optional, scope deleting profiles older than the timestamp
+     * Optional, scope deleting profiles from and more recent than the timestamp
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=profile_start_timestamp")
     public Long profileStartTimestamp;

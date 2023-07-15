@@ -20,9 +20,6 @@ public class DeleteAnalyzerResultsRequest {
         return this;
     }
     
-    /**
-     * Optional, scope deleting analyzer results more recent than the timestamp
-     */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_timestamp")
     public Long endTimestamp;
 
@@ -42,9 +39,6 @@ public class DeleteAnalyzerResultsRequest {
         return this;
     }
     
-    /**
-     * Optional, scope deleting analyzer results older than the timestamp
-     */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_timestamp")
     public Long startTimestamp;
 
