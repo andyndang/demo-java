@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'ai.whylabs.WhyLabs:Songbird:1.13.1'
+implementation 'ai.whylabs.WhyLabs:Songbird:1.14.0'
 ```
 <!-- End SDK Installation -->
 
