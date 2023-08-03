@@ -1258,7 +1258,7 @@ public class Application {
 
 Update some fields of an organization to non-null values, leaving all other existing values the same
 
-> :warning: **DEPRECATED**: this method will be removed in a future release, please migrate away from it as soon as possible.
+> :warning: **DEPRECATED**: This will be removed in a future release, please migrate away from it as soon as possible.
 
 ### Example Usage
 
@@ -2114,7 +2114,7 @@ public class Application {
 
 Update all fields of an existing organization
 
-> :warning: **DEPRECATED**: this method will be removed in a future release, please migrate away from it as soon as possible.
+> :warning: **DEPRECATED**: This will be removed in a future release, please migrate away from it as soon as possible.
 
 ### Example Usage
 

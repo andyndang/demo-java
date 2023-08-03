@@ -1081,7 +1081,7 @@ public class Internal {
      * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
-     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
      */
     @Deprecated
     public ai.whylabs.WhyLabs.models.operations.PartiallyUpdateOrgResponse partiallyUpdateOrg(ai.whylabs.WhyLabs.models.operations.PartiallyUpdateOrgRequest request, ai.whylabs.WhyLabs.models.operations.PartiallyUpdateOrgSecurity security) throws Exception {
@@ -1817,7 +1817,7 @@ public class Internal {
      * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
-     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
      */
     @Deprecated
     public ai.whylabs.WhyLabs.models.operations.UpdateOrgResponse updateOrg(ai.whylabs.WhyLabs.models.operations.UpdateOrgRequest request, ai.whylabs.WhyLabs.models.operations.UpdateOrgSecurity security) throws Exception {
