@@ -32,13 +32,10 @@ public class Application {
                 expirationTime = 1577836800000L;
                 scopes = new String[]{{
                     add(":user"),
-                    add(":user"),
-                    add(":user"),
-                    add(":user"),
                 }};
             }};            
 
-            CreateApiKeyResponse res = sdk.apiKey.createApiKey(req, new CreateApiKeySecurity("unde") {{
+            CreateApiKeyResponse res = sdk.apiKey.createApiKey(req, new CreateApiKeySecurity("quis") {{
                 apiKeyAuth = "";
             }});
 
@@ -87,7 +84,7 @@ public class Application {
 
             GetApiKeyRequest req = new GetApiKeyRequest("fh4dUNV3WQ", "org-123");            
 
-            GetApiKeyResponse res = sdk.apiKey.getApiKey(req, new GetApiKeySecurity("nulla") {{
+            GetApiKeyResponse res = sdk.apiKey.getApiKey(req, new GetApiKeySecurity("veritatis") {{
                 apiKeyAuth = "";
             }});
 
@@ -138,7 +135,7 @@ public class Application {
                 userId = "user-123";
             }};            
 
-            ListApiKeysResponse res = sdk.apiKey.listApiKeys(req, new ListApiKeysSecurity("corrupti") {{
+            ListApiKeysResponse res = sdk.apiKey.listApiKeys(req, new ListApiKeysSecurity("deserunt") {{
                 apiKeyAuth = "";
             }});
 
@@ -187,7 +184,7 @@ public class Application {
 
             RevokeApiKeyRequest req = new RevokeApiKeyRequest("HMiFAgQeNb", "org-123", "user-123");            
 
-            RevokeApiKeyResponse res = sdk.apiKey.revokeApiKey(req, new RevokeApiKeySecurity("illum") {{
+            RevokeApiKeyResponse res = sdk.apiKey.revokeApiKey(req, new RevokeApiKeySecurity("perferendis") {{
                 apiKeyAuth = "";
             }});
 

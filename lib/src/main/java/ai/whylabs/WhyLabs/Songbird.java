@@ -18,6 +18,7 @@ public class Songbird {
         "https://api.whylabsapp.com",
 	};
   	
+    public Account account;
     public Admin admin;
     public ApiKey apiKey;
     public Databricks databricks;
@@ -129,6 +130,8 @@ public class Songbird {
 
 	private Songbird(SDKConfiguration sdkConfiguration) throws Exception {
 		this.sdkConfiguration = sdkConfiguration;
+		
+		this.account = new Account(this.sdkConfiguration);
 		
 		this.admin = new Admin(this.sdkConfiguration);
 		

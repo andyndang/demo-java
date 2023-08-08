@@ -40,11 +40,12 @@ public class Application {
                 observatoryUrl = "https://hub.whylabsapp.com";
                 overrideId = "org-123";
                 pagerDutyKey = "abc-def-ghi-jkl";
+                parentOrgId = "org-123";
                 slackWebhook = "https://hooks.slack.com/services/foo/bar";
                 subscriptionTier = SubscriptionTier.FREE;
             }};            
 
-            CreateOrganizationResponse res = sdk.organizations.createOrganization(req, new CreateOrganizationSecurity("quis") {{
+            CreateOrganizationResponse res = sdk.organizations.createOrganization(req, new CreateOrganizationSecurity("dolor") {{
                 apiKeyAuth = "";
             }});
 
@@ -91,9 +92,9 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            DeleteOrganizationRequest req = new DeleteOrganizationRequest("nesciunt");            
+            DeleteOrganizationRequest req = new DeleteOrganizationRequest("qui");            
 
-            DeleteOrganizationResponse res = sdk.organizations.deleteOrganization(req, new DeleteOrganizationSecurity("eos") {{
+            DeleteOrganizationResponse res = sdk.organizations.deleteOrganization(req, new DeleteOrganizationSecurity("ipsum") {{
                 apiKeyAuth = "";
             }});
 
@@ -140,9 +141,9 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            GetAWSMarketplaceMetadataRequest req = new GetAWSMarketplaceMetadataRequest("perferendis");            
+            GetAWSMarketplaceMetadataRequest req = new GetAWSMarketplaceMetadataRequest("hic");            
 
-            GetAWSMarketplaceMetadataResponse res = sdk.organizations.getAWSMarketplaceMetadata(req, new GetAWSMarketplaceMetadataSecurity("dolores") {{
+            GetAWSMarketplaceMetadataResponse res = sdk.organizations.getAWSMarketplaceMetadata(req, new GetAWSMarketplaceMetadataSecurity("excepturi") {{
                 apiKeyAuth = "";
             }});
 
@@ -189,9 +190,9 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            GetOrganizationRequest req = new GetOrganizationRequest("minus");            
+            GetOrganizationRequest req = new GetOrganizationRequest("cum");            
 
-            GetOrganizationResponse res = sdk.organizations.getOrganization(req, new GetOrganizationSecurity("quam") {{
+            GetOrganizationResponse res = sdk.organizations.getOrganization(req, new GetOrganizationSecurity("voluptate") {{
                 apiKeyAuth = "";
             }});
 
@@ -237,7 +238,7 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            ListOrganizationsResponse res = sdk.organizations.listOrganizations(new ListOrganizationsSecurity("dolor") {{
+            ListOrganizationsResponse res = sdk.organizations.listOrganizations(new ListOrganizationsSecurity("dignissimos") {{
                 apiKeyAuth = "";
             }});
 
@@ -288,17 +289,17 @@ public class Application {
                 .build();
 
             PartiallyUpdateOrgRequest req = new PartiallyUpdateOrgRequest(                new PartiallyUpdateOrgRequestBody() {{
-                                orgId = "vero";
+                                orgId = "reiciendis";
                             }};) {{
                 domain = "acme.ai";
                 name = "ACME, Inc";
                 notificationEmailAddress = "notifications@acme.ai";
                 observatoryUrl = "https://hub.whylabsapp.com";
                 slackWebhook = "https://hooks.slack.com/services/foo/bar";
-                subscriptionTier = SubscriptionTier.PAID;
+                subscriptionTier = SubscriptionTier.FREE;
             }};            
 
-            PartiallyUpdateOrgResponse res = sdk.organizations.partiallyUpdateOrg(req, new PartiallyUpdateOrgSecurity("hic") {{
+            PartiallyUpdateOrgResponse res = sdk.organizations.partiallyUpdateOrg(req, new PartiallyUpdateOrgSecurity("dolorum") {{
                 apiKeyAuth = "";
             }});
 
@@ -346,18 +347,19 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            PartiallyUpdateOrganizationRequest req = new PartiallyUpdateOrganizationRequest("recusandae") {{
+            PartiallyUpdateOrganizationRequest req = new PartiallyUpdateOrganizationRequest("numquam") {{
                 domain = "acme.ai";
                 emailDomains = "acme.ai,acme.com";
                 name = "ACME, Inc";
                 notificationEmailAddress = "notifications@acme.ai";
                 observatoryUrl = "https://hub.whylabsapp.com";
                 pagerDutyKey = "abc-def-ghi-jkl";
+                parentOrgId = "abc-def-ghi-jkl";
                 slackWebhook = "https://hooks.slack.com/services/foo/bar";
-                subscriptionTier = SubscriptionTier.AWS_MARKETPLACE;
+                subscriptionTier = SubscriptionTier.FREE;
             }};            
 
-            PartiallyUpdateOrganizationResponse res = sdk.organizations.partiallyUpdateOrganization(req, new PartiallyUpdateOrganizationSecurity("facilis") {{
+            PartiallyUpdateOrganizationResponse res = sdk.organizations.partiallyUpdateOrganization(req, new PartiallyUpdateOrganizationSecurity("ipsa") {{
                 apiKeyAuth = "";
             }});
 
@@ -409,18 +411,19 @@ public class Application {
                 .build();
 
             UpdateOrgRequest req = new UpdateOrgRequest(                new UpdateOrgRequestBody() {{
-                                orgId = "perspiciatis";
+                                orgId = "ipsa";
                             }};, "ACME, Inc") {{
                 domain = "acme.ai";
                 emailDomains = "acme.ai,acme.com";
                 notificationEmailAddress = "notifications@acme.ai";
                 observatoryUrl = "https://hub.whylabsapp.com";
                 pagerDutyKey = "abc-def-ghi-jkl";
+                parentOrgId = "org-123";
                 slackWebhook = "https://hooks.slack.com/services/foo/bar";
-                subscriptionTier = SubscriptionTier.FREE;
+                subscriptionTier = SubscriptionTier.PAID;
             }};            
 
-            UpdateOrgResponse res = sdk.organizations.updateOrg(req, new UpdateOrgSecurity("porro") {{
+            UpdateOrgResponse res = sdk.organizations.updateOrg(req, new UpdateOrgSecurity("odio") {{
                 apiKeyAuth = "";
             }});
 
@@ -468,17 +471,18 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            UpdateOrganizationRequest req = new UpdateOrganizationRequest("ACME, Inc", "consequuntur") {{
+            UpdateOrganizationRequest req = new UpdateOrganizationRequest("ACME, Inc", "quaerat") {{
                 domain = "acme.ai";
                 emailDomains = "acme.ai,acme.com";
                 notificationEmailAddress = "notifications@acme.ai";
                 observatoryUrl = "https://hub.whylabsapp.com";
                 pagerDutyKey = "abc-def-ghi-jkl";
+                parentOrgId = "org-123";
                 slackWebhook = "https://hooks.slack.com/services/foo/bar";
-                subscriptionTier = SubscriptionTier.AWS_MARKETPLACE;
+                subscriptionTier = SubscriptionTier.SUBSCRIPTION;
             }};            
 
-            UpdateOrganizationResponse res = sdk.organizations.updateOrganization(req, new UpdateOrganizationSecurity("error") {{
+            UpdateOrganizationResponse res = sdk.organizations.updateOrganization(req, new UpdateOrganizationSecurity("quidem") {{
                 apiKeyAuth = "";
             }});
 

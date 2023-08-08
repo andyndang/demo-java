@@ -88,6 +88,15 @@ public class OrganizationSummary {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("parentOrgId")
+    public String parentOrgId;
+
+    public OrganizationSummary withParentOrgId(String parentOrgId) {
+        this.parentOrgId = parentOrgId;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slackWebhook")
     public String slackWebhook;
 

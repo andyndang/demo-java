@@ -29,18 +29,16 @@ public class Application {
 
             GetProfileObservatoryLinkRequest req = new GetProfileObservatoryLinkRequest(                new GetProfileObservatoryLinkRequest() {{
                                 batchProfileTimestamps = new Long[]{{
-                                    add(396098L),
-                                    add(592042L),
-                                    add(896039L),
+                                    add(19193L),
+                                    add(470132L),
                                 }};
                                 referenceProfileIds = new String[]{{
-                                    add("officia"),
-                                    add("dolor"),
-                                    add("debitis"),
+                                    add("distinctio"),
+                                    add("id"),
                                 }};
-                            }};, "a", "dolorum");            
+                            }};, "labore", "labore");            
 
-            GetProfileObservatoryLinkResponse res = sdk.log.getProfileObservatoryLink(req, new GetProfileObservatoryLinkSecurity("in") {{
+            GetProfileObservatoryLinkResponse res = sdk.log.getProfileObservatoryLink(req, new GetProfileObservatoryLinkSecurity("suscipit") {{
                 apiKeyAuth = "";
             }});
 
@@ -90,28 +88,24 @@ public class Application {
                 .build();
 
             LogAsyncRequest req = new LogAsyncRequest(                new LogAsyncRequest() {{
-                                datasetTimestamp = 449198L;
+                                datasetTimestamp = 618016L;
                                 segmentTags = new ai.whylabs.WhyLabs.models.shared.SegmentTag[]{{
                                     add(new SegmentTag() {{
-                                        key = "maiores";
-                                        value = "rerum";
+                                        key = "eum";
+                                        value = "vero";
                                     }}),
                                     add(new SegmentTag() {{
-                                        key = "dicta";
-                                        value = "magnam";
+                                        key = "aspernatur";
+                                        value = "architecto";
                                     }}),
                                     add(new SegmentTag() {{
-                                        key = "cumque";
-                                        value = "facere";
-                                    }}),
-                                    add(new SegmentTag() {{
-                                        key = "ea";
-                                        value = "aliquid";
+                                        key = "magnam";
+                                        value = "et";
                                     }}),
                                 }};
                             }};, "model-123", "org-123");            
 
-            LogAsyncResponse res = sdk.log.logAsync(req, new LogAsyncSecurity("laborum") {{
+            LogAsyncResponse res = sdk.log.logAsync(req, new LogAsyncSecurity("excepturi") {{
                 apiKeyAuth = "";
             }});
 
@@ -160,11 +154,11 @@ public class Application {
                 .build();
 
             LogReferenceRequest req = new LogReferenceRequest(                new LogReferenceRequest() {{
-                                alias = "accusamus";
-                                datasetTimestamp = 249796L;
+                                alias = "ullam";
+                                datasetTimestamp = 590873L;
                             }};, "model-123", "org-123");            
 
-            LogReferenceResponse res = sdk.log.logReference(req, new LogReferenceSecurity("occaecati") {{
+            LogReferenceResponse res = sdk.log.logReference(req, new LogReferenceSecurity("quos") {{
                 apiKeyAuth = "";
             }});
 

@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'ai.whylabs.WhyLabs:Songbird:1.20.0'
+implementation 'ai.whylabs.WhyLabs:Songbird:1.21.0'
 ```
 <!-- End SDK Installation -->
 
@@ -18,10 +18,11 @@ implementation 'ai.whylabs.WhyLabs:Songbird:1.20.0'
 package hello.world;
 
 import ai.whylabs.WhyLabs.Songbird;
-import ai.whylabs.WhyLabs.models.operations.GenerateReportRequest;
-import ai.whylabs.WhyLabs.models.operations.GenerateReportResponse;
-import ai.whylabs.WhyLabs.models.operations.GenerateReportSecurity;
-import ai.whylabs.WhyLabs.models.shared.AdminReportType;
+import ai.whylabs.WhyLabs.models.operations.CreateAccountUserRequest;
+import ai.whylabs.WhyLabs.models.operations.CreateAccountUserRequestBody;
+import ai.whylabs.WhyLabs.models.operations.CreateAccountUserResponse;
+import ai.whylabs.WhyLabs.models.operations.CreateAccountUserSecurity;
+import ai.whylabs.WhyLabs.models.shared.AccountUser;
 
 public class Application {
     public static void main(String[] args) {
@@ -29,9 +30,15 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            GenerateReportRequest req = new GenerateReportRequest(AdminReportType.SESSIONS);            
+            CreateAccountUserRequest req = new CreateAccountUserRequest(                new CreateAccountUserRequestBody() {{
+                                user = new AccountUser("corrupti") {{
+                                    active = false;
+                                    externalId = "provident";
+                                    userId = "distinctio";
+                                }};;
+                            }};, "org-123");            
 
-            GenerateReportResponse res = sdk.admin.generateReport(req, new GenerateReportSecurity("corrupti") {{
+            CreateAccountUserResponse res = sdk.account.createAccountUser(req, new CreateAccountUserSecurity("quibusdam") {{
                 apiKeyAuth = "";
             }});
 
@@ -49,6 +56,17 @@ public class Application {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
+
+### [account](docs/sdks/account/README.md)
+
+* [createAccountUser](docs/sdks/account/README.md#createaccountuser) - Create an account user
+* [deleteAccountUser](docs/sdks/account/README.md#deleteaccountuser) - Delete account user
+* [getAccountMemberships](docs/sdks/account/README.md#getaccountmemberships) - Get memberships in an account
+* [getAccountUsers](docs/sdks/account/README.md#getaccountusers) - Get users in an account
+* [getOrgRoleMemberships](docs/sdks/account/README.md#getorgrolememberships) - Get memberships for a specific org and role
+* [patchOrgRoleMemberships](docs/sdks/account/README.md#patchorgrolememberships) - Add or delete memberships in a specific role and managed organization
+* [putOrgRoleMemberships](docs/sdks/account/README.md#putorgrolememberships) - Replace the memberships in a specific role and managed organization
+* [updateAccountUser](docs/sdks/account/README.md#updateaccountuser) - Update account user
 
 ### [admin](docs/sdks/admin/README.md)
 
@@ -98,12 +116,16 @@ public class Application {
 
 ### [internal](docs/sdks/internal/README.md)
 
+* [createAccountUser](docs/sdks/internal/README.md#createaccountuser) - Create an account user
 * [createMembership](docs/sdks/internal/README.md#createmembership) - Create a membership for a user, making them apart of an organization. Uses the user's current email address.
 * [createOrganization](docs/sdks/internal/README.md#createorganization) - Create an organization
 * [createUser](docs/sdks/internal/README.md#createuser) - Create a user.
+* [deleteAccountUser](docs/sdks/internal/README.md#deleteaccountuser) - Delete account user
 * [deleteOrganization](docs/sdks/internal/README.md#deleteorganization) - Delete an org
 * [generateReport](docs/sdks/internal/README.md#generatereport) - Generate an admin report
 * [getAWSMarketplaceMetadata](docs/sdks/internal/README.md#getawsmarketplacemetadata) - Get marketplace metadata for an org if any exists.
+* [getAccountMemberships](docs/sdks/internal/README.md#getaccountmemberships) - Get memberships in an account
+* [getAccountUsers](docs/sdks/internal/README.md#getaccountusers) - Get users in an account
 * [getApiKey](docs/sdks/internal/README.md#getapikey) - Get an api key by its id
 * [getConnection](docs/sdks/internal/README.md#getconnection) - Get the connection metadata for a given org
 * [getDefaultMembershipForEmail](docs/sdks/internal/README.md#getdefaultmembershipforemail) - Get the default membership for a user.
@@ -113,6 +135,7 @@ public class Application {
 * [getMembershipsByOrg](docs/sdks/internal/README.md#getmembershipsbyorg) - Get memberships for an org.
 * [getMonitorConfigV3Version](docs/sdks/internal/README.md#getmonitorconfigv3version) - Get the monitor config document version for a given dataset.
 * [getNotificationSettings](docs/sdks/internal/README.md#getnotificationsettings) - Get notification settings for an org
+* [getOrgRoleMemberships](docs/sdks/internal/README.md#getorgrolememberships) - Get memberships for a specific org and role
 * [getOrganization](docs/sdks/internal/README.md#getorganization) - Get the metadata about an organization.
 * [getUser](docs/sdks/internal/README.md#getuser) - Get a user by their id.
 * [getUserByEmail](docs/sdks/internal/README.md#getuserbyemail) - Get a user by their email.
@@ -124,10 +147,12 @@ public class Application {
 * [listSegments](docs/sdks/internal/README.md#listsegments) - Returns a list of segments
 * [~~partiallyUpdateOrg~~](docs/sdks/internal/README.md#partiallyupdateorg) - Update some fields of an organization to non-null values :warning: **Deprecated**
 * [partiallyUpdateOrganization](docs/sdks/internal/README.md#partiallyupdateorganization) - Update some fields of an organization to non-null values
+* [patchOrgRoleMemberships](docs/sdks/internal/README.md#patchorgrolememberships) - Add or delete memberships in a specific role and managed organization
 * [postMonitorConfigValidationJob](docs/sdks/internal/README.md#postmonitorconfigvalidationjob) - Create a monitor config validation job for all configs
 * [provisionAWSMarketplaceNewUser](docs/sdks/internal/README.md#provisionawsmarketplacenewuser) - Create resources for a new user coming from AWS Marketplace
 * [provisionDatabricksConnection](docs/sdks/internal/README.md#provisiondatabricksconnection) - Create resources for a new user coming from Databricks
 * [provisionNewUser](docs/sdks/internal/README.md#provisionnewuser) - Create the resources that a new user needs to use WhyLabs via the website.
+* [putOrgRoleMemberships](docs/sdks/internal/README.md#putorgrolememberships) - Replace the memberships in a specific role and managed organization
 * [putRequestMonitorRunConfig](docs/sdks/internal/README.md#putrequestmonitorrunconfig) - Put the RequestMonitorRun config into S3.
 * [refreshConnection](docs/sdks/internal/README.md#refreshconnection) - Refresh metadata for a workspace connection.
 * [registerDatabricksConnection](docs/sdks/internal/README.md#registerdatabricksconnection) - Register databricks metadata, temporarily storing it against a UUID so that it can be used to provision a databricks connection after email authentication
@@ -135,6 +160,7 @@ public class Application {
 * [runJob](docs/sdks/internal/README.md#runjob) - Run an existing job in a given databricks workspace.
 * [setDefaultMembership](docs/sdks/internal/README.md#setdefaultmembership) - Sets the organization that should be used when logging a user in
 * [stripePaymentEndpoint](docs/sdks/internal/README.md#stripepaymentendpoint) - Endpoint for Stripe payment webhooks
+* [updateAccountUser](docs/sdks/internal/README.md#updateaccountuser) - Update account user
 * [updateConnection](docs/sdks/internal/README.md#updateconnection) - Update the connection metadata for a given org
 * [updateMembershipByEmail](docs/sdks/internal/README.md#updatemembershipbyemail) - Updates the role in an membership
 * [updateNotificationSettings](docs/sdks/internal/README.md#updatenotificationsettings) - Update notification settings for an org

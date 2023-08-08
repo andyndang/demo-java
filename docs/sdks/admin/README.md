@@ -28,7 +28,7 @@ public class Application {
 
             GenerateReportRequest req = new GenerateReportRequest(AdminReportType.SESSIONS);            
 
-            GenerateReportResponse res = sdk.admin.generateReport(req, new GenerateReportSecurity("provident") {{
+            GenerateReportResponse res = sdk.admin.generateReport(req, new GenerateReportSecurity("recusandae") {{
                 apiKeyAuth = "";
             }});
 
@@ -74,7 +74,7 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            PostMonitorConfigValidationJobResponse res = sdk.admin.postMonitorConfigValidationJob(new PostMonitorConfigValidationJobSecurity("distinctio") {{
+            PostMonitorConfigValidationJobResponse res = sdk.admin.postMonitorConfigValidationJob(new PostMonitorConfigValidationJobSecurity("temporibus") {{
                 apiKeyAuth = "";
             }});
 

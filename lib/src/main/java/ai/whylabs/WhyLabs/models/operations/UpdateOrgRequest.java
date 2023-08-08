@@ -80,6 +80,14 @@ public class UpdateOrgRequest {
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parent_org_id")
+    public String parentOrgId;
+
+    public UpdateOrgRequest withParentOrgId(String parentOrgId) {
+        this.parentOrgId = parentOrgId;
+        return this;
+    }
+    
     /**
      * Slack Webhook that should be used for notifications for this organization
      */

@@ -5,10 +5,11 @@
 package hello.world;
 
 import ai.whylabs.WhyLabs.Songbird;
-import ai.whylabs.WhyLabs.models.operations.GenerateReportRequest;
-import ai.whylabs.WhyLabs.models.operations.GenerateReportResponse;
-import ai.whylabs.WhyLabs.models.operations.GenerateReportSecurity;
-import ai.whylabs.WhyLabs.models.shared.AdminReportType;
+import ai.whylabs.WhyLabs.models.operations.CreateAccountUserRequest;
+import ai.whylabs.WhyLabs.models.operations.CreateAccountUserRequestBody;
+import ai.whylabs.WhyLabs.models.operations.CreateAccountUserResponse;
+import ai.whylabs.WhyLabs.models.operations.CreateAccountUserSecurity;
+import ai.whylabs.WhyLabs.models.shared.AccountUser;
 
 public class Application {
     public static void main(String[] args) {
@@ -16,9 +17,15 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            GenerateReportRequest req = new GenerateReportRequest(AdminReportType.SESSIONS);            
+            CreateAccountUserRequest req = new CreateAccountUserRequest(                new CreateAccountUserRequestBody() {{
+                                user = new AccountUser("corrupti") {{
+                                    active = false;
+                                    externalId = "provident";
+                                    userId = "distinctio";
+                                }};;
+                            }};, "org-123");            
 
-            GenerateReportResponse res = sdk.admin.generateReport(req, new GenerateReportSecurity("corrupti") {{
+            CreateAccountUserResponse res = sdk.account.createAccountUser(req, new CreateAccountUserSecurity("quibusdam") {{
                 apiKeyAuth = "";
             }});
 

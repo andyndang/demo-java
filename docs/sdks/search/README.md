@@ -25,9 +25,9 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            WhyLabsSearchRequest req = new WhyLabsSearchRequest("excepturi");            
+            WhyLabsSearchRequest req = new WhyLabsSearchRequest("aspernatur");            
 
-            WhyLabsSearchResponse res = sdk.search.whyLabsSearch(req, new WhyLabsSearchSecurity("cum") {{
+            WhyLabsSearchResponse res = sdk.search.whyLabsSearch(req, new WhyLabsSearchSecurity("perferendis") {{
                 apiKeyAuth = "";
             }});
 
@@ -76,11 +76,11 @@ public class Application {
                 .build();
 
             ai.whylabs.WhyLabs.models.shared.SearchIndexRequest req = new SearchIndexRequest() {{
-                orgId = "voluptate";
-                type = SearchIndexType.ACTIONS;
+                orgId = "amet";
+                type = SearchIndexType.MONITOR_CONFIG;
             }};            
 
-            WhyLabsSearchIndexingResponse res = sdk.search.whyLabsSearchIndexing(req, new WhyLabsSearchIndexingSecurity("reiciendis") {{
+            WhyLabsSearchIndexingResponse res = sdk.search.whyLabsSearchIndexing(req, new WhyLabsSearchIndexingSecurity("accusamus") {{
                 apiKeyAuth = "";
             }});
 
