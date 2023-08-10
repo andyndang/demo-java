@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'ai.whylabs.WhyLabs:Songbird:1.21.0'
+implementation 'ai.whylabs.WhyLabs:Songbird:1.21.1'
 ```
 <!-- End SDK Installation -->
 
@@ -19,10 +19,9 @@ package hello.world;
 
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.CreateAccountUserRequest;
-import ai.whylabs.WhyLabs.models.operations.CreateAccountUserRequestBody;
 import ai.whylabs.WhyLabs.models.operations.CreateAccountUserResponse;
 import ai.whylabs.WhyLabs.models.operations.CreateAccountUserSecurity;
-import ai.whylabs.WhyLabs.models.shared.AccountUser;
+import ai.whylabs.WhyLabs.models.shared.AccountUserRequest;
 
 public class Application {
     public static void main(String[] args) {
@@ -30,15 +29,12 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            CreateAccountUserRequest req = new CreateAccountUserRequest(                new CreateAccountUserRequestBody() {{
-                                user = new AccountUser("corrupti") {{
-                                    active = false;
-                                    externalId = "provident";
-                                    userId = "distinctio";
-                                }};;
+            CreateAccountUserRequest req = new CreateAccountUserRequest(                new AccountUserRequest("corrupti") {{
+                                active = false;
+                                externalId = "provident";
                             }};, "org-123");            
 
-            CreateAccountUserResponse res = sdk.account.createAccountUser(req, new CreateAccountUserSecurity("quibusdam") {{
+            CreateAccountUserResponse res = sdk.account.createAccountUser(req, new CreateAccountUserSecurity("distinctio") {{
                 apiKeyAuth = "";
             }});
 
@@ -62,8 +58,9 @@ public class Application {
 * [createAccountUser](docs/sdks/account/README.md#createaccountuser) - Create an account user
 * [deleteAccountUser](docs/sdks/account/README.md#deleteaccountuser) - Delete account user
 * [getAccountMemberships](docs/sdks/account/README.md#getaccountmemberships) - Get memberships in an account
-* [getAccountUsers](docs/sdks/account/README.md#getaccountusers) - Get users in an account
+* [getAccountUser](docs/sdks/account/README.md#getaccountuser) - Get account user
 * [getOrgRoleMemberships](docs/sdks/account/README.md#getorgrolememberships) - Get memberships for a specific org and role
+* [listAccountUsers](docs/sdks/account/README.md#listaccountusers) - List users in an account
 * [patchOrgRoleMemberships](docs/sdks/account/README.md#patchorgrolememberships) - Add or delete memberships in a specific role and managed organization
 * [putOrgRoleMemberships](docs/sdks/account/README.md#putorgrolememberships) - Replace the memberships in a specific role and managed organization
 * [updateAccountUser](docs/sdks/account/README.md#updateaccountuser) - Update account user
@@ -125,7 +122,7 @@ public class Application {
 * [generateReport](docs/sdks/internal/README.md#generatereport) - Generate an admin report
 * [getAWSMarketplaceMetadata](docs/sdks/internal/README.md#getawsmarketplacemetadata) - Get marketplace metadata for an org if any exists.
 * [getAccountMemberships](docs/sdks/internal/README.md#getaccountmemberships) - Get memberships in an account
-* [getAccountUsers](docs/sdks/internal/README.md#getaccountusers) - Get users in an account
+* [getAccountUser](docs/sdks/internal/README.md#getaccountuser) - Get account user
 * [getApiKey](docs/sdks/internal/README.md#getapikey) - Get an api key by its id
 * [getConnection](docs/sdks/internal/README.md#getconnection) - Get the connection metadata for a given org
 * [getDefaultMembershipForEmail](docs/sdks/internal/README.md#getdefaultmembershipforemail) - Get the default membership for a user.
@@ -140,6 +137,7 @@ public class Application {
 * [getUser](docs/sdks/internal/README.md#getuser) - Get a user by their id.
 * [getUserByEmail](docs/sdks/internal/README.md#getuserbyemail) - Get a user by their email.
 * [hideSegments](docs/sdks/internal/README.md#hidesegments) - Hides a list of segments
+* [listAccountUsers](docs/sdks/internal/README.md#listaccountusers) - List users in an account
 * [listApiKeys](docs/sdks/internal/README.md#listapikeys) - List API key metadata for a given organization and user
 * [listJobs](docs/sdks/internal/README.md#listjobs) - List all of the jobs in a workspace.
 * [listMonitorConfigV3Versions](docs/sdks/internal/README.md#listmonitorconfigv3versions) - List the monitor config document versions for a given dataset.

@@ -10,10 +10,10 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class UpdateAccountUserRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateAccountUserRequestBody requestBody;
+    public ai.whylabs.WhyLabs.models.shared.AccountUser accountUser;
 
-    public UpdateAccountUserRequest withRequestBody(UpdateAccountUserRequestBody requestBody) {
-        this.requestBody = requestBody;
+    public UpdateAccountUserRequest withAccountUser(ai.whylabs.WhyLabs.models.shared.AccountUser accountUser) {
+        this.accountUser = accountUser;
         return this;
     }
     
@@ -25,17 +25,8 @@ public class UpdateAccountUserRequest {
         return this;
     }
     
-    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
-    public String userId;
-
-    public UpdateAccountUserRequest withUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    
-    public UpdateAccountUserRequest(@JsonProperty("RequestBody") UpdateAccountUserRequestBody requestBody, @JsonProperty("org_id") String orgId, @JsonProperty("user_id") String userId) {
-        this.requestBody = requestBody;
+    public UpdateAccountUserRequest(@JsonProperty("AccountUser") ai.whylabs.WhyLabs.models.shared.AccountUser accountUser, @JsonProperty("org_id") String orgId) {
+        this.accountUser = accountUser;
         this.orgId = orgId;
-        this.userId = userId;
   }
 }

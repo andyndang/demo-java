@@ -5,8 +5,9 @@
 * [createAccountUser](#createaccountuser) - Create an account user
 * [deleteAccountUser](#deleteaccountuser) - Delete account user
 * [getAccountMemberships](#getaccountmemberships) - Get memberships in an account
-* [getAccountUsers](#getaccountusers) - Get users in an account
+* [getAccountUser](#getaccountuser) - Get account user
 * [getOrgRoleMemberships](#getorgrolememberships) - Get memberships for a specific org and role
+* [listAccountUsers](#listaccountusers) - List users in an account
 * [patchOrgRoleMemberships](#patchorgrolememberships) - Add or delete memberships in a specific role and managed organization
 * [putOrgRoleMemberships](#putorgrolememberships) - Replace the memberships in a specific role and managed organization
 * [updateAccountUser](#updateaccountuser) - Update account user
@@ -22,10 +23,9 @@ package hello.world;
 
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.CreateAccountUserRequest;
-import ai.whylabs.WhyLabs.models.operations.CreateAccountUserRequestBody;
 import ai.whylabs.WhyLabs.models.operations.CreateAccountUserResponse;
 import ai.whylabs.WhyLabs.models.operations.CreateAccountUserSecurity;
-import ai.whylabs.WhyLabs.models.shared.AccountUser;
+import ai.whylabs.WhyLabs.models.shared.AccountUserRequest;
 
 public class Application {
     public static void main(String[] args) {
@@ -33,15 +33,12 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            CreateAccountUserRequest req = new CreateAccountUserRequest(                new CreateAccountUserRequestBody() {{
-                                user = new AccountUser("unde") {{
-                                    active = false;
-                                    externalId = "nulla";
-                                    userId = "corrupti";
-                                }};;
+            CreateAccountUserRequest req = new CreateAccountUserRequest(                new AccountUserRequest("quibusdam") {{
+                                active = false;
+                                externalId = "unde";
                             }};, "org-123");            
 
-            CreateAccountUserResponse res = sdk.account.createAccountUser(req, new CreateAccountUserSecurity("illum") {{
+            CreateAccountUserResponse res = sdk.account.createAccountUser(req, new CreateAccountUserSecurity("nulla") {{
                 apiKeyAuth = "";
             }});
 
@@ -88,9 +85,9 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            DeleteAccountUserRequest req = new DeleteAccountUserRequest("org-123");            
+            DeleteAccountUserRequest req = new DeleteAccountUserRequest("org-123", "user-123");            
 
-            DeleteAccountUserResponse res = sdk.account.deleteAccountUser(req, new DeleteAccountUserSecurity("vel") {{
+            DeleteAccountUserResponse res = sdk.account.deleteAccountUser(req, new DeleteAccountUserSecurity("corrupti") {{
                 apiKeyAuth = "";
             }});
 
@@ -141,7 +138,7 @@ public class Application {
                 userId = "user-123";
             }};            
 
-            GetAccountMembershipsResponse res = sdk.account.getAccountMemberships(req, new GetAccountMembershipsSecurity("error") {{
+            GetAccountMembershipsResponse res = sdk.account.getAccountMemberships(req, new GetAccountMembershipsSecurity("illum") {{
                 apiKeyAuth = "";
             }});
 
@@ -168,9 +165,9 @@ public class Application {
 **[ai.whylabs.WhyLabs.models.operations.GetAccountMembershipsResponse](../../models/operations/GetAccountMembershipsResponse.md)**
 
 
-## getAccountUsers
+## getAccountUser
 
-Get users in the account organization and any managed organizations
+Get account user
 
 ### Example Usage
 
@@ -178,9 +175,9 @@ Get users in the account organization and any managed organizations
 package hello.world;
 
 import ai.whylabs.WhyLabs.Songbird;
-import ai.whylabs.WhyLabs.models.operations.GetAccountUsersRequest;
-import ai.whylabs.WhyLabs.models.operations.GetAccountUsersResponse;
-import ai.whylabs.WhyLabs.models.operations.GetAccountUsersSecurity;
+import ai.whylabs.WhyLabs.models.operations.GetAccountUserRequest;
+import ai.whylabs.WhyLabs.models.operations.GetAccountUserResponse;
+import ai.whylabs.WhyLabs.models.operations.GetAccountUserSecurity;
 
 public class Application {
     public static void main(String[] args) {
@@ -188,12 +185,9 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            GetAccountUsersRequest req = new GetAccountUsersRequest("org-123") {{
-                email = "user@whylabs.ai";
-                userId = "user-123";
-            }};            
+            GetAccountUserRequest req = new GetAccountUserRequest("user@whylabs.ai", "org-123");            
 
-            GetAccountUsersResponse res = sdk.account.getAccountUsers(req, new GetAccountUsersSecurity("deserunt") {{
+            GetAccountUserResponse res = sdk.account.getAccountUser(req, new GetAccountUserSecurity("vel") {{
                 apiKeyAuth = "";
             }});
 
@@ -209,15 +203,15 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                          | [ai.whylabs.WhyLabs.models.operations.GetAccountUsersRequest](../../models/operations/GetAccountUsersRequest.md)   | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
-| `security`                                                                                                         | [ai.whylabs.WhyLabs.models.operations.GetAccountUsersSecurity](../../models/operations/GetAccountUsersSecurity.md) | :heavy_check_mark:                                                                                                 | The security requirements to use for the request.                                                                  |
+| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                        | [ai.whylabs.WhyLabs.models.operations.GetAccountUserRequest](../../models/operations/GetAccountUserRequest.md)   | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| `security`                                                                                                       | [ai.whylabs.WhyLabs.models.operations.GetAccountUserSecurity](../../models/operations/GetAccountUserSecurity.md) | :heavy_check_mark:                                                                                               | The security requirements to use for the request.                                                                |
 
 
 ### Response
 
-**[ai.whylabs.WhyLabs.models.operations.GetAccountUsersResponse](../../models/operations/GetAccountUsersResponse.md)**
+**[ai.whylabs.WhyLabs.models.operations.GetAccountUserResponse](../../models/operations/GetAccountUserResponse.md)**
 
 
 ## getOrgRoleMemberships
@@ -242,7 +236,7 @@ public class Application {
 
             GetOrgRoleMembershipsRequest req = new GetOrgRoleMembershipsRequest("org-123", "org-123", "admin");            
 
-            GetOrgRoleMembershipsResponse res = sdk.account.getOrgRoleMemberships(req, new GetOrgRoleMembershipsSecurity("suscipit") {{
+            GetOrgRoleMembershipsResponse res = sdk.account.getOrgRoleMemberships(req, new GetOrgRoleMembershipsSecurity("error") {{
                 apiKeyAuth = "";
             }});
 
@@ -269,6 +263,55 @@ public class Application {
 **[ai.whylabs.WhyLabs.models.operations.GetOrgRoleMembershipsResponse](../../models/operations/GetOrgRoleMembershipsResponse.md)**
 
 
+## listAccountUsers
+
+List users in the account organization and any managed organizations
+
+### Example Usage
+
+```java
+package hello.world;
+
+import ai.whylabs.WhyLabs.Songbird;
+import ai.whylabs.WhyLabs.models.operations.ListAccountUsersRequest;
+import ai.whylabs.WhyLabs.models.operations.ListAccountUsersResponse;
+import ai.whylabs.WhyLabs.models.operations.ListAccountUsersSecurity;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            Songbird sdk = Songbird.builder()
+                .build();
+
+            ListAccountUsersRequest req = new ListAccountUsersRequest("org-123");            
+
+            ListAccountUsersResponse res = sdk.account.listAccountUsers(req, new ListAccountUsersSecurity("deserunt") {{
+                apiKeyAuth = "";
+            }});
+
+            if (res.statusCode == 200) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                            | [ai.whylabs.WhyLabs.models.operations.ListAccountUsersRequest](../../models/operations/ListAccountUsersRequest.md)   | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
+| `security`                                                                                                           | [ai.whylabs.WhyLabs.models.operations.ListAccountUsersSecurity](../../models/operations/ListAccountUsersSecurity.md) | :heavy_check_mark:                                                                                                   | The security requirements to use for the request.                                                                    |
+
+
+### Response
+
+**[ai.whylabs.WhyLabs.models.operations.ListAccountUsersResponse](../../models/operations/ListAccountUsersResponse.md)**
+
+
 ## patchOrgRoleMemberships
 
 Add or delete all of the memberships in a specific role and managed organization
@@ -293,14 +336,17 @@ public class Application {
 
             PatchOrgRoleMembershipsRequest req = new PatchOrgRoleMembershipsRequest(                new PatchOrgRoleMembershipsRequestBody() {{
                                 request = new PatchAccountMembershipsRequest(                new String[]{{
+                                                    add("iure"),
                                                     add("magnam"),
-                                                    add("debitis"),
                                                 }},                 new String[]{{
+                                                    add("ipsa"),
                                                     add("delectus"),
+                                                    add("tempora"),
+                                                    add("suscipit"),
                                                 }});;
                             }};, "org-123", "org-123", "admin");            
 
-            PatchOrgRoleMembershipsResponse res = sdk.account.patchOrgRoleMemberships(req, new PatchOrgRoleMembershipsSecurity("tempora") {{
+            PatchOrgRoleMembershipsResponse res = sdk.account.patchOrgRoleMemberships(req, new PatchOrgRoleMembershipsSecurity("molestiae") {{
                 apiKeyAuth = "";
             }});
 
@@ -351,12 +397,14 @@ public class Application {
 
             PutOrgRoleMembershipsRequest req = new PutOrgRoleMembershipsRequest(                new PutOrgRoleMembershipsRequestBody() {{
                                 request = new PutAccountMembershipsRequest(                new String[]{{
-                                                    add("molestiae"),
-                                                    add("minus"),
+                                                    add("placeat"),
+                                                    add("voluptatum"),
+                                                    add("iusto"),
+                                                    add("excepturi"),
                                                 }});;
                             }};, "org-123", "org-123", "admin");            
 
-            PutOrgRoleMembershipsResponse res = sdk.account.putOrgRoleMemberships(req, new PutOrgRoleMembershipsSecurity("placeat") {{
+            PutOrgRoleMembershipsResponse res = sdk.account.putOrgRoleMemberships(req, new PutOrgRoleMembershipsSecurity("nisi") {{
                 apiKeyAuth = "";
             }});
 
@@ -394,7 +442,6 @@ package hello.world;
 
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.UpdateAccountUserRequest;
-import ai.whylabs.WhyLabs.models.operations.UpdateAccountUserRequestBody;
 import ai.whylabs.WhyLabs.models.operations.UpdateAccountUserResponse;
 import ai.whylabs.WhyLabs.models.operations.UpdateAccountUserSecurity;
 import ai.whylabs.WhyLabs.models.shared.AccountUser;
@@ -405,15 +452,16 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            UpdateAccountUserRequest req = new UpdateAccountUserRequest(                new UpdateAccountUserRequestBody() {{
-                                user = new AccountUser("voluptatum") {{
-                                    active = false;
-                                    externalId = "iusto";
-                                    userId = "excepturi";
-                                }};;
-                            }};, "org-123", "user-123");            
+            UpdateAccountUserRequest req = new UpdateAccountUserRequest(                new AccountUser("recusandae", "temporibus") {{
+                                active = false;
+                                email = "Ettie.Bogisich@gmail.com";
+                                orgId = "ipsam";
+                                sourceId = "repellendus";
+                                sourceUserId = "sapiente";
+                                userSchema = "quo";
+                            }};, "org-123");            
 
-            UpdateAccountUserResponse res = sdk.account.updateAccountUser(req, new UpdateAccountUserSecurity("nisi") {{
+            UpdateAccountUserResponse res = sdk.account.updateAccountUser(req, new UpdateAccountUserSecurity("odit") {{
                 apiKeyAuth = "";
             }});
 

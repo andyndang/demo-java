@@ -10,10 +10,10 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateAccountUserRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public CreateAccountUserRequestBody requestBody;
+    public ai.whylabs.WhyLabs.models.shared.AccountUserRequest accountUserRequest;
 
-    public CreateAccountUserRequest withRequestBody(CreateAccountUserRequestBody requestBody) {
-        this.requestBody = requestBody;
+    public CreateAccountUserRequest withAccountUserRequest(ai.whylabs.WhyLabs.models.shared.AccountUserRequest accountUserRequest) {
+        this.accountUserRequest = accountUserRequest;
         return this;
     }
     
@@ -25,8 +25,8 @@ public class CreateAccountUserRequest {
         return this;
     }
     
-    public CreateAccountUserRequest(@JsonProperty("RequestBody") CreateAccountUserRequestBody requestBody, @JsonProperty("org_id") String orgId) {
-        this.requestBody = requestBody;
+    public CreateAccountUserRequest(@JsonProperty("AccountUserRequest") ai.whylabs.WhyLabs.models.shared.AccountUserRequest accountUserRequest, @JsonProperty("org_id") String orgId) {
+        this.accountUserRequest = accountUserRequest;
         this.orgId = orgId;
   }
 }

@@ -9,10 +9,13 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * AccountUser - Information held about a user in an account
+ * AccountUser - Account User metadata
  */
 
 public class AccountUser {
+    /**
+     * Flag to indicate if the user is active
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active")
     public Boolean active;
@@ -23,8 +26,9 @@ public class AccountUser {
     }
     
     /**
-     * The user's email address.
+     * The user's email address
      */
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
 
@@ -34,21 +38,55 @@ public class AccountUser {
     }
     
     /**
-     * The external id the user is known by in the provisioner.
+     * The account user id
      */
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("externalId")
-    public String externalId;
+    @JsonProperty("id")
+    public String id;
 
-    public AccountUser withExternalId(String externalId) {
-        this.externalId = externalId;
+    public AccountUser withId(String id) {
+        this.id = id;
         return this;
     }
     
     /**
-     * The id of the user.
+     * The WhyLabs organization id
      */
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("orgId")
+    public String orgId;
+
+    public AccountUser withOrgId(String orgId) {
+        this.orgId = orgId;
+        return this;
+    }
+    
+    /**
+     * Source provider id
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("sourceId")
+    public String sourceId;
+
+    public AccountUser withSourceId(String sourceId) {
+        this.sourceId = sourceId;
+        return this;
+    }
+    
+    /**
+     * Source user id
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("sourceUserId")
+    public String sourceUserId;
+
+    public AccountUser withSourceUserId(String sourceUserId) {
+        this.sourceUserId = sourceUserId;
+        return this;
+    }
+    
+    /**
+     * The WhyLabs user id
+     */
     @JsonProperty("userId")
     public String userId;
 
@@ -57,7 +95,20 @@ public class AccountUser {
         return this;
     }
     
-    public AccountUser(@JsonProperty("email") String email) {
-        this.email = email;
+    /**
+     * User schema
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("userSchema")
+    public String userSchema;
+
+    public AccountUser withUserSchema(String userSchema) {
+        this.userSchema = userSchema;
+        return this;
+    }
+    
+    public AccountUser(@JsonProperty("id") String id, @JsonProperty("userId") String userId) {
+        this.id = id;
+        this.userId = userId;
   }
 }

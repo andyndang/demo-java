@@ -17,7 +17,16 @@ public class DeleteAccountUserRequest {
         return this;
     }
     
-    public DeleteAccountUserRequest(@JsonProperty("org_id") String orgId) {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public String userId;
+
+    public DeleteAccountUserRequest withUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    
+    public DeleteAccountUserRequest(@JsonProperty("org_id") String orgId, @JsonProperty("user_id") String userId) {
         this.orgId = orgId;
+        this.userId = userId;
   }
 }

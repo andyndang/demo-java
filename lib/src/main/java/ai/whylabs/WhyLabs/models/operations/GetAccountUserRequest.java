@@ -8,11 +8,11 @@ import ai.whylabs.WhyLabs.utils.SpeakeasyMetadata;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 
-public class GetAccountUsersRequest {
+public class GetAccountUserRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
     public String email;
 
-    public GetAccountUsersRequest withEmail(String email) {
+    public GetAccountUserRequest withEmail(String email) {
         this.email = email;
         return this;
     }
@@ -20,20 +20,13 @@ public class GetAccountUsersRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org_id")
     public String orgId;
 
-    public GetAccountUsersRequest withOrgId(String orgId) {
+    public GetAccountUserRequest withOrgId(String orgId) {
         this.orgId = orgId;
         return this;
     }
     
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_id")
-    public String userId;
-
-    public GetAccountUsersRequest withUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    
-    public GetAccountUsersRequest(@JsonProperty("org_id") String orgId) {
+    public GetAccountUserRequest(@JsonProperty("email") String email, @JsonProperty("org_id") String orgId) {
+        this.email = email;
         this.orgId = orgId;
   }
 }

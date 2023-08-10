@@ -6,10 +6,9 @@ package hello.world;
 
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.CreateAccountUserRequest;
-import ai.whylabs.WhyLabs.models.operations.CreateAccountUserRequestBody;
 import ai.whylabs.WhyLabs.models.operations.CreateAccountUserResponse;
 import ai.whylabs.WhyLabs.models.operations.CreateAccountUserSecurity;
-import ai.whylabs.WhyLabs.models.shared.AccountUser;
+import ai.whylabs.WhyLabs.models.shared.AccountUserRequest;
 
 public class Application {
     public static void main(String[] args) {
@@ -17,15 +16,12 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            CreateAccountUserRequest req = new CreateAccountUserRequest(                new CreateAccountUserRequestBody() {{
-                                user = new AccountUser("corrupti") {{
-                                    active = false;
-                                    externalId = "provident";
-                                    userId = "distinctio";
-                                }};;
+            CreateAccountUserRequest req = new CreateAccountUserRequest(                new AccountUserRequest("corrupti") {{
+                                active = false;
+                                externalId = "provident";
                             }};, "org-123");            
 
-            CreateAccountUserResponse res = sdk.account.createAccountUser(req, new CreateAccountUserSecurity("quibusdam") {{
+            CreateAccountUserResponse res = sdk.account.createAccountUser(req, new CreateAccountUserSecurity("distinctio") {{
                 apiKeyAuth = "";
             }});
 

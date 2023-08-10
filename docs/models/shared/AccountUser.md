@@ -1,13 +1,17 @@
 # AccountUser
 
-Information held about a user in an account
+Account User metadata
 
 
 ## Fields
 
-| Field                                                    | Type                                                     | Required                                                 | Description                                              |
-| -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
-| `active`                                                 | *Boolean*                                                | :heavy_minus_sign:                                       | N/A                                                      |
-| `email`                                                  | *String*                                                 | :heavy_check_mark:                                       | The user's email address.                                |
-| `externalId`                                             | *String*                                                 | :heavy_minus_sign:                                       | The external id the user is known by in the provisioner. |
-| `userId`                                                 | *String*                                                 | :heavy_minus_sign:                                       | The id of the user.                                      |
+| Field                                  | Type                                   | Required                               | Description                            |
+| -------------------------------------- | -------------------------------------- | -------------------------------------- | -------------------------------------- |
+| `active`                               | *Boolean*                              | :heavy_minus_sign:                     | Flag to indicate if the user is active |
+| `email`                                | *String*                               | :heavy_minus_sign:                     | The user's email address               |
+| `id`                                   | *String*                               | :heavy_check_mark:                     | The account user id                    |
+| `orgId`                                | *String*                               | :heavy_minus_sign:                     | The WhyLabs organization id            |
+| `sourceId`                             | *String*                               | :heavy_minus_sign:                     | Source provider id                     |
+| `sourceUserId`                         | *String*                               | :heavy_minus_sign:                     | Source user id                         |
+| `userId`                               | *String*                               | :heavy_check_mark:                     | The WhyLabs user id                    |
+| `userSchema`                           | *String*                               | :heavy_minus_sign:                     | User schema                            |
