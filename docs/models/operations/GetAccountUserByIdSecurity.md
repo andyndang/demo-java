@@ -1,4 +1,4 @@
-# GetAccountUserSecurity
+# GetAccountUserByIdSecurity
 
 
 ## Fields

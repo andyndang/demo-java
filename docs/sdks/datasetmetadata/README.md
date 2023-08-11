@@ -28,7 +28,7 @@ public class Application {
 
             DeleteDatasetMetadataRequest req = new DeleteDatasetMetadataRequest("model-123", "org-123");            
 
-            DeleteDatasetMetadataResponse res = sdk.datasetMetadata.deleteDatasetMetadata(req, new DeleteDatasetMetadataSecurity("impedit") {{
+            DeleteDatasetMetadataResponse res = sdk.datasetMetadata.deleteDatasetMetadata(req, new DeleteDatasetMetadataSecurity("optio") {{
                 apiKeyAuth = "";
             }});
 
@@ -77,7 +77,7 @@ public class Application {
 
             GetDatasetMetadataRequest req = new GetDatasetMetadataRequest("model-123", "org-123");            
 
-            GetDatasetMetadataResponse res = sdk.datasetMetadata.getDatasetMetadata(req, new GetDatasetMetadataSecurity("cum") {{
+            GetDatasetMetadataResponse res = sdk.datasetMetadata.getDatasetMetadata(req, new GetDatasetMetadataSecurity("totam") {{
                 apiKeyAuth = "";
             }});
 
@@ -124,9 +124,9 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            PutDatasetMetadataRequest req = new PutDatasetMetadataRequest("esse", "model-123", "org-123");            
+            PutDatasetMetadataRequest req = new PutDatasetMetadataRequest("beatae", "model-123", "org-123");            
 
-            PutDatasetMetadataResponse res = sdk.datasetMetadata.putDatasetMetadata(req, new PutDatasetMetadataSecurity("ipsum") {{
+            PutDatasetMetadataResponse res = sdk.datasetMetadata.putDatasetMetadata(req, new PutDatasetMetadataSecurity("commodi") {{
                 apiKeyAuth = "";
             }});
 

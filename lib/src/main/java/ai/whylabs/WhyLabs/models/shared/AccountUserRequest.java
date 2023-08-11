@@ -45,6 +45,15 @@ public class AccountUserRequest {
         return this;
     }
     
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("userSchema")
+    public String userSchema;
+
+    public AccountUserRequest withUserSchema(String userSchema) {
+        this.userSchema = userSchema;
+        return this;
+    }
+    
     public AccountUserRequest(@JsonProperty("email") String email) {
         this.email = email;
   }

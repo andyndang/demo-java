@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'ai.whylabs.WhyLabs:Songbird:1.21.1'
+implementation 'ai.whylabs.WhyLabs:Songbird:1.21.2'
 ```
 <!-- End SDK Installation -->
 
@@ -32,9 +32,10 @@ public class Application {
             CreateAccountUserRequest req = new CreateAccountUserRequest(                new AccountUserRequest("corrupti") {{
                                 active = false;
                                 externalId = "provident";
+                                userSchema = "distinctio";
                             }};, "org-123");            
 
-            CreateAccountUserResponse res = sdk.account.createAccountUser(req, new CreateAccountUserSecurity("distinctio") {{
+            CreateAccountUserResponse res = sdk.account.createAccountUser(req, new CreateAccountUserSecurity("quibusdam") {{
                 apiKeyAuth = "";
             }});
 
@@ -58,7 +59,8 @@ public class Application {
 * [createAccountUser](docs/sdks/account/README.md#createaccountuser) - Create an account user
 * [deleteAccountUser](docs/sdks/account/README.md#deleteaccountuser) - Delete account user
 * [getAccountMemberships](docs/sdks/account/README.md#getaccountmemberships) - Get memberships in an account
-* [getAccountUser](docs/sdks/account/README.md#getaccountuser) - Get account user
+* [getAccountUserByEmail](docs/sdks/account/README.md#getaccountuserbyemail) - Get account user by email
+* [getAccountUserById](docs/sdks/account/README.md#getaccountuserbyid) - Get account user by user_id
 * [getOrgRoleMemberships](docs/sdks/account/README.md#getorgrolememberships) - Get memberships for a specific org and role
 * [listAccountUsers](docs/sdks/account/README.md#listaccountusers) - List users in an account
 * [patchOrgRoleMemberships](docs/sdks/account/README.md#patchorgrolememberships) - Add or delete memberships in a specific role and managed organization
@@ -122,7 +124,8 @@ public class Application {
 * [generateReport](docs/sdks/internal/README.md#generatereport) - Generate an admin report
 * [getAWSMarketplaceMetadata](docs/sdks/internal/README.md#getawsmarketplacemetadata) - Get marketplace metadata for an org if any exists.
 * [getAccountMemberships](docs/sdks/internal/README.md#getaccountmemberships) - Get memberships in an account
-* [getAccountUser](docs/sdks/internal/README.md#getaccountuser) - Get account user
+* [getAccountUserByEmail](docs/sdks/internal/README.md#getaccountuserbyemail) - Get account user by email
+* [getAccountUserById](docs/sdks/internal/README.md#getaccountuserbyid) - Get account user by user_id
 * [getApiKey](docs/sdks/internal/README.md#getapikey) - Get an api key by its id
 * [getConnection](docs/sdks/internal/README.md#getconnection) - Get the connection metadata for a given org
 * [getDefaultMembershipForEmail](docs/sdks/internal/README.md#getdefaultmembershipforemail) - Get the default membership for a user.

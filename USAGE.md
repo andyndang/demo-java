@@ -19,9 +19,10 @@ public class Application {
             CreateAccountUserRequest req = new CreateAccountUserRequest(                new AccountUserRequest("corrupti") {{
                                 active = false;
                                 externalId = "provident";
+                                userSchema = "distinctio";
                             }};, "org-123");            
 
-            CreateAccountUserResponse res = sdk.account.createAccountUser(req, new CreateAccountUserSecurity("distinctio") {{
+            CreateAccountUserResponse res = sdk.account.createAccountUser(req, new CreateAccountUserSecurity("quibusdam") {{
                 apiKeyAuth = "";
             }});
 

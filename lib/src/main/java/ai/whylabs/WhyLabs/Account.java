@@ -156,16 +156,16 @@ public class Account {
     }
 
     /**
-     * Get account user
-     * Get account user
+     * Get account user by email
+     * Get account user by email
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.GetAccountUserResponse getAccountUser(ai.whylabs.WhyLabs.models.operations.GetAccountUserRequest request, ai.whylabs.WhyLabs.models.operations.GetAccountUserSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.GetAccountUserByEmailResponse getAccountUserByEmail(ai.whylabs.WhyLabs.models.operations.GetAccountUserByEmailRequest request, ai.whylabs.WhyLabs.models.operations.GetAccountUserByEmailSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.GetAccountUserRequest.class, baseUrl, "/v0/accounts/org/{org_id}/user", request, null);
+        String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.GetAccountUserByEmailRequest.class, baseUrl, "/v0/accounts/org/{org_id}/user/email", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -173,7 +173,7 @@ public class Account {
 
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
-        java.util.List<NameValuePair> queryParams = ai.whylabs.WhyLabs.utils.Utils.getQueryParams(ai.whylabs.WhyLabs.models.operations.GetAccountUserRequest.class, request, null);
+        java.util.List<NameValuePair> queryParams = ai.whylabs.WhyLabs.utils.Utils.getQueryParams(ai.whylabs.WhyLabs.models.operations.GetAccountUserByEmailRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -186,7 +186,54 @@ public class Account {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        ai.whylabs.WhyLabs.models.operations.GetAccountUserResponse res = new ai.whylabs.WhyLabs.models.operations.GetAccountUserResponse(contentType, httpRes.statusCode()) {{
+        ai.whylabs.WhyLabs.models.operations.GetAccountUserByEmailResponse res = new ai.whylabs.WhyLabs.models.operations.GetAccountUserByEmailResponse(contentType, httpRes.statusCode()) {{
+            accountUser = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (true) {
+            if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                ai.whylabs.WhyLabs.models.shared.AccountUser out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), ai.whylabs.WhyLabs.models.shared.AccountUser.class);
+                res.accountUser = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Get account user by user_id
+     * Get account user by user_id
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public ai.whylabs.WhyLabs.models.operations.GetAccountUserByIdResponse getAccountUserById(ai.whylabs.WhyLabs.models.operations.GetAccountUserByIdRequest request, ai.whylabs.WhyLabs.models.operations.GetAccountUserByIdSecurity security) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.GetAccountUserByIdRequest.class, baseUrl, "/v0/accounts/org/{org_id}/user/id", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
+        java.util.List<NameValuePair> queryParams = ai.whylabs.WhyLabs.utils.Utils.getQueryParams(ai.whylabs.WhyLabs.models.operations.GetAccountUserByIdRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        ai.whylabs.WhyLabs.models.operations.GetAccountUserByIdResponse res = new ai.whylabs.WhyLabs.models.operations.GetAccountUserByIdResponse(contentType, httpRes.statusCode()) {{
             accountUser = null;
         }};
         res.rawResponse = httpRes;
@@ -391,7 +438,7 @@ public class Account {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = ai.whylabs.WhyLabs.utils.Utils.serializeRequestBody(request, "accountUser", "json");
+        SerializedBody serializedRequestBody = ai.whylabs.WhyLabs.utils.Utils.serializeRequestBody(request, "accountUserRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -399,6 +446,12 @@ public class Account {
 
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
+        java.util.List<NameValuePair> queryParams = ai.whylabs.WhyLabs.utils.Utils.getQueryParams(ai.whylabs.WhyLabs.models.operations.UpdateAccountUserRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
         
         HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         

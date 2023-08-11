@@ -29,18 +29,16 @@ public class Application {
 
             GetProfileObservatoryLinkRequest req = new GetProfileObservatoryLinkRequest(                new GetProfileObservatoryLinkRequest() {{
                                 batchProfileTimestamps = new Long[]{{
-                                    add(354047L),
-                                    add(590873L),
-                                    add(551816L),
+                                    add(19193L),
+                                    add(470132L),
                                 }};
                                 referenceProfileIds = new String[]{{
-                                    add("accusantium"),
-                                    add("mollitia"),
-                                    add("reiciendis"),
+                                    add("distinctio"),
+                                    add("id"),
                                 }};
-                            }};, "mollitia", "ad");            
+                            }};, "labore", "labore");            
 
-            GetProfileObservatoryLinkResponse res = sdk.log.getProfileObservatoryLink(req, new GetProfileObservatoryLinkSecurity("eum") {{
+            GetProfileObservatoryLinkResponse res = sdk.log.getProfileObservatoryLink(req, new GetProfileObservatoryLinkSecurity("suscipit") {{
                 apiKeyAuth = "";
             }});
 
@@ -90,28 +88,24 @@ public class Application {
                 .build();
 
             LogAsyncRequest req = new LogAsyncRequest(                new LogAsyncRequest() {{
-                                datasetTimestamp = 221262L;
+                                datasetTimestamp = 618016L;
                                 segmentTags = new ai.whylabs.WhyLabs.models.shared.SegmentTag[]{{
                                     add(new SegmentTag() {{
-                                        key = "odit";
-                                        value = "nemo";
+                                        key = "eum";
+                                        value = "vero";
                                     }}),
                                     add(new SegmentTag() {{
-                                        key = "quasi";
-                                        value = "iure";
+                                        key = "aspernatur";
+                                        value = "architecto";
                                     }}),
                                     add(new SegmentTag() {{
-                                        key = "doloribus";
-                                        value = "debitis";
-                                    }}),
-                                    add(new SegmentTag() {{
-                                        key = "eius";
-                                        value = "maxime";
+                                        key = "magnam";
+                                        value = "et";
                                     }}),
                                 }};
                             }};, "model-123", "org-123");            
 
-            LogAsyncResponse res = sdk.log.logAsync(req, new LogAsyncSecurity("deleniti") {{
+            LogAsyncResponse res = sdk.log.logAsync(req, new LogAsyncSecurity("excepturi") {{
                 apiKeyAuth = "";
             }});
 
@@ -160,11 +154,11 @@ public class Application {
                 .build();
 
             LogReferenceRequest req = new LogReferenceRequest(                new LogReferenceRequest() {{
-                                alias = "facilis";
-                                datasetTimestamp = 447926L;
+                                alias = "ullam";
+                                datasetTimestamp = 590873L;
                             }};, "model-123", "org-123");            
 
-            LogReferenceResponse res = sdk.log.logReference(req, new LogReferenceSecurity("architecto") {{
+            LogReferenceResponse res = sdk.log.logReference(req, new LogReferenceSecurity("quos") {{
                 apiKeyAuth = "";
             }});
 

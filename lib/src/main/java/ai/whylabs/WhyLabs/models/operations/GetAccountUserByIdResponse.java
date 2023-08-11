@@ -8,14 +8,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 
-public class GetAccountUserResponse {
+public class GetAccountUserByIdResponse {
     /**
-     * GetAccountUser default response
+     * GetAccountUserById default response
      */
     
     public ai.whylabs.WhyLabs.models.shared.AccountUser accountUser;
 
-    public GetAccountUserResponse withAccountUser(ai.whylabs.WhyLabs.models.shared.AccountUser accountUser) {
+    public GetAccountUserByIdResponse withAccountUser(ai.whylabs.WhyLabs.models.shared.AccountUser accountUser) {
         this.accountUser = accountUser;
         return this;
     }
@@ -23,7 +23,7 @@ public class GetAccountUserResponse {
     
     public String contentType;
 
-    public GetAccountUserResponse withContentType(String contentType) {
+    public GetAccountUserByIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
     }
@@ -31,7 +31,7 @@ public class GetAccountUserResponse {
     
     public Integer statusCode;
 
-    public GetAccountUserResponse withStatusCode(Integer statusCode) {
+    public GetAccountUserByIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -39,12 +39,12 @@ public class GetAccountUserResponse {
     
     public HttpResponse<byte[]> rawResponse;
 
-    public GetAccountUserResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
+    public GetAccountUserByIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
-    public GetAccountUserResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+    public GetAccountUserByIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
         this.contentType = contentType;
         this.statusCode = statusCode;
   }

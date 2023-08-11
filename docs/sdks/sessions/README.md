@@ -34,11 +34,15 @@ public class Application {
             BatchCreateReferenceProfileUploadRequest req = new BatchCreateReferenceProfileUploadRequest(                new BatchLogReferenceRequest() {{
                                 references = new ai.whylabs.WhyLabs.models.shared.LogReferenceRequest[]{{
                                     add(new LogReferenceRequest() {{
-                                        alias = "quisquam";
-                                        datasetTimestamp = 947371L;
+                                        alias = "saepe";
+                                        datasetTimestamp = 383464L;
+                                    }}),
+                                    add(new LogReferenceRequest() {{
+                                        alias = "deserunt";
+                                        datasetTimestamp = 588317L;
                                     }}),
                                 }};
-                            }};, "amet");            
+                            }};, "minima");            
 
             BatchCreateReferenceProfileUploadResponse res = sdk.sessions.batchCreateReferenceProfileUpload(req);
 
@@ -84,9 +88,9 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            ClaimGuestSessionRequest req = new ClaimGuestSessionRequest("tempore", "accusamus");            
+            ClaimGuestSessionRequest req = new ClaimGuestSessionRequest("repellendus", "totam");            
 
-            ClaimGuestSessionResponse res = sdk.sessions.claimGuestSession(req, new ClaimGuestSessionSecurity("numquam") {{
+            ClaimGuestSessionResponse res = sdk.sessions.claimGuestSession(req, new ClaimGuestSessionSecurity("similique") {{
                 apiKeyAuth = "";
             }});
 
@@ -135,14 +139,26 @@ public class Application {
                 .build();
 
             CreateDatasetProfileUploadRequest req = new CreateDatasetProfileUploadRequest(                new LogAsyncRequest() {{
-                                datasetTimestamp = 313692L;
+                                datasetTimestamp = 55L;
                                 segmentTags = new ai.whylabs.WhyLabs.models.shared.SegmentTag[]{{
                                     add(new SegmentTag() {{
-                                        key = "sapiente";
-                                        value = "totam";
+                                        key = "quaerat";
+                                        value = "tempora";
+                                    }}),
+                                    add(new SegmentTag() {{
+                                        key = "vel";
+                                        value = "quod";
+                                    }}),
+                                    add(new SegmentTag() {{
+                                        key = "officiis";
+                                        value = "qui";
+                                    }}),
+                                    add(new SegmentTag() {{
+                                        key = "dolorum";
+                                        value = "a";
                                     }}),
                                 }};
-                            }};, "nihil");            
+                            }};, "esse");            
 
             CreateDatasetProfileUploadResponse res = sdk.sessions.createDatasetProfileUpload(req);
 
@@ -189,9 +205,9 @@ public class Application {
                 .build();
 
             CreateReferenceProfileUploadRequest req = new CreateReferenceProfileUploadRequest(                new LogReferenceRequest() {{
-                                alias = "sit";
-                                datasetTimestamp = 711584L;
-                            }};, "neque");            
+                                alias = "harum";
+                                datasetTimestamp = 483409L;
+                            }};, "ipsum");            
 
             CreateReferenceProfileUploadResponse res = sdk.sessions.createReferenceProfileUpload(req);
 
@@ -236,7 +252,7 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.CreateSessionRequest req = new CreateSessionRequest("sed");            
+            ai.whylabs.WhyLabs.models.shared.CreateSessionRequest req = new CreateSessionRequest("quisquam");            
 
             CreateSessionResponse res = sdk.sessions.createSession(req);
 
@@ -282,9 +298,9 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            GetSessionRequest req = new GetSessionRequest("vel");            
+            GetSessionRequest req = new GetSessionRequest("tenetur");            
 
-            GetSessionResponse res = sdk.sessions.getSession(req, new GetSessionSecurity("libero") {{
+            GetSessionResponse res = sdk.sessions.getSession(req, new GetSessionSecurity("amet") {{
                 apiKeyAuth = "";
             }});
 
@@ -333,13 +349,14 @@ public class Application {
 
             GetSessionProfileObservatoryLinkRequest req = new GetSessionProfileObservatoryLinkRequest(                new GetProfileObservatoryLinkRequest() {{
                                 batchProfileTimestamps = new Long[]{{
-                                    add(646265L),
-                                    add(463575L),
+                                    add(880298L),
+                                    add(253941L),
+                                    add(313692L),
                                 }};
                                 referenceProfileIds = new String[]{{
-                                    add("incidunt"),
+                                    add("sapiente"),
                                 }};
-                            }};, "qui");            
+                            }};, "totam");            
 
             GetSessionProfileObservatoryLinkResponse res = sdk.sessions.getSessionProfileObservatoryLink(req);
 

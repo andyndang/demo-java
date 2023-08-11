@@ -38,13 +38,14 @@ public class AccountUser {
     }
     
     /**
-     * The account user id
+     * External user id
      */
-    @JsonProperty("id")
-    public String id;
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("externalId")
+    public String externalId;
 
-    public AccountUser withId(String id) {
-        this.id = id;
+    public AccountUser withExternalId(String externalId) {
+        this.externalId = externalId;
         return this;
     }
     
@@ -57,30 +58,6 @@ public class AccountUser {
 
     public AccountUser withOrgId(String orgId) {
         this.orgId = orgId;
-        return this;
-    }
-    
-    /**
-     * Source provider id
-     */
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("sourceId")
-    public String sourceId;
-
-    public AccountUser withSourceId(String sourceId) {
-        this.sourceId = sourceId;
-        return this;
-    }
-    
-    /**
-     * Source user id
-     */
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("sourceUserId")
-    public String sourceUserId;
-
-    public AccountUser withSourceUserId(String sourceUserId) {
-        this.sourceUserId = sourceUserId;
         return this;
     }
     
@@ -107,8 +84,7 @@ public class AccountUser {
         return this;
     }
     
-    public AccountUser(@JsonProperty("id") String id, @JsonProperty("userId") String userId) {
-        this.id = id;
+    public AccountUser(@JsonProperty("userId") String userId) {
         this.userId = userId;
   }
 }
