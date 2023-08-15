@@ -29,6 +29,7 @@ public class Application {
 
             GetProfileObservatoryLinkRequest req = new GetProfileObservatoryLinkRequest(                new GetProfileObservatoryLinkRequest() {{
                                 batchProfileTimestamps = new Long[]{{
+                                    add(474867L),
                                     add(19193L),
                                     add(470132L),
                                 }};

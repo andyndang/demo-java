@@ -38,15 +38,19 @@ public class Application {
                 .build();
 
             CreateReferenceProfileRequest req = new CreateReferenceProfileRequest(                new CreateReferenceProfileRequest() {{
-                                alias = "molestiae";
-                                datasetTimestamp = 264555L;
+                                alias = "commodi";
+                                datasetTimestamp = 473600L;
                                 segments = new ai.whylabs.WhyLabs.models.shared.Segment[]{{
                                     add(new Segment() {{
                                         tags = new ai.whylabs.WhyLabs.models.shared.SegmentTag[]{{
                                             add(new SegmentTag() {{
-                                                key = "cum";
-                                                value = "esse";
+                                                key = "impedit";
+                                                value = "cum";
                                             }}),
+                                        }};
+                                    }}),
+                                    add(new Segment() {{
+                                        tags = new ai.whylabs.WhyLabs.models.shared.SegmentTag[]{{
                                             add(new SegmentTag() {{
                                                 key = "ipsum";
                                                 value = "excepturi";
@@ -55,20 +59,17 @@ public class Application {
                                                 key = "aspernatur";
                                                 value = "perferendis";
                                             }}),
-                                            add(new SegmentTag() {{
-                                                key = "ad";
-                                                value = "natus";
-                                            }}),
                                         }};
                                     }}),
                                 }};
                                 tags = new String[]{{
-                                    add("iste"),
+                                    add("natus"),
+                                    add("sed"),
                                 }};
-                                version = "dolor";
+                                version = "iste";
                             }};, "model-123", "org-123");            
 
-            CreateReferenceProfileResponse res = sdk.datasetProfile.createReferenceProfile(req, new CreateReferenceProfileSecurity("natus") {{
+            CreateReferenceProfileResponse res = sdk.datasetProfile.createReferenceProfile(req, new CreateReferenceProfileSecurity("dolor") {{
                 apiKeyAuth = "";
             }});
 
@@ -122,7 +123,7 @@ public class Application {
                 startTimestamp = 1577836800000L;
             }};            
 
-            DeleteAnalyzerResultsResponse res = sdk.datasetProfile.deleteAnalyzerResults(req, new DeleteAnalyzerResultsSecurity("laboriosam") {{
+            DeleteAnalyzerResultsResponse res = sdk.datasetProfile.deleteAnalyzerResults(req, new DeleteAnalyzerResultsSecurity("natus") {{
                 apiKeyAuth = "";
             }});
 
@@ -177,7 +178,7 @@ public class Application {
                 profileStartTimestamp = 1577836800000L;
             }};            
 
-            DeleteDatasetProfilesResponse res = sdk.datasetProfile.deleteDatasetProfiles(req, new DeleteDatasetProfilesSecurity("hic") {{
+            DeleteDatasetProfilesResponse res = sdk.datasetProfile.deleteDatasetProfiles(req, new DeleteDatasetProfilesSecurity("laboriosam") {{
                 apiKeyAuth = "";
             }});
 
@@ -228,7 +229,7 @@ public class Application {
 
             DeleteReferenceProfileRequest req = new DeleteReferenceProfileRequest("model-123", "org-123", "ref-xxy");            
 
-            DeleteReferenceProfileResponse res = sdk.datasetProfile.deleteReferenceProfile(req, new DeleteReferenceProfileSecurity("saepe") {{
+            DeleteReferenceProfileResponse res = sdk.datasetProfile.deleteReferenceProfile(req, new DeleteReferenceProfileSecurity("hic") {{
                 apiKeyAuth = "";
             }});
 
@@ -279,7 +280,7 @@ public class Application {
 
             GetReferenceProfileRequest req = new GetReferenceProfileRequest("model-123", "org-123", "ref-xxy");            
 
-            GetReferenceProfileResponse res = sdk.datasetProfile.getReferenceProfile(req, new GetReferenceProfileSecurity("fuga") {{
+            GetReferenceProfileResponse res = sdk.datasetProfile.getReferenceProfile(req, new GetReferenceProfileSecurity("saepe") {{
                 apiKeyAuth = "";
             }});
 
@@ -331,6 +332,7 @@ public class Application {
 
             HideSegmentsRequest req = new HideSegmentsRequest(                new SegmentsListRequest() {{
                                 segments = new String[]{{
+                                    add("in"),
                                     add("corporis"),
                                     add("iste"),
                                 }};

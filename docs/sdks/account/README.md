@@ -26,7 +26,7 @@ import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.CreateAccountUserRequest;
 import ai.whylabs.WhyLabs.models.operations.CreateAccountUserResponse;
 import ai.whylabs.WhyLabs.models.operations.CreateAccountUserSecurity;
-import ai.whylabs.WhyLabs.models.shared.AccountUserRequest;
+import ai.whylabs.WhyLabs.models.shared.CreateAccountUserRequest;
 
 public class Application {
     public static void main(String[] args) {
@@ -34,7 +34,7 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            CreateAccountUserRequest req = new CreateAccountUserRequest(                new AccountUserRequest("unde") {{
+            CreateAccountUserRequest req = new CreateAccountUserRequest(                new CreateAccountUserRequest("unde") {{
                                 active = false;
                                 externalId = "nulla";
                                 userSchema = "corrupti";
@@ -493,7 +493,7 @@ import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.UpdateAccountUserRequest;
 import ai.whylabs.WhyLabs.models.operations.UpdateAccountUserResponse;
 import ai.whylabs.WhyLabs.models.operations.UpdateAccountUserSecurity;
-import ai.whylabs.WhyLabs.models.shared.AccountUserRequest;
+import ai.whylabs.WhyLabs.models.shared.UpdateAccountUserRequest;
 
 public class Application {
     public static void main(String[] args) {
@@ -501,13 +501,13 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            UpdateAccountUserRequest req = new UpdateAccountUserRequest(                new AccountUserRequest("temporibus") {{
+            UpdateAccountUserRequest req = new UpdateAccountUserRequest(                new UpdateAccountUserRequest() {{
                                 active = false;
-                                externalId = "ab";
-                                userSchema = "quis";
+                                externalId = "temporibus";
+                                userSchema = "ab";
                             }};, "org-123", "user-123");            
 
-            UpdateAccountUserResponse res = sdk.account.updateAccountUser(req, new UpdateAccountUserSecurity("veritatis") {{
+            UpdateAccountUserResponse res = sdk.account.updateAccountUser(req, new UpdateAccountUserSecurity("quis") {{
                 apiKeyAuth = "";
             }});
 

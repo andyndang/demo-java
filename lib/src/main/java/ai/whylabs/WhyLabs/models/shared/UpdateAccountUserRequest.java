@@ -9,27 +9,16 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * AccountUserRequest - Information held about a user in an account
+ * UpdateAccountUserRequest - Request to update a user in an account
  */
 
-public class AccountUserRequest {
+public class UpdateAccountUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active")
     public Boolean active;
 
-    public AccountUserRequest withActive(Boolean active) {
+    public UpdateAccountUserRequest withActive(Boolean active) {
         this.active = active;
-        return this;
-    }
-    
-    /**
-     * The user's email address
-     */
-    @JsonProperty("email")
-    public String email;
-
-    public AccountUserRequest withEmail(String email) {
-        this.email = email;
         return this;
     }
     
@@ -40,7 +29,7 @@ public class AccountUserRequest {
     @JsonProperty("externalId")
     public String externalId;
 
-    public AccountUserRequest withExternalId(String externalId) {
+    public UpdateAccountUserRequest withExternalId(String externalId) {
         this.externalId = externalId;
         return this;
     }
@@ -49,12 +38,10 @@ public class AccountUserRequest {
     @JsonProperty("userSchema")
     public String userSchema;
 
-    public AccountUserRequest withUserSchema(String userSchema) {
+    public UpdateAccountUserRequest withUserSchema(String userSchema) {
         this.userSchema = userSchema;
         return this;
     }
     
-    public AccountUserRequest(@JsonProperty("email") String email) {
-        this.email = email;
-  }
+    public UpdateAccountUserRequest(){}
 }

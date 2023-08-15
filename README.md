@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'ai.whylabs.WhyLabs:Songbird:1.21.2'
+implementation 'ai.whylabs.WhyLabs:Songbird:1.22.0'
 ```
 <!-- End SDK Installation -->
 
@@ -21,7 +21,7 @@ import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.CreateAccountUserRequest;
 import ai.whylabs.WhyLabs.models.operations.CreateAccountUserResponse;
 import ai.whylabs.WhyLabs.models.operations.CreateAccountUserSecurity;
-import ai.whylabs.WhyLabs.models.shared.AccountUserRequest;
+import ai.whylabs.WhyLabs.models.shared.CreateAccountUserRequest;
 
 public class Application {
     public static void main(String[] args) {
@@ -29,7 +29,7 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            CreateAccountUserRequest req = new CreateAccountUserRequest(                new AccountUserRequest("corrupti") {{
+            CreateAccountUserRequest req = new CreateAccountUserRequest(                new CreateAccountUserRequest("corrupti") {{
                                 active = false;
                                 externalId = "provident";
                                 userSchema = "distinctio";

@@ -10,10 +10,10 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class UpdateAccountUserRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public ai.whylabs.WhyLabs.models.shared.AccountUserRequest accountUserRequest;
+    public ai.whylabs.WhyLabs.models.shared.UpdateAccountUserRequest updateAccountUserRequest;
 
-    public UpdateAccountUserRequest withAccountUserRequest(ai.whylabs.WhyLabs.models.shared.AccountUserRequest accountUserRequest) {
-        this.accountUserRequest = accountUserRequest;
+    public UpdateAccountUserRequest withUpdateAccountUserRequest(ai.whylabs.WhyLabs.models.shared.UpdateAccountUserRequest updateAccountUserRequest) {
+        this.updateAccountUserRequest = updateAccountUserRequest;
         return this;
     }
     
@@ -33,8 +33,8 @@ public class UpdateAccountUserRequest {
         return this;
     }
     
-    public UpdateAccountUserRequest(@JsonProperty("AccountUserRequest") ai.whylabs.WhyLabs.models.shared.AccountUserRequest accountUserRequest, @JsonProperty("org_id") String orgId, @JsonProperty("user_id") String userId) {
-        this.accountUserRequest = accountUserRequest;
+    public UpdateAccountUserRequest(@JsonProperty("UpdateAccountUserRequest") ai.whylabs.WhyLabs.models.shared.UpdateAccountUserRequest updateAccountUserRequest, @JsonProperty("org_id") String orgId, @JsonProperty("user_id") String userId) {
+        this.updateAccountUserRequest = updateAccountUserRequest;
         this.orgId = orgId;
         this.userId = userId;
   }

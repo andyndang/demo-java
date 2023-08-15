@@ -36,7 +36,7 @@ public class Internal {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = ai.whylabs.WhyLabs.utils.Utils.serializeRequestBody(request, "accountUserRequest", "json");
+        SerializedBody serializedRequestBody = ai.whylabs.WhyLabs.utils.Utils.serializeRequestBody(request, "createAccountUserRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -2089,7 +2089,7 @@ public class Internal {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = ai.whylabs.WhyLabs.utils.Utils.serializeRequestBody(request, "accountUserRequest", "json");
+        SerializedBody serializedRequestBody = ai.whylabs.WhyLabs.utils.Utils.serializeRequestBody(request, "updateAccountUserRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

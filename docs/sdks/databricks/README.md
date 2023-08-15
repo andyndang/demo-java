@@ -29,11 +29,11 @@ public class Application {
                 .build();
 
             ai.whylabs.WhyLabs.models.shared.GetConnectionRequest req = new GetConnectionRequest() {{
-                orgId = "at";
+                orgId = "odit";
                 workspaceId = "at";
             }};            
 
-            GetConnectionResponse res = sdk.databricks.getConnection(req, new GetConnectionSecurity("maiores") {{
+            GetConnectionResponse res = sdk.databricks.getConnection(req, new GetConnectionSecurity("at") {{
                 apiKeyAuth = "";
             }});
 
@@ -81,8 +81,8 @@ public class Application {
                 .build();
 
             ai.whylabs.WhyLabs.models.shared.ListJobsRequest req = new ListJobsRequest() {{
-                orgId = "molestiae";
-                workspaceId = "quod";
+                orgId = "maiores";
+                workspaceId = "molestiae";
             }};            
 
             ListJobsResponse res = sdk.databricks.listJobs(req, new ListJobsSecurity("quod") {{
@@ -133,11 +133,11 @@ public class Application {
                 .build();
 
             ai.whylabs.WhyLabs.models.shared.RefreshConnectionRequest req = new RefreshConnectionRequest() {{
-                orgId = "esse";
-                workspaceId = "totam";
+                orgId = "quod";
+                workspaceId = "esse";
             }};            
 
-            RefreshConnectionResponse res = sdk.databricks.refreshConnection(req, new RefreshConnectionSecurity("porro") {{
+            RefreshConnectionResponse res = sdk.databricks.refreshConnection(req, new RefreshConnectionSecurity("totam") {{
                 apiKeyAuth = "";
             }});
 
@@ -184,12 +184,12 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.RunJobRequest req = new RunJobRequest(678880L) {{
-                orgId = "dicta";
-                workspaceId = "nam";
+            ai.whylabs.WhyLabs.models.shared.RunJobRequest req = new RunJobRequest(780529L) {{
+                orgId = "dolorum";
+                workspaceId = "dicta";
             }};            
 
-            RunJobResponse res = sdk.databricks.runJob(req, new RunJobSecurity("officia") {{
+            RunJobResponse res = sdk.databricks.runJob(req, new RunJobSecurity("nam") {{
                 apiKeyAuth = "";
             }});
 
@@ -241,13 +241,13 @@ public class Application {
                 changes = new UpdateConnectionChanges() {{
                     connected = false;
                     demo = false;
-                    orgId = "occaecati";
+                    orgId = "officia";
                 }};;
-                orgId = "fugit";
-                workspaceId = "deleniti";
+                orgId = "occaecati";
+                workspaceId = "fugit";
             }};            
 
-            UpdateConnectionResponse res = sdk.databricks.updateConnection(req, new UpdateConnectionSecurity("hic") {{
+            UpdateConnectionResponse res = sdk.databricks.updateConnection(req, new UpdateConnectionSecurity("deleniti") {{
                 apiKeyAuth = "";
             }});
 
