@@ -8,16 +8,16 @@ import ai.whylabs.WhyLabs.utils.SpeakeasyMetadata;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 
-public class PutOrgRoleMembershipsSecurity {
+public class PutOrganizationMembershipsSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-API-Key")
     public String apiKeyAuth;
 
-    public PutOrgRoleMembershipsSecurity withApiKeyAuth(String apiKeyAuth) {
+    public PutOrganizationMembershipsSecurity withApiKeyAuth(String apiKeyAuth) {
         this.apiKeyAuth = apiKeyAuth;
         return this;
     }
     
-    public PutOrgRoleMembershipsSecurity(@JsonProperty("ApiKeyAuth") String apiKeyAuth) {
+    public PutOrganizationMembershipsSecurity(@JsonProperty("ApiKeyAuth") String apiKeyAuth) {
         this.apiKeyAuth = apiKeyAuth;
   }
 }

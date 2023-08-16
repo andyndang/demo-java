@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'ai.whylabs.WhyLabs:Songbird:1.22.0'
+implementation 'ai.whylabs.WhyLabs:Songbird:1.22.1'
 ```
 <!-- End SDK Installation -->
 
@@ -61,10 +61,10 @@ public class Application {
 * [getAccountMemberships](docs/sdks/account/README.md#getaccountmemberships) - Get memberships in an account
 * [getAccountUserByEmail](docs/sdks/account/README.md#getaccountuserbyemail) - Get account user by email
 * [getAccountUserById](docs/sdks/account/README.md#getaccountuserbyid) - Get account user by user_id
-* [getOrgRoleMemberships](docs/sdks/account/README.md#getorgrolememberships) - Get memberships for a specific org and role
 * [listAccountUsers](docs/sdks/account/README.md#listaccountusers) - List users in an account
-* [patchOrgRoleMemberships](docs/sdks/account/README.md#patchorgrolememberships) - Add or delete memberships in a specific role and managed organization
-* [putOrgRoleMemberships](docs/sdks/account/README.md#putorgrolememberships) - Replace the memberships in a specific role and managed organization
+* [listManagedOrganizations](docs/sdks/account/README.md#listmanagedorganizations) - List managed organizations for a parent organization
+* [patchOrganizationMemberships](docs/sdks/account/README.md#patchorganizationmemberships) - Add or delete memberships in a specific role and managed organization
+* [putOrganizationMemberships](docs/sdks/account/README.md#putorganizationmemberships) - Replace the memberships in a specific role and managed organization
 * [updateAccountUser](docs/sdks/account/README.md#updateaccountuser) - Update account user
 
 ### [admin](docs/sdks/admin/README.md)
@@ -135,7 +135,6 @@ public class Application {
 * [getMembershipsByOrg](docs/sdks/internal/README.md#getmembershipsbyorg) - Get memberships for an org.
 * [getMonitorConfigV3Version](docs/sdks/internal/README.md#getmonitorconfigv3version) - Get the monitor config document version for a given dataset.
 * [getNotificationSettings](docs/sdks/internal/README.md#getnotificationsettings) - Get notification settings for an org
-* [getOrgRoleMemberships](docs/sdks/internal/README.md#getorgrolememberships) - Get memberships for a specific org and role
 * [getOrganization](docs/sdks/internal/README.md#getorganization) - Get the metadata about an organization.
 * [getUser](docs/sdks/internal/README.md#getuser) - Get a user by their id.
 * [getUserByEmail](docs/sdks/internal/README.md#getuserbyemail) - Get a user by their email.
@@ -143,17 +142,18 @@ public class Application {
 * [listAccountUsers](docs/sdks/internal/README.md#listaccountusers) - List users in an account
 * [listApiKeys](docs/sdks/internal/README.md#listapikeys) - List API key metadata for a given organization and user
 * [listJobs](docs/sdks/internal/README.md#listjobs) - List all of the jobs in a workspace.
+* [listManagedOrganizations](docs/sdks/internal/README.md#listmanagedorganizations) - List managed organizations for a parent organization
 * [listMonitorConfigV3Versions](docs/sdks/internal/README.md#listmonitorconfigv3versions) - List the monitor config document versions for a given dataset.
 * [listOrganizations](docs/sdks/internal/README.md#listorganizations) - Get a list of all of the organization ids.
 * [listSegments](docs/sdks/internal/README.md#listsegments) - Returns a list of segments
 * [~~partiallyUpdateOrg~~](docs/sdks/internal/README.md#partiallyupdateorg) - Update some fields of an organization to non-null values :warning: **Deprecated**
 * [partiallyUpdateOrganization](docs/sdks/internal/README.md#partiallyupdateorganization) - Update some fields of an organization to non-null values
-* [patchOrgRoleMemberships](docs/sdks/internal/README.md#patchorgrolememberships) - Add or delete memberships in a specific role and managed organization
+* [patchOrganizationMemberships](docs/sdks/internal/README.md#patchorganizationmemberships) - Add or delete memberships in a specific role and managed organization
 * [postMonitorConfigValidationJob](docs/sdks/internal/README.md#postmonitorconfigvalidationjob) - Create a monitor config validation job for all configs
 * [provisionAWSMarketplaceNewUser](docs/sdks/internal/README.md#provisionawsmarketplacenewuser) - Create resources for a new user coming from AWS Marketplace
 * [provisionDatabricksConnection](docs/sdks/internal/README.md#provisiondatabricksconnection) - Create resources for a new user coming from Databricks
 * [provisionNewUser](docs/sdks/internal/README.md#provisionnewuser) - Create the resources that a new user needs to use WhyLabs via the website.
-* [putOrgRoleMemberships](docs/sdks/internal/README.md#putorgrolememberships) - Replace the memberships in a specific role and managed organization
+* [putOrganizationMemberships](docs/sdks/internal/README.md#putorganizationmemberships) - Replace the memberships in a specific role and managed organization
 * [putRequestMonitorRunConfig](docs/sdks/internal/README.md#putrequestmonitorrunconfig) - Put the RequestMonitorRun config into S3.
 * [refreshConnection](docs/sdks/internal/README.md#refreshconnection) - Refresh metadata for a workspace connection.
 * [registerDatabricksConnection](docs/sdks/internal/README.md#registerdatabricksconnection) - Register databricks metadata, temporarily storing it against a UUID so that it can be used to provision a databricks connection after email authentication

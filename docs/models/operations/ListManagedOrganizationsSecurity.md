@@ -1,4 +1,4 @@
-# PutOrgRoleMembershipsSecurity
+# ListManagedOrganizationsSecurity
 
 
 ## Fields

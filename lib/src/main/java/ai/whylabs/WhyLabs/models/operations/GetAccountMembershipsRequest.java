@@ -9,11 +9,27 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 
 public class GetAccountMembershipsRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=managed_org_id")
+    public String managedOrgId;
+
+    public GetAccountMembershipsRequest withManagedOrgId(String managedOrgId) {
+        this.managedOrgId = managedOrgId;
+        return this;
+    }
+    
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org_id")
     public String orgId;
 
     public GetAccountMembershipsRequest withOrgId(String orgId) {
         this.orgId = orgId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=role")
+    public ai.whylabs.WhyLabs.models.shared.Role role;
+
+    public GetAccountMembershipsRequest withRole(ai.whylabs.WhyLabs.models.shared.Role role) {
+        this.role = role;
         return this;
     }
     

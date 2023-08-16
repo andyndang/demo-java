@@ -7,10 +7,10 @@
 * [getAccountMemberships](#getaccountmemberships) - Get memberships in an account
 * [getAccountUserByEmail](#getaccountuserbyemail) - Get account user by email
 * [getAccountUserById](#getaccountuserbyid) - Get account user by user_id
-* [getOrgRoleMemberships](#getorgrolememberships) - Get memberships for a specific org and role
 * [listAccountUsers](#listaccountusers) - List users in an account
-* [patchOrgRoleMemberships](#patchorgrolememberships) - Add or delete memberships in a specific role and managed organization
-* [putOrgRoleMemberships](#putorgrolememberships) - Replace the memberships in a specific role and managed organization
+* [listManagedOrganizations](#listmanagedorganizations) - List managed organizations for a parent organization
+* [patchOrganizationMemberships](#patchorganizationmemberships) - Add or delete memberships in a specific role and managed organization
+* [putOrganizationMemberships](#putorganizationmemberships) - Replace the memberships in a specific role and managed organization
 * [updateAccountUser](#updateaccountuser) - Update account user
 
 ## createAccountUser
@@ -129,6 +129,7 @@ import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.GetAccountMembershipsRequest;
 import ai.whylabs.WhyLabs.models.operations.GetAccountMembershipsResponse;
 import ai.whylabs.WhyLabs.models.operations.GetAccountMembershipsSecurity;
+import ai.whylabs.WhyLabs.models.shared.Role;
 
 public class Application {
     public static void main(String[] args) {
@@ -137,10 +138,12 @@ public class Application {
                 .build();
 
             GetAccountMembershipsRequest req = new GetAccountMembershipsRequest("org-123") {{
+                managedOrgId = "org-123";
+                role = Role.MEMBER;
                 userId = "user-123";
             }};            
 
-            GetAccountMembershipsResponse res = sdk.account.getAccountMemberships(req, new GetAccountMembershipsSecurity("error") {{
+            GetAccountMembershipsResponse res = sdk.account.getAccountMemberships(req, new GetAccountMembershipsSecurity("deserunt") {{
                 apiKeyAuth = "";
             }});
 
@@ -189,7 +192,7 @@ public class Application {
 
             GetAccountUserByEmailRequest req = new GetAccountUserByEmailRequest("user@whylabs.ai", "org-123");            
 
-            GetAccountUserByEmailResponse res = sdk.account.getAccountUserByEmail(req, new GetAccountUserByEmailSecurity("deserunt") {{
+            GetAccountUserByEmailResponse res = sdk.account.getAccountUserByEmail(req, new GetAccountUserByEmailSecurity("suscipit") {{
                 apiKeyAuth = "";
             }});
 
@@ -238,7 +241,7 @@ public class Application {
 
             GetAccountUserByIdRequest req = new GetAccountUserByIdRequest("org-123", "user-123");            
 
-            GetAccountUserByIdResponse res = sdk.account.getAccountUserById(req, new GetAccountUserByIdSecurity("suscipit") {{
+            GetAccountUserByIdResponse res = sdk.account.getAccountUserById(req, new GetAccountUserByIdSecurity("iure") {{
                 apiKeyAuth = "";
             }});
 
@@ -263,55 +266,6 @@ public class Application {
 ### Response
 
 **[ai.whylabs.WhyLabs.models.operations.GetAccountUserByIdResponse](../../models/operations/GetAccountUserByIdResponse.md)**
-
-
-## getOrgRoleMemberships
-
-Get memberships in a specific organization and role within the account
-
-### Example Usage
-
-```java
-package hello.world;
-
-import ai.whylabs.WhyLabs.Songbird;
-import ai.whylabs.WhyLabs.models.operations.GetOrgRoleMembershipsRequest;
-import ai.whylabs.WhyLabs.models.operations.GetOrgRoleMembershipsResponse;
-import ai.whylabs.WhyLabs.models.operations.GetOrgRoleMembershipsSecurity;
-
-public class Application {
-    public static void main(String[] args) {
-        try {
-            Songbird sdk = Songbird.builder()
-                .build();
-
-            GetOrgRoleMembershipsRequest req = new GetOrgRoleMembershipsRequest("org-123", "org-123", "admin");            
-
-            GetOrgRoleMembershipsResponse res = sdk.account.getOrgRoleMemberships(req, new GetOrgRoleMembershipsSecurity("iure") {{
-                apiKeyAuth = "";
-            }});
-
-            if (res.statusCode == 200) {
-                // handle response
-            }
-        } catch (Exception e) {
-            // handle exception
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                      | [ai.whylabs.WhyLabs.models.operations.GetOrgRoleMembershipsRequest](../../models/operations/GetOrgRoleMembershipsRequest.md)   | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
-| `security`                                                                                                                     | [ai.whylabs.WhyLabs.models.operations.GetOrgRoleMembershipsSecurity](../../models/operations/GetOrgRoleMembershipsSecurity.md) | :heavy_check_mark:                                                                                                             | The security requirements to use for the request.                                                                              |
-
-
-### Response
-
-**[ai.whylabs.WhyLabs.models.operations.GetOrgRoleMembershipsResponse](../../models/operations/GetOrgRoleMembershipsResponse.md)**
 
 
 ## listAccountUsers
@@ -363,7 +317,56 @@ public class Application {
 **[ai.whylabs.WhyLabs.models.operations.ListAccountUsersResponse](../../models/operations/ListAccountUsersResponse.md)**
 
 
-## patchOrgRoleMemberships
+## listManagedOrganizations
+
+List managed organizations for a parent organization
+
+### Example Usage
+
+```java
+package hello.world;
+
+import ai.whylabs.WhyLabs.Songbird;
+import ai.whylabs.WhyLabs.models.operations.ListManagedOrganizationsRequest;
+import ai.whylabs.WhyLabs.models.operations.ListManagedOrganizationsResponse;
+import ai.whylabs.WhyLabs.models.operations.ListManagedOrganizationsSecurity;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            Songbird sdk = Songbird.builder()
+                .build();
+
+            ListManagedOrganizationsRequest req = new ListManagedOrganizationsRequest("org-123");            
+
+            ListManagedOrganizationsResponse res = sdk.account.listManagedOrganizations(req, new ListManagedOrganizationsSecurity("debitis") {{
+                apiKeyAuth = "";
+            }});
+
+            if (res.statusCode == 200) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                            | [ai.whylabs.WhyLabs.models.operations.ListManagedOrganizationsRequest](../../models/operations/ListManagedOrganizationsRequest.md)   | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
+| `security`                                                                                                                           | [ai.whylabs.WhyLabs.models.operations.ListManagedOrganizationsSecurity](../../models/operations/ListManagedOrganizationsSecurity.md) | :heavy_check_mark:                                                                                                                   | The security requirements to use for the request.                                                                                    |
+
+
+### Response
+
+**[ai.whylabs.WhyLabs.models.operations.ListManagedOrganizationsResponse](../../models/operations/ListManagedOrganizationsResponse.md)**
+
+
+## patchOrganizationMemberships
 
 Add or delete all of the memberships in a specific role and managed organization
 
@@ -373,11 +376,11 @@ Add or delete all of the memberships in a specific role and managed organization
 package hello.world;
 
 import ai.whylabs.WhyLabs.Songbird;
-import ai.whylabs.WhyLabs.models.operations.PatchOrgRoleMembershipsRequest;
-import ai.whylabs.WhyLabs.models.operations.PatchOrgRoleMembershipsRequestBody;
-import ai.whylabs.WhyLabs.models.operations.PatchOrgRoleMembershipsResponse;
-import ai.whylabs.WhyLabs.models.operations.PatchOrgRoleMembershipsSecurity;
+import ai.whylabs.WhyLabs.models.operations.PatchOrganizationMembershipsRequest;
+import ai.whylabs.WhyLabs.models.operations.PatchOrganizationMembershipsResponse;
+import ai.whylabs.WhyLabs.models.operations.PatchOrganizationMembershipsSecurity;
 import ai.whylabs.WhyLabs.models.shared.PatchAccountMembershipsRequest;
+import ai.whylabs.WhyLabs.models.shared.Role;
 
 public class Application {
     public static void main(String[] args) {
@@ -385,19 +388,14 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            PatchOrgRoleMembershipsRequest req = new PatchOrgRoleMembershipsRequest(                new PatchOrgRoleMembershipsRequestBody() {{
-                                request = new PatchAccountMembershipsRequest(                new String[]{{
-                                                    add("ipsa"),
-                                                    add("delectus"),
-                                                    add("tempora"),
-                                                    add("suscipit"),
-                                                }},                 new String[]{{
-                                                    add("minus"),
-                                                    add("placeat"),
-                                                }});;
-                            }};, "org-123", "org-123", "admin");            
+            PatchOrganizationMembershipsRequest req = new PatchOrganizationMembershipsRequest(                new PatchAccountMembershipsRequest(                new String[]{{
+                                                add("delectus"),
+                                            }},                 new String[]{{
+                                                add("suscipit"),
+                                                add("molestiae"),
+                                            }});, "org-123", "org-123", Role.VIEWER);            
 
-            PatchOrgRoleMembershipsResponse res = sdk.account.patchOrgRoleMemberships(req, new PatchOrgRoleMembershipsSecurity("voluptatum") {{
+            PatchOrganizationMembershipsResponse res = sdk.account.patchOrganizationMemberships(req, new PatchOrganizationMembershipsSecurity("placeat") {{
                 apiKeyAuth = "";
             }});
 
@@ -413,18 +411,18 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
-| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                          | [ai.whylabs.WhyLabs.models.operations.PatchOrgRoleMembershipsRequest](../../models/operations/PatchOrgRoleMembershipsRequest.md)   | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
-| `security`                                                                                                                         | [ai.whylabs.WhyLabs.models.operations.PatchOrgRoleMembershipsSecurity](../../models/operations/PatchOrgRoleMembershipsSecurity.md) | :heavy_check_mark:                                                                                                                 | The security requirements to use for the request.                                                                                  |
+| Parameter                                                                                                                                    | Type                                                                                                                                         | Required                                                                                                                                     | Description                                                                                                                                  |
+| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                    | [ai.whylabs.WhyLabs.models.operations.PatchOrganizationMembershipsRequest](../../models/operations/PatchOrganizationMembershipsRequest.md)   | :heavy_check_mark:                                                                                                                           | The request object to use for the request.                                                                                                   |
+| `security`                                                                                                                                   | [ai.whylabs.WhyLabs.models.operations.PatchOrganizationMembershipsSecurity](../../models/operations/PatchOrganizationMembershipsSecurity.md) | :heavy_check_mark:                                                                                                                           | The security requirements to use for the request.                                                                                            |
 
 
 ### Response
 
-**[ai.whylabs.WhyLabs.models.operations.PatchOrgRoleMembershipsResponse](../../models/operations/PatchOrgRoleMembershipsResponse.md)**
+**[ai.whylabs.WhyLabs.models.operations.PatchOrganizationMembershipsResponse](../../models/operations/PatchOrganizationMembershipsResponse.md)**
 
 
-## putOrgRoleMemberships
+## putOrganizationMemberships
 
 Replace all of the memberships in a specific role and managed organization
 
@@ -434,11 +432,11 @@ Replace all of the memberships in a specific role and managed organization
 package hello.world;
 
 import ai.whylabs.WhyLabs.Songbird;
-import ai.whylabs.WhyLabs.models.operations.PutOrgRoleMembershipsRequest;
-import ai.whylabs.WhyLabs.models.operations.PutOrgRoleMembershipsRequestBody;
-import ai.whylabs.WhyLabs.models.operations.PutOrgRoleMembershipsResponse;
-import ai.whylabs.WhyLabs.models.operations.PutOrgRoleMembershipsSecurity;
+import ai.whylabs.WhyLabs.models.operations.PutOrganizationMembershipsRequest;
+import ai.whylabs.WhyLabs.models.operations.PutOrganizationMembershipsResponse;
+import ai.whylabs.WhyLabs.models.operations.PutOrganizationMembershipsSecurity;
 import ai.whylabs.WhyLabs.models.shared.PutAccountMembershipsRequest;
+import ai.whylabs.WhyLabs.models.shared.Role;
 
 public class Application {
     public static void main(String[] args) {
@@ -446,14 +444,13 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            PutOrgRoleMembershipsRequest req = new PutOrgRoleMembershipsRequest(                new PutOrgRoleMembershipsRequestBody() {{
-                                request = new PutAccountMembershipsRequest(                new String[]{{
-                                                    add("excepturi"),
-                                                    add("nisi"),
-                                                }});;
-                            }};, "org-123", "org-123", "admin");            
+            PutOrganizationMembershipsRequest req = new PutOrganizationMembershipsRequest(                new PutAccountMembershipsRequest(                new String[]{{
+                                                add("iusto"),
+                                                add("excepturi"),
+                                                add("nisi"),
+                                            }});, "org-123", "org-123", Role.VIEWER);            
 
-            PutOrgRoleMembershipsResponse res = sdk.account.putOrgRoleMemberships(req, new PutOrgRoleMembershipsSecurity("recusandae") {{
+            PutOrganizationMembershipsResponse res = sdk.account.putOrganizationMemberships(req, new PutOrganizationMembershipsSecurity("temporibus") {{
                 apiKeyAuth = "";
             }});
 
@@ -469,15 +466,15 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                      | [ai.whylabs.WhyLabs.models.operations.PutOrgRoleMembershipsRequest](../../models/operations/PutOrgRoleMembershipsRequest.md)   | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
-| `security`                                                                                                                     | [ai.whylabs.WhyLabs.models.operations.PutOrgRoleMembershipsSecurity](../../models/operations/PutOrgRoleMembershipsSecurity.md) | :heavy_check_mark:                                                                                                             | The security requirements to use for the request.                                                                              |
+| Parameter                                                                                                                                | Type                                                                                                                                     | Required                                                                                                                                 | Description                                                                                                                              |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                | [ai.whylabs.WhyLabs.models.operations.PutOrganizationMembershipsRequest](../../models/operations/PutOrganizationMembershipsRequest.md)   | :heavy_check_mark:                                                                                                                       | The request object to use for the request.                                                                                               |
+| `security`                                                                                                                               | [ai.whylabs.WhyLabs.models.operations.PutOrganizationMembershipsSecurity](../../models/operations/PutOrganizationMembershipsSecurity.md) | :heavy_check_mark:                                                                                                                       | The security requirements to use for the request.                                                                                        |
 
 
 ### Response
 
-**[ai.whylabs.WhyLabs.models.operations.PutOrgRoleMembershipsResponse](../../models/operations/PutOrgRoleMembershipsResponse.md)**
+**[ai.whylabs.WhyLabs.models.operations.PutOrganizationMembershipsResponse](../../models/operations/PutOrganizationMembershipsResponse.md)**
 
 
 ## updateAccountUser
@@ -503,11 +500,11 @@ public class Application {
 
             UpdateAccountUserRequest req = new UpdateAccountUserRequest(                new UpdateAccountUserRequest() {{
                                 active = false;
-                                externalId = "temporibus";
-                                userSchema = "ab";
+                                externalId = "ab";
+                                userSchema = "quis";
                             }};, "org-123", "user-123");            
 
-            UpdateAccountUserResponse res = sdk.account.updateAccountUser(req, new UpdateAccountUserSecurity("quis") {{
+            UpdateAccountUserResponse res = sdk.account.updateAccountUser(req, new UpdateAccountUserSecurity("veritatis") {{
                 apiKeyAuth = "";
             }});
 

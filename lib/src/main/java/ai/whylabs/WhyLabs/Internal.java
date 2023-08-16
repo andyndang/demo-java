@@ -909,47 +909,6 @@ public class Internal {
     }
 
     /**
-     * Get memberships for a specific org and role
-     * Get memberships in a specific organization and role within the account
-     * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public ai.whylabs.WhyLabs.models.operations.GetOrgRoleMembershipsResponse getOrgRoleMemberships(ai.whylabs.WhyLabs.models.operations.GetOrgRoleMembershipsRequest request, ai.whylabs.WhyLabs.models.operations.GetOrgRoleMembershipsSecurity security) throws Exception {
-        String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.GetOrgRoleMembershipsRequest.class, baseUrl, "/v0/accounts/org/{org_id}/memberships/{managed_org_id}/{role}", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("GET");
-        req.setURL(url);
-
-        req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
-        
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.GetOrgRoleMembershipsResponse res = new ai.whylabs.WhyLabs.models.operations.GetOrgRoleMembershipsResponse(contentType, httpRes.statusCode()) {{
-            getAccountMembershipsResponse = null;
-        }};
-        res.rawResponse = httpRes;
-        
-        if (true) {
-            if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                ai.whylabs.WhyLabs.models.shared.GetAccountMembershipsResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), ai.whylabs.WhyLabs.models.shared.GetAccountMembershipsResponse.class);
-                res.getAccountMembershipsResponse = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
      * Get the metadata about an organization.
      * Returns various metadata about an organization
      * @param request the request object containing all of the parameters for the API call
@@ -1261,6 +1220,47 @@ public class Internal {
     }
 
     /**
+     * List managed organizations for a parent organization
+     * List managed organizations for a parent organization
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public ai.whylabs.WhyLabs.models.operations.ListManagedOrganizationsResponse listManagedOrganizations(ai.whylabs.WhyLabs.models.operations.ListManagedOrganizationsRequest request, ai.whylabs.WhyLabs.models.operations.ListManagedOrganizationsSecurity security) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.ListManagedOrganizationsRequest.class, baseUrl, "/v0/accounts/org/{org_id}/organizations", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
+        
+        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        ai.whylabs.WhyLabs.models.operations.ListManagedOrganizationsResponse res = new ai.whylabs.WhyLabs.models.operations.ListManagedOrganizationsResponse(contentType, httpRes.statusCode()) {{
+            accountOrganizations = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (true) {
+            if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                ai.whylabs.WhyLabs.models.shared.AccountOrganization[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), ai.whylabs.WhyLabs.models.shared.AccountOrganization[].class);
+                res.accountOrganizations = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
      * List the monitor config document versions for a given dataset.
      * List the monitor config document versions for a given dataset.
      * @param request the request object containing all of the parameters for the API call
@@ -1493,14 +1493,14 @@ public class Internal {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.PatchOrgRoleMembershipsResponse patchOrgRoleMemberships(ai.whylabs.WhyLabs.models.operations.PatchOrgRoleMembershipsRequest request, ai.whylabs.WhyLabs.models.operations.PatchOrgRoleMembershipsSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.PatchOrganizationMembershipsResponse patchOrganizationMemberships(ai.whylabs.WhyLabs.models.operations.PatchOrganizationMembershipsRequest request, ai.whylabs.WhyLabs.models.operations.PatchOrganizationMembershipsSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.PatchOrgRoleMembershipsRequest.class, baseUrl, "/v0/accounts/org/{org_id}/memberships/{managed_org_id}/{role}", request, null);
+        String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.PatchOrganizationMembershipsRequest.class, baseUrl, "/v0/accounts/org/{org_id}/memberships", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = ai.whylabs.WhyLabs.utils.Utils.serializeRequestBody(request, "requestBody", "json");
+        SerializedBody serializedRequestBody = ai.whylabs.WhyLabs.utils.Utils.serializeRequestBody(request, "patchAccountMembershipsRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1508,6 +1508,12 @@ public class Internal {
 
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
+        java.util.List<NameValuePair> queryParams = ai.whylabs.WhyLabs.utils.Utils.getQueryParams(ai.whylabs.WhyLabs.models.operations.PatchOrganizationMembershipsRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
         
         HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
@@ -1515,16 +1521,16 @@ public class Internal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        ai.whylabs.WhyLabs.models.operations.PatchOrgRoleMembershipsResponse res = new ai.whylabs.WhyLabs.models.operations.PatchOrgRoleMembershipsResponse(contentType, httpRes.statusCode()) {{
-            void_ = null;
+        ai.whylabs.WhyLabs.models.operations.PatchOrganizationMembershipsResponse res = new ai.whylabs.WhyLabs.models.operations.PatchOrganizationMembershipsResponse(contentType, httpRes.statusCode()) {{
+            response = null;
         }};
         res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                ai.whylabs.WhyLabs.models.shared.Void out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), ai.whylabs.WhyLabs.models.shared.Void.class);
-                res.void_ = out;
+                ai.whylabs.WhyLabs.models.shared.Response out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), ai.whylabs.WhyLabs.models.shared.Response.class);
+                res.response = out;
             }
         }
 
@@ -1717,14 +1723,14 @@ public class Internal {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.PutOrgRoleMembershipsResponse putOrgRoleMemberships(ai.whylabs.WhyLabs.models.operations.PutOrgRoleMembershipsRequest request, ai.whylabs.WhyLabs.models.operations.PutOrgRoleMembershipsSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.PutOrganizationMembershipsResponse putOrganizationMemberships(ai.whylabs.WhyLabs.models.operations.PutOrganizationMembershipsRequest request, ai.whylabs.WhyLabs.models.operations.PutOrganizationMembershipsSecurity security) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.PutOrgRoleMembershipsRequest.class, baseUrl, "/v0/accounts/org/{org_id}/memberships/{managed_org_id}/{role}", request, null);
+        String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.PutOrganizationMembershipsRequest.class, baseUrl, "/v0/accounts/org/{org_id}/memberships", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = ai.whylabs.WhyLabs.utils.Utils.serializeRequestBody(request, "requestBody", "json");
+        SerializedBody serializedRequestBody = ai.whylabs.WhyLabs.utils.Utils.serializeRequestBody(request, "putAccountMembershipsRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1732,6 +1738,12 @@ public class Internal {
 
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
+        java.util.List<NameValuePair> queryParams = ai.whylabs.WhyLabs.utils.Utils.getQueryParams(ai.whylabs.WhyLabs.models.operations.PutOrganizationMembershipsRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
         
         HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
@@ -1739,16 +1751,16 @@ public class Internal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        ai.whylabs.WhyLabs.models.operations.PutOrgRoleMembershipsResponse res = new ai.whylabs.WhyLabs.models.operations.PutOrgRoleMembershipsResponse(contentType, httpRes.statusCode()) {{
-            void_ = null;
+        ai.whylabs.WhyLabs.models.operations.PutOrganizationMembershipsResponse res = new ai.whylabs.WhyLabs.models.operations.PutOrganizationMembershipsResponse(contentType, httpRes.statusCode()) {{
+            response = null;
         }};
         res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                ai.whylabs.WhyLabs.models.shared.Void out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), ai.whylabs.WhyLabs.models.shared.Void.class);
-                res.void_ = out;
+                ai.whylabs.WhyLabs.models.shared.Response out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), ai.whylabs.WhyLabs.models.shared.Response.class);
+                res.response = out;
             }
         }
 

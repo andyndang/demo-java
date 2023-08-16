@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * Response - UpdateConnection default response
+ * Response - PatchOrganizationMemberships default response
  */
 
 public class Response {

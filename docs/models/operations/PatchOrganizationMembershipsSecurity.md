@@ -1,4 +1,4 @@
-# GetOrgRoleMembershipsSecurity
+# PatchOrganizationMembershipsSecurity
 
 
 ## Fields

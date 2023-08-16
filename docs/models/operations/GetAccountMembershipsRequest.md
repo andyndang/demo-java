@@ -3,7 +3,9 @@
 
 ## Fields
 
-| Field              | Type               | Required           | Description        | Example            |
-| ------------------ | ------------------ | ------------------ | ------------------ | ------------------ |
-| `orgId`            | *String*           | :heavy_check_mark: | N/A                | org-123            |
-| `userId`           | *String*           | :heavy_minus_sign: | N/A                | user-123           |
+| Field                                                                | Type                                                                 | Required                                                             | Description                                                          | Example                                                              |
+| -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| `managedOrgId`                                                       | *String*                                                             | :heavy_minus_sign:                                                   | N/A                                                                  | org-123                                                              |
+| `orgId`                                                              | *String*                                                             | :heavy_check_mark:                                                   | N/A                                                                  | org-123                                                              |
+| `role`                                                               | [ai.whylabs.WhyLabs.models.shared.Role](../../models/shared/Role.md) | :heavy_minus_sign:                                                   | N/A                                                                  |                                                                      |
+| `userId`                                                             | *String*                                                             | :heavy_minus_sign:                                                   | N/A                                                                  | user-123                                                             |

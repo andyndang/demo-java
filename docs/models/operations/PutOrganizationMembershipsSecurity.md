@@ -1,4 +1,4 @@
-# PatchOrgRoleMembershipsSecurity
+# PutOrganizationMembershipsSecurity
 
 
 ## Fields
