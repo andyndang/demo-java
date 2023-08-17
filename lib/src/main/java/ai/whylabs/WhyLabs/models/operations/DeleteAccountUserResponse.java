@@ -17,6 +17,17 @@ public class DeleteAccountUserResponse {
         return this;
     }
     
+    /**
+     * DeleteAccountUser default response
+     */
+    
+    public ai.whylabs.WhyLabs.models.shared.Response response;
+
+    public DeleteAccountUserResponse withResponse(ai.whylabs.WhyLabs.models.shared.Response response) {
+        this.response = response;
+        return this;
+    }
+    
     
     public Integer statusCode;
 
@@ -30,17 +41,6 @@ public class DeleteAccountUserResponse {
 
     public DeleteAccountUserResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
-        return this;
-    }
-    
-    /**
-     * DeleteAccountUser default response
-     */
-    
-    public ai.whylabs.WhyLabs.models.shared.Void void_;
-
-    public DeleteAccountUserResponse withVoid(ai.whylabs.WhyLabs.models.shared.Void void_) {
-        this.void_ = void_;
         return this;
     }
     

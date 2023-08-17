@@ -7,7 +7,7 @@ package ai.whylabs.WhyLabs.models.shared;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * PatchAccountMembershipsRequest - Request for the PatchOrgRoleMemberships API
+ * PatchAccountMembershipsRequest - Request for the PatchAccountMemberships API
  */
 
 public class PatchAccountMembershipsRequest {
