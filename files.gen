@@ -386,6 +386,8 @@ lib/src/main/java/ai/whylabs/WhyLabs/models/shared/OrganizationRoleMembers.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/Role.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/Member.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/AccountOrganization.java
+lib/src/main/java/ai/whylabs/WhyLabs/models/shared/StatusResponse.java
+lib/src/main/java/ai/whylabs/WhyLabs/models/shared/ErrorStatus.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/PatchAccountMembershipsRequest.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/PutAccountMembershipsRequest.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/UpdateAccountUserRequest.java
@@ -871,6 +873,8 @@ docs/models/shared/OrganizationRoleMembers.md
 docs/models/shared/Role.md
 docs/models/shared/Member.md
 docs/models/shared/AccountOrganization.md
+docs/models/shared/StatusResponse.md
+docs/models/shared/ErrorStatus.md
 docs/models/shared/PatchAccountMembershipsRequest.md
 docs/models/shared/PutAccountMembershipsRequest.md
 docs/models/shared/UpdateAccountUserRequest.md

@@ -368,15 +368,15 @@ public class Account {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         ai.whylabs.WhyLabs.models.operations.PatchOrganizationMembershipsResponse res = new ai.whylabs.WhyLabs.models.operations.PatchOrganizationMembershipsResponse(contentType, httpRes.statusCode()) {{
-            response = null;
+            statusResponse = null;
         }};
         res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                ai.whylabs.WhyLabs.models.shared.Response out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), ai.whylabs.WhyLabs.models.shared.Response.class);
-                res.response = out;
+                ai.whylabs.WhyLabs.models.shared.StatusResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), ai.whylabs.WhyLabs.models.shared.StatusResponse.class);
+                res.statusResponse = out;
             }
         }
 
@@ -420,15 +420,15 @@ public class Account {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         ai.whylabs.WhyLabs.models.operations.PutOrganizationMembershipsResponse res = new ai.whylabs.WhyLabs.models.operations.PutOrganizationMembershipsResponse(contentType, httpRes.statusCode()) {{
-            response = null;
+            statusResponse = null;
         }};
         res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                ai.whylabs.WhyLabs.models.shared.Response out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), ai.whylabs.WhyLabs.models.shared.Response.class);
-                res.response = out;
+                ai.whylabs.WhyLabs.models.shared.StatusResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), ai.whylabs.WhyLabs.models.shared.StatusResponse.class);
+                res.statusResponse = out;
             }
         }
 

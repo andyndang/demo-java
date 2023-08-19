@@ -9,18 +9,27 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * Response - DeleteAccountUser default response
+ * StatusResponse - PatchOrganizationMemberships default response
  */
 
-public class Response {
+public class StatusResponse {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("errors")
+    public ErrorStatus[] errors;
+
+    public StatusResponse withErrors(ErrorStatus[] errors) {
+        this.errors = errors;
+        return this;
+    }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
 
-    public Response withRequestId(String requestId) {
+    public StatusResponse withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
-    public Response(){}
+    public StatusResponse(){}
 }

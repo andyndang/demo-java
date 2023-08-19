@@ -17,17 +17,6 @@ public class PutOrganizationMembershipsResponse {
         return this;
     }
     
-    /**
-     * PutOrganizationMemberships default response
-     */
-    
-    public ai.whylabs.WhyLabs.models.shared.Response response;
-
-    public PutOrganizationMembershipsResponse withResponse(ai.whylabs.WhyLabs.models.shared.Response response) {
-        this.response = response;
-        return this;
-    }
-    
     
     public Integer statusCode;
 
@@ -41,6 +30,17 @@ public class PutOrganizationMembershipsResponse {
 
     public PutOrganizationMembershipsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
+        return this;
+    }
+    
+    /**
+     * PutOrganizationMemberships default response
+     */
+    
+    public ai.whylabs.WhyLabs.models.shared.StatusResponse statusResponse;
+
+    public PutOrganizationMembershipsResponse withStatusResponse(ai.whylabs.WhyLabs.models.shared.StatusResponse statusResponse) {
+        this.statusResponse = statusResponse;
         return this;
     }
     
