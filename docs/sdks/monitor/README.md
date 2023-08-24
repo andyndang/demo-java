@@ -38,7 +38,7 @@ public class Application {
 
             DeleteAnalyzerRequest req = new DeleteAnalyzerRequest("drift-analyzer", "model-123", "org-123");            
 
-            DeleteAnalyzerResponse res = sdk.monitor.deleteAnalyzer(req, new DeleteAnalyzerSecurity("autem") {{
+            DeleteAnalyzerResponse res = sdk.monitor.deleteAnalyzer(req, new DeleteAnalyzerSecurity("quis") {{
                 apiKeyAuth = "";
             }});
 
@@ -87,7 +87,7 @@ public class Application {
 
             DeleteMonitorRequest req = new DeleteMonitorRequest("model-123", "drift-monitor-123", "org-123");            
 
-            DeleteMonitorResponse res = sdk.monitor.deleteMonitor(req, new DeleteMonitorSecurity("nam") {{
+            DeleteMonitorResponse res = sdk.monitor.deleteMonitor(req, new DeleteMonitorSecurity("totam") {{
                 apiKeyAuth = "";
             }});
 
@@ -136,7 +136,7 @@ public class Application {
 
             GetAnalyzerRequest req = new GetAnalyzerRequest("drift-analyzer", "model-123", "org-123");            
 
-            GetAnalyzerResponse res = sdk.monitor.getAnalyzer(req, new GetAnalyzerSecurity("eaque") {{
+            GetAnalyzerResponse res = sdk.monitor.getAnalyzer(req, new GetAnalyzerSecurity("dignissimos") {{
                 apiKeyAuth = "";
             }});
 
@@ -185,7 +185,7 @@ public class Application {
 
             GetMonitorRequest req = new GetMonitorRequest("model-123", "drift-monitor-123", "org-123");            
 
-            GetMonitorResponse res = sdk.monitor.getMonitor(req, new GetMonitorSecurity("pariatur") {{
+            GetMonitorResponse res = sdk.monitor.getMonitor(req, new GetMonitorSecurity("eaque") {{
                 apiKeyAuth = "";
             }});
 
@@ -237,7 +237,7 @@ public class Application {
                 includeEntityWeights = false;
             }};            
 
-            GetMonitorConfigV3Response res = sdk.monitor.getMonitorConfigV3(req, new GetMonitorConfigV3Security("nemo") {{
+            GetMonitorConfigV3Response res = sdk.monitor.getMonitorConfigV3(req, new GetMonitorConfigV3Security("quis") {{
                 apiKeyAuth = "";
             }});
 
@@ -286,7 +286,7 @@ public class Application {
 
             GetMonitorConfigV3VersionRequest req = new GetMonitorConfigV3VersionRequest("model-123", "org-123", "4920545486e2a4cdf0f770c09748e663");            
 
-            GetMonitorConfigV3VersionResponse res = sdk.monitor.getMonitorConfigV3Version(req, new GetMonitorConfigV3VersionSecurity("voluptatibus") {{
+            GetMonitorConfigV3VersionResponse res = sdk.monitor.getMonitorConfigV3Version(req, new GetMonitorConfigV3VersionSecurity("nesciunt") {{
                 apiKeyAuth = "";
             }});
 
@@ -335,7 +335,7 @@ public class Application {
 
             ListMonitorConfigV3VersionsRequest req = new ListMonitorConfigV3VersionsRequest("model-123", "org-123");            
 
-            ListMonitorConfigV3VersionsResponse res = sdk.monitor.listMonitorConfigV3Versions(req, new ListMonitorConfigV3VersionsSecurity("perferendis") {{
+            ListMonitorConfigV3VersionsResponse res = sdk.monitor.listMonitorConfigV3Versions(req, new ListMonitorConfigV3VersionsSecurity("eos") {{
                 apiKeyAuth = "";
             }});
 
@@ -382,9 +382,9 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            PatchMonitorConfigV3Request req = new PatchMonitorConfigV3Request("fugiat", "model-123", "org-123");            
+            PatchMonitorConfigV3Request req = new PatchMonitorConfigV3Request("perferendis", "model-123", "org-123");            
 
-            PatchMonitorConfigV3Response res = sdk.monitor.patchMonitorConfigV3(req, new PatchMonitorConfigV3Security("amet") {{
+            PatchMonitorConfigV3Response res = sdk.monitor.patchMonitorConfigV3(req, new PatchMonitorConfigV3Security("dolores") {{
                 apiKeyAuth = "";
             }});
 
@@ -431,9 +431,9 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            PutAnalyzerRequest req = new PutAnalyzerRequest("aut", "drift-analyzer", "model-123", "org-123");            
+            PutAnalyzerRequest req = new PutAnalyzerRequest("minus", "drift-analyzer", "model-123", "org-123");            
 
-            PutAnalyzerResponse res = sdk.monitor.putAnalyzer(req, new PutAnalyzerSecurity("cumque") {{
+            PutAnalyzerResponse res = sdk.monitor.putAnalyzer(req, new PutAnalyzerSecurity("quam") {{
                 apiKeyAuth = "";
             }});
 
@@ -480,9 +480,9 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            PutMonitorRequest req = new PutMonitorRequest("corporis", "model-123", "drift-monitor-123", "org-123");            
+            PutMonitorRequest req = new PutMonitorRequest("dolor", "model-123", "drift-monitor-123", "org-123");            
 
-            PutMonitorResponse res = sdk.monitor.putMonitor(req, new PutMonitorSecurity("hic") {{
+            PutMonitorResponse res = sdk.monitor.putMonitor(req, new PutMonitorSecurity("vero") {{
                 apiKeyAuth = "";
             }});
 
@@ -529,9 +529,9 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            PutMonitorConfigV3Request req = new PutMonitorConfigV3Request("libero", "model-123", "org-123");            
+            PutMonitorConfigV3Request req = new PutMonitorConfigV3Request("nostrum", "model-123", "org-123");            
 
-            PutMonitorConfigV3Response res = sdk.monitor.putMonitorConfigV3(req, new PutMonitorConfigV3Security("nobis") {{
+            PutMonitorConfigV3Response res = sdk.monitor.putMonitorConfigV3(req, new PutMonitorConfigV3Security("hic") {{
                 apiKeyAuth = "";
             }});
 
@@ -581,14 +581,17 @@ public class Application {
 
             PutRequestMonitorRunConfigRequest req = new PutRequestMonitorRunConfigRequest(                new PutRequestMonitorRunConfigRequestBody() {{
                                 analyzerIds = new String[]{{
-                                    add("quis"),
+                                    add("omnis"),
+                                    add("facilis"),
+                                    add("perspiciatis"),
+                                    add("voluptatem"),
                                 }};
                                 endTimestamp = 1893456000000L;
                                 overwrite = false;
                                 startTimestamp = 1577836800000L;
                             }};, "model-123", "org-123");            
 
-            PutRequestMonitorRunConfigResponse res = sdk.monitor.putRequestMonitorRunConfig(req, new PutRequestMonitorRunConfigSecurity("totam") {{
+            PutRequestMonitorRunConfigResponse res = sdk.monitor.putRequestMonitorRunConfig(req, new PutRequestMonitorRunConfigSecurity("porro") {{
                 apiKeyAuth = "";
             }});
 
@@ -635,11 +638,11 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            ValidateMonitorConfigV3Request req = new ValidateMonitorConfigV3Request("dignissimos", "model-123", "org-123") {{
+            ValidateMonitorConfigV3Request req = new ValidateMonitorConfigV3Request("consequuntur", "model-123", "org-123") {{
                 verbose = false;
             }};            
 
-            ValidateMonitorConfigV3Response res = sdk.monitor.validateMonitorConfigV3(req, new ValidateMonitorConfigV3Security("eaque") {{
+            ValidateMonitorConfigV3Response res = sdk.monitor.validateMonitorConfigV3(req, new ValidateMonitorConfigV3Security("blanditiis") {{
                 apiKeyAuth = "";
             }});
 

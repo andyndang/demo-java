@@ -1,0 +1,11 @@
+# ListProfileTracesRequest
+
+
+## Fields
+
+| Field                                                                | Type                                                                 | Required                                                             | Description                                                          | Example                                                              |
+| -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| `datasetId`                                                          | *String*                                                             | :heavy_check_mark:                                                   | The unique dataset ID                                                | model-123                                                            |
+| `fromEpoch`                                                          | *Long*                                                               | :heavy_check_mark:                                                   | Milli epoch time that represents the end of the time range to query. | 1577836800000                                                        |
+| `orgId`                                                              | *String*                                                             | :heavy_check_mark:                                                   | Your company's unique organization ID                                | org-123                                                              |
+| `toEpoch`                                                            | *Long*                                                               | :heavy_check_mark:                                                   | Milli epoch time that represents the end of the time range to query. | 1893456000000                                                        |

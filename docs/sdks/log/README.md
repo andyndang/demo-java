@@ -29,17 +29,19 @@ public class Application {
 
             GetProfileObservatoryLinkRequest req = new GetProfileObservatoryLinkRequest(                new GetProfileObservatoryLinkRequest() {{
                                 batchProfileTimestamps = new Long[]{{
-                                    add(301575L),
-                                    add(716075L),
+                                    add(135474L),
+                                    add(102863L),
+                                    add(298282L),
+                                    add(92373L),
                                 }};
                                 referenceProfileIds = new String[]{{
-                                    add("labore"),
-                                    add("labore"),
-                                    add("suscipit"),
+                                    add("ullam"),
+                                    add("provident"),
+                                    add("quos"),
                                 }};
-                            }};, "natus", "nobis");            
+                            }};, "sint", "accusantium");            
 
-            GetProfileObservatoryLinkResponse res = sdk.log.getProfileObservatoryLink(req, new GetProfileObservatoryLinkSecurity("eum") {{
+            GetProfileObservatoryLinkResponse res = sdk.log.getProfileObservatoryLink(req, new GetProfileObservatoryLinkSecurity("mollitia") {{
                 apiKeyAuth = "";
             }});
 
@@ -89,16 +91,24 @@ public class Application {
                 .build();
 
             LogAsyncRequest req = new LogAsyncRequest(                new LogAsyncRequest() {{
-                                datasetTimestamp = 878453L;
+                                datasetTimestamp = 968962L;
                                 segmentTags = new ai.whylabs.WhyLabs.models.shared.SegmentTag[]{{
                                     add(new SegmentTag() {{
-                                        key = "architecto";
-                                        value = "magnam";
+                                        key = "ad";
+                                        value = "eum";
+                                    }}),
+                                    add(new SegmentTag() {{
+                                        key = "dolor";
+                                        value = "necessitatibus";
+                                    }}),
+                                    add(new SegmentTag() {{
+                                        key = "odit";
+                                        value = "nemo";
                                     }}),
                                 }};
                             }};, "model-123", "org-123");            
 
-            LogAsyncResponse res = sdk.log.logAsync(req, new LogAsyncSecurity("et") {{
+            LogAsyncResponse res = sdk.log.logAsync(req, new LogAsyncSecurity("quasi") {{
                 apiKeyAuth = "";
             }});
 
@@ -147,11 +157,11 @@ public class Application {
                 .build();
 
             LogReferenceRequest req = new LogReferenceRequest(                new LogReferenceRequest() {{
-                                alias = "excepturi";
-                                datasetTimestamp = 354047L;
+                                alias = "iure";
+                                datasetTimestamp = 984043L;
                             }};, "model-123", "org-123");            
 
-            LogReferenceResponse res = sdk.log.logReference(req, new LogReferenceSecurity("provident") {{
+            LogReferenceResponse res = sdk.log.logReference(req, new LogReferenceSecurity("debitis") {{
                 apiKeyAuth = "";
             }});
 

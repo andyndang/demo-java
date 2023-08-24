@@ -6,8 +6,10 @@
 * [deleteAnalyzerResults](#deleteanalyzerresults) - Deletes a set of analyzer results
 * [deleteDatasetProfiles](#deletedatasetprofiles) - Deletes a set of dataset profiles
 * [deleteReferenceProfile](#deletereferenceprofile) - Delete a single reference profile
+* [getProfileTraces](#getprofiletraces) - Returns a list for profile traces matching a trace id
 * [getReferenceProfile](#getreferenceprofile) - Returns a single reference profile
 * [hideSegments](#hidesegments) - Hides a list of segments
+* [listProfileTraces](#listprofiletraces) - Returns a list for profile traces
 * [listReferenceProfiles](#listreferenceprofiles) - Returns a list for reference profiles
 * [listSegments](#listsegments) - Returns a list of segments
 
@@ -255,6 +257,57 @@ public class Application {
 **[ai.whylabs.WhyLabs.models.operations.DeleteReferenceProfileResponse](../../models/operations/DeleteReferenceProfileResponse.md)**
 
 
+## getProfileTraces
+
+Returns a list of profile traces matching a trace id
+
+        
+
+### Example Usage
+
+```java
+package hello.world;
+
+import ai.whylabs.WhyLabs.Songbird;
+import ai.whylabs.WhyLabs.models.operations.GetProfileTracesRequest;
+import ai.whylabs.WhyLabs.models.operations.GetProfileTracesResponse;
+import ai.whylabs.WhyLabs.models.operations.GetProfileTracesSecurity;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            Songbird sdk = Songbird.builder()
+                .build();
+
+            GetProfileTracesRequest req = new GetProfileTracesRequest("model-123", "org-123", "a756f8bb-de30-48a2-be41-178ae6af7100");            
+
+            GetProfileTracesResponse res = sdk.datasetProfile.getProfileTraces(req, new GetProfileTracesSecurity("fuga") {{
+                apiKeyAuth = "";
+            }});
+
+            if (res.statusCode == 200) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                            | [ai.whylabs.WhyLabs.models.operations.GetProfileTracesRequest](../../models/operations/GetProfileTracesRequest.md)   | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
+| `security`                                                                                                           | [ai.whylabs.WhyLabs.models.operations.GetProfileTracesSecurity](../../models/operations/GetProfileTracesSecurity.md) | :heavy_check_mark:                                                                                                   | The security requirements to use for the request.                                                                    |
+
+
+### Response
+
+**[ai.whylabs.WhyLabs.models.operations.GetProfileTracesResponse](../../models/operations/GetProfileTracesResponse.md)**
+
+
 ## getReferenceProfile
 
 Returns a Reference Profile.
@@ -279,7 +332,7 @@ public class Application {
 
             GetReferenceProfileRequest req = new GetReferenceProfileRequest("model-123", "org-123", "ref-xxy");            
 
-            GetReferenceProfileResponse res = sdk.datasetProfile.getReferenceProfile(req, new GetReferenceProfileSecurity("fuga") {{
+            GetReferenceProfileResponse res = sdk.datasetProfile.getReferenceProfile(req, new GetReferenceProfileSecurity("in") {{
                 apiKeyAuth = "";
             }});
 
@@ -331,12 +384,12 @@ public class Application {
 
             HideSegmentsRequest req = new HideSegmentsRequest(                new SegmentsListRequest() {{
                                 segments = new String[]{{
-                                    add("corporis"),
                                     add("iste"),
+                                    add("iure"),
                                 }};
                             }};, "model-123", "org-123");            
 
-            HideSegmentsResponse res = sdk.datasetProfile.hideSegments(req, new HideSegmentsSecurity("iure") {{
+            HideSegmentsResponse res = sdk.datasetProfile.hideSegments(req, new HideSegmentsSecurity("saepe") {{
                 apiKeyAuth = "";
             }});
 
@@ -361,6 +414,57 @@ public class Application {
 ### Response
 
 **[ai.whylabs.WhyLabs.models.operations.HideSegmentsResponse](../../models/operations/HideSegmentsResponse.md)**
+
+
+## listProfileTraces
+
+Returns a list of profile traces.
+
+        
+
+### Example Usage
+
+```java
+package hello.world;
+
+import ai.whylabs.WhyLabs.Songbird;
+import ai.whylabs.WhyLabs.models.operations.ListProfileTracesRequest;
+import ai.whylabs.WhyLabs.models.operations.ListProfileTracesResponse;
+import ai.whylabs.WhyLabs.models.operations.ListProfileTracesSecurity;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            Songbird sdk = Songbird.builder()
+                .build();
+
+            ListProfileTracesRequest req = new ListProfileTracesRequest("model-123", 1577836800000L, "org-123", 1893456000000L);            
+
+            ListProfileTracesResponse res = sdk.datasetProfile.listProfileTraces(req, new ListProfileTracesSecurity("quidem") {{
+                apiKeyAuth = "";
+            }});
+
+            if (res.statusCode == 200) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                              | [ai.whylabs.WhyLabs.models.operations.ListProfileTracesRequest](../../models/operations/ListProfileTracesRequest.md)   | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
+| `security`                                                                                                             | [ai.whylabs.WhyLabs.models.operations.ListProfileTracesSecurity](../../models/operations/ListProfileTracesSecurity.md) | :heavy_check_mark:                                                                                                     | The security requirements to use for the request.                                                                      |
+
+
+### Response
+
+**[ai.whylabs.WhyLabs.models.operations.ListProfileTracesResponse](../../models/operations/ListProfileTracesResponse.md)**
 
 
 ## listReferenceProfiles
@@ -390,7 +494,7 @@ public class Application {
                 toEpoch = 1893456000000L;
             }};            
 
-            ListReferenceProfilesResponse res = sdk.datasetProfile.listReferenceProfiles(req, new ListReferenceProfilesSecurity("saepe") {{
+            ListReferenceProfilesResponse res = sdk.datasetProfile.listReferenceProfiles(req, new ListReferenceProfilesSecurity("architecto") {{
                 apiKeyAuth = "";
             }});
 
@@ -441,7 +545,7 @@ public class Application {
 
             ListSegmentsRequest req = new ListSegmentsRequest("model-123", "org-123");            
 
-            ListSegmentsResponse res = sdk.datasetProfile.listSegments(req, new ListSegmentsSecurity("quidem") {{
+            ListSegmentsResponse res = sdk.datasetProfile.listSegments(req, new ListSegmentsSecurity("ipsa") {{
                 apiKeyAuth = "";
             }});
 
