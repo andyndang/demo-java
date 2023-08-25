@@ -5,6 +5,7 @@ lib/src/main/java/ai/whylabs/WhyLabs/ApiKey.java
 lib/src/main/java/ai/whylabs/WhyLabs/Databricks.java
 lib/src/main/java/ai/whylabs/WhyLabs/DatasetMetadata.java
 lib/src/main/java/ai/whylabs/WhyLabs/DatasetProfile.java
+lib/src/main/java/ai/whylabs/WhyLabs/DebugEvents.java
 lib/src/main/java/ai/whylabs/WhyLabs/FeatureWeights.java
 lib/src/main/java/ai/whylabs/WhyLabs/FeatureFlags.java
 lib/src/main/java/ai/whylabs/WhyLabs/Internal.java
@@ -146,6 +147,9 @@ lib/src/main/java/ai/whylabs/WhyLabs/models/operations/ListReferenceProfilesResp
 lib/src/main/java/ai/whylabs/WhyLabs/models/operations/ListSegmentsSecurity.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/operations/ListSegmentsRequest.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/operations/ListSegmentsResponse.java
+lib/src/main/java/ai/whylabs/WhyLabs/models/operations/LogDebugEventSecurity.java
+lib/src/main/java/ai/whylabs/WhyLabs/models/operations/LogDebugEventRequest.java
+lib/src/main/java/ai/whylabs/WhyLabs/models/operations/LogDebugEventResponse.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/operations/GetColumnWeightsSecurity.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/operations/GetColumnWeightsRequest.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/operations/GetColumnWeightsResponse.java
@@ -447,10 +451,12 @@ lib/src/main/java/ai/whylabs/WhyLabs/models/shared/Segment.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/SegmentTag.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/DeleteAnalyzerResultsResponse.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/DeleteDatasetProfilesResponse.java
+lib/src/main/java/ai/whylabs/WhyLabs/models/shared/ProfileTracesResponse.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/ProfileTrace.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/ReferenceProfileItemResponse.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/SegmentsListRequest.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/SegmentListResponse.java
+lib/src/main/java/ai/whylabs/WhyLabs/models/shared/DebugEvent.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/EntityWeightRecord.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/SegmentWeight.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/EntityWeightRecordMetadata.java
@@ -528,6 +534,7 @@ docs/sdks/apikey/README.md
 docs/sdks/databricks/README.md
 docs/sdks/datasetmetadata/README.md
 docs/sdks/datasetprofile/README.md
+docs/sdks/debugevents/README.md
 docs/sdks/featureweights/README.md
 docs/sdks/featureflags/README.md
 docs/sdks/internal/README.md
@@ -640,6 +647,9 @@ docs/models/operations/ListReferenceProfilesResponse.md
 docs/models/operations/ListSegmentsSecurity.md
 docs/models/operations/ListSegmentsRequest.md
 docs/models/operations/ListSegmentsResponse.md
+docs/models/operations/LogDebugEventSecurity.md
+docs/models/operations/LogDebugEventRequest.md
+docs/models/operations/LogDebugEventResponse.md
 docs/models/operations/GetColumnWeightsSecurity.md
 docs/models/operations/GetColumnWeightsRequest.md
 docs/models/operations/GetColumnWeightsResponse.md
@@ -941,10 +951,12 @@ docs/models/shared/Segment.md
 docs/models/shared/SegmentTag.md
 docs/models/shared/DeleteAnalyzerResultsResponse.md
 docs/models/shared/DeleteDatasetProfilesResponse.md
+docs/models/shared/ProfileTracesResponse.md
 docs/models/shared/ProfileTrace.md
 docs/models/shared/ReferenceProfileItemResponse.md
 docs/models/shared/SegmentsListRequest.md
 docs/models/shared/SegmentListResponse.md
+docs/models/shared/DebugEvent.md
 docs/models/shared/EntityWeightRecord.md
 docs/models/shared/SegmentWeight.md
 docs/models/shared/EntityWeightRecordMetadata.md

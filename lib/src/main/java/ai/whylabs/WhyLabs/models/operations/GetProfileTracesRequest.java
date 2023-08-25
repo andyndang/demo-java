@@ -17,6 +17,22 @@ public class GetProfileTracesRequest {
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+
+    public GetProfileTracesRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+
+    public GetProfileTracesRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org_id")
     public String orgId;
 

@@ -279,7 +279,10 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            GetProfileTracesRequest req = new GetProfileTracesRequest("model-123", "org-123", "a756f8bb-de30-48a2-be41-178ae6af7100");            
+            GetProfileTracesRequest req = new GetProfileTracesRequest("model-123", "org-123", "a756f8bb-de30-48a2-be41-178ae6af7100") {{
+                limit = 50;
+                offset = 0;
+            }};            
 
             GetProfileTracesResponse res = sdk.datasetProfile.getProfileTraces(req, new GetProfileTracesSecurity("fuga") {{
                 apiKeyAuth = "";
@@ -438,7 +441,10 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            ListProfileTracesRequest req = new ListProfileTracesRequest("model-123", 1577836800000L, "org-123", 1893456000000L);            
+            ListProfileTracesRequest req = new ListProfileTracesRequest("model-123", 1577836800000L, "org-123", 1893456000000L) {{
+                limit = 50;
+                offset = 0;
+            }};            
 
             ListProfileTracesResponse res = sdk.datasetProfile.listProfileTraces(req, new ListProfileTracesSecurity("quidem") {{
                 apiKeyAuth = "";

@@ -22,7 +22,7 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            ai.whylabs.WhyLabs.models.. req = "asperiores"            
+            ai.whylabs.WhyLabs.models.. req = "optio"            
 
             StripePaymentEndpointResponse res = sdk.payment.stripePaymentEndpoint(req);
 

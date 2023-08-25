@@ -21,10 +21,10 @@ public class ListProfileTracesResponse {
      * The metadata for the summarized dataset profile including paths to JSON and protobuf data
      */
     
-    public ai.whylabs.WhyLabs.models.shared.ProfileTrace[] profileTraces;
+    public ai.whylabs.WhyLabs.models.shared.ProfileTracesResponse profileTracesResponse;
 
-    public ListProfileTracesResponse withProfileTraces(ai.whylabs.WhyLabs.models.shared.ProfileTrace[] profileTraces) {
-        this.profileTraces = profileTraces;
+    public ListProfileTracesResponse withProfileTracesResponse(ai.whylabs.WhyLabs.models.shared.ProfileTracesResponse profileTracesResponse) {
+        this.profileTracesResponse = profileTracesResponse;
         return this;
     }
     

@@ -29,19 +29,17 @@ public class Application {
 
             GetProfileObservatoryLinkRequest req = new GetProfileObservatoryLinkRequest(                new GetProfileObservatoryLinkRequest() {{
                                 batchProfileTimestamps = new Long[]{{
-                                    add(135474L),
-                                    add(102863L),
-                                    add(298282L),
-                                    add(92373L),
+                                    add(968962L),
+                                    add(652103L),
+                                    add(320997L),
                                 }};
                                 referenceProfileIds = new String[]{{
-                                    add("ullam"),
-                                    add("provident"),
-                                    add("quos"),
+                                    add("dolor"),
+                                    add("necessitatibus"),
                                 }};
-                            }};, "sint", "accusantium");            
+                            }};, "odit", "nemo");            
 
-            GetProfileObservatoryLinkResponse res = sdk.log.getProfileObservatoryLink(req, new GetProfileObservatoryLinkSecurity("mollitia") {{
+            GetProfileObservatoryLinkResponse res = sdk.log.getProfileObservatoryLink(req, new GetProfileObservatoryLinkSecurity("quasi") {{
                 apiKeyAuth = "";
             }});
 
@@ -91,24 +89,28 @@ public class Application {
                 .build();
 
             LogAsyncRequest req = new LogAsyncRequest(                new LogAsyncRequest() {{
-                                datasetTimestamp = 968962L;
+                                datasetTimestamp = 435865L;
                                 segmentTags = new ai.whylabs.WhyLabs.models.shared.SegmentTag[]{{
                                     add(new SegmentTag() {{
-                                        key = "ad";
-                                        value = "eum";
+                                        key = "debitis";
+                                        value = "eius";
                                     }}),
                                     add(new SegmentTag() {{
-                                        key = "dolor";
-                                        value = "necessitatibus";
+                                        key = "maxime";
+                                        value = "deleniti";
                                     }}),
                                     add(new SegmentTag() {{
-                                        key = "odit";
-                                        value = "nemo";
+                                        key = "facilis";
+                                        value = "in";
+                                    }}),
+                                    add(new SegmentTag() {{
+                                        key = "architecto";
+                                        value = "architecto";
                                     }}),
                                 }};
                             }};, "model-123", "org-123");            
 
-            LogAsyncResponse res = sdk.log.logAsync(req, new LogAsyncSecurity("quasi") {{
+            LogAsyncResponse res = sdk.log.logAsync(req, new LogAsyncSecurity("repudiandae") {{
                 apiKeyAuth = "";
             }});
 
@@ -157,11 +159,11 @@ public class Application {
                 .build();
 
             LogReferenceRequest req = new LogReferenceRequest(                new LogReferenceRequest() {{
-                                alias = "iure";
-                                datasetTimestamp = 984043L;
+                                alias = "ullam";
+                                datasetTimestamp = 714242L;
                             }};, "model-123", "org-123");            
 
-            LogReferenceResponse res = sdk.log.logReference(req, new LogReferenceSecurity("debitis") {{
+            LogReferenceResponse res = sdk.log.logReference(req, new LogReferenceSecurity("nihil") {{
                 apiKeyAuth = "";
             }});
 

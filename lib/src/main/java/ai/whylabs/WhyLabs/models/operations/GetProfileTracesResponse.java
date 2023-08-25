@@ -21,10 +21,10 @@ public class GetProfileTracesResponse {
      * GetProfileTraces default response
      */
     
-    public ai.whylabs.WhyLabs.models.shared.ProfileTrace[] profileTraces;
+    public ai.whylabs.WhyLabs.models.shared.ProfileTracesResponse profileTracesResponse;
 
-    public GetProfileTracesResponse withProfileTraces(ai.whylabs.WhyLabs.models.shared.ProfileTrace[] profileTraces) {
-        this.profileTraces = profileTraces;
+    public GetProfileTracesResponse withProfileTracesResponse(ai.whylabs.WhyLabs.models.shared.ProfileTracesResponse profileTracesResponse) {
+        this.profileTracesResponse = profileTracesResponse;
         return this;
     }
     

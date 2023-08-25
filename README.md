@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'ai.whylabs.WhyLabs:Songbird:1.22.4'
+implementation 'ai.whylabs.WhyLabs:Songbird:1.22.5'
 ```
 <!-- End SDK Installation -->
 
@@ -105,6 +105,10 @@ public class Application {
 * [listProfileTraces](docs/sdks/datasetprofile/README.md#listprofiletraces) - Returns a list for profile traces
 * [listReferenceProfiles](docs/sdks/datasetprofile/README.md#listreferenceprofiles) - Returns a list for reference profiles
 * [listSegments](docs/sdks/datasetprofile/README.md#listsegments) - Returns a list of segments
+
+### [debugEvents](docs/sdks/debugevents/README.md)
+
+* [logDebugEvent](docs/sdks/debugevents/README.md#logdebugevent) - Log a debug event
 
 ### [featureWeights](docs/sdks/featureweights/README.md)
 

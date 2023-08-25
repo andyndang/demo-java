@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * ProfileTrace - A single reference item response.
+ * ProfileTrace - A single profile trace item
  */
 
 public class ProfileTrace {

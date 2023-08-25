@@ -24,6 +24,7 @@ public class Songbird {
     public Databricks databricks;
     public DatasetMetadata datasetMetadata;
     public DatasetProfile datasetProfile;
+    public DebugEvents debugEvents;
     public FeatureWeights featureWeights;
     public FeatureFlags featureFlags;
     public Internal internal;
@@ -142,6 +143,8 @@ public class Songbird {
 		this.datasetMetadata = new DatasetMetadata(this.sdkConfiguration);
 		
 		this.datasetProfile = new DatasetProfile(this.sdkConfiguration);
+		
+		this.debugEvents = new DebugEvents(this.sdkConfiguration);
 		
 		this.featureWeights = new FeatureWeights(this.sdkConfiguration);
 		
