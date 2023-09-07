@@ -36,12 +36,12 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.AddMembershipRequest req = new AddMembershipRequest("repellat", "quibusdam", Role.ADMIN) {{
-                createdBy = "saepe";
+            ai.whylabs.WhyLabs.models.shared.AddMembershipRequest req = new AddMembershipRequest("vel", "natus", Role.MEMBER) {{
+                createdBy = "molestiae";
                 default_ = false;
             }};            
 
-            CreateMembershipResponse res = sdk.membership.createMembership(req, new CreateMembershipSecurity("pariatur") {{
+            CreateMembershipResponse res = sdk.membership.createMembership(req, new CreateMembershipSecurity("perferendis") {{
                 apiKeyAuth = "";
             }});
 
@@ -89,11 +89,11 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            CreateOrganizationMembershipRequest req = new CreateOrganizationMembershipRequest("user@whylabs.ai", "org-123", Role.ADMIN) {{
+            CreateOrganizationMembershipRequest req = new CreateOrganizationMembershipRequest("user@whylabs.ai", "org-123", Role.MEMBER) {{
                 setDefault = false;
             }};            
 
-            CreateOrganizationMembershipResponse res = sdk.membership.createOrganizationMembership(req, new CreateOrganizationMembershipSecurity("consequuntur") {{
+            CreateOrganizationMembershipResponse res = sdk.membership.createOrganizationMembership(req, new CreateOrganizationMembershipSecurity("magnam") {{
                 apiKeyAuth = "";
             }});
 
@@ -140,9 +140,9 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            GetDefaultMembershipForEmailRequest req = new GetDefaultMembershipForEmailRequest("praesentium");            
+            GetDefaultMembershipForEmailRequest req = new GetDefaultMembershipForEmailRequest("distinctio");            
 
-            GetDefaultMembershipForEmailResponse res = sdk.membership.getDefaultMembershipForEmail(req, new GetDefaultMembershipForEmailSecurity("natus") {{
+            GetDefaultMembershipForEmailResponse res = sdk.membership.getDefaultMembershipForEmail(req, new GetDefaultMembershipForEmailSecurity("id") {{
                 apiKeyAuth = "";
             }});
 
@@ -189,9 +189,9 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            GetMembershipsRequest req = new GetMembershipsRequest("magni");            
+            GetMembershipsRequest req = new GetMembershipsRequest("labore");            
 
-            GetMembershipsResponse res = sdk.membership.getMemberships(req, new GetMembershipsSecurity("sunt") {{
+            GetMembershipsResponse res = sdk.membership.getMemberships(req, new GetMembershipsSecurity("labore") {{
                 apiKeyAuth = "";
             }});
 
@@ -238,9 +238,9 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            GetMembershipsByEmailRequest req = new GetMembershipsByEmailRequest("quo");            
+            GetMembershipsByEmailRequest req = new GetMembershipsByEmailRequest("suscipit");            
 
-            GetMembershipsByEmailResponse res = sdk.membership.getMembershipsByEmail(req, new GetMembershipsByEmailSecurity("illum") {{
+            GetMembershipsByEmailResponse res = sdk.membership.getMembershipsByEmail(req, new GetMembershipsByEmailSecurity("natus") {{
                 apiKeyAuth = "";
             }});
 
@@ -287,9 +287,9 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            GetMembershipsByOrgRequest req = new GetMembershipsByOrgRequest("pariatur");            
+            GetMembershipsByOrgRequest req = new GetMembershipsByOrgRequest("nobis");            
 
-            GetMembershipsByOrgResponse res = sdk.membership.getMembershipsByOrg(req, new GetMembershipsByOrgSecurity("maxime") {{
+            GetMembershipsByOrgResponse res = sdk.membership.getMembershipsByOrg(req, new GetMembershipsByOrgSecurity("eum") {{
                 apiKeyAuth = "";
             }});
 
@@ -338,7 +338,7 @@ public class Application {
 
             ListOrganizationMembershipsRequest req = new ListOrganizationMembershipsRequest("org-123");            
 
-            ListOrganizationMembershipsResponse res = sdk.membership.listOrganizationMemberships(req, new ListOrganizationMembershipsSecurity("ea") {{
+            ListOrganizationMembershipsResponse res = sdk.membership.listOrganizationMemberships(req, new ListOrganizationMembershipsSecurity("vero") {{
                 apiKeyAuth = "";
             }});
 
@@ -385,9 +385,9 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.RemoveMembershipRequest req = new RemoveMembershipRequest("excepturi", "odit");            
+            ai.whylabs.WhyLabs.models.shared.RemoveMembershipRequest req = new RemoveMembershipRequest("aspernatur", "architecto");            
 
-            RemoveMembershipByEmailResponse res = sdk.membership.removeMembershipByEmail(req, new RemoveMembershipByEmailSecurity("ea") {{
+            RemoveMembershipByEmailResponse res = sdk.membership.removeMembershipByEmail(req, new RemoveMembershipByEmailSecurity("magnam") {{
                 apiKeyAuth = "";
             }});
 
@@ -436,7 +436,7 @@ public class Application {
 
             RemoveOrganizationMembershipRequest req = new RemoveOrganizationMembershipRequest("user@whylabs.ai", "org-123");            
 
-            RemoveOrganizationMembershipResponse res = sdk.membership.removeOrganizationMembership(req, new RemoveOrganizationMembershipSecurity("accusantium") {{
+            RemoveOrganizationMembershipResponse res = sdk.membership.removeOrganizationMembership(req, new RemoveOrganizationMembershipSecurity("et") {{
                 apiKeyAuth = "";
             }});
 
@@ -483,9 +483,9 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.SetDefaultMembershipRequest req = new SetDefaultMembershipRequest("ab", "maiores");            
+            ai.whylabs.WhyLabs.models.shared.SetDefaultMembershipRequest req = new SetDefaultMembershipRequest("excepturi", "ullam");            
 
-            SetDefaultMembershipResponse res = sdk.membership.setDefaultMembership(req, new SetDefaultMembershipSecurity("quidem") {{
+            SetDefaultMembershipResponse res = sdk.membership.setDefaultMembership(req, new SetDefaultMembershipSecurity("provident") {{
                 apiKeyAuth = "";
             }});
 
@@ -533,9 +533,9 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.UpdateMembershipRequest req = new UpdateMembershipRequest("ipsam", "voluptate", Role.MEMBER);            
+            ai.whylabs.WhyLabs.models.shared.UpdateMembershipRequest req = new UpdateMembershipRequest("quos", "sint", Role.ADMIN);            
 
-            UpdateMembershipByEmailResponse res = sdk.membership.updateMembershipByEmail(req, new UpdateMembershipByEmailSecurity("nam") {{
+            UpdateMembershipByEmailResponse res = sdk.membership.updateMembershipByEmail(req, new UpdateMembershipByEmailSecurity("mollitia") {{
                 apiKeyAuth = "";
             }});
 
@@ -583,9 +583,9 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            UpdateOrganizationMembershipRequest req = new UpdateOrganizationMembershipRequest("user@whylabs.ai", "org-123", Role.ADMIN);            
+            UpdateOrganizationMembershipRequest req = new UpdateOrganizationMembershipRequest("user@whylabs.ai", "org-123", Role.VIEWER);            
 
-            UpdateOrganizationMembershipResponse res = sdk.membership.updateOrganizationMembership(req, new UpdateOrganizationMembershipSecurity("pariatur") {{
+            UpdateOrganizationMembershipResponse res = sdk.membership.updateOrganizationMembership(req, new UpdateOrganizationMembershipSecurity("mollitia") {{
                 apiKeyAuth = "";
             }});
 

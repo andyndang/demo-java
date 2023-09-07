@@ -322,6 +322,9 @@ lib/src/main/java/ai/whylabs/WhyLabs/models/operations/GetMonitorResponse.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/operations/GetMonitorConfigV3Security.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/operations/GetMonitorConfigV3Request.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/operations/GetMonitorConfigV3Response.java
+lib/src/main/java/ai/whylabs/WhyLabs/models/operations/ListConstraintsSecurity.java
+lib/src/main/java/ai/whylabs/WhyLabs/models/operations/ListConstraintsRequest.java
+lib/src/main/java/ai/whylabs/WhyLabs/models/operations/ListConstraintsResponse.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/operations/PatchMonitorConfigV3Security.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/operations/PatchMonitorConfigV3Request.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/operations/PatchMonitorConfigV3Response.java
@@ -822,6 +825,9 @@ docs/models/operations/GetMonitorResponse.md
 docs/models/operations/GetMonitorConfigV3Security.md
 docs/models/operations/GetMonitorConfigV3Request.md
 docs/models/operations/GetMonitorConfigV3Response.md
+docs/models/operations/ListConstraintsSecurity.md
+docs/models/operations/ListConstraintsRequest.md
+docs/models/operations/ListConstraintsResponse.md
 docs/models/operations/PatchMonitorConfigV3Security.md
 docs/models/operations/PatchMonitorConfigV3Request.md
 docs/models/operations/PatchMonitorConfigV3Response.md

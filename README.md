@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'ai.whylabs.WhyLabs:Songbird:1.25.1'
+implementation 'ai.whylabs.WhyLabs:Songbird:1.25.2'
 ```
 <!-- End SDK Installation -->
 
@@ -222,6 +222,7 @@ public class Application {
 * [getMonitor](docs/sdks/monitor/README.md#getmonitor) - Get the monitor config for a given dataset.
 * [getMonitorConfigV3](docs/sdks/monitor/README.md#getmonitorconfigv3) - Get the monitor config document for a given dataset.
 * [getMonitorConfigV3Version](docs/sdks/monitor/README.md#getmonitorconfigv3version) - Get the monitor config document version for a given dataset.
+* [listConstraints](docs/sdks/monitor/README.md#listconstraints) - List the constraints for a given dataset.
 * [listMonitorConfigV3Versions](docs/sdks/monitor/README.md#listmonitorconfigv3versions) - List the monitor config document versions for a given dataset.
 * [patchMonitorConfigV3](docs/sdks/monitor/README.md#patchmonitorconfigv3) - Patch an updated monitor config document for a given dataset.
 * [putAnalyzer](docs/sdks/monitor/README.md#putanalyzer) - Save the analyzer config for a given dataset.

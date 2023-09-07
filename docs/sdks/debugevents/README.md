@@ -29,34 +29,24 @@ public class Application {
                 .build();
 
             LogDebugEventRequest req = new LogDebugEventRequest(                new DebugEvent() {{
-                                content = "reiciendis";
-                                creationTimestamp = 666767L;
-                                datasetTimestamp = 653140L;
+                                content = "ad";
+                                creationTimestamp = 617636L;
+                                datasetTimestamp = 149675L;
                                 segment = new Segment() {{
                                     tags = new ai.whylabs.WhyLabs.models.shared.SegmentTag[]{{
                                         add(new SegmentTag() {{
-                                            key = "dolores";
-                                            value = "dolorem";
-                                        }}),
-                                        add(new SegmentTag() {{
-                                            key = "corporis";
-                                            value = "explicabo";
-                                        }}),
-                                        add(new SegmentTag() {{
-                                            key = "nobis";
-                                            value = "enim";
+                                            key = "iste";
+                                            value = "dolor";
                                         }}),
                                     }};
                                 }};;
                                 tags = new String[]{{
-                                    add("nemo"),
-                                    add("minima"),
-                                    add("excepturi"),
+                                    add("natus"),
                                 }};
-                                traceId = "accusantium";
+                                traceId = "laboriosam";
                             }};, "model-123", "org-123");            
 
-            LogDebugEventResponse res = sdk.debugEvents.logDebugEvent(req, new LogDebugEventSecurity("iure") {{
+            LogDebugEventResponse res = sdk.debugEvents.logDebugEvent(req, new LogDebugEventSecurity("hic") {{
                 apiKeyAuth = "";
             }});
 

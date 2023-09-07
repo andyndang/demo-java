@@ -389,13 +389,12 @@ public class Application {
                 .build();
 
             PatchOrganizationMembershipsRequest req = new PatchOrganizationMembershipsRequest(                new PatchAccountMembershipsRequest(                new String[]{{
-                                                add("delectus"),
+                                                add("ipsa"),
                                             }},                 new String[]{{
-                                                add("suscipit"),
-                                                add("molestiae"),
-                                            }});, "org-123", "org-123", Role.VIEWER);            
+                                                add("delectus"),
+                                            }});, "org-123", "org-123", Role.ADMIN);            
 
-            PatchOrganizationMembershipsResponse res = sdk.account.patchOrganizationMemberships(req, new PatchOrganizationMembershipsSecurity("placeat") {{
+            PatchOrganizationMembershipsResponse res = sdk.account.patchOrganizationMemberships(req, new PatchOrganizationMembershipsSecurity("suscipit") {{
                 apiKeyAuth = "";
             }});
 
@@ -445,12 +444,10 @@ public class Application {
                 .build();
 
             PutOrganizationMembershipsRequest req = new PutOrganizationMembershipsRequest(                new PutAccountMembershipsRequest(                new String[]{{
-                                                add("iusto"),
-                                                add("excepturi"),
-                                                add("nisi"),
+                                                add("molestiae"),
                                             }});, "org-123", "org-123", Role.VIEWER);            
 
-            PutOrganizationMembershipsResponse res = sdk.account.putOrganizationMemberships(req, new PutOrganizationMembershipsSecurity("temporibus") {{
+            PutOrganizationMembershipsResponse res = sdk.account.putOrganizationMemberships(req, new PutOrganizationMembershipsSecurity("placeat") {{
                 apiKeyAuth = "";
             }});
 
@@ -500,11 +497,11 @@ public class Application {
 
             UpdateAccountUserRequest req = new UpdateAccountUserRequest(                new UpdateAccountUserRequest() {{
                                 active = false;
-                                externalId = "ab";
-                                userSchema = "quis";
+                                externalId = "voluptatum";
+                                userSchema = "iusto";
                             }};, "org-123", "user-123");            
 
-            UpdateAccountUserResponse res = sdk.account.updateAccountUser(req, new UpdateAccountUserSecurity("veritatis") {{
+            UpdateAccountUserResponse res = sdk.account.updateAccountUser(req, new UpdateAccountUserSecurity("excepturi") {{
                 apiKeyAuth = "";
             }});
 

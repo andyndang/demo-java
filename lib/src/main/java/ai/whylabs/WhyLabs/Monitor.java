@@ -270,6 +270,47 @@ public class Monitor {
     }
 
     /**
+     * List the constraints for a given dataset.
+     * List the constraints for a given dataset.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public ai.whylabs.WhyLabs.models.operations.ListConstraintsResponse listConstraints(ai.whylabs.WhyLabs.models.operations.ListConstraintsRequest request, ai.whylabs.WhyLabs.models.operations.ListConstraintsSecurity security) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.ListConstraintsRequest.class, baseUrl, "/v0/organizations/{org_id}/models/{dataset_id}/constraints", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
+        
+        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        ai.whylabs.WhyLabs.models.operations.ListConstraintsResponse res = new ai.whylabs.WhyLabs.models.operations.ListConstraintsResponse(contentType, httpRes.statusCode()) {{
+            listConstraintsDefaultApplicationJSONStrings = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (true) {
+            if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                String[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), String[].class);
+                res.listConstraintsDefaultApplicationJSONStrings = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
      * List the monitor config document versions for a given dataset.
      * List the monitor config document versions for a given dataset.
      * @param request the request object containing all of the parameters for the API call

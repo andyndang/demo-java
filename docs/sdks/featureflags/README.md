@@ -24,9 +24,9 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            GetFeatureFlagsRequest req = new GetFeatureFlagsRequest("architecto", "mollitia");            
+            GetFeatureFlagsRequest req = new GetFeatureFlagsRequest("corporis", "iste");            
 
-            GetFeatureFlagsResponse res = sdk.featureFlags.getFeatureFlags(req, new GetFeatureFlagsSecurity("dolorem") {{
+            GetFeatureFlagsResponse res = sdk.featureFlags.getFeatureFlags(req, new GetFeatureFlagsSecurity("iure") {{
                 apiKeyAuth = "";
             }});
 

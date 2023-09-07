@@ -79,13 +79,13 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            CreateAccountUserRequest req = new CreateAccountUserRequest(                new CreateAccountUserRequest("culpa") {{
+            CreateAccountUserRequest req = new CreateAccountUserRequest(                new CreateAccountUserRequest("saepe") {{
                                 active = false;
-                                externalId = "consequuntur";
-                                userSchema = "repellat";
+                                externalId = "quidem";
+                                userSchema = "architecto";
                             }};, "org-123");            
 
-            CreateAccountUserResponse res = sdk.internal.createAccountUser(req, new CreateAccountUserSecurity("mollitia") {{
+            CreateAccountUserResponse res = sdk.internal.createAccountUser(req, new CreateAccountUserSecurity("ipsa") {{
                 apiKeyAuth = "";
             }});
 
@@ -133,12 +133,12 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.AddMembershipRequest req = new AddMembershipRequest("occaecati", "numquam", Role.MEMBER) {{
-                createdBy = "quam";
+            ai.whylabs.WhyLabs.models.shared.AddMembershipRequest req = new AddMembershipRequest("reiciendis", "est", Role.MEMBER) {{
+                createdBy = "laborum";
                 default_ = false;
             }};            
 
-            CreateMembershipResponse res = sdk.internal.createMembership(req, new CreateMembershipSecurity("molestiae") {{
+            CreateMembershipResponse res = sdk.internal.createMembership(req, new CreateMembershipSecurity("dolores") {{
                 apiKeyAuth = "";
             }});
 
@@ -198,7 +198,7 @@ public class Application {
                 subscriptionTier = SubscriptionTier.FREE;
             }};            
 
-            CreateOrganizationResponse res = sdk.internal.createOrganization(req, new CreateOrganizationSecurity("error") {{
+            CreateOrganizationResponse res = sdk.internal.createOrganization(req, new CreateOrganizationSecurity("corporis") {{
                 apiKeyAuth = "";
             }});
 
@@ -245,9 +245,9 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.CreateUserRequest req = new CreateUserRequest("quia");            
+            ai.whylabs.WhyLabs.models.shared.CreateUserRequest req = new CreateUserRequest("explicabo");            
 
-            CreateUserResponse res = sdk.internal.createUser(req, new CreateUserSecurity("quis") {{
+            CreateUserResponse res = sdk.internal.createUser(req, new CreateUserSecurity("nobis") {{
                 apiKeyAuth = "";
             }});
 
@@ -296,7 +296,7 @@ public class Application {
 
             DeleteAccountUserRequest req = new DeleteAccountUserRequest("org-123", "user-123");            
 
-            DeleteAccountUserResponse res = sdk.internal.deleteAccountUser(req, new DeleteAccountUserSecurity("vitae") {{
+            DeleteAccountUserResponse res = sdk.internal.deleteAccountUser(req, new DeleteAccountUserSecurity("enim") {{
                 apiKeyAuth = "";
             }});
 
@@ -343,9 +343,9 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            DeleteOrganizationRequest req = new DeleteOrganizationRequest("laborum");            
+            DeleteOrganizationRequest req = new DeleteOrganizationRequest("omnis");            
 
-            DeleteOrganizationResponse res = sdk.internal.deleteOrganization(req, new DeleteOrganizationSecurity("animi") {{
+            DeleteOrganizationResponse res = sdk.internal.deleteOrganization(req, new DeleteOrganizationSecurity("nemo") {{
                 apiKeyAuth = "";
             }});
 
@@ -395,7 +395,7 @@ public class Application {
 
             GenerateReportRequest req = new GenerateReportRequest(AdminReportType.SESSIONS);            
 
-            GenerateReportResponse res = sdk.internal.generateReport(req, new GenerateReportSecurity("enim") {{
+            GenerateReportResponse res = sdk.internal.generateReport(req, new GenerateReportSecurity("minima") {{
                 apiKeyAuth = "";
             }});
 
@@ -442,9 +442,9 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            GetAWSMarketplaceMetadataRequest req = new GetAWSMarketplaceMetadataRequest("odit");            
+            GetAWSMarketplaceMetadataRequest req = new GetAWSMarketplaceMetadataRequest("excepturi");            
 
-            GetAWSMarketplaceMetadataResponse res = sdk.internal.getAWSMarketplaceMetadata(req, new GetAWSMarketplaceMetadataSecurity("quo") {{
+            GetAWSMarketplaceMetadataResponse res = sdk.internal.getAWSMarketplaceMetadata(req, new GetAWSMarketplaceMetadataSecurity("accusantium") {{
                 apiKeyAuth = "";
             }});
 
@@ -494,11 +494,11 @@ public class Application {
 
             GetAccountMembershipsRequest req = new GetAccountMembershipsRequest("org-123") {{
                 managedOrgId = "org-123";
-                role = Role.ADMIN;
+                role = Role.MEMBER;
                 userId = "user-123";
             }};            
 
-            GetAccountMembershipsResponse res = sdk.internal.getAccountMemberships(req, new GetAccountMembershipsSecurity("tenetur") {{
+            GetAccountMembershipsResponse res = sdk.internal.getAccountMemberships(req, new GetAccountMembershipsSecurity("culpa") {{
                 apiKeyAuth = "";
             }});
 
@@ -547,7 +547,7 @@ public class Application {
 
             GetAccountUserByEmailRequest req = new GetAccountUserByEmailRequest("user@whylabs.ai", "org-123");            
 
-            GetAccountUserByEmailResponse res = sdk.internal.getAccountUserByEmail(req, new GetAccountUserByEmailSecurity("ipsam") {{
+            GetAccountUserByEmailResponse res = sdk.internal.getAccountUserByEmail(req, new GetAccountUserByEmailSecurity("doloribus") {{
                 apiKeyAuth = "";
             }});
 
@@ -596,7 +596,7 @@ public class Application {
 
             GetAccountUserByIdRequest req = new GetAccountUserByIdRequest("org-123", "user-123");            
 
-            GetAccountUserByIdResponse res = sdk.internal.getAccountUserById(req, new GetAccountUserByIdSecurity("id") {{
+            GetAccountUserByIdResponse res = sdk.internal.getAccountUserById(req, new GetAccountUserByIdSecurity("sapiente") {{
                 apiKeyAuth = "";
             }});
 
@@ -645,7 +645,7 @@ public class Application {
 
             GetApiKeyRequest req = new GetApiKeyRequest("fh4dUNV3WQ", "org-123");            
 
-            GetApiKeyResponse res = sdk.internal.getApiKey(req, new GetApiKeySecurity("possimus") {{
+            GetApiKeyResponse res = sdk.internal.getApiKey(req, new GetApiKeySecurity("architecto") {{
                 apiKeyAuth = "";
             }});
 
@@ -693,11 +693,11 @@ public class Application {
                 .build();
 
             ai.whylabs.WhyLabs.models.shared.GetConnectionRequest req = new GetConnectionRequest() {{
-                orgId = "aut";
-                workspaceId = "quasi";
+                orgId = "mollitia";
+                workspaceId = "dolorem";
             }};            
 
-            GetConnectionResponse res = sdk.internal.getConnection(req, new GetConnectionSecurity("error") {{
+            GetConnectionResponse res = sdk.internal.getConnection(req, new GetConnectionSecurity("culpa") {{
                 apiKeyAuth = "";
             }});
 
@@ -744,9 +744,9 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            GetDefaultMembershipForEmailRequest req = new GetDefaultMembershipForEmailRequest("temporibus");            
+            GetDefaultMembershipForEmailRequest req = new GetDefaultMembershipForEmailRequest("consequuntur");            
 
-            GetDefaultMembershipForEmailResponse res = sdk.internal.getDefaultMembershipForEmail(req, new GetDefaultMembershipForEmailSecurity("laborum") {{
+            GetDefaultMembershipForEmailResponse res = sdk.internal.getDefaultMembershipForEmail(req, new GetDefaultMembershipForEmailSecurity("repellat") {{
                 apiKeyAuth = "";
             }});
 
@@ -793,9 +793,9 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            GetFeatureFlagsRequest req = new GetFeatureFlagsRequest("quasi", "reiciendis");            
+            GetFeatureFlagsRequest req = new GetFeatureFlagsRequest("mollitia", "occaecati");            
 
-            GetFeatureFlagsResponse res = sdk.internal.getFeatureFlags(req, new GetFeatureFlagsSecurity("voluptatibus") {{
+            GetFeatureFlagsResponse res = sdk.internal.getFeatureFlags(req, new GetFeatureFlagsSecurity("numquam") {{
                 apiKeyAuth = "";
             }});
 
@@ -842,9 +842,9 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            GetMembershipsRequest req = new GetMembershipsRequest("vero");            
+            GetMembershipsRequest req = new GetMembershipsRequest("commodi");            
 
-            GetMembershipsResponse res = sdk.internal.getMemberships(req, new GetMembershipsSecurity("nihil") {{
+            GetMembershipsResponse res = sdk.internal.getMemberships(req, new GetMembershipsSecurity("quam") {{
                 apiKeyAuth = "";
             }});
 
@@ -891,9 +891,9 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            GetMembershipsByEmailRequest req = new GetMembershipsByEmailRequest("praesentium");            
+            GetMembershipsByEmailRequest req = new GetMembershipsByEmailRequest("molestiae");            
 
-            GetMembershipsByEmailResponse res = sdk.internal.getMembershipsByEmail(req, new GetMembershipsByEmailSecurity("voluptatibus") {{
+            GetMembershipsByEmailResponse res = sdk.internal.getMembershipsByEmail(req, new GetMembershipsByEmailSecurity("velit") {{
                 apiKeyAuth = "";
             }});
 
@@ -940,9 +940,9 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            GetMembershipsByOrgRequest req = new GetMembershipsByOrgRequest("ipsa");            
+            GetMembershipsByOrgRequest req = new GetMembershipsByOrgRequest("error");            
 
-            GetMembershipsByOrgResponse res = sdk.internal.getMembershipsByOrg(req, new GetMembershipsByOrgSecurity("omnis") {{
+            GetMembershipsByOrgResponse res = sdk.internal.getMembershipsByOrg(req, new GetMembershipsByOrgSecurity("quia") {{
                 apiKeyAuth = "";
             }});
 
@@ -991,7 +991,7 @@ public class Application {
 
             GetMonitorConfigV3VersionRequest req = new GetMonitorConfigV3VersionRequest("model-123", "org-123", "4920545486e2a4cdf0f770c09748e663");            
 
-            GetMonitorConfigV3VersionResponse res = sdk.internal.getMonitorConfigV3Version(req, new GetMonitorConfigV3VersionSecurity("voluptate") {{
+            GetMonitorConfigV3VersionResponse res = sdk.internal.getMonitorConfigV3Version(req, new GetMonitorConfigV3VersionSecurity("quis") {{
                 apiKeyAuth = "";
             }});
 
@@ -1038,9 +1038,9 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            GetNotificationSettingsRequest req = new GetNotificationSettingsRequest("cum");            
+            GetNotificationSettingsRequest req = new GetNotificationSettingsRequest("vitae");            
 
-            GetNotificationSettingsResponse res = sdk.internal.getNotificationSettings(req, new GetNotificationSettingsSecurity("perferendis") {{
+            GetNotificationSettingsResponse res = sdk.internal.getNotificationSettings(req, new GetNotificationSettingsSecurity("laborum") {{
                 apiKeyAuth = "";
             }});
 
@@ -1087,9 +1087,9 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            GetOrganizationRequest req = new GetOrganizationRequest("doloremque");            
+            GetOrganizationRequest req = new GetOrganizationRequest("animi");            
 
-            GetOrganizationResponse res = sdk.internal.getOrganization(req, new GetOrganizationSecurity("reprehenderit") {{
+            GetOrganizationResponse res = sdk.internal.getOrganization(req, new GetOrganizationSecurity("enim") {{
                 apiKeyAuth = "";
             }});
 
@@ -1136,9 +1136,9 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            GetUserRequest req = new GetUserRequest("ut");            
+            GetUserRequest req = new GetUserRequest("odit");            
 
-            GetUserResponse res = sdk.internal.getUser(req, new GetUserSecurity("maiores") {{
+            GetUserResponse res = sdk.internal.getUser(req, new GetUserSecurity("quo") {{
                 apiKeyAuth = "";
             }});
 
@@ -1185,9 +1185,9 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            GetUserByEmailRequest req = new GetUserByEmailRequest("dicta");            
+            GetUserByEmailRequest req = new GetUserByEmailRequest("sequi");            
 
-            GetUserByEmailResponse res = sdk.internal.getUserByEmail(req, new GetUserByEmailSecurity("corporis") {{
+            GetUserByEmailResponse res = sdk.internal.getUserByEmail(req, new GetUserByEmailSecurity("tenetur") {{
                 apiKeyAuth = "";
             }});
 
@@ -1239,12 +1239,11 @@ public class Application {
 
             HideSegmentsRequest req = new HideSegmentsRequest(                new SegmentsListRequest() {{
                                 segments = new String[]{{
-                                    add("iusto"),
-                                    add("dicta"),
+                                    add("ipsam"),
                                 }};
                             }};, "model-123", "org-123");            
 
-            HideSegmentsResponse res = sdk.internal.hideSegments(req, new HideSegmentsSecurity("harum") {{
+            HideSegmentsResponse res = sdk.internal.hideSegments(req, new HideSegmentsSecurity("id") {{
                 apiKeyAuth = "";
             }});
 
@@ -1293,7 +1292,7 @@ public class Application {
 
             ListAccountUsersRequest req = new ListAccountUsersRequest("org-123");            
 
-            ListAccountUsersResponse res = sdk.internal.listAccountUsers(req, new ListAccountUsersSecurity("enim") {{
+            ListAccountUsersResponse res = sdk.internal.listAccountUsers(req, new ListAccountUsersSecurity("possimus") {{
                 apiKeyAuth = "";
             }});
 
@@ -1344,7 +1343,7 @@ public class Application {
                 userId = "user-123";
             }};            
 
-            ListApiKeysResponse res = sdk.internal.listApiKeys(req, new ListApiKeysSecurity("accusamus") {{
+            ListApiKeysResponse res = sdk.internal.listApiKeys(req, new ListApiKeysSecurity("aut") {{
                 apiKeyAuth = "";
             }});
 
@@ -1392,11 +1391,11 @@ public class Application {
                 .build();
 
             ai.whylabs.WhyLabs.models.shared.ListJobsRequest req = new ListJobsRequest() {{
-                orgId = "commodi";
-                workspaceId = "repudiandae";
+                orgId = "quasi";
+                workspaceId = "error";
             }};            
 
-            ListJobsResponse res = sdk.internal.listJobs(req, new ListJobsSecurity("quae") {{
+            ListJobsResponse res = sdk.internal.listJobs(req, new ListJobsSecurity("temporibus") {{
                 apiKeyAuth = "";
             }});
 
@@ -1445,7 +1444,7 @@ public class Application {
 
             ListManagedOrganizationsRequest req = new ListManagedOrganizationsRequest("org-123");            
 
-            ListManagedOrganizationsResponse res = sdk.internal.listManagedOrganizations(req, new ListManagedOrganizationsSecurity("ipsum") {{
+            ListManagedOrganizationsResponse res = sdk.internal.listManagedOrganizations(req, new ListManagedOrganizationsSecurity("laborum") {{
                 apiKeyAuth = "";
             }});
 
@@ -1494,7 +1493,7 @@ public class Application {
 
             ListMonitorConfigV3VersionsRequest req = new ListMonitorConfigV3VersionsRequest("model-123", "org-123");            
 
-            ListMonitorConfigV3VersionsResponse res = sdk.internal.listMonitorConfigV3Versions(req, new ListMonitorConfigV3VersionsSecurity("quidem") {{
+            ListMonitorConfigV3VersionsResponse res = sdk.internal.listMonitorConfigV3Versions(req, new ListMonitorConfigV3VersionsSecurity("quasi") {{
                 apiKeyAuth = "";
             }});
 
@@ -1540,7 +1539,7 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            ListOrganizationsResponse res = sdk.internal.listOrganizations(new ListOrganizationsSecurity("molestias") {{
+            ListOrganizationsResponse res = sdk.internal.listOrganizations(new ListOrganizationsSecurity("reiciendis") {{
                 apiKeyAuth = "";
             }});
 
@@ -1590,7 +1589,7 @@ public class Application {
 
             ListSegmentsRequest req = new ListSegmentsRequest("model-123", "org-123");            
 
-            ListSegmentsResponse res = sdk.internal.listSegments(req, new ListSegmentsSecurity("excepturi") {{
+            ListSegmentsResponse res = sdk.internal.listSegments(req, new ListSegmentsSecurity("voluptatibus") {{
                 apiKeyAuth = "";
             }});
 
@@ -1642,7 +1641,7 @@ public class Application {
                 .build();
 
             PartiallyUpdateOrgRequest req = new PartiallyUpdateOrgRequest(                new PartiallyUpdateOrgRequestBody() {{
-                                orgId = "pariatur";
+                                orgId = "vero";
                             }};) {{
                 domain = "acme.ai";
                 name = "ACME, Inc";
@@ -1700,7 +1699,7 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            PartiallyUpdateOrganizationRequest req = new PartiallyUpdateOrganizationRequest("rem") {{
+            PartiallyUpdateOrganizationRequest req = new PartiallyUpdateOrganizationRequest("voluptatibus") {{
                 domain = "acme.ai";
                 emailDomains = "acme.ai,acme.com";
                 name = "ACME, Inc";
@@ -1709,10 +1708,10 @@ public class Application {
                 pagerDutyKey = "abc-def-ghi-jkl";
                 parentOrgId = "abc-def-ghi-jkl";
                 slackWebhook = "https://hooks.slack.com/services/foo/bar";
-                subscriptionTier = SubscriptionTier.SUBSCRIPTION;
+                subscriptionTier = SubscriptionTier.FREE;
             }};            
 
-            PartiallyUpdateOrganizationResponse res = sdk.internal.partiallyUpdateOrganization(req, new PartiallyUpdateOrganizationSecurity("quasi") {{
+            PartiallyUpdateOrganizationResponse res = sdk.internal.partiallyUpdateOrganization(req, new PartiallyUpdateOrganizationSecurity("omnis") {{
                 apiKeyAuth = "";
             }});
 
@@ -1762,16 +1761,12 @@ public class Application {
                 .build();
 
             PatchOrganizationMembershipsRequest req = new PatchOrganizationMembershipsRequest(                new PatchAccountMembershipsRequest(                new String[]{{
-                                                add("sint"),
-                                                add("veritatis"),
-                                                add("itaque"),
-                                                add("incidunt"),
+                                                add("voluptate"),
                                             }},                 new String[]{{
-                                                add("consequatur"),
-                                                add("est"),
-                                            }});, "org-123", "org-123", Role.VIEWER);            
+                                                add("cum"),
+                                            }});, "org-123", "org-123", Role.ADMIN);            
 
-            PatchOrganizationMembershipsResponse res = sdk.internal.patchOrganizationMemberships(req, new PatchOrganizationMembershipsSecurity("explicabo") {{
+            PatchOrganizationMembershipsResponse res = sdk.internal.patchOrganizationMemberships(req, new PatchOrganizationMembershipsSecurity("doloremque") {{
                 apiKeyAuth = "";
             }});
 
@@ -1817,7 +1812,7 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            PostMonitorConfigValidationJobResponse res = sdk.internal.postMonitorConfigValidationJob(new PostMonitorConfigValidationJobSecurity("deserunt") {{
+            PostMonitorConfigValidationJobResponse res = sdk.internal.postMonitorConfigValidationJob(new PostMonitorConfigValidationJobSecurity("reprehenderit") {{
                 apiKeyAuth = "";
             }});
 
@@ -1863,11 +1858,11 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.ProvisionNewMarketplaceUserRequest req = new ProvisionNewMarketplaceUserRequest("distinctio", "quibusdam", "labore", "modi") {{
+            ai.whylabs.WhyLabs.models.shared.ProvisionNewMarketplaceUserRequest req = new ProvisionNewMarketplaceUserRequest("ut", "maiores", "dicta", "corporis") {{
                 expectExisting = false;
             }};            
 
-            ProvisionAWSMarketplaceNewUserResponse res = sdk.internal.provisionAWSMarketplaceNewUser(req, new ProvisionAWSMarketplaceNewUserSecurity("qui") {{
+            ProvisionAWSMarketplaceNewUserResponse res = sdk.internal.provisionAWSMarketplaceNewUser(req, new ProvisionAWSMarketplaceNewUserSecurity("dolore") {{
                 apiKeyAuth = "";
             }});
 
@@ -1914,9 +1909,9 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.ProvisionDatabricksConnectionRequest req = new ProvisionDatabricksConnectionRequest("aliquid", false, "cupiditate");            
+            ai.whylabs.WhyLabs.models.shared.ProvisionDatabricksConnectionRequest req = new ProvisionDatabricksConnectionRequest("iusto", false, "dicta");            
 
-            ProvisionDatabricksConnectionResponse res = sdk.internal.provisionDatabricksConnection(req, new ProvisionDatabricksConnectionSecurity("quos") {{
+            ProvisionDatabricksConnectionResponse res = sdk.internal.provisionDatabricksConnection(req, new ProvisionDatabricksConnectionSecurity("harum") {{
                 apiKeyAuth = "";
             }});
 
@@ -1964,11 +1959,11 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.ProvisionNewUserRequest req = new ProvisionNewUserRequest("perferendis", "magni", "assumenda", SubscriptionTier.PAID) {{
+            ai.whylabs.WhyLabs.models.shared.ProvisionNewUserRequest req = new ProvisionNewUserRequest("enim", "accusamus", "commodi", SubscriptionTier.SUBSCRIPTION) {{
                 expectExisting = false;
             }};            
 
-            ProvisionNewUserResponse res = sdk.internal.provisionNewUser(req, new ProvisionNewUserSecurity("alias") {{
+            ProvisionNewUserResponse res = sdk.internal.provisionNewUser(req, new ProvisionNewUserSecurity("quae") {{
                 apiKeyAuth = "";
             }});
 
@@ -2018,10 +2013,10 @@ public class Application {
                 .build();
 
             PutOrganizationMembershipsRequest req = new PutOrganizationMembershipsRequest(                new PutAccountMembershipsRequest(                new String[]{{
-                                                add("dolorum"),
-                                            }});, "org-123", "org-123", Role.MEMBER);            
+                                                add("ipsum"),
+                                            }});, "org-123", "org-123", Role.VIEWER);            
 
-            PutOrganizationMembershipsResponse res = sdk.internal.putOrganizationMemberships(req, new PutOrganizationMembershipsSecurity("tempora") {{
+            PutOrganizationMembershipsResponse res = sdk.internal.putOrganizationMemberships(req, new PutOrganizationMembershipsSecurity("molestias") {{
                 apiKeyAuth = "";
             }});
 
@@ -2071,16 +2066,14 @@ public class Application {
 
             PutRequestMonitorRunConfigRequest req = new PutRequestMonitorRunConfigRequest(                new PutRequestMonitorRunConfigRequestBody() {{
                                 analyzerIds = new String[]{{
-                                    add("tempore"),
-                                    add("labore"),
-                                    add("delectus"),
+                                    add("excepturi"),
                                 }};
                                 endTimestamp = 1893456000000L;
                                 overwrite = false;
                                 startTimestamp = 1577836800000L;
                             }};, "model-123", "org-123");            
 
-            PutRequestMonitorRunConfigResponse res = sdk.internal.putRequestMonitorRunConfig(req, new PutRequestMonitorRunConfigSecurity("eum") {{
+            PutRequestMonitorRunConfigResponse res = sdk.internal.putRequestMonitorRunConfig(req, new PutRequestMonitorRunConfigSecurity("pariatur") {{
                 apiKeyAuth = "";
             }});
 
@@ -2128,11 +2121,11 @@ public class Application {
                 .build();
 
             ai.whylabs.WhyLabs.models.shared.RefreshConnectionRequest req = new RefreshConnectionRequest() {{
-                orgId = "non";
-                workspaceId = "eligendi";
+                orgId = "modi";
+                workspaceId = "praesentium";
             }};            
 
-            RefreshConnectionResponse res = sdk.internal.refreshConnection(req, new RefreshConnectionSecurity("sint") {{
+            RefreshConnectionResponse res = sdk.internal.refreshConnection(req, new RefreshConnectionSecurity("rem") {{
                 apiKeyAuth = "";
             }});
 
@@ -2179,12 +2172,12 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.RegisterDatabricksConnectionRequest req = new RegisterDatabricksConnectionRequest("aliquid", "provident", "necessitatibus", false, "sint", "officia", 223081, "debitis", "a") {{
+            ai.whylabs.WhyLabs.models.shared.RegisterDatabricksConnectionRequest req = new RegisterDatabricksConnectionRequest("voluptates", "quasi", "repudiandae", false, "sint", "veritatis", 929297, "incidunt", "enim") {{
                 connectionEstablished = false;
                 freeTrial = false;
             }};            
 
-            RegisterDatabricksConnectionResponse res = sdk.internal.registerDatabricksConnection(req, new RegisterDatabricksConnectionSecurity("dolorum") {{
+            RegisterDatabricksConnectionResponse res = sdk.internal.registerDatabricksConnection(req, new RegisterDatabricksConnectionSecurity("consequatur") {{
                 apiKeyAuth = "";
             }});
 
@@ -2231,9 +2224,9 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.RemoveMembershipRequest req = new RemoveMembershipRequest("in", "in");            
+            ai.whylabs.WhyLabs.models.shared.RemoveMembershipRequest req = new RemoveMembershipRequest("est", "quibusdam");            
 
-            RemoveMembershipByEmailResponse res = sdk.internal.removeMembershipByEmail(req, new RemoveMembershipByEmailSecurity("illum") {{
+            RemoveMembershipByEmailResponse res = sdk.internal.removeMembershipByEmail(req, new RemoveMembershipByEmailSecurity("explicabo") {{
                 apiKeyAuth = "";
             }});
 
@@ -2280,12 +2273,12 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.RunJobRequest req = new RunJobRequest(978571L) {{
-                orgId = "rerum";
-                workspaceId = "dicta";
+            ai.whylabs.WhyLabs.models.shared.RunJobRequest req = new RunJobRequest(647174L) {{
+                orgId = "distinctio";
+                workspaceId = "quibusdam";
             }};            
 
-            RunJobResponse res = sdk.internal.runJob(req, new RunJobSecurity("magnam") {{
+            RunJobResponse res = sdk.internal.runJob(req, new RunJobSecurity("labore") {{
                 apiKeyAuth = "";
             }});
 
@@ -2332,9 +2325,9 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.SetDefaultMembershipRequest req = new SetDefaultMembershipRequest("cumque", "facere");            
+            ai.whylabs.WhyLabs.models.shared.SetDefaultMembershipRequest req = new SetDefaultMembershipRequest("modi", "qui");            
 
-            SetDefaultMembershipResponse res = sdk.internal.setDefaultMembership(req, new SetDefaultMembershipSecurity("ea") {{
+            SetDefaultMembershipResponse res = sdk.internal.setDefaultMembership(req, new SetDefaultMembershipSecurity("aliquid") {{
                 apiKeyAuth = "";
             }});
 
@@ -2379,7 +2372,7 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            ai.whylabs.WhyLabs.models.. req = "aliquid"            
+            ai.whylabs.WhyLabs.models.. req = "cupiditate"            
 
             StripePaymentEndpointResponse res = sdk.internal.stripePaymentEndpoint(req);
 
@@ -2428,11 +2421,11 @@ public class Application {
 
             UpdateAccountUserRequest req = new UpdateAccountUserRequest(                new UpdateAccountUserRequest() {{
                                 active = false;
-                                externalId = "laborum";
-                                userSchema = "accusamus";
+                                externalId = "quos";
+                                userSchema = "perferendis";
                             }};, "org-123", "user-123");            
 
-            UpdateAccountUserResponse res = sdk.internal.updateAccountUser(req, new UpdateAccountUserSecurity("non") {{
+            UpdateAccountUserResponse res = sdk.internal.updateAccountUser(req, new UpdateAccountUserSecurity("magni") {{
                 apiKeyAuth = "";
             }});
 
@@ -2484,13 +2477,13 @@ public class Application {
                 changes = new UpdateConnectionChanges() {{
                     connected = false;
                     demo = false;
-                    orgId = "occaecati";
+                    orgId = "assumenda";
                 }};;
-                orgId = "enim";
-                workspaceId = "accusamus";
+                orgId = "ipsam";
+                workspaceId = "alias";
             }};            
 
-            UpdateConnectionResponse res = sdk.internal.updateConnection(req, new UpdateConnectionSecurity("delectus") {{
+            UpdateConnectionResponse res = sdk.internal.updateConnection(req, new UpdateConnectionSecurity("fugit") {{
                 apiKeyAuth = "";
             }});
 
@@ -2538,9 +2531,9 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.UpdateMembershipRequest req = new UpdateMembershipRequest("quidem", "provident", Role.VIEWER);            
+            ai.whylabs.WhyLabs.models.shared.UpdateMembershipRequest req = new UpdateMembershipRequest("dolorum", "excepturi", Role.ADMIN);            
 
-            UpdateMembershipByEmailResponse res = sdk.internal.updateMembershipByEmail(req, new UpdateMembershipByEmailSecurity("id") {{
+            UpdateMembershipByEmailResponse res = sdk.internal.updateMembershipByEmail(req, new UpdateMembershipByEmailSecurity("facilis") {{
                 apiKeyAuth = "";
             }});
 
@@ -2593,26 +2586,26 @@ public class Application {
 
             UpdateNotificationSettingsRequest req = new UpdateNotificationSettingsRequest(                new NotificationSettings() {{
                                 emailSettings = new UberNotificationSchedule(NotificationSqsMessageCadence.WEEKLY, false) {{
-                                    dayOfWeek = NotificationSettingsDay.WEDNESDAY;
-                                    local24HourOfDay = 956084;
-                                    localMinuteOfHour = 230533;
-                                    localTimezone = "deserunt";
-                                }};;
-                                pagerDutySettings = new UberNotificationSchedule(NotificationSqsMessageCadence.DAILY, false) {{
                                     dayOfWeek = NotificationSettingsDay.TUESDAY;
-                                    local24HourOfDay = 618809;
-                                    localMinuteOfHour = 606393;
-                                    localTimezone = "molestiae";
+                                    local24HourOfDay = 962189;
+                                    localMinuteOfHour = 433288;
+                                    localTimezone = "non";
                                 }};;
-                                slackSettings = new UberNotificationSchedule(NotificationSqsMessageCadence.HOURLY, false) {{
-                                    dayOfWeek = NotificationSettingsDay.WEDNESDAY;
-                                    local24HourOfDay = 301575;
-                                    localMinuteOfHour = 716075;
-                                    localTimezone = "id";
+                                pagerDutySettings = new UberNotificationSchedule(NotificationSqsMessageCadence.INDIVIDUAL, false) {{
+                                    dayOfWeek = NotificationSettingsDay.THURSDAY;
+                                    local24HourOfDay = 396098;
+                                    localMinuteOfHour = 592042;
+                                    localTimezone = "necessitatibus";
                                 }};;
-                            }};, "labore");            
+                                slackSettings = new UberNotificationSchedule(NotificationSqsMessageCadence.WEEKLY, false) {{
+                                    dayOfWeek = NotificationSettingsDay.THURSDAY;
+                                    local24HourOfDay = 223081;
+                                    localMinuteOfHour = 891555;
+                                    localTimezone = "a";
+                                }};;
+                            }};, "dolorum");            
 
-            UpdateNotificationSettingsResponse res = sdk.internal.updateNotificationSettings(req, new UpdateNotificationSettingsSecurity("labore") {{
+            UpdateNotificationSettingsResponse res = sdk.internal.updateNotificationSettings(req, new UpdateNotificationSettingsSecurity("in") {{
                 apiKeyAuth = "";
             }});
 
@@ -2664,7 +2657,7 @@ public class Application {
                 .build();
 
             UpdateOrgRequest req = new UpdateOrgRequest(                new UpdateOrgRequestBody() {{
-                                orgId = "suscipit";
+                                orgId = "in";
                             }};, "ACME, Inc") {{
                 domain = "acme.ai";
                 emailDomains = "acme.ai,acme.com";
@@ -2673,10 +2666,10 @@ public class Application {
                 pagerDutyKey = "abc-def-ghi-jkl";
                 parentOrgId = "org-123";
                 slackWebhook = "https://hooks.slack.com/services/foo/bar";
-                subscriptionTier = SubscriptionTier.AWS_MARKETPLACE;
+                subscriptionTier = SubscriptionTier.SUBSCRIPTION;
             }};            
 
-            UpdateOrgResponse res = sdk.internal.updateOrg(req, new UpdateOrgSecurity("nobis") {{
+            UpdateOrgResponse res = sdk.internal.updateOrg(req, new UpdateOrgSecurity("maiores") {{
                 apiKeyAuth = "";
             }});
 
@@ -2724,7 +2717,7 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            UpdateOrganizationRequest req = new UpdateOrganizationRequest("ACME, Inc", "eum") {{
+            UpdateOrganizationRequest req = new UpdateOrganizationRequest("ACME, Inc", "rerum") {{
                 domain = "acme.ai";
                 emailDomains = "acme.ai,acme.com";
                 notificationEmailAddress = "notifications@acme.ai";
@@ -2732,10 +2725,10 @@ public class Application {
                 pagerDutyKey = "abc-def-ghi-jkl";
                 parentOrgId = "org-123";
                 slackWebhook = "https://hooks.slack.com/services/foo/bar";
-                subscriptionTier = SubscriptionTier.SUBSCRIPTION;
+                subscriptionTier = SubscriptionTier.FREE;
             }};            
 
-            UpdateOrganizationResponse res = sdk.internal.updateOrganization(req, new UpdateOrganizationSecurity("aspernatur") {{
+            UpdateOrganizationResponse res = sdk.internal.updateOrganization(req, new UpdateOrganizationSecurity("magnam") {{
                 apiKeyAuth = "";
             }});
 
@@ -2782,11 +2775,11 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.User req = new User("architecto", "magnam") {{
-                preferences = "et";
+            ai.whylabs.WhyLabs.models.shared.User req = new User("cumque", "facere") {{
+                preferences = "ea";
             }};            
 
-            UpdateUserResponse res = sdk.internal.updateUser(req, new UpdateUserSecurity("excepturi") {{
+            UpdateUserResponse res = sdk.internal.updateUser(req, new UpdateUserSecurity("aliquid") {{
                 apiKeyAuth = "";
             }});
 
@@ -2833,9 +2826,9 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            WhyLabsSearchRequest req = new WhyLabsSearchRequest("ullam");            
+            WhyLabsSearchRequest req = new WhyLabsSearchRequest("laborum");            
 
-            WhyLabsSearchResponse res = sdk.internal.whyLabsSearch(req, new WhyLabsSearchSecurity("provident") {{
+            WhyLabsSearchResponse res = sdk.internal.whyLabsSearch(req, new WhyLabsSearchSecurity("accusamus") {{
                 apiKeyAuth = "";
             }});
 
@@ -2884,11 +2877,11 @@ public class Application {
                 .build();
 
             ai.whylabs.WhyLabs.models.shared.SearchIndexRequest req = new SearchIndexRequest() {{
-                orgId = "quos";
+                orgId = "non";
                 type = SearchIndexType.ENTITY_SCHEMA;
             }};            
 
-            WhyLabsSearchIndexingResponse res = sdk.internal.whyLabsSearchIndexing(req, new WhyLabsSearchIndexingSecurity("accusantium") {{
+            WhyLabsSearchIndexingResponse res = sdk.internal.whyLabsSearchIndexing(req, new WhyLabsSearchIndexingSecurity("enim") {{
                 apiKeyAuth = "";
             }});
 

@@ -27,11 +27,11 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.ProvisionNewMarketplaceUserRequest req = new ProvisionNewMarketplaceUserRequest("accusamus", "ad", "saepe", "suscipit") {{
+            ai.whylabs.WhyLabs.models.shared.ProvisionNewMarketplaceUserRequest req = new ProvisionNewMarketplaceUserRequest("provident", "nobis", "libero", "delectus") {{
                 expectExisting = false;
             }};            
 
-            ProvisionAWSMarketplaceNewUserResponse res = sdk.provision.provisionAWSMarketplaceNewUser(req, new ProvisionAWSMarketplaceNewUserSecurity("deserunt") {{
+            ProvisionAWSMarketplaceNewUserResponse res = sdk.provision.provisionAWSMarketplaceNewUser(req, new ProvisionAWSMarketplaceNewUserSecurity("quaerat") {{
                 apiKeyAuth = "";
             }});
 
@@ -78,9 +78,9 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.ProvisionDatabricksConnectionRequest req = new ProvisionDatabricksConnectionRequest("provident", false, "minima");            
+            ai.whylabs.WhyLabs.models.shared.ProvisionDatabricksConnectionRequest req = new ProvisionDatabricksConnectionRequest("quos", false, "aliquid");            
 
-            ProvisionDatabricksConnectionResponse res = sdk.provision.provisionDatabricksConnection(req, new ProvisionDatabricksConnectionSecurity("repellendus") {{
+            ProvisionDatabricksConnectionResponse res = sdk.provision.provisionDatabricksConnection(req, new ProvisionDatabricksConnectionSecurity("dolorem") {{
                 apiKeyAuth = "";
             }});
 
@@ -128,11 +128,11 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.ProvisionNewUserRequest req = new ProvisionNewUserRequest("totam", "similique", "alias", SubscriptionTier.SUBSCRIPTION) {{
+            ai.whylabs.WhyLabs.models.shared.ProvisionNewUserRequest req = new ProvisionNewUserRequest("dolorem", "dolor", "qui", SubscriptionTier.FREE) {{
                 expectExisting = false;
             }};            
 
-            ProvisionNewUserResponse res = sdk.provision.provisionNewUser(req, new ProvisionNewUserSecurity("quaerat") {{
+            ProvisionNewUserResponse res = sdk.provision.provisionNewUser(req, new ProvisionNewUserSecurity("hic") {{
                 apiKeyAuth = "";
             }});
 
@@ -179,12 +179,12 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.RegisterDatabricksConnectionRequest req = new RegisterDatabricksConnectionRequest("tempora", "vel", "quod", false, "officiis", "qui", 679880, "a", "esse") {{
+            ai.whylabs.WhyLabs.models.shared.RegisterDatabricksConnectionRequest req = new RegisterDatabricksConnectionRequest("excepturi", "cum", "voluptate", false, "dignissimos", "reiciendis", 227414, "dolorum", "numquam") {{
                 connectionEstablished = false;
                 freeTrial = false;
             }};            
 
-            RegisterDatabricksConnectionResponse res = sdk.provision.registerDatabricksConnection(req, new RegisterDatabricksConnectionSecurity("harum") {{
+            RegisterDatabricksConnectionResponse res = sdk.provision.registerDatabricksConnection(req, new RegisterDatabricksConnectionSecurity("veritatis") {{
                 apiKeyAuth = "";
             }});
 
