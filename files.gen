@@ -138,9 +138,6 @@ lib/src/main/java/ai/whylabs/WhyLabs/models/operations/GetReferenceProfileRespon
 lib/src/main/java/ai/whylabs/WhyLabs/models/operations/HideSegmentsSecurity.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/operations/HideSegmentsRequest.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/operations/HideSegmentsResponse.java
-lib/src/main/java/ai/whylabs/WhyLabs/models/operations/ListProfileTracesSecurity.java
-lib/src/main/java/ai/whylabs/WhyLabs/models/operations/ListProfileTracesRequest.java
-lib/src/main/java/ai/whylabs/WhyLabs/models/operations/ListProfileTracesResponse.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/operations/ListReferenceProfilesSecurity.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/operations/ListReferenceProfilesRequest.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/operations/ListReferenceProfilesResponse.java
@@ -641,9 +638,6 @@ docs/models/operations/GetReferenceProfileResponse.md
 docs/models/operations/HideSegmentsSecurity.md
 docs/models/operations/HideSegmentsRequest.md
 docs/models/operations/HideSegmentsResponse.md
-docs/models/operations/ListProfileTracesSecurity.md
-docs/models/operations/ListProfileTracesRequest.md
-docs/models/operations/ListProfileTracesResponse.md
 docs/models/operations/ListReferenceProfilesSecurity.md
 docs/models/operations/ListReferenceProfilesRequest.md
 docs/models/operations/ListReferenceProfilesResponse.md

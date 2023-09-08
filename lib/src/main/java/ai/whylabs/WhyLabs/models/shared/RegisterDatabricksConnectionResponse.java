@@ -6,9 +6,6 @@ package ai.whylabs.WhyLabs.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-/**
- * RegisterDatabricksConnectionResponse - RegisterDatabricksConnection default response
- */
 
 public class RegisterDatabricksConnectionResponse {
     @JsonProperty("id")

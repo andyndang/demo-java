@@ -6,9 +6,6 @@ package ai.whylabs.WhyLabs.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-/**
- * GetConnectionResponse - GetConnection default response
- */
 
 public class GetConnectionResponse {
     @JsonProperty("connection")

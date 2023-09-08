@@ -27,7 +27,7 @@ public class Application {
 
             WhyLabsSearchRequest req = new WhyLabsSearchRequest("ipsa");            
 
-            WhyLabsSearchResponse res = sdk.search.whyLabsSearch(req, new WhyLabsSearchSecurity("iure") {{
+            WhyLabsSearchResponse res = sdk.search.whyLabsSearch(req, new WhyLabsSearchSecurity("ipsa") {{
                 apiKeyAuth = "";
             }});
 
@@ -76,11 +76,11 @@ public class Application {
                 .build();
 
             ai.whylabs.WhyLabs.models.shared.SearchIndexRequest req = new SearchIndexRequest() {{
-                orgId = "odio";
+                orgId = "iure";
                 type = SearchIndexType.ACTIONS;
             }};            
 
-            WhyLabsSearchIndexingResponse res = sdk.search.whyLabsSearchIndexing(req, new WhyLabsSearchIndexingSecurity("accusamus") {{
+            WhyLabsSearchIndexingResponse res = sdk.search.whyLabsSearchIndexing(req, new WhyLabsSearchIndexingSecurity("quaerat") {{
                 apiKeyAuth = "";
             }});
 

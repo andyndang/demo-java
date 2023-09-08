@@ -1,7 +1,5 @@
 # RefreshConnectionByOrgIdResponse
 
-RefreshConnection default response
-
 
 ## Fields
 

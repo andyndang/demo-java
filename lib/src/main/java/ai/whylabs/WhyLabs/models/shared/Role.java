@@ -6,9 +6,6 @@ package ai.whylabs.WhyLabs.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 
-/**
- * Role
- */
 public enum Role {
     ADMIN("ADMIN"),
     MEMBER("MEMBER"),

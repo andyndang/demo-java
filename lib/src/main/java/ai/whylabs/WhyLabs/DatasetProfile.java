@@ -352,55 +352,6 @@ public class DatasetProfile {
     }
 
     /**
-     * Returns a list for profile traces
-     * Returns a list of profile traces.
-     * 
-     *         
-     * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public ai.whylabs.WhyLabs.models.operations.ListProfileTracesResponse listProfileTraces(ai.whylabs.WhyLabs.models.operations.ListProfileTracesRequest request, ai.whylabs.WhyLabs.models.operations.ListProfileTracesSecurity security) throws Exception {
-        String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.ListProfileTracesRequest.class, baseUrl, "/v0/organizations/{org_id}/dataset-profiles/models/{dataset_id}/trace", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("GET");
-        req.setURL(url);
-
-        req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
-        java.util.List<NameValuePair> queryParams = ai.whylabs.WhyLabs.utils.Utils.getQueryParams(ai.whylabs.WhyLabs.models.operations.ListProfileTracesRequest.class, request, null);
-        if (queryParams != null) {
-            for (NameValuePair queryParam : queryParams) {
-                req.addQueryParam(queryParam);
-            }
-        }
-        
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.ListProfileTracesResponse res = new ai.whylabs.WhyLabs.models.operations.ListProfileTracesResponse(contentType, httpRes.statusCode()) {{
-            profileTracesResponse = null;
-        }};
-        res.rawResponse = httpRes;
-        
-        if (true) {
-            if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                ai.whylabs.WhyLabs.models.shared.ProfileTracesResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), ai.whylabs.WhyLabs.models.shared.ProfileTracesResponse.class);
-                res.profileTracesResponse = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
      * Returns a list for reference profiles
      * Returns a list of Reference Profiles.
      * 

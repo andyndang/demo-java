@@ -13,9 +13,6 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import java.time.OffsetDateTime;
 
-/**
- * NotificationAction - GetNotificationAction default response
- */
 
 public class NotificationAction {
     @JsonInclude(Include.NON_ABSENT)

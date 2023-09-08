@@ -6,9 +6,6 @@ package ai.whylabs.WhyLabs.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 
-/**
- * ActionType
- */
 public enum ActionType {
     EMAIL("EMAIL"),
     SLACK("SLACK"),

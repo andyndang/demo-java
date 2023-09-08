@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'ai.whylabs.WhyLabs:Songbird:1.25.2'
+implementation 'ai.whylabs.WhyLabs:Songbird:1.25.3'
 ```
 <!-- End SDK Installation -->
 
@@ -102,7 +102,6 @@ public class Application {
 * [getProfileTraces](docs/sdks/datasetprofile/README.md#getprofiletraces) - Returns a list for profile traces matching a trace id
 * [getReferenceProfile](docs/sdks/datasetprofile/README.md#getreferenceprofile) - Returns a single reference profile
 * [hideSegments](docs/sdks/datasetprofile/README.md#hidesegments) - Hides a list of segments
-* [listProfileTraces](docs/sdks/datasetprofile/README.md#listprofiletraces) - Returns a list for profile traces
 * [listReferenceProfiles](docs/sdks/datasetprofile/README.md#listreferenceprofiles) - Returns a list for reference profiles
 * [listSegments](docs/sdks/datasetprofile/README.md#listsegments) - Returns a list of segments
 

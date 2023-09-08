@@ -6,9 +6,6 @@ package ai.whylabs.WhyLabs.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 
-/**
- * TimePeriod - The [TimePeriod] for data aggregation/alerting for a model
- */
 public enum TimePeriod {
     P1_M("P1M"),
     P1_W("P1W"),

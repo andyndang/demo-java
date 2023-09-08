@@ -6,9 +6,6 @@ package ai.whylabs.WhyLabs.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-/**
- * ListJobsResponse - ListJobs default response
- */
 
 public class ListJobsResponse {
     @JsonProperty("jobs")

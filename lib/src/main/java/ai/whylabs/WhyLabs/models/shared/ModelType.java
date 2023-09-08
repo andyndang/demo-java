@@ -6,9 +6,6 @@ package ai.whylabs.WhyLabs.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 
-/**
- * ModelType - The [ModelType] of the dataset
- */
 public enum ModelType {
     CLASSIFICATION("CLASSIFICATION"),
     REGRESSION("REGRESSION"),

@@ -39,7 +39,7 @@ public class Application {
 
             DeleteAnalyzerRequest req = new DeleteAnalyzerRequest("drift-analyzer", "model-123", "org-123");            
 
-            DeleteAnalyzerResponse res = sdk.monitor.deleteAnalyzer(req, new DeleteAnalyzerSecurity("ullam") {{
+            DeleteAnalyzerResponse res = sdk.monitor.deleteAnalyzer(req, new DeleteAnalyzerSecurity("repudiandae") {{
                 apiKeyAuth = "";
             }});
 
@@ -88,7 +88,7 @@ public class Application {
 
             DeleteMonitorRequest req = new DeleteMonitorRequest("model-123", "drift-monitor-123", "org-123");            
 
-            DeleteMonitorResponse res = sdk.monitor.deleteMonitor(req, new DeleteMonitorSecurity("expedita") {{
+            DeleteMonitorResponse res = sdk.monitor.deleteMonitor(req, new DeleteMonitorSecurity("ullam") {{
                 apiKeyAuth = "";
             }});
 
@@ -137,7 +137,7 @@ public class Application {
 
             GetAnalyzerRequest req = new GetAnalyzerRequest("drift-analyzer", "model-123", "org-123");            
 
-            GetAnalyzerResponse res = sdk.monitor.getAnalyzer(req, new GetAnalyzerSecurity("nihil") {{
+            GetAnalyzerResponse res = sdk.monitor.getAnalyzer(req, new GetAnalyzerSecurity("expedita") {{
                 apiKeyAuth = "";
             }});
 
@@ -186,7 +186,7 @@ public class Application {
 
             GetMonitorRequest req = new GetMonitorRequest("model-123", "drift-monitor-123", "org-123");            
 
-            GetMonitorResponse res = sdk.monitor.getMonitor(req, new GetMonitorSecurity("repellat") {{
+            GetMonitorResponse res = sdk.monitor.getMonitor(req, new GetMonitorSecurity("nihil") {{
                 apiKeyAuth = "";
             }});
 
@@ -238,7 +238,7 @@ public class Application {
                 includeEntityWeights = false;
             }};            
 
-            GetMonitorConfigV3Response res = sdk.monitor.getMonitorConfigV3(req, new GetMonitorConfigV3Security("quibusdam") {{
+            GetMonitorConfigV3Response res = sdk.monitor.getMonitorConfigV3(req, new GetMonitorConfigV3Security("repellat") {{
                 apiKeyAuth = "";
             }});
 
@@ -287,7 +287,7 @@ public class Application {
 
             GetMonitorConfigV3VersionRequest req = new GetMonitorConfigV3VersionRequest("model-123", "org-123", "4920545486e2a4cdf0f770c09748e663");            
 
-            GetMonitorConfigV3VersionResponse res = sdk.monitor.getMonitorConfigV3Version(req, new GetMonitorConfigV3VersionSecurity("sed") {{
+            GetMonitorConfigV3VersionResponse res = sdk.monitor.getMonitorConfigV3Version(req, new GetMonitorConfigV3VersionSecurity("quibusdam") {{
                 apiKeyAuth = "";
             }});
 
@@ -336,7 +336,7 @@ public class Application {
 
             ListConstraintsRequest req = new ListConstraintsRequest("model-123", "org-123");            
 
-            ListConstraintsResponse res = sdk.monitor.listConstraints(req, new ListConstraintsSecurity("saepe") {{
+            ListConstraintsResponse res = sdk.monitor.listConstraints(req, new ListConstraintsSecurity("sed") {{
                 apiKeyAuth = "";
             }});
 
@@ -385,7 +385,7 @@ public class Application {
 
             ListMonitorConfigV3VersionsRequest req = new ListMonitorConfigV3VersionsRequest("model-123", "org-123");            
 
-            ListMonitorConfigV3VersionsResponse res = sdk.monitor.listMonitorConfigV3Versions(req, new ListMonitorConfigV3VersionsSecurity("pariatur") {{
+            ListMonitorConfigV3VersionsResponse res = sdk.monitor.listMonitorConfigV3Versions(req, new ListMonitorConfigV3VersionsSecurity("saepe") {{
                 apiKeyAuth = "";
             }});
 
@@ -432,9 +432,9 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            PatchMonitorConfigV3Request req = new PatchMonitorConfigV3Request("accusantium", "model-123", "org-123");            
+            PatchMonitorConfigV3Request req = new PatchMonitorConfigV3Request("pariatur", "model-123", "org-123");            
 
-            PatchMonitorConfigV3Response res = sdk.monitor.patchMonitorConfigV3(req, new PatchMonitorConfigV3Security("consequuntur") {{
+            PatchMonitorConfigV3Response res = sdk.monitor.patchMonitorConfigV3(req, new PatchMonitorConfigV3Security("accusantium") {{
                 apiKeyAuth = "";
             }});
 
@@ -481,9 +481,9 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            PutAnalyzerRequest req = new PutAnalyzerRequest("praesentium", "drift-analyzer", "model-123", "org-123");            
+            PutAnalyzerRequest req = new PutAnalyzerRequest("consequuntur", "drift-analyzer", "model-123", "org-123");            
 
-            PutAnalyzerResponse res = sdk.monitor.putAnalyzer(req, new PutAnalyzerSecurity("natus") {{
+            PutAnalyzerResponse res = sdk.monitor.putAnalyzer(req, new PutAnalyzerSecurity("praesentium") {{
                 apiKeyAuth = "";
             }});
 
@@ -530,9 +530,9 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            PutMonitorRequest req = new PutMonitorRequest("magni", "model-123", "drift-monitor-123", "org-123");            
+            PutMonitorRequest req = new PutMonitorRequest("natus", "model-123", "drift-monitor-123", "org-123");            
 
-            PutMonitorResponse res = sdk.monitor.putMonitor(req, new PutMonitorSecurity("sunt") {{
+            PutMonitorResponse res = sdk.monitor.putMonitor(req, new PutMonitorSecurity("magni") {{
                 apiKeyAuth = "";
             }});
 
@@ -579,9 +579,9 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            PutMonitorConfigV3Request req = new PutMonitorConfigV3Request("quo", "model-123", "org-123");            
+            PutMonitorConfigV3Request req = new PutMonitorConfigV3Request("sunt", "model-123", "org-123");            
 
-            PutMonitorConfigV3Response res = sdk.monitor.putMonitorConfigV3(req, new PutMonitorConfigV3Security("illum") {{
+            PutMonitorConfigV3Response res = sdk.monitor.putMonitorConfigV3(req, new PutMonitorConfigV3Security("quo") {{
                 apiKeyAuth = "";
             }});
 
@@ -631,14 +631,14 @@ public class Application {
 
             PutRequestMonitorRunConfigRequest req = new PutRequestMonitorRunConfigRequest(                new PutRequestMonitorRunConfigRequestBody() {{
                                 analyzerIds = new String[]{{
-                                    add("pariatur"),
+                                    add("illum"),
                                 }};
                                 endTimestamp = 1893456000000L;
                                 overwrite = false;
                                 startTimestamp = 1577836800000L;
                             }};, "model-123", "org-123");            
 
-            PutRequestMonitorRunConfigResponse res = sdk.monitor.putRequestMonitorRunConfig(req, new PutRequestMonitorRunConfigSecurity("maxime") {{
+            PutRequestMonitorRunConfigResponse res = sdk.monitor.putRequestMonitorRunConfig(req, new PutRequestMonitorRunConfigSecurity("pariatur") {{
                 apiKeyAuth = "";
             }});
 
@@ -685,11 +685,11 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            ValidateMonitorConfigV3Request req = new ValidateMonitorConfigV3Request("ea", "model-123", "org-123") {{
+            ValidateMonitorConfigV3Request req = new ValidateMonitorConfigV3Request("maxime", "model-123", "org-123") {{
                 verbose = false;
             }};            
 
-            ValidateMonitorConfigV3Response res = sdk.monitor.validateMonitorConfigV3(req, new ValidateMonitorConfigV3Security("excepturi") {{
+            ValidateMonitorConfigV3Response res = sdk.monitor.validateMonitorConfigV3(req, new ValidateMonitorConfigV3Security("ea") {{
                 apiKeyAuth = "";
             }});
 

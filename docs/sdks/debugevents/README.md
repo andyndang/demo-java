@@ -29,24 +29,24 @@ public class Application {
                 .build();
 
             LogDebugEventRequest req = new LogDebugEventRequest(                new DebugEvent() {{
-                                content = "ad";
-                                creationTimestamp = 617636L;
-                                datasetTimestamp = 149675L;
+                                content = "perferendis";
+                                creationTimestamp = 324141L;
+                                datasetTimestamp = 617636L;
                                 segment = new Segment() {{
                                     tags = new ai.whylabs.WhyLabs.models.shared.SegmentTag[]{{
                                         add(new SegmentTag() {{
-                                            key = "iste";
-                                            value = "dolor";
+                                            key = "sed";
+                                            value = "iste";
                                         }}),
                                     }};
                                 }};;
                                 tags = new String[]{{
-                                    add("natus"),
+                                    add("dolor"),
                                 }};
-                                traceId = "laboriosam";
+                                traceId = "natus";
                             }};, "model-123", "org-123");            
 
-            LogDebugEventResponse res = sdk.debugEvents.logDebugEvent(req, new LogDebugEventSecurity("hic") {{
+            LogDebugEventResponse res = sdk.debugEvents.logDebugEvent(req, new LogDebugEventSecurity("laboriosam") {{
                 apiKeyAuth = "";
             }});
 

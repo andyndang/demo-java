@@ -29,14 +29,14 @@ public class Application {
 
             GetProfileObservatoryLinkRequest req = new GetProfileObservatoryLinkRequest(                new GetProfileObservatoryLinkRequest() {{
                                 batchProfileTimestamps = new Long[]{{
-                                    add(881736L),
+                                    add(313218L),
                                 }};
                                 referenceProfileIds = new String[]{{
-                                    add("delectus"),
+                                    add("accusamus"),
                                 }};
-                            }};, "quidem", "provident");            
+                            }};, "delectus", "quidem");            
 
-            GetProfileObservatoryLinkResponse res = sdk.log.getProfileObservatoryLink(req, new GetProfileObservatoryLinkSecurity("nam") {{
+            GetProfileObservatoryLinkResponse res = sdk.log.getProfileObservatoryLink(req, new GetProfileObservatoryLinkSecurity("provident") {{
                 apiKeyAuth = "";
             }});
 
@@ -86,16 +86,16 @@ public class Application {
                 .build();
 
             LogAsyncRequest req = new LogAsyncRequest(                new LogAsyncRequest() {{
-                                datasetTimestamp = 659669L;
+                                datasetTimestamp = 725255L;
                                 segmentTags = new ai.whylabs.WhyLabs.models.shared.SegmentTag[]{{
                                     add(new SegmentTag() {{
-                                        key = "blanditiis";
-                                        value = "deleniti";
+                                        key = "id";
+                                        value = "blanditiis";
                                     }}),
                                 }};
                             }};, "model-123", "org-123");            
 
-            LogAsyncResponse res = sdk.log.logAsync(req, new LogAsyncSecurity("sapiente") {{
+            LogAsyncResponse res = sdk.log.logAsync(req, new LogAsyncSecurity("deleniti") {{
                 apiKeyAuth = "";
             }});
 
@@ -144,11 +144,11 @@ public class Application {
                 .build();
 
             LogReferenceRequest req = new LogReferenceRequest(                new LogReferenceRequest() {{
-                                alias = "amet";
-                                datasetTimestamp = 643990L;
+                                alias = "sapiente";
+                                datasetTimestamp = 230533L;
                             }};, "model-123", "org-123");            
 
-            LogReferenceResponse res = sdk.log.logReference(req, new LogReferenceSecurity("nisi") {{
+            LogReferenceResponse res = sdk.log.logReference(req, new LogReferenceSecurity("deserunt") {{
                 apiKeyAuth = "";
             }});
 

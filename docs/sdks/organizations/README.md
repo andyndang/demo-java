@@ -42,10 +42,10 @@ public class Application {
                 pagerDutyKey = "abc-def-ghi-jkl";
                 parentOrgId = "org-123";
                 slackWebhook = "https://hooks.slack.com/services/foo/bar";
-                subscriptionTier = SubscriptionTier.PAID;
+                subscriptionTier = SubscriptionTier.SUBSCRIPTION;
             }};            
 
-            CreateOrganizationResponse res = sdk.organizations.createOrganization(req, new CreateOrganizationSecurity("hic") {{
+            CreateOrganizationResponse res = sdk.organizations.createOrganization(req, new CreateOrganizationSecurity("nostrum") {{
                 apiKeyAuth = "";
             }});
 
@@ -92,9 +92,9 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            DeleteOrganizationRequest req = new DeleteOrganizationRequest("recusandae");            
+            DeleteOrganizationRequest req = new DeleteOrganizationRequest("hic");            
 
-            DeleteOrganizationResponse res = sdk.organizations.deleteOrganization(req, new DeleteOrganizationSecurity("omnis") {{
+            DeleteOrganizationResponse res = sdk.organizations.deleteOrganization(req, new DeleteOrganizationSecurity("recusandae") {{
                 apiKeyAuth = "";
             }});
 
@@ -141,9 +141,9 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            GetAWSMarketplaceMetadataRequest req = new GetAWSMarketplaceMetadataRequest("facilis");            
+            GetAWSMarketplaceMetadataRequest req = new GetAWSMarketplaceMetadataRequest("omnis");            
 
-            GetAWSMarketplaceMetadataResponse res = sdk.organizations.getAWSMarketplaceMetadata(req, new GetAWSMarketplaceMetadataSecurity("perspiciatis") {{
+            GetAWSMarketplaceMetadataResponse res = sdk.organizations.getAWSMarketplaceMetadata(req, new GetAWSMarketplaceMetadataSecurity("facilis") {{
                 apiKeyAuth = "";
             }});
 
@@ -190,9 +190,9 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            GetOrganizationRequest req = new GetOrganizationRequest("voluptatem");            
+            GetOrganizationRequest req = new GetOrganizationRequest("perspiciatis");            
 
-            GetOrganizationResponse res = sdk.organizations.getOrganization(req, new GetOrganizationSecurity("porro") {{
+            GetOrganizationResponse res = sdk.organizations.getOrganization(req, new GetOrganizationSecurity("voluptatem") {{
                 apiKeyAuth = "";
             }});
 
@@ -238,7 +238,7 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            ListOrganizationsResponse res = sdk.organizations.listOrganizations(new ListOrganizationsSecurity("consequuntur") {{
+            ListOrganizationsResponse res = sdk.organizations.listOrganizations(new ListOrganizationsSecurity("porro") {{
                 apiKeyAuth = "";
             }});
 
@@ -289,7 +289,7 @@ public class Application {
                 .build();
 
             PartiallyUpdateOrgRequest req = new PartiallyUpdateOrgRequest(                new PartiallyUpdateOrgRequestBody() {{
-                                orgId = "blanditiis";
+                                orgId = "consequuntur";
                             }};) {{
                 domain = "acme.ai";
                 name = "ACME, Inc";
@@ -299,7 +299,7 @@ public class Application {
                 subscriptionTier = SubscriptionTier.AWS_MARKETPLACE;
             }};            
 
-            PartiallyUpdateOrgResponse res = sdk.organizations.partiallyUpdateOrg(req, new PartiallyUpdateOrgSecurity("eaque") {{
+            PartiallyUpdateOrgResponse res = sdk.organizations.partiallyUpdateOrg(req, new PartiallyUpdateOrgSecurity("error") {{
                 apiKeyAuth = "";
             }});
 
@@ -347,7 +347,7 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            PartiallyUpdateOrganizationRequest req = new PartiallyUpdateOrganizationRequest("occaecati") {{
+            PartiallyUpdateOrganizationRequest req = new PartiallyUpdateOrganizationRequest("eaque") {{
                 domain = "acme.ai";
                 emailDomains = "acme.ai,acme.com";
                 name = "ACME, Inc";
@@ -359,7 +359,7 @@ public class Application {
                 subscriptionTier = SubscriptionTier.AWS_MARKETPLACE;
             }};            
 
-            PartiallyUpdateOrganizationResponse res = sdk.organizations.partiallyUpdateOrganization(req, new PartiallyUpdateOrganizationSecurity("adipisci") {{
+            PartiallyUpdateOrganizationResponse res = sdk.organizations.partiallyUpdateOrganization(req, new PartiallyUpdateOrganizationSecurity("rerum") {{
                 apiKeyAuth = "";
             }});
 
@@ -411,7 +411,7 @@ public class Application {
                 .build();
 
             UpdateOrgRequest req = new UpdateOrgRequest(                new UpdateOrgRequestBody() {{
-                                orgId = "asperiores";
+                                orgId = "adipisci";
                             }};, "ACME, Inc") {{
                 domain = "acme.ai";
                 emailDomains = "acme.ai,acme.com";
@@ -423,7 +423,7 @@ public class Application {
                 subscriptionTier = SubscriptionTier.SUBSCRIPTION;
             }};            
 
-            UpdateOrgResponse res = sdk.organizations.updateOrg(req, new UpdateOrgSecurity("modi") {{
+            UpdateOrgResponse res = sdk.organizations.updateOrg(req, new UpdateOrgSecurity("earum") {{
                 apiKeyAuth = "";
             }});
 
@@ -471,7 +471,7 @@ public class Application {
             Songbird sdk = Songbird.builder()
                 .build();
 
-            UpdateOrganizationRequest req = new UpdateOrganizationRequest("ACME, Inc", "iste") {{
+            UpdateOrganizationRequest req = new UpdateOrganizationRequest("ACME, Inc", "modi") {{
                 domain = "acme.ai";
                 emailDomains = "acme.ai,acme.com";
                 notificationEmailAddress = "notifications@acme.ai";
@@ -482,7 +482,7 @@ public class Application {
                 subscriptionTier = SubscriptionTier.AWS_MARKETPLACE;
             }};            
 
-            UpdateOrganizationResponse res = sdk.organizations.updateOrganization(req, new UpdateOrganizationSecurity("deleniti") {{
+            UpdateOrganizationResponse res = sdk.organizations.updateOrganization(req, new UpdateOrganizationSecurity("dolorum") {{
                 apiKeyAuth = "";
             }});
 
