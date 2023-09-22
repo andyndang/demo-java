@@ -1,4 +1,4 @@
-# GetNotificationSettingsSecurity
+# Security
 
 
 ## Fields

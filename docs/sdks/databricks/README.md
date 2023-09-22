@@ -19,23 +19,24 @@ package hello.world;
 
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.GetConnectionResponse;
-import ai.whylabs.WhyLabs.models.operations.GetConnectionSecurity;
 import ai.whylabs.WhyLabs.models.shared.GetConnectionRequest;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("sapiente") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
             ai.whylabs.WhyLabs.models.shared.GetConnectionRequest req = new GetConnectionRequest() {{
-                orgId = "deserunt";
-                workspaceId = "perferendis";
+                orgId = "quo";
+                workspaceId = "odit";
             }};            
 
-            GetConnectionResponse res = sdk.databricks.getConnection(req, new GetConnectionSecurity("ipsam") {{
-                apiKeyAuth = "";
-            }});
+            GetConnectionResponse res = sdk.databricks.getConnection(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -49,10 +50,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                      | [ai.whylabs.WhyLabs.models.shared.GetConnectionRequest](../../models/shared/GetConnectionRequest.md)           | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
-| `security`                                                                                                     | [ai.whylabs.WhyLabs.models.operations.GetConnectionSecurity](../../models/operations/GetConnectionSecurity.md) | :heavy_check_mark:                                                                                             | The security requirements to use for the request.                                                              |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [ai.whylabs.WhyLabs.models.shared.GetConnectionRequest](../../models/shared/GetConnectionRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 
 ### Response
@@ -71,23 +71,24 @@ package hello.world;
 
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.ListJobsResponse;
-import ai.whylabs.WhyLabs.models.operations.ListJobsSecurity;
 import ai.whylabs.WhyLabs.models.shared.ListJobsRequest;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("at") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
             ai.whylabs.WhyLabs.models.shared.ListJobsRequest req = new ListJobsRequest() {{
-                orgId = "repellendus";
-                workspaceId = "sapiente";
+                orgId = "at";
+                workspaceId = "maiores";
             }};            
 
-            ListJobsResponse res = sdk.databricks.listJobs(req, new ListJobsSecurity("quo") {{
-                apiKeyAuth = "";
-            }});
+            ListJobsResponse res = sdk.databricks.listJobs(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -101,10 +102,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `request`                                                                                            | [ai.whylabs.WhyLabs.models.shared.ListJobsRequest](../../models/shared/ListJobsRequest.md)           | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-| `security`                                                                                           | [ai.whylabs.WhyLabs.models.operations.ListJobsSecurity](../../models/operations/ListJobsSecurity.md) | :heavy_check_mark:                                                                                   | The security requirements to use for the request.                                                    |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [ai.whylabs.WhyLabs.models.shared.ListJobsRequest](../../models/shared/ListJobsRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 
 ### Response
@@ -123,23 +123,24 @@ package hello.world;
 
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.RefreshConnectionResponse;
-import ai.whylabs.WhyLabs.models.operations.RefreshConnectionSecurity;
 import ai.whylabs.WhyLabs.models.shared.RefreshConnectionRequest;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("molestiae") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
             ai.whylabs.WhyLabs.models.shared.RefreshConnectionRequest req = new RefreshConnectionRequest() {{
-                orgId = "odit";
-                workspaceId = "at";
+                orgId = "quod";
+                workspaceId = "quod";
             }};            
 
-            RefreshConnectionResponse res = sdk.databricks.refreshConnection(req, new RefreshConnectionSecurity("at") {{
-                apiKeyAuth = "";
-            }});
+            RefreshConnectionResponse res = sdk.databricks.refreshConnection(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -153,10 +154,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                              | [ai.whylabs.WhyLabs.models.shared.RefreshConnectionRequest](../../models/shared/RefreshConnectionRequest.md)           | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
-| `security`                                                                                                             | [ai.whylabs.WhyLabs.models.operations.RefreshConnectionSecurity](../../models/operations/RefreshConnectionSecurity.md) | :heavy_check_mark:                                                                                                     | The security requirements to use for the request.                                                                      |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                    | [ai.whylabs.WhyLabs.models.shared.RefreshConnectionRequest](../../models/shared/RefreshConnectionRequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
 
 
 ### Response
@@ -175,23 +175,24 @@ package hello.world;
 
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.RunJobResponse;
-import ai.whylabs.WhyLabs.models.operations.RunJobSecurity;
 import ai.whylabs.WhyLabs.models.shared.RunJobRequest;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("esse") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.RunJobRequest req = new RunJobRequest(978619L) {{
-                orgId = "molestiae";
-                workspaceId = "quod";
+            ai.whylabs.WhyLabs.models.shared.RunJobRequest req = new RunJobRequest(520478L) {{
+                orgId = "porro";
+                workspaceId = "dolorum";
             }};            
 
-            RunJobResponse res = sdk.databricks.runJob(req, new RunJobSecurity("quod") {{
-                apiKeyAuth = "";
-            }});
+            RunJobResponse res = sdk.databricks.runJob(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -205,10 +206,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `request`                                                                                        | [ai.whylabs.WhyLabs.models.shared.RunJobRequest](../../models/shared/RunJobRequest.md)           | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `security`                                                                                       | [ai.whylabs.WhyLabs.models.operations.RunJobSecurity](../../models/operations/RunJobSecurity.md) | :heavy_check_mark:                                                                               | The security requirements to use for the request.                                                |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [ai.whylabs.WhyLabs.models.shared.RunJobRequest](../../models/shared/RunJobRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
 
 
 ### Response
@@ -227,7 +227,7 @@ package hello.world;
 
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.UpdateConnectionResponse;
-import ai.whylabs.WhyLabs.models.operations.UpdateConnectionSecurity;
+import ai.whylabs.WhyLabs.models.shared.Security;
 import ai.whylabs.WhyLabs.models.shared.UpdateConnectionChanges;
 import ai.whylabs.WhyLabs.models.shared.UpdateConnectionRequest;
 
@@ -235,21 +235,22 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("dicta") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
             ai.whylabs.WhyLabs.models.shared.UpdateConnectionRequest req = new UpdateConnectionRequest() {{
                 changes = new UpdateConnectionChanges() {{
                     connected = false;
                     demo = false;
-                    orgId = "esse";
+                    orgId = "nam";
                 }};;
-                orgId = "totam";
-                workspaceId = "porro";
+                orgId = "officia";
+                workspaceId = "occaecati";
             }};            
 
-            UpdateConnectionResponse res = sdk.databricks.updateConnection(req, new UpdateConnectionSecurity("dolorum") {{
-                apiKeyAuth = "";
-            }});
+            UpdateConnectionResponse res = sdk.databricks.updateConnection(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -263,10 +264,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                            | [ai.whylabs.WhyLabs.models.shared.UpdateConnectionRequest](../../models/shared/UpdateConnectionRequest.md)           | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
-| `security`                                                                                                           | [ai.whylabs.WhyLabs.models.operations.UpdateConnectionSecurity](../../models/operations/UpdateConnectionSecurity.md) | :heavy_check_mark:                                                                                                   | The security requirements to use for the request.                                                                    |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                  | [ai.whylabs.WhyLabs.models.shared.UpdateConnectionRequest](../../models/shared/UpdateConnectionRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
 
 
 ### Response

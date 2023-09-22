@@ -25,11 +25,10 @@ public class Monitor {
      * Delete the analyzer config for a given dataset.
      * Delete the analyzer config for a given dataset.
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.DeleteAnalyzerResponse deleteAnalyzer(ai.whylabs.WhyLabs.models.operations.DeleteAnalyzerRequest request, ai.whylabs.WhyLabs.models.operations.DeleteAnalyzerSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.DeleteAnalyzerResponse deleteAnalyzer(ai.whylabs.WhyLabs.models.operations.DeleteAnalyzerRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.DeleteAnalyzerRequest.class, baseUrl, "/v0/organizations/{org_id}/models/{dataset_id}/monitor-config/analyzer/{analyzer_id}", request, null);
         
@@ -40,7 +39,7 @@ public class Monitor {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -66,11 +65,10 @@ public class Monitor {
      * Delete the monitor for a given dataset.
      * Delete the monitor for a given dataset.
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.DeleteMonitorResponse deleteMonitor(ai.whylabs.WhyLabs.models.operations.DeleteMonitorRequest request, ai.whylabs.WhyLabs.models.operations.DeleteMonitorSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.DeleteMonitorResponse deleteMonitor(ai.whylabs.WhyLabs.models.operations.DeleteMonitorRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.DeleteMonitorRequest.class, baseUrl, "/v0/organizations/{org_id}/models/{dataset_id}/monitor-config/monitor/{monitor_id}", request, null);
         
@@ -81,7 +79,7 @@ public class Monitor {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -107,11 +105,10 @@ public class Monitor {
      * Get the analyzer config for a given dataset.
      * Get the analyzer config for a given dataset.
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.GetAnalyzerResponse getAnalyzer(ai.whylabs.WhyLabs.models.operations.GetAnalyzerRequest request, ai.whylabs.WhyLabs.models.operations.GetAnalyzerSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.GetAnalyzerResponse getAnalyzer(ai.whylabs.WhyLabs.models.operations.GetAnalyzerRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.GetAnalyzerRequest.class, baseUrl, "/v0/organizations/{org_id}/models/{dataset_id}/monitor-config/analyzer/{analyzer_id}", request, null);
         
@@ -122,7 +119,7 @@ public class Monitor {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -147,11 +144,10 @@ public class Monitor {
      * Get the monitor config for a given dataset.
      * Get the monitor config for a given dataset.
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.GetMonitorResponse getMonitor(ai.whylabs.WhyLabs.models.operations.GetMonitorRequest request, ai.whylabs.WhyLabs.models.operations.GetMonitorSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.GetMonitorResponse getMonitor(ai.whylabs.WhyLabs.models.operations.GetMonitorRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.GetMonitorRequest.class, baseUrl, "/v0/organizations/{org_id}/models/{dataset_id}/monitor-config/monitor/{monitor_id}", request, null);
         
@@ -162,7 +158,7 @@ public class Monitor {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -187,11 +183,10 @@ public class Monitor {
      * Get the monitor config document for a given dataset.
      * Get the monitor config document for a given dataset.
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.GetMonitorConfigV3Response getMonitorConfigV3(ai.whylabs.WhyLabs.models.operations.GetMonitorConfigV3Request request, ai.whylabs.WhyLabs.models.operations.GetMonitorConfigV3Security security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.GetMonitorConfigV3Response getMonitorConfigV3(ai.whylabs.WhyLabs.models.operations.GetMonitorConfigV3Request request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.GetMonitorConfigV3Request.class, baseUrl, "/v0/organizations/{org_id}/models/{dataset_id}/monitor-config/v3", request, null);
         
@@ -208,7 +203,7 @@ public class Monitor {
             }
         }
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -233,11 +228,10 @@ public class Monitor {
      * Get the monitor config document version for a given dataset.
      * Get the monitor config document version for a given dataset.
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.GetMonitorConfigV3VersionResponse getMonitorConfigV3Version(ai.whylabs.WhyLabs.models.operations.GetMonitorConfigV3VersionRequest request, ai.whylabs.WhyLabs.models.operations.GetMonitorConfigV3VersionSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.GetMonitorConfigV3VersionResponse getMonitorConfigV3Version(ai.whylabs.WhyLabs.models.operations.GetMonitorConfigV3VersionRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.GetMonitorConfigV3VersionRequest.class, baseUrl, "/v0/organizations/{org_id}/models/{dataset_id}/monitor-config/v3/versions/{version_id}", request, null);
         
@@ -248,7 +242,7 @@ public class Monitor {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -273,11 +267,10 @@ public class Monitor {
      * List the constraints for a given dataset.
      * List the constraints for a given dataset.
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.ListConstraintsResponse listConstraints(ai.whylabs.WhyLabs.models.operations.ListConstraintsRequest request, ai.whylabs.WhyLabs.models.operations.ListConstraintsSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.ListConstraintsResponse listConstraints(ai.whylabs.WhyLabs.models.operations.ListConstraintsRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.ListConstraintsRequest.class, baseUrl, "/v0/organizations/{org_id}/models/{dataset_id}/constraints", request, null);
         
@@ -288,7 +281,7 @@ public class Monitor {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -314,11 +307,10 @@ public class Monitor {
      * List the monitor config document versions for a given dataset.
      * List the monitor config document versions for a given dataset.
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.ListMonitorConfigV3VersionsResponse listMonitorConfigV3Versions(ai.whylabs.WhyLabs.models.operations.ListMonitorConfigV3VersionsRequest request, ai.whylabs.WhyLabs.models.operations.ListMonitorConfigV3VersionsSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.ListMonitorConfigV3VersionsResponse listMonitorConfigV3Versions(ai.whylabs.WhyLabs.models.operations.ListMonitorConfigV3VersionsRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.ListMonitorConfigV3VersionsRequest.class, baseUrl, "/v0/organizations/{org_id}/models/{dataset_id}/monitor-config/v3/versions", request, null);
         
@@ -329,7 +321,7 @@ public class Monitor {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -355,11 +347,10 @@ public class Monitor {
      * Patch an updated monitor config document for a given dataset.
      * Save an updated monitor config document for a given dataset.  Monitors and analyzers matching an existing ID are replaced.
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.PatchMonitorConfigV3Response patchMonitorConfigV3(ai.whylabs.WhyLabs.models.operations.PatchMonitorConfigV3Request request, ai.whylabs.WhyLabs.models.operations.PatchMonitorConfigV3Security security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.PatchMonitorConfigV3Response patchMonitorConfigV3(ai.whylabs.WhyLabs.models.operations.PatchMonitorConfigV3Request request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.PatchMonitorConfigV3Request.class, baseUrl, "/v0/organizations/{org_id}/models/{dataset_id}/monitor-config/v3", request, null);
         
@@ -375,7 +366,7 @@ public class Monitor {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -401,11 +392,10 @@ public class Monitor {
      * Save the analyzer config for a given dataset.
      * Save the analyzer config for a given dataset.
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.PutAnalyzerResponse putAnalyzer(ai.whylabs.WhyLabs.models.operations.PutAnalyzerRequest request, ai.whylabs.WhyLabs.models.operations.PutAnalyzerSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.PutAnalyzerResponse putAnalyzer(ai.whylabs.WhyLabs.models.operations.PutAnalyzerRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.PutAnalyzerRequest.class, baseUrl, "/v0/organizations/{org_id}/models/{dataset_id}/monitor-config/analyzer/{analyzer_id}", request, null);
         
@@ -421,7 +411,7 @@ public class Monitor {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -447,11 +437,10 @@ public class Monitor {
      * Save the monitor for a given dataset.
      * Save the monitor for a given dataset.
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.PutMonitorResponse putMonitor(ai.whylabs.WhyLabs.models.operations.PutMonitorRequest request, ai.whylabs.WhyLabs.models.operations.PutMonitorSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.PutMonitorResponse putMonitor(ai.whylabs.WhyLabs.models.operations.PutMonitorRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.PutMonitorRequest.class, baseUrl, "/v0/organizations/{org_id}/models/{dataset_id}/monitor-config/monitor/{monitor_id}", request, null);
         
@@ -467,7 +456,7 @@ public class Monitor {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -493,11 +482,10 @@ public class Monitor {
      * Save the monitor config document for a given dataset.
      * Save the monitor config document for a given dataset.
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.PutMonitorConfigV3Response putMonitorConfigV3(ai.whylabs.WhyLabs.models.operations.PutMonitorConfigV3Request request, ai.whylabs.WhyLabs.models.operations.PutMonitorConfigV3Security security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.PutMonitorConfigV3Response putMonitorConfigV3(ai.whylabs.WhyLabs.models.operations.PutMonitorConfigV3Request request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.PutMonitorConfigV3Request.class, baseUrl, "/v0/organizations/{org_id}/models/{dataset_id}/monitor-config/v3", request, null);
         
@@ -513,7 +501,7 @@ public class Monitor {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -539,11 +527,10 @@ public class Monitor {
      * Put the RequestMonitorRun config into S3.
      * Put the RequestMonitorRun config into S3.
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.PutRequestMonitorRunConfigResponse putRequestMonitorRunConfig(ai.whylabs.WhyLabs.models.operations.PutRequestMonitorRunConfigRequest request, ai.whylabs.WhyLabs.models.operations.PutRequestMonitorRunConfigSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.PutRequestMonitorRunConfigResponse putRequestMonitorRunConfig(ai.whylabs.WhyLabs.models.operations.PutRequestMonitorRunConfigRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.PutRequestMonitorRunConfigRequest.class, baseUrl, "/v0/organizations/{org_id}/models/{dataset_id}/request-monitor-run", request, null);
         
@@ -559,7 +546,7 @@ public class Monitor {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -584,11 +571,10 @@ public class Monitor {
      * Validate the monitor config document for a given dataset.
      * Validate the monitor config document for a given dataset.
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.ValidateMonitorConfigV3Response validateMonitorConfigV3(ai.whylabs.WhyLabs.models.operations.ValidateMonitorConfigV3Request request, ai.whylabs.WhyLabs.models.operations.ValidateMonitorConfigV3Security security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.ValidateMonitorConfigV3Response validateMonitorConfigV3(ai.whylabs.WhyLabs.models.operations.ValidateMonitorConfigV3Request request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.ValidateMonitorConfigV3Request.class, baseUrl, "/v0/organizations/{org_id}/models/{dataset_id}/monitor-config/v3/validate", request, null);
         
@@ -610,7 +596,7 @@ public class Monitor {
             }
         }
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

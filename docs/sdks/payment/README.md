@@ -15,14 +15,18 @@ package hello.world;
 
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.StripePaymentEndpointResponse;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("delectus") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
-            ai.whylabs.WhyLabs.models.. req = "deleniti"            
+            ai.whylabs.WhyLabs.models.. req = "quaerat"            
 
             StripePaymentEndpointResponse res = sdk.payment.stripePaymentEndpoint(req);
 

@@ -17,19 +17,20 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.WhyLabsSearchRequest;
 import ai.whylabs.WhyLabs.models.operations.WhyLabsSearchResponse;
-import ai.whylabs.WhyLabs.models.operations.WhyLabsSearchSecurity;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("quidem") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
-            WhyLabsSearchRequest req = new WhyLabsSearchRequest("ipsa");            
+            WhyLabsSearchRequest req = new WhyLabsSearchRequest("voluptatibus");            
 
-            WhyLabsSearchResponse res = sdk.search.whyLabsSearch(req, new WhyLabsSearchSecurity("ipsa") {{
-                apiKeyAuth = "";
-            }});
+            WhyLabsSearchResponse res = sdk.search.whyLabsSearch(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -43,10 +44,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                      | [ai.whylabs.WhyLabs.models.operations.WhyLabsSearchRequest](../../models/operations/WhyLabsSearchRequest.md)   | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
-| `security`                                                                                                     | [ai.whylabs.WhyLabs.models.operations.WhyLabsSearchSecurity](../../models/operations/WhyLabsSearchSecurity.md) | :heavy_check_mark:                                                                                             | The security requirements to use for the request.                                                              |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                    | [ai.whylabs.WhyLabs.models.operations.WhyLabsSearchRequest](../../models/operations/WhyLabsSearchRequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
 
 
 ### Response
@@ -65,24 +65,25 @@ package hello.world;
 
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.WhyLabsSearchIndexingResponse;
-import ai.whylabs.WhyLabs.models.operations.WhyLabsSearchIndexingSecurity;
 import ai.whylabs.WhyLabs.models.shared.SearchIndexRequest;
 import ai.whylabs.WhyLabs.models.shared.SearchIndexType;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("voluptas") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
             ai.whylabs.WhyLabs.models.shared.SearchIndexRequest req = new SearchIndexRequest() {{
-                orgId = "iure";
-                type = SearchIndexType.ACTIONS;
+                orgId = "natus";
+                type = SearchIndexType.MODELS;
             }};            
 
-            WhyLabsSearchIndexingResponse res = sdk.search.whyLabsSearchIndexing(req, new WhyLabsSearchIndexingSecurity("quaerat") {{
-                apiKeyAuth = "";
-            }});
+            WhyLabsSearchIndexingResponse res = sdk.search.whyLabsSearchIndexing(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -96,10 +97,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                      | [ai.whylabs.WhyLabs.models.shared.SearchIndexRequest](../../models/shared/SearchIndexRequest.md)                               | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
-| `security`                                                                                                                     | [ai.whylabs.WhyLabs.models.operations.WhyLabsSearchIndexingSecurity](../../models/operations/WhyLabsSearchIndexingSecurity.md) | :heavy_check_mark:                                                                                                             | The security requirements to use for the request.                                                                              |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `request`                                                                                        | [ai.whylabs.WhyLabs.models.shared.SearchIndexRequest](../../models/shared/SearchIndexRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 
 ### Response

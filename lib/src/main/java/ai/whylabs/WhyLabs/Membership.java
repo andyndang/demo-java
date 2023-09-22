@@ -25,11 +25,10 @@ public class Membership {
      * Create a membership for a user, making them apart of an organization. Uses the user's current email address.
      * Create a membership for a user, making them apart of an organization. Uses the user's current email address.
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.CreateMembershipResponse createMembership(ai.whylabs.WhyLabs.models.shared.AddMembershipRequest request, ai.whylabs.WhyLabs.models.operations.CreateMembershipSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.CreateMembershipResponse createMembership(ai.whylabs.WhyLabs.models.shared.AddMembershipRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(baseUrl, "/v0/membership");
         
@@ -45,7 +44,7 @@ public class Membership {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -71,11 +70,10 @@ public class Membership {
      * Create a membership for a user, making them apart of an organization. Uses the user's current email address.
      * Create a membership for a user, making them apart of an organization. Uses the user's current email address.
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.CreateOrganizationMembershipResponse createOrganizationMembership(ai.whylabs.WhyLabs.models.operations.CreateOrganizationMembershipRequest request, ai.whylabs.WhyLabs.models.operations.CreateOrganizationMembershipSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.CreateOrganizationMembershipResponse createOrganizationMembership(ai.whylabs.WhyLabs.models.operations.CreateOrganizationMembershipRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.CreateOrganizationMembershipRequest.class, baseUrl, "/v0/organizations/{org_id}/membership", request, null);
         
@@ -92,7 +90,7 @@ public class Membership {
             }
         }
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -118,11 +116,10 @@ public class Membership {
      * Get the default membership for a user.
      * Get the default membership for a user.
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.GetDefaultMembershipForEmailResponse getDefaultMembershipForEmail(ai.whylabs.WhyLabs.models.operations.GetDefaultMembershipForEmailRequest request, ai.whylabs.WhyLabs.models.operations.GetDefaultMembershipForEmailSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.GetDefaultMembershipForEmailResponse getDefaultMembershipForEmail(ai.whylabs.WhyLabs.models.operations.GetDefaultMembershipForEmailRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(baseUrl, "/v0/membership/default");
         
@@ -139,7 +136,7 @@ public class Membership {
             }
         }
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -165,11 +162,10 @@ public class Membership {
      * Get memberships for a user.
      * Get memberships for a user.
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.GetMembershipsResponse getMemberships(ai.whylabs.WhyLabs.models.operations.GetMembershipsRequest request, ai.whylabs.WhyLabs.models.operations.GetMembershipsSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.GetMembershipsResponse getMemberships(ai.whylabs.WhyLabs.models.operations.GetMembershipsRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.GetMembershipsRequest.class, baseUrl, "/v0/membership/user/{user_id}", request, null);
         
@@ -180,7 +176,7 @@ public class Membership {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -206,11 +202,10 @@ public class Membership {
      * Get memberships for a user given that user's email address.
      * Get memberships for a user given that user's email address.
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.GetMembershipsByEmailResponse getMembershipsByEmail(ai.whylabs.WhyLabs.models.operations.GetMembershipsByEmailRequest request, ai.whylabs.WhyLabs.models.operations.GetMembershipsByEmailSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.GetMembershipsByEmailResponse getMembershipsByEmail(ai.whylabs.WhyLabs.models.operations.GetMembershipsByEmailRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(baseUrl, "/v0/membership/user");
         
@@ -227,7 +222,7 @@ public class Membership {
             }
         }
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -253,11 +248,10 @@ public class Membership {
      * Get memberships for an org.
      * Get memberships for an org.
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.GetMembershipsByOrgResponse getMembershipsByOrg(ai.whylabs.WhyLabs.models.operations.GetMembershipsByOrgRequest request, ai.whylabs.WhyLabs.models.operations.GetMembershipsByOrgSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.GetMembershipsByOrgResponse getMembershipsByOrg(ai.whylabs.WhyLabs.models.operations.GetMembershipsByOrgRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.GetMembershipsByOrgRequest.class, baseUrl, "/v0/membership/org/{org_id}", request, null);
         
@@ -268,7 +262,7 @@ public class Membership {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -294,11 +288,10 @@ public class Membership {
      * List organization memberships
      * list memberships for an organization
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.ListOrganizationMembershipsResponse listOrganizationMemberships(ai.whylabs.WhyLabs.models.operations.ListOrganizationMembershipsRequest request, ai.whylabs.WhyLabs.models.operations.ListOrganizationMembershipsSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.ListOrganizationMembershipsResponse listOrganizationMemberships(ai.whylabs.WhyLabs.models.operations.ListOrganizationMembershipsRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.ListOrganizationMembershipsRequest.class, baseUrl, "/v0/organizations/{org_id}/membership", request, null);
         
@@ -309,7 +302,7 @@ public class Membership {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -335,11 +328,10 @@ public class Membership {
      * Removes membership in a given org from a user, using the user's email address.
      * Removes membership in a given org from a user, using the user's email address.
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.RemoveMembershipByEmailResponse removeMembershipByEmail(ai.whylabs.WhyLabs.models.shared.RemoveMembershipRequest request, ai.whylabs.WhyLabs.models.operations.RemoveMembershipByEmailSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.RemoveMembershipByEmailResponse removeMembershipByEmail(ai.whylabs.WhyLabs.models.shared.RemoveMembershipRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(baseUrl, "/v0/membership");
         
@@ -355,7 +347,7 @@ public class Membership {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -381,11 +373,10 @@ public class Membership {
      * Removes membership in a given org from a user, using the user's email address.
      * Removes membership in a given org from a user, using the user's email address.
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.RemoveOrganizationMembershipResponse removeOrganizationMembership(ai.whylabs.WhyLabs.models.operations.RemoveOrganizationMembershipRequest request, ai.whylabs.WhyLabs.models.operations.RemoveOrganizationMembershipSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.RemoveOrganizationMembershipResponse removeOrganizationMembership(ai.whylabs.WhyLabs.models.operations.RemoveOrganizationMembershipRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.RemoveOrganizationMembershipRequest.class, baseUrl, "/v0/organizations/{org_id}/membership", request, null);
         
@@ -402,7 +393,7 @@ public class Membership {
             }
         }
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -428,11 +419,10 @@ public class Membership {
      * Sets the organization that should be used when logging a user in
      * Sets the organization that should be used when logging a user in
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.SetDefaultMembershipResponse setDefaultMembership(ai.whylabs.WhyLabs.models.shared.SetDefaultMembershipRequest request, ai.whylabs.WhyLabs.models.operations.SetDefaultMembershipSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.SetDefaultMembershipResponse setDefaultMembership(ai.whylabs.WhyLabs.models.shared.SetDefaultMembershipRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(baseUrl, "/v0/membership/default");
         
@@ -448,7 +438,7 @@ public class Membership {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -474,11 +464,10 @@ public class Membership {
      * Updates the role in an membership
      * Updates the role in an membership, given the organization and the user's email address.
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.UpdateMembershipByEmailResponse updateMembershipByEmail(ai.whylabs.WhyLabs.models.shared.UpdateMembershipRequest request, ai.whylabs.WhyLabs.models.operations.UpdateMembershipByEmailSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.UpdateMembershipByEmailResponse updateMembershipByEmail(ai.whylabs.WhyLabs.models.shared.UpdateMembershipRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(baseUrl, "/v0/membership");
         
@@ -494,7 +483,7 @@ public class Membership {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -520,11 +509,10 @@ public class Membership {
      * Updates the role in an membership
      * Updates the role in an membership, given the organization and the user's email address.
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.UpdateOrganizationMembershipResponse updateOrganizationMembership(ai.whylabs.WhyLabs.models.operations.UpdateOrganizationMembershipRequest request, ai.whylabs.WhyLabs.models.operations.UpdateOrganizationMembershipSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.UpdateOrganizationMembershipResponse updateOrganizationMembership(ai.whylabs.WhyLabs.models.operations.UpdateOrganizationMembershipRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.UpdateOrganizationMembershipRequest.class, baseUrl, "/v0/organizations/{org_id}/membership", request, null);
         
@@ -541,7 +529,7 @@ public class Membership {
             }
         }
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

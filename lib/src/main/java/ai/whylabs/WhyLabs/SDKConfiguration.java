@@ -5,16 +5,17 @@
 package ai.whylabs.WhyLabs;
 
 import ai.whylabs.WhyLabs.utils.HTTPClient;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 class SDKConfiguration {
 	public HTTPClient defaultClient;
 	public HTTPClient securityClient;
-	
+	public Security security;
 	public String serverUrl;
 	public int serverIdx = 0;
 	public String language = "java";
 	public String openapiDocVersion = "0.1";
-	public String sdkVersion = "1.25.6";
-	public String genVersion = "2.118.1";
+	public String sdkVersion = "1.26.0";
+	public String genVersion = "2.125.1";
 	
 }

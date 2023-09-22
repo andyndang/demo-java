@@ -17,8 +17,8 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.LogDebugEventRequest;
 import ai.whylabs.WhyLabs.models.operations.LogDebugEventResponse;
-import ai.whylabs.WhyLabs.models.operations.LogDebugEventSecurity;
 import ai.whylabs.WhyLabs.models.shared.DebugEvent;
+import ai.whylabs.WhyLabs.models.shared.Security;
 import ai.whylabs.WhyLabs.models.shared.Segment;
 import ai.whylabs.WhyLabs.models.shared.SegmentTag;
 
@@ -26,29 +26,30 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("iste") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
             LogDebugEventRequest req = new LogDebugEventRequest(                new DebugEvent() {{
-                                content = "perferendis";
-                                creationTimestamp = 324141L;
-                                datasetTimestamp = 617636L;
+                                content = "dolor";
+                                creationTimestamp = 616934L;
+                                datasetTimestamp = 386489L;
                                 segment = new Segment() {{
                                     tags = new ai.whylabs.WhyLabs.models.shared.SegmentTag[]{{
                                         add(new SegmentTag() {{
-                                            key = "sed";
-                                            value = "iste";
+                                            key = "hic";
+                                            value = "saepe";
                                         }}),
                                     }};
                                 }};;
                                 tags = new String[]{{
-                                    add("dolor"),
+                                    add("fuga"),
                                 }};
-                                traceId = "natus";
+                                traceId = "in";
                             }};, "model-123", "org-123");            
 
-            LogDebugEventResponse res = sdk.debugEvents.logDebugEvent(req, new LogDebugEventSecurity("laboriosam") {{
-                apiKeyAuth = "";
-            }});
+            LogDebugEventResponse res = sdk.debugEvents.logDebugEvent(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -62,10 +63,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                      | [ai.whylabs.WhyLabs.models.operations.LogDebugEventRequest](../../models/operations/LogDebugEventRequest.md)   | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
-| `security`                                                                                                     | [ai.whylabs.WhyLabs.models.operations.LogDebugEventSecurity](../../models/operations/LogDebugEventSecurity.md) | :heavy_check_mark:                                                                                             | The security requirements to use for the request.                                                              |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                    | [ai.whylabs.WhyLabs.models.operations.LogDebugEventRequest](../../models/operations/LogDebugEventRequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
 
 
 ### Response

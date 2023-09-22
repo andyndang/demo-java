@@ -16,19 +16,20 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.GetMonitorConfigSchemaRequest;
 import ai.whylabs.WhyLabs.models.operations.GetMonitorConfigSchemaResponse;
-import ai.whylabs.WhyLabs.models.operations.GetMonitorConfigSchemaSecurity;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("accusamus") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
             GetMonitorConfigSchemaRequest req = new GetMonitorConfigSchemaRequest("org-123");            
 
-            GetMonitorConfigSchemaResponse res = sdk.schema.getMonitorConfigSchema(req, new GetMonitorConfigSchemaSecurity("veritatis") {{
-                apiKeyAuth = "";
-            }});
+            GetMonitorConfigSchemaResponse res = sdk.schema.getMonitorConfigSchema(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -42,10 +43,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                        | [ai.whylabs.WhyLabs.models.operations.GetMonitorConfigSchemaRequest](../../models/operations/GetMonitorConfigSchemaRequest.md)   | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
-| `security`                                                                                                                       | [ai.whylabs.WhyLabs.models.operations.GetMonitorConfigSchemaSecurity](../../models/operations/GetMonitorConfigSchemaSecurity.md) | :heavy_check_mark:                                                                                                               | The security requirements to use for the request.                                                                                |
+| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                      | [ai.whylabs.WhyLabs.models.operations.GetMonitorConfigSchemaRequest](../../models/operations/GetMonitorConfigSchemaRequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
 
 
 ### Response

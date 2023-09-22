@@ -19,12 +19,15 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.CreateApiKeyRequest;
 import ai.whylabs.WhyLabs.models.operations.CreateApiKeyResponse;
-import ai.whylabs.WhyLabs.models.operations.CreateApiKeySecurity;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("deserunt") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
             CreateApiKeyRequest req = new CreateApiKeyRequest("org-123", "user-123") {{
@@ -35,9 +38,7 @@ public class Application {
                 }};
             }};            
 
-            CreateApiKeyResponse res = sdk.apiKey.createApiKey(req, new CreateApiKeySecurity("temporibus") {{
-                apiKeyAuth = "";
-            }});
+            CreateApiKeyResponse res = sdk.apiKey.createApiKey(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -51,10 +52,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                    | [ai.whylabs.WhyLabs.models.operations.CreateApiKeyRequest](../../models/operations/CreateApiKeyRequest.md)   | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
-| `security`                                                                                                   | [ai.whylabs.WhyLabs.models.operations.CreateApiKeySecurity](../../models/operations/CreateApiKeySecurity.md) | :heavy_check_mark:                                                                                           | The security requirements to use for the request.                                                            |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                  | [ai.whylabs.WhyLabs.models.operations.CreateApiKeyRequest](../../models/operations/CreateApiKeyRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
 
 
 ### Response
@@ -74,19 +74,20 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.GetApiKeyRequest;
 import ai.whylabs.WhyLabs.models.operations.GetApiKeyResponse;
-import ai.whylabs.WhyLabs.models.operations.GetApiKeySecurity;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("perferendis") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
             GetApiKeyRequest req = new GetApiKeyRequest("fh4dUNV3WQ", "org-123");            
 
-            GetApiKeyResponse res = sdk.apiKey.getApiKey(req, new GetApiKeySecurity("ab") {{
-                apiKeyAuth = "";
-            }});
+            GetApiKeyResponse res = sdk.apiKey.getApiKey(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -100,10 +101,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                              | [ai.whylabs.WhyLabs.models.operations.GetApiKeyRequest](../../models/operations/GetApiKeyRequest.md)   | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-| `security`                                                                                             | [ai.whylabs.WhyLabs.models.operations.GetApiKeySecurity](../../models/operations/GetApiKeySecurity.md) | :heavy_check_mark:                                                                                     | The security requirements to use for the request.                                                      |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [ai.whylabs.WhyLabs.models.operations.GetApiKeyRequest](../../models/operations/GetApiKeyRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 
 ### Response
@@ -123,21 +123,22 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.ListApiKeysRequest;
 import ai.whylabs.WhyLabs.models.operations.ListApiKeysResponse;
-import ai.whylabs.WhyLabs.models.operations.ListApiKeysSecurity;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("ipsam") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
             ListApiKeysRequest req = new ListApiKeysRequest("org-123") {{
                 userId = "user-123";
             }};            
 
-            ListApiKeysResponse res = sdk.apiKey.listApiKeys(req, new ListApiKeysSecurity("quis") {{
-                apiKeyAuth = "";
-            }});
+            ListApiKeysResponse res = sdk.apiKey.listApiKeys(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -151,10 +152,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                  | [ai.whylabs.WhyLabs.models.operations.ListApiKeysRequest](../../models/operations/ListApiKeysRequest.md)   | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-| `security`                                                                                                 | [ai.whylabs.WhyLabs.models.operations.ListApiKeysSecurity](../../models/operations/ListApiKeysSecurity.md) | :heavy_check_mark:                                                                                         | The security requirements to use for the request.                                                          |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                | [ai.whylabs.WhyLabs.models.operations.ListApiKeysRequest](../../models/operations/ListApiKeysRequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
 
 
 ### Response
@@ -174,19 +174,20 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.RevokeApiKeyRequest;
 import ai.whylabs.WhyLabs.models.operations.RevokeApiKeyResponse;
-import ai.whylabs.WhyLabs.models.operations.RevokeApiKeySecurity;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("repellendus") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
             RevokeApiKeyRequest req = new RevokeApiKeyRequest("HMiFAgQeNb", "org-123", "user-123");            
 
-            RevokeApiKeyResponse res = sdk.apiKey.revokeApiKey(req, new RevokeApiKeySecurity("veritatis") {{
-                apiKeyAuth = "";
-            }});
+            RevokeApiKeyResponse res = sdk.apiKey.revokeApiKey(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -200,10 +201,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                    | [ai.whylabs.WhyLabs.models.operations.RevokeApiKeyRequest](../../models/operations/RevokeApiKeyRequest.md)   | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
-| `security`                                                                                                   | [ai.whylabs.WhyLabs.models.operations.RevokeApiKeySecurity](../../models/operations/RevokeApiKeySecurity.md) | :heavy_check_mark:                                                                                           | The security requirements to use for the request.                                                            |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                  | [ai.whylabs.WhyLabs.models.operations.RevokeApiKeyRequest](../../models/operations/RevokeApiKeyRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
 
 
 ### Response

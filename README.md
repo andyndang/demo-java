@@ -6,38 +6,37 @@
 ### Gradle
 
 ```groovy
-implementation 'ai.whylabs.WhyLabs:Songbird:1.25.6'
+implementation 'ai.whylabs.WhyLabs:Songbird:1.26.0'
 ```
 <!-- End SDK Installation -->
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
-
-
 ```java
 package hello.world;
 
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.CreateAccountUserRequest;
 import ai.whylabs.WhyLabs.models.operations.CreateAccountUserResponse;
-import ai.whylabs.WhyLabs.models.operations.CreateAccountUserSecurity;
 import ai.whylabs.WhyLabs.models.shared.CreateAccountUserRequest;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("unde") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
-            CreateAccountUserRequest req = new CreateAccountUserRequest(                new CreateAccountUserRequest("corrupti") {{
+            CreateAccountUserRequest req = new CreateAccountUserRequest(                new CreateAccountUserRequest("nulla") {{
                                 active = false;
-                                externalId = "provident";
-                                userSchema = "distinctio";
+                                externalId = "corrupti";
+                                userSchema = "illum";
                             }};, "org-123");            
 
-            CreateAccountUserResponse res = sdk.account.createAccountUser(req, new CreateAccountUserSecurity("quibusdam") {{
-                apiKeyAuth = "";
-            }});
+            CreateAccountUserResponse res = sdk.account.createAccountUser(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -296,6 +295,18 @@ public class Application {
 * [getUserByEmail](docs/sdks/user/README.md#getuserbyemail) - Get a user by their email.
 * [updateUser](docs/sdks/user/README.md#updateuser) - Update a user.
 <!-- End SDK Available Operations -->
+
+
+
+<!-- Start Dev Containers -->
+
+
+
+<!-- End Dev Containers -->
+
+<!-- Placeholder for Future Speakeasy SDK Sections -->
+
+
 
 ### Maturity
 

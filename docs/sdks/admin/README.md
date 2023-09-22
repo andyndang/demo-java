@@ -17,20 +17,21 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.GenerateReportRequest;
 import ai.whylabs.WhyLabs.models.operations.GenerateReportResponse;
-import ai.whylabs.WhyLabs.models.operations.GenerateReportSecurity;
 import ai.whylabs.WhyLabs.models.shared.AdminReportType;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("quis") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
             GenerateReportRequest req = new GenerateReportRequest(AdminReportType.SESSIONS);            
 
-            GenerateReportResponse res = sdk.admin.generateReport(req, new GenerateReportSecurity("nisi") {{
-                apiKeyAuth = "";
-            }});
+            GenerateReportResponse res = sdk.admin.generateReport(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -44,10 +45,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                        | [ai.whylabs.WhyLabs.models.operations.GenerateReportRequest](../../models/operations/GenerateReportRequest.md)   | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
-| `security`                                                                                                       | [ai.whylabs.WhyLabs.models.operations.GenerateReportSecurity](../../models/operations/GenerateReportSecurity.md) | :heavy_check_mark:                                                                                               | The security requirements to use for the request.                                                                |
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                      | [ai.whylabs.WhyLabs.models.operations.GenerateReportRequest](../../models/operations/GenerateReportRequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
 
 
 ### Response
@@ -66,17 +66,18 @@ package hello.world;
 
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.PostMonitorConfigValidationJobResponse;
-import ai.whylabs.WhyLabs.models.operations.PostMonitorConfigValidationJobSecurity;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("veritatis") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
-            PostMonitorConfigValidationJobResponse res = sdk.admin.postMonitorConfigValidationJob(new PostMonitorConfigValidationJobSecurity("recusandae") {{
-                apiKeyAuth = "";
-            }});
+            PostMonitorConfigValidationJobResponse res = sdk.admin.postMonitorConfigValidationJob();
 
             if (res.statusCode == 200) {
                 // handle response
@@ -87,12 +88,6 @@ public class Application {
     }
 }
 ```
-
-### Parameters
-
-| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `security`                                                                                                                                       | [ai.whylabs.WhyLabs.models.operations.PostMonitorConfigValidationJobSecurity](../../models/operations/PostMonitorConfigValidationJobSecurity.md) | :heavy_check_mark:                                                                                                                               | The security requirements to use for the request.                                                                                                |
 
 
 ### Response

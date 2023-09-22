@@ -24,11 +24,10 @@ public class DatasetMetadata {
      * Delete dataset metadata for the specified dataset
      * Delete dataset metadata for the specified dataset
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.DeleteDatasetMetadataResponse deleteDatasetMetadata(ai.whylabs.WhyLabs.models.operations.DeleteDatasetMetadataRequest request, ai.whylabs.WhyLabs.models.operations.DeleteDatasetMetadataSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.DeleteDatasetMetadataResponse deleteDatasetMetadata(ai.whylabs.WhyLabs.models.operations.DeleteDatasetMetadataRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.DeleteDatasetMetadataRequest.class, baseUrl, "/v0/organizations/{org_id}/dataset/{dataset_id}/metadata", request, null);
         
@@ -39,7 +38,7 @@ public class DatasetMetadata {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -65,11 +64,10 @@ public class DatasetMetadata {
      * Get dataset metadata for the specified dataset
      * Get dataset metadata for the specified dataset
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.GetDatasetMetadataResponse getDatasetMetadata(ai.whylabs.WhyLabs.models.operations.GetDatasetMetadataRequest request, ai.whylabs.WhyLabs.models.operations.GetDatasetMetadataSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.GetDatasetMetadataResponse getDatasetMetadata(ai.whylabs.WhyLabs.models.operations.GetDatasetMetadataRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.GetDatasetMetadataRequest.class, baseUrl, "/v0/organizations/{org_id}/dataset/{dataset_id}/metadata", request, null);
         
@@ -80,7 +78,7 @@ public class DatasetMetadata {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -106,11 +104,10 @@ public class DatasetMetadata {
      * Put dataset metadata for the specified dataset
      * Put dataset metadata for the specified dataset
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.PutDatasetMetadataResponse putDatasetMetadata(ai.whylabs.WhyLabs.models.operations.PutDatasetMetadataRequest request, ai.whylabs.WhyLabs.models.operations.PutDatasetMetadataSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.PutDatasetMetadataResponse putDatasetMetadata(ai.whylabs.WhyLabs.models.operations.PutDatasetMetadataRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.PutDatasetMetadataRequest.class, baseUrl, "/v0/organizations/{org_id}/dataset/{dataset_id}/metadata", request, null);
         
@@ -126,7 +123,7 @@ public class DatasetMetadata {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

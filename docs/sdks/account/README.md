@@ -25,24 +25,25 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.CreateAccountUserRequest;
 import ai.whylabs.WhyLabs.models.operations.CreateAccountUserResponse;
-import ai.whylabs.WhyLabs.models.operations.CreateAccountUserSecurity;
 import ai.whylabs.WhyLabs.models.shared.CreateAccountUserRequest;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("vel") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
-            CreateAccountUserRequest req = new CreateAccountUserRequest(                new CreateAccountUserRequest("unde") {{
+            CreateAccountUserRequest req = new CreateAccountUserRequest(                new CreateAccountUserRequest("error") {{
                                 active = false;
-                                externalId = "nulla";
-                                userSchema = "corrupti";
+                                externalId = "deserunt";
+                                userSchema = "suscipit";
                             }};, "org-123");            
 
-            CreateAccountUserResponse res = sdk.account.createAccountUser(req, new CreateAccountUserSecurity("illum") {{
-                apiKeyAuth = "";
-            }});
+            CreateAccountUserResponse res = sdk.account.createAccountUser(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -56,10 +57,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                              | [ai.whylabs.WhyLabs.models.operations.CreateAccountUserRequest](../../models/operations/CreateAccountUserRequest.md)   | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
-| `security`                                                                                                             | [ai.whylabs.WhyLabs.models.operations.CreateAccountUserSecurity](../../models/operations/CreateAccountUserSecurity.md) | :heavy_check_mark:                                                                                                     | The security requirements to use for the request.                                                                      |
+| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                            | [ai.whylabs.WhyLabs.models.operations.CreateAccountUserRequest](../../models/operations/CreateAccountUserRequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
 
 
 ### Response
@@ -79,19 +79,20 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.DeleteAccountUserRequest;
 import ai.whylabs.WhyLabs.models.operations.DeleteAccountUserResponse;
-import ai.whylabs.WhyLabs.models.operations.DeleteAccountUserSecurity;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("iure") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
             DeleteAccountUserRequest req = new DeleteAccountUserRequest("org-123", "user-123");            
 
-            DeleteAccountUserResponse res = sdk.account.deleteAccountUser(req, new DeleteAccountUserSecurity("vel") {{
-                apiKeyAuth = "";
-            }});
+            DeleteAccountUserResponse res = sdk.account.deleteAccountUser(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -105,10 +106,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                              | [ai.whylabs.WhyLabs.models.operations.DeleteAccountUserRequest](../../models/operations/DeleteAccountUserRequest.md)   | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
-| `security`                                                                                                             | [ai.whylabs.WhyLabs.models.operations.DeleteAccountUserSecurity](../../models/operations/DeleteAccountUserSecurity.md) | :heavy_check_mark:                                                                                                     | The security requirements to use for the request.                                                                      |
+| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                            | [ai.whylabs.WhyLabs.models.operations.DeleteAccountUserRequest](../../models/operations/DeleteAccountUserRequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
 
 
 ### Response
@@ -128,24 +128,25 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.GetAccountMembershipsRequest;
 import ai.whylabs.WhyLabs.models.operations.GetAccountMembershipsResponse;
-import ai.whylabs.WhyLabs.models.operations.GetAccountMembershipsSecurity;
 import ai.whylabs.WhyLabs.models.shared.Role;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("magnam") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
             GetAccountMembershipsRequest req = new GetAccountMembershipsRequest("org-123") {{
                 managedOrgId = "org-123";
-                role = Role.MEMBER;
+                role = Role.VIEWER;
                 userId = "user-123";
             }};            
 
-            GetAccountMembershipsResponse res = sdk.account.getAccountMemberships(req, new GetAccountMembershipsSecurity("deserunt") {{
-                apiKeyAuth = "";
-            }});
+            GetAccountMembershipsResponse res = sdk.account.getAccountMemberships(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -159,10 +160,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                      | [ai.whylabs.WhyLabs.models.operations.GetAccountMembershipsRequest](../../models/operations/GetAccountMembershipsRequest.md)   | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
-| `security`                                                                                                                     | [ai.whylabs.WhyLabs.models.operations.GetAccountMembershipsSecurity](../../models/operations/GetAccountMembershipsSecurity.md) | :heavy_check_mark:                                                                                                             | The security requirements to use for the request.                                                                              |
+| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                    | [ai.whylabs.WhyLabs.models.operations.GetAccountMembershipsRequest](../../models/operations/GetAccountMembershipsRequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
 
 
 ### Response
@@ -182,19 +182,20 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.GetAccountUserByEmailRequest;
 import ai.whylabs.WhyLabs.models.operations.GetAccountUserByEmailResponse;
-import ai.whylabs.WhyLabs.models.operations.GetAccountUserByEmailSecurity;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("ipsa") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
             GetAccountUserByEmailRequest req = new GetAccountUserByEmailRequest("user@whylabs.ai", "org-123");            
 
-            GetAccountUserByEmailResponse res = sdk.account.getAccountUserByEmail(req, new GetAccountUserByEmailSecurity("suscipit") {{
-                apiKeyAuth = "";
-            }});
+            GetAccountUserByEmailResponse res = sdk.account.getAccountUserByEmail(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -208,10 +209,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                      | [ai.whylabs.WhyLabs.models.operations.GetAccountUserByEmailRequest](../../models/operations/GetAccountUserByEmailRequest.md)   | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
-| `security`                                                                                                                     | [ai.whylabs.WhyLabs.models.operations.GetAccountUserByEmailSecurity](../../models/operations/GetAccountUserByEmailSecurity.md) | :heavy_check_mark:                                                                                                             | The security requirements to use for the request.                                                                              |
+| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                    | [ai.whylabs.WhyLabs.models.operations.GetAccountUserByEmailRequest](../../models/operations/GetAccountUserByEmailRequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
 
 
 ### Response
@@ -231,19 +231,20 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.GetAccountUserByIdRequest;
 import ai.whylabs.WhyLabs.models.operations.GetAccountUserByIdResponse;
-import ai.whylabs.WhyLabs.models.operations.GetAccountUserByIdSecurity;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("delectus") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
             GetAccountUserByIdRequest req = new GetAccountUserByIdRequest("org-123", "user-123");            
 
-            GetAccountUserByIdResponse res = sdk.account.getAccountUserById(req, new GetAccountUserByIdSecurity("iure") {{
-                apiKeyAuth = "";
-            }});
+            GetAccountUserByIdResponse res = sdk.account.getAccountUserById(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -257,10 +258,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                | [ai.whylabs.WhyLabs.models.operations.GetAccountUserByIdRequest](../../models/operations/GetAccountUserByIdRequest.md)   | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
-| `security`                                                                                                               | [ai.whylabs.WhyLabs.models.operations.GetAccountUserByIdSecurity](../../models/operations/GetAccountUserByIdSecurity.md) | :heavy_check_mark:                                                                                                       | The security requirements to use for the request.                                                                        |
+| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                              | [ai.whylabs.WhyLabs.models.operations.GetAccountUserByIdRequest](../../models/operations/GetAccountUserByIdRequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
 
 
 ### Response
@@ -280,19 +280,20 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.ListAccountUsersRequest;
 import ai.whylabs.WhyLabs.models.operations.ListAccountUsersResponse;
-import ai.whylabs.WhyLabs.models.operations.ListAccountUsersSecurity;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("tempora") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
             ListAccountUsersRequest req = new ListAccountUsersRequest("org-123");            
 
-            ListAccountUsersResponse res = sdk.account.listAccountUsers(req, new ListAccountUsersSecurity("magnam") {{
-                apiKeyAuth = "";
-            }});
+            ListAccountUsersResponse res = sdk.account.listAccountUsers(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -306,10 +307,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                            | [ai.whylabs.WhyLabs.models.operations.ListAccountUsersRequest](../../models/operations/ListAccountUsersRequest.md)   | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
-| `security`                                                                                                           | [ai.whylabs.WhyLabs.models.operations.ListAccountUsersSecurity](../../models/operations/ListAccountUsersSecurity.md) | :heavy_check_mark:                                                                                                   | The security requirements to use for the request.                                                                    |
+| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                          | [ai.whylabs.WhyLabs.models.operations.ListAccountUsersRequest](../../models/operations/ListAccountUsersRequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
 
 
 ### Response
@@ -329,19 +329,20 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.ListManagedOrganizationsRequest;
 import ai.whylabs.WhyLabs.models.operations.ListManagedOrganizationsResponse;
-import ai.whylabs.WhyLabs.models.operations.ListManagedOrganizationsSecurity;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("suscipit") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
             ListManagedOrganizationsRequest req = new ListManagedOrganizationsRequest("org-123");            
 
-            ListManagedOrganizationsResponse res = sdk.account.listManagedOrganizations(req, new ListManagedOrganizationsSecurity("debitis") {{
-                apiKeyAuth = "";
-            }});
+            ListManagedOrganizationsResponse res = sdk.account.listManagedOrganizations(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -355,10 +356,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                            | [ai.whylabs.WhyLabs.models.operations.ListManagedOrganizationsRequest](../../models/operations/ListManagedOrganizationsRequest.md)   | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
-| `security`                                                                                                                           | [ai.whylabs.WhyLabs.models.operations.ListManagedOrganizationsSecurity](../../models/operations/ListManagedOrganizationsSecurity.md) | :heavy_check_mark:                                                                                                                   | The security requirements to use for the request.                                                                                    |
+| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
+| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                          | [ai.whylabs.WhyLabs.models.operations.ListManagedOrganizationsRequest](../../models/operations/ListManagedOrganizationsRequest.md) | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
 
 
 ### Response
@@ -378,25 +378,26 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.PatchOrganizationMembershipsRequest;
 import ai.whylabs.WhyLabs.models.operations.PatchOrganizationMembershipsResponse;
-import ai.whylabs.WhyLabs.models.operations.PatchOrganizationMembershipsSecurity;
 import ai.whylabs.WhyLabs.models.shared.PatchAccountMembershipsRequest;
 import ai.whylabs.WhyLabs.models.shared.Role;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("molestiae") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
             PatchOrganizationMembershipsRequest req = new PatchOrganizationMembershipsRequest(                new PatchAccountMembershipsRequest(                new String[]{{
-                                                add("ipsa"),
+                                                add("minus"),
                                             }},                 new String[]{{
-                                                add("delectus"),
-                                            }});, "org-123", "org-123", Role.ADMIN);            
+                                                add("placeat"),
+                                            }});, "org-123", "org-123", Role.MEMBER);            
 
-            PatchOrganizationMembershipsResponse res = sdk.account.patchOrganizationMemberships(req, new PatchOrganizationMembershipsSecurity("suscipit") {{
-                apiKeyAuth = "";
-            }});
+            PatchOrganizationMembershipsResponse res = sdk.account.patchOrganizationMemberships(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -410,10 +411,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                    | Type                                                                                                                                         | Required                                                                                                                                     | Description                                                                                                                                  |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                    | [ai.whylabs.WhyLabs.models.operations.PatchOrganizationMembershipsRequest](../../models/operations/PatchOrganizationMembershipsRequest.md)   | :heavy_check_mark:                                                                                                                           | The request object to use for the request.                                                                                                   |
-| `security`                                                                                                                                   | [ai.whylabs.WhyLabs.models.operations.PatchOrganizationMembershipsSecurity](../../models/operations/PatchOrganizationMembershipsSecurity.md) | :heavy_check_mark:                                                                                                                           | The security requirements to use for the request.                                                                                            |
+| Parameter                                                                                                                                  | Type                                                                                                                                       | Required                                                                                                                                   | Description                                                                                                                                |
+| ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                  | [ai.whylabs.WhyLabs.models.operations.PatchOrganizationMembershipsRequest](../../models/operations/PatchOrganizationMembershipsRequest.md) | :heavy_check_mark:                                                                                                                         | The request object to use for the request.                                                                                                 |
 
 
 ### Response
@@ -433,23 +433,24 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.PutOrganizationMembershipsRequest;
 import ai.whylabs.WhyLabs.models.operations.PutOrganizationMembershipsResponse;
-import ai.whylabs.WhyLabs.models.operations.PutOrganizationMembershipsSecurity;
 import ai.whylabs.WhyLabs.models.shared.PutAccountMembershipsRequest;
 import ai.whylabs.WhyLabs.models.shared.Role;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("iusto") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
             PutOrganizationMembershipsRequest req = new PutOrganizationMembershipsRequest(                new PutAccountMembershipsRequest(                new String[]{{
-                                                add("molestiae"),
-                                            }});, "org-123", "org-123", Role.VIEWER);            
+                                                add("excepturi"),
+                                            }});, "org-123", "org-123", Role.MEMBER);            
 
-            PutOrganizationMembershipsResponse res = sdk.account.putOrganizationMemberships(req, new PutOrganizationMembershipsSecurity("placeat") {{
-                apiKeyAuth = "";
-            }});
+            PutOrganizationMembershipsResponse res = sdk.account.putOrganizationMemberships(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -463,10 +464,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                | Type                                                                                                                                     | Required                                                                                                                                 | Description                                                                                                                              |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                | [ai.whylabs.WhyLabs.models.operations.PutOrganizationMembershipsRequest](../../models/operations/PutOrganizationMembershipsRequest.md)   | :heavy_check_mark:                                                                                                                       | The request object to use for the request.                                                                                               |
-| `security`                                                                                                                               | [ai.whylabs.WhyLabs.models.operations.PutOrganizationMembershipsSecurity](../../models/operations/PutOrganizationMembershipsSecurity.md) | :heavy_check_mark:                                                                                                                       | The security requirements to use for the request.                                                                                        |
+| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
+| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                              | [ai.whylabs.WhyLabs.models.operations.PutOrganizationMembershipsRequest](../../models/operations/PutOrganizationMembershipsRequest.md) | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
 
 
 ### Response
@@ -486,24 +486,25 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.UpdateAccountUserRequest;
 import ai.whylabs.WhyLabs.models.operations.UpdateAccountUserResponse;
-import ai.whylabs.WhyLabs.models.operations.UpdateAccountUserSecurity;
+import ai.whylabs.WhyLabs.models.shared.Security;
 import ai.whylabs.WhyLabs.models.shared.UpdateAccountUserRequest;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("recusandae") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
             UpdateAccountUserRequest req = new UpdateAccountUserRequest(                new UpdateAccountUserRequest() {{
                                 active = false;
-                                externalId = "voluptatum";
-                                userSchema = "iusto";
+                                externalId = "temporibus";
+                                userSchema = "ab";
                             }};, "org-123", "user-123");            
 
-            UpdateAccountUserResponse res = sdk.account.updateAccountUser(req, new UpdateAccountUserSecurity("excepturi") {{
-                apiKeyAuth = "";
-            }});
+            UpdateAccountUserResponse res = sdk.account.updateAccountUser(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -517,10 +518,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                              | [ai.whylabs.WhyLabs.models.operations.UpdateAccountUserRequest](../../models/operations/UpdateAccountUserRequest.md)   | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
-| `security`                                                                                                             | [ai.whylabs.WhyLabs.models.operations.UpdateAccountUserSecurity](../../models/operations/UpdateAccountUserSecurity.md) | :heavy_check_mark:                                                                                                     | The security requirements to use for the request.                                                                      |
+| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                            | [ai.whylabs.WhyLabs.models.operations.UpdateAccountUserRequest](../../models/operations/UpdateAccountUserRequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
 
 
 ### Response

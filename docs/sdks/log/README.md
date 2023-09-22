@@ -18,27 +18,28 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.GetProfileObservatoryLinkRequest;
 import ai.whylabs.WhyLabs.models.operations.GetProfileObservatoryLinkResponse;
-import ai.whylabs.WhyLabs.models.operations.GetProfileObservatoryLinkSecurity;
 import ai.whylabs.WhyLabs.models.shared.GetProfileObservatoryLinkRequest;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("nam") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
             GetProfileObservatoryLinkRequest req = new GetProfileObservatoryLinkRequest(                new GetProfileObservatoryLinkRequest() {{
                                 batchProfileTimestamps = new Long[]{{
-                                    add(313218L),
+                                    add(659669L),
                                 }};
                                 referenceProfileIds = new String[]{{
-                                    add("accusamus"),
+                                    add("blanditiis"),
                                 }};
-                            }};, "delectus", "quidem");            
+                            }};, "deleniti", "sapiente");            
 
-            GetProfileObservatoryLinkResponse res = sdk.log.getProfileObservatoryLink(req, new GetProfileObservatoryLinkSecurity("provident") {{
-                apiKeyAuth = "";
-            }});
+            GetProfileObservatoryLinkResponse res = sdk.log.getProfileObservatoryLink(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -52,10 +53,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
-| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                              | [ai.whylabs.WhyLabs.models.operations.GetProfileObservatoryLinkRequest](../../models/operations/GetProfileObservatoryLinkRequest.md)   | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
-| `security`                                                                                                                             | [ai.whylabs.WhyLabs.models.operations.GetProfileObservatoryLinkSecurity](../../models/operations/GetProfileObservatoryLinkSecurity.md) | :heavy_check_mark:                                                                                                                     | The security requirements to use for the request.                                                                                      |
+| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                            | [ai.whylabs.WhyLabs.models.operations.GetProfileObservatoryLinkRequest](../../models/operations/GetProfileObservatoryLinkRequest.md) | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
 
 
 ### Response
@@ -75,29 +75,30 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.LogAsyncRequest;
 import ai.whylabs.WhyLabs.models.operations.LogAsyncResponse;
-import ai.whylabs.WhyLabs.models.operations.LogAsyncSecurity;
 import ai.whylabs.WhyLabs.models.shared.LogAsyncRequest;
+import ai.whylabs.WhyLabs.models.shared.Security;
 import ai.whylabs.WhyLabs.models.shared.SegmentTag;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("amet") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
             LogAsyncRequest req = new LogAsyncRequest(                new LogAsyncRequest() {{
-                                datasetTimestamp = 725255L;
+                                datasetTimestamp = 643990L;
                                 segmentTags = new ai.whylabs.WhyLabs.models.shared.SegmentTag[]{{
                                     add(new SegmentTag() {{
-                                        key = "id";
-                                        value = "blanditiis";
+                                        key = "nisi";
+                                        value = "vel";
                                     }}),
                                 }};
                             }};, "model-123", "org-123");            
 
-            LogAsyncResponse res = sdk.log.logAsync(req, new LogAsyncSecurity("deleniti") {{
-                apiKeyAuth = "";
-            }});
+            LogAsyncResponse res = sdk.log.logAsync(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -111,10 +112,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `request`                                                                                            | [ai.whylabs.WhyLabs.models.operations.LogAsyncRequest](../../models/operations/LogAsyncRequest.md)   | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-| `security`                                                                                           | [ai.whylabs.WhyLabs.models.operations.LogAsyncSecurity](../../models/operations/LogAsyncSecurity.md) | :heavy_check_mark:                                                                                   | The security requirements to use for the request.                                                    |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `request`                                                                                          | [ai.whylabs.WhyLabs.models.operations.LogAsyncRequest](../../models/operations/LogAsyncRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 
 ### Response
@@ -134,23 +134,24 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.LogReferenceRequest;
 import ai.whylabs.WhyLabs.models.operations.LogReferenceResponse;
-import ai.whylabs.WhyLabs.models.operations.LogReferenceSecurity;
 import ai.whylabs.WhyLabs.models.shared.LogReferenceRequest;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("natus") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
             LogReferenceRequest req = new LogReferenceRequest(                new LogReferenceRequest() {{
-                                alias = "sapiente";
-                                datasetTimestamp = 230533L;
+                                alias = "omnis";
+                                datasetTimestamp = 474867L;
                             }};, "model-123", "org-123");            
 
-            LogReferenceResponse res = sdk.log.logReference(req, new LogReferenceSecurity("deserunt") {{
-                apiKeyAuth = "";
-            }});
+            LogReferenceResponse res = sdk.log.logReference(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -164,10 +165,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                    | [ai.whylabs.WhyLabs.models.operations.LogReferenceRequest](../../models/operations/LogReferenceRequest.md)   | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
-| `security`                                                                                                   | [ai.whylabs.WhyLabs.models.operations.LogReferenceSecurity](../../models/operations/LogReferenceSecurity.md) | :heavy_check_mark:                                                                                           | The security requirements to use for the request.                                                            |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                  | [ai.whylabs.WhyLabs.models.operations.LogReferenceRequest](../../models/operations/LogReferenceRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
 
 
 ### Response

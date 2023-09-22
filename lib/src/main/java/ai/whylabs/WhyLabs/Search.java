@@ -25,11 +25,10 @@ public class Search {
      * WhyLabs Search
      * WhyLabs Search
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.WhyLabsSearchResponse whyLabsSearch(ai.whylabs.WhyLabs.models.operations.WhyLabsSearchRequest request, ai.whylabs.WhyLabs.models.operations.WhyLabsSearchSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.WhyLabsSearchResponse whyLabsSearch(ai.whylabs.WhyLabs.models.operations.WhyLabsSearchRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(baseUrl, "/v0/search");
         
@@ -46,7 +45,7 @@ public class Search {
             }
         }
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -72,11 +71,10 @@ public class Search {
      * WhyLabs Search Indexing
      * WhyLabs Search Indexing
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.WhyLabsSearchIndexingResponse whyLabsSearchIndexing(ai.whylabs.WhyLabs.models.shared.SearchIndexRequest request, ai.whylabs.WhyLabs.models.operations.WhyLabsSearchIndexingSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.WhyLabsSearchIndexingResponse whyLabsSearchIndexing(ai.whylabs.WhyLabs.models.shared.SearchIndexRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(baseUrl, "/v0/search/index");
         
@@ -92,7 +90,7 @@ public class Search {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

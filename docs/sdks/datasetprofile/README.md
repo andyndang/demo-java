@@ -27,8 +27,8 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.CreateReferenceProfileRequest;
 import ai.whylabs.WhyLabs.models.operations.CreateReferenceProfileResponse;
-import ai.whylabs.WhyLabs.models.operations.CreateReferenceProfileSecurity;
 import ai.whylabs.WhyLabs.models.shared.CreateReferenceProfileRequest;
+import ai.whylabs.WhyLabs.models.shared.Security;
 import ai.whylabs.WhyLabs.models.shared.Segment;
 import ai.whylabs.WhyLabs.models.shared.SegmentTag;
 
@@ -36,30 +36,31 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("totam") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
             CreateReferenceProfileRequest req = new CreateReferenceProfileRequest(                new CreateReferenceProfileRequest() {{
-                                alias = "fugit";
-                                datasetTimestamp = 537373L;
+                                alias = "beatae";
+                                datasetTimestamp = 414662L;
                                 segments = new ai.whylabs.WhyLabs.models.shared.Segment[]{{
                                     add(new Segment() {{
                                         tags = new ai.whylabs.WhyLabs.models.shared.SegmentTag[]{{
                                             add(new SegmentTag() {{
-                                                key = "hic";
-                                                value = "optio";
+                                                key = "molestiae";
+                                                value = "modi";
                                             }}),
                                         }};
                                     }}),
                                 }};
                                 tags = new String[]{{
-                                    add("totam"),
+                                    add("qui"),
                                 }};
-                                version = "beatae";
+                                version = "impedit";
                             }};, "model-123", "org-123");            
 
-            CreateReferenceProfileResponse res = sdk.datasetProfile.createReferenceProfile(req, new CreateReferenceProfileSecurity("commodi") {{
-                apiKeyAuth = "";
-            }});
+            CreateReferenceProfileResponse res = sdk.datasetProfile.createReferenceProfile(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -73,10 +74,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                        | [ai.whylabs.WhyLabs.models.operations.CreateReferenceProfileRequest](../../models/operations/CreateReferenceProfileRequest.md)   | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
-| `security`                                                                                                                       | [ai.whylabs.WhyLabs.models.operations.CreateReferenceProfileSecurity](../../models/operations/CreateReferenceProfileSecurity.md) | :heavy_check_mark:                                                                                                               | The security requirements to use for the request.                                                                                |
+| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                      | [ai.whylabs.WhyLabs.models.operations.CreateReferenceProfileRequest](../../models/operations/CreateReferenceProfileRequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
 
 
 ### Response
@@ -98,12 +98,15 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.DeleteAnalyzerResultsRequest;
 import ai.whylabs.WhyLabs.models.operations.DeleteAnalyzerResultsResponse;
-import ai.whylabs.WhyLabs.models.operations.DeleteAnalyzerResultsSecurity;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("cum") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
             DeleteAnalyzerResultsRequest req = new DeleteAnalyzerResultsRequest("model-123", "org-123") {{
@@ -111,9 +114,7 @@ public class Application {
                 startTimestamp = 1577836800000L;
             }};            
 
-            DeleteAnalyzerResultsResponse res = sdk.datasetProfile.deleteAnalyzerResults(req, new DeleteAnalyzerResultsSecurity("molestiae") {{
-                apiKeyAuth = "";
-            }});
+            DeleteAnalyzerResultsResponse res = sdk.datasetProfile.deleteAnalyzerResults(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -127,10 +128,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                      | [ai.whylabs.WhyLabs.models.operations.DeleteAnalyzerResultsRequest](../../models/operations/DeleteAnalyzerResultsRequest.md)   | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
-| `security`                                                                                                                     | [ai.whylabs.WhyLabs.models.operations.DeleteAnalyzerResultsSecurity](../../models/operations/DeleteAnalyzerResultsSecurity.md) | :heavy_check_mark:                                                                                                             | The security requirements to use for the request.                                                                              |
+| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                    | [ai.whylabs.WhyLabs.models.operations.DeleteAnalyzerResultsRequest](../../models/operations/DeleteAnalyzerResultsRequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
 
 
 ### Response
@@ -152,12 +152,15 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.DeleteDatasetProfilesRequest;
 import ai.whylabs.WhyLabs.models.operations.DeleteDatasetProfilesResponse;
-import ai.whylabs.WhyLabs.models.operations.DeleteDatasetProfilesSecurity;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("esse") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
             DeleteDatasetProfilesRequest req = new DeleteDatasetProfilesRequest("model-123", "org-123") {{
@@ -166,9 +169,7 @@ public class Application {
                 profileStartTimestamp = 1577836800000L;
             }};            
 
-            DeleteDatasetProfilesResponse res = sdk.datasetProfile.deleteDatasetProfiles(req, new DeleteDatasetProfilesSecurity("modi") {{
-                apiKeyAuth = "";
-            }});
+            DeleteDatasetProfilesResponse res = sdk.datasetProfile.deleteDatasetProfiles(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -182,10 +183,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                      | [ai.whylabs.WhyLabs.models.operations.DeleteDatasetProfilesRequest](../../models/operations/DeleteDatasetProfilesRequest.md)   | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
-| `security`                                                                                                                     | [ai.whylabs.WhyLabs.models.operations.DeleteDatasetProfilesSecurity](../../models/operations/DeleteDatasetProfilesSecurity.md) | :heavy_check_mark:                                                                                                             | The security requirements to use for the request.                                                                              |
+| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                    | [ai.whylabs.WhyLabs.models.operations.DeleteDatasetProfilesRequest](../../models/operations/DeleteDatasetProfilesRequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
 
 
 ### Response
@@ -207,19 +207,20 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.DeleteReferenceProfileRequest;
 import ai.whylabs.WhyLabs.models.operations.DeleteReferenceProfileResponse;
-import ai.whylabs.WhyLabs.models.operations.DeleteReferenceProfileSecurity;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("ipsum") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
             DeleteReferenceProfileRequest req = new DeleteReferenceProfileRequest("model-123", "org-123", "ref-xxy");            
 
-            DeleteReferenceProfileResponse res = sdk.datasetProfile.deleteReferenceProfile(req, new DeleteReferenceProfileSecurity("qui") {{
-                apiKeyAuth = "";
-            }});
+            DeleteReferenceProfileResponse res = sdk.datasetProfile.deleteReferenceProfile(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -233,10 +234,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                        | [ai.whylabs.WhyLabs.models.operations.DeleteReferenceProfileRequest](../../models/operations/DeleteReferenceProfileRequest.md)   | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
-| `security`                                                                                                                       | [ai.whylabs.WhyLabs.models.operations.DeleteReferenceProfileSecurity](../../models/operations/DeleteReferenceProfileSecurity.md) | :heavy_check_mark:                                                                                                               | The security requirements to use for the request.                                                                                |
+| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                      | [ai.whylabs.WhyLabs.models.operations.DeleteReferenceProfileRequest](../../models/operations/DeleteReferenceProfileRequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
 
 
 ### Response
@@ -258,12 +258,15 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.GetProfileTracesRequest;
 import ai.whylabs.WhyLabs.models.operations.GetProfileTracesResponse;
-import ai.whylabs.WhyLabs.models.operations.GetProfileTracesSecurity;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("excepturi") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
             GetProfileTracesRequest req = new GetProfileTracesRequest("model-123", "org-123", "a756f8bb-de30-48a2-be41-178ae6af7100") {{
@@ -271,9 +274,7 @@ public class Application {
                 offset = 0;
             }};            
 
-            GetProfileTracesResponse res = sdk.datasetProfile.getProfileTraces(req, new GetProfileTracesSecurity("impedit") {{
-                apiKeyAuth = "";
-            }});
+            GetProfileTracesResponse res = sdk.datasetProfile.getProfileTraces(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -287,10 +288,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                            | [ai.whylabs.WhyLabs.models.operations.GetProfileTracesRequest](../../models/operations/GetProfileTracesRequest.md)   | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
-| `security`                                                                                                           | [ai.whylabs.WhyLabs.models.operations.GetProfileTracesSecurity](../../models/operations/GetProfileTracesSecurity.md) | :heavy_check_mark:                                                                                                   | The security requirements to use for the request.                                                                    |
+| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                          | [ai.whylabs.WhyLabs.models.operations.GetProfileTracesRequest](../../models/operations/GetProfileTracesRequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
 
 
 ### Response
@@ -312,19 +312,20 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.GetReferenceProfileRequest;
 import ai.whylabs.WhyLabs.models.operations.GetReferenceProfileResponse;
-import ai.whylabs.WhyLabs.models.operations.GetReferenceProfileSecurity;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("aspernatur") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
             GetReferenceProfileRequest req = new GetReferenceProfileRequest("model-123", "org-123", "ref-xxy");            
 
-            GetReferenceProfileResponse res = sdk.datasetProfile.getReferenceProfile(req, new GetReferenceProfileSecurity("cum") {{
-                apiKeyAuth = "";
-            }});
+            GetReferenceProfileResponse res = sdk.datasetProfile.getReferenceProfile(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -338,10 +339,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                  | [ai.whylabs.WhyLabs.models.operations.GetReferenceProfileRequest](../../models/operations/GetReferenceProfileRequest.md)   | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
-| `security`                                                                                                                 | [ai.whylabs.WhyLabs.models.operations.GetReferenceProfileSecurity](../../models/operations/GetReferenceProfileSecurity.md) | :heavy_check_mark:                                                                                                         | The security requirements to use for the request.                                                                          |
+| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                | [ai.whylabs.WhyLabs.models.operations.GetReferenceProfileRequest](../../models/operations/GetReferenceProfileRequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
 
 
 ### Response
@@ -363,24 +363,25 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.HideSegmentsRequest;
 import ai.whylabs.WhyLabs.models.operations.HideSegmentsResponse;
-import ai.whylabs.WhyLabs.models.operations.HideSegmentsSecurity;
+import ai.whylabs.WhyLabs.models.shared.Security;
 import ai.whylabs.WhyLabs.models.shared.SegmentsListRequest;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("perferendis") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
             HideSegmentsRequest req = new HideSegmentsRequest(                new SegmentsListRequest() {{
                                 segments = new String[]{{
-                                    add("esse"),
+                                    add("ad"),
                                 }};
                             }};, "model-123", "org-123");            
 
-            HideSegmentsResponse res = sdk.datasetProfile.hideSegments(req, new HideSegmentsSecurity("ipsum") {{
-                apiKeyAuth = "";
-            }});
+            HideSegmentsResponse res = sdk.datasetProfile.hideSegments(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -394,10 +395,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                    | [ai.whylabs.WhyLabs.models.operations.HideSegmentsRequest](../../models/operations/HideSegmentsRequest.md)   | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
-| `security`                                                                                                   | [ai.whylabs.WhyLabs.models.operations.HideSegmentsSecurity](../../models/operations/HideSegmentsSecurity.md) | :heavy_check_mark:                                                                                           | The security requirements to use for the request.                                                            |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                  | [ai.whylabs.WhyLabs.models.operations.HideSegmentsRequest](../../models/operations/HideSegmentsRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
 
 
 ### Response
@@ -419,12 +419,15 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.ListReferenceProfilesRequest;
 import ai.whylabs.WhyLabs.models.operations.ListReferenceProfilesResponse;
-import ai.whylabs.WhyLabs.models.operations.ListReferenceProfilesSecurity;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("natus") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
             ListReferenceProfilesRequest req = new ListReferenceProfilesRequest("model-123", "org-123") {{
@@ -432,9 +435,7 @@ public class Application {
                 toEpoch = 1893456000000L;
             }};            
 
-            ListReferenceProfilesResponse res = sdk.datasetProfile.listReferenceProfiles(req, new ListReferenceProfilesSecurity("excepturi") {{
-                apiKeyAuth = "";
-            }});
+            ListReferenceProfilesResponse res = sdk.datasetProfile.listReferenceProfiles(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -448,10 +449,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                      | [ai.whylabs.WhyLabs.models.operations.ListReferenceProfilesRequest](../../models/operations/ListReferenceProfilesRequest.md)   | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
-| `security`                                                                                                                     | [ai.whylabs.WhyLabs.models.operations.ListReferenceProfilesSecurity](../../models/operations/ListReferenceProfilesSecurity.md) | :heavy_check_mark:                                                                                                             | The security requirements to use for the request.                                                                              |
+| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                    | [ai.whylabs.WhyLabs.models.operations.ListReferenceProfilesRequest](../../models/operations/ListReferenceProfilesRequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
 
 
 ### Response
@@ -473,19 +473,20 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.ListSegmentsRequest;
 import ai.whylabs.WhyLabs.models.operations.ListSegmentsResponse;
-import ai.whylabs.WhyLabs.models.operations.ListSegmentsSecurity;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("sed") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
             ListSegmentsRequest req = new ListSegmentsRequest("model-123", "org-123");            
 
-            ListSegmentsResponse res = sdk.datasetProfile.listSegments(req, new ListSegmentsSecurity("aspernatur") {{
-                apiKeyAuth = "";
-            }});
+            ListSegmentsResponse res = sdk.datasetProfile.listSegments(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -499,10 +500,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                    | [ai.whylabs.WhyLabs.models.operations.ListSegmentsRequest](../../models/operations/ListSegmentsRequest.md)   | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
-| `security`                                                                                                   | [ai.whylabs.WhyLabs.models.operations.ListSegmentsSecurity](../../models/operations/ListSegmentsSecurity.md) | :heavy_check_mark:                                                                                           | The security requirements to use for the request.                                                            |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                  | [ai.whylabs.WhyLabs.models.operations.ListSegmentsRequest](../../models/operations/ListSegmentsRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
 
 
 ### Response

@@ -24,11 +24,10 @@ public class Admin {
      * Generate an admin report
      * Generate an admin report
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.GenerateReportResponse generateReport(ai.whylabs.WhyLabs.models.operations.GenerateReportRequest request, ai.whylabs.WhyLabs.models.operations.GenerateReportSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.GenerateReportResponse generateReport(ai.whylabs.WhyLabs.models.operations.GenerateReportRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(baseUrl, "/v0/admin/generate-report");
         
@@ -45,7 +44,7 @@ public class Admin {
             }
         }
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -70,11 +69,10 @@ public class Admin {
     /**
      * Create a monitor config validation job for all configs
      * Create a monitor config validation job for all configs
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.PostMonitorConfigValidationJobResponse postMonitorConfigValidationJob(ai.whylabs.WhyLabs.models.operations.PostMonitorConfigValidationJobSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.PostMonitorConfigValidationJobResponse postMonitorConfigValidationJob() throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(baseUrl, "/v0/admin/monitor-config/create-validation-job");
         
@@ -85,7 +83,7 @@ public class Admin {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

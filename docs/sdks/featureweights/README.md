@@ -17,19 +17,20 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.GetColumnWeightsRequest;
 import ai.whylabs.WhyLabs.models.operations.GetColumnWeightsResponse;
-import ai.whylabs.WhyLabs.models.operations.GetColumnWeightsSecurity;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("corporis") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
             GetColumnWeightsRequest req = new GetColumnWeightsRequest("model-123", "org-123");            
 
-            GetColumnWeightsResponse res = sdk.featureWeights.getColumnWeights(req, new GetColumnWeightsSecurity("hic") {{
-                apiKeyAuth = "";
-            }});
+            GetColumnWeightsResponse res = sdk.featureWeights.getColumnWeights(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -43,10 +44,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                            | [ai.whylabs.WhyLabs.models.operations.GetColumnWeightsRequest](../../models/operations/GetColumnWeightsRequest.md)   | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
-| `security`                                                                                                           | [ai.whylabs.WhyLabs.models.operations.GetColumnWeightsSecurity](../../models/operations/GetColumnWeightsSecurity.md) | :heavy_check_mark:                                                                                                   | The security requirements to use for the request.                                                                    |
+| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                          | [ai.whylabs.WhyLabs.models.operations.GetColumnWeightsRequest](../../models/operations/GetColumnWeightsRequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
 
 
 ### Response
@@ -66,19 +66,20 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.PutColumnWeightsRequest;
 import ai.whylabs.WhyLabs.models.operations.PutColumnWeightsResponse;
-import ai.whylabs.WhyLabs.models.operations.PutColumnWeightsSecurity;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("iste") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
-            PutColumnWeightsRequest req = new PutColumnWeightsRequest("saepe", "model-123", "org-123");            
+            PutColumnWeightsRequest req = new PutColumnWeightsRequest("iure", "model-123", "org-123");            
 
-            PutColumnWeightsResponse res = sdk.featureWeights.putColumnWeights(req, new PutColumnWeightsSecurity("fuga") {{
-                apiKeyAuth = "";
-            }});
+            PutColumnWeightsResponse res = sdk.featureWeights.putColumnWeights(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -92,10 +93,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                            | [ai.whylabs.WhyLabs.models.operations.PutColumnWeightsRequest](../../models/operations/PutColumnWeightsRequest.md)   | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
-| `security`                                                                                                           | [ai.whylabs.WhyLabs.models.operations.PutColumnWeightsSecurity](../../models/operations/PutColumnWeightsSecurity.md) | :heavy_check_mark:                                                                                                   | The security requirements to use for the request.                                                                    |
+| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                          | [ai.whylabs.WhyLabs.models.operations.PutColumnWeightsRequest](../../models/operations/PutColumnWeightsRequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
 
 
 ### Response

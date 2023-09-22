@@ -25,11 +25,10 @@ public class NotificationSettings {
      * Add new notification action
      * Add new notification action
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.AddNotificationActionResponse addNotificationAction(ai.whylabs.WhyLabs.models.operations.AddNotificationActionRequest request, ai.whylabs.WhyLabs.models.operations.AddNotificationActionSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.AddNotificationActionResponse addNotificationAction(ai.whylabs.WhyLabs.models.operations.AddNotificationActionRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.AddNotificationActionRequest.class, baseUrl, "/v0/notification-settings/{org_id}/actions/{type}/{action_id}", request, null);
         
@@ -45,7 +44,7 @@ public class NotificationSettings {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -71,11 +70,10 @@ public class NotificationSettings {
      * Delete notification action
      * Delete notification action
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.DeleteNotificationActionResponse deleteNotificationAction(ai.whylabs.WhyLabs.models.operations.DeleteNotificationActionRequest request, ai.whylabs.WhyLabs.models.operations.DeleteNotificationActionSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.DeleteNotificationActionResponse deleteNotificationAction(ai.whylabs.WhyLabs.models.operations.DeleteNotificationActionRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.DeleteNotificationActionRequest.class, baseUrl, "/v0/notification-settings/{org_id}/actions/{action_id}", request, null);
         
@@ -86,7 +84,7 @@ public class NotificationSettings {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -112,11 +110,10 @@ public class NotificationSettings {
      * Disable notification action
      * Disable notification action
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.DisableNotificationActionResponse disableNotificationAction(ai.whylabs.WhyLabs.models.operations.DisableNotificationActionRequest request, ai.whylabs.WhyLabs.models.operations.DisableNotificationActionSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.DisableNotificationActionResponse disableNotificationAction(ai.whylabs.WhyLabs.models.operations.DisableNotificationActionRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.DisableNotificationActionRequest.class, baseUrl, "/v0/notification-settings/{org_id}/actions/{action_id}/disable", request, null);
         
@@ -127,7 +124,7 @@ public class NotificationSettings {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -153,11 +150,10 @@ public class NotificationSettings {
      * Enable notification action
      * Enable notification action
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.EnableNotificationActionResponse enableNotificationAction(ai.whylabs.WhyLabs.models.operations.EnableNotificationActionRequest request, ai.whylabs.WhyLabs.models.operations.EnableNotificationActionSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.EnableNotificationActionResponse enableNotificationAction(ai.whylabs.WhyLabs.models.operations.EnableNotificationActionRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.EnableNotificationActionRequest.class, baseUrl, "/v0/notification-settings/{org_id}/actions/{action_id}/enable", request, null);
         
@@ -168,7 +164,7 @@ public class NotificationSettings {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -194,11 +190,10 @@ public class NotificationSettings {
      * Get notification action for id
      * Get notification action for id
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.GetNotificationActionResponse getNotificationAction(ai.whylabs.WhyLabs.models.operations.GetNotificationActionRequest request, ai.whylabs.WhyLabs.models.operations.GetNotificationActionSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.GetNotificationActionResponse getNotificationAction(ai.whylabs.WhyLabs.models.operations.GetNotificationActionRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.GetNotificationActionRequest.class, baseUrl, "/v0/notification-settings/{org_id}/actions/{action_id}", request, null);
         
@@ -209,7 +204,7 @@ public class NotificationSettings {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -235,11 +230,10 @@ public class NotificationSettings {
      * Get notification settings for an org
      * Get notification settings for an org
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.GetNotificationSettingsResponse getNotificationSettings(ai.whylabs.WhyLabs.models.operations.GetNotificationSettingsRequest request, ai.whylabs.WhyLabs.models.operations.GetNotificationSettingsSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.GetNotificationSettingsResponse getNotificationSettings(ai.whylabs.WhyLabs.models.operations.GetNotificationSettingsRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.GetNotificationSettingsRequest.class, baseUrl, "/v0/notification-settings/{org_id}", request, null);
         
@@ -250,7 +244,7 @@ public class NotificationSettings {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -276,11 +270,10 @@ public class NotificationSettings {
      * List notification actions for an org
      * Get notification actions for an org
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.ListNotificationActionsResponse listNotificationActions(ai.whylabs.WhyLabs.models.operations.ListNotificationActionsRequest request, ai.whylabs.WhyLabs.models.operations.ListNotificationActionsSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.ListNotificationActionsResponse listNotificationActions(ai.whylabs.WhyLabs.models.operations.ListNotificationActionsRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.ListNotificationActionsRequest.class, baseUrl, "/v0/notification-settings/{org_id}/actions", request, null);
         
@@ -291,7 +284,7 @@ public class NotificationSettings {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -317,11 +310,10 @@ public class NotificationSettings {
      * Add new notification action
      * Add new notification action
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.PutNotificationActionResponse putNotificationAction(ai.whylabs.WhyLabs.models.operations.PutNotificationActionRequest request, ai.whylabs.WhyLabs.models.operations.PutNotificationActionSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.PutNotificationActionResponse putNotificationAction(ai.whylabs.WhyLabs.models.operations.PutNotificationActionRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.PutNotificationActionRequest.class, baseUrl, "/v0/notification-settings/{org_id}/actions/{type}/{action_id}", request, null);
         
@@ -337,7 +329,7 @@ public class NotificationSettings {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -363,11 +355,10 @@ public class NotificationSettings {
      * Test a notification action
      * Test a notification action
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.TestNotificationActionResponse testNotificationAction(ai.whylabs.WhyLabs.models.operations.TestNotificationActionRequest request, ai.whylabs.WhyLabs.models.operations.TestNotificationActionSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.TestNotificationActionResponse testNotificationAction(ai.whylabs.WhyLabs.models.operations.TestNotificationActionRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.TestNotificationActionRequest.class, baseUrl, "/v0/notification-settings/{org_id}/actions/{action_id}/test", request, null);
         
@@ -378,7 +369,7 @@ public class NotificationSettings {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -404,11 +395,10 @@ public class NotificationSettings {
      * Update notification action
      * Update notification action
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.UpdateNotificationActionResponse updateNotificationAction(ai.whylabs.WhyLabs.models.operations.UpdateNotificationActionRequest request, ai.whylabs.WhyLabs.models.operations.UpdateNotificationActionSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.UpdateNotificationActionResponse updateNotificationAction(ai.whylabs.WhyLabs.models.operations.UpdateNotificationActionRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.UpdateNotificationActionRequest.class, baseUrl, "/v0/notification-settings/{org_id}/actions/{type}/{action_id}", request, null);
         
@@ -424,7 +414,7 @@ public class NotificationSettings {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -450,11 +440,10 @@ public class NotificationSettings {
      * Update notification settings for an org
      * Update notification settings for an org
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.UpdateNotificationSettingsResponse updateNotificationSettings(ai.whylabs.WhyLabs.models.operations.UpdateNotificationSettingsRequest request, ai.whylabs.WhyLabs.models.operations.UpdateNotificationSettingsSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.UpdateNotificationSettingsResponse updateNotificationSettings(ai.whylabs.WhyLabs.models.operations.UpdateNotificationSettingsRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.UpdateNotificationSettingsRequest.class, baseUrl, "/v0/notification-settings/{org_id}", request, null);
         
@@ -470,7 +459,7 @@ public class NotificationSettings {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -495,11 +484,10 @@ public class NotificationSettings {
     /**
      * Get dummy notification action payload
      * Get dummy notification action payload
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.GetEmailNotificationActionPayloadResponse getEmailNotificationActionPayload(ai.whylabs.WhyLabs.models.operations.GetEmailNotificationActionPayloadSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.GetEmailNotificationActionPayloadResponse getEmailNotificationActionPayload() throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(baseUrl, "/v0/notification-settings/actions/email/payload");
         
@@ -510,7 +498,7 @@ public class NotificationSettings {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -535,11 +523,10 @@ public class NotificationSettings {
     /**
      * Get dummy notification action payload
      * Get dummy notification action payload
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.GetPagerDutyNotificationActionPayloadResponse getPagerDutyNotificationActionPayload(ai.whylabs.WhyLabs.models.operations.GetPagerDutyNotificationActionPayloadSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.GetPagerDutyNotificationActionPayloadResponse getPagerDutyNotificationActionPayload() throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(baseUrl, "/v0/notification-settings/actions/pagerduty/payload");
         
@@ -550,7 +537,7 @@ public class NotificationSettings {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -575,11 +562,10 @@ public class NotificationSettings {
     /**
      * Get dummy notification action payload
      * Get dummy notification action payload
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.GetSlackNotificationActionPayloadResponse getSlackNotificationActionPayload(ai.whylabs.WhyLabs.models.operations.GetSlackNotificationActionPayloadSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.GetSlackNotificationActionPayloadResponse getSlackNotificationActionPayload() throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(baseUrl, "/v0/notification-settings/actions/slack/payload");
         
@@ -590,7 +576,7 @@ public class NotificationSettings {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

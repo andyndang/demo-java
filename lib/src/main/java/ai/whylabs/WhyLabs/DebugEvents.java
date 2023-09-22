@@ -23,11 +23,10 @@ public class DebugEvents {
      * Create a debug event.
      *         
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.LogDebugEventResponse logDebugEvent(ai.whylabs.WhyLabs.models.operations.LogDebugEventRequest request, ai.whylabs.WhyLabs.models.operations.LogDebugEventSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.LogDebugEventResponse logDebugEvent(ai.whylabs.WhyLabs.models.operations.LogDebugEventRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.LogDebugEventRequest.class, baseUrl, "/v0/organizations/{org_id}/debug-events/resources/{dataset_id}/debug-events/log", request, null);
         
@@ -43,7 +42,7 @@ public class DebugEvents {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

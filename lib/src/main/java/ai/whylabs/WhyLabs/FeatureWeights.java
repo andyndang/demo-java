@@ -24,11 +24,10 @@ public class FeatureWeights {
      * Get column weights for the specified dataset
      * Get column weights for the specified dataset
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.GetColumnWeightsResponse getColumnWeights(ai.whylabs.WhyLabs.models.operations.GetColumnWeightsRequest request, ai.whylabs.WhyLabs.models.operations.GetColumnWeightsSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.GetColumnWeightsResponse getColumnWeights(ai.whylabs.WhyLabs.models.operations.GetColumnWeightsRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.GetColumnWeightsRequest.class, baseUrl, "/v0/organizations/{org_id}/dataset/{dataset_id}/weights", request, null);
         
@@ -39,7 +38,7 @@ public class FeatureWeights {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -65,11 +64,10 @@ public class FeatureWeights {
      * Put column weights for the specified dataset
      * Put column weights for the specified dataset
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.PutColumnWeightsResponse putColumnWeights(ai.whylabs.WhyLabs.models.operations.PutColumnWeightsRequest request, ai.whylabs.WhyLabs.models.operations.PutColumnWeightsSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.PutColumnWeightsResponse putColumnWeights(ai.whylabs.WhyLabs.models.operations.PutColumnWeightsRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.PutColumnWeightsRequest.class, baseUrl, "/v0/organizations/{org_id}/dataset/{dataset_id}/weights", request, null);
         
@@ -85,7 +83,7 @@ public class FeatureWeights {
         req.addHeader("Accept", "application/json");
         req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

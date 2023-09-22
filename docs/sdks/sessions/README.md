@@ -24,21 +24,25 @@ import ai.whylabs.WhyLabs.models.operations.BatchCreateReferenceProfileUploadReq
 import ai.whylabs.WhyLabs.models.operations.BatchCreateReferenceProfileUploadResponse;
 import ai.whylabs.WhyLabs.models.shared.BatchLogReferenceRequest;
 import ai.whylabs.WhyLabs.models.shared.LogReferenceRequest;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("atque") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
             BatchCreateReferenceProfileUploadRequest req = new BatchCreateReferenceProfileUploadRequest(                new BatchLogReferenceRequest() {{
                                 references = new ai.whylabs.WhyLabs.models.shared.LogReferenceRequest[]{{
                                     add(new LogReferenceRequest() {{
-                                        alias = "accusamus";
-                                        datasetTimestamp = 696344L;
+                                        alias = "sit";
+                                        datasetTimestamp = 854614L;
                                     }}),
                                 }};
-                            }};, "voluptatibus");            
+                            }};, "ab");            
 
             BatchCreateReferenceProfileUploadResponse res = sdk.sessions.batchCreateReferenceProfileUpload(req);
 
@@ -76,19 +80,20 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.ClaimGuestSessionRequest;
 import ai.whylabs.WhyLabs.models.operations.ClaimGuestSessionResponse;
-import ai.whylabs.WhyLabs.models.operations.ClaimGuestSessionSecurity;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("soluta") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
-            ClaimGuestSessionRequest req = new ClaimGuestSessionRequest("voluptas", "natus");            
+            ClaimGuestSessionRequest req = new ClaimGuestSessionRequest("dolorum", "iusto");            
 
-            ClaimGuestSessionResponse res = sdk.sessions.claimGuestSession(req, new ClaimGuestSessionSecurity("eos") {{
-                apiKeyAuth = "";
-            }});
+            ClaimGuestSessionResponse res = sdk.sessions.claimGuestSession(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -102,10 +107,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                              | [ai.whylabs.WhyLabs.models.operations.ClaimGuestSessionRequest](../../models/operations/ClaimGuestSessionRequest.md)   | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
-| `security`                                                                                                             | [ai.whylabs.WhyLabs.models.operations.ClaimGuestSessionSecurity](../../models/operations/ClaimGuestSessionSecurity.md) | :heavy_check_mark:                                                                                                     | The security requirements to use for the request.                                                                      |
+| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                            | [ai.whylabs.WhyLabs.models.operations.ClaimGuestSessionRequest](../../models/operations/ClaimGuestSessionRequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
 
 
 ### Response
@@ -126,23 +130,27 @@ import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.CreateDatasetProfileUploadRequest;
 import ai.whylabs.WhyLabs.models.operations.CreateDatasetProfileUploadResponse;
 import ai.whylabs.WhyLabs.models.shared.LogAsyncRequest;
+import ai.whylabs.WhyLabs.models.shared.Security;
 import ai.whylabs.WhyLabs.models.shared.SegmentTag;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("voluptate") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
             CreateDatasetProfileUploadRequest req = new CreateDatasetProfileUploadRequest(                new LogAsyncRequest() {{
-                                datasetTimestamp = 542499L;
+                                datasetTimestamp = 677082L;
                                 segmentTags = new ai.whylabs.WhyLabs.models.shared.SegmentTag[]{{
                                     add(new SegmentTag() {{
-                                        key = "sit";
-                                        value = "fugiat";
+                                        key = "deleniti";
+                                        value = "omnis";
                                     }}),
                                 }};
-                            }};, "ab");            
+                            }};, "necessitatibus");            
 
             CreateDatasetProfileUploadResponse res = sdk.sessions.createDatasetProfileUpload(req);
 
@@ -181,17 +189,21 @@ import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.CreateReferenceProfileUploadRequest;
 import ai.whylabs.WhyLabs.models.operations.CreateReferenceProfileUploadResponse;
 import ai.whylabs.WhyLabs.models.shared.LogReferenceRequest;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("distinctio") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
             CreateReferenceProfileUploadRequest req = new CreateReferenceProfileUploadRequest(                new LogReferenceRequest() {{
-                                alias = "soluta";
-                                datasetTimestamp = 679393L;
-                            }};, "iusto");            
+                                alias = "asperiores";
+                                datasetTimestamp = 469497L;
+                            }};, "ipsum");            
 
             CreateReferenceProfileUploadResponse res = sdk.sessions.createReferenceProfileUpload(req);
 
@@ -229,14 +241,18 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.CreateSessionResponse;
 import ai.whylabs.WhyLabs.models.shared.CreateSessionRequest;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("voluptate") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.CreateSessionRequest req = new CreateSessionRequest("voluptate");            
+            ai.whylabs.WhyLabs.models.shared.CreateSessionRequest req = new CreateSessionRequest("id");            
 
             CreateSessionResponse res = sdk.sessions.createSession(req);
 
@@ -274,19 +290,20 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.GetSessionRequest;
 import ai.whylabs.WhyLabs.models.operations.GetSessionResponse;
-import ai.whylabs.WhyLabs.models.operations.GetSessionSecurity;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("saepe") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
-            GetSessionRequest req = new GetSessionRequest("dolorum");            
+            GetSessionRequest req = new GetSessionRequest("eius");            
 
-            GetSessionResponse res = sdk.sessions.getSession(req, new GetSessionSecurity("deleniti") {{
-                apiKeyAuth = "";
-            }});
+            GetSessionResponse res = sdk.sessions.getSession(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -300,10 +317,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                | [ai.whylabs.WhyLabs.models.operations.GetSessionRequest](../../models/operations/GetSessionRequest.md)   | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-| `security`                                                                                               | [ai.whylabs.WhyLabs.models.operations.GetSessionSecurity](../../models/operations/GetSessionSecurity.md) | :heavy_check_mark:                                                                                       | The security requirements to use for the request.                                                        |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [ai.whylabs.WhyLabs.models.operations.GetSessionRequest](../../models/operations/GetSessionRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 
 ### Response
@@ -324,21 +340,25 @@ import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.GetSessionProfileObservatoryLinkRequest;
 import ai.whylabs.WhyLabs.models.operations.GetSessionProfileObservatoryLinkResponse;
 import ai.whylabs.WhyLabs.models.shared.GetProfileObservatoryLinkRequest;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("aspernatur") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
             GetSessionProfileObservatoryLinkRequest req = new GetSessionProfileObservatoryLinkRequest(                new GetProfileObservatoryLinkRequest() {{
                                 batchProfileTimestamps = new Long[]{{
-                                    add(607045L),
+                                    add(20651L),
                                 }};
                                 referenceProfileIds = new String[]{{
-                                    add("necessitatibus"),
+                                    add("amet"),
                                 }};
-                            }};, "distinctio");            
+                            }};, "optio");            
 
             GetSessionProfileObservatoryLinkResponse res = sdk.sessions.getSessionProfileObservatoryLink(req);
 

@@ -18,19 +18,20 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.DeleteDatasetMetadataRequest;
 import ai.whylabs.WhyLabs.models.operations.DeleteDatasetMetadataResponse;
-import ai.whylabs.WhyLabs.models.operations.DeleteDatasetMetadataSecurity;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("fugit") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
             DeleteDatasetMetadataRequest req = new DeleteDatasetMetadataRequest("model-123", "org-123");            
 
-            DeleteDatasetMetadataResponse res = sdk.datasetMetadata.deleteDatasetMetadata(req, new DeleteDatasetMetadataSecurity("dicta") {{
-                apiKeyAuth = "";
-            }});
+            DeleteDatasetMetadataResponse res = sdk.datasetMetadata.deleteDatasetMetadata(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -44,10 +45,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                      | [ai.whylabs.WhyLabs.models.operations.DeleteDatasetMetadataRequest](../../models/operations/DeleteDatasetMetadataRequest.md)   | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
-| `security`                                                                                                                     | [ai.whylabs.WhyLabs.models.operations.DeleteDatasetMetadataSecurity](../../models/operations/DeleteDatasetMetadataSecurity.md) | :heavy_check_mark:                                                                                                             | The security requirements to use for the request.                                                                              |
+| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                    | [ai.whylabs.WhyLabs.models.operations.DeleteDatasetMetadataRequest](../../models/operations/DeleteDatasetMetadataRequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
 
 
 ### Response
@@ -67,19 +67,20 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.GetDatasetMetadataRequest;
 import ai.whylabs.WhyLabs.models.operations.GetDatasetMetadataResponse;
-import ai.whylabs.WhyLabs.models.operations.GetDatasetMetadataSecurity;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("deleniti") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
             GetDatasetMetadataRequest req = new GetDatasetMetadataRequest("model-123", "org-123");            
 
-            GetDatasetMetadataResponse res = sdk.datasetMetadata.getDatasetMetadata(req, new GetDatasetMetadataSecurity("nam") {{
-                apiKeyAuth = "";
-            }});
+            GetDatasetMetadataResponse res = sdk.datasetMetadata.getDatasetMetadata(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -93,10 +94,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                | [ai.whylabs.WhyLabs.models.operations.GetDatasetMetadataRequest](../../models/operations/GetDatasetMetadataRequest.md)   | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
-| `security`                                                                                                               | [ai.whylabs.WhyLabs.models.operations.GetDatasetMetadataSecurity](../../models/operations/GetDatasetMetadataSecurity.md) | :heavy_check_mark:                                                                                                       | The security requirements to use for the request.                                                                        |
+| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                              | [ai.whylabs.WhyLabs.models.operations.GetDatasetMetadataRequest](../../models/operations/GetDatasetMetadataRequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
 
 
 ### Response
@@ -116,19 +116,20 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.PutDatasetMetadataRequest;
 import ai.whylabs.WhyLabs.models.operations.PutDatasetMetadataResponse;
-import ai.whylabs.WhyLabs.models.operations.PutDatasetMetadataSecurity;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("hic") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
-            PutDatasetMetadataRequest req = new PutDatasetMetadataRequest("officia", "model-123", "org-123");            
+            PutDatasetMetadataRequest req = new PutDatasetMetadataRequest("optio", "model-123", "org-123");            
 
-            PutDatasetMetadataResponse res = sdk.datasetMetadata.putDatasetMetadata(req, new PutDatasetMetadataSecurity("occaecati") {{
-                apiKeyAuth = "";
-            }});
+            PutDatasetMetadataResponse res = sdk.datasetMetadata.putDatasetMetadata(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -142,10 +143,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                | [ai.whylabs.WhyLabs.models.operations.PutDatasetMetadataRequest](../../models/operations/PutDatasetMetadataRequest.md)   | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
-| `security`                                                                                                               | [ai.whylabs.WhyLabs.models.operations.PutDatasetMetadataSecurity](../../models/operations/PutDatasetMetadataSecurity.md) | :heavy_check_mark:                                                                                                       | The security requirements to use for the request.                                                                        |
+| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                              | [ai.whylabs.WhyLabs.models.operations.PutDatasetMetadataRequest](../../models/operations/PutDatasetMetadataRequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
 
 
 ### Response

@@ -16,19 +16,20 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.GetFeatureFlagsRequest;
 import ai.whylabs.WhyLabs.models.operations.GetFeatureFlagsResponse;
-import ai.whylabs.WhyLabs.models.operations.GetFeatureFlagsSecurity;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("saepe") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
-            GetFeatureFlagsRequest req = new GetFeatureFlagsRequest("in", "corporis");            
+            GetFeatureFlagsRequest req = new GetFeatureFlagsRequest("quidem", "architecto");            
 
-            GetFeatureFlagsResponse res = sdk.featureFlags.getFeatureFlags(req, new GetFeatureFlagsSecurity("iste") {{
-                apiKeyAuth = "";
-            }});
+            GetFeatureFlagsResponse res = sdk.featureFlags.getFeatureFlags(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -42,10 +43,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                          | [ai.whylabs.WhyLabs.models.operations.GetFeatureFlagsRequest](../../models/operations/GetFeatureFlagsRequest.md)   | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
-| `security`                                                                                                         | [ai.whylabs.WhyLabs.models.operations.GetFeatureFlagsSecurity](../../models/operations/GetFeatureFlagsSecurity.md) | :heavy_check_mark:                                                                                                 | The security requirements to use for the request.                                                                  |
+| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                        | [ai.whylabs.WhyLabs.models.operations.GetFeatureFlagsRequest](../../models/operations/GetFeatureFlagsRequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
 
 
 ### Response

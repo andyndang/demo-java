@@ -29,20 +29,21 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.AddNotificationActionRequest;
 import ai.whylabs.WhyLabs.models.operations.AddNotificationActionResponse;
-import ai.whylabs.WhyLabs.models.operations.AddNotificationActionSecurity;
 import ai.whylabs.WhyLabs.models.shared.ActionType;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("maiores") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
-            AddNotificationActionRequest req = new AddNotificationActionRequest("excepturi", "user-action", "org-123", ActionType.EMAIL);            
+            AddNotificationActionRequest req = new AddNotificationActionRequest("quidem", "user-action", "org-123", ActionType.SLACK);            
 
-            AddNotificationActionResponse res = sdk.notificationSettings.addNotificationAction(req, new AddNotificationActionSecurity("ea") {{
-                apiKeyAuth = "";
-            }});
+            AddNotificationActionResponse res = sdk.notificationSettings.addNotificationAction(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -56,10 +57,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                      | [ai.whylabs.WhyLabs.models.operations.AddNotificationActionRequest](../../models/operations/AddNotificationActionRequest.md)   | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
-| `security`                                                                                                                     | [ai.whylabs.WhyLabs.models.operations.AddNotificationActionSecurity](../../models/operations/AddNotificationActionSecurity.md) | :heavy_check_mark:                                                                                                             | The security requirements to use for the request.                                                                              |
+| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                    | [ai.whylabs.WhyLabs.models.operations.AddNotificationActionRequest](../../models/operations/AddNotificationActionRequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
 
 
 ### Response
@@ -79,19 +79,20 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.DeleteNotificationActionRequest;
 import ai.whylabs.WhyLabs.models.operations.DeleteNotificationActionResponse;
-import ai.whylabs.WhyLabs.models.operations.DeleteNotificationActionSecurity;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("voluptate") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
             DeleteNotificationActionRequest req = new DeleteNotificationActionRequest("user-action", "org-123");            
 
-            DeleteNotificationActionResponse res = sdk.notificationSettings.deleteNotificationAction(req, new DeleteNotificationActionSecurity("accusantium") {{
-                apiKeyAuth = "";
-            }});
+            DeleteNotificationActionResponse res = sdk.notificationSettings.deleteNotificationAction(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -105,10 +106,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                            | [ai.whylabs.WhyLabs.models.operations.DeleteNotificationActionRequest](../../models/operations/DeleteNotificationActionRequest.md)   | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
-| `security`                                                                                                                           | [ai.whylabs.WhyLabs.models.operations.DeleteNotificationActionSecurity](../../models/operations/DeleteNotificationActionSecurity.md) | :heavy_check_mark:                                                                                                                   | The security requirements to use for the request.                                                                                    |
+| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
+| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                          | [ai.whylabs.WhyLabs.models.operations.DeleteNotificationActionRequest](../../models/operations/DeleteNotificationActionRequest.md) | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
 
 
 ### Response
@@ -128,19 +128,20 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.DisableNotificationActionRequest;
 import ai.whylabs.WhyLabs.models.operations.DisableNotificationActionResponse;
-import ai.whylabs.WhyLabs.models.operations.DisableNotificationActionSecurity;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("autem") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
             DisableNotificationActionRequest req = new DisableNotificationActionRequest("user-action", "org-123");            
 
-            DisableNotificationActionResponse res = sdk.notificationSettings.disableNotificationAction(req, new DisableNotificationActionSecurity("ab") {{
-                apiKeyAuth = "";
-            }});
+            DisableNotificationActionResponse res = sdk.notificationSettings.disableNotificationAction(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -154,10 +155,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
-| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                              | [ai.whylabs.WhyLabs.models.operations.DisableNotificationActionRequest](../../models/operations/DisableNotificationActionRequest.md)   | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
-| `security`                                                                                                                             | [ai.whylabs.WhyLabs.models.operations.DisableNotificationActionSecurity](../../models/operations/DisableNotificationActionSecurity.md) | :heavy_check_mark:                                                                                                                     | The security requirements to use for the request.                                                                                      |
+| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                            | [ai.whylabs.WhyLabs.models.operations.DisableNotificationActionRequest](../../models/operations/DisableNotificationActionRequest.md) | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
 
 
 ### Response
@@ -177,19 +177,20 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.EnableNotificationActionRequest;
 import ai.whylabs.WhyLabs.models.operations.EnableNotificationActionResponse;
-import ai.whylabs.WhyLabs.models.operations.EnableNotificationActionSecurity;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("nam") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
             EnableNotificationActionRequest req = new EnableNotificationActionRequest("user-action", "org-123");            
 
-            EnableNotificationActionResponse res = sdk.notificationSettings.enableNotificationAction(req, new EnableNotificationActionSecurity("maiores") {{
-                apiKeyAuth = "";
-            }});
+            EnableNotificationActionResponse res = sdk.notificationSettings.enableNotificationAction(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -203,10 +204,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                            | [ai.whylabs.WhyLabs.models.operations.EnableNotificationActionRequest](../../models/operations/EnableNotificationActionRequest.md)   | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
-| `security`                                                                                                                           | [ai.whylabs.WhyLabs.models.operations.EnableNotificationActionSecurity](../../models/operations/EnableNotificationActionSecurity.md) | :heavy_check_mark:                                                                                                                   | The security requirements to use for the request.                                                                                    |
+| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
+| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                          | [ai.whylabs.WhyLabs.models.operations.EnableNotificationActionRequest](../../models/operations/EnableNotificationActionRequest.md) | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
 
 
 ### Response
@@ -226,19 +226,20 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.GetNotificationActionRequest;
 import ai.whylabs.WhyLabs.models.operations.GetNotificationActionResponse;
-import ai.whylabs.WhyLabs.models.operations.GetNotificationActionSecurity;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("eaque") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
             GetNotificationActionRequest req = new GetNotificationActionRequest("user-action", "org-123");            
 
-            GetNotificationActionResponse res = sdk.notificationSettings.getNotificationAction(req, new GetNotificationActionSecurity("quidem") {{
-                apiKeyAuth = "";
-            }});
+            GetNotificationActionResponse res = sdk.notificationSettings.getNotificationAction(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -252,10 +253,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                      | [ai.whylabs.WhyLabs.models.operations.GetNotificationActionRequest](../../models/operations/GetNotificationActionRequest.md)   | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
-| `security`                                                                                                                     | [ai.whylabs.WhyLabs.models.operations.GetNotificationActionSecurity](../../models/operations/GetNotificationActionSecurity.md) | :heavy_check_mark:                                                                                                             | The security requirements to use for the request.                                                                              |
+| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                    | [ai.whylabs.WhyLabs.models.operations.GetNotificationActionRequest](../../models/operations/GetNotificationActionRequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
 
 
 ### Response
@@ -275,19 +275,20 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.GetNotificationSettingsRequest;
 import ai.whylabs.WhyLabs.models.operations.GetNotificationSettingsResponse;
-import ai.whylabs.WhyLabs.models.operations.GetNotificationSettingsSecurity;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("pariatur") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
-            GetNotificationSettingsRequest req = new GetNotificationSettingsRequest("ipsam");            
+            GetNotificationSettingsRequest req = new GetNotificationSettingsRequest("nemo");            
 
-            GetNotificationSettingsResponse res = sdk.notificationSettings.getNotificationSettings(req, new GetNotificationSettingsSecurity("voluptate") {{
-                apiKeyAuth = "";
-            }});
+            GetNotificationSettingsResponse res = sdk.notificationSettings.getNotificationSettings(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -301,10 +302,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
-| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                          | [ai.whylabs.WhyLabs.models.operations.GetNotificationSettingsRequest](../../models/operations/GetNotificationSettingsRequest.md)   | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
-| `security`                                                                                                                         | [ai.whylabs.WhyLabs.models.operations.GetNotificationSettingsSecurity](../../models/operations/GetNotificationSettingsSecurity.md) | :heavy_check_mark:                                                                                                                 | The security requirements to use for the request.                                                                                  |
+| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                        | [ai.whylabs.WhyLabs.models.operations.GetNotificationSettingsRequest](../../models/operations/GetNotificationSettingsRequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
 
 
 ### Response
@@ -324,19 +324,20 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.ListNotificationActionsRequest;
 import ai.whylabs.WhyLabs.models.operations.ListNotificationActionsResponse;
-import ai.whylabs.WhyLabs.models.operations.ListNotificationActionsSecurity;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("voluptatibus") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
             ListNotificationActionsRequest req = new ListNotificationActionsRequest("org-123");            
 
-            ListNotificationActionsResponse res = sdk.notificationSettings.listNotificationActions(req, new ListNotificationActionsSecurity("autem") {{
-                apiKeyAuth = "";
-            }});
+            ListNotificationActionsResponse res = sdk.notificationSettings.listNotificationActions(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -350,10 +351,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
-| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                          | [ai.whylabs.WhyLabs.models.operations.ListNotificationActionsRequest](../../models/operations/ListNotificationActionsRequest.md)   | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
-| `security`                                                                                                                         | [ai.whylabs.WhyLabs.models.operations.ListNotificationActionsSecurity](../../models/operations/ListNotificationActionsSecurity.md) | :heavy_check_mark:                                                                                                                 | The security requirements to use for the request.                                                                                  |
+| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                        | [ai.whylabs.WhyLabs.models.operations.ListNotificationActionsRequest](../../models/operations/ListNotificationActionsRequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
 
 
 ### Response
@@ -373,20 +373,21 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.PutNotificationActionRequest;
 import ai.whylabs.WhyLabs.models.operations.PutNotificationActionResponse;
-import ai.whylabs.WhyLabs.models.operations.PutNotificationActionSecurity;
 import ai.whylabs.WhyLabs.models.shared.ActionType;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("perferendis") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
-            PutNotificationActionRequest req = new PutNotificationActionRequest("nam", "user-action", "org-123", ActionType.EMAIL);            
+            PutNotificationActionRequest req = new PutNotificationActionRequest("fugiat", "user-action", "org-123", ActionType.EMAIL);            
 
-            PutNotificationActionResponse res = sdk.notificationSettings.putNotificationAction(req, new PutNotificationActionSecurity("pariatur") {{
-                apiKeyAuth = "";
-            }});
+            PutNotificationActionResponse res = sdk.notificationSettings.putNotificationAction(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -400,10 +401,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                      | [ai.whylabs.WhyLabs.models.operations.PutNotificationActionRequest](../../models/operations/PutNotificationActionRequest.md)   | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
-| `security`                                                                                                                     | [ai.whylabs.WhyLabs.models.operations.PutNotificationActionSecurity](../../models/operations/PutNotificationActionSecurity.md) | :heavy_check_mark:                                                                                                             | The security requirements to use for the request.                                                                              |
+| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                    | [ai.whylabs.WhyLabs.models.operations.PutNotificationActionRequest](../../models/operations/PutNotificationActionRequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
 
 
 ### Response
@@ -423,19 +423,20 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.TestNotificationActionRequest;
 import ai.whylabs.WhyLabs.models.operations.TestNotificationActionResponse;
-import ai.whylabs.WhyLabs.models.operations.TestNotificationActionSecurity;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("aut") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
             TestNotificationActionRequest req = new TestNotificationActionRequest("user-action", "org-123");            
 
-            TestNotificationActionResponse res = sdk.notificationSettings.testNotificationAction(req, new TestNotificationActionSecurity("nemo") {{
-                apiKeyAuth = "";
-            }});
+            TestNotificationActionResponse res = sdk.notificationSettings.testNotificationAction(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -449,10 +450,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                        | [ai.whylabs.WhyLabs.models.operations.TestNotificationActionRequest](../../models/operations/TestNotificationActionRequest.md)   | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
-| `security`                                                                                                                       | [ai.whylabs.WhyLabs.models.operations.TestNotificationActionSecurity](../../models/operations/TestNotificationActionSecurity.md) | :heavy_check_mark:                                                                                                               | The security requirements to use for the request.                                                                                |
+| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                      | [ai.whylabs.WhyLabs.models.operations.TestNotificationActionRequest](../../models/operations/TestNotificationActionRequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
 
 
 ### Response
@@ -472,20 +472,21 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.UpdateNotificationActionRequest;
 import ai.whylabs.WhyLabs.models.operations.UpdateNotificationActionResponse;
-import ai.whylabs.WhyLabs.models.operations.UpdateNotificationActionSecurity;
 import ai.whylabs.WhyLabs.models.shared.ActionType;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("cumque") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
-            UpdateNotificationActionRequest req = new UpdateNotificationActionRequest("voluptatibus", "user-action", "org-123", ActionType.EMAIL);            
+            UpdateNotificationActionRequest req = new UpdateNotificationActionRequest("corporis", "user-action", "org-123", ActionType.NA);            
 
-            UpdateNotificationActionResponse res = sdk.notificationSettings.updateNotificationAction(req, new UpdateNotificationActionSecurity("fugiat") {{
-                apiKeyAuth = "";
-            }});
+            UpdateNotificationActionResponse res = sdk.notificationSettings.updateNotificationAction(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -499,10 +500,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                            | [ai.whylabs.WhyLabs.models.operations.UpdateNotificationActionRequest](../../models/operations/UpdateNotificationActionRequest.md)   | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
-| `security`                                                                                                                           | [ai.whylabs.WhyLabs.models.operations.UpdateNotificationActionSecurity](../../models/operations/UpdateNotificationActionSecurity.md) | :heavy_check_mark:                                                                                                                   | The security requirements to use for the request.                                                                                    |
+| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
+| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                          | [ai.whylabs.WhyLabs.models.operations.UpdateNotificationActionRequest](../../models/operations/UpdateNotificationActionRequest.md) | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
 
 
 ### Response
@@ -522,42 +522,43 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.UpdateNotificationSettingsRequest;
 import ai.whylabs.WhyLabs.models.operations.UpdateNotificationSettingsResponse;
-import ai.whylabs.WhyLabs.models.operations.UpdateNotificationSettingsSecurity;
 import ai.whylabs.WhyLabs.models.shared.NotificationSettings;
 import ai.whylabs.WhyLabs.models.shared.NotificationSettingsDay;
 import ai.whylabs.WhyLabs.models.shared.NotificationSqsMessageCadence;
+import ai.whylabs.WhyLabs.models.shared.Security;
 import ai.whylabs.WhyLabs.models.shared.UberNotificationSchedule;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("libero") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
             UpdateNotificationSettingsRequest req = new UpdateNotificationSettingsRequest(                new NotificationSettings() {{
-                                emailSettings = new UberNotificationSchedule(NotificationSqsMessageCadence.HOURLY, false) {{
-                                    dayOfWeek = NotificationSettingsDay.SUNDAY;
-                                    local24HourOfDay = 764912;
-                                    localMinuteOfHour = 359978;
-                                    localTimezone = "hic";
+                                emailSettings = new UberNotificationSchedule(NotificationSqsMessageCadence.WEEKLY, false) {{
+                                    dayOfWeek = NotificationSettingsDay.MONDAY;
+                                    local24HourOfDay = 339404;
+                                    localMinuteOfHour = 521037;
+                                    localTimezone = "dignissimos";
                                 }};;
-                                pagerDutySettings = new UberNotificationSchedule(NotificationSqsMessageCadence.WEEKLY, false) {{
+                                pagerDutySettings = new UberNotificationSchedule(NotificationSqsMessageCadence.HOURLY, false) {{
+                                    dayOfWeek = NotificationSettingsDay.TUESDAY;
+                                    local24HourOfDay = 199996;
+                                    localMinuteOfHour = 179490;
+                                    localTimezone = "perferendis";
+                                }};;
+                                slackSettings = new UberNotificationSchedule(NotificationSqsMessageCadence.HOURLY, false) {{
                                     dayOfWeek = NotificationSettingsDay.FRIDAY;
-                                    local24HourOfDay = 171629;
-                                    localMinuteOfHour = 339404;
-                                    localTimezone = "totam";
+                                    local24HourOfDay = 463451;
+                                    localMinuteOfHour = 223924;
+                                    localTimezone = "vero";
                                 }};;
-                                slackSettings = new UberNotificationSchedule(NotificationSqsMessageCadence.DAILY, false) {{
-                                    dayOfWeek = NotificationSettingsDay.SUNDAY;
-                                    local24HourOfDay = 338985;
-                                    localMinuteOfHour = 199996;
-                                    localTimezone = "eos";
-                                }};;
-                            }};, "perferendis");            
+                            }};, "nostrum");            
 
-            UpdateNotificationSettingsResponse res = sdk.notificationSettings.updateNotificationSettings(req, new UpdateNotificationSettingsSecurity("dolores") {{
-                apiKeyAuth = "";
-            }});
+            UpdateNotificationSettingsResponse res = sdk.notificationSettings.updateNotificationSettings(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -571,10 +572,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                | Type                                                                                                                                     | Required                                                                                                                                 | Description                                                                                                                              |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                | [ai.whylabs.WhyLabs.models.operations.UpdateNotificationSettingsRequest](../../models/operations/UpdateNotificationSettingsRequest.md)   | :heavy_check_mark:                                                                                                                       | The request object to use for the request.                                                                                               |
-| `security`                                                                                                                               | [ai.whylabs.WhyLabs.models.operations.UpdateNotificationSettingsSecurity](../../models/operations/UpdateNotificationSettingsSecurity.md) | :heavy_check_mark:                                                                                                                       | The security requirements to use for the request.                                                                                        |
+| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
+| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                              | [ai.whylabs.WhyLabs.models.operations.UpdateNotificationSettingsRequest](../../models/operations/UpdateNotificationSettingsRequest.md) | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
 
 
 ### Response
@@ -593,17 +593,18 @@ package hello.world;
 
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.GetEmailNotificationActionPayloadResponse;
-import ai.whylabs.WhyLabs.models.operations.GetEmailNotificationActionPayloadSecurity;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("hic") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
-            GetEmailNotificationActionPayloadResponse res = sdk.notificationSettings.getEmailNotificationActionPayload(new GetEmailNotificationActionPayloadSecurity("minus") {{
-                apiKeyAuth = "";
-            }});
+            GetEmailNotificationActionPayloadResponse res = sdk.notificationSettings.getEmailNotificationActionPayload();
 
             if (res.statusCode == 200) {
                 // handle response
@@ -614,12 +615,6 @@ public class Application {
     }
 }
 ```
-
-### Parameters
-
-| Parameter                                                                                                                                              | Type                                                                                                                                                   | Required                                                                                                                                               | Description                                                                                                                                            |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `security`                                                                                                                                             | [ai.whylabs.WhyLabs.models.operations.GetEmailNotificationActionPayloadSecurity](../../models/operations/GetEmailNotificationActionPayloadSecurity.md) | :heavy_check_mark:                                                                                                                                     | The security requirements to use for the request.                                                                                                      |
 
 
 ### Response
@@ -638,17 +633,18 @@ package hello.world;
 
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.GetPagerDutyNotificationActionPayloadResponse;
-import ai.whylabs.WhyLabs.models.operations.GetPagerDutyNotificationActionPayloadSecurity;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("recusandae") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
-            GetPagerDutyNotificationActionPayloadResponse res = sdk.notificationSettings.getPagerDutyNotificationActionPayload(new GetPagerDutyNotificationActionPayloadSecurity("quam") {{
-                apiKeyAuth = "";
-            }});
+            GetPagerDutyNotificationActionPayloadResponse res = sdk.notificationSettings.getPagerDutyNotificationActionPayload();
 
             if (res.statusCode == 200) {
                 // handle response
@@ -659,12 +655,6 @@ public class Application {
     }
 }
 ```
-
-### Parameters
-
-| Parameter                                                                                                                                                      | Type                                                                                                                                                           | Required                                                                                                                                                       | Description                                                                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `security`                                                                                                                                                     | [ai.whylabs.WhyLabs.models.operations.GetPagerDutyNotificationActionPayloadSecurity](../../models/operations/GetPagerDutyNotificationActionPayloadSecurity.md) | :heavy_check_mark:                                                                                                                                             | The security requirements to use for the request.                                                                                                              |
 
 
 ### Response
@@ -683,17 +673,18 @@ package hello.world;
 
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.GetSlackNotificationActionPayloadResponse;
-import ai.whylabs.WhyLabs.models.operations.GetSlackNotificationActionPayloadSecurity;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("omnis") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
-            GetSlackNotificationActionPayloadResponse res = sdk.notificationSettings.getSlackNotificationActionPayload(new GetSlackNotificationActionPayloadSecurity("dolor") {{
-                apiKeyAuth = "";
-            }});
+            GetSlackNotificationActionPayloadResponse res = sdk.notificationSettings.getSlackNotificationActionPayload();
 
             if (res.statusCode == 200) {
                 // handle response
@@ -704,12 +695,6 @@ public class Application {
     }
 }
 ```
-
-### Parameters
-
-| Parameter                                                                                                                                              | Type                                                                                                                                                   | Required                                                                                                                                               | Description                                                                                                                                            |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `security`                                                                                                                                             | [ai.whylabs.WhyLabs.models.operations.GetSlackNotificationActionPayloadSecurity](../../models/operations/GetSlackNotificationActionPayloadSecurity.md) | :heavy_check_mark:                                                                                                                                     | The security requirements to use for the request.                                                                                                      |
 
 
 ### Response

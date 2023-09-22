@@ -24,13 +24,16 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.CreateOrganizationRequest;
 import ai.whylabs.WhyLabs.models.operations.CreateOrganizationResponse;
-import ai.whylabs.WhyLabs.models.operations.CreateOrganizationSecurity;
+import ai.whylabs.WhyLabs.models.shared.Security;
 import ai.whylabs.WhyLabs.models.shared.SubscriptionTier;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("facilis") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
             CreateOrganizationRequest req = new CreateOrganizationRequest("ACME, Inc") {{
@@ -42,12 +45,10 @@ public class Application {
                 pagerDutyKey = "abc-def-ghi-jkl";
                 parentOrgId = "org-123";
                 slackWebhook = "https://hooks.slack.com/services/foo/bar";
-                subscriptionTier = SubscriptionTier.SUBSCRIPTION;
+                subscriptionTier = SubscriptionTier.AWS_MARKETPLACE;
             }};            
 
-            CreateOrganizationResponse res = sdk.organizations.createOrganization(req, new CreateOrganizationSecurity("nostrum") {{
-                apiKeyAuth = "";
-            }});
+            CreateOrganizationResponse res = sdk.organizations.createOrganization(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -61,10 +62,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                | [ai.whylabs.WhyLabs.models.operations.CreateOrganizationRequest](../../models/operations/CreateOrganizationRequest.md)   | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
-| `security`                                                                                                               | [ai.whylabs.WhyLabs.models.operations.CreateOrganizationSecurity](../../models/operations/CreateOrganizationSecurity.md) | :heavy_check_mark:                                                                                                       | The security requirements to use for the request.                                                                        |
+| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                              | [ai.whylabs.WhyLabs.models.operations.CreateOrganizationRequest](../../models/operations/CreateOrganizationRequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
 
 
 ### Response
@@ -84,19 +84,20 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.DeleteOrganizationRequest;
 import ai.whylabs.WhyLabs.models.operations.DeleteOrganizationResponse;
-import ai.whylabs.WhyLabs.models.operations.DeleteOrganizationSecurity;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("voluptatem") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
-            DeleteOrganizationRequest req = new DeleteOrganizationRequest("hic");            
+            DeleteOrganizationRequest req = new DeleteOrganizationRequest("porro");            
 
-            DeleteOrganizationResponse res = sdk.organizations.deleteOrganization(req, new DeleteOrganizationSecurity("recusandae") {{
-                apiKeyAuth = "";
-            }});
+            DeleteOrganizationResponse res = sdk.organizations.deleteOrganization(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -110,10 +111,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                | [ai.whylabs.WhyLabs.models.operations.DeleteOrganizationRequest](../../models/operations/DeleteOrganizationRequest.md)   | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
-| `security`                                                                                                               | [ai.whylabs.WhyLabs.models.operations.DeleteOrganizationSecurity](../../models/operations/DeleteOrganizationSecurity.md) | :heavy_check_mark:                                                                                                       | The security requirements to use for the request.                                                                        |
+| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                              | [ai.whylabs.WhyLabs.models.operations.DeleteOrganizationRequest](../../models/operations/DeleteOrganizationRequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
 
 
 ### Response
@@ -133,19 +133,20 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.GetAWSMarketplaceMetadataRequest;
 import ai.whylabs.WhyLabs.models.operations.GetAWSMarketplaceMetadataResponse;
-import ai.whylabs.WhyLabs.models.operations.GetAWSMarketplaceMetadataSecurity;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("consequuntur") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
-            GetAWSMarketplaceMetadataRequest req = new GetAWSMarketplaceMetadataRequest("omnis");            
+            GetAWSMarketplaceMetadataRequest req = new GetAWSMarketplaceMetadataRequest("blanditiis");            
 
-            GetAWSMarketplaceMetadataResponse res = sdk.organizations.getAWSMarketplaceMetadata(req, new GetAWSMarketplaceMetadataSecurity("facilis") {{
-                apiKeyAuth = "";
-            }});
+            GetAWSMarketplaceMetadataResponse res = sdk.organizations.getAWSMarketplaceMetadata(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -159,10 +160,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
-| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                              | [ai.whylabs.WhyLabs.models.operations.GetAWSMarketplaceMetadataRequest](../../models/operations/GetAWSMarketplaceMetadataRequest.md)   | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
-| `security`                                                                                                                             | [ai.whylabs.WhyLabs.models.operations.GetAWSMarketplaceMetadataSecurity](../../models/operations/GetAWSMarketplaceMetadataSecurity.md) | :heavy_check_mark:                                                                                                                     | The security requirements to use for the request.                                                                                      |
+| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                            | [ai.whylabs.WhyLabs.models.operations.GetAWSMarketplaceMetadataRequest](../../models/operations/GetAWSMarketplaceMetadataRequest.md) | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
 
 
 ### Response
@@ -182,19 +182,20 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.GetOrganizationRequest;
 import ai.whylabs.WhyLabs.models.operations.GetOrganizationResponse;
-import ai.whylabs.WhyLabs.models.operations.GetOrganizationSecurity;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("error") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
-            GetOrganizationRequest req = new GetOrganizationRequest("perspiciatis");            
+            GetOrganizationRequest req = new GetOrganizationRequest("eaque");            
 
-            GetOrganizationResponse res = sdk.organizations.getOrganization(req, new GetOrganizationSecurity("voluptatem") {{
-                apiKeyAuth = "";
-            }});
+            GetOrganizationResponse res = sdk.organizations.getOrganization(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -208,10 +209,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                          | [ai.whylabs.WhyLabs.models.operations.GetOrganizationRequest](../../models/operations/GetOrganizationRequest.md)   | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
-| `security`                                                                                                         | [ai.whylabs.WhyLabs.models.operations.GetOrganizationSecurity](../../models/operations/GetOrganizationSecurity.md) | :heavy_check_mark:                                                                                                 | The security requirements to use for the request.                                                                  |
+| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                        | [ai.whylabs.WhyLabs.models.operations.GetOrganizationRequest](../../models/operations/GetOrganizationRequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
 
 
 ### Response
@@ -230,17 +230,18 @@ package hello.world;
 
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.ListOrganizationsResponse;
-import ai.whylabs.WhyLabs.models.operations.ListOrganizationsSecurity;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("occaecati") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
-            ListOrganizationsResponse res = sdk.organizations.listOrganizations(new ListOrganizationsSecurity("porro") {{
-                apiKeyAuth = "";
-            }});
+            ListOrganizationsResponse res = sdk.organizations.listOrganizations();
 
             if (res.statusCode == 200) {
                 // handle response
@@ -251,12 +252,6 @@ public class Application {
     }
 }
 ```
-
-### Parameters
-
-| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `security`                                                                                                             | [ai.whylabs.WhyLabs.models.operations.ListOrganizationsSecurity](../../models/operations/ListOrganizationsSecurity.md) | :heavy_check_mark:                                                                                                     | The security requirements to use for the request.                                                                      |
 
 
 ### Response
@@ -279,29 +274,30 @@ import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.PartiallyUpdateOrgRequest;
 import ai.whylabs.WhyLabs.models.operations.PartiallyUpdateOrgRequestBody;
 import ai.whylabs.WhyLabs.models.operations.PartiallyUpdateOrgResponse;
-import ai.whylabs.WhyLabs.models.operations.PartiallyUpdateOrgSecurity;
+import ai.whylabs.WhyLabs.models.shared.Security;
 import ai.whylabs.WhyLabs.models.shared.SubscriptionTier;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("rerum") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
             PartiallyUpdateOrgRequest req = new PartiallyUpdateOrgRequest(                new PartiallyUpdateOrgRequestBody() {{
-                                orgId = "consequuntur";
+                                orgId = "adipisci";
                             }};) {{
                 domain = "acme.ai";
                 name = "ACME, Inc";
                 notificationEmailAddress = "notifications@acme.ai";
                 observatoryUrl = "https://hub.whylabsapp.com";
                 slackWebhook = "https://hooks.slack.com/services/foo/bar";
-                subscriptionTier = SubscriptionTier.AWS_MARKETPLACE;
+                subscriptionTier = SubscriptionTier.SUBSCRIPTION;
             }};            
 
-            PartiallyUpdateOrgResponse res = sdk.organizations.partiallyUpdateOrg(req, new PartiallyUpdateOrgSecurity("error") {{
-                apiKeyAuth = "";
-            }});
+            PartiallyUpdateOrgResponse res = sdk.organizations.partiallyUpdateOrg(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -315,10 +311,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                | [ai.whylabs.WhyLabs.models.operations.PartiallyUpdateOrgRequest](../../models/operations/PartiallyUpdateOrgRequest.md)   | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
-| `security`                                                                                                               | [ai.whylabs.WhyLabs.models.operations.PartiallyUpdateOrgSecurity](../../models/operations/PartiallyUpdateOrgSecurity.md) | :heavy_check_mark:                                                                                                       | The security requirements to use for the request.                                                                        |
+| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                              | [ai.whylabs.WhyLabs.models.operations.PartiallyUpdateOrgRequest](../../models/operations/PartiallyUpdateOrgRequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
 
 
 ### Response
@@ -338,16 +333,19 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.PartiallyUpdateOrganizationRequest;
 import ai.whylabs.WhyLabs.models.operations.PartiallyUpdateOrganizationResponse;
-import ai.whylabs.WhyLabs.models.operations.PartiallyUpdateOrganizationSecurity;
+import ai.whylabs.WhyLabs.models.shared.Security;
 import ai.whylabs.WhyLabs.models.shared.SubscriptionTier;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("earum") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
-            PartiallyUpdateOrganizationRequest req = new PartiallyUpdateOrganizationRequest("eaque") {{
+            PartiallyUpdateOrganizationRequest req = new PartiallyUpdateOrganizationRequest("modi") {{
                 domain = "acme.ai";
                 emailDomains = "acme.ai,acme.com";
                 name = "ACME, Inc";
@@ -359,9 +357,7 @@ public class Application {
                 subscriptionTier = SubscriptionTier.AWS_MARKETPLACE;
             }};            
 
-            PartiallyUpdateOrganizationResponse res = sdk.organizations.partiallyUpdateOrganization(req, new PartiallyUpdateOrganizationSecurity("rerum") {{
-                apiKeyAuth = "";
-            }});
+            PartiallyUpdateOrganizationResponse res = sdk.organizations.partiallyUpdateOrganization(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -375,10 +371,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                                  | Type                                                                                                                                       | Required                                                                                                                                   | Description                                                                                                                                |
-| ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                  | [ai.whylabs.WhyLabs.models.operations.PartiallyUpdateOrganizationRequest](../../models/operations/PartiallyUpdateOrganizationRequest.md)   | :heavy_check_mark:                                                                                                                         | The request object to use for the request.                                                                                                 |
-| `security`                                                                                                                                 | [ai.whylabs.WhyLabs.models.operations.PartiallyUpdateOrganizationSecurity](../../models/operations/PartiallyUpdateOrganizationSecurity.md) | :heavy_check_mark:                                                                                                                         | The security requirements to use for the request.                                                                                          |
+| Parameter                                                                                                                                | Type                                                                                                                                     | Required                                                                                                                                 | Description                                                                                                                              |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                | [ai.whylabs.WhyLabs.models.operations.PartiallyUpdateOrganizationRequest](../../models/operations/PartiallyUpdateOrganizationRequest.md) | :heavy_check_mark:                                                                                                                       | The request object to use for the request.                                                                                               |
 
 
 ### Response
@@ -401,17 +396,20 @@ import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.UpdateOrgRequest;
 import ai.whylabs.WhyLabs.models.operations.UpdateOrgRequestBody;
 import ai.whylabs.WhyLabs.models.operations.UpdateOrgResponse;
-import ai.whylabs.WhyLabs.models.operations.UpdateOrgSecurity;
+import ai.whylabs.WhyLabs.models.shared.Security;
 import ai.whylabs.WhyLabs.models.shared.SubscriptionTier;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("dolorum") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
             UpdateOrgRequest req = new UpdateOrgRequest(                new UpdateOrgRequestBody() {{
-                                orgId = "adipisci";
+                                orgId = "deleniti";
                             }};, "ACME, Inc") {{
                 domain = "acme.ai";
                 emailDomains = "acme.ai,acme.com";
@@ -423,9 +421,7 @@ public class Application {
                 subscriptionTier = SubscriptionTier.SUBSCRIPTION;
             }};            
 
-            UpdateOrgResponse res = sdk.organizations.updateOrg(req, new UpdateOrgSecurity("earum") {{
-                apiKeyAuth = "";
-            }});
+            UpdateOrgResponse res = sdk.organizations.updateOrg(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -439,10 +435,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                              | [ai.whylabs.WhyLabs.models.operations.UpdateOrgRequest](../../models/operations/UpdateOrgRequest.md)   | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-| `security`                                                                                             | [ai.whylabs.WhyLabs.models.operations.UpdateOrgSecurity](../../models/operations/UpdateOrgSecurity.md) | :heavy_check_mark:                                                                                     | The security requirements to use for the request.                                                      |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [ai.whylabs.WhyLabs.models.operations.UpdateOrgRequest](../../models/operations/UpdateOrgRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 
 ### Response
@@ -462,16 +457,19 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.UpdateOrganizationRequest;
 import ai.whylabs.WhyLabs.models.operations.UpdateOrganizationResponse;
-import ai.whylabs.WhyLabs.models.operations.UpdateOrganizationSecurity;
+import ai.whylabs.WhyLabs.models.shared.Security;
 import ai.whylabs.WhyLabs.models.shared.SubscriptionTier;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("provident") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
-            UpdateOrganizationRequest req = new UpdateOrganizationRequest("ACME, Inc", "modi") {{
+            UpdateOrganizationRequest req = new UpdateOrganizationRequest("ACME, Inc", "nobis") {{
                 domain = "acme.ai";
                 emailDomains = "acme.ai,acme.com";
                 notificationEmailAddress = "notifications@acme.ai";
@@ -482,9 +480,7 @@ public class Application {
                 subscriptionTier = SubscriptionTier.AWS_MARKETPLACE;
             }};            
 
-            UpdateOrganizationResponse res = sdk.organizations.updateOrganization(req, new UpdateOrganizationSecurity("dolorum") {{
-                apiKeyAuth = "";
-            }});
+            UpdateOrganizationResponse res = sdk.organizations.updateOrganization(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -498,10 +494,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                | [ai.whylabs.WhyLabs.models.operations.UpdateOrganizationRequest](../../models/operations/UpdateOrganizationRequest.md)   | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
-| `security`                                                                                                               | [ai.whylabs.WhyLabs.models.operations.UpdateOrganizationSecurity](../../models/operations/UpdateOrganizationSecurity.md) | :heavy_check_mark:                                                                                                       | The security requirements to use for the request.                                                                        |
+| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                              | [ai.whylabs.WhyLabs.models.operations.UpdateOrganizationRequest](../../models/operations/UpdateOrganizationRequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
 
 
 ### Response

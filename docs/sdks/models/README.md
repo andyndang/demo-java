@@ -28,14 +28,17 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.CreateModelRequest;
 import ai.whylabs.WhyLabs.models.operations.CreateModelResponse;
-import ai.whylabs.WhyLabs.models.operations.CreateModelSecurity;
 import ai.whylabs.WhyLabs.models.shared.ModelType;
+import ai.whylabs.WhyLabs.models.shared.Security;
 import ai.whylabs.WhyLabs.models.shared.TimePeriod;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("odit") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
             CreateModelRequest req = new CreateModelRequest("Credit-Score-1", "org-123", TimePeriod.P1_D) {{
@@ -43,9 +46,7 @@ public class Application {
                 modelType = ModelType.CLASSIFICATION;
             }};            
 
-            CreateModelResponse res = sdk.models.createModel(req, new CreateModelSecurity("mollitia") {{
-                apiKeyAuth = "";
-            }});
+            CreateModelResponse res = sdk.models.createModel(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -59,10 +60,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                  | [ai.whylabs.WhyLabs.models.operations.CreateModelRequest](../../models/operations/CreateModelRequest.md)   | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-| `security`                                                                                                 | [ai.whylabs.WhyLabs.models.operations.CreateModelSecurity](../../models/operations/CreateModelSecurity.md) | :heavy_check_mark:                                                                                         | The security requirements to use for the request.                                                          |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                | [ai.whylabs.WhyLabs.models.operations.CreateModelRequest](../../models/operations/CreateModelRequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
 
 
 ### Response
@@ -82,19 +82,20 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.DeactivateModelRequest;
 import ai.whylabs.WhyLabs.models.operations.DeactivateModelResponse;
-import ai.whylabs.WhyLabs.models.operations.DeactivateModelSecurity;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("nemo") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
             DeactivateModelRequest req = new DeactivateModelRequest("model-123", "org-123");            
 
-            DeactivateModelResponse res = sdk.models.deactivateModel(req, new DeactivateModelSecurity("ad") {{
-                apiKeyAuth = "";
-            }});
+            DeactivateModelResponse res = sdk.models.deactivateModel(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -108,10 +109,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                          | [ai.whylabs.WhyLabs.models.operations.DeactivateModelRequest](../../models/operations/DeactivateModelRequest.md)   | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
-| `security`                                                                                                         | [ai.whylabs.WhyLabs.models.operations.DeactivateModelSecurity](../../models/operations/DeactivateModelSecurity.md) | :heavy_check_mark:                                                                                                 | The security requirements to use for the request.                                                                  |
+| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                        | [ai.whylabs.WhyLabs.models.operations.DeactivateModelRequest](../../models/operations/DeactivateModelRequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
 
 
 ### Response
@@ -131,19 +131,20 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.DeleteEntitySchemaRequest;
 import ai.whylabs.WhyLabs.models.operations.DeleteEntitySchemaResponse;
-import ai.whylabs.WhyLabs.models.operations.DeleteEntitySchemaSecurity;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("quasi") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
             DeleteEntitySchemaRequest req = new DeleteEntitySchemaRequest("model-123", "org-123");            
 
-            DeleteEntitySchemaResponse res = sdk.models.deleteEntitySchema(req, new DeleteEntitySchemaSecurity("eum") {{
-                apiKeyAuth = "";
-            }});
+            DeleteEntitySchemaResponse res = sdk.models.deleteEntitySchema(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -157,10 +158,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                | [ai.whylabs.WhyLabs.models.operations.DeleteEntitySchemaRequest](../../models/operations/DeleteEntitySchemaRequest.md)   | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
-| `security`                                                                                                               | [ai.whylabs.WhyLabs.models.operations.DeleteEntitySchemaSecurity](../../models/operations/DeleteEntitySchemaSecurity.md) | :heavy_check_mark:                                                                                                       | The security requirements to use for the request.                                                                        |
+| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                              | [ai.whylabs.WhyLabs.models.operations.DeleteEntitySchemaRequest](../../models/operations/DeleteEntitySchemaRequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
 
 
 ### Response
@@ -180,19 +180,20 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.DeleteEntitySchemaColumnRequest;
 import ai.whylabs.WhyLabs.models.operations.DeleteEntitySchemaColumnResponse;
-import ai.whylabs.WhyLabs.models.operations.DeleteEntitySchemaColumnSecurity;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("iure") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
             DeleteEntitySchemaColumnRequest req = new DeleteEntitySchemaColumnRequest("feature-123", "model-123", "org-123");            
 
-            DeleteEntitySchemaColumnResponse res = sdk.models.deleteEntitySchemaColumn(req, new DeleteEntitySchemaColumnSecurity("dolor") {{
-                apiKeyAuth = "";
-            }});
+            DeleteEntitySchemaColumnResponse res = sdk.models.deleteEntitySchemaColumn(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -206,10 +207,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                            | [ai.whylabs.WhyLabs.models.operations.DeleteEntitySchemaColumnRequest](../../models/operations/DeleteEntitySchemaColumnRequest.md)   | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
-| `security`                                                                                                                           | [ai.whylabs.WhyLabs.models.operations.DeleteEntitySchemaColumnSecurity](../../models/operations/DeleteEntitySchemaColumnSecurity.md) | :heavy_check_mark:                                                                                                                   | The security requirements to use for the request.                                                                                    |
+| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
+| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                          | [ai.whylabs.WhyLabs.models.operations.DeleteEntitySchemaColumnRequest](../../models/operations/DeleteEntitySchemaColumnRequest.md) | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
 
 
 ### Response
@@ -229,19 +229,20 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.DeleteEntitySchemaMetricRequest;
 import ai.whylabs.WhyLabs.models.operations.DeleteEntitySchemaMetricResponse;
-import ai.whylabs.WhyLabs.models.operations.DeleteEntitySchemaMetricSecurity;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("doloribus") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
             DeleteEntitySchemaMetricRequest req = new DeleteEntitySchemaMetricRequest("model-123", "feature-123", "org-123");            
 
-            DeleteEntitySchemaMetricResponse res = sdk.models.deleteEntitySchemaMetric(req, new DeleteEntitySchemaMetricSecurity("necessitatibus") {{
-                apiKeyAuth = "";
-            }});
+            DeleteEntitySchemaMetricResponse res = sdk.models.deleteEntitySchemaMetric(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -255,10 +256,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                            | [ai.whylabs.WhyLabs.models.operations.DeleteEntitySchemaMetricRequest](../../models/operations/DeleteEntitySchemaMetricRequest.md)   | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
-| `security`                                                                                                                           | [ai.whylabs.WhyLabs.models.operations.DeleteEntitySchemaMetricSecurity](../../models/operations/DeleteEntitySchemaMetricSecurity.md) | :heavy_check_mark:                                                                                                                   | The security requirements to use for the request.                                                                                    |
+| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
+| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                          | [ai.whylabs.WhyLabs.models.operations.DeleteEntitySchemaMetricRequest](../../models/operations/DeleteEntitySchemaMetricRequest.md) | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
 
 
 ### Response
@@ -278,19 +278,20 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.GetEntitySchemaRequest;
 import ai.whylabs.WhyLabs.models.operations.GetEntitySchemaResponse;
-import ai.whylabs.WhyLabs.models.operations.GetEntitySchemaSecurity;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("debitis") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
             GetEntitySchemaRequest req = new GetEntitySchemaRequest("model-123", "org-123");            
 
-            GetEntitySchemaResponse res = sdk.models.getEntitySchema(req, new GetEntitySchemaSecurity("odit") {{
-                apiKeyAuth = "";
-            }});
+            GetEntitySchemaResponse res = sdk.models.getEntitySchema(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -304,10 +305,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                          | [ai.whylabs.WhyLabs.models.operations.GetEntitySchemaRequest](../../models/operations/GetEntitySchemaRequest.md)   | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
-| `security`                                                                                                         | [ai.whylabs.WhyLabs.models.operations.GetEntitySchemaSecurity](../../models/operations/GetEntitySchemaSecurity.md) | :heavy_check_mark:                                                                                                 | The security requirements to use for the request.                                                                  |
+| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                        | [ai.whylabs.WhyLabs.models.operations.GetEntitySchemaRequest](../../models/operations/GetEntitySchemaRequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
 
 
 ### Response
@@ -327,19 +327,20 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.GetEntitySchemaColumnRequest;
 import ai.whylabs.WhyLabs.models.operations.GetEntitySchemaColumnResponse;
-import ai.whylabs.WhyLabs.models.operations.GetEntitySchemaColumnSecurity;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("eius") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
             GetEntitySchemaColumnRequest req = new GetEntitySchemaColumnRequest("feature-123", "model-123", "org-123");            
 
-            GetEntitySchemaColumnResponse res = sdk.models.getEntitySchemaColumn(req, new GetEntitySchemaColumnSecurity("nemo") {{
-                apiKeyAuth = "";
-            }});
+            GetEntitySchemaColumnResponse res = sdk.models.getEntitySchemaColumn(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -353,10 +354,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                      | [ai.whylabs.WhyLabs.models.operations.GetEntitySchemaColumnRequest](../../models/operations/GetEntitySchemaColumnRequest.md)   | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
-| `security`                                                                                                                     | [ai.whylabs.WhyLabs.models.operations.GetEntitySchemaColumnSecurity](../../models/operations/GetEntitySchemaColumnSecurity.md) | :heavy_check_mark:                                                                                                             | The security requirements to use for the request.                                                                              |
+| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                    | [ai.whylabs.WhyLabs.models.operations.GetEntitySchemaColumnRequest](../../models/operations/GetEntitySchemaColumnRequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
 
 
 ### Response
@@ -376,19 +376,20 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.GetModelRequest;
 import ai.whylabs.WhyLabs.models.operations.GetModelResponse;
-import ai.whylabs.WhyLabs.models.operations.GetModelSecurity;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("maxime") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
             GetModelRequest req = new GetModelRequest("model-123", "org-123");            
 
-            GetModelResponse res = sdk.models.getModel(req, new GetModelSecurity("quasi") {{
-                apiKeyAuth = "";
-            }});
+            GetModelResponse res = sdk.models.getModel(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -402,10 +403,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `request`                                                                                            | [ai.whylabs.WhyLabs.models.operations.GetModelRequest](../../models/operations/GetModelRequest.md)   | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-| `security`                                                                                           | [ai.whylabs.WhyLabs.models.operations.GetModelSecurity](../../models/operations/GetModelSecurity.md) | :heavy_check_mark:                                                                                   | The security requirements to use for the request.                                                    |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `request`                                                                                          | [ai.whylabs.WhyLabs.models.operations.GetModelRequest](../../models/operations/GetModelRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 
 ### Response
@@ -425,19 +425,20 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.ListModelsRequest;
 import ai.whylabs.WhyLabs.models.operations.ListModelsResponse;
-import ai.whylabs.WhyLabs.models.operations.ListModelsSecurity;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("deleniti") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
             ListModelsRequest req = new ListModelsRequest("org-123");            
 
-            ListModelsResponse res = sdk.models.listModels(req, new ListModelsSecurity("iure") {{
-                apiKeyAuth = "";
-            }});
+            ListModelsResponse res = sdk.models.listModels(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -451,10 +452,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                | [ai.whylabs.WhyLabs.models.operations.ListModelsRequest](../../models/operations/ListModelsRequest.md)   | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-| `security`                                                                                               | [ai.whylabs.WhyLabs.models.operations.ListModelsSecurity](../../models/operations/ListModelsSecurity.md) | :heavy_check_mark:                                                                                       | The security requirements to use for the request.                                                        |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [ai.whylabs.WhyLabs.models.operations.ListModelsRequest](../../models/operations/ListModelsRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 
 ### Response
@@ -474,32 +474,35 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.PutEntitySchemaRequest;
 import ai.whylabs.WhyLabs.models.operations.PutEntitySchemaResponse;
-import ai.whylabs.WhyLabs.models.operations.PutEntitySchemaSecurity;
 import ai.whylabs.WhyLabs.models.shared.ColumnSchema;
 import ai.whylabs.WhyLabs.models.shared.EntitySchema;
 import ai.whylabs.WhyLabs.models.shared.MetricSchema;
 import ai.whylabs.WhyLabs.models.shared.SchemaMetadata;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("facilis") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
             PutEntitySchemaRequest req = new PutEntitySchemaRequest(                new EntitySchema(                new java.util.HashMap<String, ai.whylabs.WhyLabs.models.shared.ColumnSchema>() {{
-                                                put("doloribus", new ColumnSchema("input", "fractional", "discrete") {{
+                                                put("in", new ColumnSchema("input", "fractional", "discrete") {{
                                                     classifier = "input";
                                                     dataType = "fractional";
                                                     discreteness = "discrete";
                                                 }});
                                             }}) {{
                                 metadata = new SchemaMetadata() {{
-                                    author = "debitis";
-                                    updatedTimestamp = 260341L;
-                                    version = 806194L;
+                                    author = "architecto";
+                                    updatedTimestamp = 99569L;
+                                    version = 919483L;
                                 }};;
                                 metrics = new java.util.HashMap<String, ai.whylabs.WhyLabs.models.shared.MetricSchema>() {{
-                                    put("deleniti", new MetricSchema("estimated_prediction", "median", "estimated_prediction.median") {{
+                                    put("ullam", new MetricSchema("estimated_prediction", "median", "estimated_prediction.median") {{
                                         column = "estimated_prediction";
                                         defaultMetric = "median";
                                         label = "estimated_prediction.median";
@@ -507,9 +510,7 @@ public class Application {
                                 }};
                             }};, "model-123", "org-123");            
 
-            PutEntitySchemaResponse res = sdk.models.putEntitySchema(req, new PutEntitySchemaSecurity("facilis") {{
-                apiKeyAuth = "";
-            }});
+            PutEntitySchemaResponse res = sdk.models.putEntitySchema(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -523,10 +524,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                          | [ai.whylabs.WhyLabs.models.operations.PutEntitySchemaRequest](../../models/operations/PutEntitySchemaRequest.md)   | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
-| `security`                                                                                                         | [ai.whylabs.WhyLabs.models.operations.PutEntitySchemaSecurity](../../models/operations/PutEntitySchemaSecurity.md) | :heavy_check_mark:                                                                                                 | The security requirements to use for the request.                                                                  |
+| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                        | [ai.whylabs.WhyLabs.models.operations.PutEntitySchemaRequest](../../models/operations/PutEntitySchemaRequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
 
 
 ### Response
@@ -546,20 +546,21 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.PutEntitySchemaColumnRequest;
 import ai.whylabs.WhyLabs.models.operations.PutEntitySchemaColumnResponse;
-import ai.whylabs.WhyLabs.models.operations.PutEntitySchemaColumnSecurity;
 import ai.whylabs.WhyLabs.models.shared.ColumnSchema;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("expedita") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
             PutEntitySchemaColumnRequest req = new PutEntitySchemaColumnRequest(                new ColumnSchema("input", "fractional", "discrete");, "feature-123", "model-123", "org-123");            
 
-            PutEntitySchemaColumnResponse res = sdk.models.putEntitySchemaColumn(req, new PutEntitySchemaColumnSecurity("in") {{
-                apiKeyAuth = "";
-            }});
+            PutEntitySchemaColumnResponse res = sdk.models.putEntitySchemaColumn(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -573,10 +574,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                      | [ai.whylabs.WhyLabs.models.operations.PutEntitySchemaColumnRequest](../../models/operations/PutEntitySchemaColumnRequest.md)   | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
-| `security`                                                                                                                     | [ai.whylabs.WhyLabs.models.operations.PutEntitySchemaColumnSecurity](../../models/operations/PutEntitySchemaColumnSecurity.md) | :heavy_check_mark:                                                                                                             | The security requirements to use for the request.                                                                              |
+| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                    | [ai.whylabs.WhyLabs.models.operations.PutEntitySchemaColumnRequest](../../models/operations/PutEntitySchemaColumnRequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
 
 
 ### Response
@@ -596,20 +596,21 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.PutEntitySchemaMetricRequest;
 import ai.whylabs.WhyLabs.models.operations.PutEntitySchemaMetricResponse;
-import ai.whylabs.WhyLabs.models.operations.PutEntitySchemaMetricSecurity;
 import ai.whylabs.WhyLabs.models.shared.MetricSchema;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("nihil") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
             PutEntitySchemaMetricRequest req = new PutEntitySchemaMetricRequest(                new MetricSchema("estimated_prediction", "median", "estimated_prediction.median");, "model-123", "org-123");            
 
-            PutEntitySchemaMetricResponse res = sdk.models.putEntitySchemaMetric(req, new PutEntitySchemaMetricSecurity("architecto") {{
-                apiKeyAuth = "";
-            }});
+            PutEntitySchemaMetricResponse res = sdk.models.putEntitySchemaMetric(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -623,10 +624,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                      | [ai.whylabs.WhyLabs.models.operations.PutEntitySchemaMetricRequest](../../models/operations/PutEntitySchemaMetricRequest.md)   | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
-| `security`                                                                                                                     | [ai.whylabs.WhyLabs.models.operations.PutEntitySchemaMetricSecurity](../../models/operations/PutEntitySchemaMetricSecurity.md) | :heavy_check_mark:                                                                                                             | The security requirements to use for the request.                                                                              |
+| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                    | [ai.whylabs.WhyLabs.models.operations.PutEntitySchemaMetricRequest](../../models/operations/PutEntitySchemaMetricRequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
 
 
 ### Response
@@ -646,23 +646,24 @@ package hello.world;
 import ai.whylabs.WhyLabs.Songbird;
 import ai.whylabs.WhyLabs.models.operations.UpdateModelRequest;
 import ai.whylabs.WhyLabs.models.operations.UpdateModelResponse;
-import ai.whylabs.WhyLabs.models.operations.UpdateModelSecurity;
 import ai.whylabs.WhyLabs.models.shared.ModelType;
+import ai.whylabs.WhyLabs.models.shared.Security;
 import ai.whylabs.WhyLabs.models.shared.TimePeriod;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("repellat") {{
+                    apiKeyAuth = "";
+                }})
                 .build();
 
             UpdateModelRequest req = new UpdateModelRequest("model-123", "Credit-Score-1", "org-123", TimePeriod.P1_D) {{
                 modelType = ModelType.CLASSIFICATION;
             }};            
 
-            UpdateModelResponse res = sdk.models.updateModel(req, new UpdateModelSecurity("architecto") {{
-                apiKeyAuth = "";
-            }});
+            UpdateModelResponse res = sdk.models.updateModel(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -676,10 +677,9 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                  | [ai.whylabs.WhyLabs.models.operations.UpdateModelRequest](../../models/operations/UpdateModelRequest.md)   | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-| `security`                                                                                                 | [ai.whylabs.WhyLabs.models.operations.UpdateModelSecurity](../../models/operations/UpdateModelSecurity.md) | :heavy_check_mark:                                                                                         | The security requirements to use for the request.                                                          |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                | [ai.whylabs.WhyLabs.models.operations.UpdateModelRequest](../../models/operations/UpdateModelRequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
 
 
 ### Response
