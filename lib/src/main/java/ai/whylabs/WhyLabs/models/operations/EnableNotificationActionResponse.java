@@ -9,6 +9,9 @@ import java.net.http.HttpResponse;
 
 
 public class EnableNotificationActionResponse {
+    /**
+     * HTTP response content type for this operation
+     */
     
     public String contentType;
 
@@ -17,6 +20,9 @@ public class EnableNotificationActionResponse {
         return this;
     }
     
+    /**
+     * HTTP response status code for this operation
+     */
     
     public Integer statusCode;
 
@@ -25,6 +31,9 @@ public class EnableNotificationActionResponse {
         return this;
     }
     
+    /**
+     * Raw HTTP response; suitable for custom response parsing
+     */
     
     public HttpResponse<byte[]> rawResponse;
 
