@@ -1,4 +1,5 @@
 # NotificationSettings
+(*notificationSettings*)
 
 ### Available Operations
 
