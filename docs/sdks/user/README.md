@@ -26,12 +26,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("accusamus") {{
+                .setSecurity(new Security("neural") {{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.CreateUserRequest req = new CreateUserRequest("ad");            
+            ai.whylabs.WhyLabs.models.shared.CreateUserRequest req = new CreateUserRequest("cavernous");            
 
             CreateUserResponse res = sdk.user.createUser(req);
 
@@ -75,12 +75,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("saepe") {{
+                .setSecurity(new Security("Northwest") {{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            GetUserRequest req = new GetUserRequest("suscipit");            
+            GetUserRequest req = new GetUserRequest("positively");            
 
             GetUserResponse res = sdk.user.getUser(req);
 
@@ -124,12 +124,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("deserunt") {{
+                .setSecurity(new Security("Program") {{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            GetUserByEmailRequest req = new GetUserByEmailRequest("provident");            
+            GetUserByEmailRequest req = new GetUserByEmailRequest("Massachusetts");            
 
             GetUserByEmailResponse res = sdk.user.getUserByEmail(req);
 
@@ -173,13 +173,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("minima") {{
+                .setSecurity(new Security("monitoring") {{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.User req = new User("repellendus", "totam") {{
-                preferences = "similique";
+            ai.whylabs.WhyLabs.models.shared.User req = new User("projection", "newton") {{
+                preferences = "Dynamic Northwest Focused";
             }};            
 
             UpdateUserResponse res = sdk.user.updateUser(req);

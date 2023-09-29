@@ -26,12 +26,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("quos") {{
+                .setSecurity(new Security("Infrastructure") {{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.ProvisionNewMarketplaceUserRequest req = new ProvisionNewMarketplaceUserRequest("aliquid", "dolorem", "dolorem", "dolor") {{
+            ai.whylabs.WhyLabs.models.shared.ProvisionNewMarketplaceUserRequest req = new ProvisionNewMarketplaceUserRequest("Barium", "Hill", "woman", "male") {{
                 expectExisting = false;
             }};            
 
@@ -77,12 +77,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("qui") {{
+                .setSecurity(new Security("Androgynous") {{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.ProvisionDatabricksConnectionRequest req = new ProvisionDatabricksConnectionRequest("ipsum", false, "hic");            
+            ai.whylabs.WhyLabs.models.shared.ProvisionDatabricksConnectionRequest req = new ProvisionDatabricksConnectionRequest("Sleek", false, "Regional");            
 
             ProvisionDatabricksConnectionResponse res = sdk.provision.provisionDatabricksConnection(req);
 
@@ -127,12 +127,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("excepturi") {{
+                .setSecurity(new Security("Beryllium") {{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.ProvisionNewUserRequest req = new ProvisionNewUserRequest("cum", "voluptate", "dignissimos", SubscriptionTier.SUBSCRIPTION) {{
+            ai.whylabs.WhyLabs.models.shared.ProvisionNewUserRequest req = new ProvisionNewUserRequest("Future", "Savings", "Northwest", SubscriptionTier.PAID) {{
                 expectExisting = false;
             }};            
 
@@ -178,12 +178,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("amet") {{
+                .setSecurity(new Security("logistical") {{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.RegisterDatabricksConnectionRequest req = new RegisterDatabricksConnectionRequest("dolorum", "numquam", "veritatis", false, "ipsa", "ipsa", 434417, "odio", "quaerat") {{
+            ai.whylabs.WhyLabs.models.shared.RegisterDatabricksConnectionRequest req = new RegisterDatabricksConnectionRequest("Operations", "Carolina", "digital", false, "Electric", "Blues", 610134, "Account", "Oganesson") {{
                 connectionEstablished = false;
                 freeTrial = false;
             }};            

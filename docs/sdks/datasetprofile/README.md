@@ -37,28 +37,28 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("totam") {{
+                .setSecurity(new Security("Massachusetts") {{
                     apiKeyAuth = "";
                 }})
                 .build();
 
             CreateReferenceProfileRequest req = new CreateReferenceProfileRequest(                new CreateReferenceProfileRequest() {{
-                                alias = "beatae";
-                                datasetTimestamp = 414662L;
+                                alias = "back male";
+                                datasetTimestamp = 695813L;
                                 segments = new ai.whylabs.WhyLabs.models.shared.Segment[]{{
                                     add(new Segment() {{
                                         tags = new ai.whylabs.WhyLabs.models.shared.SegmentTag[]{{
                                             add(new SegmentTag() {{
-                                                key = "molestiae";
-                                                value = "modi";
+                                                key = "<key>";
+                                                value = "online below";
                                             }}),
                                         }};
                                     }}),
                                 }};
                                 tags = new String[]{{
-                                    add("qui"),
+                                    add("Electric"),
                                 }};
-                                version = "impedit";
+                                version = "superstructure interactive Bike";
                             }};, "model-123", "org-123");            
 
             CreateReferenceProfileResponse res = sdk.datasetProfile.createReferenceProfile(req);
@@ -105,7 +105,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("cum") {{
+                .setSecurity(new Security("Rap") {{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -159,7 +159,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("esse") {{
+                .setSecurity(new Security("generation") {{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -214,7 +214,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("ipsum") {{
+                .setSecurity(new Security("Nissan") {{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -265,7 +265,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("excepturi") {{
+                .setSecurity(new Security("Northwest") {{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -319,7 +319,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("aspernatur") {{
+                .setSecurity(new Security("Francium") {{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -371,14 +371,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("perferendis") {{
+                .setSecurity(new Security("yellow") {{
                     apiKeyAuth = "";
                 }})
                 .build();
 
             HideSegmentsRequest req = new HideSegmentsRequest(                new SegmentsListRequest() {{
                                 segments = new String[]{{
-                                    add("ad"),
+                                    add("Gasoline"),
                                 }};
                             }};, "model-123", "org-123");            
 
@@ -426,7 +426,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("natus") {{
+                .setSecurity(new Security("generating") {{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -480,7 +480,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("sed") {{
+                .setSecurity(new Security("Human") {{
                     apiKeyAuth = "";
                 }})
                 .build();

@@ -37,7 +37,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("odit") {{
+                .setSecurity(new Security("zesty") {{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -89,7 +89,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("nemo") {{
+                .setSecurity(new Security("throughput") {{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -138,7 +138,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("quasi") {{
+                .setSecurity(new Security("coaxingly") {{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -187,7 +187,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("iure") {{
+                .setSecurity(new Security("Mazda") {{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -236,7 +236,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("doloribus") {{
+                .setSecurity(new Security("orange") {{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -285,7 +285,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("debitis") {{
+                .setSecurity(new Security("Polarised") {{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -334,7 +334,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("eius") {{
+                .setSecurity(new Security("adapter") {{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -383,7 +383,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("maxime") {{
+                .setSecurity(new Security("lime") {{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -432,7 +432,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("deleniti") {{
+                .setSecurity(new Security("Western") {{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -485,25 +485,25 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("facilis") {{
+                .setSecurity(new Security("hardware") {{
                     apiKeyAuth = "";
                 }})
                 .build();
 
             PutEntitySchemaRequest req = new PutEntitySchemaRequest(                new EntitySchema(                new java.util.HashMap<String, ai.whylabs.WhyLabs.models.shared.ColumnSchema>() {{
-                                                put("in", new ColumnSchema("input", "fractional", "discrete") {{
+                                                put("aspernatur", new ColumnSchema("input", "fractional", "discrete") {{
                                                     classifier = "input";
                                                     dataType = "fractional";
                                                     discreteness = "discrete";
                                                 }});
                                             }}) {{
                                 metadata = new SchemaMetadata() {{
-                                    author = "architecto";
-                                    updatedTimestamp = 99569L;
-                                    version = 919483L;
+                                    author = "whenever digital Ransom";
+                                    updatedTimestamp = 86914L;
+                                    version = 46718L;
                                 }};;
                                 metrics = new java.util.HashMap<String, ai.whylabs.WhyLabs.models.shared.MetricSchema>() {{
-                                    put("ullam", new MetricSchema("estimated_prediction", "median", "estimated_prediction.median") {{
+                                    put("natus", new MetricSchema("estimated_prediction", "median", "estimated_prediction.median") {{
                                         column = "estimated_prediction";
                                         defaultMetric = "median";
                                         label = "estimated_prediction.median";
@@ -554,7 +554,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("expedita") {{
+                .setSecurity(new Security("Folk") {{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -604,7 +604,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("nihil") {{
+                .setSecurity(new Security("Diesel") {{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -655,7 +655,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("repellat") {{
+                .setSecurity(new Security("Northwest") {{
                     apiKeyAuth = "";
                 }})
                 .build();

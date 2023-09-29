@@ -32,7 +32,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("facilis") {{
+                .setSecurity(new Security("Puerto") {{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -46,7 +46,7 @@ public class Application {
                 pagerDutyKey = "abc-def-ghi-jkl";
                 parentOrgId = "org-123";
                 slackWebhook = "https://hooks.slack.com/services/foo/bar";
-                subscriptionTier = SubscriptionTier.AWS_MARKETPLACE;
+                subscriptionTier = SubscriptionTier.PAID;
             }};            
 
             CreateOrganizationResponse res = sdk.organizations.createOrganization(req);
@@ -91,12 +91,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("voluptatem") {{
+                .setSecurity(new Security("Coupe") {{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            DeleteOrganizationRequest req = new DeleteOrganizationRequest("porro");            
+            DeleteOrganizationRequest req = new DeleteOrganizationRequest("Wagon");            
 
             DeleteOrganizationResponse res = sdk.organizations.deleteOrganization(req);
 
@@ -140,12 +140,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("consequuntur") {{
+                .setSecurity(new Security("Toys") {{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            GetAWSMarketplaceMetadataRequest req = new GetAWSMarketplaceMetadataRequest("blanditiis");            
+            GetAWSMarketplaceMetadataRequest req = new GetAWSMarketplaceMetadataRequest("ROI");            
 
             GetAWSMarketplaceMetadataResponse res = sdk.organizations.getAWSMarketplaceMetadata(req);
 
@@ -189,12 +189,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("error") {{
+                .setSecurity(new Security("hertz") {{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            GetOrganizationRequest req = new GetOrganizationRequest("eaque");            
+            GetOrganizationRequest req = new GetOrganizationRequest("joule");            
 
             GetOrganizationResponse res = sdk.organizations.getOrganization(req);
 
@@ -237,7 +237,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("occaecati") {{
+                .setSecurity(new Security("male") {{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -282,20 +282,20 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("rerum") {{
+                .setSecurity(new Security("primary") {{
                     apiKeyAuth = "";
                 }})
                 .build();
 
             PartiallyUpdateOrgRequest req = new PartiallyUpdateOrgRequest(                new PartiallyUpdateOrgRequestBody() {{
-                                orgId = "adipisci";
+                                orgId = "Passaic Intranet";
                             }};) {{
                 domain = "acme.ai";
                 name = "ACME, Inc";
                 notificationEmailAddress = "notifications@acme.ai";
                 observatoryUrl = "https://hub.whylabsapp.com";
                 slackWebhook = "https://hooks.slack.com/services/foo/bar";
-                subscriptionTier = SubscriptionTier.SUBSCRIPTION;
+                subscriptionTier = SubscriptionTier.FREE;
             }};            
 
             PartiallyUpdateOrgResponse res = sdk.organizations.partiallyUpdateOrg(req);
@@ -341,12 +341,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("earum") {{
+                .setSecurity(new Security("SCSI") {{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            PartiallyUpdateOrganizationRequest req = new PartiallyUpdateOrganizationRequest("modi") {{
+            PartiallyUpdateOrganizationRequest req = new PartiallyUpdateOrganizationRequest("Park") {{
                 domain = "acme.ai";
                 emailDomains = "acme.ai,acme.com";
                 name = "ACME, Inc";
@@ -355,7 +355,7 @@ public class Application {
                 pagerDutyKey = "abc-def-ghi-jkl";
                 parentOrgId = "abc-def-ghi-jkl";
                 slackWebhook = "https://hooks.slack.com/services/foo/bar";
-                subscriptionTier = SubscriptionTier.AWS_MARKETPLACE;
+                subscriptionTier = SubscriptionTier.FREE;
             }};            
 
             PartiallyUpdateOrganizationResponse res = sdk.organizations.partiallyUpdateOrganization(req);
@@ -404,13 +404,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("dolorum") {{
+                .setSecurity(new Security("Brand") {{
                     apiKeyAuth = "";
                 }})
                 .build();
 
             UpdateOrgRequest req = new UpdateOrgRequest(                new UpdateOrgRequestBody() {{
-                                orgId = "deleniti";
+                                orgId = "Mississippi";
                             }};, "ACME, Inc") {{
                 domain = "acme.ai";
                 emailDomains = "acme.ai,acme.com";
@@ -465,12 +465,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("provident") {{
+                .setSecurity(new Security("pixel") {{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            UpdateOrganizationRequest req = new UpdateOrganizationRequest("ACME, Inc", "nobis") {{
+            UpdateOrganizationRequest req = new UpdateOrganizationRequest("ACME, Inc", "aspernatur") {{
                 domain = "acme.ai";
                 emailDomains = "acme.ai,acme.com";
                 notificationEmailAddress = "notifications@acme.ai";
@@ -478,7 +478,7 @@ public class Application {
                 pagerDutyKey = "abc-def-ghi-jkl";
                 parentOrgId = "org-123";
                 slackWebhook = "https://hooks.slack.com/services/foo/bar";
-                subscriptionTier = SubscriptionTier.AWS_MARKETPLACE;
+                subscriptionTier = SubscriptionTier.FREE;
             }};            
 
             UpdateOrganizationResponse res = sdk.organizations.updateOrganization(req);

@@ -31,7 +31,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("atque") {{
+                .setSecurity(new Security("Alabama") {{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -39,11 +39,11 @@ public class Application {
             BatchCreateReferenceProfileUploadRequest req = new BatchCreateReferenceProfileUploadRequest(                new BatchLogReferenceRequest() {{
                                 references = new ai.whylabs.WhyLabs.models.shared.LogReferenceRequest[]{{
                                     add(new LogReferenceRequest() {{
-                                        alias = "sit";
-                                        datasetTimestamp = 854614L;
+                                        alias = "Junctions Jewelery";
+                                        datasetTimestamp = 639712L;
                                     }}),
                                 }};
-                            }};, "ab");            
+                            }};, "online");            
 
             BatchCreateReferenceProfileUploadResponse res = sdk.sessions.batchCreateReferenceProfileUpload(req);
 
@@ -87,12 +87,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("soluta") {{
+                .setSecurity(new Security("cyan") {{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ClaimGuestSessionRequest req = new ClaimGuestSessionRequest("dolorum", "iusto");            
+            ClaimGuestSessionRequest req = new ClaimGuestSessionRequest("deposit", "Borders");            
 
             ClaimGuestSessionResponse res = sdk.sessions.claimGuestSession(req);
 
@@ -138,20 +138,20 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("voluptate") {{
+                .setSecurity(new Security("lest") {{
                     apiKeyAuth = "";
                 }})
                 .build();
 
             CreateDatasetProfileUploadRequest req = new CreateDatasetProfileUploadRequest(                new LogAsyncRequest() {{
-                                datasetTimestamp = 677082L;
+                                datasetTimestamp = 167248L;
                                 segmentTags = new ai.whylabs.WhyLabs.models.shared.SegmentTag[]{{
                                     add(new SegmentTag() {{
-                                        key = "deleniti";
-                                        value = "omnis";
+                                        key = "<key>";
+                                        value = "Response";
                                     }}),
                                 }};
-                            }};, "necessitatibus");            
+                            }};, "invoice");            
 
             CreateDatasetProfileUploadResponse res = sdk.sessions.createDatasetProfileUpload(req);
 
@@ -196,15 +196,15 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("distinctio") {{
+                .setSecurity(new Security("Funk") {{
                     apiKeyAuth = "";
                 }})
                 .build();
 
             CreateReferenceProfileUploadRequest req = new CreateReferenceProfileUploadRequest(                new LogReferenceRequest() {{
-                                alias = "asperiores";
-                                datasetTimestamp = 469497L;
-                            }};, "ipsum");            
+                                alias = "Keyboard Lawrencium Handmade";
+                                datasetTimestamp = 246677L;
+                            }};, "Granite");            
 
             CreateReferenceProfileUploadResponse res = sdk.sessions.createReferenceProfileUpload(req);
 
@@ -248,12 +248,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("voluptate") {{
+                .setSecurity(new Security("West") {{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.CreateSessionRequest req = new CreateSessionRequest("id");            
+            ai.whylabs.WhyLabs.models.shared.CreateSessionRequest req = new CreateSessionRequest("bandwidth");            
 
             CreateSessionResponse res = sdk.sessions.createSession(req);
 
@@ -297,12 +297,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("saepe") {{
+                .setSecurity(new Security("hoof") {{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            GetSessionRequest req = new GetSessionRequest("eius");            
+            GetSessionRequest req = new GetSessionRequest("Hybrid");            
 
             GetSessionResponse res = sdk.sessions.getSession(req);
 
@@ -347,19 +347,19 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("aspernatur") {{
+                .setSecurity(new Security("digital") {{
                     apiKeyAuth = "";
                 }})
                 .build();
 
             GetSessionProfileObservatoryLinkRequest req = new GetSessionProfileObservatoryLinkRequest(                new GetProfileObservatoryLinkRequest() {{
                                 batchProfileTimestamps = new Long[]{{
-                                    add(20651L),
+                                    add(172081L),
                                 }};
                                 referenceProfileIds = new String[]{{
-                                    add("amet"),
+                                    add("Extended"),
                                 }};
-                            }};, "optio");            
+                            }};, "towards");            
 
             GetSessionProfileObservatoryLinkResponse res = sdk.sessions.getSessionProfileObservatoryLink(req);
 

@@ -36,7 +36,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("quibusdam") {{
+                .setSecurity(new Security("Sausages") {{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -85,7 +85,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("sed") {{
+                .setSecurity(new Security("Bicycle") {{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -134,7 +134,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("saepe") {{
+                .setSecurity(new Security("Concrete") {{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -183,7 +183,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("pariatur") {{
+                .setSecurity(new Security("Plutonium") {{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -232,7 +232,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("accusantium") {{
+                .setSecurity(new Security("Ruthenium") {{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -284,7 +284,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("consequuntur") {{
+                .setSecurity(new Security("frizzy") {{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -333,7 +333,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("praesentium") {{
+                .setSecurity(new Security("Rubber") {{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -382,7 +382,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("natus") {{
+                .setSecurity(new Security("Group") {{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -431,12 +431,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("magni") {{
+                .setSecurity(new Security("GB") {{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            PatchMonitorConfigV3Request req = new PatchMonitorConfigV3Request("sunt", "model-123", "org-123");            
+            PatchMonitorConfigV3Request req = new PatchMonitorConfigV3Request("Kids", "model-123", "org-123");            
 
             PatchMonitorConfigV3Response res = sdk.monitor.patchMonitorConfigV3(req);
 
@@ -480,12 +480,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("quo") {{
+                .setSecurity(new Security("District") {{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            PutAnalyzerRequest req = new PutAnalyzerRequest("illum", "drift-analyzer", "model-123", "org-123");            
+            PutAnalyzerRequest req = new PutAnalyzerRequest("Bike", "drift-analyzer", "model-123", "org-123");            
 
             PutAnalyzerResponse res = sdk.monitor.putAnalyzer(req);
 
@@ -529,12 +529,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("pariatur") {{
+                .setSecurity(new Security("Bicycle") {{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            PutMonitorRequest req = new PutMonitorRequest("maxime", "model-123", "drift-monitor-123", "org-123");            
+            PutMonitorRequest req = new PutMonitorRequest("EXE", "model-123", "drift-monitor-123", "org-123");            
 
             PutMonitorResponse res = sdk.monitor.putMonitor(req);
 
@@ -578,12 +578,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("ea") {{
+                .setSecurity(new Security("before") {{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            PutMonitorConfigV3Request req = new PutMonitorConfigV3Request("excepturi", "model-123", "org-123");            
+            PutMonitorConfigV3Request req = new PutMonitorConfigV3Request("Howe", "model-123", "org-123");            
 
             PutMonitorConfigV3Response res = sdk.monitor.putMonitorConfigV3(req);
 
@@ -628,14 +628,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("odit") {{
+                .setSecurity(new Security("female") {{
                     apiKeyAuth = "";
                 }})
                 .build();
 
             PutRequestMonitorRunConfigRequest req = new PutRequestMonitorRunConfigRequest(                new PutRequestMonitorRunConfigRequestBody() {{
                                 analyzerIds = new String[]{{
-                                    add("ea"),
+                                    add("Soap"),
                                 }};
                                 endTimestamp = 1893456000000L;
                                 overwrite = false;
@@ -684,12 +684,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("accusantium") {{
+                .setSecurity(new Security("Communications") {{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ValidateMonitorConfigV3Request req = new ValidateMonitorConfigV3Request("ab", "model-123", "org-123") {{
+            ValidateMonitorConfigV3Request req = new ValidateMonitorConfigV3Request("Reggae", "model-123", "org-123") {{
                 verbose = false;
             }};            
 

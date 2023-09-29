@@ -23,12 +23,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("saepe") {{
+                .setSecurity(new Security("boo") {{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            GetFeatureFlagsRequest req = new GetFeatureFlagsRequest("quidem", "architecto");            
+            GetFeatureFlagsRequest req = new GetFeatureFlagsRequest("frankly", "North");            
 
             GetFeatureFlagsResponse res = sdk.featureFlags.getFeatureFlags(req);
 

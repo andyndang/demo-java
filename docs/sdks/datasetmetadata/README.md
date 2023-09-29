@@ -25,7 +25,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("fugit") {{
+                .setSecurity(new Security("male") {{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -74,7 +74,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("deleniti") {{
+                .setSecurity(new Security("Beach") {{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -123,12 +123,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("hic") {{
+                .setSecurity(new Security("Director") {{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            PutDatasetMetadataRequest req = new PutDatasetMetadataRequest("optio", "model-123", "org-123");            
+            PutDatasetMetadataRequest req = new PutDatasetMetadataRequest("recent", "model-123", "org-123");            
 
             PutDatasetMetadataResponse res = sdk.datasetMetadata.putDatasetMetadata(req);
 

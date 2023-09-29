@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'ai.whylabs.WhyLabs:Songbird:1.27.1'
+implementation 'ai.whylabs.WhyLabs:Songbird:1.28.0'
 ```
 <!-- End SDK Installation -->
 
@@ -25,15 +25,15 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("unde") {{
+                .setSecurity(new Security("homogeneous") {{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            CreateAccountUserRequest req = new CreateAccountUserRequest(                new CreateAccountUserRequest("nulla") {{
+            CreateAccountUserRequest req = new CreateAccountUserRequest(                new CreateAccountUserRequest("Smart") {{
                                 active = false;
-                                externalId = "corrupti";
-                                userSchema = "illum";
+                                externalId = "Mobility parsing Fresh";
+                                userSchema = "nervous Aston aliquam";
                             }};, "org-123");            
 
             CreateAccountUserResponse res = sdk.account.createAccountUser(req);

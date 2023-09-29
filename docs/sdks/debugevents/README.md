@@ -27,27 +27,27 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("iste") {{
+                .setSecurity(new Security("ohm") {{
                     apiKeyAuth = "";
                 }})
                 .build();
 
             LogDebugEventRequest req = new LogDebugEventRequest(                new DebugEvent() {{
-                                content = "dolor";
-                                creationTimestamp = 616934L;
-                                datasetTimestamp = 386489L;
+                                content = "Minor quip yahoo";
+                                creationTimestamp = 622527L;
+                                datasetTimestamp = 928126L;
                                 segment = new Segment() {{
                                     tags = new ai.whylabs.WhyLabs.models.shared.SegmentTag[]{{
                                         add(new SegmentTag() {{
-                                            key = "hic";
-                                            value = "saepe";
+                                            key = "<key>";
+                                            value = "Home East";
                                         }}),
                                     }};
                                 }};;
                                 tags = new String[]{{
-                                    add("fuga"),
+                                    add("Unbranded"),
                                 }};
-                                traceId = "in";
+                                traceId = "Pop Personal";
                             }};, "model-123", "org-123");            
 
             LogDebugEventResponse res = sdk.debugEvents.logDebugEvent(req);

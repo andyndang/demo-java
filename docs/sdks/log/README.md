@@ -26,19 +26,19 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("nam") {{
+                .setSecurity(new Security("gadzooks") {{
                     apiKeyAuth = "";
                 }})
                 .build();
 
             GetProfileObservatoryLinkRequest req = new GetProfileObservatoryLinkRequest(                new GetProfileObservatoryLinkRequest() {{
                                 batchProfileTimestamps = new Long[]{{
-                                    add(659669L),
+                                    add(738449L),
                                 }};
                                 referenceProfileIds = new String[]{{
-                                    add("blanditiis"),
+                                    add("Track"),
                                 }};
-                            }};, "deleniti", "sapiente");            
+                            }};, "North", "Northeast");            
 
             GetProfileObservatoryLinkResponse res = sdk.log.getProfileObservatoryLink(req);
 
@@ -84,17 +84,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("amet") {{
+                .setSecurity(new Security("navigating") {{
                     apiKeyAuth = "";
                 }})
                 .build();
 
             LogAsyncRequest req = new LogAsyncRequest(                new LogAsyncRequest() {{
-                                datasetTimestamp = 643990L;
+                                datasetTimestamp = 260466L;
                                 segmentTags = new ai.whylabs.WhyLabs.models.shared.SegmentTag[]{{
                                     add(new SegmentTag() {{
-                                        key = "nisi";
-                                        value = "vel";
+                                        key = "<key>";
+                                        value = "shy";
                                     }}),
                                 }};
                             }};, "model-123", "org-123");            
@@ -142,14 +142,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("natus") {{
+                .setSecurity(new Security("North") {{
                     apiKeyAuth = "";
                 }})
                 .build();
 
             LogReferenceRequest req = new LogReferenceRequest(                new LogReferenceRequest() {{
-                                alias = "omnis";
-                                datasetTimestamp = 474867L;
+                                alias = "Jewelery West Cape";
+                                datasetTimestamp = 892608L;
                             }};, "model-123", "org-123");            
 
             LogReferenceResponse res = sdk.log.logReference(req);
