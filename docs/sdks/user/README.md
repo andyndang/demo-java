@@ -26,7 +26,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("neural") {{
+                .setSecurity(new Security("neural"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -75,7 +75,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("Northwest") {{
+                .setSecurity(new Security("Northwest"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -124,7 +124,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("Program") {{
+                .setSecurity(new Security("Program"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -173,12 +173,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("monitoring") {{
+                .setSecurity(new Security("monitoring"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.User req = new User("projection", "newton") {{
+            ai.whylabs.WhyLabs.models.shared.User req = new User("projection", "newton"){{
                 preferences = "Dynamic Northwest Focused";
             }};            
 

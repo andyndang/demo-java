@@ -35,12 +35,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("and") {{
+                .setSecurity(new Security("and"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.AddMembershipRequest req = new AddMembershipRequest("synergies", "24/7", Role.VIEWER) {{
+            ai.whylabs.WhyLabs.models.shared.AddMembershipRequest req = new AddMembershipRequest("synergies", "24/7", Role.VIEWER){{
                 createdBy = "Classical";
                 default_ = false;
             }};            
@@ -88,12 +88,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("Shoes") {{
+                .setSecurity(new Security("Shoes"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            CreateOrganizationMembershipRequest req = new CreateOrganizationMembershipRequest("user@whylabs.ai", "org-123", Role.ADMIN) {{
+            CreateOrganizationMembershipRequest req = new CreateOrganizationMembershipRequest("user@whylabs.ai", "org-123", Role.ADMIN){{
                 setDefault = false;
             }};            
 
@@ -139,7 +139,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("female") {{
+                .setSecurity(new Security("female"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -188,7 +188,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("Keyboard") {{
+                .setSecurity(new Security("Keyboard"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -237,7 +237,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("Honduras") {{
+                .setSecurity(new Security("Honduras"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -286,7 +286,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("Donna") {{
+                .setSecurity(new Security("Donna"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -335,7 +335,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("up") {{
+                .setSecurity(new Security("up"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -384,7 +384,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("Salad") {{
+                .setSecurity(new Security("Salad"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -433,7 +433,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("API") {{
+                .setSecurity(new Security("API"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -482,7 +482,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("1080p") {{
+                .setSecurity(new Security("1080p"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -532,7 +532,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("Nissan") {{
+                .setSecurity(new Security("Nissan"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -582,7 +582,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("responsive") {{
+                .setSecurity(new Security("responsive"){{
                     apiKeyAuth = "";
                 }})
                 .build();

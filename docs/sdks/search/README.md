@@ -24,7 +24,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("for") {{
+                .setSecurity(new Security("for"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -74,12 +74,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("Maryland") {{
+                .setSecurity(new Security("Maryland"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.SearchIndexRequest req = new SearchIndexRequest() {{
+            ai.whylabs.WhyLabs.models.shared.SearchIndexRequest req = new SearchIndexRequest(){{
                 orgId = "Kids";
                 type = SearchIndexType.ENTITY_SCHEMA;
             }};            

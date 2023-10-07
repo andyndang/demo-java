@@ -26,16 +26,20 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("Oklahoma") {{
+                .setSecurity(new Security("Oklahoma"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            CreateApiKeyRequest req = new CreateApiKeyRequest("org-123", "user-123") {{
+            CreateApiKeyRequest req = new CreateApiKeyRequest("org-123", "user-123"){{
                 alias = "MLApplicationName";
                 expirationTime = 1577836800000L;
                 scopes = new String[]{{
-                    add(":user"),
+                    add(":"),
+                    add("u"),
+                    add("s"),
+                    add("e"),
+                    add("r"),
                 }};
             }};            
 
@@ -81,7 +85,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("South") {{
+                .setSecurity(new Security("South"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -130,12 +134,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("Trafficway") {{
+                .setSecurity(new Security("Trafficway"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ListApiKeysRequest req = new ListApiKeysRequest("org-123") {{
+            ListApiKeysRequest req = new ListApiKeysRequest("org-123"){{
                 userId = "user-123";
             }};            
 
@@ -181,7 +185,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("Chicken") {{
+                .setSecurity(new Security("Chicken"){{
                     apiKeyAuth = "";
                 }})
                 .build();

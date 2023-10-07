@@ -36,7 +36,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("Sausages") {{
+                .setSecurity(new Security("Sausages"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -85,7 +85,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("Bicycle") {{
+                .setSecurity(new Security("Bicycle"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -134,7 +134,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("Concrete") {{
+                .setSecurity(new Security("Concrete"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -183,7 +183,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("Plutonium") {{
+                .setSecurity(new Security("Plutonium"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -232,12 +232,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("Ruthenium") {{
+                .setSecurity(new Security("Ruthenium"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            GetMonitorConfigV3Request req = new GetMonitorConfigV3Request("model-123", "org-123") {{
+            GetMonitorConfigV3Request req = new GetMonitorConfigV3Request("model-123", "org-123"){{
                 includeEntitySchema = false;
                 includeEntityWeights = false;
             }};            
@@ -284,7 +284,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("frizzy") {{
+                .setSecurity(new Security("frizzy"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -333,7 +333,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("Rubber") {{
+                .setSecurity(new Security("Rubber"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -382,7 +382,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("Group") {{
+                .setSecurity(new Security("Group"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -431,7 +431,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("GB") {{
+                .setSecurity(new Security("GB"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -480,7 +480,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("District") {{
+                .setSecurity(new Security("District"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -529,7 +529,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("Bicycle") {{
+                .setSecurity(new Security("Bicycle"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -578,7 +578,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("before") {{
+                .setSecurity(new Security("before"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -628,19 +628,32 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("female") {{
+                .setSecurity(new Security("female"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            PutRequestMonitorRunConfigRequest req = new PutRequestMonitorRunConfigRequest(                new PutRequestMonitorRunConfigRequestBody() {{
-                                analyzerIds = new String[]{{
-                                    add("Soap"),
-                                }};
-                                endTimestamp = 1893456000000L;
-                                overwrite = false;
-                                startTimestamp = 1577836800000L;
-                            }};, "model-123", "org-123");            
+            PutRequestMonitorRunConfigRequest req = new PutRequestMonitorRunConfigRequest(new PutRequestMonitorRunConfigRequestBody(){{
+analyzerIds = new String[]{{
+    add("d"),
+    add("r"),
+    add("i"),
+    add("f"),
+    add("t"),
+    add("-"),
+    add("a"),
+    add("n"),
+    add("a"),
+    add("l"),
+    add("y"),
+    add("z"),
+    add("e"),
+    add("r"),
+}};
+endTimestamp = 1893456000000L;
+overwrite = false;
+startTimestamp = 1577836800000L;
+}}, "model-123", "org-123");            
 
             PutRequestMonitorRunConfigResponse res = sdk.monitor.putRequestMonitorRunConfig(req);
 
@@ -684,12 +697,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("Communications") {{
+                .setSecurity(new Security("Communications"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ValidateMonitorConfigV3Request req = new ValidateMonitorConfigV3Request("Reggae", "model-123", "org-123") {{
+            ValidateMonitorConfigV3Request req = new ValidateMonitorConfigV3Request("Reggae", "model-123", "org-123"){{
                 verbose = false;
             }};            
 

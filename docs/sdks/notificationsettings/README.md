@@ -37,7 +37,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("applications") {{
+                .setSecurity(new Security("applications"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -86,7 +86,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("transmit") {{
+                .setSecurity(new Security("transmit"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -135,7 +135,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("synergistic") {{
+                .setSecurity(new Security("synergistic"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -184,7 +184,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("RAM") {{
+                .setSecurity(new Security("RAM"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -233,7 +233,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("eos") {{
+                .setSecurity(new Security("eos"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -282,7 +282,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("Operative") {{
+                .setSecurity(new Security("Operative"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -331,7 +331,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("Pop") {{
+                .setSecurity(new Security("Pop"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -381,7 +381,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("and") {{
+                .setSecurity(new Security("and"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -430,7 +430,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("gold") {{
+                .setSecurity(new Security("gold"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -480,7 +480,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("Union") {{
+                .setSecurity(new Security("Union"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -533,31 +533,31 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("East") {{
+                .setSecurity(new Security("East"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            UpdateNotificationSettingsRequest req = new UpdateNotificationSettingsRequest(                new NotificationSettings() {{
-                                emailSettings = new UberNotificationSchedule(NotificationSqsMessageCadence.INDIVIDUAL, false) {{
-                                    dayOfWeek = NotificationSettingsDay.WEDNESDAY;
-                                    local24HourOfDay = 451112;
-                                    localMinuteOfHour = 134617;
-                                    localTimezone = "Account Metal";
-                                }};;
-                                pagerDutySettings = new UberNotificationSchedule(NotificationSqsMessageCadence.DAILY, false) {{
-                                    dayOfWeek = NotificationSettingsDay.SATURDAY;
-                                    local24HourOfDay = 895130;
-                                    localMinuteOfHour = 81366;
-                                    localTimezone = "ranch";
-                                }};;
-                                slackSettings = new UberNotificationSchedule(NotificationSqsMessageCadence.INDIVIDUAL, false) {{
-                                    dayOfWeek = NotificationSettingsDay.SATURDAY;
-                                    local24HourOfDay = 150902;
-                                    localMinuteOfHour = 444248;
-                                    localTimezone = "input";
-                                }};;
-                            }};, "Lamborghini");            
+            UpdateNotificationSettingsRequest req = new UpdateNotificationSettingsRequest(new NotificationSettings(){{
+emailSettings = new UberNotificationSchedule(NotificationSqsMessageCadence.INDIVIDUAL, false){{
+    dayOfWeek = NotificationSettingsDay.WEDNESDAY;
+    local24HourOfDay = 451112;
+    localMinuteOfHour = 134617;
+    localTimezone = "Account Metal";
+}};
+pagerDutySettings = new UberNotificationSchedule(NotificationSqsMessageCadence.DAILY, false){{
+    dayOfWeek = NotificationSettingsDay.SATURDAY;
+    local24HourOfDay = 895130;
+    localMinuteOfHour = 81366;
+    localTimezone = "ranch";
+}};
+slackSettings = new UberNotificationSchedule(NotificationSqsMessageCadence.INDIVIDUAL, false){{
+    dayOfWeek = NotificationSettingsDay.SATURDAY;
+    local24HourOfDay = 150902;
+    localMinuteOfHour = 444248;
+    localTimezone = "input";
+}};
+}}, "Lamborghini");            
 
             UpdateNotificationSettingsResponse res = sdk.notificationSettings.updateNotificationSettings(req);
 
@@ -600,7 +600,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("absentmindedly") {{
+                .setSecurity(new Security("absentmindedly"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -640,7 +640,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("blindly") {{
+                .setSecurity(new Security("blindly"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -680,7 +680,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("caw") {{
+                .setSecurity(new Security("caw"){{
                     apiKeyAuth = "";
                 }})
                 .build();

@@ -33,16 +33,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("homogeneous") {{
+                .setSecurity(new Security("homogeneous"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            CreateAccountUserRequest req = new CreateAccountUserRequest(                new CreateAccountUserRequest("Smart") {{
-                                active = false;
-                                externalId = "Mobility parsing Fresh";
-                                userSchema = "nervous Aston aliquam";
-                            }};, "org-123");            
+            CreateAccountUserRequest req = new CreateAccountUserRequest(new CreateAccountUserRequest("Smart"){{
+active = false;
+externalId = "Mobility parsing Fresh";
+userSchema = "nervous Aston aliquam";
+}}, "org-123");            
 
             CreateAccountUserResponse res = sdk.account.createAccountUser(req);
 
@@ -86,7 +86,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("in") {{
+                .setSecurity(new Security("in"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -136,12 +136,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("Factors") {{
+                .setSecurity(new Security("Factors"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            GetAccountMembershipsRequest req = new GetAccountMembershipsRequest("org-123") {{
+            GetAccountMembershipsRequest req = new GetAccountMembershipsRequest("org-123"){{
                 managedOrgId = "org-123";
                 role = Role.MEMBER;
                 userId = "user-123";
@@ -189,7 +189,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("Avon") {{
+                .setSecurity(new Security("Avon"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -238,7 +238,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("up") {{
+                .setSecurity(new Security("up"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -287,7 +287,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("farad") {{
+                .setSecurity(new Security("farad"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -336,7 +336,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("Arkansas") {{
+                .setSecurity(new Security("Arkansas"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -387,16 +387,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("revenge") {{
+                .setSecurity(new Security("revenge"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            PatchOrganizationMembershipsRequest req = new PatchOrganizationMembershipsRequest(                new PatchAccountMembershipsRequest(                new String[]{{
-                                                add("Fiat"),
-                                            }},                 new String[]{{
-                                                add("contributor"),
-                                            }});, "org-123", "org-123", Role.ADMIN);            
+            PatchOrganizationMembershipsRequest req = new PatchOrganizationMembershipsRequest(new PatchAccountMembershipsRequest(new String[]{{
+    add("Fiat"),
+}}, new String[]{{
+    add("contributor"),
+}}), "org-123", "org-123", Role.ADMIN);            
 
             PatchOrganizationMembershipsResponse res = sdk.account.patchOrganizationMemberships(req);
 
@@ -442,14 +442,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("commitment") {{
+                .setSecurity(new Security("commitment"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            PutOrganizationMembershipsRequest req = new PutOrganizationMembershipsRequest(                new PutAccountMembershipsRequest(                new String[]{{
-                                                add("Grocery"),
-                                            }});, "org-123", "org-123", Role.MEMBER);            
+            PutOrganizationMembershipsRequest req = new PutOrganizationMembershipsRequest(new PutAccountMembershipsRequest(new String[]{{
+    add("Grocery"),
+}}), "org-123", "org-123", Role.MEMBER);            
 
             PutOrganizationMembershipsResponse res = sdk.account.putOrganizationMemberships(req);
 
@@ -494,16 +494,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("radian") {{
+                .setSecurity(new Security("radian"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            UpdateAccountUserRequest req = new UpdateAccountUserRequest(                new UpdateAccountUserRequest() {{
-                                active = false;
-                                externalId = "Shirt female bypassing";
-                                userSchema = "Internal";
-                            }};, "org-123", "user-123");            
+            UpdateAccountUserRequest req = new UpdateAccountUserRequest(new UpdateAccountUserRequest(){{
+active = false;
+externalId = "Shirt female bypassing";
+userSchema = "Internal";
+}}, "org-123", "user-123");            
 
             UpdateAccountUserResponse res = sdk.account.updateAccountUser(req);
 

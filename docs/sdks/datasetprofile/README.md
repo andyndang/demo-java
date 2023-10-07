@@ -37,29 +37,26 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("Massachusetts") {{
+                .setSecurity(new Security("Massachusetts"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            CreateReferenceProfileRequest req = new CreateReferenceProfileRequest(                new CreateReferenceProfileRequest() {{
-                                alias = "back male";
-                                datasetTimestamp = 695813L;
-                                segments = new ai.whylabs.WhyLabs.models.shared.Segment[]{{
-                                    add(new Segment() {{
-                                        tags = new ai.whylabs.WhyLabs.models.shared.SegmentTag[]{{
-                                            add(new SegmentTag() {{
-                                                key = "<key>";
-                                                value = "online below";
-                                            }}),
-                                        }};
-                                    }}),
-                                }};
-                                tags = new String[]{{
-                                    add("Electric"),
-                                }};
-                                version = "superstructure interactive Bike";
-                            }};, "model-123", "org-123");            
+            CreateReferenceProfileRequest req = new CreateReferenceProfileRequest(new CreateReferenceProfileRequest(){{
+alias = "back male";
+datasetTimestamp = 695813L;
+segments = new ai.whylabs.WhyLabs.models.shared.Segment[]{{
+    add(new Segment(){{
+        tags = new ai.whylabs.WhyLabs.models.shared.SegmentTag[]{{
+            add(new SegmentTag(){{}}),
+        }};
+    }}),
+}};
+tags = new String[]{{
+    add("Libyan"),
+}};
+version = "wireless superstructure interactive";
+}}, "model-123", "org-123");            
 
             CreateReferenceProfileResponse res = sdk.datasetProfile.createReferenceProfile(req);
 
@@ -105,12 +102,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("Rap") {{
+                .setSecurity(new Security("Rap"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            DeleteAnalyzerResultsRequest req = new DeleteAnalyzerResultsRequest("model-123", "org-123") {{
+            DeleteAnalyzerResultsRequest req = new DeleteAnalyzerResultsRequest("model-123", "org-123"){{
                 endTimestamp = 1893456000000L;
                 startTimestamp = 1577836800000L;
             }};            
@@ -159,12 +156,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("generation") {{
+                .setSecurity(new Security("generation"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            DeleteDatasetProfilesRequest req = new DeleteDatasetProfilesRequest("model-123", "org-123") {{
+            DeleteDatasetProfilesRequest req = new DeleteDatasetProfilesRequest("model-123", "org-123"){{
                 beforeUploadTimestamp = 1577836800000L;
                 profileEndTimestamp = 1893456000000L;
                 profileStartTimestamp = 1577836800000L;
@@ -214,7 +211,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("Nissan") {{
+                .setSecurity(new Security("Nissan"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -265,12 +262,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("Northwest") {{
+                .setSecurity(new Security("Northwest"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            GetProfileTracesRequest req = new GetProfileTracesRequest("model-123", "org-123", "a756f8bb-de30-48a2-be41-178ae6af7100") {{
+            GetProfileTracesRequest req = new GetProfileTracesRequest("model-123", "org-123", "a756f8bb-de30-48a2-be41-178ae6af7100"){{
                 limit = 50;
                 offset = 0;
             }};            
@@ -319,7 +316,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("Francium") {{
+                .setSecurity(new Security("Francium"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -371,16 +368,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("yellow") {{
+                .setSecurity(new Security("yellow"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            HideSegmentsRequest req = new HideSegmentsRequest(                new SegmentsListRequest() {{
-                                segments = new String[]{{
-                                    add("Gasoline"),
-                                }};
-                            }};, "model-123", "org-123");            
+            HideSegmentsRequest req = new HideSegmentsRequest(new SegmentsListRequest(){{
+segments = new String[]{{
+    add("Gasoline"),
+}};
+}}, "model-123", "org-123");            
 
             HideSegmentsResponse res = sdk.datasetProfile.hideSegments(req);
 
@@ -426,12 +423,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("generating") {{
+                .setSecurity(new Security("generating"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ListReferenceProfilesRequest req = new ListReferenceProfilesRequest("model-123", "org-123") {{
+            ListReferenceProfilesRequest req = new ListReferenceProfilesRequest("model-123", "org-123"){{
                 fromEpoch = 1577836800000L;
                 toEpoch = 1893456000000L;
             }};            
@@ -480,7 +477,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("Human") {{
+                .setSecurity(new Security("Human"){{
                     apiKeyAuth = "";
                 }})
                 .build();

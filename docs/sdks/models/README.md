@@ -37,12 +37,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("zesty") {{
+                .setSecurity(new Security("zesty"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            CreateModelRequest req = new CreateModelRequest("Credit-Score-1", "org-123", TimePeriod.P1_D) {{
+            CreateModelRequest req = new CreateModelRequest("Credit-Score-1", "org-123", TimePeriod.P1_D){{
                 modelId = "model-123";
                 modelType = ModelType.CLASSIFICATION;
             }};            
@@ -89,7 +89,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("throughput") {{
+                .setSecurity(new Security("throughput"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -138,7 +138,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("coaxingly") {{
+                .setSecurity(new Security("coaxingly"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -187,7 +187,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("Mazda") {{
+                .setSecurity(new Security("Mazda"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -236,7 +236,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("orange") {{
+                .setSecurity(new Security("orange"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -285,7 +285,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("Polarised") {{
+                .setSecurity(new Security("Polarised"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -334,7 +334,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("adapter") {{
+                .setSecurity(new Security("adapter"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -383,7 +383,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("lime") {{
+                .setSecurity(new Security("lime"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -432,7 +432,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("Western") {{
+                .setSecurity(new Security("Western"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -485,31 +485,31 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("hardware") {{
+                .setSecurity(new Security("hardware"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            PutEntitySchemaRequest req = new PutEntitySchemaRequest(                new EntitySchema(                new java.util.HashMap<String, ai.whylabs.WhyLabs.models.shared.ColumnSchema>() {{
-                                                put("aspernatur", new ColumnSchema("input", "fractional", "discrete") {{
-                                                    classifier = "input";
-                                                    dataType = "fractional";
-                                                    discreteness = "discrete";
-                                                }});
-                                            }}) {{
-                                metadata = new SchemaMetadata() {{
-                                    author = "whenever digital Ransom";
-                                    updatedTimestamp = 86914L;
-                                    version = 46718L;
-                                }};;
-                                metrics = new java.util.HashMap<String, ai.whylabs.WhyLabs.models.shared.MetricSchema>() {{
-                                    put("natus", new MetricSchema("estimated_prediction", "median", "estimated_prediction.median") {{
-                                        column = "estimated_prediction";
-                                        defaultMetric = "median";
-                                        label = "estimated_prediction.median";
-                                    }});
-                                }};
-                            }};, "model-123", "org-123");            
+            PutEntitySchemaRequest req = new PutEntitySchemaRequest(new EntitySchema(new java.util.HashMap<String, ai.whylabs.WhyLabs.models.shared.ColumnSchema>(){{
+    put("Island", new ColumnSchema("input", "fractional", "discrete"){{
+        classifier = "input";
+        dataType = "fractional";
+        discreteness = "discrete";
+    }});
+}}){{
+metadata = new SchemaMetadata(){{
+    author = "digital Ransom North";
+    updatedTimestamp = 619066L;
+    version = 335361L;
+}};
+metrics = new java.util.HashMap<String, ai.whylabs.WhyLabs.models.shared.MetricSchema>(){{
+    put("Wooden", new MetricSchema("estimated_prediction", "median", "estimated_prediction.median"){{
+        column = "estimated_prediction";
+        defaultMetric = "median";
+        label = "estimated_prediction.median";
+    }});
+}};
+}}, "model-123", "org-123");            
 
             PutEntitySchemaResponse res = sdk.models.putEntitySchema(req);
 
@@ -554,12 +554,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("Folk") {{
+                .setSecurity(new Security("Folk"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            PutEntitySchemaColumnRequest req = new PutEntitySchemaColumnRequest(                new ColumnSchema("input", "fractional", "discrete");, "feature-123", "model-123", "org-123");            
+            PutEntitySchemaColumnRequest req = new PutEntitySchemaColumnRequest(new ColumnSchema("input", "fractional", "discrete"), "feature-123", "model-123", "org-123");            
 
             PutEntitySchemaColumnResponse res = sdk.models.putEntitySchemaColumn(req);
 
@@ -604,12 +604,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("Diesel") {{
+                .setSecurity(new Security("Diesel"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            PutEntitySchemaMetricRequest req = new PutEntitySchemaMetricRequest(                new MetricSchema("estimated_prediction", "median", "estimated_prediction.median");, "model-123", "org-123");            
+            PutEntitySchemaMetricRequest req = new PutEntitySchemaMetricRequest(new MetricSchema("estimated_prediction", "median", "estimated_prediction.median"), "model-123", "org-123");            
 
             PutEntitySchemaMetricResponse res = sdk.models.putEntitySchemaMetric(req);
 
@@ -655,12 +655,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("Northwest") {{
+                .setSecurity(new Security("Northwest"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            UpdateModelRequest req = new UpdateModelRequest("model-123", "Credit-Score-1", "org-123", TimePeriod.P1_D) {{
+            UpdateModelRequest req = new UpdateModelRequest("model-123", "Credit-Score-1", "org-123", TimePeriod.P1_D){{
                 modelType = ModelType.CLASSIFICATION;
             }};            
 

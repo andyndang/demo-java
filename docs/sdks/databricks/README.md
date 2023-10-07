@@ -27,12 +27,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("concept") {{
+                .setSecurity(new Security("concept"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.GetConnectionRequest req = new GetConnectionRequest() {{
+            ai.whylabs.WhyLabs.models.shared.GetConnectionRequest req = new GetConnectionRequest(){{
                 orgId = "truck";
                 workspaceId = "male XML";
             }};            
@@ -79,12 +79,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("enhance") {{
+                .setSecurity(new Security("enhance"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.ListJobsRequest req = new ListJobsRequest() {{
+            ai.whylabs.WhyLabs.models.shared.ListJobsRequest req = new ListJobsRequest(){{
                 orgId = "Transgender Northwest";
                 workspaceId = "Metal Honda male";
             }};            
@@ -131,12 +131,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("SAS") {{
+                .setSecurity(new Security("SAS"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.RefreshConnectionRequest req = new RefreshConnectionRequest() {{
+            ai.whylabs.WhyLabs.models.shared.RefreshConnectionRequest req = new RefreshConnectionRequest(){{
                 orgId = "Account West North";
                 workspaceId = "Van Northwest";
             }};            
@@ -183,12 +183,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("Horizontal") {{
+                .setSecurity(new Security("Horizontal"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.RunJobRequest req = new RunJobRequest(993298L) {{
+            ai.whylabs.WhyLabs.models.shared.RunJobRequest req = new RunJobRequest(993298L){{
                 orgId = "card DNS";
                 workspaceId = "Diesel";
             }};            
@@ -236,17 +236,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("plum") {{
+                .setSecurity(new Security("plum"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.UpdateConnectionRequest req = new UpdateConnectionRequest() {{
-                changes = new UpdateConnectionChanges() {{
+            ai.whylabs.WhyLabs.models.shared.UpdateConnectionRequest req = new UpdateConnectionRequest(){{
+                changes = new UpdateConnectionChanges(){{
                     connected = false;
                     demo = false;
                     orgId = "Checking transmitting";
-                }};;
+                }};
                 orgId = "up teal";
                 workspaceId = "Armenian";
             }};            

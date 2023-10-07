@@ -32,12 +32,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("Puerto") {{
+                .setSecurity(new Security("Puerto"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            CreateOrganizationRequest req = new CreateOrganizationRequest("ACME, Inc") {{
+            CreateOrganizationRequest req = new CreateOrganizationRequest("ACME, Inc"){{
                 domain = "acme.ai";
                 emailDomains = "acme.ai,acme.com";
                 notificationEmailAddress = "notifications@acme.ai";
@@ -91,7 +91,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("Coupe") {{
+                .setSecurity(new Security("Coupe"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -140,7 +140,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("Toys") {{
+                .setSecurity(new Security("Toys"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -189,7 +189,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("hertz") {{
+                .setSecurity(new Security("hertz"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -237,7 +237,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("male") {{
+                .setSecurity(new Security("male"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -282,14 +282,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("primary") {{
+                .setSecurity(new Security("primary"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            PartiallyUpdateOrgRequest req = new PartiallyUpdateOrgRequest(                new PartiallyUpdateOrgRequestBody() {{
-                                orgId = "Passaic Intranet";
-                            }};) {{
+            PartiallyUpdateOrgRequest req = new PartiallyUpdateOrgRequest(new PartiallyUpdateOrgRequestBody(){{
+orgId = "Passaic Intranet";
+}}){{
                 domain = "acme.ai";
                 name = "ACME, Inc";
                 notificationEmailAddress = "notifications@acme.ai";
@@ -341,12 +341,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("SCSI") {{
+                .setSecurity(new Security("SCSI"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            PartiallyUpdateOrganizationRequest req = new PartiallyUpdateOrganizationRequest("Park") {{
+            PartiallyUpdateOrganizationRequest req = new PartiallyUpdateOrganizationRequest("Park"){{
                 domain = "acme.ai";
                 emailDomains = "acme.ai,acme.com";
                 name = "ACME, Inc";
@@ -404,14 +404,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("Brand") {{
+                .setSecurity(new Security("Brand"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            UpdateOrgRequest req = new UpdateOrgRequest(                new UpdateOrgRequestBody() {{
-                                orgId = "Mississippi";
-                            }};, "ACME, Inc") {{
+            UpdateOrgRequest req = new UpdateOrgRequest(new UpdateOrgRequestBody(){{
+orgId = "Mississippi";
+}}, "ACME, Inc"){{
                 domain = "acme.ai";
                 emailDomains = "acme.ai,acme.com";
                 notificationEmailAddress = "notifications@acme.ai";
@@ -465,12 +465,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("pixel") {{
+                .setSecurity(new Security("pixel"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            UpdateOrganizationRequest req = new UpdateOrganizationRequest("ACME, Inc", "aspernatur") {{
+            UpdateOrganizationRequest req = new UpdateOrganizationRequest("ACME, Inc", "aspernatur"){{
                 domain = "acme.ai";
                 emailDomains = "acme.ai,acme.com";
                 notificationEmailAddress = "notifications@acme.ai";
