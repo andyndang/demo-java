@@ -4,6 +4,8 @@
 
 package ai.whylabs.WhyLabs.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
@@ -41,6 +43,18 @@ public class ColumnSchema {
 
     public ColumnSchema withDiscreteness(String discreteness) {
         this.discreteness = discreteness;
+        return this;
+    }
+    
+    /**
+     * Metadata tags for the column schema information
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("tags")
+    public String[] tags;
+
+    public ColumnSchema withTags(String[] tags) {
+        this.tags = tags;
         return this;
     }
     

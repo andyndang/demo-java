@@ -495,15 +495,18 @@ public class Application {
         classifier = "input";
         dataType = "fractional";
         discreteness = "discrete";
+        tags = new String[]{{
+            add("Folding"),
+        }};
     }});
 }}){{
 metadata = new SchemaMetadata(){{
-    author = "digital Ransom North";
-    updatedTimestamp = 619066L;
-    version = 335361L;
+    author = "engineer";
+    updatedTimestamp = 424354L;
+    version = 101415L;
 }};
 metrics = new java.util.HashMap<String, ai.whylabs.WhyLabs.models.shared.MetricSchema>(){{
-    put("Wooden", new MetricSchema("estimated_prediction", "median", "estimated_prediction.median"){{
+    put("North", new MetricSchema("estimated_prediction", "median", "estimated_prediction.median"){{
         column = "estimated_prediction";
         defaultMetric = "median";
         label = "estimated_prediction.median";
@@ -559,7 +562,11 @@ public class Application {
                 }})
                 .build();
 
-            PutEntitySchemaColumnRequest req = new PutEntitySchemaColumnRequest(new ColumnSchema("input", "fractional", "discrete"), "feature-123", "model-123", "org-123");            
+            PutEntitySchemaColumnRequest req = new PutEntitySchemaColumnRequest(new ColumnSchema("input", "fractional", "discrete"){{
+tags = new String[]{{
+    add("Account"),
+}};
+}}, "feature-123", "model-123", "org-123");            
 
             PutEntitySchemaColumnResponse res = sdk.models.putEntitySchemaColumn(req);
 
