@@ -1312,48 +1312,6 @@ public class Internal {
     }
 
     /**
-     * Returns a list of segments
-     * Returns a list of segments for the dataset.
-     * 
-     *         
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public ai.whylabs.WhyLabs.models.operations.ListSegmentsResponse listSegments(ai.whylabs.WhyLabs.models.operations.ListSegmentsRequest request) throws Exception {
-        String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.ListSegmentsRequest.class, baseUrl, "/v0/organizations/{org_id}/dataset-profiles/models/{model_id}/segments", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("GET");
-        req.setURL(url);
-
-        req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
-        
-        HTTPClient client = this.sdkConfiguration.securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.ListSegmentsResponse res = new ai.whylabs.WhyLabs.models.operations.ListSegmentsResponse(contentType, httpRes.statusCode()) {{
-            segmentListResponse = null;
-        }};
-        res.rawResponse = httpRes;
-        
-        if (true) {
-            if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                ai.whylabs.WhyLabs.models.shared.SegmentListResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), ai.whylabs.WhyLabs.models.shared.SegmentListResponse.class);
-                res.segmentListResponse = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
      * Update some fields of an organization to non-null values
      * Update some fields of an organization to non-null values, leaving all other existing values the same
      * @param request the request object containing all of the parameters for the API call

@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'ai.whylabs.WhyLabs:Songbird:1.30.0'
+implementation 'ai.whylabs.WhyLabs:Songbird:1.31.0'
 ```
 <!-- End SDK Installation -->
 
@@ -149,7 +149,6 @@ userSchema = "nervous Aston aliquam";
 * [listManagedOrganizations](docs/sdks/internal/README.md#listmanagedorganizations) - List managed organizations for a parent organization
 * [listMonitorConfigV3Versions](docs/sdks/internal/README.md#listmonitorconfigv3versions) - List the monitor config document versions for a given dataset.
 * [listOrganizations](docs/sdks/internal/README.md#listorganizations) - Get a list of all of the organization ids.
-* [listSegments](docs/sdks/internal/README.md#listsegments) - Returns a list of segments
 * [~~partiallyUpdateOrg~~](docs/sdks/internal/README.md#partiallyupdateorg) - Update some fields of an organization to non-null values :warning: **Deprecated**
 * [partiallyUpdateOrganization](docs/sdks/internal/README.md#partiallyupdateorganization) - Update some fields of an organization to non-null values
 * [patchOrganizationMemberships](docs/sdks/internal/README.md#patchorganizationmemberships) - Add or delete memberships in a specific role and managed organization

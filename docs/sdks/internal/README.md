@@ -33,7 +33,6 @@
 * [listManagedOrganizations](#listmanagedorganizations) - List managed organizations for a parent organization
 * [listMonitorConfigV3Versions](#listmonitorconfigv3versions) - List the monitor config document versions for a given dataset.
 * [listOrganizations](#listorganizations) - Get a list of all of the organization ids.
-* [listSegments](#listsegments) - Returns a list of segments
 * [~~partiallyUpdateOrg~~](#partiallyupdateorg) - Update some fields of an organization to non-null values :warning: **Deprecated**
 * [partiallyUpdateOrganization](#partiallyupdateorganization) - Update some fields of an organization to non-null values
 * [patchOrganizationMemberships](#patchorganizationmemberships) - Add or delete memberships in a specific role and managed organization
@@ -1559,57 +1558,6 @@ public class Application {
 ### Response
 
 **[ai.whylabs.WhyLabs.models.operations.ListOrganizationsResponse](../../models/operations/ListOrganizationsResponse.md)**
-
-
-## listSegments
-
-Returns a list of segments for the dataset.
-
-        
-
-### Example Usage
-
-```java
-package hello.world;
-
-import ai.whylabs.WhyLabs.Songbird;
-import ai.whylabs.WhyLabs.models.operations.ListSegmentsRequest;
-import ai.whylabs.WhyLabs.models.operations.ListSegmentsResponse;
-import ai.whylabs.WhyLabs.models.shared.Security;
-
-public class Application {
-    public static void main(String[] args) {
-        try {
-            Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("Human"){{
-                    apiKeyAuth = "";
-                }})
-                .build();
-
-            ListSegmentsRequest req = new ListSegmentsRequest("model-123", "org-123");            
-
-            ListSegmentsResponse res = sdk.internal.listSegments(req);
-
-            if (res.statusCode == 200) {
-                // handle response
-            }
-        } catch (Exception e) {
-            // handle exception
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                  | [ai.whylabs.WhyLabs.models.operations.ListSegmentsRequest](../../models/operations/ListSegmentsRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-
-
-### Response
-
-**[ai.whylabs.WhyLabs.models.operations.ListSegmentsResponse](../../models/operations/ListSegmentsResponse.md)**
 
 
 ## ~~partiallyUpdateOrg~~
