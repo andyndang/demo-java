@@ -33,8 +33,8 @@ public class Application {
                 .build();
 
             ai.whylabs.WhyLabs.models.shared.GetConnectionRequest req = new GetConnectionRequest(){{
-                orgId = "truck";
-                workspaceId = "male XML";
+                orgId = "rich";
+                workspaceId = "eek";
             }};            
 
             GetConnectionResponse res = sdk.databricks.getConnection(req);
@@ -85,8 +85,8 @@ public class Application {
                 .build();
 
             ai.whylabs.WhyLabs.models.shared.ListJobsRequest req = new ListJobsRequest(){{
-                orgId = "Transgender Northwest";
-                workspaceId = "Metal Honda male";
+                orgId = "Hop";
+                workspaceId = "Colorado";
             }};            
 
             ListJobsResponse res = sdk.databricks.listJobs(req);
@@ -137,8 +137,8 @@ public class Application {
                 .build();
 
             ai.whylabs.WhyLabs.models.shared.RefreshConnectionRequest req = new RefreshConnectionRequest(){{
-                orgId = "Account West North";
-                workspaceId = "Van Northwest";
+                orgId = "kissingly";
+                workspaceId = "deliverables";
             }};            
 
             RefreshConnectionResponse res = sdk.databricks.refreshConnection(req);
@@ -189,8 +189,8 @@ public class Application {
                 .build();
 
             ai.whylabs.WhyLabs.models.shared.RunJobRequest req = new RunJobRequest(993298L){{
-                orgId = "card DNS";
-                workspaceId = "Diesel";
+                orgId = "firewall";
+                workspaceId = "Movies";
             }};            
 
             RunJobResponse res = sdk.databricks.runJob(req);
@@ -245,10 +245,10 @@ public class Application {
                 changes = new UpdateConnectionChanges(){{
                     connected = false;
                     demo = false;
-                    orgId = "Checking transmitting";
+                    orgId = "Som";
                 }};
-                orgId = "up teal";
-                workspaceId = "Armenian";
+                orgId = "Guadeloupe";
+                workspaceId = "transmitting";
             }};            
 
             UpdateConnectionResponse res = sdk.databricks.updateConnection(req);

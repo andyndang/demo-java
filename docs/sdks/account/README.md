@@ -40,8 +40,8 @@ public class Application {
 
             CreateAccountUserRequest req = new CreateAccountUserRequest(new CreateAccountUserRequest("Smart"){{
 active = false;
-externalId = "Mobility parsing Fresh";
-userSchema = "nervous Aston aliquam";
+externalId = "Analyst";
+userSchema = "Fresh";
 }}, "org-123");            
 
             CreateAccountUserResponse res = sdk.account.createAccountUser(req);
@@ -501,8 +501,8 @@ public class Application {
 
             UpdateAccountUserRequest req = new UpdateAccountUserRequest(new UpdateAccountUserRequest(){{
 active = false;
-externalId = "Shirt female bypassing";
-userSchema = "Internal";
+externalId = "for";
+userSchema = "orchestration";
 }}, "org-123", "user-123");            
 
             UpdateAccountUserResponse res = sdk.account.updateAccountUser(req);

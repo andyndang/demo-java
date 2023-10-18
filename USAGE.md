@@ -21,8 +21,8 @@ public class Application {
 
             CreateAccountUserRequest req = new CreateAccountUserRequest(new CreateAccountUserRequest("Smart"){{
 active = false;
-externalId = "Mobility parsing Fresh";
-userSchema = "nervous Aston aliquam";
+externalId = "Analyst";
+userSchema = "Fresh";
 }}, "org-123");            
 
             CreateAccountUserResponse res = sdk.account.createAccountUser(req);

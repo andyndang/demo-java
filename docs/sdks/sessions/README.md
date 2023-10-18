@@ -196,9 +196,9 @@ public class Application {
                 .build();
 
             CreateReferenceProfileUploadRequest req = new CreateReferenceProfileUploadRequest(new LogReferenceRequest(){{
-alias = "Keyboard Lawrencium Handmade";
-datasetTimestamp = 246677L;
-}}, "Granite");            
+alias = "Manager";
+datasetTimestamp = 133733L;
+}}, "Lawrencium");            
 
             CreateReferenceProfileUploadResponse res = sdk.sessions.createReferenceProfileUpload(req);
 

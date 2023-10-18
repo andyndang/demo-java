@@ -288,14 +288,14 @@ public class Application {
                 .build();
 
             PartiallyUpdateOrgRequest req = new PartiallyUpdateOrgRequest(new PartiallyUpdateOrgRequestBody(){{
-orgId = "Passaic Intranet";
+orgId = "algorithm";
 }}){{
                 domain = "acme.ai";
                 name = "ACME, Inc";
                 notificationEmailAddress = "notifications@acme.ai";
                 observatoryUrl = "https://hub.whylabsapp.com";
                 slackWebhook = "https://hooks.slack.com/services/foo/bar";
-                subscriptionTier = SubscriptionTier.FREE;
+                subscriptionTier = SubscriptionTier.AWS_MARKETPLACE;
             }};            
 
             PartiallyUpdateOrgResponse res = sdk.organizations.partiallyUpdateOrg(req);
@@ -410,7 +410,7 @@ public class Application {
                 .build();
 
             UpdateOrgRequest req = new UpdateOrgRequest(new UpdateOrgRequestBody(){{
-orgId = "Mississippi";
+orgId = "Bronze";
 }}, "ACME, Inc"){{
                 domain = "acme.ai";
                 emailDomains = "acme.ai,acme.com";
@@ -419,7 +419,7 @@ orgId = "Mississippi";
                 pagerDutyKey = "abc-def-ghi-jkl";
                 parentOrgId = "org-123";
                 slackWebhook = "https://hooks.slack.com/services/foo/bar";
-                subscriptionTier = SubscriptionTier.SUBSCRIPTION;
+                subscriptionTier = SubscriptionTier.PAID;
             }};            
 
             UpdateOrgResponse res = sdk.organizations.updateOrg(req);

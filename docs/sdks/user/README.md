@@ -179,7 +179,7 @@ public class Application {
                 .build();
 
             ai.whylabs.WhyLabs.models.shared.User req = new User("projection", "newton"){{
-                preferences = "Dynamic Northwest Focused";
+                preferences = "though";
             }};            
 
             UpdateUserResponse res = sdk.user.updateUser(req);

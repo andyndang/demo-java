@@ -43,8 +43,8 @@ public class Application {
                 .build();
 
             CreateReferenceProfileRequest req = new CreateReferenceProfileRequest(new CreateReferenceProfileRequest(){{
-alias = "back male";
-datasetTimestamp = 695813L;
+alias = "quantify";
+datasetTimestamp = 23025L;
 segments = new ai.whylabs.WhyLabs.models.shared.Segment[]{{
     add(new Segment(){{
         tags = new ai.whylabs.WhyLabs.models.shared.SegmentTag[]{{
@@ -53,9 +53,9 @@ segments = new ai.whylabs.WhyLabs.models.shared.Segment[]{{
     }}),
 }};
 tags = new String[]{{
-    add("Libyan"),
+    add("Realigned"),
 }};
-version = "wireless superstructure interactive";
+version = "Division";
 }}, "model-123", "org-123");            
 
             CreateReferenceProfileResponse res = sdk.datasetProfile.createReferenceProfile(req);

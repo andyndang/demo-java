@@ -41,7 +41,7 @@ public class Application {
                 .build();
 
             ai.whylabs.WhyLabs.models.shared.AddMembershipRequest req = new AddMembershipRequest("synergies", "24/7", Role.VIEWER){{
-                createdBy = "Classical";
+                createdBy = "payment";
                 default_ = false;
             }};            
 

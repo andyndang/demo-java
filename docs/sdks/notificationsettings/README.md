@@ -543,21 +543,21 @@ emailSettings = new UberNotificationSchedule(NotificationSqsMessageCadence.INDIV
     dayOfWeek = NotificationSettingsDay.WEDNESDAY;
     local24HourOfDay = 451112;
     localMinuteOfHour = 134617;
-    localTimezone = "Account Metal";
+    localTimezone = "Account";
 }};
-pagerDutySettings = new UberNotificationSchedule(NotificationSqsMessageCadence.DAILY, false){{
-    dayOfWeek = NotificationSettingsDay.SATURDAY;
-    local24HourOfDay = 895130;
-    localMinuteOfHour = 81366;
-    localTimezone = "ranch";
+pagerDutySettings = new UberNotificationSchedule(NotificationSqsMessageCadence.WEEKLY, false){{
+    dayOfWeek = NotificationSettingsDay.MONDAY;
+    local24HourOfDay = 749170;
+    localMinuteOfHour = 434265;
+    localTimezone = "zowie";
 }};
-slackSettings = new UberNotificationSchedule(NotificationSqsMessageCadence.INDIVIDUAL, false){{
-    dayOfWeek = NotificationSettingsDay.SATURDAY;
-    local24HourOfDay = 150902;
-    localMinuteOfHour = 444248;
-    localTimezone = "input";
+slackSettings = new UberNotificationSchedule(NotificationSqsMessageCadence.HOURLY, false){{
+    dayOfWeek = NotificationSettingsDay.SUNDAY;
+    local24HourOfDay = 941078;
+    localMinuteOfHour = 720601;
+    localTimezone = "weber";
 }};
-}}, "Lamborghini");            
+}}, "Motorway");            
 
             UpdateNotificationSettingsResponse res = sdk.notificationSettings.updateNotificationSettings(req);
 

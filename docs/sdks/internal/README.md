@@ -84,8 +84,8 @@ public class Application {
 
             CreateAccountUserRequest req = new CreateAccountUserRequest(new CreateAccountUserRequest("Smart"){{
 active = false;
-externalId = "Mobility parsing Fresh";
-userSchema = "nervous Aston aliquam";
+externalId = "Analyst";
+userSchema = "Fresh";
 }}, "org-123");            
 
             CreateAccountUserResponse res = sdk.internal.createAccountUser(req);
@@ -137,7 +137,7 @@ public class Application {
                 .build();
 
             ai.whylabs.WhyLabs.models.shared.AddMembershipRequest req = new AddMembershipRequest("synergies", "24/7", Role.VIEWER){{
-                createdBy = "Classical";
+                createdBy = "payment";
                 default_ = false;
             }};            
 
@@ -696,8 +696,8 @@ public class Application {
                 .build();
 
             ai.whylabs.WhyLabs.models.shared.GetConnectionRequest req = new GetConnectionRequest(){{
-                orgId = "truck";
-                workspaceId = "male XML";
+                orgId = "rich";
+                workspaceId = "eek";
             }};            
 
             GetConnectionResponse res = sdk.internal.getConnection(req);
@@ -1394,8 +1394,8 @@ public class Application {
                 .build();
 
             ai.whylabs.WhyLabs.models.shared.ListJobsRequest req = new ListJobsRequest(){{
-                orgId = "Transgender Northwest";
-                workspaceId = "Metal Honda male";
+                orgId = "Hop";
+                workspaceId = "Colorado";
             }};            
 
             ListJobsResponse res = sdk.internal.listJobs(req);
@@ -1588,14 +1588,14 @@ public class Application {
                 .build();
 
             PartiallyUpdateOrgRequest req = new PartiallyUpdateOrgRequest(new PartiallyUpdateOrgRequestBody(){{
-orgId = "Passaic Intranet";
+orgId = "algorithm";
 }}){{
                 domain = "acme.ai";
                 name = "ACME, Inc";
                 notificationEmailAddress = "notifications@acme.ai";
                 observatoryUrl = "https://hub.whylabsapp.com";
                 slackWebhook = "https://hooks.slack.com/services/foo/bar";
-                subscriptionTier = SubscriptionTier.FREE;
+                subscriptionTier = SubscriptionTier.AWS_MARKETPLACE;
             }};            
 
             PartiallyUpdateOrgResponse res = sdk.internal.partiallyUpdateOrg(req);
@@ -2076,8 +2076,8 @@ public class Application {
                 .build();
 
             ai.whylabs.WhyLabs.models.shared.RefreshConnectionRequest req = new RefreshConnectionRequest(){{
-                orgId = "Account West North";
-                workspaceId = "Van Northwest";
+                orgId = "kissingly";
+                workspaceId = "deliverables";
             }};            
 
             RefreshConnectionResponse res = sdk.internal.refreshConnection(req);
@@ -2229,8 +2229,8 @@ public class Application {
                 .build();
 
             ai.whylabs.WhyLabs.models.shared.RunJobRequest req = new RunJobRequest(993298L){{
-                orgId = "card DNS";
-                workspaceId = "Diesel";
+                orgId = "firewall";
+                workspaceId = "Movies";
             }};            
 
             RunJobResponse res = sdk.internal.runJob(req);
@@ -2380,8 +2380,8 @@ public class Application {
 
             UpdateAccountUserRequest req = new UpdateAccountUserRequest(new UpdateAccountUserRequest(){{
 active = false;
-externalId = "Shirt female bypassing";
-userSchema = "Internal";
+externalId = "for";
+userSchema = "orchestration";
 }}, "org-123", "user-123");            
 
             UpdateAccountUserResponse res = sdk.internal.updateAccountUser(req);
@@ -2436,10 +2436,10 @@ public class Application {
                 changes = new UpdateConnectionChanges(){{
                     connected = false;
                     demo = false;
-                    orgId = "Checking transmitting";
+                    orgId = "Som";
                 }};
-                orgId = "up teal";
-                workspaceId = "Armenian";
+                orgId = "Guadeloupe";
+                workspaceId = "transmitting";
             }};            
 
             UpdateConnectionResponse res = sdk.internal.updateConnection(req);
@@ -2548,21 +2548,21 @@ emailSettings = new UberNotificationSchedule(NotificationSqsMessageCadence.INDIV
     dayOfWeek = NotificationSettingsDay.WEDNESDAY;
     local24HourOfDay = 451112;
     localMinuteOfHour = 134617;
-    localTimezone = "Account Metal";
+    localTimezone = "Account";
 }};
-pagerDutySettings = new UberNotificationSchedule(NotificationSqsMessageCadence.DAILY, false){{
-    dayOfWeek = NotificationSettingsDay.SATURDAY;
-    local24HourOfDay = 895130;
-    localMinuteOfHour = 81366;
-    localTimezone = "ranch";
+pagerDutySettings = new UberNotificationSchedule(NotificationSqsMessageCadence.WEEKLY, false){{
+    dayOfWeek = NotificationSettingsDay.MONDAY;
+    local24HourOfDay = 749170;
+    localMinuteOfHour = 434265;
+    localTimezone = "zowie";
 }};
-slackSettings = new UberNotificationSchedule(NotificationSqsMessageCadence.INDIVIDUAL, false){{
-    dayOfWeek = NotificationSettingsDay.SATURDAY;
-    local24HourOfDay = 150902;
-    localMinuteOfHour = 444248;
-    localTimezone = "input";
+slackSettings = new UberNotificationSchedule(NotificationSqsMessageCadence.HOURLY, false){{
+    dayOfWeek = NotificationSettingsDay.SUNDAY;
+    local24HourOfDay = 941078;
+    localMinuteOfHour = 720601;
+    localTimezone = "weber";
 }};
-}}, "Lamborghini");            
+}}, "Motorway");            
 
             UpdateNotificationSettingsResponse res = sdk.internal.updateNotificationSettings(req);
 
@@ -2616,7 +2616,7 @@ public class Application {
                 .build();
 
             UpdateOrgRequest req = new UpdateOrgRequest(new UpdateOrgRequestBody(){{
-orgId = "Mississippi";
+orgId = "Bronze";
 }}, "ACME, Inc"){{
                 domain = "acme.ai";
                 emailDomains = "acme.ai,acme.com";
@@ -2625,7 +2625,7 @@ orgId = "Mississippi";
                 pagerDutyKey = "abc-def-ghi-jkl";
                 parentOrgId = "org-123";
                 slackWebhook = "https://hooks.slack.com/services/foo/bar";
-                subscriptionTier = SubscriptionTier.SUBSCRIPTION;
+                subscriptionTier = SubscriptionTier.PAID;
             }};            
 
             UpdateOrgResponse res = sdk.internal.updateOrg(req);
@@ -2735,7 +2735,7 @@ public class Application {
                 .build();
 
             ai.whylabs.WhyLabs.models.shared.User req = new User("projection", "newton"){{
-                preferences = "Dynamic Northwest Focused";
+                preferences = "though";
             }};            
 
             UpdateUserResponse res = sdk.internal.updateUser(req);
@@ -2836,7 +2836,7 @@ public class Application {
                 .build();
 
             ai.whylabs.WhyLabs.models.shared.SearchIndexRequest req = new SearchIndexRequest(){{
-                orgId = "Kids";
+                orgId = "green";
                 type = SearchIndexType.ENTITY_SCHEMA;
             }};            
 

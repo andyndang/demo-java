@@ -145,8 +145,8 @@ public class Application {
                 .build();
 
             LogReferenceRequest req = new LogReferenceRequest(new LogReferenceRequest(){{
-alias = "Jewelery West Cape";
-datasetTimestamp = 892608L;
+alias = "female";
+datasetTimestamp = 802724L;
 }}, "model-123", "org-123");            
 
             LogReferenceResponse res = sdk.log.logReference(req);

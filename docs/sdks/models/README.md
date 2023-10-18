@@ -501,12 +501,12 @@ public class Application {
     }});
 }}){{
 metadata = new SchemaMetadata(){{
-    author = "engineer";
-    updatedTimestamp = 424354L;
-    version = 101415L;
+    author = "Ransom";
+    updatedTimestamp = 86914L;
+    version = 46718L;
 }};
 metrics = new java.util.HashMap<String, ai.whylabs.WhyLabs.models.shared.MetricSchema>(){{
-    put("North", new MetricSchema("estimated_prediction", "median", "estimated_prediction.median"){{
+    put("Female", new MetricSchema("estimated_prediction", "median", "estimated_prediction.median"){{
         column = "estimated_prediction";
         defaultMetric = "median";
         label = "estimated_prediction.median";

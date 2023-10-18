@@ -33,18 +33,18 @@ public class Application {
                 .build();
 
             LogDebugEventRequest req = new LogDebugEventRequest(new DebugEvent(){{
-content = "Minor quip yahoo";
-creationTimestamp = 622527L;
-datasetTimestamp = 928126L;
+content = "indeed";
+creationTimestamp = 655638L;
+datasetTimestamp = 48501L;
 segment = new Segment(){{
     tags = new ai.whylabs.WhyLabs.models.shared.SegmentTag[]{{
         add(new SegmentTag(){{}}),
     }};
 }};
 tags = new String[]{{
-    add("technologies"),
+    add("hazelnut"),
 }};
-traceId = "Bike pixel";
+traceId = "quip";
 }}, "model-123", "org-123");            
 
             LogDebugEventResponse res = sdk.debugEvents.logDebugEvent(req);

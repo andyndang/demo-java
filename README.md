@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'ai.whylabs.WhyLabs:Songbird:1.31.0'
+implementation 'ai.whylabs.WhyLabs:Songbird:1.32.0'
 ```
 <!-- End SDK Installation -->
 
@@ -32,8 +32,8 @@ public class Application {
 
             CreateAccountUserRequest req = new CreateAccountUserRequest(new CreateAccountUserRequest("Smart"){{
 active = false;
-externalId = "Mobility parsing Fresh";
-userSchema = "nervous Aston aliquam";
+externalId = "Analyst";
+userSchema = "Fresh";
 }}, "org-123");            
 
             CreateAccountUserResponse res = sdk.account.createAccountUser(req);

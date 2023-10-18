@@ -80,7 +80,7 @@ public class Application {
                 .build();
 
             ai.whylabs.WhyLabs.models.shared.SearchIndexRequest req = new SearchIndexRequest(){{
-                orgId = "Kids";
+                orgId = "green";
                 type = SearchIndexType.ENTITY_SCHEMA;
             }};            
 
