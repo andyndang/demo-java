@@ -24,6 +24,7 @@
 * [getMonitorConfigV3Version](#getmonitorconfigv3version) - Get the monitor config document version for a given dataset.
 * [getNotificationSettings](#getnotificationsettings) - Get notification settings for an org
 * [getOrganization](#getorganization) - Get the metadata about an organization.
+* [getOrganizationSubscriptions](#getorganizationsubscriptions) - Get organization subscription details
 * [getUser](#getuser) - Get a user by their id.
 * [getUserByEmail](#getuserbyemail) - Get a user by their email.
 * [hideSegments](#hidesegments) - Hides a list of segments
@@ -1114,6 +1115,55 @@ public class Application {
 ### Response
 
 **[ai.whylabs.WhyLabs.models.operations.GetOrganizationResponse](../../models/operations/GetOrganizationResponse.md)**
+
+
+## getOrganizationSubscriptions
+
+Get organization subscription details
+
+### Example Usage
+
+```java
+package hello.world;
+
+import ai.whylabs.WhyLabs.Songbird;
+import ai.whylabs.WhyLabs.models.operations.GetOrganizationSubscriptionsRequest;
+import ai.whylabs.WhyLabs.models.operations.GetOrganizationSubscriptionsResponse;
+import ai.whylabs.WhyLabs.models.shared.Security;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("purple"){{
+                    apiKeyAuth = "";
+                }})
+                .build();
+
+            GetOrganizationSubscriptionsRequest req = new GetOrganizationSubscriptionsRequest("Hybrid");            
+
+            GetOrganizationSubscriptionsResponse res = sdk.internal.getOrganizationSubscriptions(req);
+
+            if (res.statusCode == 200) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                                  | Type                                                                                                                                       | Required                                                                                                                                   | Description                                                                                                                                |
+| ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                  | [ai.whylabs.WhyLabs.models.operations.GetOrganizationSubscriptionsRequest](../../models/operations/GetOrganizationSubscriptionsRequest.md) | :heavy_check_mark:                                                                                                                         | The request object to use for the request.                                                                                                 |
+
+
+### Response
+
+**[ai.whylabs.WhyLabs.models.operations.GetOrganizationSubscriptionsResponse](../../models/operations/GetOrganizationSubscriptionsResponse.md)**
 
 
 ## getUser

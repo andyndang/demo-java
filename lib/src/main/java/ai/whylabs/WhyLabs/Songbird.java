@@ -39,6 +39,7 @@ public class Songbird {
     public Schema schema;
     public Search search;
     public Sessions sessions;
+    public Subscription subscription;
     public User user;	
 
 	private SDKConfiguration sdkConfiguration;
@@ -187,6 +188,8 @@ public class Songbird {
 		this.search = new Search(this.sdkConfiguration);
 		
 		this.sessions = new Sessions(this.sdkConfiguration);
+		
+		this.subscription = new Subscription(this.sdkConfiguration);
 		
 		this.user = new User(this.sdkConfiguration);
 	}

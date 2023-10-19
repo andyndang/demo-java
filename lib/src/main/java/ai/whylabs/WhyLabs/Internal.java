@@ -929,6 +929,46 @@ public class Internal {
     }
 
     /**
+     * Get organization subscription details
+     * Get organization subscription details
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public ai.whylabs.WhyLabs.models.operations.GetOrganizationSubscriptionsResponse getOrganizationSubscriptions(ai.whylabs.WhyLabs.models.operations.GetOrganizationSubscriptionsRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.GetOrganizationSubscriptionsRequest.class, baseUrl, "/v0/subscriptions/org/{org_id}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        ai.whylabs.WhyLabs.models.operations.GetOrganizationSubscriptionsResponse res = new ai.whylabs.WhyLabs.models.operations.GetOrganizationSubscriptionsResponse(contentType, httpRes.statusCode()) {{
+            subscriptionSummaries = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (true) {
+            if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                ai.whylabs.WhyLabs.models.shared.SubscriptionSummary[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), ai.whylabs.WhyLabs.models.shared.SubscriptionSummary[].class);
+                res.subscriptionSummaries = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
      * Get a user by their id.
      * Get a user by their id.
      * @param request the request object containing all of the parameters for the API call

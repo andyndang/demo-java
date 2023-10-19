@@ -20,6 +20,7 @@ lib/src/main/java/ai/whylabs/WhyLabs/Provision.java
 lib/src/main/java/ai/whylabs/WhyLabs/Schema.java
 lib/src/main/java/ai/whylabs/WhyLabs/Search.java
 lib/src/main/java/ai/whylabs/WhyLabs/Sessions.java
+lib/src/main/java/ai/whylabs/WhyLabs/Subscription.java
 lib/src/main/java/ai/whylabs/WhyLabs/User.java
 lib/src/main/java/ai/whylabs/WhyLabs/Songbird.java
 .gitattributes
@@ -141,6 +142,8 @@ lib/src/main/java/ai/whylabs/WhyLabs/models/operations/GetNotificationSettingsRe
 lib/src/main/java/ai/whylabs/WhyLabs/models/operations/GetNotificationSettingsResponse.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/operations/GetOrganizationRequest.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/operations/GetOrganizationResponse.java
+lib/src/main/java/ai/whylabs/WhyLabs/models/operations/GetOrganizationSubscriptionsRequest.java
+lib/src/main/java/ai/whylabs/WhyLabs/models/operations/GetOrganizationSubscriptionsResponse.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/operations/GetUserRequest.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/operations/GetUserResponse.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/operations/GetUserByEmailRequest.java
@@ -364,6 +367,9 @@ lib/src/main/java/ai/whylabs/WhyLabs/models/shared/Membership.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/GetMembershipsResponse.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/GetNotificationSettingsResponse.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/OrganizationMetadata.java
+lib/src/main/java/ai/whylabs/WhyLabs/models/shared/SubscriptionSummary.java
+lib/src/main/java/ai/whylabs/WhyLabs/models/shared/SubscriptionProductSummary.java
+lib/src/main/java/ai/whylabs/WhyLabs/models/shared/SubscriptionProductFeature.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/MonitorConfigVersion.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/ListOrganizationsResponse.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/ProvisionNewAWSMarketplaceUserResponse.java
@@ -504,6 +510,8 @@ docs/models/operations/GetNotificationSettingsRequest.md
 docs/models/operations/GetNotificationSettingsResponse.md
 docs/models/operations/GetOrganizationRequest.md
 docs/models/operations/GetOrganizationResponse.md
+docs/models/operations/GetOrganizationSubscriptionsRequest.md
+docs/models/operations/GetOrganizationSubscriptionsResponse.md
 docs/models/operations/GetUserRequest.md
 docs/models/operations/GetUserResponse.md
 docs/models/operations/GetUserByEmailRequest.md
@@ -727,6 +735,9 @@ docs/models/shared/Membership.md
 docs/models/shared/GetMembershipsResponse.md
 docs/models/shared/GetNotificationSettingsResponse.md
 docs/models/shared/OrganizationMetadata.md
+docs/models/shared/SubscriptionSummary.md
+docs/models/shared/SubscriptionProductSummary.md
+docs/models/shared/SubscriptionProductFeature.md
 docs/models/shared/MonitorConfigVersion.md
 docs/models/shared/ListOrganizationsResponse.md
 docs/models/shared/ProvisionNewAWSMarketplaceUserResponse.md
@@ -798,4 +809,5 @@ docs/sdks/provision/README.md
 docs/sdks/schema/README.md
 docs/sdks/search/README.md
 docs/sdks/sessions/README.md
+docs/sdks/subscription/README.md
 docs/sdks/user/README.md

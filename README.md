@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'ai.whylabs.WhyLabs:Songbird:1.32.0'
+implementation 'ai.whylabs.WhyLabs:Songbird:1.32.1'
 ```
 <!-- End SDK Installation -->
 
@@ -140,6 +140,7 @@ userSchema = "Fresh";
 * [getMonitorConfigV3Version](docs/sdks/internal/README.md#getmonitorconfigv3version) - Get the monitor config document version for a given dataset.
 * [getNotificationSettings](docs/sdks/internal/README.md#getnotificationsettings) - Get notification settings for an org
 * [getOrganization](docs/sdks/internal/README.md#getorganization) - Get the metadata about an organization.
+* [getOrganizationSubscriptions](docs/sdks/internal/README.md#getorganizationsubscriptions) - Get organization subscription details
 * [getUser](docs/sdks/internal/README.md#getuser) - Get a user by their id.
 * [getUserByEmail](docs/sdks/internal/README.md#getuserbyemail) - Get a user by their email.
 * [hideSegments](docs/sdks/internal/README.md#hidesegments) - Hides a list of segments
@@ -286,6 +287,10 @@ userSchema = "Fresh";
 * [createSession](docs/sdks/sessions/README.md#createsession) - Create a new session that can be used to upload dataset profiles from whylogs for display in whylabs.
 * [getSession](docs/sdks/sessions/README.md#getsession) - Get information about a session.
 * [getSessionProfileObservatoryLink](docs/sdks/sessions/README.md#getsessionprofileobservatorylink) - Get observatory links for profiles in a given session. A max of 3 profiles can be viewed a a time.
+
+### [subscription](docs/sdks/subscription/README.md)
+
+* [getOrganizationSubscriptions](docs/sdks/subscription/README.md#getorganizationsubscriptions) - Get organization subscription details
 
 ### [user](docs/sdks/user/README.md)
 

@@ -124,6 +124,15 @@ public class OrganizationMetadata {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("subscriptionId")
+    public String subscriptionId;
+
+    public OrganizationMetadata withSubscriptionId(String subscriptionId) {
+        this.subscriptionId = subscriptionId;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscriptionTier")
     public SubscriptionTier subscriptionTier;
 
