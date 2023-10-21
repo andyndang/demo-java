@@ -26,7 +26,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("Oklahoma"){{
+                .setSecurity(new Security("string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -85,7 +85,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("South"){{
+                .setSecurity(new Security("string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -134,7 +134,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("Trafficway"){{
+                .setSecurity(new Security("string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -185,7 +185,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("Chicken"){{
+                .setSecurity(new Security("string"){{
                     apiKeyAuth = "";
                 }})
                 .build();

@@ -26,12 +26,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("neural"){{
+                .setSecurity(new Security("string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.CreateUserRequest req = new CreateUserRequest("cavernous");            
+            ai.whylabs.WhyLabs.models.shared.CreateUserRequest req = new CreateUserRequest("string");            
 
             CreateUserResponse res = sdk.user.createUser(req);
 
@@ -75,12 +75,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("Northwest"){{
+                .setSecurity(new Security("string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            GetUserRequest req = new GetUserRequest("positively");            
+            GetUserRequest req = new GetUserRequest("string");            
 
             GetUserResponse res = sdk.user.getUser(req);
 
@@ -124,12 +124,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("Program"){{
+                .setSecurity(new Security("string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            GetUserByEmailRequest req = new GetUserByEmailRequest("Massachusetts");            
+            GetUserByEmailRequest req = new GetUserByEmailRequest("string");            
 
             GetUserByEmailResponse res = sdk.user.getUserByEmail(req);
 
@@ -173,13 +173,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("monitoring"){{
+                .setSecurity(new Security("string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.User req = new User("projection", "newton"){{
-                preferences = "though";
+            ai.whylabs.WhyLabs.models.shared.User req = new User("string", "string"){{
+                preferences = "string";
             }};            
 
             UpdateUserResponse res = sdk.user.updateUser(req);

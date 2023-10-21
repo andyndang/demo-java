@@ -37,14 +37,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("Massachusetts"){{
+                .setSecurity(new Security("string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
             CreateReferenceProfileRequest req = new CreateReferenceProfileRequest(new CreateReferenceProfileRequest(){{
-alias = "quantify";
-datasetTimestamp = 23025L;
+alias = "string";
+datasetTimestamp = 129059L;
 segments = new ai.whylabs.WhyLabs.models.shared.Segment[]{{
     add(new Segment(){{
         tags = new ai.whylabs.WhyLabs.models.shared.SegmentTag[]{{
@@ -53,9 +53,9 @@ segments = new ai.whylabs.WhyLabs.models.shared.Segment[]{{
     }}),
 }};
 tags = new String[]{{
-    add("Realigned"),
+    add("string"),
 }};
-version = "Division";
+version = "string";
 }}, "model-123", "org-123");            
 
             CreateReferenceProfileResponse res = sdk.datasetProfile.createReferenceProfile(req);
@@ -102,7 +102,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("Rap"){{
+                .setSecurity(new Security("string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -156,7 +156,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("generation"){{
+                .setSecurity(new Security("string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -211,7 +211,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("Nissan"){{
+                .setSecurity(new Security("string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -262,7 +262,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("Northwest"){{
+                .setSecurity(new Security("string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -316,7 +316,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("Francium"){{
+                .setSecurity(new Security("string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -368,14 +368,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("yellow"){{
+                .setSecurity(new Security("string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
             HideSegmentsRequest req = new HideSegmentsRequest(new SegmentsListRequest(){{
 segments = new String[]{{
-    add("Gasoline"),
+    add("string"),
 }};
 }}, "model-123", "org-123");            
 
@@ -423,7 +423,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("generating"){{
+                .setSecurity(new Security("string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -477,7 +477,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("Human"){{
+                .setSecurity(new Security("string"){{
                     apiKeyAuth = "";
                 }})
                 .build();

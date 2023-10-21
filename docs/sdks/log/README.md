@@ -26,19 +26,19 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("gadzooks"){{
+                .setSecurity(new Security("string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
             GetProfileObservatoryLinkRequest req = new GetProfileObservatoryLinkRequest(new GetProfileObservatoryLinkRequest(){{
 batchProfileTimestamps = new Long[]{{
-    add(738449L),
+    add(926863L),
 }};
 referenceProfileIds = new String[]{{
-    add("Track"),
+    add("string"),
 }};
-}}, "North", "Northeast");            
+}}, "string", "string");            
 
             GetProfileObservatoryLinkResponse res = sdk.log.getProfileObservatoryLink(req);
 
@@ -84,13 +84,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("navigating"){{
+                .setSecurity(new Security("string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
             LogAsyncRequest req = new LogAsyncRequest(new LogAsyncRequest(){{
-datasetTimestamp = 260466L;
+datasetTimestamp = 506585L;
 segmentTags = new ai.whylabs.WhyLabs.models.shared.SegmentTag[]{{
     add(new SegmentTag(){{}}),
 }};
@@ -139,14 +139,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("North"){{
+                .setSecurity(new Security("string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
             LogReferenceRequest req = new LogReferenceRequest(new LogReferenceRequest(){{
-alias = "female";
-datasetTimestamp = 802724L;
+alias = "string";
+datasetTimestamp = 93844L;
 }}, "model-123", "org-123");            
 
             LogReferenceResponse res = sdk.log.logReference(req);

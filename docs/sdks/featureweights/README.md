@@ -24,7 +24,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("identical"){{
+                .setSecurity(new Security("string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -73,12 +73,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("California"){{
+                .setSecurity(new Security("string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            PutColumnWeightsRequest req = new PutColumnWeightsRequest("Rubber", "model-123", "org-123");            
+            PutColumnWeightsRequest req = new PutColumnWeightsRequest("string", "model-123", "org-123");            
 
             PutColumnWeightsResponse res = sdk.featureWeights.putColumnWeights(req);
 

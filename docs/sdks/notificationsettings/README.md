@@ -37,12 +37,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("applications"){{
+                .setSecurity(new Security("string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            AddNotificationActionRequest req = new AddNotificationActionRequest("Southeast", "user-action", "org-123", ActionType.SLACK);            
+            AddNotificationActionRequest req = new AddNotificationActionRequest("string", "user-action", "org-123", ActionType.SLACK);            
 
             AddNotificationActionResponse res = sdk.notificationSettings.addNotificationAction(req);
 
@@ -86,7 +86,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("transmit"){{
+                .setSecurity(new Security("string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -135,7 +135,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("synergistic"){{
+                .setSecurity(new Security("string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -184,7 +184,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("RAM"){{
+                .setSecurity(new Security("string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -233,7 +233,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("eos"){{
+                .setSecurity(new Security("string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -282,12 +282,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("Operative"){{
+                .setSecurity(new Security("string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            GetNotificationSettingsRequest req = new GetNotificationSettingsRequest("fugiat");            
+            GetNotificationSettingsRequest req = new GetNotificationSettingsRequest("string");            
 
             GetNotificationSettingsResponse res = sdk.notificationSettings.getNotificationSettings(req);
 
@@ -331,7 +331,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("Pop"){{
+                .setSecurity(new Security("string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -381,12 +381,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("and"){{
+                .setSecurity(new Security("string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            PutNotificationActionRequest req = new PutNotificationActionRequest("batter", "user-action", "org-123", ActionType.PAGER_DUTY);            
+            PutNotificationActionRequest req = new PutNotificationActionRequest("string", "user-action", "org-123", ActionType.EMAIL);            
 
             PutNotificationActionResponse res = sdk.notificationSettings.putNotificationAction(req);
 
@@ -430,7 +430,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("gold"){{
+                .setSecurity(new Security("string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -480,12 +480,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("Union"){{
+                .setSecurity(new Security("string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            UpdateNotificationActionRequest req = new UpdateNotificationActionRequest("Dakota", "user-action", "org-123", ActionType.SLACK);            
+            UpdateNotificationActionRequest req = new UpdateNotificationActionRequest("string", "user-action", "org-123", ActionType.PAGER_DUTY);            
 
             UpdateNotificationActionResponse res = sdk.notificationSettings.updateNotificationAction(req);
 
@@ -533,31 +533,31 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("East"){{
+                .setSecurity(new Security("string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
             UpdateNotificationSettingsRequest req = new UpdateNotificationSettingsRequest(new NotificationSettings(){{
-emailSettings = new UberNotificationSchedule(NotificationSqsMessageCadence.INDIVIDUAL, false){{
-    dayOfWeek = NotificationSettingsDay.WEDNESDAY;
-    local24HourOfDay = 451112;
-    localMinuteOfHour = 134617;
-    localTimezone = "Account";
-}};
-pagerDutySettings = new UberNotificationSchedule(NotificationSqsMessageCadence.WEEKLY, false){{
+emailSettings = new UberNotificationSchedule(NotificationSqsMessageCadence.HOURLY, false){{
     dayOfWeek = NotificationSettingsDay.MONDAY;
-    local24HourOfDay = 749170;
-    localMinuteOfHour = 434265;
-    localTimezone = "zowie";
+    local24HourOfDay = 809295;
+    localMinuteOfHour = 562664;
+    localTimezone = "string";
 }};
-slackSettings = new UberNotificationSchedule(NotificationSqsMessageCadence.HOURLY, false){{
+pagerDutySettings = new UberNotificationSchedule(NotificationSqsMessageCadence.DAILY, false){{
     dayOfWeek = NotificationSettingsDay.SUNDAY;
-    local24HourOfDay = 941078;
-    localMinuteOfHour = 720601;
-    localTimezone = "weber";
+    local24HourOfDay = 410267;
+    localMinuteOfHour = 406102;
+    localTimezone = "string";
 }};
-}}, "Motorway");            
+slackSettings = new UberNotificationSchedule(NotificationSqsMessageCadence.INDIVIDUAL, false){{
+    dayOfWeek = NotificationSettingsDay.THURSDAY;
+    local24HourOfDay = 259105;
+    localMinuteOfHour = 749170;
+    localTimezone = "string";
+}};
+}}, "string");            
 
             UpdateNotificationSettingsResponse res = sdk.notificationSettings.updateNotificationSettings(req);
 
@@ -600,7 +600,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("absentmindedly"){{
+                .setSecurity(new Security("string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -640,7 +640,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("blindly"){{
+                .setSecurity(new Security("string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -680,7 +680,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("caw"){{
+                .setSecurity(new Security("string"){{
                     apiKeyAuth = "";
                 }})
                 .build();

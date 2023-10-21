@@ -14,15 +14,15 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("homogeneous"){{
+                .setSecurity(new Security("string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            CreateAccountUserRequest req = new CreateAccountUserRequest(new CreateAccountUserRequest("Smart"){{
+            CreateAccountUserRequest req = new CreateAccountUserRequest(new CreateAccountUserRequest("string"){{
 active = false;
-externalId = "Analyst";
-userSchema = "Fresh";
+externalId = "string";
+userSchema = "string";
 }}, "org-123");            
 
             CreateAccountUserResponse res = sdk.account.createAccountUser(req);

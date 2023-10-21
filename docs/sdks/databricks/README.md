@@ -27,14 +27,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("concept"){{
+                .setSecurity(new Security("string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
             ai.whylabs.WhyLabs.models.shared.GetConnectionRequest req = new GetConnectionRequest(){{
-                orgId = "rich";
-                workspaceId = "eek";
+                orgId = "string";
+                workspaceId = "string";
             }};            
 
             GetConnectionResponse res = sdk.databricks.getConnection(req);
@@ -79,14 +79,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("enhance"){{
+                .setSecurity(new Security("string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
             ai.whylabs.WhyLabs.models.shared.ListJobsRequest req = new ListJobsRequest(){{
-                orgId = "Hop";
-                workspaceId = "Colorado";
+                orgId = "string";
+                workspaceId = "string";
             }};            
 
             ListJobsResponse res = sdk.databricks.listJobs(req);
@@ -131,14 +131,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("SAS"){{
+                .setSecurity(new Security("string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
             ai.whylabs.WhyLabs.models.shared.RefreshConnectionRequest req = new RefreshConnectionRequest(){{
-                orgId = "kissingly";
-                workspaceId = "deliverables";
+                orgId = "string";
+                workspaceId = "string";
             }};            
 
             RefreshConnectionResponse res = sdk.databricks.refreshConnection(req);
@@ -183,14 +183,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("Horizontal"){{
+                .setSecurity(new Security("string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.RunJobRequest req = new RunJobRequest(993298L){{
-                orgId = "firewall";
-                workspaceId = "Movies";
+            ai.whylabs.WhyLabs.models.shared.RunJobRequest req = new RunJobRequest(353621L){{
+                orgId = "string";
+                workspaceId = "string";
             }};            
 
             RunJobResponse res = sdk.databricks.runJob(req);
@@ -236,7 +236,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("plum"){{
+                .setSecurity(new Security("string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -245,10 +245,10 @@ public class Application {
                 changes = new UpdateConnectionChanges(){{
                     connected = false;
                     demo = false;
-                    orgId = "Som";
+                    orgId = "string";
                 }};
-                orgId = "Guadeloupe";
-                workspaceId = "transmitting";
+                orgId = "string";
+                workspaceId = "string";
             }};            
 
             UpdateConnectionResponse res = sdk.databricks.updateConnection(req);

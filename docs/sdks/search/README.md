@@ -24,12 +24,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("for"){{
+                .setSecurity(new Security("string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            WhyLabsSearchRequest req = new WhyLabsSearchRequest("lux");            
+            WhyLabsSearchRequest req = new WhyLabsSearchRequest("string");            
 
             WhyLabsSearchResponse res = sdk.search.whyLabsSearch(req);
 
@@ -74,14 +74,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("Maryland"){{
+                .setSecurity(new Security("string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
             ai.whylabs.WhyLabs.models.shared.SearchIndexRequest req = new SearchIndexRequest(){{
-                orgId = "green";
-                type = SearchIndexType.ENTITY_SCHEMA;
+                orgId = "string";
+                type = SearchIndexType.MODELS;
             }};            
 
             WhyLabsSearchIndexingResponse res = sdk.search.whyLabsSearchIndexing(req);

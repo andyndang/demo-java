@@ -22,12 +22,12 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("East"){{
+                .setSecurity(new Security("string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ai.whylabs.WhyLabs.models.. req = "innovate";            
+            ai.whylabs.WhyLabs.models.. req = "string";            
 
             StripePaymentEndpointResponse res = sdk.payment.stripePaymentEndpoint(req);
 

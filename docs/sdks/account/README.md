@@ -33,15 +33,15 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("homogeneous"){{
+                .setSecurity(new Security("string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            CreateAccountUserRequest req = new CreateAccountUserRequest(new CreateAccountUserRequest("Smart"){{
+            CreateAccountUserRequest req = new CreateAccountUserRequest(new CreateAccountUserRequest("string"){{
 active = false;
-externalId = "Analyst";
-userSchema = "Fresh";
+externalId = "string";
+userSchema = "string";
 }}, "org-123");            
 
             CreateAccountUserResponse res = sdk.account.createAccountUser(req);
@@ -86,7 +86,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("in"){{
+                .setSecurity(new Security("string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -136,14 +136,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("Factors"){{
+                .setSecurity(new Security("string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
             GetAccountMembershipsRequest req = new GetAccountMembershipsRequest("org-123"){{
                 managedOrgId = "org-123";
-                role = Role.MEMBER;
+                role = Role.VIEWER;
                 userId = "user-123";
             }};            
 
@@ -189,7 +189,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("Avon"){{
+                .setSecurity(new Security("string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -238,7 +238,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("up"){{
+                .setSecurity(new Security("string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -287,7 +287,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("farad"){{
+                .setSecurity(new Security("string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -336,7 +336,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("Arkansas"){{
+                .setSecurity(new Security("string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
@@ -387,16 +387,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("revenge"){{
+                .setSecurity(new Security("string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
             PatchOrganizationMembershipsRequest req = new PatchOrganizationMembershipsRequest(new PatchAccountMembershipsRequest(new String[]{{
-    add("Fiat"),
+    add("string"),
 }}, new String[]{{
-    add("contributor"),
-}}), "org-123", "org-123", Role.ADMIN);            
+    add("string"),
+}}), "org-123", "org-123", Role.VIEWER);            
 
             PatchOrganizationMembershipsResponse res = sdk.account.patchOrganizationMemberships(req);
 
@@ -442,14 +442,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("commitment"){{
+                .setSecurity(new Security("string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
             PutOrganizationMembershipsRequest req = new PutOrganizationMembershipsRequest(new PutAccountMembershipsRequest(new String[]{{
-    add("Grocery"),
-}}), "org-123", "org-123", Role.MEMBER);            
+    add("string"),
+}}), "org-123", "org-123", Role.VIEWER);            
 
             PutOrganizationMembershipsResponse res = sdk.account.putOrganizationMemberships(req);
 
@@ -494,15 +494,15 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("radian"){{
+                .setSecurity(new Security("string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
             UpdateAccountUserRequest req = new UpdateAccountUserRequest(new UpdateAccountUserRequest(){{
 active = false;
-externalId = "for";
-userSchema = "orchestration";
+externalId = "string";
+userSchema = "string";
 }}, "org-123", "user-123");            
 
             UpdateAccountUserResponse res = sdk.account.updateAccountUser(req);
