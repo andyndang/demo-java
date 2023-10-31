@@ -443,3 +443,11 @@ Based on:
 - Speakeasy CLI 1.104.0 (2.169.0) https://github.com/speakeasy-api/speakeasy
 ### Generated
 - [java v1.33.0] .
+
+## 2023-10-31 01:09:57
+### Changes
+Based on:
+- OpenAPI Doc 0.1 
+- Speakeasy CLI 1.109.0 (2.173.0) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [java v1.33.1] .

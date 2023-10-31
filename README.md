@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'ai.whylabs.WhyLabs:Songbird:1.33.0'
+implementation 'ai.whylabs.WhyLabs:Songbird:1.33.1'
 ```
 <!-- End SDK Installation -->
 
@@ -101,7 +101,7 @@ userSchema = "string";
 * [getProfileTraces](docs/sdks/datasetprofile/README.md#getprofiletraces) - Returns a list for profile traces matching a trace id
 * [getReferenceProfile](docs/sdks/datasetprofile/README.md#getreferenceprofile) - Returns a single reference profile
 * [hideSegments](docs/sdks/datasetprofile/README.md#hidesegments) - Hides a list of segments
-* [listReferenceProfiles](docs/sdks/datasetprofile/README.md#listreferenceprofiles) - Returns a list for reference profiles
+* [listReferenceProfiles](docs/sdks/datasetprofile/README.md#listreferenceprofiles) - Returns a list for reference profiles between the given time range filtered on the upload timestamp
 * [listSegments](docs/sdks/datasetprofile/README.md#listsegments) - Returns a list of segments
 
 ### [debugEvents](docs/sdks/debugevents/README.md)

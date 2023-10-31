@@ -10,7 +10,7 @@
 * [getProfileTraces](#getprofiletraces) - Returns a list for profile traces matching a trace id
 * [getReferenceProfile](#getreferenceprofile) - Returns a single reference profile
 * [hideSegments](#hidesegments) - Hides a list of segments
-* [listReferenceProfiles](#listreferenceprofiles) - Returns a list for reference profiles
+* [listReferenceProfiles](#listreferenceprofiles) - Returns a list for reference profiles between the given time range filtered on the upload timestamp
 * [listSegments](#listsegments) - Returns a list of segments
 
 ## createReferenceProfile
@@ -405,7 +405,7 @@ segments = new String[]{{
 
 ## listReferenceProfiles
 
-Returns a list of Reference Profiles.
+Returns a list of Reference Profiles between a given time range filtered on the upload timestamp.
 
         
 

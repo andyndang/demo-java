@@ -345,8 +345,8 @@ public class DatasetProfile {
     }
 
     /**
-     * Returns a list for reference profiles
-     * Returns a list of Reference Profiles.
+     * Returns a list for reference profiles between the given time range filtered on the upload timestamp
+     * Returns a list of Reference Profiles between a given time range filtered on the upload timestamp.
      * 
      *         
      * @param request the request object containing all of the parameters for the API call
