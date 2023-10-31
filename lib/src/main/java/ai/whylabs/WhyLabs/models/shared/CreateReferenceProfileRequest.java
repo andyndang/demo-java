@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * CreateReferenceProfileRequest - Request payload for CreateReferenceProfile.
  */
+
 public class CreateReferenceProfileRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alias")

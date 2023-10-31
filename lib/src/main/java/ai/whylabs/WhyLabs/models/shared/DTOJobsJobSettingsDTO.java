@@ -8,6 +8,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+
 public class DTOJobsJobSettingsDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emailNotifications")
@@ -29,9 +30,9 @@ public class DTOJobsJobSettingsDTO {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("libraries")
-    public java.util.Map<String, Object>[] libraries;
+    public DTOJobsJobSettingsDTOLibraries[] libraries;
 
-    public DTOJobsJobSettingsDTO withLibraries(java.util.Map<String, Object>[] libraries) {
+    public DTOJobsJobSettingsDTO withLibraries(DTOJobsJobSettingsDTOLibraries[] libraries) {
         this.libraries = libraries;
         return this;
     }

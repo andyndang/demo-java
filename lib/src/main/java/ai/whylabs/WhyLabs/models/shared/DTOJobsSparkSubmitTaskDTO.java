@@ -8,12 +8,13 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+
 public class DTOJobsSparkSubmitTaskDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
-    public java.util.Map<String, Object>[] parameters;
+    public DTOJobsSparkSubmitTaskDTOParameters[] parameters;
 
-    public DTOJobsSparkSubmitTaskDTO withParameters(java.util.Map<String, Object>[] parameters) {
+    public DTOJobsSparkSubmitTaskDTO withParameters(DTOJobsSparkSubmitTaskDTOParameters[] parameters) {
         this.parameters = parameters;
         return this;
     }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * SlackNotificationAction - Slack payload for Notification Actions
  */
+
 public class SlackNotificationAction {
     @JsonProperty("slackWebhook")
     public String slackWebhook;

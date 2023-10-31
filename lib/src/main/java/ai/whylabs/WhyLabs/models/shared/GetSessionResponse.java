@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * GetSessionResponse - Response for getting sessions.
  */
+
 public class GetSessionResponse {
     /**
      * Response for getting sessions.

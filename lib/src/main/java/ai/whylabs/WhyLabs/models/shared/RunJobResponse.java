@@ -6,9 +6,7 @@ package ai.whylabs.WhyLabs.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-/**
- * RunJobResponse - RunJob default response
- */
+
 public class RunJobResponse {
     @JsonProperty("runId")
     public Long runId;

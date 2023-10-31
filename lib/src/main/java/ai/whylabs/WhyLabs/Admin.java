@@ -7,10 +7,10 @@ package ai.whylabs.WhyLabs;
 import ai.whylabs.WhyLabs.utils.HTTPClient;
 import ai.whylabs.WhyLabs.utils.HTTPRequest;
 import ai.whylabs.WhyLabs.utils.JSON;
-import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.net.http.HttpResponse;
 import java.nio.charset.StandardCharsets;
+import org.apache.http.NameValuePair;
 
 public class Admin {
 	
@@ -21,13 +21,58 @@ public class Admin {
 	}
 
     /**
-     * Create a monitor config validation job for all configs
-     * Create a monitor config validation job for all configs
-     * @param security the security details to use for authentication
+     * Generate an admin report
+     * Generate an admin report
+     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.PostMonitorConfigValidationJobResponse postMonitorConfigValidationJob(ai.whylabs.WhyLabs.models.operations.PostMonitorConfigValidationJobSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.GenerateReportResponse generateReport(ai.whylabs.WhyLabs.models.operations.GenerateReportRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(baseUrl, "/v0/admin/generate-report");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        java.util.List<NameValuePair> queryParams = ai.whylabs.WhyLabs.utils.Utils.getQueryParams(ai.whylabs.WhyLabs.models.operations.GenerateReportRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        ai.whylabs.WhyLabs.models.operations.GenerateReportResponse res = new ai.whylabs.WhyLabs.models.operations.GenerateReportResponse(contentType, httpRes.statusCode()) {{
+            adminReportResponse = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (true) {
+            if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                ai.whylabs.WhyLabs.models.shared.AdminReportResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), ai.whylabs.WhyLabs.models.shared.AdminReportResponse.class);
+                res.adminReportResponse = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Create a monitor config validation job for all configs
+     * Create a monitor config validation job for all configs
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public ai.whylabs.WhyLabs.models.operations.PostMonitorConfigValidationJobResponse postMonitorConfigValidationJob() throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(baseUrl, "/v0/admin/monitor-config/create-validation-job");
         
@@ -36,9 +81,9 @@ public class Admin {
         req.setURL(url);
 
         req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -52,7 +97,7 @@ public class Admin {
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
+                ai.whylabs.WhyLabs.models.shared.Void out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), ai.whylabs.WhyLabs.models.shared.Void.class);
                 res.void_ = out;
             }
         }

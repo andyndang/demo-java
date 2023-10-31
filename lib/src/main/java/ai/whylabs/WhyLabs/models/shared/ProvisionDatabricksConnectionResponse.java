@@ -6,9 +6,7 @@ package ai.whylabs.WhyLabs.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-/**
- * ProvisionDatabricksConnectionResponse - ProvisionDatabricksConnection default response
- */
+
 public class ProvisionDatabricksConnectionResponse {
     @JsonProperty("orgId")
     public String orgId;

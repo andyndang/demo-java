@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * ModelMetadataResponse - Response for the model metadata
  */
+
 public class ModelMetadataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active")

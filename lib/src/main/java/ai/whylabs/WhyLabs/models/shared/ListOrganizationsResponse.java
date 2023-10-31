@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * ListOrganizationsResponse - Response for listing organization
  */
+
 public class ListOrganizationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("internal")

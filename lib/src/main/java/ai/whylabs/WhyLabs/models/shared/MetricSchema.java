@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * MetricSchema - Schema for user-defined metrics
  */
+
 public class MetricSchema {
     /**
      * Entity column to extract the metric from

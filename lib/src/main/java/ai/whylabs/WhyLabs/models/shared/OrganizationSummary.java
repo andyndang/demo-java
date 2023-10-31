@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * OrganizationSummary - Summary about an organization
  */
+
 public class OrganizationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain")
@@ -83,6 +84,15 @@ public class OrganizationSummary {
 
     public OrganizationSummary withPagerDutyKey(String pagerDutyKey) {
         this.pagerDutyKey = pagerDutyKey;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("parentOrgId")
+    public String parentOrgId;
+
+    public OrganizationSummary withParentOrgId(String parentOrgId) {
+        this.parentOrgId = parentOrgId;
         return this;
     }
     

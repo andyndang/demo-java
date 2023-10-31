@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * GetMembershipsResponse - Response for the GetMemberships API
  */
+
 public class GetMembershipsResponse {
     /**
      * A list of all memberships that a user has.

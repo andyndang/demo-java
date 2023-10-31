@@ -18,11 +18,13 @@ public class Songbird {
         "https://api.whylabsapp.com",
 	};
   	
+    public Account account;
     public Admin admin;
     public ApiKey apiKey;
     public Databricks databricks;
     public DatasetMetadata datasetMetadata;
     public DatasetProfile datasetProfile;
+    public DebugEvents debugEvents;
     public FeatureWeights featureWeights;
     public FeatureFlags featureFlags;
     public Internal internal;
@@ -37,6 +39,7 @@ public class Songbird {
     public Schema schema;
     public Search search;
     public Sessions sessions;
+    public Subscription subscription;
     public User user;	
 
 	private SDKConfiguration sdkConfiguration;
@@ -57,6 +60,16 @@ public class Songbird {
 		 */
 		public Builder setClient(HTTPClient client) {
 			this.sdkConfiguration.defaultClient = client;
+			return this;
+		}
+		
+		/**
+		 * Configures the SDK to use the provided security details.
+		 * @param security The security details to use for all requests.
+		 * @return The builder instance.
+		 */
+		public Builder setSecurity(ai.whylabs.WhyLabs.models.shared.Security security) {
+			this.sdkConfiguration.security = security;
 			return this;
 		}
 		
@@ -102,6 +115,10 @@ public class Songbird {
 				this.sdkConfiguration.defaultClient = new SpeakeasyHTTPClient();
 			}
 			
+			if (this.sdkConfiguration.security != null) {
+				this.sdkConfiguration.securityClient = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, this.sdkConfiguration.security);
+			}
+			
 			if (this.sdkConfiguration.securityClient == null) {
 				this.sdkConfiguration.securityClient = this.sdkConfiguration.defaultClient;
 			}
@@ -130,6 +147,8 @@ public class Songbird {
 	private Songbird(SDKConfiguration sdkConfiguration) throws Exception {
 		this.sdkConfiguration = sdkConfiguration;
 		
+		this.account = new Account(this.sdkConfiguration);
+		
 		this.admin = new Admin(this.sdkConfiguration);
 		
 		this.apiKey = new ApiKey(this.sdkConfiguration);
@@ -139,6 +158,8 @@ public class Songbird {
 		this.datasetMetadata = new DatasetMetadata(this.sdkConfiguration);
 		
 		this.datasetProfile = new DatasetProfile(this.sdkConfiguration);
+		
+		this.debugEvents = new DebugEvents(this.sdkConfiguration);
 		
 		this.featureWeights = new FeatureWeights(this.sdkConfiguration);
 		
@@ -167,6 +188,8 @@ public class Songbird {
 		this.search = new Search(this.sdkConfiguration);
 		
 		this.sessions = new Sessions(this.sdkConfiguration);
+		
+		this.subscription = new Subscription(this.sdkConfiguration);
 		
 		this.user = new User(this.sdkConfiguration);
 	}

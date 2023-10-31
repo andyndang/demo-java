@@ -7,6 +7,7 @@ package ai.whylabs.WhyLabs.models.operations;
 import ai.whylabs.WhyLabs.utils.SpeakeasyMetadata;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+
 public class DisableNotificationActionRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=action_id")
     public String actionId;

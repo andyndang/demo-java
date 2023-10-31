@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * CreateUserRequest - Request for creating a new user
  */
+
 public class CreateUserRequest {
     /**
      * The users email address

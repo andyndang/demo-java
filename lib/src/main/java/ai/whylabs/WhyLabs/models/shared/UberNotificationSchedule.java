@@ -23,6 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  *     enabled, cadence=INDIVIDUAL
  * 
  */
+
 public class UberNotificationSchedule {
     @JsonProperty("cadence")
     public NotificationSqsMessageCadence cadence;
