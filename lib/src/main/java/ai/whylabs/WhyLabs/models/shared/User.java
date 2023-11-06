@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * User - User metadata
  */
+
 public class User {
     /**
      * The user's email address.

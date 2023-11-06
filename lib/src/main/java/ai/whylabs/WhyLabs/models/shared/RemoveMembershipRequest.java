@@ -6,6 +6,7 @@ package ai.whylabs.WhyLabs.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+
 public class RemoveMembershipRequest {
     @JsonProperty("email")
     public String email;

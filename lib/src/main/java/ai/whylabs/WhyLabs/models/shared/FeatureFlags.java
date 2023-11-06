@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * FeatureFlags - Feature flag state
  */
+
 public class FeatureFlags {
     /**
      * The state of feature flags

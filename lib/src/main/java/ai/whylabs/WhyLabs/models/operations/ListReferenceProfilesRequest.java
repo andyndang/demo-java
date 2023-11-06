@@ -7,9 +7,10 @@ package ai.whylabs.WhyLabs.models.operations;
 import ai.whylabs.WhyLabs.utils.SpeakeasyMetadata;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+
 public class ListReferenceProfilesRequest {
     /**
-     * Milli epoch time that represents the end of the time range to query.
+     * Milli epoch time that represents the end of the time range to query based on the upload timestamp.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=from_epoch")
     public Long fromEpoch;
@@ -42,7 +43,7 @@ public class ListReferenceProfilesRequest {
     }
     
     /**
-     * Milli epoch time that represents the end of the time range to query.
+     * Milli epoch time that represents the end of the time range to query based on the upload timestamp.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=to_epoch")
     public Long toEpoch;

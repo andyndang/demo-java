@@ -24,11 +24,10 @@ public class Databricks {
      * Get the connection metadata for a given org
      * Get the connection metadata for a given org
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.GetConnectionResponse getConnection(ai.whylabs.WhyLabs.models.shared.GetConnectionRequest request, ai.whylabs.WhyLabs.models.operations.GetConnectionSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.GetConnectionResponse getConnection(ai.whylabs.WhyLabs.models.shared.GetConnectionRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(baseUrl, "/v0/databricks/get-connection");
         
@@ -42,9 +41,9 @@ public class Databricks {
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -70,11 +69,10 @@ public class Databricks {
      * List all of the jobs in a workspace.
      * List all of the jobs in a workspace.
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.ListJobsResponse listJobs(ai.whylabs.WhyLabs.models.shared.ListJobsRequest request, ai.whylabs.WhyLabs.models.operations.ListJobsSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.ListJobsResponse listJobs(ai.whylabs.WhyLabs.models.shared.ListJobsRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(baseUrl, "/v0/databricks/list-jobs");
         
@@ -88,9 +86,9 @@ public class Databricks {
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -116,11 +114,10 @@ public class Databricks {
      * Refresh metadata for a workspace connection.
      * Refresh metadata for a workspace connection.
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.RefreshConnectionResponse refreshConnection(ai.whylabs.WhyLabs.models.shared.RefreshConnectionRequest request, ai.whylabs.WhyLabs.models.operations.RefreshConnectionSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.RefreshConnectionResponse refreshConnection(ai.whylabs.WhyLabs.models.shared.RefreshConnectionRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(baseUrl, "/v0/databricks/refresh-connection");
         
@@ -134,9 +131,9 @@ public class Databricks {
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -162,11 +159,10 @@ public class Databricks {
      * Run an existing job in a given databricks workspace.
      * Run an existing job in a given databricks workspace.
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.RunJobResponse runJob(ai.whylabs.WhyLabs.models.shared.RunJobRequest request, ai.whylabs.WhyLabs.models.operations.RunJobSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.RunJobResponse runJob(ai.whylabs.WhyLabs.models.shared.RunJobRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(baseUrl, "/v0/databricks/run-job");
         
@@ -180,9 +176,9 @@ public class Databricks {
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -208,11 +204,10 @@ public class Databricks {
      * Update the connection metadata for a given org
      * Update the connection metadata for a given org
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.UpdateConnectionResponse updateConnection(ai.whylabs.WhyLabs.models.shared.UpdateConnectionRequest request, ai.whylabs.WhyLabs.models.operations.UpdateConnectionSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.UpdateConnectionResponse updateConnection(ai.whylabs.WhyLabs.models.shared.UpdateConnectionRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(baseUrl, "/v0/databricks/update-connection");
         
@@ -226,9 +221,9 @@ public class Databricks {
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

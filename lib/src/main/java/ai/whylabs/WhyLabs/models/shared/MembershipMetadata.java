@@ -8,9 +8,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-/**
- * MembershipMetadata - CreateMembership default response
- */
+
 public class MembershipMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("default")

@@ -7,6 +7,7 @@ package ai.whylabs.WhyLabs.models.operations;
 import ai.whylabs.WhyLabs.utils.SpeakeasyMetadata;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+
 public class DeleteAnalyzerResultsRequest {
     /**
      * The unique dataset ID in your company.
@@ -19,9 +20,6 @@ public class DeleteAnalyzerResultsRequest {
         return this;
     }
     
-    /**
-     * Optional, scope deleting analyzer results older than the timestamp
-     */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_timestamp")
     public Long endTimestamp;
 
@@ -41,9 +39,6 @@ public class DeleteAnalyzerResultsRequest {
         return this;
     }
     
-    /**
-     * Optional, scope deleting analyzer results more recent than the timestamp
-     */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_timestamp")
     public Long startTimestamp;
 

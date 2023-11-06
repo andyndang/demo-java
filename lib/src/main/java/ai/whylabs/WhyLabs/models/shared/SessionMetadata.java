@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * SessionMetadata - Response for getting sessions.
  */
+
 public class SessionMetadata {
     /**
      * The model id of the session. There should only be a single model.

@@ -7,6 +7,7 @@ package ai.whylabs.WhyLabs.models.operations;
 import ai.whylabs.WhyLabs.utils.SpeakeasyMetadata;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+
 public class PartiallyUpdateOrganizationRequest {
     /**
      * Domain associated with this organization
@@ -79,6 +80,14 @@ public class PartiallyUpdateOrganizationRequest {
 
     public PartiallyUpdateOrganizationRequest withPagerDutyKey(String pagerDutyKey) {
         this.pagerDutyKey = pagerDutyKey;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parent_org_id")
+    public String parentOrgId;
+
+    public PartiallyUpdateOrganizationRequest withParentOrgId(String parentOrgId) {
+        this.parentOrgId = parentOrgId;
         return this;
     }
     

@@ -28,11 +28,10 @@ public class DatasetProfile {
      *             This replaces the deprecated LogReference operation.
      *         
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.CreateReferenceProfileResponse createReferenceProfile(ai.whylabs.WhyLabs.models.operations.CreateReferenceProfileRequest request, ai.whylabs.WhyLabs.models.operations.CreateReferenceProfileSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.CreateReferenceProfileResponse createReferenceProfile(ai.whylabs.WhyLabs.models.operations.CreateReferenceProfileRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.CreateReferenceProfileRequest.class, baseUrl, "/v0/organizations/{org_id}/dataset-profiles/models/{dataset_id}/reference-profile", request, null);
         
@@ -46,9 +45,9 @@ public class DatasetProfile {
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -76,11 +75,10 @@ public class DatasetProfile {
      * 
      *         
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.DeleteAnalyzerResultsResponse deleteAnalyzerResults(ai.whylabs.WhyLabs.models.operations.DeleteAnalyzerResultsRequest request, ai.whylabs.WhyLabs.models.operations.DeleteAnalyzerResultsSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.DeleteAnalyzerResultsResponse deleteAnalyzerResults(ai.whylabs.WhyLabs.models.operations.DeleteAnalyzerResultsRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.DeleteAnalyzerResultsRequest.class, baseUrl, "/v0/organizations/{org_id}/dataset-profiles/models/{dataset_id}/analyzer-results", request, null);
         
@@ -89,7 +87,7 @@ public class DatasetProfile {
         req.setURL(url);
 
         req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         java.util.List<NameValuePair> queryParams = ai.whylabs.WhyLabs.utils.Utils.getQueryParams(ai.whylabs.WhyLabs.models.operations.DeleteAnalyzerResultsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
@@ -97,7 +95,7 @@ public class DatasetProfile {
             }
         }
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -125,11 +123,10 @@ public class DatasetProfile {
      * 
      *         
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.DeleteDatasetProfilesResponse deleteDatasetProfiles(ai.whylabs.WhyLabs.models.operations.DeleteDatasetProfilesRequest request, ai.whylabs.WhyLabs.models.operations.DeleteDatasetProfilesSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.DeleteDatasetProfilesResponse deleteDatasetProfiles(ai.whylabs.WhyLabs.models.operations.DeleteDatasetProfilesRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.DeleteDatasetProfilesRequest.class, baseUrl, "/v0/organizations/{org_id}/dataset-profiles/models/{dataset_id}", request, null);
         
@@ -138,7 +135,7 @@ public class DatasetProfile {
         req.setURL(url);
 
         req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         java.util.List<NameValuePair> queryParams = ai.whylabs.WhyLabs.utils.Utils.getQueryParams(ai.whylabs.WhyLabs.models.operations.DeleteDatasetProfilesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
@@ -146,7 +143,7 @@ public class DatasetProfile {
             }
         }
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -174,11 +171,10 @@ public class DatasetProfile {
      * 
      *         
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.DeleteReferenceProfileResponse deleteReferenceProfile(ai.whylabs.WhyLabs.models.operations.DeleteReferenceProfileRequest request, ai.whylabs.WhyLabs.models.operations.DeleteReferenceProfileSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.DeleteReferenceProfileResponse deleteReferenceProfile(ai.whylabs.WhyLabs.models.operations.DeleteReferenceProfileRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.DeleteReferenceProfileRequest.class, baseUrl, "/v0/organizations/{org_id}/dataset-profiles/models/{model_id}/reference-profiles/{reference_id}", request, null);
         
@@ -187,9 +183,9 @@ public class DatasetProfile {
         req.setURL(url);
 
         req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -212,16 +208,63 @@ public class DatasetProfile {
     }
 
     /**
+     * Returns a list for profile traces matching a trace id
+     * Returns a list of profile traces matching a trace id
+     * 
+     *         
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public ai.whylabs.WhyLabs.models.operations.GetProfileTracesResponse getProfileTraces(ai.whylabs.WhyLabs.models.operations.GetProfileTracesRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.GetProfileTracesRequest.class, baseUrl, "/v0/organizations/{org_id}/dataset-profiles/models/{dataset_id}/trace/{trace_id}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        java.util.List<NameValuePair> queryParams = ai.whylabs.WhyLabs.utils.Utils.getQueryParams(ai.whylabs.WhyLabs.models.operations.GetProfileTracesRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        ai.whylabs.WhyLabs.models.operations.GetProfileTracesResponse res = new ai.whylabs.WhyLabs.models.operations.GetProfileTracesResponse(contentType, httpRes.statusCode()) {{
+            profileTracesResponse = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (true) {
+            if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                ai.whylabs.WhyLabs.models.shared.ProfileTracesResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), ai.whylabs.WhyLabs.models.shared.ProfileTracesResponse.class);
+                res.profileTracesResponse = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
      * Returns a single reference profile
      * Returns a Reference Profile.
      * 
      *         
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.GetReferenceProfileResponse getReferenceProfile(ai.whylabs.WhyLabs.models.operations.GetReferenceProfileRequest request, ai.whylabs.WhyLabs.models.operations.GetReferenceProfileSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.GetReferenceProfileResponse getReferenceProfile(ai.whylabs.WhyLabs.models.operations.GetReferenceProfileRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.GetReferenceProfileRequest.class, baseUrl, "/v0/organizations/{org_id}/dataset-profiles/models/{model_id}/reference-profiles/{reference_id}", request, null);
         
@@ -230,9 +273,9 @@ public class DatasetProfile {
         req.setURL(url);
 
         req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -255,16 +298,62 @@ public class DatasetProfile {
     }
 
     /**
-     * Returns a list for reference profiles
-     * Returns a list of Reference Profiles.
+     * Hides a list of segments
+     * Returns a list of segments that were hidden for a dataset.
      * 
      *         
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.ListReferenceProfilesResponse listReferenceProfiles(ai.whylabs.WhyLabs.models.operations.ListReferenceProfilesRequest request, ai.whylabs.WhyLabs.models.operations.ListReferenceProfilesSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.HideSegmentsResponse hideSegments(ai.whylabs.WhyLabs.models.operations.HideSegmentsRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.HideSegmentsRequest.class, baseUrl, "/v0/organizations/{org_id}/dataset-profiles/models/{dataset_id}/segments/hide", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = ai.whylabs.WhyLabs.utils.Utils.serializeRequestBody(request, "segmentsListRequest", "json");
+        if (serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
+        req.setBody(serializedRequestBody);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        ai.whylabs.WhyLabs.models.operations.HideSegmentsResponse res = new ai.whylabs.WhyLabs.models.operations.HideSegmentsResponse(contentType, httpRes.statusCode()) {{
+            response = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (true) {
+            if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                ai.whylabs.WhyLabs.models.shared.Response out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), ai.whylabs.WhyLabs.models.shared.Response.class);
+                res.response = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Returns a list for reference profiles between the given time range filtered on the upload timestamp
+     * Returns a list of Reference Profiles between a given time range filtered on the upload timestamp.
+     * 
+     *         
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public ai.whylabs.WhyLabs.models.operations.ListReferenceProfilesResponse listReferenceProfiles(ai.whylabs.WhyLabs.models.operations.ListReferenceProfilesRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.ListReferenceProfilesRequest.class, baseUrl, "/v0/organizations/{org_id}/dataset-profiles/models/{model_id}/reference-profiles", request, null);
         
@@ -273,7 +362,7 @@ public class DatasetProfile {
         req.setURL(url);
 
         req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         java.util.List<NameValuePair> queryParams = ai.whylabs.WhyLabs.utils.Utils.getQueryParams(ai.whylabs.WhyLabs.models.operations.ListReferenceProfilesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
@@ -281,7 +370,7 @@ public class DatasetProfile {
             }
         }
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -309,11 +398,10 @@ public class DatasetProfile {
      * 
      *         
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.ListSegmentsResponse listSegments(ai.whylabs.WhyLabs.models.operations.ListSegmentsRequest request, ai.whylabs.WhyLabs.models.operations.ListSegmentsSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.ListSegmentsResponse listSegments(ai.whylabs.WhyLabs.models.operations.ListSegmentsRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.ListSegmentsRequest.class, baseUrl, "/v0/organizations/{org_id}/dataset-profiles/models/{model_id}/segments", request, null);
         
@@ -322,9 +410,9 @@ public class DatasetProfile {
         req.setURL(url);
 
         req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -1,0 +1,10 @@
+# LogDebugEventRequest
+
+
+## Fields
+
+| Field                                                                            | Type                                                                             | Required                                                                         | Description                                                                      | Example                                                                          |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `debugEvent`                                                                     | [ai.whylabs.WhyLabs.models.shared.DebugEvent](../../models/shared/DebugEvent.md) | :heavy_check_mark:                                                               | N/A                                                                              |                                                                                  |
+| `datasetId`                                                                      | *String*                                                                         | :heavy_check_mark:                                                               | The resource ID to log the event to                                              | model-123                                                                        |
+| `orgId`                                                                          | *String*                                                                         | :heavy_check_mark:                                                               | Your company's unique organization ID                                            | org-123                                                                          |

@@ -7,6 +7,7 @@ package ai.whylabs.WhyLabs.models.operations;
 import ai.whylabs.WhyLabs.utils.SpeakeasyMetadata;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+
 public class UpdateOrgRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public UpdateOrgRequestBody requestBody;
@@ -76,6 +77,14 @@ public class UpdateOrgRequest {
 
     public UpdateOrgRequest withPagerDutyKey(String pagerDutyKey) {
         this.pagerDutyKey = pagerDutyKey;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parent_org_id")
+    public String parentOrgId;
+
+    public UpdateOrgRequest withParentOrgId(String parentOrgId) {
+        this.parentOrgId = parentOrgId;
         return this;
     }
     

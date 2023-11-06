@@ -5,15 +5,19 @@
 package ai.whylabs.WhyLabs;
 
 import ai.whylabs.WhyLabs.utils.HTTPClient;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 class SDKConfiguration {
 	public HTTPClient defaultClient;
 	public HTTPClient securityClient;
-	
+	public Security security;
 	public String serverUrl;
 	public int serverIdx = 0;
 	public String language = "java";
-	public String sdkVersion = "1.0.0";
-	public String genVersion = "2.35.9";
+	public String openapiDocVersion = "0.1";
+	public String sdkVersion = "1.1.0";
+	public String genVersion = "2.173.0";
+	public String userAgent = "speakeasy-sdk/java 1.1.0 2.173.0 0.1 <no value>";
+	
 	
 }

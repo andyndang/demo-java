@@ -1,0 +1,9 @@
+# CreateReferenceProfileUploadRequest
+
+
+## Fields
+
+| Field                                                                                              | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `logReferenceRequest`                                                                              | [ai.whylabs.WhyLabs.models.shared.LogReferenceRequest](../../models/shared/LogReferenceRequest.md) | :heavy_check_mark:                                                                                 | N/A                                                                                                |
+| `sessionId`                                                                                        | *String*                                                                                           | :heavy_check_mark:                                                                                 | N/A                                                                                                |

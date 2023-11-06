@@ -9,8 +9,9 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * BatchLogSessionReferenceResponse - Response payload for uploading reference profile.
+ * BatchLogSessionReferenceResponse - Response payload for uploading reference profiles.
  */
+
 public class BatchLogSessionReferenceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("observatoryUrl")

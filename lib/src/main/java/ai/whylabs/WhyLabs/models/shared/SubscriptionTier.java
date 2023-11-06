@@ -6,9 +6,6 @@ package ai.whylabs.WhyLabs.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 
-/**
- * SubscriptionTier - Organization's subscription tier. Should be PAID for real customers
- */
 public enum SubscriptionTier {
     FREE("FREE"),
     PAID("PAID"),
