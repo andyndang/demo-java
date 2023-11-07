@@ -21,17 +21,6 @@ public class PutRequestMonitorRunConfigResponse {
     }
     
     /**
-     * PutRequestMonitorRunConfig default response
-     */
-    
-    public String putRequestMonitorRunConfigDefaultApplicationJSONString;
-
-    public PutRequestMonitorRunConfigResponse withPutRequestMonitorRunConfigDefaultApplicationJSONString(String putRequestMonitorRunConfigDefaultApplicationJSONString) {
-        this.putRequestMonitorRunConfigDefaultApplicationJSONString = putRequestMonitorRunConfigDefaultApplicationJSONString;
-        return this;
-    }
-    
-    /**
      * HTTP response status code for this operation
      */
     
@@ -50,6 +39,17 @@ public class PutRequestMonitorRunConfigResponse {
 
     public PutRequestMonitorRunConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
+        return this;
+    }
+    
+    /**
+     * PutRequestMonitorRunConfig default response
+     */
+    
+    public String res;
+
+    public PutRequestMonitorRunConfigResponse withRes(String res) {
+        this.res = res;
         return this;
     }
     

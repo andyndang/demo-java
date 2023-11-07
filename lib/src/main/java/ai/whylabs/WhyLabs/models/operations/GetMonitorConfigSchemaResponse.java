@@ -21,17 +21,6 @@ public class GetMonitorConfigSchemaResponse {
     }
     
     /**
-     * GetMonitorConfigSchema default response
-     */
-    
-    public String getMonitorConfigSchemaDefaultApplicationJSONString;
-
-    public GetMonitorConfigSchemaResponse withGetMonitorConfigSchemaDefaultApplicationJSONString(String getMonitorConfigSchemaDefaultApplicationJSONString) {
-        this.getMonitorConfigSchemaDefaultApplicationJSONString = getMonitorConfigSchemaDefaultApplicationJSONString;
-        return this;
-    }
-    
-    /**
      * HTTP response status code for this operation
      */
     
@@ -50,6 +39,17 @@ public class GetMonitorConfigSchemaResponse {
 
     public GetMonitorConfigSchemaResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
+        return this;
+    }
+    
+    /**
+     * GetMonitorConfigSchema default response
+     */
+    
+    public String res;
+
+    public GetMonitorConfigSchemaResponse withRes(String res) {
+        this.res = res;
         return this;
     }
     

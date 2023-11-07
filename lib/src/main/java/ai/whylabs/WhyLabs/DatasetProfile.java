@@ -192,7 +192,7 @@ public class DatasetProfile {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         ai.whylabs.WhyLabs.models.operations.DeleteReferenceProfileResponse res = new ai.whylabs.WhyLabs.models.operations.DeleteReferenceProfileResponse(contentType, httpRes.statusCode()) {{
-            deleteReferenceProfileDefaultApplicationJSONBoolean = null;
+            boolean_ = null;
         }};
         res.rawResponse = httpRes;
         
@@ -200,7 +200,7 @@ public class DatasetProfile {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
                 Boolean out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Boolean.class);
-                res.deleteReferenceProfileDefaultApplicationJSONBoolean = out;
+                res.boolean_ = out;
             }
         }
 
@@ -377,7 +377,7 @@ public class DatasetProfile {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         ai.whylabs.WhyLabs.models.operations.ListReferenceProfilesResponse res = new ai.whylabs.WhyLabs.models.operations.ListReferenceProfilesResponse(contentType, httpRes.statusCode()) {{
-            referenceProfileItemResponses = null;
+            classes = null;
         }};
         res.rawResponse = httpRes;
         
@@ -385,7 +385,7 @@ public class DatasetProfile {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
                 ai.whylabs.WhyLabs.models.shared.ReferenceProfileItemResponse[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), ai.whylabs.WhyLabs.models.shared.ReferenceProfileItemResponse[].class);
-                res.referenceProfileItemResponses = out;
+                res.classes = out;
             }
         }
 

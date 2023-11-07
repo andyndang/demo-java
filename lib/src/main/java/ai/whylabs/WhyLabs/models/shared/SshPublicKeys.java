@@ -7,6 +7,6 @@ package ai.whylabs.WhyLabs.models.shared;
 
 
 
-public class DTOJobsJobEmailNotificationsDTOOnFailure {
-    public DTOJobsJobEmailNotificationsDTOOnFailure(){}
+public class SshPublicKeys {
+    public SshPublicKeys(){}
 }

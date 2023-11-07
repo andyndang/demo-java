@@ -21,17 +21,6 @@ public class ListConstraintsResponse {
     }
     
     /**
-     * ListConstraints default response
-     */
-    
-    public String[] listConstraintsDefaultApplicationJSONStrings;
-
-    public ListConstraintsResponse withListConstraintsDefaultApplicationJSONStrings(String[] listConstraintsDefaultApplicationJSONStrings) {
-        this.listConstraintsDefaultApplicationJSONStrings = listConstraintsDefaultApplicationJSONStrings;
-        return this;
-    }
-    
-    /**
      * HTTP response status code for this operation
      */
     
@@ -50,6 +39,17 @@ public class ListConstraintsResponse {
 
     public ListConstraintsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
+        return this;
+    }
+    
+    /**
+     * ListConstraints default response
+     */
+    
+    public String[] strings;
+
+    public ListConstraintsResponse withStrings(String[] strings) {
+        this.strings = strings;
         return this;
     }
     

@@ -21,17 +21,6 @@ public class ListNotificationActionsResponse {
     }
     
     /**
-     * ListNotificationActions default response
-     */
-    
-    public ai.whylabs.WhyLabs.models.shared.NotificationAction[] notificationActions;
-
-    public ListNotificationActionsResponse withNotificationActions(ai.whylabs.WhyLabs.models.shared.NotificationAction[] notificationActions) {
-        this.notificationActions = notificationActions;
-        return this;
-    }
-    
-    /**
      * HTTP response status code for this operation
      */
     
@@ -50,6 +39,17 @@ public class ListNotificationActionsResponse {
 
     public ListNotificationActionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
+        return this;
+    }
+    
+    /**
+     * ListNotificationActions default response
+     */
+    
+    public ai.whylabs.WhyLabs.models.shared.NotificationAction[] classes;
+
+    public ListNotificationActionsResponse withClasses(ai.whylabs.WhyLabs.models.shared.NotificationAction[] classes) {
+        this.classes = classes;
         return this;
     }
     

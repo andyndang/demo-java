@@ -21,17 +21,6 @@ public class GetMonitorResponse {
     }
     
     /**
-     * GetMonitor default response
-     */
-    
-    public String getMonitorDefaultApplicationJSONString;
-
-    public GetMonitorResponse withGetMonitorDefaultApplicationJSONString(String getMonitorDefaultApplicationJSONString) {
-        this.getMonitorDefaultApplicationJSONString = getMonitorDefaultApplicationJSONString;
-        return this;
-    }
-    
-    /**
      * HTTP response status code for this operation
      */
     
@@ -50,6 +39,17 @@ public class GetMonitorResponse {
 
     public GetMonitorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
+        return this;
+    }
+    
+    /**
+     * GetMonitor default response
+     */
+    
+    public String res;
+
+    public GetMonitorResponse withRes(String res) {
+        this.res = res;
         return this;
     }
     

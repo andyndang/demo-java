@@ -30,9 +30,9 @@ public class DTOJobsJobSettingsDTO {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("libraries")
-    public DTOJobsJobSettingsDTOLibraries[] libraries;
+    public Libraries[] libraries;
 
-    public DTOJobsJobSettingsDTO withLibraries(DTOJobsJobSettingsDTOLibraries[] libraries) {
+    public DTOJobsJobSettingsDTO withLibraries(Libraries[] libraries) {
         this.libraries = libraries;
         return this;
     }

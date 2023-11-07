@@ -42,14 +42,14 @@ public class Schema {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         ai.whylabs.WhyLabs.models.operations.GetMonitorConfigSchemaResponse res = new ai.whylabs.WhyLabs.models.operations.GetMonitorConfigSchemaResponse(contentType, httpRes.statusCode()) {{
-            getMonitorConfigSchemaDefaultApplicationJSONString = null;
+            res = null;
         }};
         res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.getMonitorConfigSchemaDefaultApplicationJSONString = out;
+                res.res = out;
             }
         }
 

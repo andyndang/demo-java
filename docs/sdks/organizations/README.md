@@ -1,5 +1,5 @@
 # Organizations
-(*organizations*)
+(*.organizations*)
 
 ### Available Operations
 

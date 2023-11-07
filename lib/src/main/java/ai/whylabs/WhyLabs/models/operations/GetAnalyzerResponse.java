@@ -21,17 +21,6 @@ public class GetAnalyzerResponse {
     }
     
     /**
-     * GetAnalyzer default response
-     */
-    
-    public String getAnalyzerDefaultApplicationJSONString;
-
-    public GetAnalyzerResponse withGetAnalyzerDefaultApplicationJSONString(String getAnalyzerDefaultApplicationJSONString) {
-        this.getAnalyzerDefaultApplicationJSONString = getAnalyzerDefaultApplicationJSONString;
-        return this;
-    }
-    
-    /**
      * HTTP response status code for this operation
      */
     
@@ -50,6 +39,17 @@ public class GetAnalyzerResponse {
 
     public GetAnalyzerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
+        return this;
+    }
+    
+    /**
+     * GetAnalyzer default response
+     */
+    
+    public String res;
+
+    public GetAnalyzerResponse withRes(String res) {
+        this.res = res;
         return this;
     }
     

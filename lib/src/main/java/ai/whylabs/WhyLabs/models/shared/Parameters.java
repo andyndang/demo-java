@@ -7,6 +7,6 @@ package ai.whylabs.WhyLabs.models.shared;
 
 
 
-public class DTOJobsNewClusterDTOInitScripts {
-    public DTOJobsNewClusterDTOInitScripts(){}
+public class Parameters {
+    public Parameters(){}
 }

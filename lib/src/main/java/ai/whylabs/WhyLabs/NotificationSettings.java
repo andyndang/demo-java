@@ -291,7 +291,7 @@ public class NotificationSettings {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         ai.whylabs.WhyLabs.models.operations.ListNotificationActionsResponse res = new ai.whylabs.WhyLabs.models.operations.ListNotificationActionsResponse(contentType, httpRes.statusCode()) {{
-            notificationActions = null;
+            classes = null;
         }};
         res.rawResponse = httpRes;
         
@@ -299,7 +299,7 @@ public class NotificationSettings {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
                 ai.whylabs.WhyLabs.models.shared.NotificationAction[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), ai.whylabs.WhyLabs.models.shared.NotificationAction[].class);
-                res.notificationActions = out;
+                res.classes = out;
             }
         }
 

@@ -1,5 +1,5 @@
 # NotificationSettings
-(*notificationSettings*)
+(*.notificationSettings*)
 
 ### Available Operations
 

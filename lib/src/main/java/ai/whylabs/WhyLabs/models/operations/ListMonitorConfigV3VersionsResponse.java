@@ -21,17 +21,6 @@ public class ListMonitorConfigV3VersionsResponse {
     }
     
     /**
-     * ListMonitorConfigV3Versions default response
-     */
-    
-    public ai.whylabs.WhyLabs.models.shared.MonitorConfigVersion[] monitorConfigVersions;
-
-    public ListMonitorConfigV3VersionsResponse withMonitorConfigVersions(ai.whylabs.WhyLabs.models.shared.MonitorConfigVersion[] monitorConfigVersions) {
-        this.monitorConfigVersions = monitorConfigVersions;
-        return this;
-    }
-    
-    /**
      * HTTP response status code for this operation
      */
     
@@ -50,6 +39,17 @@ public class ListMonitorConfigV3VersionsResponse {
 
     public ListMonitorConfigV3VersionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
+        return this;
+    }
+    
+    /**
+     * ListMonitorConfigV3Versions default response
+     */
+    
+    public ai.whylabs.WhyLabs.models.shared.MonitorConfigVersion[] classes;
+
+    public ListMonitorConfigV3VersionsResponse withClasses(ai.whylabs.WhyLabs.models.shared.MonitorConfigVersion[] classes) {
+        this.classes = classes;
         return this;
     }
     

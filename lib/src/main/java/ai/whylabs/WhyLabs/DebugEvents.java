@@ -49,14 +49,14 @@ public class DebugEvents {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         ai.whylabs.WhyLabs.models.operations.LogDebugEventResponse res = new ai.whylabs.WhyLabs.models.operations.LogDebugEventResponse(contentType, httpRes.statusCode()) {{
-            logDebugEventDefaultApplicationJSONString = null;
+            res = null;
         }};
         res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.logDebugEventDefaultApplicationJSONString = out;
+                res.res = out;
             }
         }
 

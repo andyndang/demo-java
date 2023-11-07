@@ -834,14 +834,14 @@ public class Internal {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         ai.whylabs.WhyLabs.models.operations.GetMonitorConfigV3VersionResponse res = new ai.whylabs.WhyLabs.models.operations.GetMonitorConfigV3VersionResponse(contentType, httpRes.statusCode()) {{
-            getMonitorConfigV3VersionDefaultApplicationJSONString = null;
+            res = null;
         }};
         res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.getMonitorConfigV3VersionDefaultApplicationJSONString = out;
+                res.res = out;
             }
         }
 
@@ -953,7 +953,7 @@ public class Internal {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         ai.whylabs.WhyLabs.models.operations.GetOrganizationSubscriptionsResponse res = new ai.whylabs.WhyLabs.models.operations.GetOrganizationSubscriptionsResponse(contentType, httpRes.statusCode()) {{
-            subscriptionSummaries = null;
+            classes = null;
         }};
         res.rawResponse = httpRes;
         
@@ -961,7 +961,7 @@ public class Internal {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
                 ai.whylabs.WhyLabs.models.shared.SubscriptionSummary[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), ai.whylabs.WhyLabs.models.shared.SubscriptionSummary[].class);
-                res.subscriptionSummaries = out;
+                res.classes = out;
             }
         }
 
@@ -1126,7 +1126,7 @@ public class Internal {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         ai.whylabs.WhyLabs.models.operations.ListAccountUsersResponse res = new ai.whylabs.WhyLabs.models.operations.ListAccountUsersResponse(contentType, httpRes.statusCode()) {{
-            accountUsers = null;
+            classes = null;
         }};
         res.rawResponse = httpRes;
         
@@ -1134,7 +1134,7 @@ public class Internal {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
                 ai.whylabs.WhyLabs.models.shared.AccountUser[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), ai.whylabs.WhyLabs.models.shared.AccountUser[].class);
-                res.accountUsers = out;
+                res.classes = out;
             }
         }
 
@@ -1257,7 +1257,7 @@ public class Internal {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         ai.whylabs.WhyLabs.models.operations.ListManagedOrganizationsResponse res = new ai.whylabs.WhyLabs.models.operations.ListManagedOrganizationsResponse(contentType, httpRes.statusCode()) {{
-            accountOrganizations = null;
+            classes = null;
         }};
         res.rawResponse = httpRes;
         
@@ -1265,7 +1265,7 @@ public class Internal {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
                 ai.whylabs.WhyLabs.models.shared.AccountOrganization[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), ai.whylabs.WhyLabs.models.shared.AccountOrganization[].class);
-                res.accountOrganizations = out;
+                res.classes = out;
             }
         }
 
@@ -1297,7 +1297,7 @@ public class Internal {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         ai.whylabs.WhyLabs.models.operations.ListMonitorConfigV3VersionsResponse res = new ai.whylabs.WhyLabs.models.operations.ListMonitorConfigV3VersionsResponse(contentType, httpRes.statusCode()) {{
-            monitorConfigVersions = null;
+            classes = null;
         }};
         res.rawResponse = httpRes;
         
@@ -1305,7 +1305,7 @@ public class Internal {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
                 ai.whylabs.WhyLabs.models.shared.MonitorConfigVersion[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), ai.whylabs.WhyLabs.models.shared.MonitorConfigVersion[].class);
-                res.monitorConfigVersions = out;
+                res.classes = out;
             }
         }
 
@@ -1756,14 +1756,14 @@ public class Internal {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         ai.whylabs.WhyLabs.models.operations.PutRequestMonitorRunConfigResponse res = new ai.whylabs.WhyLabs.models.operations.PutRequestMonitorRunConfigResponse(contentType, httpRes.statusCode()) {{
-            putRequestMonitorRunConfigDefaultApplicationJSONString = null;
+            res = null;
         }};
         res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.putRequestMonitorRunConfigDefaultApplicationJSONString = out;
+                res.res = out;
             }
         }
 

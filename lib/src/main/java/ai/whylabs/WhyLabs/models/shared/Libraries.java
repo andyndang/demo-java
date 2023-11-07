@@ -7,6 +7,6 @@ package ai.whylabs.WhyLabs.models.shared;
 
 
 
-public class DTOJobsJobSettingsDTOLibraries {
-    public DTOJobsJobSettingsDTOLibraries(){}
+public class Libraries {
+    public Libraries(){}
 }

@@ -1,5 +1,5 @@
 # Monitor
-(*monitor*)
+(*.monitor*)
 
 ### Available Operations
 

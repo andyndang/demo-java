@@ -1,4 +1,4 @@
-# DTOJobsNewClusterDTOSshPublicKeys
+# SshPublicKeys
 
 
 ## Fields

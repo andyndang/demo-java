@@ -10,17 +10,6 @@ import java.net.http.HttpResponse;
 
 public class ListManagedOrganizationsResponse {
     /**
-     * ListManagedOrganizations default response
-     */
-    
-    public ai.whylabs.WhyLabs.models.shared.AccountOrganization[] accountOrganizations;
-
-    public ListManagedOrganizationsResponse withAccountOrganizations(ai.whylabs.WhyLabs.models.shared.AccountOrganization[] accountOrganizations) {
-        this.accountOrganizations = accountOrganizations;
-        return this;
-    }
-    
-    /**
      * HTTP response content type for this operation
      */
     
@@ -50,6 +39,17 @@ public class ListManagedOrganizationsResponse {
 
     public ListManagedOrganizationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
+        return this;
+    }
+    
+    /**
+     * ListManagedOrganizations default response
+     */
+    
+    public ai.whylabs.WhyLabs.models.shared.AccountOrganization[] classes;
+
+    public ListManagedOrganizationsResponse withClasses(ai.whylabs.WhyLabs.models.shared.AccountOrganization[] classes) {
+        this.classes = classes;
         return this;
     }
     

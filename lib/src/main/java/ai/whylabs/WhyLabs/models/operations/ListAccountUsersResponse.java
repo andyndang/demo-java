@@ -10,17 +10,6 @@ import java.net.http.HttpResponse;
 
 public class ListAccountUsersResponse {
     /**
-     * ListAccountUsers default response
-     */
-    
-    public ai.whylabs.WhyLabs.models.shared.AccountUser[] accountUsers;
-
-    public ListAccountUsersResponse withAccountUsers(ai.whylabs.WhyLabs.models.shared.AccountUser[] accountUsers) {
-        this.accountUsers = accountUsers;
-        return this;
-    }
-    
-    /**
      * HTTP response content type for this operation
      */
     
@@ -50,6 +39,17 @@ public class ListAccountUsersResponse {
 
     public ListAccountUsersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
+        return this;
+    }
+    
+    /**
+     * ListAccountUsers default response
+     */
+    
+    public ai.whylabs.WhyLabs.models.shared.AccountUser[] classes;
+
+    public ListAccountUsersResponse withClasses(ai.whylabs.WhyLabs.models.shared.AccountUser[] classes) {
+        this.classes = classes;
         return this;
     }
     

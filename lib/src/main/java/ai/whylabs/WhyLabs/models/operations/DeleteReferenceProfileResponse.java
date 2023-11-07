@@ -21,17 +21,6 @@ public class DeleteReferenceProfileResponse {
     }
     
     /**
-     * true if successful, false if we encounter failures
-     */
-    
-    public Boolean deleteReferenceProfileDefaultApplicationJSONBoolean;
-
-    public DeleteReferenceProfileResponse withDeleteReferenceProfileDefaultApplicationJSONBoolean(Boolean deleteReferenceProfileDefaultApplicationJSONBoolean) {
-        this.deleteReferenceProfileDefaultApplicationJSONBoolean = deleteReferenceProfileDefaultApplicationJSONBoolean;
-        return this;
-    }
-    
-    /**
      * HTTP response status code for this operation
      */
     
@@ -50,6 +39,17 @@ public class DeleteReferenceProfileResponse {
 
     public DeleteReferenceProfileResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
+        return this;
+    }
+    
+    /**
+     * true if successful, false if we encounter failures
+     */
+    
+    public Boolean boolean_;
+
+    public DeleteReferenceProfileResponse withBoolean(Boolean boolean_) {
+        this.boolean_ = boolean_;
         return this;
     }
     

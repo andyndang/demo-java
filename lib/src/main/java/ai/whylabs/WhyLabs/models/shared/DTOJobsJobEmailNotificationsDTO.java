@@ -21,27 +21,27 @@ public class DTOJobsJobEmailNotificationsDTO {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onFailure")
-    public DTOJobsJobEmailNotificationsDTOOnFailure[] onFailure;
+    public OnFailure[] onFailure;
 
-    public DTOJobsJobEmailNotificationsDTO withOnFailure(DTOJobsJobEmailNotificationsDTOOnFailure[] onFailure) {
+    public DTOJobsJobEmailNotificationsDTO withOnFailure(OnFailure[] onFailure) {
         this.onFailure = onFailure;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onStart")
-    public DTOJobsJobEmailNotificationsDTOOnStart[] onStart;
+    public OnStart[] onStart;
 
-    public DTOJobsJobEmailNotificationsDTO withOnStart(DTOJobsJobEmailNotificationsDTOOnStart[] onStart) {
+    public DTOJobsJobEmailNotificationsDTO withOnStart(OnStart[] onStart) {
         this.onStart = onStart;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onSuccess")
-    public DTOJobsJobEmailNotificationsDTOOnSuccess[] onSuccess;
+    public OnSuccess[] onSuccess;
 
-    public DTOJobsJobEmailNotificationsDTO withOnSuccess(DTOJobsJobEmailNotificationsDTOOnSuccess[] onSuccess) {
+    public DTOJobsJobEmailNotificationsDTO withOnSuccess(OnSuccess[] onSuccess) {
         this.onSuccess = onSuccess;
         return this;
     }

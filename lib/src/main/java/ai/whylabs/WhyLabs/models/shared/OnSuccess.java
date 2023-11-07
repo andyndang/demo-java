@@ -7,6 +7,6 @@ package ai.whylabs.WhyLabs.models.shared;
 
 
 
-public class DTOJobsJobEmailNotificationsDTOOnSuccess {
-    public DTOJobsJobEmailNotificationsDTOOnSuccess(){}
+public class OnSuccess {
+    public OnSuccess(){}
 }

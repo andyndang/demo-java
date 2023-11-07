@@ -44,7 +44,7 @@ public class Subscription {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         ai.whylabs.WhyLabs.models.operations.GetOrganizationSubscriptionsResponse res = new ai.whylabs.WhyLabs.models.operations.GetOrganizationSubscriptionsResponse(contentType, httpRes.statusCode()) {{
-            subscriptionSummaries = null;
+            classes = null;
         }};
         res.rawResponse = httpRes;
         
@@ -52,7 +52,7 @@ public class Subscription {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
                 ai.whylabs.WhyLabs.models.shared.SubscriptionSummary[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), ai.whylabs.WhyLabs.models.shared.SubscriptionSummary[].class);
-                res.subscriptionSummaries = out;
+                res.classes = out;
             }
         }
 

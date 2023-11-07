@@ -1,5 +1,5 @@
 # FeatureWeights
-(*featureWeights*)
+(*.featureWeights*)
 
 ### Available Operations
 

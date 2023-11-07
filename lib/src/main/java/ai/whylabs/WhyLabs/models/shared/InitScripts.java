@@ -7,6 +7,6 @@ package ai.whylabs.WhyLabs.models.shared;
 
 
 
-public class DTOJobsSparkJarTaskDTOParameters {
-    public DTOJobsSparkJarTaskDTOParameters(){}
+public class InitScripts {
+    public InitScripts(){}
 }

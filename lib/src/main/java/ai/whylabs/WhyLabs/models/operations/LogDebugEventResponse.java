@@ -21,17 +21,6 @@ public class LogDebugEventResponse {
     }
     
     /**
-     * 202 if the response is accepted
-     */
-    
-    public String logDebugEventDefaultApplicationJSONString;
-
-    public LogDebugEventResponse withLogDebugEventDefaultApplicationJSONString(String logDebugEventDefaultApplicationJSONString) {
-        this.logDebugEventDefaultApplicationJSONString = logDebugEventDefaultApplicationJSONString;
-        return this;
-    }
-    
-    /**
      * HTTP response status code for this operation
      */
     
@@ -50,6 +39,17 @@ public class LogDebugEventResponse {
 
     public LogDebugEventResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
+        return this;
+    }
+    
+    /**
+     * 202 if the response is accepted
+     */
+    
+    public String res;
+
+    public LogDebugEventResponse withRes(String res) {
+        this.res = res;
         return this;
     }
     

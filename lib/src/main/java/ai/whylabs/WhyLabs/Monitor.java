@@ -126,14 +126,14 @@ public class Monitor {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         ai.whylabs.WhyLabs.models.operations.GetAnalyzerResponse res = new ai.whylabs.WhyLabs.models.operations.GetAnalyzerResponse(contentType, httpRes.statusCode()) {{
-            getAnalyzerDefaultApplicationJSONString = null;
+            res = null;
         }};
         res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.getAnalyzerDefaultApplicationJSONString = out;
+                res.res = out;
             }
         }
 
@@ -165,14 +165,14 @@ public class Monitor {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         ai.whylabs.WhyLabs.models.operations.GetMonitorResponse res = new ai.whylabs.WhyLabs.models.operations.GetMonitorResponse(contentType, httpRes.statusCode()) {{
-            getMonitorDefaultApplicationJSONString = null;
+            res = null;
         }};
         res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.getMonitorDefaultApplicationJSONString = out;
+                res.res = out;
             }
         }
 
@@ -210,14 +210,14 @@ public class Monitor {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         ai.whylabs.WhyLabs.models.operations.GetMonitorConfigV3Response res = new ai.whylabs.WhyLabs.models.operations.GetMonitorConfigV3Response(contentType, httpRes.statusCode()) {{
-            getMonitorConfigV3DefaultApplicationJSONString = null;
+            res = null;
         }};
         res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.getMonitorConfigV3DefaultApplicationJSONString = out;
+                res.res = out;
             }
         }
 
@@ -249,14 +249,14 @@ public class Monitor {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         ai.whylabs.WhyLabs.models.operations.GetMonitorConfigV3VersionResponse res = new ai.whylabs.WhyLabs.models.operations.GetMonitorConfigV3VersionResponse(contentType, httpRes.statusCode()) {{
-            getMonitorConfigV3VersionDefaultApplicationJSONString = null;
+            res = null;
         }};
         res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.getMonitorConfigV3VersionDefaultApplicationJSONString = out;
+                res.res = out;
             }
         }
 
@@ -288,7 +288,7 @@ public class Monitor {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         ai.whylabs.WhyLabs.models.operations.ListConstraintsResponse res = new ai.whylabs.WhyLabs.models.operations.ListConstraintsResponse(contentType, httpRes.statusCode()) {{
-            listConstraintsDefaultApplicationJSONStrings = null;
+            strings = null;
         }};
         res.rawResponse = httpRes;
         
@@ -296,7 +296,7 @@ public class Monitor {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
                 String[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), String[].class);
-                res.listConstraintsDefaultApplicationJSONStrings = out;
+                res.strings = out;
             }
         }
 
@@ -328,7 +328,7 @@ public class Monitor {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         ai.whylabs.WhyLabs.models.operations.ListMonitorConfigV3VersionsResponse res = new ai.whylabs.WhyLabs.models.operations.ListMonitorConfigV3VersionsResponse(contentType, httpRes.statusCode()) {{
-            monitorConfigVersions = null;
+            classes = null;
         }};
         res.rawResponse = httpRes;
         
@@ -336,7 +336,7 @@ public class Monitor {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
                 ai.whylabs.WhyLabs.models.shared.MonitorConfigVersion[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), ai.whylabs.WhyLabs.models.shared.MonitorConfigVersion[].class);
-                res.monitorConfigVersions = out;
+                res.classes = out;
             }
         }
 
@@ -553,14 +553,14 @@ public class Monitor {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         ai.whylabs.WhyLabs.models.operations.PutRequestMonitorRunConfigResponse res = new ai.whylabs.WhyLabs.models.operations.PutRequestMonitorRunConfigResponse(contentType, httpRes.statusCode()) {{
-            putRequestMonitorRunConfigDefaultApplicationJSONString = null;
+            res = null;
         }};
         res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.putRequestMonitorRunConfigDefaultApplicationJSONString = out;
+                res.res = out;
             }
         }
 

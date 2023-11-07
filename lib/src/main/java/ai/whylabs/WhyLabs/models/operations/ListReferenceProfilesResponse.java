@@ -21,17 +21,6 @@ public class ListReferenceProfilesResponse {
     }
     
     /**
-     * The metadata for the summarized dataset profile including paths to JSON and protobuf data
-     */
-    
-    public ai.whylabs.WhyLabs.models.shared.ReferenceProfileItemResponse[] referenceProfileItemResponses;
-
-    public ListReferenceProfilesResponse withReferenceProfileItemResponses(ai.whylabs.WhyLabs.models.shared.ReferenceProfileItemResponse[] referenceProfileItemResponses) {
-        this.referenceProfileItemResponses = referenceProfileItemResponses;
-        return this;
-    }
-    
-    /**
      * HTTP response status code for this operation
      */
     
@@ -50,6 +39,17 @@ public class ListReferenceProfilesResponse {
 
     public ListReferenceProfilesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
+        return this;
+    }
+    
+    /**
+     * The metadata for the summarized dataset profile including paths to JSON and protobuf data
+     */
+    
+    public ai.whylabs.WhyLabs.models.shared.ReferenceProfileItemResponse[] classes;
+
+    public ListReferenceProfilesResponse withClasses(ai.whylabs.WhyLabs.models.shared.ReferenceProfileItemResponse[] classes) {
+        this.classes = classes;
         return this;
     }
     

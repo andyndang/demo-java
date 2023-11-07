@@ -19,24 +19,24 @@ public class Songbird {
 	};
   	
     public Account account;
-    public Admin admin;
-    public ApiKey apiKey;
-    public Databricks databricks;
-    public DatasetMetadata datasetMetadata;
-    public DatasetProfile datasetProfile;
-    public DebugEvents debugEvents;
-    public FeatureWeights featureWeights;
-    public FeatureFlags featureFlags;
     public Internal internal;
-    public Log log;
+    public Admin admin;
+    public Databricks databricks;
+    public FeatureFlags featureFlags;
     public Membership membership;
-    public Models models;
-    public Monitor monitor;
     public NotificationSettings notificationSettings;
     public Organizations organizations;
+    public ApiKey apiKey;
+    public DatasetProfile datasetProfile;
+    public DatasetMetadata datasetMetadata;
+    public FeatureWeights featureWeights;
+    public DebugEvents debugEvents;
+    public Log log;
+    public Models models;
+    public Monitor monitor;
+    public Schema schema;
     public Payment payment;
     public Provision provision;
-    public Schema schema;
     public Search search;
     public Sessions sessions;
     public Subscription subscription;
@@ -149,41 +149,41 @@ public class Songbird {
 		
 		this.account = new Account(this.sdkConfiguration);
 		
-		this.admin = new Admin(this.sdkConfiguration);
+		this.internal = new Internal(this.sdkConfiguration);
 		
-		this.apiKey = new ApiKey(this.sdkConfiguration);
+		this.admin = new Admin(this.sdkConfiguration);
 		
 		this.databricks = new Databricks(this.sdkConfiguration);
 		
-		this.datasetMetadata = new DatasetMetadata(this.sdkConfiguration);
-		
-		this.datasetProfile = new DatasetProfile(this.sdkConfiguration);
-		
-		this.debugEvents = new DebugEvents(this.sdkConfiguration);
-		
-		this.featureWeights = new FeatureWeights(this.sdkConfiguration);
-		
 		this.featureFlags = new FeatureFlags(this.sdkConfiguration);
 		
-		this.internal = new Internal(this.sdkConfiguration);
-		
-		this.log = new Log(this.sdkConfiguration);
-		
 		this.membership = new Membership(this.sdkConfiguration);
-		
-		this.models = new Models(this.sdkConfiguration);
-		
-		this.monitor = new Monitor(this.sdkConfiguration);
 		
 		this.notificationSettings = new NotificationSettings(this.sdkConfiguration);
 		
 		this.organizations = new Organizations(this.sdkConfiguration);
 		
+		this.apiKey = new ApiKey(this.sdkConfiguration);
+		
+		this.datasetProfile = new DatasetProfile(this.sdkConfiguration);
+		
+		this.datasetMetadata = new DatasetMetadata(this.sdkConfiguration);
+		
+		this.featureWeights = new FeatureWeights(this.sdkConfiguration);
+		
+		this.debugEvents = new DebugEvents(this.sdkConfiguration);
+		
+		this.log = new Log(this.sdkConfiguration);
+		
+		this.models = new Models(this.sdkConfiguration);
+		
+		this.monitor = new Monitor(this.sdkConfiguration);
+		
+		this.schema = new Schema(this.sdkConfiguration);
+		
 		this.payment = new Payment(this.sdkConfiguration);
 		
 		this.provision = new Provision(this.sdkConfiguration);
-		
-		this.schema = new Schema(this.sdkConfiguration);
 		
 		this.search = new Search(this.sdkConfiguration);
 		

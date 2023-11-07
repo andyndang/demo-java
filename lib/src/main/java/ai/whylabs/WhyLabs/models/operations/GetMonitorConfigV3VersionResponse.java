@@ -21,17 +21,6 @@ public class GetMonitorConfigV3VersionResponse {
     }
     
     /**
-     * GetMonitorConfigV3Version default response
-     */
-    
-    public String getMonitorConfigV3VersionDefaultApplicationJSONString;
-
-    public GetMonitorConfigV3VersionResponse withGetMonitorConfigV3VersionDefaultApplicationJSONString(String getMonitorConfigV3VersionDefaultApplicationJSONString) {
-        this.getMonitorConfigV3VersionDefaultApplicationJSONString = getMonitorConfigV3VersionDefaultApplicationJSONString;
-        return this;
-    }
-    
-    /**
      * HTTP response status code for this operation
      */
     
@@ -50,6 +39,17 @@ public class GetMonitorConfigV3VersionResponse {
 
     public GetMonitorConfigV3VersionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
+        return this;
+    }
+    
+    /**
+     * GetMonitorConfigV3Version default response
+     */
+    
+    public String res;
+
+    public GetMonitorConfigV3VersionResponse withRes(String res) {
+        this.res = res;
         return this;
     }
     

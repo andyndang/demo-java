@@ -1,5 +1,5 @@
 # Admin
-(*admin*)
+(*.admin*)
 
 ### Available Operations
 

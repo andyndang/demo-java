@@ -46,10 +46,10 @@ public class GetOrganizationSubscriptionsResponse {
      * GetOrganizationSubscriptions default response
      */
     
-    public ai.whylabs.WhyLabs.models.shared.SubscriptionSummary[] subscriptionSummaries;
+    public ai.whylabs.WhyLabs.models.shared.SubscriptionSummary[] classes;
 
-    public GetOrganizationSubscriptionsResponse withSubscriptionSummaries(ai.whylabs.WhyLabs.models.shared.SubscriptionSummary[] subscriptionSummaries) {
-        this.subscriptionSummaries = subscriptionSummaries;
+    public GetOrganizationSubscriptionsResponse withClasses(ai.whylabs.WhyLabs.models.shared.SubscriptionSummary[] classes) {
+        this.classes = classes;
         return this;
     }
     

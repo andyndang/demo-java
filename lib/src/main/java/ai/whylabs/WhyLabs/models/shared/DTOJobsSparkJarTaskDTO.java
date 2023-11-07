@@ -30,9 +30,9 @@ public class DTOJobsSparkJarTaskDTO {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
-    public DTOJobsSparkJarTaskDTOParameters[] parameters;
+    public Parameters[] parameters;
 
-    public DTOJobsSparkJarTaskDTO withParameters(DTOJobsSparkJarTaskDTOParameters[] parameters) {
+    public DTOJobsSparkJarTaskDTO withParameters(Parameters[] parameters) {
         this.parameters = parameters;
         return this;
     }

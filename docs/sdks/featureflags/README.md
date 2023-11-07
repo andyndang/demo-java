@@ -1,5 +1,5 @@
 # FeatureFlags
-(*featureFlags*)
+(*.featureFlags*)
 
 ### Available Operations
 

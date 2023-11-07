@@ -102,9 +102,9 @@ public class DTOJobsNewClusterDTO {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("initScripts")
-    public DTOJobsNewClusterDTOInitScripts[] initScripts;
+    public InitScripts[] initScripts;
 
-    public DTOJobsNewClusterDTO withInitScripts(DTOJobsNewClusterDTOInitScripts[] initScripts) {
+    public DTOJobsNewClusterDTO withInitScripts(InitScripts[] initScripts) {
         this.initScripts = initScripts;
         return this;
     }
@@ -183,9 +183,9 @@ public class DTOJobsNewClusterDTO {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sshPublicKeys")
-    public DTOJobsNewClusterDTOSshPublicKeys[] sshPublicKeys;
+    public SshPublicKeys[] sshPublicKeys;
 
-    public DTOJobsNewClusterDTO withSshPublicKeys(DTOJobsNewClusterDTOSshPublicKeys[] sshPublicKeys) {
+    public DTOJobsNewClusterDTO withSshPublicKeys(SshPublicKeys[] sshPublicKeys) {
         this.sshPublicKeys = sshPublicKeys;
         return this;
     }

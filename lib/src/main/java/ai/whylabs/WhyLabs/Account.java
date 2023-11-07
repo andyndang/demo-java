@@ -269,7 +269,7 @@ public class Account {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         ai.whylabs.WhyLabs.models.operations.ListAccountUsersResponse res = new ai.whylabs.WhyLabs.models.operations.ListAccountUsersResponse(contentType, httpRes.statusCode()) {{
-            accountUsers = null;
+            classes = null;
         }};
         res.rawResponse = httpRes;
         
@@ -277,7 +277,7 @@ public class Account {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
                 ai.whylabs.WhyLabs.models.shared.AccountUser[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), ai.whylabs.WhyLabs.models.shared.AccountUser[].class);
-                res.accountUsers = out;
+                res.classes = out;
             }
         }
 
@@ -309,7 +309,7 @@ public class Account {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         ai.whylabs.WhyLabs.models.operations.ListManagedOrganizationsResponse res = new ai.whylabs.WhyLabs.models.operations.ListManagedOrganizationsResponse(contentType, httpRes.statusCode()) {{
-            accountOrganizations = null;
+            classes = null;
         }};
         res.rawResponse = httpRes;
         
@@ -317,7 +317,7 @@ public class Account {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
                 ai.whylabs.WhyLabs.models.shared.AccountOrganization[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), ai.whylabs.WhyLabs.models.shared.AccountOrganization[].class);
-                res.accountOrganizations = out;
+                res.classes = out;
             }
         }
 
