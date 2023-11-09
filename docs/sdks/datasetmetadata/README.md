@@ -1,5 +1,5 @@
 # DatasetMetadata
-(*.datasetMetadata*)
+(*datasetMetadata*)
 
 ### Available Operations
 

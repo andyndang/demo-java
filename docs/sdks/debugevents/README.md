@@ -1,5 +1,5 @@
 # DebugEvents
-(*.debugEvents*)
+(*debugEvents*)
 
 ### Available Operations
 

@@ -1,5 +1,5 @@
 # ApiKey
-(*.apiKey*)
+(*apiKey*)
 
 ### Available Operations
 

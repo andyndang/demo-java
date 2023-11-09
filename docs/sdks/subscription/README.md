@@ -1,5 +1,5 @@
 # Subscription
-(*.subscription*)
+(*subscription*)
 
 ### Available Operations
 

@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'ai.whylabs.WhyLabs:Songbird:2.0.0'
+implementation 'ai.whylabs.WhyLabs:Songbird:2.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -53,7 +53,7 @@ userSchema = "string";
 ## Available Resources and Operations
 
 
-### [.account](docs/sdks/account/README.md)
+### [account](docs/sdks/account/README.md)
 
 * [createAccountUser](docs/sdks/account/README.md#createaccountuser) - Create an account user
 * [deleteAccountUser](docs/sdks/account/README.md#deleteaccountuser) - Delete account user
@@ -66,7 +66,7 @@ userSchema = "string";
 * [putOrganizationMemberships](docs/sdks/account/README.md#putorganizationmemberships) - Replace the memberships in a specific role and managed organization
 * [updateAccountUser](docs/sdks/account/README.md#updateaccountuser) - Update account user
 
-### [.internal](docs/sdks/internal/README.md)
+### [internal](docs/sdks/internal/README.md)
 
 * [createAccountUser](docs/sdks/internal/README.md#createaccountuser) - Create an account user
 * [createMembership](docs/sdks/internal/README.md#createmembership) - Create a membership for a user, making them apart of an organization. Uses the user's current email address.
@@ -124,12 +124,12 @@ userSchema = "string";
 * [whyLabsSearch](docs/sdks/internal/README.md#whylabssearch) - WhyLabs Search
 * [whyLabsSearchIndexing](docs/sdks/internal/README.md#whylabssearchindexing) - WhyLabs Search Indexing
 
-### [.admin](docs/sdks/admin/README.md)
+### [admin](docs/sdks/admin/README.md)
 
 * [generateReport](docs/sdks/admin/README.md#generatereport) - Generate an admin report
 * [postMonitorConfigValidationJob](docs/sdks/admin/README.md#postmonitorconfigvalidationjob) - Create a monitor config validation job for all configs
 
-### [.databricks](docs/sdks/databricks/README.md)
+### [databricks](docs/sdks/databricks/README.md)
 
 * [getConnection](docs/sdks/databricks/README.md#getconnection) - Get the connection metadata for a given org
 * [listJobs](docs/sdks/databricks/README.md#listjobs) - List all of the jobs in a workspace.
@@ -137,11 +137,11 @@ userSchema = "string";
 * [runJob](docs/sdks/databricks/README.md#runjob) - Run an existing job in a given databricks workspace.
 * [updateConnection](docs/sdks/databricks/README.md#updateconnection) - Update the connection metadata for a given org
 
-### [.featureFlags](docs/sdks/featureflags/README.md)
+### [featureFlags](docs/sdks/featureflags/README.md)
 
 * [getFeatureFlags](docs/sdks/featureflags/README.md#getfeatureflags) - Get feature flags for the specified user/org
 
-### [.membership](docs/sdks/membership/README.md)
+### [membership](docs/sdks/membership/README.md)
 
 * [createMembership](docs/sdks/membership/README.md#createmembership) - Create a membership for a user, making them apart of an organization. Uses the user's current email address.
 * [createOrganizationMembership](docs/sdks/membership/README.md#createorganizationmembership) - Create a membership for a user, making them apart of an organization. Uses the user's current email address.
@@ -156,7 +156,7 @@ userSchema = "string";
 * [updateMembershipByEmail](docs/sdks/membership/README.md#updatemembershipbyemail) - Updates the role in an membership
 * [updateOrganizationMembership](docs/sdks/membership/README.md#updateorganizationmembership) - Updates the role in an membership
 
-### [.notificationSettings](docs/sdks/notificationsettings/README.md)
+### [notificationSettings](docs/sdks/notificationsettings/README.md)
 
 * [addNotificationAction](docs/sdks/notificationsettings/README.md#addnotificationaction) - Add new notification action
 * [deleteNotificationAction](docs/sdks/notificationsettings/README.md#deletenotificationaction) - Delete notification action
@@ -173,7 +173,7 @@ userSchema = "string";
 * [getPagerDutyNotificationActionPayload](docs/sdks/notificationsettings/README.md#getpagerdutynotificationactionpayload) - Get dummy notification action payload
 * [getSlackNotificationActionPayload](docs/sdks/notificationsettings/README.md#getslacknotificationactionpayload) - Get dummy notification action payload
 
-### [.organizations](docs/sdks/organizations/README.md)
+### [organizations](docs/sdks/organizations/README.md)
 
 * [createOrganization](docs/sdks/organizations/README.md#createorganization) - Create an organization
 * [deleteOrganization](docs/sdks/organizations/README.md#deleteorganization) - Delete an org
@@ -185,14 +185,14 @@ userSchema = "string";
 * [~~updateOrg~~](docs/sdks/organizations/README.md#updateorg) - Update an existing organization :warning: **Deprecated**
 * [updateOrganization](docs/sdks/organizations/README.md#updateorganization) - Update an existing organization
 
-### [.apiKey](docs/sdks/apikey/README.md)
+### [apiKey](docs/sdks/apikey/README.md)
 
 * [createApiKey](docs/sdks/apikey/README.md#createapikey) - Generate an API key for a user.
 * [getApiKey](docs/sdks/apikey/README.md#getapikey) - Get an api key by its id
 * [listApiKeys](docs/sdks/apikey/README.md#listapikeys) - List API key metadata for a given organization and user
 * [revokeApiKey](docs/sdks/apikey/README.md#revokeapikey) - Revoke the given API Key, removing its ability to access WhyLabs systems
 
-### [.datasetProfile](docs/sdks/datasetprofile/README.md)
+### [datasetProfile](docs/sdks/datasetprofile/README.md)
 
 * [createReferenceProfile](docs/sdks/datasetprofile/README.md#createreferenceprofile) - Returns data needed to uploading the reference profile
 * [deleteAnalyzerResults](docs/sdks/datasetprofile/README.md#deleteanalyzerresults) - Deletes a set of analyzer results
@@ -204,28 +204,28 @@ userSchema = "string";
 * [listReferenceProfiles](docs/sdks/datasetprofile/README.md#listreferenceprofiles) - Returns a list for reference profiles between the given time range filtered on the upload timestamp
 * [listSegments](docs/sdks/datasetprofile/README.md#listsegments) - Returns a list of segments
 
-### [.datasetMetadata](docs/sdks/datasetmetadata/README.md)
+### [datasetMetadata](docs/sdks/datasetmetadata/README.md)
 
 * [deleteDatasetMetadata](docs/sdks/datasetmetadata/README.md#deletedatasetmetadata) - Delete dataset metadata for the specified dataset
 * [getDatasetMetadata](docs/sdks/datasetmetadata/README.md#getdatasetmetadata) - Get dataset metadata for the specified dataset
 * [putDatasetMetadata](docs/sdks/datasetmetadata/README.md#putdatasetmetadata) - Put dataset metadata for the specified dataset
 
-### [.featureWeights](docs/sdks/featureweights/README.md)
+### [featureWeights](docs/sdks/featureweights/README.md)
 
 * [getColumnWeights](docs/sdks/featureweights/README.md#getcolumnweights) - Get column weights for the specified dataset
 * [putColumnWeights](docs/sdks/featureweights/README.md#putcolumnweights) - Put column weights for the specified dataset
 
-### [.debugEvents](docs/sdks/debugevents/README.md)
+### [debugEvents](docs/sdks/debugevents/README.md)
 
 * [logDebugEvent](docs/sdks/debugevents/README.md#logdebugevent) - Log a debug event
 
-### [.log](docs/sdks/log/README.md)
+### [log](docs/sdks/log/README.md)
 
 * [getProfileObservatoryLink](docs/sdks/log/README.md#getprofileobservatorylink) - Get observatory links for profiles in a given org/model. A max of 3 profiles can be viewed a a time.
 * [logAsync](docs/sdks/log/README.md#logasync) - Like /log, except this api doesn't take the actual profile content. It returns an upload link that can be used to upload the profile to.
 * [logReference](docs/sdks/log/README.md#logreference) - Returns a presigned URL for uploading the reference profile to.
 
-### [.models](docs/sdks/models/README.md)
+### [models](docs/sdks/models/README.md)
 
 * [createModel](docs/sdks/models/README.md#createmodel) - Create a model with a given name and a time period
 * [deactivateModel](docs/sdks/models/README.md#deactivatemodel) - Mark a model as inactive
@@ -241,7 +241,7 @@ userSchema = "string";
 * [putEntitySchemaMetric](docs/sdks/models/README.md#putentityschemametric) - Save the schema of a single metric for a given dataset.
 * [updateModel](docs/sdks/models/README.md#updatemodel) - Update a model's metadata
 
-### [.monitor](docs/sdks/monitor/README.md)
+### [monitor](docs/sdks/monitor/README.md)
 
 * [deleteAnalyzer](docs/sdks/monitor/README.md#deleteanalyzer) - Delete the analyzer config for a given dataset.
 * [deleteMonitor](docs/sdks/monitor/README.md#deletemonitor) - Delete the monitor for a given dataset.
@@ -258,27 +258,27 @@ userSchema = "string";
 * [putRequestMonitorRunConfig](docs/sdks/monitor/README.md#putrequestmonitorrunconfig) - Put the RequestMonitorRun config into S3.
 * [validateMonitorConfigV3](docs/sdks/monitor/README.md#validatemonitorconfigv3) - Validate the monitor config document for a given dataset.
 
-### [.schema](docs/sdks/schema/README.md)
+### [schema](docs/sdks/schema/README.md)
 
 * [getMonitorConfigSchema](docs/sdks/schema/README.md#getmonitorconfigschema) - Get the current supported schema of the monitor configuration
 
-### [.payment](docs/sdks/payment/README.md)
+### [payment](docs/sdks/payment/README.md)
 
 * [stripePaymentEndpoint](docs/sdks/payment/README.md#stripepaymentendpoint) - Endpoint for Stripe payment webhooks
 
-### [.provision](docs/sdks/provision/README.md)
+### [provision](docs/sdks/provision/README.md)
 
 * [provisionAWSMarketplaceNewUser](docs/sdks/provision/README.md#provisionawsmarketplacenewuser) - Create resources for a new user coming from AWS Marketplace
 * [provisionDatabricksConnection](docs/sdks/provision/README.md#provisiondatabricksconnection) - Create resources for a new user coming from Databricks
 * [provisionNewUser](docs/sdks/provision/README.md#provisionnewuser) - Create the resources that a new user needs to use WhyLabs via the website.
 * [registerDatabricksConnection](docs/sdks/provision/README.md#registerdatabricksconnection) - Register databricks metadata, temporarily storing it against a UUID so that it can be used to provision a databricks connection after email authentication
 
-### [.search](docs/sdks/search/README.md)
+### [search](docs/sdks/search/README.md)
 
 * [whyLabsSearch](docs/sdks/search/README.md#whylabssearch) - WhyLabs Search
 * [whyLabsSearchIndexing](docs/sdks/search/README.md#whylabssearchindexing) - WhyLabs Search Indexing
 
-### [.sessions](docs/sdks/sessions/README.md)
+### [sessions](docs/sdks/sessions/README.md)
 
 * [batchCreateReferenceProfileUpload](docs/sdks/sessions/README.md#batchcreatereferenceprofileupload) - Create multiple reference profile uploads for a given session.
 * [claimGuestSession](docs/sdks/sessions/README.md#claimguestsession) - Claim a guest session, copying its model data into another org and expiring the session.
@@ -288,11 +288,11 @@ userSchema = "string";
 * [getSession](docs/sdks/sessions/README.md#getsession) - Get information about a session.
 * [getSessionProfileObservatoryLink](docs/sdks/sessions/README.md#getsessionprofileobservatorylink) - Get observatory links for profiles in a given session. A max of 3 profiles can be viewed a a time.
 
-### [.subscription](docs/sdks/subscription/README.md)
+### [subscription](docs/sdks/subscription/README.md)
 
 * [getOrganizationSubscriptions](docs/sdks/subscription/README.md#getorganizationsubscriptions) - Get organization subscription details
 
-### [.user](docs/sdks/user/README.md)
+### [user](docs/sdks/user/README.md)
 
 * [createUser](docs/sdks/user/README.md#createuser) - Create a user.
 * [getUser](docs/sdks/user/README.md#getuser) - Get a user by their id.

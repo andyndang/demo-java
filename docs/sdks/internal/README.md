@@ -1,5 +1,5 @@
 # Internal
-(*.internal*)
+(*internal*)
 
 ### Available Operations
 

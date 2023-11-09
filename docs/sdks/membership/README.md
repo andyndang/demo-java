@@ -1,5 +1,5 @@
 # Membership
-(*.membership*)
+(*membership*)
 
 ### Available Operations
 

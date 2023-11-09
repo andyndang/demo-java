@@ -1,5 +1,5 @@
 # DatasetProfile
-(*.datasetProfile*)
+(*datasetProfile*)
 
 ### Available Operations
 

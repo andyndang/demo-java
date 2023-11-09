@@ -1,5 +1,5 @@
 # Schema
-(*.schema*)
+(*schema*)
 
 ### Available Operations
 

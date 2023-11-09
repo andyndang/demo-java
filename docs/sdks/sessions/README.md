@@ -1,5 +1,5 @@
 # Sessions
-(*.sessions*)
+(*sessions*)
 
 ### Available Operations
 
