@@ -102,6 +102,14 @@ public class PartiallyUpdateOrganizationRequest {
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=storage_bucket_override")
+    public String storageBucketOverride;
+
+    public PartiallyUpdateOrganizationRequest withStorageBucketOverride(String storageBucketOverride) {
+        this.storageBucketOverride = storageBucketOverride;
+        return this;
+    }
+    
     /**
      * Organization's subscription tier. Should be PAID for real customers
      */

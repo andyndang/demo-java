@@ -6,12 +6,14 @@
 ### Gradle
 
 ```groovy
-implementation 'ai.whylabs.WhyLabs:Songbird:2.0.1'
+implementation 'ai.whylabs.WhyLabs:Songbird:2.0.2'
 ```
 <!-- End SDK Installation -->
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+### Example
+
 ```java
 package hello.world;
 

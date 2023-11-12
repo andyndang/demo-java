@@ -124,6 +124,15 @@ public class OrganizationMetadata {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("storageBucketOverride")
+    public String storageBucketOverride;
+
+    public OrganizationMetadata withStorageBucketOverride(String storageBucketOverride) {
+        this.storageBucketOverride = storageBucketOverride;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscriptionId")
     public String subscriptionId;
 

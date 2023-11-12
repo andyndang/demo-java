@@ -199,6 +199,7 @@ public class Application {
                 pagerDutyKey = "abc-def-ghi-jkl";
                 parentOrgId = "org-123";
                 slackWebhook = "https://hooks.slack.com/services/foo/bar";
+                storageBucketOverride = "https://s3.us-west-2.amazonaws.com/whylabs-public/";
                 subscriptionTier = SubscriptionTier.FREE;
             }};            
 
@@ -1705,6 +1706,7 @@ public class Application {
                 pagerDutyKey = "abc-def-ghi-jkl";
                 parentOrgId = "abc-def-ghi-jkl";
                 slackWebhook = "https://hooks.slack.com/services/foo/bar";
+                storageBucketOverride = "https://s3.us-west-2.amazonaws.com/whylabs-public/";
                 subscriptionTier = SubscriptionTier.PAID;
             }};            
 
@@ -2734,6 +2736,7 @@ public class Application {
                 pagerDutyKey = "abc-def-ghi-jkl";
                 parentOrgId = "org-123";
                 slackWebhook = "https://hooks.slack.com/services/foo/bar";
+                storageBucketOverride = "https://s3.us-west-2.amazonaws.com/whylabs-public/";
                 subscriptionTier = SubscriptionTier.AWS_MARKETPLACE;
             }};            
 
