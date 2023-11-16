@@ -49,11 +49,10 @@ public class User {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.CreateUserResponse res = new ai.whylabs.WhyLabs.models.operations.CreateUserResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.CreateUserResponse res = new ai.whylabs.WhyLabs.models.operations.CreateUserResponse(contentType, httpRes.statusCode(), httpRes) {{
             user = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -89,11 +88,10 @@ public class User {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.GetUserResponse res = new ai.whylabs.WhyLabs.models.operations.GetUserResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.GetUserResponse res = new ai.whylabs.WhyLabs.models.operations.GetUserResponse(contentType, httpRes.statusCode(), httpRes) {{
             user = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -135,11 +133,10 @@ public class User {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.GetUserByEmailResponse res = new ai.whylabs.WhyLabs.models.operations.GetUserByEmailResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.GetUserByEmailResponse res = new ai.whylabs.WhyLabs.models.operations.GetUserByEmailResponse(contentType, httpRes.statusCode(), httpRes) {{
             user = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -180,11 +177,10 @@ public class User {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.UpdateUserResponse res = new ai.whylabs.WhyLabs.models.operations.UpdateUserResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.UpdateUserResponse res = new ai.whylabs.WhyLabs.models.operations.UpdateUserResponse(contentType, httpRes.statusCode(), httpRes) {{
             user = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {

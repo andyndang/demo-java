@@ -50,11 +50,10 @@ public class Search {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.WhyLabsSearchResponse res = new ai.whylabs.WhyLabs.models.operations.WhyLabsSearchResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.WhyLabsSearchResponse res = new ai.whylabs.WhyLabs.models.operations.WhyLabsSearchResponse(contentType, httpRes.statusCode(), httpRes) {{
             searchResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -95,11 +94,10 @@ public class Search {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.WhyLabsSearchIndexingResponse res = new ai.whylabs.WhyLabs.models.operations.WhyLabsSearchIndexingResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.WhyLabsSearchIndexingResponse res = new ai.whylabs.WhyLabs.models.operations.WhyLabsSearchIndexingResponse(contentType, httpRes.statusCode(), httpRes) {{
             response = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {

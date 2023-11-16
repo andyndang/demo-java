@@ -48,11 +48,10 @@ public class Databricks {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.GetConnectionResponse res = new ai.whylabs.WhyLabs.models.operations.GetConnectionResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.GetConnectionResponse res = new ai.whylabs.WhyLabs.models.operations.GetConnectionResponse(contentType, httpRes.statusCode(), httpRes) {{
             getConnectionResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -93,11 +92,10 @@ public class Databricks {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.ListJobsResponse res = new ai.whylabs.WhyLabs.models.operations.ListJobsResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.ListJobsResponse res = new ai.whylabs.WhyLabs.models.operations.ListJobsResponse(contentType, httpRes.statusCode(), httpRes) {{
             listJobsResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -138,11 +136,10 @@ public class Databricks {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.RefreshConnectionResponse res = new ai.whylabs.WhyLabs.models.operations.RefreshConnectionResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.RefreshConnectionResponse res = new ai.whylabs.WhyLabs.models.operations.RefreshConnectionResponse(contentType, httpRes.statusCode(), httpRes) {{
             refreshConnectionByOrgIdResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -183,11 +180,10 @@ public class Databricks {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.RunJobResponse res = new ai.whylabs.WhyLabs.models.operations.RunJobResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.RunJobResponse res = new ai.whylabs.WhyLabs.models.operations.RunJobResponse(contentType, httpRes.statusCode(), httpRes) {{
             runJobResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -228,11 +224,10 @@ public class Databricks {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.UpdateConnectionResponse res = new ai.whylabs.WhyLabs.models.operations.UpdateConnectionResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.UpdateConnectionResponse res = new ai.whylabs.WhyLabs.models.operations.UpdateConnectionResponse(contentType, httpRes.statusCode(), httpRes) {{
             response = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {

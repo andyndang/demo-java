@@ -44,11 +44,10 @@ public class Monitor {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.DeleteAnalyzerResponse res = new ai.whylabs.WhyLabs.models.operations.DeleteAnalyzerResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.DeleteAnalyzerResponse res = new ai.whylabs.WhyLabs.models.operations.DeleteAnalyzerResponse(contentType, httpRes.statusCode(), httpRes) {{
             response = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -84,11 +83,10 @@ public class Monitor {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.DeleteMonitorResponse res = new ai.whylabs.WhyLabs.models.operations.DeleteMonitorResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.DeleteMonitorResponse res = new ai.whylabs.WhyLabs.models.operations.DeleteMonitorResponse(contentType, httpRes.statusCode(), httpRes) {{
             response = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -124,11 +122,10 @@ public class Monitor {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.GetAnalyzerResponse res = new ai.whylabs.WhyLabs.models.operations.GetAnalyzerResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.GetAnalyzerResponse res = new ai.whylabs.WhyLabs.models.operations.GetAnalyzerResponse(contentType, httpRes.statusCode(), httpRes) {{
             res = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -163,11 +160,10 @@ public class Monitor {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.GetMonitorResponse res = new ai.whylabs.WhyLabs.models.operations.GetMonitorResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.GetMonitorResponse res = new ai.whylabs.WhyLabs.models.operations.GetMonitorResponse(contentType, httpRes.statusCode(), httpRes) {{
             res = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -208,11 +204,10 @@ public class Monitor {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.GetMonitorConfigV3Response res = new ai.whylabs.WhyLabs.models.operations.GetMonitorConfigV3Response(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.GetMonitorConfigV3Response res = new ai.whylabs.WhyLabs.models.operations.GetMonitorConfigV3Response(contentType, httpRes.statusCode(), httpRes) {{
             res = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -247,11 +242,10 @@ public class Monitor {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.GetMonitorConfigV3VersionResponse res = new ai.whylabs.WhyLabs.models.operations.GetMonitorConfigV3VersionResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.GetMonitorConfigV3VersionResponse res = new ai.whylabs.WhyLabs.models.operations.GetMonitorConfigV3VersionResponse(contentType, httpRes.statusCode(), httpRes) {{
             res = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -286,11 +280,10 @@ public class Monitor {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.ListConstraintsResponse res = new ai.whylabs.WhyLabs.models.operations.ListConstraintsResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.ListConstraintsResponse res = new ai.whylabs.WhyLabs.models.operations.ListConstraintsResponse(contentType, httpRes.statusCode(), httpRes) {{
             strings = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -326,11 +319,10 @@ public class Monitor {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.ListMonitorConfigV3VersionsResponse res = new ai.whylabs.WhyLabs.models.operations.ListMonitorConfigV3VersionsResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.ListMonitorConfigV3VersionsResponse res = new ai.whylabs.WhyLabs.models.operations.ListMonitorConfigV3VersionsResponse(contentType, httpRes.statusCode(), httpRes) {{
             classes = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -371,11 +363,10 @@ public class Monitor {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.PatchMonitorConfigV3Response res = new ai.whylabs.WhyLabs.models.operations.PatchMonitorConfigV3Response(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.PatchMonitorConfigV3Response res = new ai.whylabs.WhyLabs.models.operations.PatchMonitorConfigV3Response(contentType, httpRes.statusCode(), httpRes) {{
             response = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -416,11 +407,10 @@ public class Monitor {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.PutAnalyzerResponse res = new ai.whylabs.WhyLabs.models.operations.PutAnalyzerResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.PutAnalyzerResponse res = new ai.whylabs.WhyLabs.models.operations.PutAnalyzerResponse(contentType, httpRes.statusCode(), httpRes) {{
             response = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -461,11 +451,10 @@ public class Monitor {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.PutMonitorResponse res = new ai.whylabs.WhyLabs.models.operations.PutMonitorResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.PutMonitorResponse res = new ai.whylabs.WhyLabs.models.operations.PutMonitorResponse(contentType, httpRes.statusCode(), httpRes) {{
             response = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -506,11 +495,10 @@ public class Monitor {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.PutMonitorConfigV3Response res = new ai.whylabs.WhyLabs.models.operations.PutMonitorConfigV3Response(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.PutMonitorConfigV3Response res = new ai.whylabs.WhyLabs.models.operations.PutMonitorConfigV3Response(contentType, httpRes.statusCode(), httpRes) {{
             response = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -551,11 +539,10 @@ public class Monitor {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.PutRequestMonitorRunConfigResponse res = new ai.whylabs.WhyLabs.models.operations.PutRequestMonitorRunConfigResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.PutRequestMonitorRunConfigResponse res = new ai.whylabs.WhyLabs.models.operations.PutRequestMonitorRunConfigResponse(contentType, httpRes.statusCode(), httpRes) {{
             res = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -601,11 +588,10 @@ public class Monitor {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.ValidateMonitorConfigV3Response res = new ai.whylabs.WhyLabs.models.operations.ValidateMonitorConfigV3Response(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.ValidateMonitorConfigV3Response res = new ai.whylabs.WhyLabs.models.operations.ValidateMonitorConfigV3Response(contentType, httpRes.statusCode(), httpRes) {{
             response = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {

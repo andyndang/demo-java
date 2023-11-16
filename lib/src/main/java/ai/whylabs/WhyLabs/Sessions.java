@@ -49,11 +49,10 @@ public class Sessions {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.BatchCreateReferenceProfileUploadResponse res = new ai.whylabs.WhyLabs.models.operations.BatchCreateReferenceProfileUploadResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.BatchCreateReferenceProfileUploadResponse res = new ai.whylabs.WhyLabs.models.operations.BatchCreateReferenceProfileUploadResponse(contentType, httpRes.statusCode(), httpRes) {{
             batchLogSessionReferenceResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -95,11 +94,10 @@ public class Sessions {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.ClaimGuestSessionResponse res = new ai.whylabs.WhyLabs.models.operations.ClaimGuestSessionResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.ClaimGuestSessionResponse res = new ai.whylabs.WhyLabs.models.operations.ClaimGuestSessionResponse(contentType, httpRes.statusCode(), httpRes) {{
             void_ = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -140,11 +138,10 @@ public class Sessions {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.CreateDatasetProfileUploadResponse res = new ai.whylabs.WhyLabs.models.operations.CreateDatasetProfileUploadResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.CreateDatasetProfileUploadResponse res = new ai.whylabs.WhyLabs.models.operations.CreateDatasetProfileUploadResponse(contentType, httpRes.statusCode(), httpRes) {{
             createDatasetProfileUploadResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -185,11 +182,10 @@ public class Sessions {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.CreateReferenceProfileUploadResponse res = new ai.whylabs.WhyLabs.models.operations.CreateReferenceProfileUploadResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.CreateReferenceProfileUploadResponse res = new ai.whylabs.WhyLabs.models.operations.CreateReferenceProfileUploadResponse(contentType, httpRes.statusCode(), httpRes) {{
             logSessionReferenceResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -230,11 +226,10 @@ public class Sessions {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.CreateSessionResponse res = new ai.whylabs.WhyLabs.models.operations.CreateSessionResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.CreateSessionResponse res = new ai.whylabs.WhyLabs.models.operations.CreateSessionResponse(contentType, httpRes.statusCode(), httpRes) {{
             createSessionResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -270,11 +265,10 @@ public class Sessions {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.GetSessionResponse res = new ai.whylabs.WhyLabs.models.operations.GetSessionResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.GetSessionResponse res = new ai.whylabs.WhyLabs.models.operations.GetSessionResponse(contentType, httpRes.statusCode(), httpRes) {{
             getSessionResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -315,11 +309,10 @@ public class Sessions {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.GetSessionProfileObservatoryLinkResponse res = new ai.whylabs.WhyLabs.models.operations.GetSessionProfileObservatoryLinkResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.GetSessionProfileObservatoryLinkResponse res = new ai.whylabs.WhyLabs.models.operations.GetSessionProfileObservatoryLinkResponse(contentType, httpRes.statusCode(), httpRes) {{
             getProfileObservatoryLinkResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {

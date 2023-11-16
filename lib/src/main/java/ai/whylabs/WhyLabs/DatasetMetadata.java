@@ -43,11 +43,10 @@ public class DatasetMetadata {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.DeleteDatasetMetadataResponse res = new ai.whylabs.WhyLabs.models.operations.DeleteDatasetMetadataResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.DeleteDatasetMetadataResponse res = new ai.whylabs.WhyLabs.models.operations.DeleteDatasetMetadataResponse(contentType, httpRes.statusCode(), httpRes) {{
             response = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -83,11 +82,10 @@ public class DatasetMetadata {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.GetDatasetMetadataResponse res = new ai.whylabs.WhyLabs.models.operations.GetDatasetMetadataResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.GetDatasetMetadataResponse res = new ai.whylabs.WhyLabs.models.operations.GetDatasetMetadataResponse(contentType, httpRes.statusCode(), httpRes) {{
             getDatasetMetadataResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -128,11 +126,10 @@ public class DatasetMetadata {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.PutDatasetMetadataResponse res = new ai.whylabs.WhyLabs.models.operations.PutDatasetMetadataResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.PutDatasetMetadataResponse res = new ai.whylabs.WhyLabs.models.operations.PutDatasetMetadataResponse(contentType, httpRes.statusCode(), httpRes) {{
             response = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {

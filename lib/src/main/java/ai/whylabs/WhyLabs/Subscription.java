@@ -42,11 +42,10 @@ public class Subscription {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.GetOrganizationSubscriptionsResponse res = new ai.whylabs.WhyLabs.models.operations.GetOrganizationSubscriptionsResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.GetOrganizationSubscriptionsResponse res = new ai.whylabs.WhyLabs.models.operations.GetOrganizationSubscriptionsResponse(contentType, httpRes.statusCode(), httpRes) {{
             classes = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {

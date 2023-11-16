@@ -43,11 +43,10 @@ public class FeatureWeights {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.GetColumnWeightsResponse res = new ai.whylabs.WhyLabs.models.operations.GetColumnWeightsResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.GetColumnWeightsResponse res = new ai.whylabs.WhyLabs.models.operations.GetColumnWeightsResponse(contentType, httpRes.statusCode(), httpRes) {{
             entityWeightRecord = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -88,11 +87,10 @@ public class FeatureWeights {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.PutColumnWeightsResponse res = new ai.whylabs.WhyLabs.models.operations.PutColumnWeightsResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.PutColumnWeightsResponse res = new ai.whylabs.WhyLabs.models.operations.PutColumnWeightsResponse(contentType, httpRes.statusCode(), httpRes) {{
             response = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {

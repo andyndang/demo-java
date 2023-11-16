@@ -49,11 +49,10 @@ public class ApiKey {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.CreateApiKeyResponse res = new ai.whylabs.WhyLabs.models.operations.CreateApiKeyResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.CreateApiKeyResponse res = new ai.whylabs.WhyLabs.models.operations.CreateApiKeyResponse(contentType, httpRes.statusCode(), httpRes) {{
             userApiKey = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -89,11 +88,10 @@ public class ApiKey {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.GetApiKeyResponse res = new ai.whylabs.WhyLabs.models.operations.GetApiKeyResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.GetApiKeyResponse res = new ai.whylabs.WhyLabs.models.operations.GetApiKeyResponse(contentType, httpRes.statusCode(), httpRes) {{
             userApiKeyResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -135,11 +133,10 @@ public class ApiKey {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.ListApiKeysResponse res = new ai.whylabs.WhyLabs.models.operations.ListApiKeysResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.ListApiKeysResponse res = new ai.whylabs.WhyLabs.models.operations.ListApiKeysResponse(contentType, httpRes.statusCode(), httpRes) {{
             listUserApiKeys = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -181,11 +178,10 @@ public class ApiKey {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.RevokeApiKeyResponse res = new ai.whylabs.WhyLabs.models.operations.RevokeApiKeyResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.RevokeApiKeyResponse res = new ai.whylabs.WhyLabs.models.operations.RevokeApiKeyResponse(contentType, httpRes.statusCode(), httpRes) {{
             userApiKey = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {

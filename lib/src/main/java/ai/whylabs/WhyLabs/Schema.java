@@ -40,11 +40,10 @@ public class Schema {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.GetMonitorConfigSchemaResponse res = new ai.whylabs.WhyLabs.models.operations.GetMonitorConfigSchemaResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.GetMonitorConfigSchemaResponse res = new ai.whylabs.WhyLabs.models.operations.GetMonitorConfigSchemaResponse(contentType, httpRes.statusCode(), httpRes) {{
             res = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {

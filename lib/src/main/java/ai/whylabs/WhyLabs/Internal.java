@@ -49,11 +49,10 @@ public class Internal {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.CreateAccountUserResponse res = new ai.whylabs.WhyLabs.models.operations.CreateAccountUserResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.CreateAccountUserResponse res = new ai.whylabs.WhyLabs.models.operations.CreateAccountUserResponse(contentType, httpRes.statusCode(), httpRes) {{
             accountUser = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -94,11 +93,10 @@ public class Internal {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.CreateMembershipResponse res = new ai.whylabs.WhyLabs.models.operations.CreateMembershipResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.CreateMembershipResponse res = new ai.whylabs.WhyLabs.models.operations.CreateMembershipResponse(contentType, httpRes.statusCode(), httpRes) {{
             membershipMetadata = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -140,11 +138,10 @@ public class Internal {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.CreateOrganizationResponse res = new ai.whylabs.WhyLabs.models.operations.CreateOrganizationResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.CreateOrganizationResponse res = new ai.whylabs.WhyLabs.models.operations.CreateOrganizationResponse(contentType, httpRes.statusCode(), httpRes) {{
             organizationSummary = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -185,11 +182,10 @@ public class Internal {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.CreateUserResponse res = new ai.whylabs.WhyLabs.models.operations.CreateUserResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.CreateUserResponse res = new ai.whylabs.WhyLabs.models.operations.CreateUserResponse(contentType, httpRes.statusCode(), httpRes) {{
             user = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -225,11 +221,10 @@ public class Internal {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.DeleteAccountUserResponse res = new ai.whylabs.WhyLabs.models.operations.DeleteAccountUserResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.DeleteAccountUserResponse res = new ai.whylabs.WhyLabs.models.operations.DeleteAccountUserResponse(contentType, httpRes.statusCode(), httpRes) {{
             response = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -265,11 +260,10 @@ public class Internal {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.DeleteOrganizationResponse res = new ai.whylabs.WhyLabs.models.operations.DeleteOrganizationResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.DeleteOrganizationResponse res = new ai.whylabs.WhyLabs.models.operations.DeleteOrganizationResponse(contentType, httpRes.statusCode(), httpRes) {{
             response = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -311,11 +305,10 @@ public class Internal {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.GenerateReportResponse res = new ai.whylabs.WhyLabs.models.operations.GenerateReportResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.GenerateReportResponse res = new ai.whylabs.WhyLabs.models.operations.GenerateReportResponse(contentType, httpRes.statusCode(), httpRes) {{
             adminReportResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -351,11 +344,10 @@ public class Internal {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.GetAWSMarketplaceMetadataResponse res = new ai.whylabs.WhyLabs.models.operations.GetAWSMarketplaceMetadataResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.GetAWSMarketplaceMetadataResponse res = new ai.whylabs.WhyLabs.models.operations.GetAWSMarketplaceMetadataResponse(contentType, httpRes.statusCode(), httpRes) {{
             getMarketplaceMetadataResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -397,11 +389,10 @@ public class Internal {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.GetAccountMembershipsResponse res = new ai.whylabs.WhyLabs.models.operations.GetAccountMembershipsResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.GetAccountMembershipsResponse res = new ai.whylabs.WhyLabs.models.operations.GetAccountMembershipsResponse(contentType, httpRes.statusCode(), httpRes) {{
             getAccountMembershipsResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -443,11 +434,10 @@ public class Internal {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.GetAccountUserByEmailResponse res = new ai.whylabs.WhyLabs.models.operations.GetAccountUserByEmailResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.GetAccountUserByEmailResponse res = new ai.whylabs.WhyLabs.models.operations.GetAccountUserByEmailResponse(contentType, httpRes.statusCode(), httpRes) {{
             accountUser = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -489,11 +479,10 @@ public class Internal {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.GetAccountUserByIdResponse res = new ai.whylabs.WhyLabs.models.operations.GetAccountUserByIdResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.GetAccountUserByIdResponse res = new ai.whylabs.WhyLabs.models.operations.GetAccountUserByIdResponse(contentType, httpRes.statusCode(), httpRes) {{
             accountUser = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -529,11 +518,10 @@ public class Internal {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.GetApiKeyResponse res = new ai.whylabs.WhyLabs.models.operations.GetApiKeyResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.GetApiKeyResponse res = new ai.whylabs.WhyLabs.models.operations.GetApiKeyResponse(contentType, httpRes.statusCode(), httpRes) {{
             userApiKeyResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -574,11 +562,10 @@ public class Internal {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.GetConnectionResponse res = new ai.whylabs.WhyLabs.models.operations.GetConnectionResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.GetConnectionResponse res = new ai.whylabs.WhyLabs.models.operations.GetConnectionResponse(contentType, httpRes.statusCode(), httpRes) {{
             getConnectionResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -620,11 +607,10 @@ public class Internal {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.GetDefaultMembershipForEmailResponse res = new ai.whylabs.WhyLabs.models.operations.GetDefaultMembershipForEmailResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.GetDefaultMembershipForEmailResponse res = new ai.whylabs.WhyLabs.models.operations.GetDefaultMembershipForEmailResponse(contentType, httpRes.statusCode(), httpRes) {{
             getDefaultMembershipResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -666,11 +652,10 @@ public class Internal {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.GetFeatureFlagsResponse res = new ai.whylabs.WhyLabs.models.operations.GetFeatureFlagsResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.GetFeatureFlagsResponse res = new ai.whylabs.WhyLabs.models.operations.GetFeatureFlagsResponse(contentType, httpRes.statusCode(), httpRes) {{
             featureFlags = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -706,11 +691,10 @@ public class Internal {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.GetMembershipsResponse res = new ai.whylabs.WhyLabs.models.operations.GetMembershipsResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.GetMembershipsResponse res = new ai.whylabs.WhyLabs.models.operations.GetMembershipsResponse(contentType, httpRes.statusCode(), httpRes) {{
             getMembershipsResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -752,11 +736,10 @@ public class Internal {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.GetMembershipsByEmailResponse res = new ai.whylabs.WhyLabs.models.operations.GetMembershipsByEmailResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.GetMembershipsByEmailResponse res = new ai.whylabs.WhyLabs.models.operations.GetMembershipsByEmailResponse(contentType, httpRes.statusCode(), httpRes) {{
             getMembershipsResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -792,11 +775,10 @@ public class Internal {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.GetMembershipsByOrgResponse res = new ai.whylabs.WhyLabs.models.operations.GetMembershipsByOrgResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.GetMembershipsByOrgResponse res = new ai.whylabs.WhyLabs.models.operations.GetMembershipsByOrgResponse(contentType, httpRes.statusCode(), httpRes) {{
             getMembershipsResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -832,11 +814,10 @@ public class Internal {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.GetMonitorConfigV3VersionResponse res = new ai.whylabs.WhyLabs.models.operations.GetMonitorConfigV3VersionResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.GetMonitorConfigV3VersionResponse res = new ai.whylabs.WhyLabs.models.operations.GetMonitorConfigV3VersionResponse(contentType, httpRes.statusCode(), httpRes) {{
             res = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -871,11 +852,10 @@ public class Internal {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.GetNotificationSettingsResponse res = new ai.whylabs.WhyLabs.models.operations.GetNotificationSettingsResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.GetNotificationSettingsResponse res = new ai.whylabs.WhyLabs.models.operations.GetNotificationSettingsResponse(contentType, httpRes.statusCode(), httpRes) {{
             getNotificationSettingsResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -911,11 +891,10 @@ public class Internal {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.GetOrganizationResponse res = new ai.whylabs.WhyLabs.models.operations.GetOrganizationResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.GetOrganizationResponse res = new ai.whylabs.WhyLabs.models.operations.GetOrganizationResponse(contentType, httpRes.statusCode(), httpRes) {{
             organizationMetadata = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -951,11 +930,10 @@ public class Internal {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.GetOrganizationSubscriptionsResponse res = new ai.whylabs.WhyLabs.models.operations.GetOrganizationSubscriptionsResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.GetOrganizationSubscriptionsResponse res = new ai.whylabs.WhyLabs.models.operations.GetOrganizationSubscriptionsResponse(contentType, httpRes.statusCode(), httpRes) {{
             classes = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -991,11 +969,10 @@ public class Internal {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.GetUserResponse res = new ai.whylabs.WhyLabs.models.operations.GetUserResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.GetUserResponse res = new ai.whylabs.WhyLabs.models.operations.GetUserResponse(contentType, httpRes.statusCode(), httpRes) {{
             user = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -1037,11 +1014,10 @@ public class Internal {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.GetUserByEmailResponse res = new ai.whylabs.WhyLabs.models.operations.GetUserByEmailResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.GetUserByEmailResponse res = new ai.whylabs.WhyLabs.models.operations.GetUserByEmailResponse(contentType, httpRes.statusCode(), httpRes) {{
             user = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -1084,11 +1060,10 @@ public class Internal {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.HideSegmentsResponse res = new ai.whylabs.WhyLabs.models.operations.HideSegmentsResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.HideSegmentsResponse res = new ai.whylabs.WhyLabs.models.operations.HideSegmentsResponse(contentType, httpRes.statusCode(), httpRes) {{
             response = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -1124,11 +1099,10 @@ public class Internal {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.ListAccountUsersResponse res = new ai.whylabs.WhyLabs.models.operations.ListAccountUsersResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.ListAccountUsersResponse res = new ai.whylabs.WhyLabs.models.operations.ListAccountUsersResponse(contentType, httpRes.statusCode(), httpRes) {{
             classes = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -1170,11 +1144,10 @@ public class Internal {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.ListApiKeysResponse res = new ai.whylabs.WhyLabs.models.operations.ListApiKeysResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.ListApiKeysResponse res = new ai.whylabs.WhyLabs.models.operations.ListApiKeysResponse(contentType, httpRes.statusCode(), httpRes) {{
             listUserApiKeys = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -1215,11 +1188,10 @@ public class Internal {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.ListJobsResponse res = new ai.whylabs.WhyLabs.models.operations.ListJobsResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.ListJobsResponse res = new ai.whylabs.WhyLabs.models.operations.ListJobsResponse(contentType, httpRes.statusCode(), httpRes) {{
             listJobsResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -1255,11 +1227,10 @@ public class Internal {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.ListManagedOrganizationsResponse res = new ai.whylabs.WhyLabs.models.operations.ListManagedOrganizationsResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.ListManagedOrganizationsResponse res = new ai.whylabs.WhyLabs.models.operations.ListManagedOrganizationsResponse(contentType, httpRes.statusCode(), httpRes) {{
             classes = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -1295,11 +1266,10 @@ public class Internal {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.ListMonitorConfigV3VersionsResponse res = new ai.whylabs.WhyLabs.models.operations.ListMonitorConfigV3VersionsResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.ListMonitorConfigV3VersionsResponse res = new ai.whylabs.WhyLabs.models.operations.ListMonitorConfigV3VersionsResponse(contentType, httpRes.statusCode(), httpRes) {{
             classes = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -1334,11 +1304,10 @@ public class Internal {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.ListOrganizationsResponse res = new ai.whylabs.WhyLabs.models.operations.ListOrganizationsResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.ListOrganizationsResponse res = new ai.whylabs.WhyLabs.models.operations.ListOrganizationsResponse(contentType, httpRes.statusCode(), httpRes) {{
             listOrganizationsResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -1387,11 +1356,10 @@ public class Internal {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.PartiallyUpdateOrgResponse res = new ai.whylabs.WhyLabs.models.operations.PartiallyUpdateOrgResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.PartiallyUpdateOrgResponse res = new ai.whylabs.WhyLabs.models.operations.PartiallyUpdateOrgResponse(contentType, httpRes.statusCode(), httpRes) {{
             organizationSummary = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -1433,11 +1401,10 @@ public class Internal {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.PartiallyUpdateOrganizationResponse res = new ai.whylabs.WhyLabs.models.operations.PartiallyUpdateOrganizationResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.PartiallyUpdateOrganizationResponse res = new ai.whylabs.WhyLabs.models.operations.PartiallyUpdateOrganizationResponse(contentType, httpRes.statusCode(), httpRes) {{
             organizationSummary = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -1484,11 +1451,10 @@ public class Internal {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.PatchOrganizationMembershipsResponse res = new ai.whylabs.WhyLabs.models.operations.PatchOrganizationMembershipsResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.PatchOrganizationMembershipsResponse res = new ai.whylabs.WhyLabs.models.operations.PatchOrganizationMembershipsResponse(contentType, httpRes.statusCode(), httpRes) {{
             statusResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -1523,11 +1489,10 @@ public class Internal {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.PostMonitorConfigValidationJobResponse res = new ai.whylabs.WhyLabs.models.operations.PostMonitorConfigValidationJobResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.PostMonitorConfigValidationJobResponse res = new ai.whylabs.WhyLabs.models.operations.PostMonitorConfigValidationJobResponse(contentType, httpRes.statusCode(), httpRes) {{
             void_ = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -1568,11 +1533,10 @@ public class Internal {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.ProvisionAWSMarketplaceNewUserResponse res = new ai.whylabs.WhyLabs.models.operations.ProvisionAWSMarketplaceNewUserResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.ProvisionAWSMarketplaceNewUserResponse res = new ai.whylabs.WhyLabs.models.operations.ProvisionAWSMarketplaceNewUserResponse(contentType, httpRes.statusCode(), httpRes) {{
             provisionNewAWSMarketplaceUserResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -1613,11 +1577,10 @@ public class Internal {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.ProvisionDatabricksConnectionResponse res = new ai.whylabs.WhyLabs.models.operations.ProvisionDatabricksConnectionResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.ProvisionDatabricksConnectionResponse res = new ai.whylabs.WhyLabs.models.operations.ProvisionDatabricksConnectionResponse(contentType, httpRes.statusCode(), httpRes) {{
             provisionDatabricksConnectionResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -1658,11 +1621,10 @@ public class Internal {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.ProvisionNewUserResponse res = new ai.whylabs.WhyLabs.models.operations.ProvisionNewUserResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.ProvisionNewUserResponse res = new ai.whylabs.WhyLabs.models.operations.ProvisionNewUserResponse(contentType, httpRes.statusCode(), httpRes) {{
             provisionNewUserResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -1709,11 +1671,10 @@ public class Internal {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.PutOrganizationMembershipsResponse res = new ai.whylabs.WhyLabs.models.operations.PutOrganizationMembershipsResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.PutOrganizationMembershipsResponse res = new ai.whylabs.WhyLabs.models.operations.PutOrganizationMembershipsResponse(contentType, httpRes.statusCode(), httpRes) {{
             statusResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -1754,11 +1715,10 @@ public class Internal {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.PutRequestMonitorRunConfigResponse res = new ai.whylabs.WhyLabs.models.operations.PutRequestMonitorRunConfigResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.PutRequestMonitorRunConfigResponse res = new ai.whylabs.WhyLabs.models.operations.PutRequestMonitorRunConfigResponse(contentType, httpRes.statusCode(), httpRes) {{
             res = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -1798,11 +1758,10 @@ public class Internal {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.RefreshConnectionResponse res = new ai.whylabs.WhyLabs.models.operations.RefreshConnectionResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.RefreshConnectionResponse res = new ai.whylabs.WhyLabs.models.operations.RefreshConnectionResponse(contentType, httpRes.statusCode(), httpRes) {{
             refreshConnectionByOrgIdResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -1843,11 +1802,10 @@ public class Internal {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.RegisterDatabricksConnectionResponse res = new ai.whylabs.WhyLabs.models.operations.RegisterDatabricksConnectionResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.RegisterDatabricksConnectionResponse res = new ai.whylabs.WhyLabs.models.operations.RegisterDatabricksConnectionResponse(contentType, httpRes.statusCode(), httpRes) {{
             registerDatabricksConnectionResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -1888,11 +1846,10 @@ public class Internal {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.RemoveMembershipByEmailResponse res = new ai.whylabs.WhyLabs.models.operations.RemoveMembershipByEmailResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.RemoveMembershipByEmailResponse res = new ai.whylabs.WhyLabs.models.operations.RemoveMembershipByEmailResponse(contentType, httpRes.statusCode(), httpRes) {{
             response = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -1933,11 +1890,10 @@ public class Internal {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.RunJobResponse res = new ai.whylabs.WhyLabs.models.operations.RunJobResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.RunJobResponse res = new ai.whylabs.WhyLabs.models.operations.RunJobResponse(contentType, httpRes.statusCode(), httpRes) {{
             runJobResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -1978,11 +1934,10 @@ public class Internal {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.SetDefaultMembershipResponse res = new ai.whylabs.WhyLabs.models.operations.SetDefaultMembershipResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.SetDefaultMembershipResponse res = new ai.whylabs.WhyLabs.models.operations.SetDefaultMembershipResponse(contentType, httpRes.statusCode(), httpRes) {{
             response = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -2023,11 +1978,10 @@ public class Internal {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.StripePaymentEndpointResponse res = new ai.whylabs.WhyLabs.models.operations.StripePaymentEndpointResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.StripePaymentEndpointResponse res = new ai.whylabs.WhyLabs.models.operations.StripePaymentEndpointResponse(contentType, httpRes.statusCode(), httpRes) {{
             response = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -2074,11 +2028,10 @@ public class Internal {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.UpdateAccountUserResponse res = new ai.whylabs.WhyLabs.models.operations.UpdateAccountUserResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.UpdateAccountUserResponse res = new ai.whylabs.WhyLabs.models.operations.UpdateAccountUserResponse(contentType, httpRes.statusCode(), httpRes) {{
             accountUser = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -2119,11 +2072,10 @@ public class Internal {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.UpdateConnectionResponse res = new ai.whylabs.WhyLabs.models.operations.UpdateConnectionResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.UpdateConnectionResponse res = new ai.whylabs.WhyLabs.models.operations.UpdateConnectionResponse(contentType, httpRes.statusCode(), httpRes) {{
             response = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -2164,11 +2116,10 @@ public class Internal {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.UpdateMembershipByEmailResponse res = new ai.whylabs.WhyLabs.models.operations.UpdateMembershipByEmailResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.UpdateMembershipByEmailResponse res = new ai.whylabs.WhyLabs.models.operations.UpdateMembershipByEmailResponse(contentType, httpRes.statusCode(), httpRes) {{
             membershipMetadata = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -2209,11 +2160,10 @@ public class Internal {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.UpdateNotificationSettingsResponse res = new ai.whylabs.WhyLabs.models.operations.UpdateNotificationSettingsResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.UpdateNotificationSettingsResponse res = new ai.whylabs.WhyLabs.models.operations.UpdateNotificationSettingsResponse(contentType, httpRes.statusCode(), httpRes) {{
             notificationSettings = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -2262,11 +2212,10 @@ public class Internal {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.UpdateOrgResponse res = new ai.whylabs.WhyLabs.models.operations.UpdateOrgResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.UpdateOrgResponse res = new ai.whylabs.WhyLabs.models.operations.UpdateOrgResponse(contentType, httpRes.statusCode(), httpRes) {{
             organizationSummary = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -2308,11 +2257,10 @@ public class Internal {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.UpdateOrganizationResponse res = new ai.whylabs.WhyLabs.models.operations.UpdateOrganizationResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.UpdateOrganizationResponse res = new ai.whylabs.WhyLabs.models.operations.UpdateOrganizationResponse(contentType, httpRes.statusCode(), httpRes) {{
             organizationSummary = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -2353,11 +2301,10 @@ public class Internal {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.UpdateUserResponse res = new ai.whylabs.WhyLabs.models.operations.UpdateUserResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.UpdateUserResponse res = new ai.whylabs.WhyLabs.models.operations.UpdateUserResponse(contentType, httpRes.statusCode(), httpRes) {{
             user = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -2399,11 +2346,10 @@ public class Internal {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.WhyLabsSearchResponse res = new ai.whylabs.WhyLabs.models.operations.WhyLabsSearchResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.WhyLabsSearchResponse res = new ai.whylabs.WhyLabs.models.operations.WhyLabsSearchResponse(contentType, httpRes.statusCode(), httpRes) {{
             searchResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -2444,11 +2390,10 @@ public class Internal {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.WhyLabsSearchIndexingResponse res = new ai.whylabs.WhyLabs.models.operations.WhyLabsSearchIndexingResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.WhyLabsSearchIndexingResponse res = new ai.whylabs.WhyLabs.models.operations.WhyLabsSearchIndexingResponse(contentType, httpRes.statusCode(), httpRes) {{
             response = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {

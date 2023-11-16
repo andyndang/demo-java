@@ -52,11 +52,10 @@ public class DatasetProfile {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.CreateReferenceProfileResponse res = new ai.whylabs.WhyLabs.models.operations.CreateReferenceProfileResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.CreateReferenceProfileResponse res = new ai.whylabs.WhyLabs.models.operations.CreateReferenceProfileResponse(contentType, httpRes.statusCode(), httpRes) {{
             createReferenceProfileResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -100,11 +99,10 @@ public class DatasetProfile {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.DeleteAnalyzerResultsResponse res = new ai.whylabs.WhyLabs.models.operations.DeleteAnalyzerResultsResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.DeleteAnalyzerResultsResponse res = new ai.whylabs.WhyLabs.models.operations.DeleteAnalyzerResultsResponse(contentType, httpRes.statusCode(), httpRes) {{
             deleteAnalyzerResultsResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -148,11 +146,10 @@ public class DatasetProfile {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.DeleteDatasetProfilesResponse res = new ai.whylabs.WhyLabs.models.operations.DeleteDatasetProfilesResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.DeleteDatasetProfilesResponse res = new ai.whylabs.WhyLabs.models.operations.DeleteDatasetProfilesResponse(contentType, httpRes.statusCode(), httpRes) {{
             deleteDatasetProfilesResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -190,11 +187,10 @@ public class DatasetProfile {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.DeleteReferenceProfileResponse res = new ai.whylabs.WhyLabs.models.operations.DeleteReferenceProfileResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.DeleteReferenceProfileResponse res = new ai.whylabs.WhyLabs.models.operations.DeleteReferenceProfileResponse(contentType, httpRes.statusCode(), httpRes) {{
             boolean_ = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -238,11 +234,10 @@ public class DatasetProfile {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.GetProfileTracesResponse res = new ai.whylabs.WhyLabs.models.operations.GetProfileTracesResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.GetProfileTracesResponse res = new ai.whylabs.WhyLabs.models.operations.GetProfileTracesResponse(contentType, httpRes.statusCode(), httpRes) {{
             profileTracesResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -280,11 +275,10 @@ public class DatasetProfile {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.GetReferenceProfileResponse res = new ai.whylabs.WhyLabs.models.operations.GetReferenceProfileResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.GetReferenceProfileResponse res = new ai.whylabs.WhyLabs.models.operations.GetReferenceProfileResponse(contentType, httpRes.statusCode(), httpRes) {{
             referenceProfileItemResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -327,11 +321,10 @@ public class DatasetProfile {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.HideSegmentsResponse res = new ai.whylabs.WhyLabs.models.operations.HideSegmentsResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.HideSegmentsResponse res = new ai.whylabs.WhyLabs.models.operations.HideSegmentsResponse(contentType, httpRes.statusCode(), httpRes) {{
             response = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -375,11 +368,10 @@ public class DatasetProfile {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.ListReferenceProfilesResponse res = new ai.whylabs.WhyLabs.models.operations.ListReferenceProfilesResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.ListReferenceProfilesResponse res = new ai.whylabs.WhyLabs.models.operations.ListReferenceProfilesResponse(contentType, httpRes.statusCode(), httpRes) {{
             classes = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -417,11 +409,10 @@ public class DatasetProfile {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.ListSegmentsResponse res = new ai.whylabs.WhyLabs.models.operations.ListSegmentsResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.ListSegmentsResponse res = new ai.whylabs.WhyLabs.models.operations.ListSegmentsResponse(contentType, httpRes.statusCode(), httpRes) {{
             segmentListResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {

@@ -49,11 +49,10 @@ public class NotificationSettings {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.AddNotificationActionResponse res = new ai.whylabs.WhyLabs.models.operations.AddNotificationActionResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.AddNotificationActionResponse res = new ai.whylabs.WhyLabs.models.operations.AddNotificationActionResponse(contentType, httpRes.statusCode(), httpRes) {{
             void_ = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -89,11 +88,10 @@ public class NotificationSettings {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.DeleteNotificationActionResponse res = new ai.whylabs.WhyLabs.models.operations.DeleteNotificationActionResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.DeleteNotificationActionResponse res = new ai.whylabs.WhyLabs.models.operations.DeleteNotificationActionResponse(contentType, httpRes.statusCode(), httpRes) {{
             void_ = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -129,11 +127,10 @@ public class NotificationSettings {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.DisableNotificationActionResponse res = new ai.whylabs.WhyLabs.models.operations.DisableNotificationActionResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.DisableNotificationActionResponse res = new ai.whylabs.WhyLabs.models.operations.DisableNotificationActionResponse(contentType, httpRes.statusCode(), httpRes) {{
             void_ = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -169,11 +166,10 @@ public class NotificationSettings {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.EnableNotificationActionResponse res = new ai.whylabs.WhyLabs.models.operations.EnableNotificationActionResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.EnableNotificationActionResponse res = new ai.whylabs.WhyLabs.models.operations.EnableNotificationActionResponse(contentType, httpRes.statusCode(), httpRes) {{
             void_ = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -209,11 +205,10 @@ public class NotificationSettings {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.GetNotificationActionResponse res = new ai.whylabs.WhyLabs.models.operations.GetNotificationActionResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.GetNotificationActionResponse res = new ai.whylabs.WhyLabs.models.operations.GetNotificationActionResponse(contentType, httpRes.statusCode(), httpRes) {{
             notificationAction = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -249,11 +244,10 @@ public class NotificationSettings {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.GetNotificationSettingsResponse res = new ai.whylabs.WhyLabs.models.operations.GetNotificationSettingsResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.GetNotificationSettingsResponse res = new ai.whylabs.WhyLabs.models.operations.GetNotificationSettingsResponse(contentType, httpRes.statusCode(), httpRes) {{
             getNotificationSettingsResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -289,11 +283,10 @@ public class NotificationSettings {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.ListNotificationActionsResponse res = new ai.whylabs.WhyLabs.models.operations.ListNotificationActionsResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.ListNotificationActionsResponse res = new ai.whylabs.WhyLabs.models.operations.ListNotificationActionsResponse(contentType, httpRes.statusCode(), httpRes) {{
             classes = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -334,11 +327,10 @@ public class NotificationSettings {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.PutNotificationActionResponse res = new ai.whylabs.WhyLabs.models.operations.PutNotificationActionResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.PutNotificationActionResponse res = new ai.whylabs.WhyLabs.models.operations.PutNotificationActionResponse(contentType, httpRes.statusCode(), httpRes) {{
             void_ = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -374,11 +366,10 @@ public class NotificationSettings {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.TestNotificationActionResponse res = new ai.whylabs.WhyLabs.models.operations.TestNotificationActionResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.TestNotificationActionResponse res = new ai.whylabs.WhyLabs.models.operations.TestNotificationActionResponse(contentType, httpRes.statusCode(), httpRes) {{
             void_ = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -419,11 +410,10 @@ public class NotificationSettings {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.UpdateNotificationActionResponse res = new ai.whylabs.WhyLabs.models.operations.UpdateNotificationActionResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.UpdateNotificationActionResponse res = new ai.whylabs.WhyLabs.models.operations.UpdateNotificationActionResponse(contentType, httpRes.statusCode(), httpRes) {{
             void_ = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -464,11 +454,10 @@ public class NotificationSettings {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.UpdateNotificationSettingsResponse res = new ai.whylabs.WhyLabs.models.operations.UpdateNotificationSettingsResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.UpdateNotificationSettingsResponse res = new ai.whylabs.WhyLabs.models.operations.UpdateNotificationSettingsResponse(contentType, httpRes.statusCode(), httpRes) {{
             notificationSettings = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -503,11 +492,10 @@ public class NotificationSettings {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.GetEmailNotificationActionPayloadResponse res = new ai.whylabs.WhyLabs.models.operations.GetEmailNotificationActionPayloadResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.GetEmailNotificationActionPayloadResponse res = new ai.whylabs.WhyLabs.models.operations.GetEmailNotificationActionPayloadResponse(contentType, httpRes.statusCode(), httpRes) {{
             emailNotificationAction = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -542,11 +530,10 @@ public class NotificationSettings {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.GetPagerDutyNotificationActionPayloadResponse res = new ai.whylabs.WhyLabs.models.operations.GetPagerDutyNotificationActionPayloadResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.GetPagerDutyNotificationActionPayloadResponse res = new ai.whylabs.WhyLabs.models.operations.GetPagerDutyNotificationActionPayloadResponse(contentType, httpRes.statusCode(), httpRes) {{
             pagerDutyNotificationAction = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -581,11 +568,10 @@ public class NotificationSettings {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.GetSlackNotificationActionPayloadResponse res = new ai.whylabs.WhyLabs.models.operations.GetSlackNotificationActionPayloadResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.GetSlackNotificationActionPayloadResponse res = new ai.whylabs.WhyLabs.models.operations.GetSlackNotificationActionPayloadResponse(contentType, httpRes.statusCode(), httpRes) {{
             slackNotificationAction = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {

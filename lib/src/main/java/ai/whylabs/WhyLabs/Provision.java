@@ -48,11 +48,10 @@ public class Provision {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.ProvisionAWSMarketplaceNewUserResponse res = new ai.whylabs.WhyLabs.models.operations.ProvisionAWSMarketplaceNewUserResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.ProvisionAWSMarketplaceNewUserResponse res = new ai.whylabs.WhyLabs.models.operations.ProvisionAWSMarketplaceNewUserResponse(contentType, httpRes.statusCode(), httpRes) {{
             provisionNewAWSMarketplaceUserResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -93,11 +92,10 @@ public class Provision {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.ProvisionDatabricksConnectionResponse res = new ai.whylabs.WhyLabs.models.operations.ProvisionDatabricksConnectionResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.ProvisionDatabricksConnectionResponse res = new ai.whylabs.WhyLabs.models.operations.ProvisionDatabricksConnectionResponse(contentType, httpRes.statusCode(), httpRes) {{
             provisionDatabricksConnectionResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -138,11 +136,10 @@ public class Provision {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.ProvisionNewUserResponse res = new ai.whylabs.WhyLabs.models.operations.ProvisionNewUserResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.ProvisionNewUserResponse res = new ai.whylabs.WhyLabs.models.operations.ProvisionNewUserResponse(contentType, httpRes.statusCode(), httpRes) {{
             provisionNewUserResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -183,11 +180,10 @@ public class Provision {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.RegisterDatabricksConnectionResponse res = new ai.whylabs.WhyLabs.models.operations.RegisterDatabricksConnectionResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.RegisterDatabricksConnectionResponse res = new ai.whylabs.WhyLabs.models.operations.RegisterDatabricksConnectionResponse(contentType, httpRes.statusCode(), httpRes) {{
             registerDatabricksConnectionResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {

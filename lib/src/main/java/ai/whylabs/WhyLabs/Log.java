@@ -48,11 +48,10 @@ public class Log {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.GetProfileObservatoryLinkResponse res = new ai.whylabs.WhyLabs.models.operations.GetProfileObservatoryLinkResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.GetProfileObservatoryLinkResponse res = new ai.whylabs.WhyLabs.models.operations.GetProfileObservatoryLinkResponse(contentType, httpRes.statusCode(), httpRes) {{
             getProfileObservatoryLinkResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -93,11 +92,10 @@ public class Log {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.LogAsyncResponse res = new ai.whylabs.WhyLabs.models.operations.LogAsyncResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.LogAsyncResponse res = new ai.whylabs.WhyLabs.models.operations.LogAsyncResponse(contentType, httpRes.statusCode(), httpRes) {{
             asyncLogResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -138,11 +136,10 @@ public class Log {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.LogReferenceResponse res = new ai.whylabs.WhyLabs.models.operations.LogReferenceResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.LogReferenceResponse res = new ai.whylabs.WhyLabs.models.operations.LogReferenceResponse(contentType, httpRes.statusCode(), httpRes) {{
             logReferenceResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {

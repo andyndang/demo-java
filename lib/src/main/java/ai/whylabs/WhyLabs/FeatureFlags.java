@@ -49,11 +49,10 @@ public class FeatureFlags {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.GetFeatureFlagsResponse res = new ai.whylabs.WhyLabs.models.operations.GetFeatureFlagsResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.GetFeatureFlagsResponse res = new ai.whylabs.WhyLabs.models.operations.GetFeatureFlagsResponse(contentType, httpRes.statusCode(), httpRes) {{
             featureFlags = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
