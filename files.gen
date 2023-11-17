@@ -22,6 +22,7 @@ lib/src/main/java/ai/whylabs/WhyLabs/Search.java
 lib/src/main/java/ai/whylabs/WhyLabs/Sessions.java
 lib/src/main/java/ai/whylabs/WhyLabs/Subscription.java
 lib/src/main/java/ai/whylabs/WhyLabs/User.java
+lib/src/main/java/ai/whylabs/WhyLabs/Tracing.java
 lib/src/main/java/ai/whylabs/WhyLabs/Songbird.java
 .gitattributes
 gradle/wrapper/gradle-wrapper.jar
@@ -276,6 +277,10 @@ lib/src/main/java/ai/whylabs/WhyLabs/models/operations/GetSessionRequest.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/operations/GetSessionResponse.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/operations/GetSessionProfileObservatoryLinkRequest.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/operations/GetSessionProfileObservatoryLinkResponse.java
+lib/src/main/java/ai/whylabs/WhyLabs/models/operations/PostSpansJsonRequest.java
+lib/src/main/java/ai/whylabs/WhyLabs/models/operations/PostSpansJsonResponse.java
+lib/src/main/java/ai/whylabs/WhyLabs/models/operations/PostSpansRawRequest.java
+lib/src/main/java/ai/whylabs/WhyLabs/models/operations/PostSpansRawResponse.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/AccountUser.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/CreateAccountUserRequest.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/Response.java
@@ -644,6 +649,10 @@ docs/models/operations/GetSessionRequest.md
 docs/models/operations/GetSessionResponse.md
 docs/models/operations/GetSessionProfileObservatoryLinkRequest.md
 docs/models/operations/GetSessionProfileObservatoryLinkResponse.md
+docs/models/operations/PostSpansJsonRequest.md
+docs/models/operations/PostSpansJsonResponse.md
+docs/models/operations/PostSpansRawRequest.md
+docs/models/operations/PostSpansRawResponse.md
 docs/models/shared/AccountUser.md
 docs/models/shared/CreateAccountUserRequest.md
 docs/models/shared/Response.md
@@ -811,3 +820,4 @@ docs/sdks/search/README.md
 docs/sdks/sessions/README.md
 docs/sdks/subscription/README.md
 docs/sdks/user/README.md
+docs/sdks/tracing/README.md
