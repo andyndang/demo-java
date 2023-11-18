@@ -10,6 +10,8 @@
 * [getProfileTraces](#getprofiletraces) - Returns a list for profile traces matching a trace id
 * [getReferenceProfile](#getreferenceprofile) - Returns a single reference profile
 * [hideSegments](#hidesegments) - Hides a list of segments
+* [listDeleteAnalyzerResultsRequests](#listdeleteanalyzerresultsrequests) - List requests to delete analyzer results
+* [listDeleteDatasetProfilesRequests](#listdeletedatasetprofilesrequests) - List requests to delete dataset profiles
 * [listReferenceProfiles](#listreferenceprofiles) - Returns a list for reference profiles between the given time range filtered on the upload timestamp
 * [listSegments](#listsegments) - Returns a list of segments
 
@@ -401,6 +403,108 @@ segments = new String[]{{
 ### Response
 
 **[ai.whylabs.WhyLabs.models.operations.HideSegmentsResponse](../../models/operations/HideSegmentsResponse.md)**
+
+
+## listDeleteAnalyzerResultsRequests
+
+List the requests to delete analyzer results.
+
+        
+
+### Example Usage
+
+```java
+package hello.world;
+
+import ai.whylabs.WhyLabs.Songbird;
+import ai.whylabs.WhyLabs.models.operations.ListDeleteAnalyzerResultsRequestsRequest;
+import ai.whylabs.WhyLabs.models.operations.ListDeleteAnalyzerResultsRequestsResponse;
+import ai.whylabs.WhyLabs.models.shared.Security;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("string"){{
+                    apiKeyAuth = "";
+                }})
+                .build();
+
+            ListDeleteAnalyzerResultsRequestsRequest req = new ListDeleteAnalyzerResultsRequestsRequest("org-123");            
+
+            ListDeleteAnalyzerResultsRequestsResponse res = sdk.datasetProfile.listDeleteAnalyzerResultsRequests(req);
+
+            if (res.statusCode == 200) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                                            | Type                                                                                                                                                 | Required                                                                                                                                             | Description                                                                                                                                          |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                            | [ai.whylabs.WhyLabs.models.operations.ListDeleteAnalyzerResultsRequestsRequest](../../models/operations/ListDeleteAnalyzerResultsRequestsRequest.md) | :heavy_check_mark:                                                                                                                                   | The request object to use for the request.                                                                                                           |
+
+
+### Response
+
+**[ai.whylabs.WhyLabs.models.operations.ListDeleteAnalyzerResultsRequestsResponse](../../models/operations/ListDeleteAnalyzerResultsRequestsResponse.md)**
+
+
+## listDeleteDatasetProfilesRequests
+
+List the requests to delete dataset profiles.
+
+        
+
+### Example Usage
+
+```java
+package hello.world;
+
+import ai.whylabs.WhyLabs.Songbird;
+import ai.whylabs.WhyLabs.models.operations.ListDeleteDatasetProfilesRequestsRequest;
+import ai.whylabs.WhyLabs.models.operations.ListDeleteDatasetProfilesRequestsResponse;
+import ai.whylabs.WhyLabs.models.shared.Security;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            Songbird sdk = Songbird.builder()
+                .setSecurity(new Security("string"){{
+                    apiKeyAuth = "";
+                }})
+                .build();
+
+            ListDeleteDatasetProfilesRequestsRequest req = new ListDeleteDatasetProfilesRequestsRequest("org-123");            
+
+            ListDeleteDatasetProfilesRequestsResponse res = sdk.datasetProfile.listDeleteDatasetProfilesRequests(req);
+
+            if (res.statusCode == 200) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                                            | Type                                                                                                                                                 | Required                                                                                                                                             | Description                                                                                                                                          |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                            | [ai.whylabs.WhyLabs.models.operations.ListDeleteDatasetProfilesRequestsRequest](../../models/operations/ListDeleteDatasetProfilesRequestsRequest.md) | :heavy_check_mark:                                                                                                                                   | The request object to use for the request.                                                                                                           |
+
+
+### Response
+
+**[ai.whylabs.WhyLabs.models.operations.ListDeleteDatasetProfilesRequestsResponse](../../models/operations/ListDeleteDatasetProfilesRequestsResponse.md)**
 
 
 ## listReferenceProfiles

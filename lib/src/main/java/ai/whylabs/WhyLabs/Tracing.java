@@ -21,15 +21,15 @@ public class Tracing {
 	}
 
     /**
-     * Publish Spans into WhyLabs
-     * API to publish Spans into WhyLabs
+     * Publish traces into WhyLabs
+     * API to publish traces into WhyLabs
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.PostSpansJsonResponse postSpansJson(ai.whylabs.WhyLabs.models.operations.PostSpansJsonRequest request) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.PostTracesJsonResponse postTracesJson(ai.whylabs.WhyLabs.models.operations.PostTracesJsonRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(baseUrl, "/v1/tracing/spans");
+        String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(baseUrl, "/v1/traces");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -57,7 +57,7 @@ public class Tracing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
         
-        ai.whylabs.WhyLabs.models.operations.PostSpansJsonResponse res = new ai.whylabs.WhyLabs.models.operations.PostSpansJsonResponse(contentType, httpRes.statusCode(), httpRes) {{
+        ai.whylabs.WhyLabs.models.operations.PostTracesJsonResponse res = new ai.whylabs.WhyLabs.models.operations.PostTracesJsonResponse(contentType, httpRes.statusCode(), httpRes) {{
             void_ = null;
         }};
         
@@ -73,15 +73,15 @@ public class Tracing {
     }
 
     /**
-     * Publish Spans into WhyLabs
-     * API to publish Spans into WhyLabs
+     * Publish traces into WhyLabs
+     * API to publish traces into WhyLabs
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.PostSpansRawResponse postSpansRaw(ai.whylabs.WhyLabs.models.operations.PostSpansRawRequest request) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.PostTracesRawResponse postTracesRaw(ai.whylabs.WhyLabs.models.operations.PostTracesRawRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
-        String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(baseUrl, "/v1/tracing/spans");
+        String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(baseUrl, "/v1/traces");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -109,7 +109,7 @@ public class Tracing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
         
-        ai.whylabs.WhyLabs.models.operations.PostSpansRawResponse res = new ai.whylabs.WhyLabs.models.operations.PostSpansRawResponse(contentType, httpRes.statusCode(), httpRes) {{
+        ai.whylabs.WhyLabs.models.operations.PostTracesRawResponse res = new ai.whylabs.WhyLabs.models.operations.PostTracesRawResponse(contentType, httpRes.statusCode(), httpRes) {{
             void_ = null;
         }};
         

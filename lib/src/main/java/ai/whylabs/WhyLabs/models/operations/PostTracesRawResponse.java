@@ -8,14 +8,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 
-public class PostSpansRawResponse {
+public class PostTracesRawResponse {
     /**
      * HTTP response content type for this operation
      */
     
     public String contentType;
 
-    public PostSpansRawResponse withContentType(String contentType) {
+    public PostTracesRawResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
     }
@@ -26,7 +26,7 @@ public class PostSpansRawResponse {
     
     public Integer statusCode;
 
-    public PostSpansRawResponse withStatusCode(Integer statusCode) {
+    public PostTracesRawResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,23 +37,23 @@ public class PostSpansRawResponse {
     
     public HttpResponse<byte[]> rawResponse;
 
-    public PostSpansRawResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
+    public PostTracesRawResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
     /**
-     * PostSpans default response
+     * PostTraces default response
      */
     
     public ai.whylabs.WhyLabs.models.shared.Void void_;
 
-    public PostSpansRawResponse withVoid(ai.whylabs.WhyLabs.models.shared.Void void_) {
+    public PostTracesRawResponse withVoid(ai.whylabs.WhyLabs.models.shared.Void void_) {
         this.void_ = void_;
         return this;
     }
     
-    public PostSpansRawResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode, @JsonProperty("RawResponse") HttpResponse<byte[]> rawResponse) {
+    public PostTracesRawResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode, @JsonProperty("RawResponse") HttpResponse<byte[]> rawResponse) {
         this.contentType = contentType;
         this.statusCode = statusCode;
         this.rawResponse = rawResponse;

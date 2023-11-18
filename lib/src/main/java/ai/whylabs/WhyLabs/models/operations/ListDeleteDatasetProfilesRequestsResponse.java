@@ -8,14 +8,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 
-public class PostSpansJsonResponse {
+public class ListDeleteDatasetProfilesRequestsResponse {
     /**
      * HTTP response content type for this operation
      */
     
     public String contentType;
 
-    public PostSpansJsonResponse withContentType(String contentType) {
+    public ListDeleteDatasetProfilesRequestsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
     }
@@ -26,7 +26,7 @@ public class PostSpansJsonResponse {
     
     public Integer statusCode;
 
-    public PostSpansJsonResponse withStatusCode(Integer statusCode) {
+    public ListDeleteDatasetProfilesRequestsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,23 +37,23 @@ public class PostSpansJsonResponse {
     
     public HttpResponse<byte[]> rawResponse;
 
-    public PostSpansJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
+    public ListDeleteDatasetProfilesRequestsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
     /**
-     * PostSpans default response
+     * The list of [DeleteProfile] requests if operation succeeds
      */
     
-    public ai.whylabs.WhyLabs.models.shared.Void void_;
+    public ai.whylabs.WhyLabs.models.shared.DeleteProfile[] classes;
 
-    public PostSpansJsonResponse withVoid(ai.whylabs.WhyLabs.models.shared.Void void_) {
-        this.void_ = void_;
+    public ListDeleteDatasetProfilesRequestsResponse withClasses(ai.whylabs.WhyLabs.models.shared.DeleteProfile[] classes) {
+        this.classes = classes;
         return this;
     }
     
-    public PostSpansJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode, @JsonProperty("RawResponse") HttpResponse<byte[]> rawResponse) {
+    public ListDeleteDatasetProfilesRequestsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode, @JsonProperty("RawResponse") HttpResponse<byte[]> rawResponse) {
         this.contentType = contentType;
         this.statusCode = statusCode;
         this.rawResponse = rawResponse;

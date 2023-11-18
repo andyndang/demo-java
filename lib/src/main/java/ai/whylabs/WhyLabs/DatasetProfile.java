@@ -338,6 +338,88 @@ public class DatasetProfile {
     }
 
     /**
+     * List requests to delete analyzer results
+     * List the requests to delete analyzer results.
+     * 
+     *         
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public ai.whylabs.WhyLabs.models.operations.ListDeleteAnalyzerResultsRequestsResponse listDeleteAnalyzerResultsRequests(ai.whylabs.WhyLabs.models.operations.ListDeleteAnalyzerResultsRequestsRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.ListDeleteAnalyzerResultsRequestsRequest.class, baseUrl, "/v0/organizations/{org_id}/dataset-profiles/delete-requests/analyzer-results", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+        
+        ai.whylabs.WhyLabs.models.operations.ListDeleteAnalyzerResultsRequestsResponse res = new ai.whylabs.WhyLabs.models.operations.ListDeleteAnalyzerResultsRequestsResponse(contentType, httpRes.statusCode(), httpRes) {{
+            classes = null;
+        }};
+        
+        if (true) {
+            if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                ai.whylabs.WhyLabs.models.shared.DeleteAnalyzerResult[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), ai.whylabs.WhyLabs.models.shared.DeleteAnalyzerResult[].class);
+                res.classes = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * List requests to delete dataset profiles
+     * List the requests to delete dataset profiles.
+     * 
+     *         
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public ai.whylabs.WhyLabs.models.operations.ListDeleteDatasetProfilesRequestsResponse listDeleteDatasetProfilesRequests(ai.whylabs.WhyLabs.models.operations.ListDeleteDatasetProfilesRequestsRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.ListDeleteDatasetProfilesRequestsRequest.class, baseUrl, "/v0/organizations/{org_id}/dataset-profiles/delete-requests/dataset-profiles", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+        
+        ai.whylabs.WhyLabs.models.operations.ListDeleteDatasetProfilesRequestsResponse res = new ai.whylabs.WhyLabs.models.operations.ListDeleteDatasetProfilesRequestsResponse(contentType, httpRes.statusCode(), httpRes) {{
+            classes = null;
+        }};
+        
+        if (true) {
+            if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                ai.whylabs.WhyLabs.models.shared.DeleteProfile[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), ai.whylabs.WhyLabs.models.shared.DeleteProfile[].class);
+                res.classes = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
      * Returns a list for reference profiles between the given time range filtered on the upload timestamp
      * Returns a list of Reference Profiles between a given time range filtered on the upload timestamp.
      * 

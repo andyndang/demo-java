@@ -8,11 +8,11 @@ import ai.whylabs.WhyLabs.utils.SpeakeasyMetadata;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 
-public class PostSpansRawRequest {
+public class PostTracesRawRequest {
     @SpeakeasyMetadata("request:mediaType=application/x-protobuf")
     public byte[] requestBody;
 
-    public PostSpansRawRequest withRequestBody(byte[] requestBody) {
+    public PostTracesRawRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
     }
@@ -20,12 +20,12 @@ public class PostSpansRawRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-WHYLABS-RESOURCE")
     public String xWhylabsResource;
 
-    public PostSpansRawRequest withXWhylabsResource(String xWhylabsResource) {
+    public PostTracesRawRequest withXWhylabsResource(String xWhylabsResource) {
         this.xWhylabsResource = xWhylabsResource;
         return this;
     }
     
-    public PostSpansRawRequest(@JsonProperty("RequestBody") byte[] requestBody, @JsonProperty("X-WHYLABS-RESOURCE") String xWhylabsResource) {
+    public PostTracesRawRequest(@JsonProperty("RequestBody") byte[] requestBody, @JsonProperty("X-WHYLABS-RESOURCE") String xWhylabsResource) {
         this.requestBody = requestBody;
         this.xWhylabsResource = xWhylabsResource;
   }

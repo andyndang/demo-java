@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'ai.whylabs.WhyLabs:Songbird:2.0.5'
+implementation 'ai.whylabs.WhyLabs:Songbird:2.0.6'
 ```
 <!-- End SDK Installation -->
 
@@ -203,6 +203,8 @@ userSchema = "string";
 * [getProfileTraces](docs/sdks/datasetprofile/README.md#getprofiletraces) - Returns a list for profile traces matching a trace id
 * [getReferenceProfile](docs/sdks/datasetprofile/README.md#getreferenceprofile) - Returns a single reference profile
 * [hideSegments](docs/sdks/datasetprofile/README.md#hidesegments) - Hides a list of segments
+* [listDeleteAnalyzerResultsRequests](docs/sdks/datasetprofile/README.md#listdeleteanalyzerresultsrequests) - List requests to delete analyzer results
+* [listDeleteDatasetProfilesRequests](docs/sdks/datasetprofile/README.md#listdeletedatasetprofilesrequests) - List requests to delete dataset profiles
 * [listReferenceProfiles](docs/sdks/datasetprofile/README.md#listreferenceprofiles) - Returns a list for reference profiles between the given time range filtered on the upload timestamp
 * [listSegments](docs/sdks/datasetprofile/README.md#listsegments) - Returns a list of segments
 
@@ -303,8 +305,8 @@ userSchema = "string";
 
 ### [tracing](docs/sdks/tracing/README.md)
 
-* [postSpansJson](docs/sdks/tracing/README.md#postspansjson) - Publish Spans into WhyLabs
-* [postSpansRaw](docs/sdks/tracing/README.md#postspansraw) - Publish Spans into WhyLabs
+* [postTracesJson](docs/sdks/tracing/README.md#posttracesjson) - Publish traces into WhyLabs
+* [postTracesRaw](docs/sdks/tracing/README.md#posttracesraw) - Publish traces into WhyLabs
 <!-- End SDK Available Operations -->
 
 
