@@ -22,7 +22,7 @@ lib/src/main/java/ai/whylabs/WhyLabs/Search.java
 lib/src/main/java/ai/whylabs/WhyLabs/Sessions.java
 lib/src/main/java/ai/whylabs/WhyLabs/Subscription.java
 lib/src/main/java/ai/whylabs/WhyLabs/User.java
-lib/src/main/java/ai/whylabs/WhyLabs/Tracing.java
+lib/src/main/java/ai/whylabs/WhyLabs/Traces.java
 lib/src/main/java/ai/whylabs/WhyLabs/Songbird.java
 .gitattributes
 gradle/wrapper/gradle-wrapper.jar
@@ -281,10 +281,10 @@ lib/src/main/java/ai/whylabs/WhyLabs/models/operations/GetSessionRequest.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/operations/GetSessionResponse.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/operations/GetSessionProfileObservatoryLinkRequest.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/operations/GetSessionProfileObservatoryLinkResponse.java
-lib/src/main/java/ai/whylabs/WhyLabs/models/operations/PostTracesJsonRequest.java
-lib/src/main/java/ai/whylabs/WhyLabs/models/operations/PostTracesJsonResponse.java
-lib/src/main/java/ai/whylabs/WhyLabs/models/operations/PostTracesRawRequest.java
-lib/src/main/java/ai/whylabs/WhyLabs/models/operations/PostTracesRawResponse.java
+lib/src/main/java/ai/whylabs/WhyLabs/models/operations/ExportTracesJsonRequest.java
+lib/src/main/java/ai/whylabs/WhyLabs/models/operations/ExportTracesJsonResponse.java
+lib/src/main/java/ai/whylabs/WhyLabs/models/operations/ExportTracesRawRequest.java
+lib/src/main/java/ai/whylabs/WhyLabs/models/operations/ExportTracesRawResponse.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/AccountUser.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/CreateAccountUserRequest.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/Response.java
@@ -430,6 +430,8 @@ lib/src/main/java/ai/whylabs/WhyLabs/models/shared/CreateSessionResponse.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/CreateSessionRequest.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/GetSessionResponse.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/SessionMetadata.java
+lib/src/main/java/ai/whylabs/WhyLabs/models/shared/ExportTraceServiceResponse.java
+lib/src/main/java/ai/whylabs/WhyLabs/models/shared/ExportTracePartialSuccess.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/Security.java
 USAGE.md
 docs/models/operations/CreateAccountUserRequest.md
@@ -660,10 +662,10 @@ docs/models/operations/GetSessionRequest.md
 docs/models/operations/GetSessionResponse.md
 docs/models/operations/GetSessionProfileObservatoryLinkRequest.md
 docs/models/operations/GetSessionProfileObservatoryLinkResponse.md
-docs/models/operations/PostTracesJsonRequest.md
-docs/models/operations/PostTracesJsonResponse.md
-docs/models/operations/PostTracesRawRequest.md
-docs/models/operations/PostTracesRawResponse.md
+docs/models/operations/ExportTracesJsonRequest.md
+docs/models/operations/ExportTracesJsonResponse.md
+docs/models/operations/ExportTracesRawRequest.md
+docs/models/operations/ExportTracesRawResponse.md
 docs/models/shared/AccountUser.md
 docs/models/shared/CreateAccountUserRequest.md
 docs/models/shared/Response.md
@@ -809,6 +811,8 @@ docs/models/shared/CreateSessionResponse.md
 docs/models/shared/CreateSessionRequest.md
 docs/models/shared/GetSessionResponse.md
 docs/models/shared/SessionMetadata.md
+docs/models/shared/ExportTraceServiceResponse.md
+docs/models/shared/ExportTracePartialSuccess.md
 docs/models/shared/Security.md
 docs/sdks/songbird/README.md
 docs/sdks/account/README.md
@@ -834,4 +838,4 @@ docs/sdks/search/README.md
 docs/sdks/sessions/README.md
 docs/sdks/subscription/README.md
 docs/sdks/user/README.md
-docs/sdks/tracing/README.md
+docs/sdks/traces/README.md

@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'ai.whylabs.WhyLabs:Songbird:2.0.6'
+implementation 'ai.whylabs.WhyLabs:Songbird:2.0.7'
 ```
 <!-- End SDK Installation -->
 
@@ -303,10 +303,10 @@ userSchema = "string";
 * [getUserByEmail](docs/sdks/user/README.md#getuserbyemail) - Get a user by their email.
 * [updateUser](docs/sdks/user/README.md#updateuser) - Update a user.
 
-### [tracing](docs/sdks/tracing/README.md)
+### [traces](docs/sdks/traces/README.md)
 
-* [postTracesJson](docs/sdks/tracing/README.md#posttracesjson) - Publish traces into WhyLabs
-* [postTracesRaw](docs/sdks/tracing/README.md#posttracesraw) - Publish traces into WhyLabs
+* [exportTracesJson](docs/sdks/traces/README.md#exporttracesjson) - Export traces into WhyLabs
+* [exportTracesRaw](docs/sdks/traces/README.md#exporttracesraw) - Export traces into WhyLabs
 <!-- End SDK Available Operations -->
 
 

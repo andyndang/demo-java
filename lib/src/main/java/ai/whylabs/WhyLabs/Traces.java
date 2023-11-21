@@ -12,22 +12,22 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import java.net.http.HttpResponse;
 import java.nio.charset.StandardCharsets;
 
-public class Tracing {
+public class Traces {
 	
 	private SDKConfiguration sdkConfiguration;
 
-	public Tracing(SDKConfiguration sdkConfiguration) {
+	public Traces(SDKConfiguration sdkConfiguration) {
 		this.sdkConfiguration = sdkConfiguration;
 	}
 
     /**
-     * Publish traces into WhyLabs
-     * API to publish traces into WhyLabs
+     * Export traces into WhyLabs
+     * API to export traces into WhyLabs
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.PostTracesJsonResponse postTracesJson(ai.whylabs.WhyLabs.models.operations.PostTracesJsonRequest request) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.ExportTracesJsonResponse exportTracesJson(ai.whylabs.WhyLabs.models.operations.ExportTracesJsonRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(baseUrl, "/v1/traces");
         
@@ -57,15 +57,15 @@ public class Tracing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
         
-        ai.whylabs.WhyLabs.models.operations.PostTracesJsonResponse res = new ai.whylabs.WhyLabs.models.operations.PostTracesJsonResponse(contentType, httpRes.statusCode(), httpRes) {{
-            void_ = null;
+        ai.whylabs.WhyLabs.models.operations.ExportTracesJsonResponse res = new ai.whylabs.WhyLabs.models.operations.ExportTracesJsonResponse(contentType, httpRes.statusCode(), httpRes) {{
+            exportTraceServiceResponse = null;
         }};
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                ai.whylabs.WhyLabs.models.shared.Void out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), ai.whylabs.WhyLabs.models.shared.Void.class);
-                res.void_ = out;
+                ai.whylabs.WhyLabs.models.shared.ExportTraceServiceResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), ai.whylabs.WhyLabs.models.shared.ExportTraceServiceResponse.class);
+                res.exportTraceServiceResponse = out;
             }
         }
 
@@ -73,13 +73,13 @@ public class Tracing {
     }
 
     /**
-     * Publish traces into WhyLabs
-     * API to publish traces into WhyLabs
+     * Export traces into WhyLabs
+     * API to export traces into WhyLabs
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.PostTracesRawResponse postTracesRaw(ai.whylabs.WhyLabs.models.operations.PostTracesRawRequest request) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.ExportTracesRawResponse exportTracesRaw(ai.whylabs.WhyLabs.models.operations.ExportTracesRawRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(baseUrl, "/v1/traces");
         
@@ -109,15 +109,15 @@ public class Tracing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
         
-        ai.whylabs.WhyLabs.models.operations.PostTracesRawResponse res = new ai.whylabs.WhyLabs.models.operations.PostTracesRawResponse(contentType, httpRes.statusCode(), httpRes) {{
-            void_ = null;
+        ai.whylabs.WhyLabs.models.operations.ExportTracesRawResponse res = new ai.whylabs.WhyLabs.models.operations.ExportTracesRawResponse(contentType, httpRes.statusCode(), httpRes) {{
+            exportTraceServiceResponse = null;
         }};
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                ai.whylabs.WhyLabs.models.shared.Void out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), ai.whylabs.WhyLabs.models.shared.Void.class);
-                res.void_ = out;
+                ai.whylabs.WhyLabs.models.shared.ExportTraceServiceResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), ai.whylabs.WhyLabs.models.shared.ExportTraceServiceResponse.class);
+                res.exportTraceServiceResponse = out;
             }
         }
 

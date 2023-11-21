@@ -41,7 +41,7 @@ public class Songbird {
     public Sessions sessions;
     public Subscription subscription;
     public User user;
-    public Tracing tracing;	
+    public Traces traces;	
 
 	private SDKConfiguration sdkConfiguration;
 
@@ -194,6 +194,6 @@ public class Songbird {
 		
 		this.user = new User(this.sdkConfiguration);
 		
-		this.tracing = new Tracing(this.sdkConfiguration);
+		this.traces = new Traces(this.sdkConfiguration);
 	}
 }
