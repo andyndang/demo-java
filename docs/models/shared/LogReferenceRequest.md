@@ -9,3 +9,4 @@ Request payload for LogReference.
 | ------------------ | ------------------ | ------------------ | ------------------ |
 | `alias`            | *String*           | :heavy_minus_sign: | N/A                |
 | `datasetTimestamp` | *Long*             | :heavy_minus_sign: | N/A                |
+| `region`           | *String*           | :heavy_minus_sign: | N/A                |

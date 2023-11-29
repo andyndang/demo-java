@@ -91,6 +91,7 @@ public class Application {
 
             LogAsyncRequest req = new LogAsyncRequest(new LogAsyncRequest(){{
 datasetTimestamp = 506585L;
+region = "string";
 segmentTags = new ai.whylabs.WhyLabs.models.shared.SegmentTag[]{{
     add(new SegmentTag(){{}}),
 }};
@@ -147,6 +148,7 @@ public class Application {
             LogReferenceRequest req = new LogReferenceRequest(new LogReferenceRequest(){{
 alias = "string";
 datasetTimestamp = 93844L;
+region = "string";
 }}, "model-123", "org-123");            
 
             LogReferenceResponse res = sdk.log.logReference(req);

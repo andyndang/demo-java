@@ -142,6 +142,7 @@ public class Application {
 
             CreateDatasetProfileUploadRequest req = new CreateDatasetProfileUploadRequest(new LogAsyncRequest(){{
 datasetTimestamp = 967561L;
+region = "string";
 segmentTags = new ai.whylabs.WhyLabs.models.shared.SegmentTag[]{{
     add(new SegmentTag(){{}}),
 }};
@@ -198,6 +199,7 @@ public class Application {
             CreateReferenceProfileUploadRequest req = new CreateReferenceProfileUploadRequest(new LogReferenceRequest(){{
 alias = "string";
 datasetTimestamp = 590824L;
+region = "string";
 }}, "string");            
 
             CreateReferenceProfileUploadResponse res = sdk.sessions.createReferenceProfileUpload(req);

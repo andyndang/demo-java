@@ -1,17 +1,18 @@
 # Songbird
 
-<!-- Start SDK Installation -->
+<!-- Start SDK Installation [installation] -->
 ## SDK Installation
 
 ### Gradle
 
 ```groovy
-implementation 'ai.whylabs.WhyLabs:Songbird:2.0.7'
+implementation 'ai.whylabs.WhyLabs:Songbird:2.0.8'
 ```
-<!-- End SDK Installation -->
+<!-- End SDK Installation [installation] -->
 
+<!-- Start SDK Example Usage [usage] -->
 ## SDK Example Usage
-<!-- Start SDK Example Usage -->
+
 ### Example
 
 ```java
@@ -49,11 +50,10 @@ userSchema = "string";
     }
 }
 ```
-<!-- End SDK Example Usage -->
+<!-- End SDK Example Usage [usage] -->
 
-<!-- Start SDK Available Operations -->
+<!-- Start Available Resources and Operations [operations] -->
 ## Available Resources and Operations
-
 
 ### [account](docs/sdks/account/README.md)
 
@@ -307,13 +307,9 @@ userSchema = "string";
 
 * [exportTracesJson](docs/sdks/traces/README.md#exporttracesjson) - Export traces into WhyLabs
 * [exportTracesRaw](docs/sdks/traces/README.md#exporttracesraw) - Export traces into WhyLabs
-<!-- End SDK Available Operations -->
+<!-- End Available Resources and Operations [operations] -->
 
 
-
-<!-- Start Dev Containers -->
-
-<!-- End Dev Containers -->
 
 <!-- Placeholder for Future Speakeasy SDK Sections -->
 

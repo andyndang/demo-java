@@ -433,7 +433,6 @@ lib/src/main/java/ai/whylabs/WhyLabs/models/shared/SessionMetadata.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/ExportTraceServiceResponse.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/ExportTracePartialSuccess.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/Security.java
-USAGE.md
 docs/models/operations/CreateAccountUserRequest.md
 docs/models/operations/CreateAccountUserResponse.md
 docs/models/operations/DeleteAccountUserRequest.md
@@ -839,3 +838,4 @@ docs/sdks/sessions/README.md
 docs/sdks/subscription/README.md
 docs/sdks/user/README.md
 docs/sdks/traces/README.md
+USAGE.md

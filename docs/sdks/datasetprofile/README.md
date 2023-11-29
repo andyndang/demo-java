@@ -47,6 +47,7 @@ public class Application {
             CreateReferenceProfileRequest req = new CreateReferenceProfileRequest(new CreateReferenceProfileRequest(){{
 alias = "string";
 datasetTimestamp = 129059L;
+region = "string";
 segments = new ai.whylabs.WhyLabs.models.shared.Segment[]{{
     add(new Segment(){{
         tags = new ai.whylabs.WhyLabs.models.shared.SegmentTag[]{{

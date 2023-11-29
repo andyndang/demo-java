@@ -31,5 +31,14 @@ public class LogReferenceRequest {
         return this;
     }
     
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("region")
+    public String region;
+
+    public LogReferenceRequest withRegion(String region) {
+        this.region = region;
+        return this;
+    }
+    
     public LogReferenceRequest(){}
 }

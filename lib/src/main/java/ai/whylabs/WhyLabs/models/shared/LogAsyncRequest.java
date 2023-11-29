@@ -23,6 +23,15 @@ public class LogAsyncRequest {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("region")
+    public String region;
+
+    public LogAsyncRequest withRegion(String region) {
+        this.region = region;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("segmentTags")
     public SegmentTag[] segmentTags;
 

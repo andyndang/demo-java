@@ -1,4 +1,4 @@
-<!-- Start SDK Example Usage -->
+<!-- Start SDK Example Usage [usage] -->
 ```java
 package hello.world;
 
@@ -34,4 +34,4 @@ userSchema = "string";
     }
 }
 ```
-<!-- End SDK Example Usage -->
+<!-- End SDK Example Usage [usage] -->
