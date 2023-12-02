@@ -23,14 +23,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            GetMonitorConfigSchemaRequest req = new GetMonitorConfigSchemaRequest("org-123");            
+            ai.whylabs.WhyLabs.models.operations.GetMonitorConfigSchemaRequest req = new GetMonitorConfigSchemaRequest(
+                "org-123");
 
-            GetMonitorConfigSchemaResponse res = sdk.schema.getMonitorConfigSchema(req);
+            ai.whylabs.WhyLabs.models.operations.GetMonitorConfigSchemaResponse res = sdk.schema.getMonitorConfigSchema(req);
 
             if (res.statusCode == 200) {
                 // handle response

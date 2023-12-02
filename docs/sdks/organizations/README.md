@@ -32,12 +32,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            CreateOrganizationRequest req = new CreateOrganizationRequest("ACME, Inc"){{
+            ai.whylabs.WhyLabs.models.operations.CreateOrganizationRequest req = new CreateOrganizationRequest(
+                "ACME, Inc"){{
                 domain = "acme.ai";
                 emailDomains = "acme.ai,acme.com";
                 notificationEmailAddress = "notifications@acme.ai";
@@ -48,9 +50,10 @@ public class Application {
                 slackWebhook = "https://hooks.slack.com/services/foo/bar";
                 storageBucketOverride = "https://s3.us-west-2.amazonaws.com/whylabs-public/";
                 subscriptionTier = SubscriptionTier.FREE;
-            }};            
 
-            CreateOrganizationResponse res = sdk.organizations.createOrganization(req);
+            }};
+
+            ai.whylabs.WhyLabs.models.operations.CreateOrganizationResponse res = sdk.organizations.createOrganization(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -92,14 +95,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            DeleteOrganizationRequest req = new DeleteOrganizationRequest("string");            
+            ai.whylabs.WhyLabs.models.operations.DeleteOrganizationRequest req = new DeleteOrganizationRequest(
+                "string");
 
-            DeleteOrganizationResponse res = sdk.organizations.deleteOrganization(req);
+            ai.whylabs.WhyLabs.models.operations.DeleteOrganizationResponse res = sdk.organizations.deleteOrganization(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -141,14 +146,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            GetAWSMarketplaceMetadataRequest req = new GetAWSMarketplaceMetadataRequest("string");            
+            ai.whylabs.WhyLabs.models.operations.GetAWSMarketplaceMetadataRequest req = new GetAWSMarketplaceMetadataRequest(
+                "string");
 
-            GetAWSMarketplaceMetadataResponse res = sdk.organizations.getAWSMarketplaceMetadata(req);
+            ai.whylabs.WhyLabs.models.operations.GetAWSMarketplaceMetadataResponse res = sdk.organizations.getAWSMarketplaceMetadata(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -190,14 +197,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            GetOrganizationRequest req = new GetOrganizationRequest("string");            
+            ai.whylabs.WhyLabs.models.operations.GetOrganizationRequest req = new GetOrganizationRequest(
+                "string");
 
-            GetOrganizationResponse res = sdk.organizations.getOrganization(req);
+            ai.whylabs.WhyLabs.models.operations.GetOrganizationResponse res = sdk.organizations.getOrganization(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -238,12 +247,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ListOrganizationsResponse res = sdk.organizations.listOrganizations();
+            ai.whylabs.WhyLabs.models.operations.ListOrganizationsResponse res = sdk.organizations.listOrganizations();
 
             if (res.statusCode == 200) {
                 // handle response
@@ -283,23 +293,28 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            PartiallyUpdateOrgRequest req = new PartiallyUpdateOrgRequest(new PartiallyUpdateOrgRequestBody(){{
-orgId = "string";
-}}){{
+            ai.whylabs.WhyLabs.models.operations.PartiallyUpdateOrgRequest req = new PartiallyUpdateOrgRequest(
+                new PartiallyUpdateOrgRequestBody(
+){{
+                    orgId = "string";
+
+                }}){{
                 domain = "acme.ai";
                 name = "ACME, Inc";
                 notificationEmailAddress = "notifications@acme.ai";
                 observatoryUrl = "https://hub.whylabsapp.com";
                 slackWebhook = "https://hooks.slack.com/services/foo/bar";
                 subscriptionTier = SubscriptionTier.PAID;
-            }};            
 
-            PartiallyUpdateOrgResponse res = sdk.organizations.partiallyUpdateOrg(req);
+            }};
+
+            ai.whylabs.WhyLabs.models.operations.PartiallyUpdateOrgResponse res = sdk.organizations.partiallyUpdateOrg(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -342,12 +357,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            PartiallyUpdateOrganizationRequest req = new PartiallyUpdateOrganizationRequest("string"){{
+            ai.whylabs.WhyLabs.models.operations.PartiallyUpdateOrganizationRequest req = new PartiallyUpdateOrganizationRequest(
+                "string"){{
                 domain = "acme.ai";
                 emailDomains = "acme.ai,acme.com";
                 name = "ACME, Inc";
@@ -358,9 +375,10 @@ public class Application {
                 slackWebhook = "https://hooks.slack.com/services/foo/bar";
                 storageBucketOverride = "https://s3.us-west-2.amazonaws.com/whylabs-public/";
                 subscriptionTier = SubscriptionTier.PAID;
-            }};            
 
-            PartiallyUpdateOrganizationResponse res = sdk.organizations.partiallyUpdateOrganization(req);
+            }};
+
+            ai.whylabs.WhyLabs.models.operations.PartiallyUpdateOrganizationResponse res = sdk.organizations.partiallyUpdateOrganization(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -406,14 +424,19 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            UpdateOrgRequest req = new UpdateOrgRequest(new UpdateOrgRequestBody(){{
-orgId = "string";
-}}, "ACME, Inc"){{
+            ai.whylabs.WhyLabs.models.operations.UpdateOrgRequest req = new UpdateOrgRequest(
+                new UpdateOrgRequestBody(
+){{
+                    orgId = "string";
+
+                }},
+                "ACME, Inc"){{
                 domain = "acme.ai";
                 emailDomains = "acme.ai,acme.com";
                 notificationEmailAddress = "notifications@acme.ai";
@@ -422,9 +445,10 @@ orgId = "string";
                 parentOrgId = "org-123";
                 slackWebhook = "https://hooks.slack.com/services/foo/bar";
                 subscriptionTier = SubscriptionTier.AWS_MARKETPLACE;
-            }};            
 
-            UpdateOrgResponse res = sdk.organizations.updateOrg(req);
+            }};
+
+            ai.whylabs.WhyLabs.models.operations.UpdateOrgResponse res = sdk.organizations.updateOrg(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -467,12 +491,15 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            UpdateOrganizationRequest req = new UpdateOrganizationRequest("ACME, Inc", "string"){{
+            ai.whylabs.WhyLabs.models.operations.UpdateOrganizationRequest req = new UpdateOrganizationRequest(
+                "ACME, Inc",
+                "string"){{
                 domain = "acme.ai";
                 emailDomains = "acme.ai,acme.com";
                 notificationEmailAddress = "notifications@acme.ai";
@@ -482,9 +509,10 @@ public class Application {
                 slackWebhook = "https://hooks.slack.com/services/foo/bar";
                 storageBucketOverride = "https://s3.us-west-2.amazonaws.com/whylabs-public/";
                 subscriptionTier = SubscriptionTier.AWS_MARKETPLACE;
-            }};            
 
-            UpdateOrganizationResponse res = sdk.organizations.updateOrganization(req);
+            }};
+
+            ai.whylabs.WhyLabs.models.operations.UpdateOrganizationResponse res = sdk.organizations.updateOrganization(req);
 
             if (res.statusCode == 200) {
                 // handle response

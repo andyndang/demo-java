@@ -78,18 +78,23 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            CreateAccountUserRequest req = new CreateAccountUserRequest(new CreateAccountUserRequest("string"){{
-active = false;
-externalId = "string";
-userSchema = "string";
-}}, "org-123");            
+            ai.whylabs.WhyLabs.models.operations.CreateAccountUserRequest req = new CreateAccountUserRequest(
+                new CreateAccountUserRequest(
+                    "string"){{
+                    active = false;
+                    externalId = "string";
+                    userSchema = "string";
 
-            CreateAccountUserResponse res = sdk.internal.createAccountUser(req);
+                }},
+                "org-123");
+
+            ai.whylabs.WhyLabs.models.operations.CreateAccountUserResponse res = sdk.internal.createAccountUser(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -132,17 +137,22 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.AddMembershipRequest req = new AddMembershipRequest("string", "string", Role.ADMIN){{
+            ai.whylabs.WhyLabs.models.shared.AddMembershipRequest req = new AddMembershipRequest(
+                "string",
+                "string",
+                Role.ADMIN){{
                 createdBy = "string";
                 default_ = false;
-            }};            
 
-            CreateMembershipResponse res = sdk.internal.createMembership(req);
+            }};
+
+            ai.whylabs.WhyLabs.models.operations.CreateMembershipResponse res = sdk.internal.createMembership(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -185,12 +195,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            CreateOrganizationRequest req = new CreateOrganizationRequest("ACME, Inc"){{
+            ai.whylabs.WhyLabs.models.operations.CreateOrganizationRequest req = new CreateOrganizationRequest(
+                "ACME, Inc"){{
                 domain = "acme.ai";
                 emailDomains = "acme.ai,acme.com";
                 notificationEmailAddress = "notifications@acme.ai";
@@ -201,9 +213,10 @@ public class Application {
                 slackWebhook = "https://hooks.slack.com/services/foo/bar";
                 storageBucketOverride = "https://s3.us-west-2.amazonaws.com/whylabs-public/";
                 subscriptionTier = SubscriptionTier.FREE;
-            }};            
 
-            CreateOrganizationResponse res = sdk.internal.createOrganization(req);
+            }};
+
+            ai.whylabs.WhyLabs.models.operations.CreateOrganizationResponse res = sdk.internal.createOrganization(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -245,14 +258,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.CreateUserRequest req = new CreateUserRequest("string");            
+            ai.whylabs.WhyLabs.models.shared.CreateUserRequest req = new CreateUserRequest(
+                "string");
 
-            CreateUserResponse res = sdk.internal.createUser(req);
+            ai.whylabs.WhyLabs.models.operations.CreateUserResponse res = sdk.internal.createUser(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -294,14 +309,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            DeleteAccountUserRequest req = new DeleteAccountUserRequest("org-123", "user-123");            
+            ai.whylabs.WhyLabs.models.operations.DeleteAccountUserRequest req = new DeleteAccountUserRequest(
+                "org-123",
+                "user-123");
 
-            DeleteAccountUserResponse res = sdk.internal.deleteAccountUser(req);
+            ai.whylabs.WhyLabs.models.operations.DeleteAccountUserResponse res = sdk.internal.deleteAccountUser(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -343,14 +361,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            DeleteOrganizationRequest req = new DeleteOrganizationRequest("string");            
+            ai.whylabs.WhyLabs.models.operations.DeleteOrganizationRequest req = new DeleteOrganizationRequest(
+                "string");
 
-            DeleteOrganizationResponse res = sdk.internal.deleteOrganization(req);
+            ai.whylabs.WhyLabs.models.operations.DeleteOrganizationResponse res = sdk.internal.deleteOrganization(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -393,14 +413,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            GenerateReportRequest req = new GenerateReportRequest(AdminReportType.SESSIONS);            
+            ai.whylabs.WhyLabs.models.operations.GenerateReportRequest req = new GenerateReportRequest(
+                AdminReportType.SESSIONS);
 
-            GenerateReportResponse res = sdk.internal.generateReport(req);
+            ai.whylabs.WhyLabs.models.operations.GenerateReportResponse res = sdk.internal.generateReport(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -442,14 +464,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            GetAWSMarketplaceMetadataRequest req = new GetAWSMarketplaceMetadataRequest("string");            
+            ai.whylabs.WhyLabs.models.operations.GetAWSMarketplaceMetadataRequest req = new GetAWSMarketplaceMetadataRequest(
+                "string");
 
-            GetAWSMarketplaceMetadataResponse res = sdk.internal.getAWSMarketplaceMetadata(req);
+            ai.whylabs.WhyLabs.models.operations.GetAWSMarketplaceMetadataResponse res = sdk.internal.getAWSMarketplaceMetadata(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -492,18 +516,21 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            GetAccountMembershipsRequest req = new GetAccountMembershipsRequest("org-123"){{
+            ai.whylabs.WhyLabs.models.operations.GetAccountMembershipsRequest req = new GetAccountMembershipsRequest(
+                "org-123"){{
                 managedOrgId = "org-123";
                 role = Role.VIEWER;
                 userId = "user-123";
-            }};            
 
-            GetAccountMembershipsResponse res = sdk.internal.getAccountMemberships(req);
+            }};
+
+            ai.whylabs.WhyLabs.models.operations.GetAccountMembershipsResponse res = sdk.internal.getAccountMemberships(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -545,14 +572,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            GetAccountUserByEmailRequest req = new GetAccountUserByEmailRequest("user@whylabs.ai", "org-123");            
+            ai.whylabs.WhyLabs.models.operations.GetAccountUserByEmailRequest req = new GetAccountUserByEmailRequest(
+                "user@whylabs.ai",
+                "org-123");
 
-            GetAccountUserByEmailResponse res = sdk.internal.getAccountUserByEmail(req);
+            ai.whylabs.WhyLabs.models.operations.GetAccountUserByEmailResponse res = sdk.internal.getAccountUserByEmail(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -594,14 +624,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            GetAccountUserByIdRequest req = new GetAccountUserByIdRequest("org-123", "user-123");            
+            ai.whylabs.WhyLabs.models.operations.GetAccountUserByIdRequest req = new GetAccountUserByIdRequest(
+                "org-123",
+                "user-123");
 
-            GetAccountUserByIdResponse res = sdk.internal.getAccountUserById(req);
+            ai.whylabs.WhyLabs.models.operations.GetAccountUserByIdResponse res = sdk.internal.getAccountUserById(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -643,14 +676,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            GetApiKeyRequest req = new GetApiKeyRequest("fh4dUNV3WQ", "org-123");            
+            ai.whylabs.WhyLabs.models.operations.GetApiKeyRequest req = new GetApiKeyRequest(
+                "fh4dUNV3WQ",
+                "org-123");
 
-            GetApiKeyResponse res = sdk.internal.getApiKey(req);
+            ai.whylabs.WhyLabs.models.operations.GetApiKeyResponse res = sdk.internal.getApiKey(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -692,17 +728,20 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.GetConnectionRequest req = new GetConnectionRequest(){{
+            ai.whylabs.WhyLabs.models.shared.GetConnectionRequest req = new GetConnectionRequest(
+){{
                 orgId = "string";
                 workspaceId = "string";
-            }};            
 
-            GetConnectionResponse res = sdk.internal.getConnection(req);
+            }};
+
+            ai.whylabs.WhyLabs.models.operations.GetConnectionResponse res = sdk.internal.getConnection(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -744,14 +783,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            GetDefaultMembershipForEmailRequest req = new GetDefaultMembershipForEmailRequest("string");            
+            ai.whylabs.WhyLabs.models.operations.GetDefaultMembershipForEmailRequest req = new GetDefaultMembershipForEmailRequest(
+                "string");
 
-            GetDefaultMembershipForEmailResponse res = sdk.internal.getDefaultMembershipForEmail(req);
+            ai.whylabs.WhyLabs.models.operations.GetDefaultMembershipForEmailResponse res = sdk.internal.getDefaultMembershipForEmail(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -793,14 +834,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            GetFeatureFlagsRequest req = new GetFeatureFlagsRequest("string", "string");            
+            ai.whylabs.WhyLabs.models.operations.GetFeatureFlagsRequest req = new GetFeatureFlagsRequest(
+                "string",
+                "string");
 
-            GetFeatureFlagsResponse res = sdk.internal.getFeatureFlags(req);
+            ai.whylabs.WhyLabs.models.operations.GetFeatureFlagsResponse res = sdk.internal.getFeatureFlags(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -842,14 +886,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            GetMembershipsRequest req = new GetMembershipsRequest("string");            
+            ai.whylabs.WhyLabs.models.operations.GetMembershipsRequest req = new GetMembershipsRequest(
+                "string");
 
-            GetMembershipsResponse res = sdk.internal.getMemberships(req);
+            ai.whylabs.WhyLabs.models.operations.GetMembershipsResponse res = sdk.internal.getMemberships(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -891,14 +937,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            GetMembershipsByEmailRequest req = new GetMembershipsByEmailRequest("string");            
+            ai.whylabs.WhyLabs.models.operations.GetMembershipsByEmailRequest req = new GetMembershipsByEmailRequest(
+                "string");
 
-            GetMembershipsByEmailResponse res = sdk.internal.getMembershipsByEmail(req);
+            ai.whylabs.WhyLabs.models.operations.GetMembershipsByEmailResponse res = sdk.internal.getMembershipsByEmail(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -940,14 +988,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            GetMembershipsByOrgRequest req = new GetMembershipsByOrgRequest("string");            
+            ai.whylabs.WhyLabs.models.operations.GetMembershipsByOrgRequest req = new GetMembershipsByOrgRequest(
+                "string");
 
-            GetMembershipsByOrgResponse res = sdk.internal.getMembershipsByOrg(req);
+            ai.whylabs.WhyLabs.models.operations.GetMembershipsByOrgResponse res = sdk.internal.getMembershipsByOrg(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -989,14 +1039,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            GetMonitorConfigV3VersionRequest req = new GetMonitorConfigV3VersionRequest("model-123", "org-123", "4920545486e2a4cdf0f770c09748e663");            
+            ai.whylabs.WhyLabs.models.operations.GetMonitorConfigV3VersionRequest req = new GetMonitorConfigV3VersionRequest(
+                "model-123",
+                "org-123",
+                "4920545486e2a4cdf0f770c09748e663");
 
-            GetMonitorConfigV3VersionResponse res = sdk.internal.getMonitorConfigV3Version(req);
+            ai.whylabs.WhyLabs.models.operations.GetMonitorConfigV3VersionResponse res = sdk.internal.getMonitorConfigV3Version(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -1038,14 +1092,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            GetNotificationSettingsRequest req = new GetNotificationSettingsRequest("string");            
+            ai.whylabs.WhyLabs.models.operations.GetNotificationSettingsRequest req = new GetNotificationSettingsRequest(
+                "string");
 
-            GetNotificationSettingsResponse res = sdk.internal.getNotificationSettings(req);
+            ai.whylabs.WhyLabs.models.operations.GetNotificationSettingsResponse res = sdk.internal.getNotificationSettings(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -1087,14 +1143,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            GetOrganizationRequest req = new GetOrganizationRequest("string");            
+            ai.whylabs.WhyLabs.models.operations.GetOrganizationRequest req = new GetOrganizationRequest(
+                "string");
 
-            GetOrganizationResponse res = sdk.internal.getOrganization(req);
+            ai.whylabs.WhyLabs.models.operations.GetOrganizationResponse res = sdk.internal.getOrganization(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -1136,14 +1194,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            GetOrganizationSubscriptionsRequest req = new GetOrganizationSubscriptionsRequest("string");            
+            ai.whylabs.WhyLabs.models.operations.GetOrganizationSubscriptionsRequest req = new GetOrganizationSubscriptionsRequest(
+                "string");
 
-            GetOrganizationSubscriptionsResponse res = sdk.internal.getOrganizationSubscriptions(req);
+            ai.whylabs.WhyLabs.models.operations.GetOrganizationSubscriptionsResponse res = sdk.internal.getOrganizationSubscriptions(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -1185,14 +1245,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            GetUserRequest req = new GetUserRequest("string");            
+            ai.whylabs.WhyLabs.models.operations.GetUserRequest req = new GetUserRequest(
+                "string");
 
-            GetUserResponse res = sdk.internal.getUser(req);
+            ai.whylabs.WhyLabs.models.operations.GetUserResponse res = sdk.internal.getUser(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -1234,14 +1296,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            GetUserByEmailRequest req = new GetUserByEmailRequest("string");            
+            ai.whylabs.WhyLabs.models.operations.GetUserByEmailRequest req = new GetUserByEmailRequest(
+                "string");
 
-            GetUserByEmailResponse res = sdk.internal.getUserByEmail(req);
+            ai.whylabs.WhyLabs.models.operations.GetUserByEmailResponse res = sdk.internal.getUserByEmail(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -1286,18 +1350,24 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            HideSegmentsRequest req = new HideSegmentsRequest(new SegmentsListRequest(){{
-segments = new String[]{{
-    add("string"),
-}};
-}}, "model-123", "org-123");            
+            ai.whylabs.WhyLabs.models.operations.HideSegmentsRequest req = new HideSegmentsRequest(
+                new SegmentsListRequest(
+){{
+                    segments = new String[]{{
+                        add("string"),
+                    }};
 
-            HideSegmentsResponse res = sdk.internal.hideSegments(req);
+                }},
+                "model-123",
+                "org-123");
+
+            ai.whylabs.WhyLabs.models.operations.HideSegmentsResponse res = sdk.internal.hideSegments(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -1339,14 +1409,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ListAccountUsersRequest req = new ListAccountUsersRequest("org-123");            
+            ai.whylabs.WhyLabs.models.operations.ListAccountUsersRequest req = new ListAccountUsersRequest(
+                "org-123");
 
-            ListAccountUsersResponse res = sdk.internal.listAccountUsers(req);
+            ai.whylabs.WhyLabs.models.operations.ListAccountUsersResponse res = sdk.internal.listAccountUsers(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -1388,16 +1460,19 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ListApiKeysRequest req = new ListApiKeysRequest("org-123"){{
+            ai.whylabs.WhyLabs.models.operations.ListApiKeysRequest req = new ListApiKeysRequest(
+                "org-123"){{
                 userId = "user-123";
-            }};            
 
-            ListApiKeysResponse res = sdk.internal.listApiKeys(req);
+            }};
+
+            ai.whylabs.WhyLabs.models.operations.ListApiKeysResponse res = sdk.internal.listApiKeys(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -1439,17 +1514,20 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.ListJobsRequest req = new ListJobsRequest(){{
+            ai.whylabs.WhyLabs.models.shared.ListJobsRequest req = new ListJobsRequest(
+){{
                 orgId = "string";
                 workspaceId = "string";
-            }};            
 
-            ListJobsResponse res = sdk.internal.listJobs(req);
+            }};
+
+            ai.whylabs.WhyLabs.models.operations.ListJobsResponse res = sdk.internal.listJobs(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -1491,14 +1569,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ListManagedOrganizationsRequest req = new ListManagedOrganizationsRequest("org-123");            
+            ai.whylabs.WhyLabs.models.operations.ListManagedOrganizationsRequest req = new ListManagedOrganizationsRequest(
+                "org-123");
 
-            ListManagedOrganizationsResponse res = sdk.internal.listManagedOrganizations(req);
+            ai.whylabs.WhyLabs.models.operations.ListManagedOrganizationsResponse res = sdk.internal.listManagedOrganizations(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -1540,14 +1620,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ListMonitorConfigV3VersionsRequest req = new ListMonitorConfigV3VersionsRequest("model-123", "org-123");            
+            ai.whylabs.WhyLabs.models.operations.ListMonitorConfigV3VersionsRequest req = new ListMonitorConfigV3VersionsRequest(
+                "model-123",
+                "org-123");
 
-            ListMonitorConfigV3VersionsResponse res = sdk.internal.listMonitorConfigV3Versions(req);
+            ai.whylabs.WhyLabs.models.operations.ListMonitorConfigV3VersionsResponse res = sdk.internal.listMonitorConfigV3Versions(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -1588,12 +1671,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ListOrganizationsResponse res = sdk.internal.listOrganizations();
+            ai.whylabs.WhyLabs.models.operations.ListOrganizationsResponse res = sdk.internal.listOrganizations();
 
             if (res.statusCode == 200) {
                 // handle response
@@ -1633,23 +1717,28 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            PartiallyUpdateOrgRequest req = new PartiallyUpdateOrgRequest(new PartiallyUpdateOrgRequestBody(){{
-orgId = "string";
-}}){{
+            ai.whylabs.WhyLabs.models.operations.PartiallyUpdateOrgRequest req = new PartiallyUpdateOrgRequest(
+                new PartiallyUpdateOrgRequestBody(
+){{
+                    orgId = "string";
+
+                }}){{
                 domain = "acme.ai";
                 name = "ACME, Inc";
                 notificationEmailAddress = "notifications@acme.ai";
                 observatoryUrl = "https://hub.whylabsapp.com";
                 slackWebhook = "https://hooks.slack.com/services/foo/bar";
                 subscriptionTier = SubscriptionTier.PAID;
-            }};            
 
-            PartiallyUpdateOrgResponse res = sdk.internal.partiallyUpdateOrg(req);
+            }};
+
+            ai.whylabs.WhyLabs.models.operations.PartiallyUpdateOrgResponse res = sdk.internal.partiallyUpdateOrg(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -1692,12 +1781,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            PartiallyUpdateOrganizationRequest req = new PartiallyUpdateOrganizationRequest("string"){{
+            ai.whylabs.WhyLabs.models.operations.PartiallyUpdateOrganizationRequest req = new PartiallyUpdateOrganizationRequest(
+                "string"){{
                 domain = "acme.ai";
                 emailDomains = "acme.ai,acme.com";
                 name = "ACME, Inc";
@@ -1708,9 +1799,10 @@ public class Application {
                 slackWebhook = "https://hooks.slack.com/services/foo/bar";
                 storageBucketOverride = "https://s3.us-west-2.amazonaws.com/whylabs-public/";
                 subscriptionTier = SubscriptionTier.PAID;
-            }};            
 
-            PartiallyUpdateOrganizationResponse res = sdk.internal.partiallyUpdateOrganization(req);
+            }};
+
+            ai.whylabs.WhyLabs.models.operations.PartiallyUpdateOrganizationResponse res = sdk.internal.partiallyUpdateOrganization(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -1754,18 +1846,25 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            PatchOrganizationMembershipsRequest req = new PatchOrganizationMembershipsRequest(new PatchAccountMembershipsRequest(new String[]{{
-    add("string"),
-}}, new String[]{{
-    add("string"),
-}}), "org-123", "org-123", Role.VIEWER);            
+            ai.whylabs.WhyLabs.models.operations.PatchOrganizationMembershipsRequest req = new PatchOrganizationMembershipsRequest(
+                new PatchAccountMembershipsRequest(
+                    new String[]{{
+                        add("string"),
+                    }},
+                    new String[]{{
+                        add("string"),
+                    }}),
+                "org-123",
+                "org-123",
+                Role.VIEWER);
 
-            PatchOrganizationMembershipsResponse res = sdk.internal.patchOrganizationMemberships(req);
+            ai.whylabs.WhyLabs.models.operations.PatchOrganizationMembershipsResponse res = sdk.internal.patchOrganizationMemberships(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -1806,12 +1905,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            PostMonitorConfigValidationJobResponse res = sdk.internal.postMonitorConfigValidationJob();
+            ai.whylabs.WhyLabs.models.operations.PostMonitorConfigValidationJobResponse res = sdk.internal.postMonitorConfigValidationJob();
 
             if (res.statusCode == 200) {
                 // handle response
@@ -1847,16 +1947,22 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.ProvisionNewMarketplaceUserRequest req = new ProvisionNewMarketplaceUserRequest("string", "string", "string", "string"){{
+            ai.whylabs.WhyLabs.models.shared.ProvisionNewMarketplaceUserRequest req = new ProvisionNewMarketplaceUserRequest(
+                "string",
+                "string",
+                "string",
+                "string"){{
                 expectExisting = false;
-            }};            
 
-            ProvisionAWSMarketplaceNewUserResponse res = sdk.internal.provisionAWSMarketplaceNewUser(req);
+            }};
+
+            ai.whylabs.WhyLabs.models.operations.ProvisionAWSMarketplaceNewUserResponse res = sdk.internal.provisionAWSMarketplaceNewUser(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -1898,14 +2004,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.ProvisionDatabricksConnectionRequest req = new ProvisionDatabricksConnectionRequest("string", false, "string");            
+            ai.whylabs.WhyLabs.models.shared.ProvisionDatabricksConnectionRequest req = new ProvisionDatabricksConnectionRequest(
+                "string",
+                false,
+                "string");
 
-            ProvisionDatabricksConnectionResponse res = sdk.internal.provisionDatabricksConnection(req);
+            ai.whylabs.WhyLabs.models.operations.ProvisionDatabricksConnectionResponse res = sdk.internal.provisionDatabricksConnection(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -1948,16 +2058,22 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.ProvisionNewUserRequest req = new ProvisionNewUserRequest("string", "string", "string", SubscriptionTier.AWS_MARKETPLACE){{
+            ai.whylabs.WhyLabs.models.shared.ProvisionNewUserRequest req = new ProvisionNewUserRequest(
+                "string",
+                "string",
+                "string",
+                SubscriptionTier.AWS_MARKETPLACE){{
                 expectExisting = false;
-            }};            
 
-            ProvisionNewUserResponse res = sdk.internal.provisionNewUser(req);
+            }};
+
+            ai.whylabs.WhyLabs.models.operations.ProvisionNewUserResponse res = sdk.internal.provisionNewUser(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -2001,16 +2117,22 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            PutOrganizationMembershipsRequest req = new PutOrganizationMembershipsRequest(new PutAccountMembershipsRequest(new String[]{{
-    add("string"),
-}}), "org-123", "org-123", Role.VIEWER);            
+            ai.whylabs.WhyLabs.models.operations.PutOrganizationMembershipsRequest req = new PutOrganizationMembershipsRequest(
+                new PutAccountMembershipsRequest(
+                    new String[]{{
+                        add("string"),
+                    }}),
+                "org-123",
+                "org-123",
+                Role.VIEWER);
 
-            PutOrganizationMembershipsResponse res = sdk.internal.putOrganizationMemberships(req);
+            ai.whylabs.WhyLabs.models.operations.PutOrganizationMembershipsResponse res = sdk.internal.putOrganizationMemberships(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -2053,34 +2175,40 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            PutRequestMonitorRunConfigRequest req = new PutRequestMonitorRunConfigRequest(new PutRequestMonitorRunConfigRequestBody(){{
-analyzerIds = new String[]{{
-    add("d"),
-    add("r"),
-    add("i"),
-    add("f"),
-    add("t"),
-    add("-"),
-    add("a"),
-    add("n"),
-    add("a"),
-    add("l"),
-    add("y"),
-    add("z"),
-    add("e"),
-    add("r"),
-}};
-endTimestamp = 1893456000000L;
-overwrite = false;
-startTimestamp = 1577836800000L;
-}}, "model-123", "org-123");            
+            ai.whylabs.WhyLabs.models.operations.PutRequestMonitorRunConfigRequest req = new PutRequestMonitorRunConfigRequest(
+                new PutRequestMonitorRunConfigRequestBody(
+){{
+                    analyzerIds = new String[]{{
+                        add("d"),
+                        add("r"),
+                        add("i"),
+                        add("f"),
+                        add("t"),
+                        add("-"),
+                        add("a"),
+                        add("n"),
+                        add("a"),
+                        add("l"),
+                        add("y"),
+                        add("z"),
+                        add("e"),
+                        add("r"),
+                    }};
+                    endTimestamp = 1893456000000L;
+                    overwrite = false;
+                    startTimestamp = 1577836800000L;
 
-            PutRequestMonitorRunConfigResponse res = sdk.internal.putRequestMonitorRunConfig(req);
+                }},
+                "model-123",
+                "org-123");
+
+            ai.whylabs.WhyLabs.models.operations.PutRequestMonitorRunConfigResponse res = sdk.internal.putRequestMonitorRunConfig(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -2122,17 +2250,20 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.RefreshConnectionRequest req = new RefreshConnectionRequest(){{
+            ai.whylabs.WhyLabs.models.shared.RefreshConnectionRequest req = new RefreshConnectionRequest(
+){{
                 orgId = "string";
                 workspaceId = "string";
-            }};            
 
-            RefreshConnectionResponse res = sdk.internal.refreshConnection(req);
+            }};
+
+            ai.whylabs.WhyLabs.models.operations.RefreshConnectionResponse res = sdk.internal.refreshConnection(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -2174,17 +2305,28 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.RegisterDatabricksConnectionRequest req = new RegisterDatabricksConnectionRequest("string", "string", "string", false, "string", "string", 369919, "string", "string"){{
+            ai.whylabs.WhyLabs.models.shared.RegisterDatabricksConnectionRequest req = new RegisterDatabricksConnectionRequest(
+                "string",
+                "string",
+                "string",
+                false,
+                "string",
+                "string",
+                369919,
+                "string",
+                "string"){{
                 connectionEstablished = false;
                 freeTrial = false;
-            }};            
 
-            RegisterDatabricksConnectionResponse res = sdk.internal.registerDatabricksConnection(req);
+            }};
+
+            ai.whylabs.WhyLabs.models.operations.RegisterDatabricksConnectionResponse res = sdk.internal.registerDatabricksConnection(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -2226,14 +2368,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.RemoveMembershipRequest req = new RemoveMembershipRequest("string", "string");            
+            ai.whylabs.WhyLabs.models.shared.RemoveMembershipRequest req = new RemoveMembershipRequest(
+                "string",
+                "string");
 
-            RemoveMembershipByEmailResponse res = sdk.internal.removeMembershipByEmail(req);
+            ai.whylabs.WhyLabs.models.operations.RemoveMembershipByEmailResponse res = sdk.internal.removeMembershipByEmail(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -2275,17 +2420,20 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.RunJobRequest req = new RunJobRequest(353621L){{
+            ai.whylabs.WhyLabs.models.shared.RunJobRequest req = new RunJobRequest(
+                353621L){{
                 orgId = "string";
                 workspaceId = "string";
-            }};            
 
-            RunJobResponse res = sdk.internal.runJob(req);
+            }};
+
+            ai.whylabs.WhyLabs.models.operations.RunJobResponse res = sdk.internal.runJob(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -2327,14 +2475,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.SetDefaultMembershipRequest req = new SetDefaultMembershipRequest("string", "string");            
+            ai.whylabs.WhyLabs.models.shared.SetDefaultMembershipRequest req = new SetDefaultMembershipRequest(
+                "string",
+                "string");
 
-            SetDefaultMembershipResponse res = sdk.internal.setDefaultMembership(req);
+            ai.whylabs.WhyLabs.models.operations.SetDefaultMembershipResponse res = sdk.internal.setDefaultMembership(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -2375,14 +2526,15 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ai.whylabs.WhyLabs.models.. req = "string";            
+            String req = "string";
 
-            StripePaymentEndpointResponse res = sdk.internal.stripePaymentEndpoint(req);
+            ai.whylabs.WhyLabs.models.operations.StripePaymentEndpointResponse res = sdk.internal.stripePaymentEndpoint(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -2425,18 +2577,24 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            UpdateAccountUserRequest req = new UpdateAccountUserRequest(new UpdateAccountUserRequest(){{
-active = false;
-externalId = "string";
-userSchema = "string";
-}}, "org-123", "user-123");            
+            ai.whylabs.WhyLabs.models.operations.UpdateAccountUserRequest req = new UpdateAccountUserRequest(
+                new UpdateAccountUserRequest(
+){{
+                    active = false;
+                    externalId = "string";
+                    userSchema = "string";
 
-            UpdateAccountUserResponse res = sdk.internal.updateAccountUser(req);
+                }},
+                "org-123",
+                "user-123");
+
+            ai.whylabs.WhyLabs.models.operations.UpdateAccountUserResponse res = sdk.internal.updateAccountUser(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -2479,22 +2637,27 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.UpdateConnectionRequest req = new UpdateConnectionRequest(){{
-                changes = new UpdateConnectionChanges(){{
+            ai.whylabs.WhyLabs.models.shared.UpdateConnectionRequest req = new UpdateConnectionRequest(
+){{
+                changes = new UpdateConnectionChanges(
+){{
                     connected = false;
                     demo = false;
                     orgId = "string";
+
                 }};
                 orgId = "string";
                 workspaceId = "string";
-            }};            
 
-            UpdateConnectionResponse res = sdk.internal.updateConnection(req);
+            }};
+
+            ai.whylabs.WhyLabs.models.operations.UpdateConnectionResponse res = sdk.internal.updateConnection(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -2537,14 +2700,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.UpdateMembershipRequest req = new UpdateMembershipRequest("string", "string", Role.VIEWER);            
+            ai.whylabs.WhyLabs.models.shared.UpdateMembershipRequest req = new UpdateMembershipRequest(
+                "string",
+                "string",
+                Role.VIEWER);
 
-            UpdateMembershipByEmailResponse res = sdk.internal.updateMembershipByEmail(req);
+            ai.whylabs.WhyLabs.models.operations.UpdateMembershipByEmailResponse res = sdk.internal.updateMembershipByEmail(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -2590,33 +2757,47 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            UpdateNotificationSettingsRequest req = new UpdateNotificationSettingsRequest(new NotificationSettings(){{
-emailSettings = new UberNotificationSchedule(NotificationSqsMessageCadence.HOURLY, false){{
-    dayOfWeek = NotificationSettingsDay.MONDAY;
-    local24HourOfDay = 809295;
-    localMinuteOfHour = 562664;
-    localTimezone = "string";
-}};
-pagerDutySettings = new UberNotificationSchedule(NotificationSqsMessageCadence.DAILY, false){{
-    dayOfWeek = NotificationSettingsDay.SUNDAY;
-    local24HourOfDay = 410267;
-    localMinuteOfHour = 406102;
-    localTimezone = "string";
-}};
-slackSettings = new UberNotificationSchedule(NotificationSqsMessageCadence.INDIVIDUAL, false){{
-    dayOfWeek = NotificationSettingsDay.THURSDAY;
-    local24HourOfDay = 259105;
-    localMinuteOfHour = 749170;
-    localTimezone = "string";
-}};
-}}, "string");            
+            ai.whylabs.WhyLabs.models.operations.UpdateNotificationSettingsRequest req = new UpdateNotificationSettingsRequest(
+                new NotificationSettings(
+){{
+                    emailSettings = new UberNotificationSchedule(
+                        NotificationSqsMessageCadence.HOURLY,
+                        false){{
+                        dayOfWeek = NotificationSettingsDay.MONDAY;
+                        local24HourOfDay = 809295;
+                        localMinuteOfHour = 562664;
+                        localTimezone = "string";
 
-            UpdateNotificationSettingsResponse res = sdk.internal.updateNotificationSettings(req);
+                    }};
+                    pagerDutySettings = new UberNotificationSchedule(
+                        NotificationSqsMessageCadence.DAILY,
+                        false){{
+                        dayOfWeek = NotificationSettingsDay.SUNDAY;
+                        local24HourOfDay = 410267;
+                        localMinuteOfHour = 406102;
+                        localTimezone = "string";
+
+                    }};
+                    slackSettings = new UberNotificationSchedule(
+                        NotificationSqsMessageCadence.INDIVIDUAL,
+                        false){{
+                        dayOfWeek = NotificationSettingsDay.THURSDAY;
+                        local24HourOfDay = 259105;
+                        localMinuteOfHour = 749170;
+                        localTimezone = "string";
+
+                    }};
+
+                }},
+                "string");
+
+            ai.whylabs.WhyLabs.models.operations.UpdateNotificationSettingsResponse res = sdk.internal.updateNotificationSettings(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -2662,14 +2843,19 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            UpdateOrgRequest req = new UpdateOrgRequest(new UpdateOrgRequestBody(){{
-orgId = "string";
-}}, "ACME, Inc"){{
+            ai.whylabs.WhyLabs.models.operations.UpdateOrgRequest req = new UpdateOrgRequest(
+                new UpdateOrgRequestBody(
+){{
+                    orgId = "string";
+
+                }},
+                "ACME, Inc"){{
                 domain = "acme.ai";
                 emailDomains = "acme.ai,acme.com";
                 notificationEmailAddress = "notifications@acme.ai";
@@ -2678,9 +2864,10 @@ orgId = "string";
                 parentOrgId = "org-123";
                 slackWebhook = "https://hooks.slack.com/services/foo/bar";
                 subscriptionTier = SubscriptionTier.AWS_MARKETPLACE;
-            }};            
 
-            UpdateOrgResponse res = sdk.internal.updateOrg(req);
+            }};
+
+            ai.whylabs.WhyLabs.models.operations.UpdateOrgResponse res = sdk.internal.updateOrg(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -2723,12 +2910,15 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            UpdateOrganizationRequest req = new UpdateOrganizationRequest("ACME, Inc", "string"){{
+            ai.whylabs.WhyLabs.models.operations.UpdateOrganizationRequest req = new UpdateOrganizationRequest(
+                "ACME, Inc",
+                "string"){{
                 domain = "acme.ai";
                 emailDomains = "acme.ai,acme.com";
                 notificationEmailAddress = "notifications@acme.ai";
@@ -2738,9 +2928,10 @@ public class Application {
                 slackWebhook = "https://hooks.slack.com/services/foo/bar";
                 storageBucketOverride = "https://s3.us-west-2.amazonaws.com/whylabs-public/";
                 subscriptionTier = SubscriptionTier.AWS_MARKETPLACE;
-            }};            
 
-            UpdateOrganizationResponse res = sdk.internal.updateOrganization(req);
+            }};
+
+            ai.whylabs.WhyLabs.models.operations.UpdateOrganizationResponse res = sdk.internal.updateOrganization(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -2782,16 +2973,20 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.User req = new User("string", "string"){{
+            ai.whylabs.WhyLabs.models.shared.User req = new User(
+                "string",
+                "string"){{
                 preferences = "string";
-            }};            
 
-            UpdateUserResponse res = sdk.internal.updateUser(req);
+            }};
+
+            ai.whylabs.WhyLabs.models.operations.UpdateUserResponse res = sdk.internal.updateUser(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -2833,14 +3028,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            WhyLabsSearchRequest req = new WhyLabsSearchRequest("string");            
+            ai.whylabs.WhyLabs.models.operations.WhyLabsSearchRequest req = new WhyLabsSearchRequest(
+                "string");
 
-            WhyLabsSearchResponse res = sdk.internal.whyLabsSearch(req);
+            ai.whylabs.WhyLabs.models.operations.WhyLabsSearchResponse res = sdk.internal.whyLabsSearch(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -2883,17 +3080,20 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.SearchIndexRequest req = new SearchIndexRequest(){{
+            ai.whylabs.WhyLabs.models.shared.SearchIndexRequest req = new SearchIndexRequest(
+){{
                 orgId = "string";
                 type = SearchIndexType.MODELS;
-            }};            
 
-            WhyLabsSearchIndexingResponse res = sdk.internal.whyLabsSearchIndexing(req);
+            }};
+
+            ai.whylabs.WhyLabs.models.operations.WhyLabsSearchIndexingResponse res = sdk.internal.whyLabsSearchIndexing(req);
 
             if (res.statusCode == 200) {
                 // handle response

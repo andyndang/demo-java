@@ -26,14 +26,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.CreateUserRequest req = new CreateUserRequest("string");            
+            ai.whylabs.WhyLabs.models.shared.CreateUserRequest req = new CreateUserRequest(
+                "string");
 
-            CreateUserResponse res = sdk.user.createUser(req);
+            ai.whylabs.WhyLabs.models.operations.CreateUserResponse res = sdk.user.createUser(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -75,14 +77,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            GetUserRequest req = new GetUserRequest("string");            
+            ai.whylabs.WhyLabs.models.operations.GetUserRequest req = new GetUserRequest(
+                "string");
 
-            GetUserResponse res = sdk.user.getUser(req);
+            ai.whylabs.WhyLabs.models.operations.GetUserResponse res = sdk.user.getUser(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -124,14 +128,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            GetUserByEmailRequest req = new GetUserByEmailRequest("string");            
+            ai.whylabs.WhyLabs.models.operations.GetUserByEmailRequest req = new GetUserByEmailRequest(
+                "string");
 
-            GetUserByEmailResponse res = sdk.user.getUserByEmail(req);
+            ai.whylabs.WhyLabs.models.operations.GetUserByEmailResponse res = sdk.user.getUserByEmail(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -173,16 +179,20 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.User req = new User("string", "string"){{
+            ai.whylabs.WhyLabs.models.shared.User req = new User(
+                "string",
+                "string"){{
                 preferences = "string";
-            }};            
 
-            UpdateUserResponse res = sdk.user.updateUser(req);
+            }};
+
+            ai.whylabs.WhyLabs.models.operations.UpdateUserResponse res = sdk.user.updateUser(req);
 
             if (res.statusCode == 200) {
                 // handle response

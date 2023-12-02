@@ -26,12 +26,15 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            CreateApiKeyRequest req = new CreateApiKeyRequest("org-123", "user-123"){{
+            ai.whylabs.WhyLabs.models.operations.CreateApiKeyRequest req = new CreateApiKeyRequest(
+                "org-123",
+                "user-123"){{
                 alias = "MLApplicationName";
                 expirationTime = 1577836800000L;
                 scopes = new String[]{{
@@ -41,9 +44,10 @@ public class Application {
                     add("e"),
                     add("r"),
                 }};
-            }};            
 
-            CreateApiKeyResponse res = sdk.apiKey.createApiKey(req);
+            }};
+
+            ai.whylabs.WhyLabs.models.operations.CreateApiKeyResponse res = sdk.apiKey.createApiKey(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -85,14 +89,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            GetApiKeyRequest req = new GetApiKeyRequest("fh4dUNV3WQ", "org-123");            
+            ai.whylabs.WhyLabs.models.operations.GetApiKeyRequest req = new GetApiKeyRequest(
+                "fh4dUNV3WQ",
+                "org-123");
 
-            GetApiKeyResponse res = sdk.apiKey.getApiKey(req);
+            ai.whylabs.WhyLabs.models.operations.GetApiKeyResponse res = sdk.apiKey.getApiKey(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -134,16 +141,19 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ListApiKeysRequest req = new ListApiKeysRequest("org-123"){{
+            ai.whylabs.WhyLabs.models.operations.ListApiKeysRequest req = new ListApiKeysRequest(
+                "org-123"){{
                 userId = "user-123";
-            }};            
 
-            ListApiKeysResponse res = sdk.apiKey.listApiKeys(req);
+            }};
+
+            ai.whylabs.WhyLabs.models.operations.ListApiKeysResponse res = sdk.apiKey.listApiKeys(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -185,14 +195,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            RevokeApiKeyRequest req = new RevokeApiKeyRequest("HMiFAgQeNb", "org-123", "user-123");            
+            ai.whylabs.WhyLabs.models.operations.RevokeApiKeyRequest req = new RevokeApiKeyRequest(
+                "HMiFAgQeNb",
+                "org-123",
+                "user-123");
 
-            RevokeApiKeyResponse res = sdk.apiKey.revokeApiKey(req);
+            ai.whylabs.WhyLabs.models.operations.RevokeApiKeyResponse res = sdk.apiKey.revokeApiKey(req);
 
             if (res.statusCode == 200) {
                 // handle response

@@ -25,14 +25,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            GenerateReportRequest req = new GenerateReportRequest(AdminReportType.SESSIONS);            
+            ai.whylabs.WhyLabs.models.operations.GenerateReportRequest req = new GenerateReportRequest(
+                AdminReportType.SESSIONS);
 
-            GenerateReportResponse res = sdk.admin.generateReport(req);
+            ai.whylabs.WhyLabs.models.operations.GenerateReportResponse res = sdk.admin.generateReport(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -73,12 +75,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            PostMonitorConfigValidationJobResponse res = sdk.admin.postMonitorConfigValidationJob();
+            ai.whylabs.WhyLabs.models.operations.PostMonitorConfigValidationJobResponse res = sdk.admin.postMonitorConfigValidationJob();
 
             if (res.statusCode == 200) {
                 // handle response

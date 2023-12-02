@@ -27,27 +27,36 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            LogDebugEventRequest req = new LogDebugEventRequest(new DebugEvent(){{
-content = "string";
-creationTimestamp = 757415L;
-datasetTimestamp = 526161L;
-segment = new Segment(){{
-    tags = new ai.whylabs.WhyLabs.models.shared.SegmentTag[]{{
-        add(new SegmentTag(){{}}),
-    }};
-}};
-tags = new String[]{{
-    add("string"),
-}};
-traceId = "string";
-}}, "model-123", "org-123");            
+            ai.whylabs.WhyLabs.models.operations.LogDebugEventRequest req = new LogDebugEventRequest(
+                new DebugEvent(
+){{
+                    content = "string";
+                    creationTimestamp = 757415L;
+                    datasetTimestamp = 526161L;
+                    segment = new Segment(
+){{
+                        tags = new ai.whylabs.WhyLabs.models.shared.SegmentTag[]{{
+                            add(new SegmentTag(
+                            ){{}}),
+                        }};
 
-            LogDebugEventResponse res = sdk.debugEvents.logDebugEvent(req);
+                    }};
+                    tags = new String[]{{
+                        add("string"),
+                    }};
+                    traceId = "string";
+
+                }},
+                "model-123",
+                "org-123");
+
+            ai.whylabs.WhyLabs.models.operations.LogDebugEventResponse res = sdk.debugEvents.logDebugEvent(req);
 
             if (res.statusCode == 200) {
                 // handle response

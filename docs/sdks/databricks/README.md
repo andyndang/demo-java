@@ -27,17 +27,20 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.GetConnectionRequest req = new GetConnectionRequest(){{
+            ai.whylabs.WhyLabs.models.shared.GetConnectionRequest req = new GetConnectionRequest(
+){{
                 orgId = "string";
                 workspaceId = "string";
-            }};            
 
-            GetConnectionResponse res = sdk.databricks.getConnection(req);
+            }};
+
+            ai.whylabs.WhyLabs.models.operations.GetConnectionResponse res = sdk.databricks.getConnection(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -79,17 +82,20 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.ListJobsRequest req = new ListJobsRequest(){{
+            ai.whylabs.WhyLabs.models.shared.ListJobsRequest req = new ListJobsRequest(
+){{
                 orgId = "string";
                 workspaceId = "string";
-            }};            
 
-            ListJobsResponse res = sdk.databricks.listJobs(req);
+            }};
+
+            ai.whylabs.WhyLabs.models.operations.ListJobsResponse res = sdk.databricks.listJobs(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -131,17 +137,20 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.RefreshConnectionRequest req = new RefreshConnectionRequest(){{
+            ai.whylabs.WhyLabs.models.shared.RefreshConnectionRequest req = new RefreshConnectionRequest(
+){{
                 orgId = "string";
                 workspaceId = "string";
-            }};            
 
-            RefreshConnectionResponse res = sdk.databricks.refreshConnection(req);
+            }};
+
+            ai.whylabs.WhyLabs.models.operations.RefreshConnectionResponse res = sdk.databricks.refreshConnection(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -183,17 +192,20 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.RunJobRequest req = new RunJobRequest(353621L){{
+            ai.whylabs.WhyLabs.models.shared.RunJobRequest req = new RunJobRequest(
+                353621L){{
                 orgId = "string";
                 workspaceId = "string";
-            }};            
 
-            RunJobResponse res = sdk.databricks.runJob(req);
+            }};
+
+            ai.whylabs.WhyLabs.models.operations.RunJobResponse res = sdk.databricks.runJob(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -236,22 +248,27 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.UpdateConnectionRequest req = new UpdateConnectionRequest(){{
-                changes = new UpdateConnectionChanges(){{
+            ai.whylabs.WhyLabs.models.shared.UpdateConnectionRequest req = new UpdateConnectionRequest(
+){{
+                changes = new UpdateConnectionChanges(
+){{
                     connected = false;
                     demo = false;
                     orgId = "string";
+
                 }};
                 orgId = "string";
                 workspaceId = "string";
-            }};            
 
-            UpdateConnectionResponse res = sdk.databricks.updateConnection(req);
+            }};
+
+            ai.whylabs.WhyLabs.models.operations.UpdateConnectionResponse res = sdk.databricks.updateConnection(req);
 
             if (res.statusCode == 200) {
                 // handle response

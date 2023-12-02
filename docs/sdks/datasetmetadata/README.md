@@ -25,14 +25,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            DeleteDatasetMetadataRequest req = new DeleteDatasetMetadataRequest("model-123", "org-123");            
+            ai.whylabs.WhyLabs.models.operations.DeleteDatasetMetadataRequest req = new DeleteDatasetMetadataRequest(
+                "model-123",
+                "org-123");
 
-            DeleteDatasetMetadataResponse res = sdk.datasetMetadata.deleteDatasetMetadata(req);
+            ai.whylabs.WhyLabs.models.operations.DeleteDatasetMetadataResponse res = sdk.datasetMetadata.deleteDatasetMetadata(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -74,14 +77,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            GetDatasetMetadataRequest req = new GetDatasetMetadataRequest("model-123", "org-123");            
+            ai.whylabs.WhyLabs.models.operations.GetDatasetMetadataRequest req = new GetDatasetMetadataRequest(
+                "model-123",
+                "org-123");
 
-            GetDatasetMetadataResponse res = sdk.datasetMetadata.getDatasetMetadata(req);
+            ai.whylabs.WhyLabs.models.operations.GetDatasetMetadataResponse res = sdk.datasetMetadata.getDatasetMetadata(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -123,14 +129,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            PutDatasetMetadataRequest req = new PutDatasetMetadataRequest("string", "model-123", "org-123");            
+            ai.whylabs.WhyLabs.models.operations.PutDatasetMetadataRequest req = new PutDatasetMetadataRequest(
+                "string",
+                "model-123",
+                "org-123");
 
-            PutDatasetMetadataResponse res = sdk.datasetMetadata.putDatasetMetadata(req);
+            ai.whylabs.WhyLabs.models.operations.PutDatasetMetadataResponse res = sdk.datasetMetadata.putDatasetMetadata(req);
 
             if (res.statusCode == 200) {
                 // handle response

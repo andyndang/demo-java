@@ -24,18 +24,21 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ExportTracesJsonRequest req = new ExportTracesJsonRequest(new String[]{{
-    add("string"),
-}}){{
+            ai.whylabs.WhyLabs.models.operations.ExportTracesJsonRequest req = new ExportTracesJsonRequest(
+                new String[]{{
+                    add("string"),
+                }}){{
                 xWhylabsResource = "resource-1";
-            }};            
 
-            ExportTracesJsonResponse res = sdk.traces.exportTracesJson(req);
+            }};
+
+            ai.whylabs.WhyLabs.models.operations.ExportTracesJsonResponse res = sdk.traces.exportTracesJson(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -77,16 +80,19 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ExportTracesRawRequest req = new ExportTracesRawRequest("0x13AeB07844".getBytes()){{
+            ai.whylabs.WhyLabs.models.operations.ExportTracesRawRequest req = new ExportTracesRawRequest(
+                "0x13AeB07844".getBytes()){{
                 xWhylabsResource = "resource-1";
-            }};            
 
-            ExportTracesRawResponse res = sdk.traces.exportTracesRaw(req);
+            }};
+
+            ai.whylabs.WhyLabs.models.operations.ExportTracesRawResponse res = sdk.traces.exportTracesRaw(req);
 
             if (res.statusCode == 200) {
                 // handle response

@@ -37,14 +37,19 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            AddNotificationActionRequest req = new AddNotificationActionRequest("string", "user-action", "org-123", ActionType.SLACK);            
+            ai.whylabs.WhyLabs.models.operations.AddNotificationActionRequest req = new AddNotificationActionRequest(
+                "string",
+                "user-action",
+                "org-123",
+                ActionType.SLACK);
 
-            AddNotificationActionResponse res = sdk.notificationSettings.addNotificationAction(req);
+            ai.whylabs.WhyLabs.models.operations.AddNotificationActionResponse res = sdk.notificationSettings.addNotificationAction(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -86,14 +91,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            DeleteNotificationActionRequest req = new DeleteNotificationActionRequest("user-action", "org-123");            
+            ai.whylabs.WhyLabs.models.operations.DeleteNotificationActionRequest req = new DeleteNotificationActionRequest(
+                "user-action",
+                "org-123");
 
-            DeleteNotificationActionResponse res = sdk.notificationSettings.deleteNotificationAction(req);
+            ai.whylabs.WhyLabs.models.operations.DeleteNotificationActionResponse res = sdk.notificationSettings.deleteNotificationAction(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -135,14 +143,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            DisableNotificationActionRequest req = new DisableNotificationActionRequest("user-action", "org-123");            
+            ai.whylabs.WhyLabs.models.operations.DisableNotificationActionRequest req = new DisableNotificationActionRequest(
+                "user-action",
+                "org-123");
 
-            DisableNotificationActionResponse res = sdk.notificationSettings.disableNotificationAction(req);
+            ai.whylabs.WhyLabs.models.operations.DisableNotificationActionResponse res = sdk.notificationSettings.disableNotificationAction(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -184,14 +195,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            EnableNotificationActionRequest req = new EnableNotificationActionRequest("user-action", "org-123");            
+            ai.whylabs.WhyLabs.models.operations.EnableNotificationActionRequest req = new EnableNotificationActionRequest(
+                "user-action",
+                "org-123");
 
-            EnableNotificationActionResponse res = sdk.notificationSettings.enableNotificationAction(req);
+            ai.whylabs.WhyLabs.models.operations.EnableNotificationActionResponse res = sdk.notificationSettings.enableNotificationAction(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -233,14 +247,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            GetNotificationActionRequest req = new GetNotificationActionRequest("user-action", "org-123");            
+            ai.whylabs.WhyLabs.models.operations.GetNotificationActionRequest req = new GetNotificationActionRequest(
+                "user-action",
+                "org-123");
 
-            GetNotificationActionResponse res = sdk.notificationSettings.getNotificationAction(req);
+            ai.whylabs.WhyLabs.models.operations.GetNotificationActionResponse res = sdk.notificationSettings.getNotificationAction(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -282,14 +299,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            GetNotificationSettingsRequest req = new GetNotificationSettingsRequest("string");            
+            ai.whylabs.WhyLabs.models.operations.GetNotificationSettingsRequest req = new GetNotificationSettingsRequest(
+                "string");
 
-            GetNotificationSettingsResponse res = sdk.notificationSettings.getNotificationSettings(req);
+            ai.whylabs.WhyLabs.models.operations.GetNotificationSettingsResponse res = sdk.notificationSettings.getNotificationSettings(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -331,14 +350,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ListNotificationActionsRequest req = new ListNotificationActionsRequest("org-123");            
+            ai.whylabs.WhyLabs.models.operations.ListNotificationActionsRequest req = new ListNotificationActionsRequest(
+                "org-123");
 
-            ListNotificationActionsResponse res = sdk.notificationSettings.listNotificationActions(req);
+            ai.whylabs.WhyLabs.models.operations.ListNotificationActionsResponse res = sdk.notificationSettings.listNotificationActions(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -381,14 +402,19 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            PutNotificationActionRequest req = new PutNotificationActionRequest("string", "user-action", "org-123", ActionType.EMAIL);            
+            ai.whylabs.WhyLabs.models.operations.PutNotificationActionRequest req = new PutNotificationActionRequest(
+                "string",
+                "user-action",
+                "org-123",
+                ActionType.EMAIL);
 
-            PutNotificationActionResponse res = sdk.notificationSettings.putNotificationAction(req);
+            ai.whylabs.WhyLabs.models.operations.PutNotificationActionResponse res = sdk.notificationSettings.putNotificationAction(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -430,14 +456,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            TestNotificationActionRequest req = new TestNotificationActionRequest("user-action", "org-123");            
+            ai.whylabs.WhyLabs.models.operations.TestNotificationActionRequest req = new TestNotificationActionRequest(
+                "user-action",
+                "org-123");
 
-            TestNotificationActionResponse res = sdk.notificationSettings.testNotificationAction(req);
+            ai.whylabs.WhyLabs.models.operations.TestNotificationActionResponse res = sdk.notificationSettings.testNotificationAction(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -480,14 +509,19 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            UpdateNotificationActionRequest req = new UpdateNotificationActionRequest("string", "user-action", "org-123", ActionType.PAGER_DUTY);            
+            ai.whylabs.WhyLabs.models.operations.UpdateNotificationActionRequest req = new UpdateNotificationActionRequest(
+                "string",
+                "user-action",
+                "org-123",
+                ActionType.PAGER_DUTY);
 
-            UpdateNotificationActionResponse res = sdk.notificationSettings.updateNotificationAction(req);
+            ai.whylabs.WhyLabs.models.operations.UpdateNotificationActionResponse res = sdk.notificationSettings.updateNotificationAction(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -533,33 +567,47 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            UpdateNotificationSettingsRequest req = new UpdateNotificationSettingsRequest(new NotificationSettings(){{
-emailSettings = new UberNotificationSchedule(NotificationSqsMessageCadence.HOURLY, false){{
-    dayOfWeek = NotificationSettingsDay.MONDAY;
-    local24HourOfDay = 809295;
-    localMinuteOfHour = 562664;
-    localTimezone = "string";
-}};
-pagerDutySettings = new UberNotificationSchedule(NotificationSqsMessageCadence.DAILY, false){{
-    dayOfWeek = NotificationSettingsDay.SUNDAY;
-    local24HourOfDay = 410267;
-    localMinuteOfHour = 406102;
-    localTimezone = "string";
-}};
-slackSettings = new UberNotificationSchedule(NotificationSqsMessageCadence.INDIVIDUAL, false){{
-    dayOfWeek = NotificationSettingsDay.THURSDAY;
-    local24HourOfDay = 259105;
-    localMinuteOfHour = 749170;
-    localTimezone = "string";
-}};
-}}, "string");            
+            ai.whylabs.WhyLabs.models.operations.UpdateNotificationSettingsRequest req = new UpdateNotificationSettingsRequest(
+                new NotificationSettings(
+){{
+                    emailSettings = new UberNotificationSchedule(
+                        NotificationSqsMessageCadence.HOURLY,
+                        false){{
+                        dayOfWeek = NotificationSettingsDay.MONDAY;
+                        local24HourOfDay = 809295;
+                        localMinuteOfHour = 562664;
+                        localTimezone = "string";
 
-            UpdateNotificationSettingsResponse res = sdk.notificationSettings.updateNotificationSettings(req);
+                    }};
+                    pagerDutySettings = new UberNotificationSchedule(
+                        NotificationSqsMessageCadence.DAILY,
+                        false){{
+                        dayOfWeek = NotificationSettingsDay.SUNDAY;
+                        local24HourOfDay = 410267;
+                        localMinuteOfHour = 406102;
+                        localTimezone = "string";
+
+                    }};
+                    slackSettings = new UberNotificationSchedule(
+                        NotificationSqsMessageCadence.INDIVIDUAL,
+                        false){{
+                        dayOfWeek = NotificationSettingsDay.THURSDAY;
+                        local24HourOfDay = 259105;
+                        localMinuteOfHour = 749170;
+                        localTimezone = "string";
+
+                    }};
+
+                }},
+                "string");
+
+            ai.whylabs.WhyLabs.models.operations.UpdateNotificationSettingsResponse res = sdk.notificationSettings.updateNotificationSettings(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -600,12 +648,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            GetEmailNotificationActionPayloadResponse res = sdk.notificationSettings.getEmailNotificationActionPayload();
+            ai.whylabs.WhyLabs.models.operations.GetEmailNotificationActionPayloadResponse res = sdk.notificationSettings.getEmailNotificationActionPayload();
 
             if (res.statusCode == 200) {
                 // handle response
@@ -640,12 +689,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            GetPagerDutyNotificationActionPayloadResponse res = sdk.notificationSettings.getPagerDutyNotificationActionPayload();
+            ai.whylabs.WhyLabs.models.operations.GetPagerDutyNotificationActionPayloadResponse res = sdk.notificationSettings.getPagerDutyNotificationActionPayload();
 
             if (res.statusCode == 200) {
                 // handle response
@@ -680,12 +730,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            GetSlackNotificationActionPayloadResponse res = sdk.notificationSettings.getSlackNotificationActionPayload();
+            ai.whylabs.WhyLabs.models.operations.GetSlackNotificationActionPayloadResponse res = sdk.notificationSettings.getSlackNotificationActionPayload();
 
             if (res.statusCode == 200) {
                 // handle response

@@ -26,16 +26,22 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.ProvisionNewMarketplaceUserRequest req = new ProvisionNewMarketplaceUserRequest("string", "string", "string", "string"){{
+            ai.whylabs.WhyLabs.models.shared.ProvisionNewMarketplaceUserRequest req = new ProvisionNewMarketplaceUserRequest(
+                "string",
+                "string",
+                "string",
+                "string"){{
                 expectExisting = false;
-            }};            
 
-            ProvisionAWSMarketplaceNewUserResponse res = sdk.provision.provisionAWSMarketplaceNewUser(req);
+            }};
+
+            ai.whylabs.WhyLabs.models.operations.ProvisionAWSMarketplaceNewUserResponse res = sdk.provision.provisionAWSMarketplaceNewUser(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -77,14 +83,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.ProvisionDatabricksConnectionRequest req = new ProvisionDatabricksConnectionRequest("string", false, "string");            
+            ai.whylabs.WhyLabs.models.shared.ProvisionDatabricksConnectionRequest req = new ProvisionDatabricksConnectionRequest(
+                "string",
+                false,
+                "string");
 
-            ProvisionDatabricksConnectionResponse res = sdk.provision.provisionDatabricksConnection(req);
+            ai.whylabs.WhyLabs.models.operations.ProvisionDatabricksConnectionResponse res = sdk.provision.provisionDatabricksConnection(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -127,16 +137,22 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.ProvisionNewUserRequest req = new ProvisionNewUserRequest("string", "string", "string", SubscriptionTier.AWS_MARKETPLACE){{
+            ai.whylabs.WhyLabs.models.shared.ProvisionNewUserRequest req = new ProvisionNewUserRequest(
+                "string",
+                "string",
+                "string",
+                SubscriptionTier.AWS_MARKETPLACE){{
                 expectExisting = false;
-            }};            
 
-            ProvisionNewUserResponse res = sdk.provision.provisionNewUser(req);
+            }};
+
+            ai.whylabs.WhyLabs.models.operations.ProvisionNewUserResponse res = sdk.provision.provisionNewUser(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -178,17 +194,28 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.RegisterDatabricksConnectionRequest req = new RegisterDatabricksConnectionRequest("string", "string", "string", false, "string", "string", 369919, "string", "string"){{
+            ai.whylabs.WhyLabs.models.shared.RegisterDatabricksConnectionRequest req = new RegisterDatabricksConnectionRequest(
+                "string",
+                "string",
+                "string",
+                false,
+                "string",
+                "string",
+                369919,
+                "string",
+                "string"){{
                 connectionEstablished = false;
                 freeTrial = false;
-            }};            
 
-            RegisterDatabricksConnectionResponse res = sdk.provision.registerDatabricksConnection(req);
+            }};
+
+            ai.whylabs.WhyLabs.models.operations.RegisterDatabricksConnectionResponse res = sdk.provision.registerDatabricksConnection(req);
 
             if (res.statusCode == 200) {
                 // handle response

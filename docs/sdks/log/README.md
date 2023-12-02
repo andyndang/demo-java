@@ -26,21 +26,27 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            GetProfileObservatoryLinkRequest req = new GetProfileObservatoryLinkRequest(new GetProfileObservatoryLinkRequest(){{
-batchProfileTimestamps = new Long[]{{
-    add(926863L),
-}};
-referenceProfileIds = new String[]{{
-    add("string"),
-}};
-}}, "string", "string");            
+            ai.whylabs.WhyLabs.models.operations.GetProfileObservatoryLinkRequest req = new GetProfileObservatoryLinkRequest(
+                new GetProfileObservatoryLinkRequest(
+){{
+                    batchProfileTimestamps = new Long[]{{
+                        add(926863L),
+                    }};
+                    referenceProfileIds = new String[]{{
+                        add("string"),
+                    }};
 
-            GetProfileObservatoryLinkResponse res = sdk.log.getProfileObservatoryLink(req);
+                }},
+                "string",
+                "string");
+
+            ai.whylabs.WhyLabs.models.operations.GetProfileObservatoryLinkResponse res = sdk.log.getProfileObservatoryLink(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -84,20 +90,27 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            LogAsyncRequest req = new LogAsyncRequest(new LogAsyncRequest(){{
-datasetTimestamp = 506585L;
-region = "string";
-segmentTags = new ai.whylabs.WhyLabs.models.shared.SegmentTag[]{{
-    add(new SegmentTag(){{}}),
-}};
-}}, "model-123", "org-123");            
+            ai.whylabs.WhyLabs.models.operations.LogAsyncRequest req = new LogAsyncRequest(
+                new LogAsyncRequest(
+){{
+                    datasetTimestamp = 506585L;
+                    region = "string";
+                    segmentTags = new ai.whylabs.WhyLabs.models.shared.SegmentTag[]{{
+                        add(new SegmentTag(
+                        ){{}}),
+                    }};
 
-            LogAsyncResponse res = sdk.log.logAsync(req);
+                }},
+                "model-123",
+                "org-123");
+
+            ai.whylabs.WhyLabs.models.operations.LogAsyncResponse res = sdk.log.logAsync(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -140,18 +153,24 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            LogReferenceRequest req = new LogReferenceRequest(new LogReferenceRequest(){{
-alias = "string";
-datasetTimestamp = 93844L;
-region = "string";
-}}, "model-123", "org-123");            
+            ai.whylabs.WhyLabs.models.operations.LogReferenceRequest req = new LogReferenceRequest(
+                new LogReferenceRequest(
+){{
+                    alias = "string";
+                    datasetTimestamp = 93844L;
+                    region = "string";
 
-            LogReferenceResponse res = sdk.log.logReference(req);
+                }},
+                "model-123",
+                "org-123");
+
+            ai.whylabs.WhyLabs.models.operations.LogReferenceResponse res = sdk.log.logReference(req);
 
             if (res.statusCode == 200) {
                 // handle response

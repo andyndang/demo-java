@@ -39,29 +39,37 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            CreateReferenceProfileRequest req = new CreateReferenceProfileRequest(new CreateReferenceProfileRequest(){{
-alias = "string";
-datasetTimestamp = 129059L;
-region = "string";
-segments = new ai.whylabs.WhyLabs.models.shared.Segment[]{{
-    add(new Segment(){{
-        tags = new ai.whylabs.WhyLabs.models.shared.SegmentTag[]{{
-            add(new SegmentTag(){{}}),
-        }};
-    }}),
-}};
-tags = new String[]{{
-    add("string"),
-}};
-version = "string";
-}}, "model-123", "org-123");            
+            ai.whylabs.WhyLabs.models.operations.CreateReferenceProfileRequest req = new CreateReferenceProfileRequest(
+                new CreateReferenceProfileRequest(
+){{
+                    alias = "string";
+                    datasetTimestamp = 129059L;
+                    region = "string";
+                    segments = new ai.whylabs.WhyLabs.models.shared.Segment[]{{
+                        add(new Segment(
+                        ){{
+                            tags = new ai.whylabs.WhyLabs.models.shared.SegmentTag[]{{
+                                add(new SegmentTag(
+                                ){{}}),
+                            }};
+                        }}),
+                    }};
+                    tags = new String[]{{
+                        add("string"),
+                    }};
+                    version = "string";
 
-            CreateReferenceProfileResponse res = sdk.datasetProfile.createReferenceProfile(req);
+                }},
+                "model-123",
+                "org-123");
+
+            ai.whylabs.WhyLabs.models.operations.CreateReferenceProfileResponse res = sdk.datasetProfile.createReferenceProfile(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -105,17 +113,21 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            DeleteAnalyzerResultsRequest req = new DeleteAnalyzerResultsRequest("model-123", "org-123"){{
+            ai.whylabs.WhyLabs.models.operations.DeleteAnalyzerResultsRequest req = new DeleteAnalyzerResultsRequest(
+                "model-123",
+                "org-123"){{
                 endTimestamp = 1893456000000L;
                 startTimestamp = 1577836800000L;
-            }};            
 
-            DeleteAnalyzerResultsResponse res = sdk.datasetProfile.deleteAnalyzerResults(req);
+            }};
+
+            ai.whylabs.WhyLabs.models.operations.DeleteAnalyzerResultsResponse res = sdk.datasetProfile.deleteAnalyzerResults(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -159,18 +171,22 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            DeleteDatasetProfilesRequest req = new DeleteDatasetProfilesRequest("model-123", "org-123"){{
+            ai.whylabs.WhyLabs.models.operations.DeleteDatasetProfilesRequest req = new DeleteDatasetProfilesRequest(
+                "model-123",
+                "org-123"){{
                 beforeUploadTimestamp = 1577836800000L;
                 profileEndTimestamp = 1893456000000L;
                 profileStartTimestamp = 1577836800000L;
-            }};            
 
-            DeleteDatasetProfilesResponse res = sdk.datasetProfile.deleteDatasetProfiles(req);
+            }};
+
+            ai.whylabs.WhyLabs.models.operations.DeleteDatasetProfilesResponse res = sdk.datasetProfile.deleteDatasetProfiles(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -214,14 +230,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            DeleteReferenceProfileRequest req = new DeleteReferenceProfileRequest("model-123", "org-123", "ref-xxy");            
+            ai.whylabs.WhyLabs.models.operations.DeleteReferenceProfileRequest req = new DeleteReferenceProfileRequest(
+                "model-123",
+                "org-123",
+                "ref-xxy");
 
-            DeleteReferenceProfileResponse res = sdk.datasetProfile.deleteReferenceProfile(req);
+            ai.whylabs.WhyLabs.models.operations.DeleteReferenceProfileResponse res = sdk.datasetProfile.deleteReferenceProfile(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -265,17 +285,22 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            GetProfileTracesRequest req = new GetProfileTracesRequest("model-123", "org-123", "a756f8bb-de30-48a2-be41-178ae6af7100"){{
+            ai.whylabs.WhyLabs.models.operations.GetProfileTracesRequest req = new GetProfileTracesRequest(
+                "model-123",
+                "org-123",
+                "a756f8bb-de30-48a2-be41-178ae6af7100"){{
                 limit = 50;
                 offset = 0;
-            }};            
 
-            GetProfileTracesResponse res = sdk.datasetProfile.getProfileTraces(req);
+            }};
+
+            ai.whylabs.WhyLabs.models.operations.GetProfileTracesResponse res = sdk.datasetProfile.getProfileTraces(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -319,14 +344,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            GetReferenceProfileRequest req = new GetReferenceProfileRequest("model-123", "org-123", "ref-xxy");            
+            ai.whylabs.WhyLabs.models.operations.GetReferenceProfileRequest req = new GetReferenceProfileRequest(
+                "model-123",
+                "org-123",
+                "ref-xxy");
 
-            GetReferenceProfileResponse res = sdk.datasetProfile.getReferenceProfile(req);
+            ai.whylabs.WhyLabs.models.operations.GetReferenceProfileResponse res = sdk.datasetProfile.getReferenceProfile(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -371,18 +400,24 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            HideSegmentsRequest req = new HideSegmentsRequest(new SegmentsListRequest(){{
-segments = new String[]{{
-    add("string"),
-}};
-}}, "model-123", "org-123");            
+            ai.whylabs.WhyLabs.models.operations.HideSegmentsRequest req = new HideSegmentsRequest(
+                new SegmentsListRequest(
+){{
+                    segments = new String[]{{
+                        add("string"),
+                    }};
 
-            HideSegmentsResponse res = sdk.datasetProfile.hideSegments(req);
+                }},
+                "model-123",
+                "org-123");
+
+            ai.whylabs.WhyLabs.models.operations.HideSegmentsResponse res = sdk.datasetProfile.hideSegments(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -426,14 +461,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ListDeleteAnalyzerResultsRequestsRequest req = new ListDeleteAnalyzerResultsRequestsRequest("org-123");            
+            ai.whylabs.WhyLabs.models.operations.ListDeleteAnalyzerResultsRequestsRequest req = new ListDeleteAnalyzerResultsRequestsRequest(
+                "org-123");
 
-            ListDeleteAnalyzerResultsRequestsResponse res = sdk.datasetProfile.listDeleteAnalyzerResultsRequests(req);
+            ai.whylabs.WhyLabs.models.operations.ListDeleteAnalyzerResultsRequestsResponse res = sdk.datasetProfile.listDeleteAnalyzerResultsRequests(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -477,14 +514,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ListDeleteDatasetProfilesRequestsRequest req = new ListDeleteDatasetProfilesRequestsRequest("org-123");            
+            ai.whylabs.WhyLabs.models.operations.ListDeleteDatasetProfilesRequestsRequest req = new ListDeleteDatasetProfilesRequestsRequest(
+                "org-123");
 
-            ListDeleteDatasetProfilesRequestsResponse res = sdk.datasetProfile.listDeleteDatasetProfilesRequests(req);
+            ai.whylabs.WhyLabs.models.operations.ListDeleteDatasetProfilesRequestsResponse res = sdk.datasetProfile.listDeleteDatasetProfilesRequests(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -528,17 +567,21 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ListReferenceProfilesRequest req = new ListReferenceProfilesRequest("model-123", "org-123"){{
+            ai.whylabs.WhyLabs.models.operations.ListReferenceProfilesRequest req = new ListReferenceProfilesRequest(
+                "model-123",
+                "org-123"){{
                 fromEpoch = 1577836800000L;
                 toEpoch = 1893456000000L;
-            }};            
 
-            ListReferenceProfilesResponse res = sdk.datasetProfile.listReferenceProfiles(req);
+            }};
+
+            ai.whylabs.WhyLabs.models.operations.ListReferenceProfilesResponse res = sdk.datasetProfile.listReferenceProfiles(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -582,14 +625,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ListSegmentsRequest req = new ListSegmentsRequest("model-123", "org-123");            
+            ai.whylabs.WhyLabs.models.operations.ListSegmentsRequest req = new ListSegmentsRequest(
+                "model-123",
+                "org-123");
 
-            ListSegmentsResponse res = sdk.datasetProfile.listSegments(req);
+            ai.whylabs.WhyLabs.models.operations.ListSegmentsResponse res = sdk.datasetProfile.listSegments(req);
 
             if (res.statusCode == 200) {
                 // handle response

@@ -36,14 +36,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            DeleteAnalyzerRequest req = new DeleteAnalyzerRequest("drift-analyzer", "model-123", "org-123");            
+            ai.whylabs.WhyLabs.models.operations.DeleteAnalyzerRequest req = new DeleteAnalyzerRequest(
+                "drift-analyzer",
+                "model-123",
+                "org-123");
 
-            DeleteAnalyzerResponse res = sdk.monitor.deleteAnalyzer(req);
+            ai.whylabs.WhyLabs.models.operations.DeleteAnalyzerResponse res = sdk.monitor.deleteAnalyzer(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -85,14 +89,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            DeleteMonitorRequest req = new DeleteMonitorRequest("model-123", "drift-monitor-123", "org-123");            
+            ai.whylabs.WhyLabs.models.operations.DeleteMonitorRequest req = new DeleteMonitorRequest(
+                "model-123",
+                "drift-monitor-123",
+                "org-123");
 
-            DeleteMonitorResponse res = sdk.monitor.deleteMonitor(req);
+            ai.whylabs.WhyLabs.models.operations.DeleteMonitorResponse res = sdk.monitor.deleteMonitor(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -134,14 +142,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            GetAnalyzerRequest req = new GetAnalyzerRequest("drift-analyzer", "model-123", "org-123");            
+            ai.whylabs.WhyLabs.models.operations.GetAnalyzerRequest req = new GetAnalyzerRequest(
+                "drift-analyzer",
+                "model-123",
+                "org-123");
 
-            GetAnalyzerResponse res = sdk.monitor.getAnalyzer(req);
+            ai.whylabs.WhyLabs.models.operations.GetAnalyzerResponse res = sdk.monitor.getAnalyzer(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -183,14 +195,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            GetMonitorRequest req = new GetMonitorRequest("model-123", "drift-monitor-123", "org-123");            
+            ai.whylabs.WhyLabs.models.operations.GetMonitorRequest req = new GetMonitorRequest(
+                "model-123",
+                "drift-monitor-123",
+                "org-123");
 
-            GetMonitorResponse res = sdk.monitor.getMonitor(req);
+            ai.whylabs.WhyLabs.models.operations.GetMonitorResponse res = sdk.monitor.getMonitor(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -232,17 +248,21 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            GetMonitorConfigV3Request req = new GetMonitorConfigV3Request("model-123", "org-123"){{
+            ai.whylabs.WhyLabs.models.operations.GetMonitorConfigV3Request req = new GetMonitorConfigV3Request(
+                "model-123",
+                "org-123"){{
                 includeEntitySchema = false;
                 includeEntityWeights = false;
-            }};            
 
-            GetMonitorConfigV3Response res = sdk.monitor.getMonitorConfigV3(req);
+            }};
+
+            ai.whylabs.WhyLabs.models.operations.GetMonitorConfigV3Response res = sdk.monitor.getMonitorConfigV3(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -284,14 +304,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            GetMonitorConfigV3VersionRequest req = new GetMonitorConfigV3VersionRequest("model-123", "org-123", "4920545486e2a4cdf0f770c09748e663");            
+            ai.whylabs.WhyLabs.models.operations.GetMonitorConfigV3VersionRequest req = new GetMonitorConfigV3VersionRequest(
+                "model-123",
+                "org-123",
+                "4920545486e2a4cdf0f770c09748e663");
 
-            GetMonitorConfigV3VersionResponse res = sdk.monitor.getMonitorConfigV3Version(req);
+            ai.whylabs.WhyLabs.models.operations.GetMonitorConfigV3VersionResponse res = sdk.monitor.getMonitorConfigV3Version(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -333,14 +357,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ListConstraintsRequest req = new ListConstraintsRequest("model-123", "org-123");            
+            ai.whylabs.WhyLabs.models.operations.ListConstraintsRequest req = new ListConstraintsRequest(
+                "model-123",
+                "org-123");
 
-            ListConstraintsResponse res = sdk.monitor.listConstraints(req);
+            ai.whylabs.WhyLabs.models.operations.ListConstraintsResponse res = sdk.monitor.listConstraints(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -382,14 +409,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ListMonitorConfigV3VersionsRequest req = new ListMonitorConfigV3VersionsRequest("model-123", "org-123");            
+            ai.whylabs.WhyLabs.models.operations.ListMonitorConfigV3VersionsRequest req = new ListMonitorConfigV3VersionsRequest(
+                "model-123",
+                "org-123");
 
-            ListMonitorConfigV3VersionsResponse res = sdk.monitor.listMonitorConfigV3Versions(req);
+            ai.whylabs.WhyLabs.models.operations.ListMonitorConfigV3VersionsResponse res = sdk.monitor.listMonitorConfigV3Versions(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -431,14 +461,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            PatchMonitorConfigV3Request req = new PatchMonitorConfigV3Request("string", "model-123", "org-123");            
+            ai.whylabs.WhyLabs.models.operations.PatchMonitorConfigV3Request req = new PatchMonitorConfigV3Request(
+                "string",
+                "model-123",
+                "org-123");
 
-            PatchMonitorConfigV3Response res = sdk.monitor.patchMonitorConfigV3(req);
+            ai.whylabs.WhyLabs.models.operations.PatchMonitorConfigV3Response res = sdk.monitor.patchMonitorConfigV3(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -480,14 +514,19 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            PutAnalyzerRequest req = new PutAnalyzerRequest("string", "drift-analyzer", "model-123", "org-123");            
+            ai.whylabs.WhyLabs.models.operations.PutAnalyzerRequest req = new PutAnalyzerRequest(
+                "string",
+                "drift-analyzer",
+                "model-123",
+                "org-123");
 
-            PutAnalyzerResponse res = sdk.monitor.putAnalyzer(req);
+            ai.whylabs.WhyLabs.models.operations.PutAnalyzerResponse res = sdk.monitor.putAnalyzer(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -529,14 +568,19 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            PutMonitorRequest req = new PutMonitorRequest("string", "model-123", "drift-monitor-123", "org-123");            
+            ai.whylabs.WhyLabs.models.operations.PutMonitorRequest req = new PutMonitorRequest(
+                "string",
+                "model-123",
+                "drift-monitor-123",
+                "org-123");
 
-            PutMonitorResponse res = sdk.monitor.putMonitor(req);
+            ai.whylabs.WhyLabs.models.operations.PutMonitorResponse res = sdk.monitor.putMonitor(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -578,14 +622,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            PutMonitorConfigV3Request req = new PutMonitorConfigV3Request("string", "model-123", "org-123");            
+            ai.whylabs.WhyLabs.models.operations.PutMonitorConfigV3Request req = new PutMonitorConfigV3Request(
+                "string",
+                "model-123",
+                "org-123");
 
-            PutMonitorConfigV3Response res = sdk.monitor.putMonitorConfigV3(req);
+            ai.whylabs.WhyLabs.models.operations.PutMonitorConfigV3Response res = sdk.monitor.putMonitorConfigV3(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -628,34 +676,40 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            PutRequestMonitorRunConfigRequest req = new PutRequestMonitorRunConfigRequest(new PutRequestMonitorRunConfigRequestBody(){{
-analyzerIds = new String[]{{
-    add("d"),
-    add("r"),
-    add("i"),
-    add("f"),
-    add("t"),
-    add("-"),
-    add("a"),
-    add("n"),
-    add("a"),
-    add("l"),
-    add("y"),
-    add("z"),
-    add("e"),
-    add("r"),
-}};
-endTimestamp = 1893456000000L;
-overwrite = false;
-startTimestamp = 1577836800000L;
-}}, "model-123", "org-123");            
+            ai.whylabs.WhyLabs.models.operations.PutRequestMonitorRunConfigRequest req = new PutRequestMonitorRunConfigRequest(
+                new PutRequestMonitorRunConfigRequestBody(
+){{
+                    analyzerIds = new String[]{{
+                        add("d"),
+                        add("r"),
+                        add("i"),
+                        add("f"),
+                        add("t"),
+                        add("-"),
+                        add("a"),
+                        add("n"),
+                        add("a"),
+                        add("l"),
+                        add("y"),
+                        add("z"),
+                        add("e"),
+                        add("r"),
+                    }};
+                    endTimestamp = 1893456000000L;
+                    overwrite = false;
+                    startTimestamp = 1577836800000L;
 
-            PutRequestMonitorRunConfigResponse res = sdk.monitor.putRequestMonitorRunConfig(req);
+                }},
+                "model-123",
+                "org-123");
+
+            ai.whylabs.WhyLabs.models.operations.PutRequestMonitorRunConfigResponse res = sdk.monitor.putRequestMonitorRunConfig(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -697,16 +751,21 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ValidateMonitorConfigV3Request req = new ValidateMonitorConfigV3Request("string", "model-123", "org-123"){{
+            ai.whylabs.WhyLabs.models.operations.ValidateMonitorConfigV3Request req = new ValidateMonitorConfigV3Request(
+                "string",
+                "model-123",
+                "org-123"){{
                 verbose = false;
-            }};            
 
-            ValidateMonitorConfigV3Response res = sdk.monitor.validateMonitorConfigV3(req);
+            }};
+
+            ai.whylabs.WhyLabs.models.operations.ValidateMonitorConfigV3Response res = sdk.monitor.validateMonitorConfigV3(req);
 
             if (res.statusCode == 200) {
                 // handle response

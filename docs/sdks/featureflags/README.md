@@ -23,14 +23,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            GetFeatureFlagsRequest req = new GetFeatureFlagsRequest("string", "string");            
+            ai.whylabs.WhyLabs.models.operations.GetFeatureFlagsRequest req = new GetFeatureFlagsRequest(
+                "string",
+                "string");
 
-            GetFeatureFlagsResponse res = sdk.featureFlags.getFeatureFlags(req);
+            ai.whylabs.WhyLabs.models.operations.GetFeatureFlagsResponse res = sdk.featureFlags.getFeatureFlags(req);
 
             if (res.statusCode == 200) {
                 // handle response

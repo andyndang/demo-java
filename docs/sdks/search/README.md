@@ -24,14 +24,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            WhyLabsSearchRequest req = new WhyLabsSearchRequest("string");            
+            ai.whylabs.WhyLabs.models.operations.WhyLabsSearchRequest req = new WhyLabsSearchRequest(
+                "string");
 
-            WhyLabsSearchResponse res = sdk.search.whyLabsSearch(req);
+            ai.whylabs.WhyLabs.models.operations.WhyLabsSearchResponse res = sdk.search.whyLabsSearch(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -74,17 +76,20 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.SearchIndexRequest req = new SearchIndexRequest(){{
+            ai.whylabs.WhyLabs.models.shared.SearchIndexRequest req = new SearchIndexRequest(
+){{
                 orgId = "string";
                 type = SearchIndexType.MODELS;
-            }};            
 
-            WhyLabsSearchIndexingResponse res = sdk.search.whyLabsSearchIndexing(req);
+            }};
+
+            ai.whylabs.WhyLabs.models.operations.WhyLabsSearchIndexingResponse res = sdk.search.whyLabsSearchIndexing(req);
 
             if (res.statusCode == 200) {
                 // handle response

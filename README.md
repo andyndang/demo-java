@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'ai.whylabs.WhyLabs:Songbird:2.0.8'
+implementation 'ai.whylabs.WhyLabs:Songbird:2.0.9'
 ```
 <!-- End SDK Installation [installation] -->
 
@@ -28,18 +28,23 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            CreateAccountUserRequest req = new CreateAccountUserRequest(new CreateAccountUserRequest("string"){{
-active = false;
-externalId = "string";
-userSchema = "string";
-}}, "org-123");            
+            ai.whylabs.WhyLabs.models.operations.CreateAccountUserRequest req = new CreateAccountUserRequest(
+                new CreateAccountUserRequest(
+                    "string"){{
+                    active = false;
+                    externalId = "string";
+                    userSchema = "string";
 
-            CreateAccountUserResponse res = sdk.account.createAccountUser(req);
+                }},
+                "org-123");
+
+            ai.whylabs.WhyLabs.models.operations.CreateAccountUserResponse res = sdk.account.createAccountUser(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -310,6 +315,27 @@ userSchema = "string";
 <!-- End Available Resources and Operations [operations] -->
 
 
+
+<!-- Start Server Selection [server] -->
+## Server Selection
+
+## Server Selection
+
+### Select Server by Index
+
+You can override the default server globally using the `setServerIndex` option when initializing the SDK client instance. The selected server will then be used as the default on the operations that use it. This table lists the indexes associated with the available servers:
+
+| # | Server | Variables |
+| - | ------ | --------- |
+| 0 | `https://api.whylabsapp.com` | None |
+
+
+
+
+### Override Server URL Per-Client
+
+The default server can also be overridden globally using the `setServerURL` option when initializing the SDK client instance. For example:
+<!-- End Server Selection [server] -->
 
 <!-- Placeholder for Future Speakeasy SDK Sections -->
 

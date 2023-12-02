@@ -31,18 +31,24 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            BatchCreateReferenceProfileUploadRequest req = new BatchCreateReferenceProfileUploadRequest(new BatchLogReferenceRequest(){{
-references = new ai.whylabs.WhyLabs.models.shared.LogReferenceRequest[]{{
-    add(new LogReferenceRequest(){{}}),
-}};
-}}, "string");            
+            ai.whylabs.WhyLabs.models.operations.BatchCreateReferenceProfileUploadRequest req = new BatchCreateReferenceProfileUploadRequest(
+                new BatchLogReferenceRequest(
+){{
+                    references = new ai.whylabs.WhyLabs.models.shared.LogReferenceRequest[]{{
+                        add(new LogReferenceRequest(
+                        ){{}}),
+                    }};
 
-            BatchCreateReferenceProfileUploadResponse res = sdk.sessions.batchCreateReferenceProfileUpload(req);
+                }},
+                "string");
+
+            ai.whylabs.WhyLabs.models.operations.BatchCreateReferenceProfileUploadResponse res = sdk.sessions.batchCreateReferenceProfileUpload(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -84,14 +90,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ClaimGuestSessionRequest req = new ClaimGuestSessionRequest("string", "string");            
+            ai.whylabs.WhyLabs.models.operations.ClaimGuestSessionRequest req = new ClaimGuestSessionRequest(
+                "string",
+                "string");
 
-            ClaimGuestSessionResponse res = sdk.sessions.claimGuestSession(req);
+            ai.whylabs.WhyLabs.models.operations.ClaimGuestSessionResponse res = sdk.sessions.claimGuestSession(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -135,20 +144,26 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            CreateDatasetProfileUploadRequest req = new CreateDatasetProfileUploadRequest(new LogAsyncRequest(){{
-datasetTimestamp = 967561L;
-region = "string";
-segmentTags = new ai.whylabs.WhyLabs.models.shared.SegmentTag[]{{
-    add(new SegmentTag(){{}}),
-}};
-}}, "string");            
+            ai.whylabs.WhyLabs.models.operations.CreateDatasetProfileUploadRequest req = new CreateDatasetProfileUploadRequest(
+                new LogAsyncRequest(
+){{
+                    datasetTimestamp = 967561L;
+                    region = "string";
+                    segmentTags = new ai.whylabs.WhyLabs.models.shared.SegmentTag[]{{
+                        add(new SegmentTag(
+                        ){{}}),
+                    }};
 
-            CreateDatasetProfileUploadResponse res = sdk.sessions.createDatasetProfileUpload(req);
+                }},
+                "string");
+
+            ai.whylabs.WhyLabs.models.operations.CreateDatasetProfileUploadResponse res = sdk.sessions.createDatasetProfileUpload(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -191,18 +206,23 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            CreateReferenceProfileUploadRequest req = new CreateReferenceProfileUploadRequest(new LogReferenceRequest(){{
-alias = "string";
-datasetTimestamp = 590824L;
-region = "string";
-}}, "string");            
+            ai.whylabs.WhyLabs.models.operations.CreateReferenceProfileUploadRequest req = new CreateReferenceProfileUploadRequest(
+                new LogReferenceRequest(
+){{
+                    alias = "string";
+                    datasetTimestamp = 590824L;
+                    region = "string";
 
-            CreateReferenceProfileUploadResponse res = sdk.sessions.createReferenceProfileUpload(req);
+                }},
+                "string");
+
+            ai.whylabs.WhyLabs.models.operations.CreateReferenceProfileUploadResponse res = sdk.sessions.createReferenceProfileUpload(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -244,14 +264,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ai.whylabs.WhyLabs.models.shared.CreateSessionRequest req = new CreateSessionRequest("string");            
+            ai.whylabs.WhyLabs.models.shared.CreateSessionRequest req = new CreateSessionRequest(
+                "string");
 
-            CreateSessionResponse res = sdk.sessions.createSession(req);
+            ai.whylabs.WhyLabs.models.operations.CreateSessionResponse res = sdk.sessions.createSession(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -293,14 +315,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            GetSessionRequest req = new GetSessionRequest("string");            
+            ai.whylabs.WhyLabs.models.operations.GetSessionRequest req = new GetSessionRequest(
+                "string");
 
-            GetSessionResponse res = sdk.sessions.getSession(req);
+            ai.whylabs.WhyLabs.models.operations.GetSessionResponse res = sdk.sessions.getSession(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -343,21 +367,26 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            GetSessionProfileObservatoryLinkRequest req = new GetSessionProfileObservatoryLinkRequest(new GetProfileObservatoryLinkRequest(){{
-batchProfileTimestamps = new Long[]{{
-    add(495187L),
-}};
-referenceProfileIds = new String[]{{
-    add("string"),
-}};
-}}, "string");            
+            ai.whylabs.WhyLabs.models.operations.GetSessionProfileObservatoryLinkRequest req = new GetSessionProfileObservatoryLinkRequest(
+                new GetProfileObservatoryLinkRequest(
+){{
+                    batchProfileTimestamps = new Long[]{{
+                        add(495187L),
+                    }};
+                    referenceProfileIds = new String[]{{
+                        add("string"),
+                    }};
 
-            GetSessionProfileObservatoryLinkResponse res = sdk.sessions.getSessionProfileObservatoryLink(req);
+                }},
+                "string");
+
+            ai.whylabs.WhyLabs.models.operations.GetSessionProfileObservatoryLinkResponse res = sdk.sessions.getSessionProfileObservatoryLink(req);
 
             if (res.statusCode == 200) {
                 // handle response

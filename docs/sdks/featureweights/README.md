@@ -24,14 +24,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            GetColumnWeightsRequest req = new GetColumnWeightsRequest("model-123", "org-123");            
+            ai.whylabs.WhyLabs.models.operations.GetColumnWeightsRequest req = new GetColumnWeightsRequest(
+                "model-123",
+                "org-123");
 
-            GetColumnWeightsResponse res = sdk.featureWeights.getColumnWeights(req);
+            ai.whylabs.WhyLabs.models.operations.GetColumnWeightsResponse res = sdk.featureWeights.getColumnWeights(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -73,14 +76,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            PutColumnWeightsRequest req = new PutColumnWeightsRequest("string", "model-123", "org-123");            
+            ai.whylabs.WhyLabs.models.operations.PutColumnWeightsRequest req = new PutColumnWeightsRequest(
+                "string",
+                "model-123",
+                "org-123");
 
-            PutColumnWeightsResponse res = sdk.featureWeights.putColumnWeights(req);
+            ai.whylabs.WhyLabs.models.operations.PutColumnWeightsResponse res = sdk.featureWeights.putColumnWeights(req);
 
             if (res.statusCode == 200) {
                 // handle response

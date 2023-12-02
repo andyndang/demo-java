@@ -12,18 +12,23 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            CreateAccountUserRequest req = new CreateAccountUserRequest(new CreateAccountUserRequest("string"){{
-active = false;
-externalId = "string";
-userSchema = "string";
-}}, "org-123");            
+            ai.whylabs.WhyLabs.models.operations.CreateAccountUserRequest req = new CreateAccountUserRequest(
+                new CreateAccountUserRequest(
+                    "string"){{
+                    active = false;
+                    externalId = "string";
+                    userSchema = "string";
 
-            CreateAccountUserResponse res = sdk.account.createAccountUser(req);
+                }},
+                "org-123");
+
+            ai.whylabs.WhyLabs.models.operations.CreateAccountUserResponse res = sdk.account.createAccountUser(req);
 
             if (res.statusCode == 200) {
                 // handle response

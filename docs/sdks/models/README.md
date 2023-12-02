@@ -37,17 +37,22 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            CreateModelRequest req = new CreateModelRequest("Credit-Score-1", "org-123", TimePeriod.P1_D){{
+            ai.whylabs.WhyLabs.models.operations.CreateModelRequest req = new CreateModelRequest(
+                "Credit-Score-1",
+                "org-123",
+                TimePeriod.P1_D){{
                 modelId = "model-123";
                 modelType = ModelType.CLASSIFICATION;
-            }};            
 
-            CreateModelResponse res = sdk.models.createModel(req);
+            }};
+
+            ai.whylabs.WhyLabs.models.operations.CreateModelResponse res = sdk.models.createModel(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -89,14 +94,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            DeactivateModelRequest req = new DeactivateModelRequest("model-123", "org-123");            
+            ai.whylabs.WhyLabs.models.operations.DeactivateModelRequest req = new DeactivateModelRequest(
+                "model-123",
+                "org-123");
 
-            DeactivateModelResponse res = sdk.models.deactivateModel(req);
+            ai.whylabs.WhyLabs.models.operations.DeactivateModelResponse res = sdk.models.deactivateModel(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -138,14 +146,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            DeleteEntitySchemaRequest req = new DeleteEntitySchemaRequest("model-123", "org-123");            
+            ai.whylabs.WhyLabs.models.operations.DeleteEntitySchemaRequest req = new DeleteEntitySchemaRequest(
+                "model-123",
+                "org-123");
 
-            DeleteEntitySchemaResponse res = sdk.models.deleteEntitySchema(req);
+            ai.whylabs.WhyLabs.models.operations.DeleteEntitySchemaResponse res = sdk.models.deleteEntitySchema(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -187,14 +198,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            DeleteEntitySchemaColumnRequest req = new DeleteEntitySchemaColumnRequest("feature-123", "model-123", "org-123");            
+            ai.whylabs.WhyLabs.models.operations.DeleteEntitySchemaColumnRequest req = new DeleteEntitySchemaColumnRequest(
+                "feature-123",
+                "model-123",
+                "org-123");
 
-            DeleteEntitySchemaColumnResponse res = sdk.models.deleteEntitySchemaColumn(req);
+            ai.whylabs.WhyLabs.models.operations.DeleteEntitySchemaColumnResponse res = sdk.models.deleteEntitySchemaColumn(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -236,14 +251,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            DeleteEntitySchemaMetricRequest req = new DeleteEntitySchemaMetricRequest("model-123", "feature-123", "org-123");            
+            ai.whylabs.WhyLabs.models.operations.DeleteEntitySchemaMetricRequest req = new DeleteEntitySchemaMetricRequest(
+                "model-123",
+                "feature-123",
+                "org-123");
 
-            DeleteEntitySchemaMetricResponse res = sdk.models.deleteEntitySchemaMetric(req);
+            ai.whylabs.WhyLabs.models.operations.DeleteEntitySchemaMetricResponse res = sdk.models.deleteEntitySchemaMetric(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -285,14 +304,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            GetEntitySchemaRequest req = new GetEntitySchemaRequest("model-123", "org-123");            
+            ai.whylabs.WhyLabs.models.operations.GetEntitySchemaRequest req = new GetEntitySchemaRequest(
+                "model-123",
+                "org-123");
 
-            GetEntitySchemaResponse res = sdk.models.getEntitySchema(req);
+            ai.whylabs.WhyLabs.models.operations.GetEntitySchemaResponse res = sdk.models.getEntitySchema(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -334,14 +356,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            GetEntitySchemaColumnRequest req = new GetEntitySchemaColumnRequest("feature-123", "model-123", "org-123");            
+            ai.whylabs.WhyLabs.models.operations.GetEntitySchemaColumnRequest req = new GetEntitySchemaColumnRequest(
+                "feature-123",
+                "model-123",
+                "org-123");
 
-            GetEntitySchemaColumnResponse res = sdk.models.getEntitySchemaColumn(req);
+            ai.whylabs.WhyLabs.models.operations.GetEntitySchemaColumnResponse res = sdk.models.getEntitySchemaColumn(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -383,14 +409,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            GetModelRequest req = new GetModelRequest("model-123", "org-123");            
+            ai.whylabs.WhyLabs.models.operations.GetModelRequest req = new GetModelRequest(
+                "model-123",
+                "org-123");
 
-            GetModelResponse res = sdk.models.getModel(req);
+            ai.whylabs.WhyLabs.models.operations.GetModelResponse res = sdk.models.getModel(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -432,14 +461,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            ListModelsRequest req = new ListModelsRequest("org-123");            
+            ai.whylabs.WhyLabs.models.operations.ListModelsRequest req = new ListModelsRequest(
+                "org-123");
 
-            ListModelsResponse res = sdk.models.listModels(req);
+            ai.whylabs.WhyLabs.models.operations.ListModelsResponse res = sdk.models.listModels(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -485,36 +516,52 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            PutEntitySchemaRequest req = new PutEntitySchemaRequest(new EntitySchema(new java.util.HashMap<String, ai.whylabs.WhyLabs.models.shared.ColumnSchema>(){{
-    put("key", new ColumnSchema("input", "fractional", "discrete"){{
-        classifier = "input";
-        dataType = "fractional";
-        discreteness = "discrete";
-        tags = new String[]{{
-            add("string"),
-        }};
-    }});
-}}){{
-metadata = new SchemaMetadata(){{
-    author = "string";
-    updatedTimestamp = 399868L;
-    version = 429298L;
-}};
-metrics = new java.util.HashMap<String, ai.whylabs.WhyLabs.models.shared.MetricSchema>(){{
-    put("key", new MetricSchema("estimated_prediction", "median", "estimated_prediction.median"){{
-        column = "estimated_prediction";
-        defaultMetric = "median";
-        label = "estimated_prediction.median";
-    }});
-}};
-}}, "model-123", "org-123");            
+            ai.whylabs.WhyLabs.models.operations.PutEntitySchemaRequest req = new PutEntitySchemaRequest(
+                new EntitySchema(
+                    new java.util.HashMap<String, ai.whylabs.WhyLabs.models.shared.ColumnSchema>(
+                    ){{
+                        put("key", new ColumnSchema(
+                        "input",
+                        "fractional",
+                        "discrete"){{
+                            classifier = "input";
+                            dataType = "fractional";
+                            discreteness = "discrete";
+                            tags = new String[]{{
+                                add("string"),
+                            }};
+                        }});
+                    }}){{
+                    metadata = new SchemaMetadata(
+){{
+                        author = "string";
+                        updatedTimestamp = 399868L;
+                        version = 429298L;
 
-            PutEntitySchemaResponse res = sdk.models.putEntitySchema(req);
+                    }};
+                    metrics = new java.util.HashMap<String, ai.whylabs.WhyLabs.models.shared.MetricSchema>(
+                    ){{
+                        put("key", new MetricSchema(
+                        "estimated_prediction",
+                        "median",
+                        "estimated_prediction.median"){{
+                            column = "estimated_prediction";
+                            defaultMetric = "median";
+                            label = "estimated_prediction.median";
+                        }});
+                    }};
+
+                }},
+                "model-123",
+                "org-123");
+
+            ai.whylabs.WhyLabs.models.operations.PutEntitySchemaResponse res = sdk.models.putEntitySchema(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -557,18 +604,27 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            PutEntitySchemaColumnRequest req = new PutEntitySchemaColumnRequest(new ColumnSchema("input", "fractional", "discrete"){{
-tags = new String[]{{
-    add("string"),
-}};
-}}, "feature-123", "model-123", "org-123");            
+            ai.whylabs.WhyLabs.models.operations.PutEntitySchemaColumnRequest req = new PutEntitySchemaColumnRequest(
+                new ColumnSchema(
+                    "input",
+                    "fractional",
+                    "discrete"){{
+                    tags = new String[]{{
+                        add("string"),
+                    }};
 
-            PutEntitySchemaColumnResponse res = sdk.models.putEntitySchemaColumn(req);
+                }},
+                "feature-123",
+                "model-123",
+                "org-123");
+
+            ai.whylabs.WhyLabs.models.operations.PutEntitySchemaColumnResponse res = sdk.models.putEntitySchemaColumn(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -611,14 +667,21 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            PutEntitySchemaMetricRequest req = new PutEntitySchemaMetricRequest(new MetricSchema("estimated_prediction", "median", "estimated_prediction.median"), "model-123", "org-123");            
+            ai.whylabs.WhyLabs.models.operations.PutEntitySchemaMetricRequest req = new PutEntitySchemaMetricRequest(
+                new MetricSchema(
+                    "estimated_prediction",
+                    "median",
+                    "estimated_prediction.median"),
+                "model-123",
+                "org-123");
 
-            PutEntitySchemaMetricResponse res = sdk.models.putEntitySchemaMetric(req);
+            ai.whylabs.WhyLabs.models.operations.PutEntitySchemaMetricResponse res = sdk.models.putEntitySchemaMetric(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -662,16 +725,22 @@ public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKeyAuth = "";
                 }})
                 .build();
 
-            UpdateModelRequest req = new UpdateModelRequest("model-123", "Credit-Score-1", "org-123", TimePeriod.P1_D){{
+            ai.whylabs.WhyLabs.models.operations.UpdateModelRequest req = new UpdateModelRequest(
+                "model-123",
+                "Credit-Score-1",
+                "org-123",
+                TimePeriod.P1_D){{
                 modelType = ModelType.CLASSIFICATION;
-            }};            
 
-            UpdateModelResponse res = sdk.models.updateModel(req);
+            }};
+
+            ai.whylabs.WhyLabs.models.operations.UpdateModelResponse res = sdk.models.updateModel(req);
 
             if (res.statusCode == 200) {
                 // handle response
