@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'ai.whylabs.WhyLabs:Songbird:2.0.9'
+implementation 'ai.whylabs.WhyLabs:Songbird:2.0.10'
 ```
 <!-- End SDK Installation [installation] -->
 
@@ -312,6 +312,13 @@ public class Application {
 
 * [exportTracesJson](docs/sdks/traces/README.md#exporttracesjson) - Export traces into WhyLabs
 * [exportTracesRaw](docs/sdks/traces/README.md#exporttracesraw) - Export traces into WhyLabs
+
+### [transactions](docs/sdks/transactions/README.md)
+
+* [commitTransaction](docs/sdks/transactions/README.md#committransaction) - Commit a log transaction
+* [logTransaction](docs/sdks/transactions/README.md#logtransaction) - Add to a log transaction
+* [startTransaction](docs/sdks/transactions/README.md#starttransaction) - Start a log transaction
+* [transactionStatus](docs/sdks/transactions/README.md#transactionstatus) - Get the status of a log transaction
 <!-- End Available Resources and Operations [operations] -->
 
 

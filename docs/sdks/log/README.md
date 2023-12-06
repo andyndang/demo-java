@@ -103,7 +103,11 @@ public class Application {
                     region = "string";
                     segmentTags = new ai.whylabs.WhyLabs.models.shared.SegmentTag[]{{
                         add(new SegmentTag(
-                        ){{}}),
+                        "string",
+                        "string"){{
+                            key = "<key>";
+                            value = "string";
+                        }}),
                     }};
 
                 }},

@@ -1,9 +1,11 @@
 # SegmentTag
 
+A key value tag
+
 
 ## Fields
 
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
-| `key`              | *String*           | :heavy_minus_sign: | N/A                |
-| `value`            | *String*           | :heavy_minus_sign: | N/A                |
+| `key`              | *String*           | :heavy_check_mark: | N/A                |
+| `value`            | *String*           | :heavy_check_mark: | N/A                |

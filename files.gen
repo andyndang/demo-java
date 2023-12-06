@@ -23,6 +23,7 @@ lib/src/main/java/ai/whylabs/WhyLabs/Sessions.java
 lib/src/main/java/ai/whylabs/WhyLabs/Subscription.java
 lib/src/main/java/ai/whylabs/WhyLabs/User.java
 lib/src/main/java/ai/whylabs/WhyLabs/Traces.java
+lib/src/main/java/ai/whylabs/WhyLabs/Transactions.java
 lib/src/main/java/ai/whylabs/WhyLabs/Songbird.java
 .gitattributes
 gradle/wrapper/gradle-wrapper.jar
@@ -285,6 +286,13 @@ lib/src/main/java/ai/whylabs/WhyLabs/models/operations/ExportTracesJsonRequest.j
 lib/src/main/java/ai/whylabs/WhyLabs/models/operations/ExportTracesJsonResponse.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/operations/ExportTracesRawRequest.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/operations/ExportTracesRawResponse.java
+lib/src/main/java/ai/whylabs/WhyLabs/models/operations/CommitTransactionRequest.java
+lib/src/main/java/ai/whylabs/WhyLabs/models/operations/CommitTransactionResponse.java
+lib/src/main/java/ai/whylabs/WhyLabs/models/operations/LogTransactionRequest.java
+lib/src/main/java/ai/whylabs/WhyLabs/models/operations/LogTransactionResponse.java
+lib/src/main/java/ai/whylabs/WhyLabs/models/operations/StartTransactionResponse.java
+lib/src/main/java/ai/whylabs/WhyLabs/models/operations/TransactionStatusRequest.java
+lib/src/main/java/ai/whylabs/WhyLabs/models/operations/TransactionStatusResponse.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/AccountUser.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/CreateAccountUserRequest.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/Response.java
@@ -432,6 +440,11 @@ lib/src/main/java/ai/whylabs/WhyLabs/models/shared/GetSessionResponse.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/SessionMetadata.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/ExportTraceServiceResponse.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/ExportTracePartialSuccess.java
+lib/src/main/java/ai/whylabs/WhyLabs/models/shared/TransactionCommitRequest.java
+lib/src/main/java/ai/whylabs/WhyLabs/models/shared/TransactionLogRequest.java
+lib/src/main/java/ai/whylabs/WhyLabs/models/shared/LogTransactionMetadata.java
+lib/src/main/java/ai/whylabs/WhyLabs/models/shared/TransactionStartRequest.java
+lib/src/main/java/ai/whylabs/WhyLabs/models/shared/TransactionStatusResponse.java
 lib/src/main/java/ai/whylabs/WhyLabs/models/shared/Security.java
 docs/models/operations/CreateAccountUserRequest.md
 docs/models/operations/CreateAccountUserResponse.md
@@ -665,6 +678,13 @@ docs/models/operations/ExportTracesJsonRequest.md
 docs/models/operations/ExportTracesJsonResponse.md
 docs/models/operations/ExportTracesRawRequest.md
 docs/models/operations/ExportTracesRawResponse.md
+docs/models/operations/CommitTransactionRequest.md
+docs/models/operations/CommitTransactionResponse.md
+docs/models/operations/LogTransactionRequest.md
+docs/models/operations/LogTransactionResponse.md
+docs/models/operations/StartTransactionResponse.md
+docs/models/operations/TransactionStatusRequest.md
+docs/models/operations/TransactionStatusResponse.md
 docs/models/shared/AccountUser.md
 docs/models/shared/CreateAccountUserRequest.md
 docs/models/shared/Response.md
@@ -812,6 +832,11 @@ docs/models/shared/GetSessionResponse.md
 docs/models/shared/SessionMetadata.md
 docs/models/shared/ExportTraceServiceResponse.md
 docs/models/shared/ExportTracePartialSuccess.md
+docs/models/shared/TransactionCommitRequest.md
+docs/models/shared/TransactionLogRequest.md
+docs/models/shared/LogTransactionMetadata.md
+docs/models/shared/TransactionStartRequest.md
+docs/models/shared/TransactionStatusResponse.md
 docs/models/shared/Security.md
 docs/sdks/songbird/README.md
 docs/sdks/account/README.md
@@ -838,4 +863,5 @@ docs/sdks/sessions/README.md
 docs/sdks/subscription/README.md
 docs/sdks/user/README.md
 docs/sdks/traces/README.md
+docs/sdks/transactions/README.md
 USAGE.md

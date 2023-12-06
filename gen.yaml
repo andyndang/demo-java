@@ -1,9 +1,9 @@
 configVersion: 1.0.0
 management:
-  docChecksum: 3080753ff699a6d2f39beb00d2d0d83c
+  docChecksum: 518f272d4b20844b12c8039bef5c7428
   docVersion: "0.1"
-  speakeasyVersion: 1.124.3
-  generationVersion: 2.207.1
+  speakeasyVersion: 1.125.2
+  generationVersion: 2.210.6
 generation:
   comments: {}
   baseServerUrl: https://api.whylabsapp.com
@@ -18,7 +18,7 @@ features:
     globalSecurity: 2.81.1
     globalServerURLs: 2.82.1
 java:
-  version: 2.0.9
+  version: 2.0.10
   artifactID: WhyLabs
   companyEmail: info@whylabs.ai
   companyName: WhyLabs
