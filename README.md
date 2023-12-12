@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'ai.whylabs.WhyLabs:Songbird:2.0.10'
+implementation 'ai.whylabs.WhyLabs:Songbird:2.1.0'
 ```
 <!-- End SDK Installation [installation] -->
 
@@ -29,8 +29,8 @@ public class Application {
         try {
             Songbird sdk = Songbird.builder()
                 .setSecurity(new Security(
-                "string"){{
-                    apiKeyAuth = "";
+                ){{
+                    apiKeyAuth = "<YOUR_API_KEY_HERE>";
                 }})
                 .build();
 

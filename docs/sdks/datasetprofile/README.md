@@ -40,8 +40,8 @@ public class Application {
         try {
             Songbird sdk = Songbird.builder()
                 .setSecurity(new Security(
-                "string"){{
-                    apiKeyAuth = "";
+                ){{
+                    apiKeyAuth = "<YOUR_API_KEY_HERE>";
                 }})
                 .build();
 
@@ -118,8 +118,8 @@ public class Application {
         try {
             Songbird sdk = Songbird.builder()
                 .setSecurity(new Security(
-                "string"){{
-                    apiKeyAuth = "";
+                ){{
+                    apiKeyAuth = "<YOUR_API_KEY_HERE>";
                 }})
                 .build();
 
@@ -176,8 +176,8 @@ public class Application {
         try {
             Songbird sdk = Songbird.builder()
                 .setSecurity(new Security(
-                "string"){{
-                    apiKeyAuth = "";
+                ){{
+                    apiKeyAuth = "<YOUR_API_KEY_HERE>";
                 }})
                 .build();
 
@@ -235,8 +235,8 @@ public class Application {
         try {
             Songbird sdk = Songbird.builder()
                 .setSecurity(new Security(
-                "string"){{
-                    apiKeyAuth = "";
+                ){{
+                    apiKeyAuth = "<YOUR_API_KEY_HERE>";
                 }})
                 .build();
 
@@ -290,8 +290,8 @@ public class Application {
         try {
             Songbird sdk = Songbird.builder()
                 .setSecurity(new Security(
-                "string"){{
-                    apiKeyAuth = "";
+                ){{
+                    apiKeyAuth = "<YOUR_API_KEY_HERE>";
                 }})
                 .build();
 
@@ -349,8 +349,8 @@ public class Application {
         try {
             Songbird sdk = Songbird.builder()
                 .setSecurity(new Security(
-                "string"){{
-                    apiKeyAuth = "";
+                ){{
+                    apiKeyAuth = "<YOUR_API_KEY_HERE>";
                 }})
                 .build();
 
@@ -405,8 +405,8 @@ public class Application {
         try {
             Songbird sdk = Songbird.builder()
                 .setSecurity(new Security(
-                "string"){{
-                    apiKeyAuth = "";
+                ){{
+                    apiKeyAuth = "<YOUR_API_KEY_HERE>";
                 }})
                 .build();
 
@@ -466,8 +466,8 @@ public class Application {
         try {
             Songbird sdk = Songbird.builder()
                 .setSecurity(new Security(
-                "string"){{
-                    apiKeyAuth = "";
+                ){{
+                    apiKeyAuth = "<YOUR_API_KEY_HERE>";
                 }})
                 .build();
 
@@ -519,8 +519,8 @@ public class Application {
         try {
             Songbird sdk = Songbird.builder()
                 .setSecurity(new Security(
-                "string"){{
-                    apiKeyAuth = "";
+                ){{
+                    apiKeyAuth = "<YOUR_API_KEY_HERE>";
                 }})
                 .build();
 
@@ -572,8 +572,8 @@ public class Application {
         try {
             Songbird sdk = Songbird.builder()
                 .setSecurity(new Security(
-                "string"){{
-                    apiKeyAuth = "";
+                ){{
+                    apiKeyAuth = "<YOUR_API_KEY_HERE>";
                 }})
                 .build();
 
@@ -630,8 +630,8 @@ public class Application {
         try {
             Songbird sdk = Songbird.builder()
                 .setSecurity(new Security(
-                "string"){{
-                    apiKeyAuth = "";
+                ){{
+                    apiKeyAuth = "<YOUR_API_KEY_HERE>";
                 }})
                 .build();
 

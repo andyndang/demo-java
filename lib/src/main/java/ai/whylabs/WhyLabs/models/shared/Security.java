@@ -5,7 +5,6 @@
 package ai.whylabs.WhyLabs.models.shared;
 
 import ai.whylabs.WhyLabs.utils.SpeakeasyMetadata;
-import com.fasterxml.jackson.annotation.JsonProperty;
 
 
 public class Security {
@@ -17,7 +16,5 @@ public class Security {
         return this;
     }
     
-    public Security(@JsonProperty("ApiKeyAuth") String apiKeyAuth) {
-        this.apiKeyAuth = apiKeyAuth;
-  }
+    public Security(){}
 }

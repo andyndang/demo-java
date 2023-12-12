@@ -27,8 +27,8 @@ public class Application {
         try {
             Songbird sdk = Songbird.builder()
                 .setSecurity(new Security(
-                "string"){{
-                    apiKeyAuth = "";
+                ){{
+                    apiKeyAuth = "<YOUR_API_KEY_HERE>";
                 }})
                 .build();
 
@@ -38,11 +38,7 @@ public class Application {
                 alias = "MLApplicationName";
                 expirationTime = 1577836800000L;
                 scopes = new String[]{{
-                    add(":"),
-                    add("u"),
-                    add("s"),
-                    add("e"),
-                    add("r"),
+                    add(":user"),
                 }};
 
             }};
@@ -90,8 +86,8 @@ public class Application {
         try {
             Songbird sdk = Songbird.builder()
                 .setSecurity(new Security(
-                "string"){{
-                    apiKeyAuth = "";
+                ){{
+                    apiKeyAuth = "<YOUR_API_KEY_HERE>";
                 }})
                 .build();
 
@@ -142,8 +138,8 @@ public class Application {
         try {
             Songbird sdk = Songbird.builder()
                 .setSecurity(new Security(
-                "string"){{
-                    apiKeyAuth = "";
+                ){{
+                    apiKeyAuth = "<YOUR_API_KEY_HERE>";
                 }})
                 .build();
 
@@ -196,8 +192,8 @@ public class Application {
         try {
             Songbird sdk = Songbird.builder()
                 .setSecurity(new Security(
-                "string"){{
-                    apiKeyAuth = "";
+                ){{
+                    apiKeyAuth = "<YOUR_API_KEY_HERE>";
                 }})
                 .build();
 
