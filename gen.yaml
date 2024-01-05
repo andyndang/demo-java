@@ -1,22 +1,11 @@
-configVersion: 1.0.0
-management:
-  docChecksum: 518f272d4b20844b12c8039bef5c7428
-  docVersion: "0.1"
-  speakeasyVersion: 1.126.0
-  generationVersion: 2.213.3
+configVersion: 2.0.0
 generation:
-  comments: {}
   baseServerUrl: https://api.whylabsapp.com
   sdkClassName: Songbird
-  repoURL: https://github.com/andyndang/demo-java.git
   usageSnippets:
     optionalPropertyRendering: withExample
-features:
-  java:
-    core: 3.1.0
-    deprecations: 2.81.1
-    globalSecurity: 2.81.2
-    globalServerURLs: 2.82.1
+  fixes:
+    nameResolutionDec2023: false
 java:
   version: 2.1.0
   artifactID: WhyLabs
@@ -38,5 +27,3 @@ java:
   ossrhURL: https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/
   outputModelSuffix: output
   projectName: Songbird
-  published: true
-  repoSubDirectory: .
