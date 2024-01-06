@@ -4,15 +4,15 @@ management:
   docChecksum: 518f272d4b20844b12c8039bef5c7428
   docVersion: "0.1"
   speakeasyVersion: internal
-  generationVersion: 2.225.2
-  releaseVersion: 2.1.0
-  configChecksum: 280e899501619d66a92d424388b115a7
+  generationVersion: 2.228.1
+  releaseVersion: 2.1.1
+  configChecksum: 6c1ed7164842ec7fce63943c2bbee827
   repoURL: https://github.com/andyndang/demo-java.git
   repoSubDirectory: .
   published: true
 features:
   java:
-    core: 3.2.0
+    core: 3.2.1
     deprecations: 2.81.1
     globalSecurity: 2.81.2
     globalServerURLs: 2.82.1
