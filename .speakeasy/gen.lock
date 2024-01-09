@@ -1,18 +1,18 @@
 lockVersion: 2.0.0
 id: 4aba9800-f1da-4241-afe1-651f3bb84b2f
 management:
-  docChecksum: 518f272d4b20844b12c8039bef5c7428
+  docChecksum: 432a47c070a6886e1cad4ac025d3484a
   docVersion: "0.1"
   speakeasyVersion: internal
-  generationVersion: 2.228.1
-  releaseVersion: 2.1.1
-  configChecksum: 6c1ed7164842ec7fce63943c2bbee827
+  generationVersion: 2.230.1
+  releaseVersion: 2.1.2
+  configChecksum: b46833efb3458e35086be62bc0582b8b
   repoURL: https://github.com/andyndang/demo-java.git
   repoSubDirectory: .
   published: true
 features:
   java:
-    core: 3.2.1
+    core: 3.2.2
     deprecations: 2.81.1
     globalSecurity: 2.81.2
     globalServerURLs: 2.82.1
@@ -23,6 +23,7 @@ generatedFiles:
   - lib/src/main/java/ai/whylabs/WhyLabs/Admin.java
   - lib/src/main/java/ai/whylabs/WhyLabs/Databricks.java
   - lib/src/main/java/ai/whylabs/WhyLabs/FeatureFlags.java
+  - lib/src/main/java/ai/whylabs/WhyLabs/AzureMarketplace.java
   - lib/src/main/java/ai/whylabs/WhyLabs/Membership.java
   - lib/src/main/java/ai/whylabs/WhyLabs/NotificationSettings.java
   - lib/src/main/java/ai/whylabs/WhyLabs/Organizations.java
@@ -93,6 +94,7 @@ generatedFiles:
   - lib/src/main/java/ai/whylabs/WhyLabs/models/operations/PutOrganizationMembershipsResponse.java
   - lib/src/main/java/ai/whylabs/WhyLabs/models/operations/UpdateAccountUserRequest.java
   - lib/src/main/java/ai/whylabs/WhyLabs/models/operations/UpdateAccountUserResponse.java
+  - lib/src/main/java/ai/whylabs/WhyLabs/models/operations/AzureMarketplaceWebhookResponse.java
   - lib/src/main/java/ai/whylabs/WhyLabs/models/operations/CreateMembershipResponse.java
   - lib/src/main/java/ai/whylabs/WhyLabs/models/operations/CreateOrganizationRequest.java
   - lib/src/main/java/ai/whylabs/WhyLabs/models/operations/CreateOrganizationResponse.java
@@ -485,6 +487,7 @@ generatedFiles:
   - docs/models/operations/PutOrganizationMembershipsResponse.md
   - docs/models/operations/UpdateAccountUserRequest.md
   - docs/models/operations/UpdateAccountUserResponse.md
+  - docs/models/operations/AzureMarketplaceWebhookResponse.md
   - docs/models/operations/CreateMembershipResponse.md
   - docs/models/operations/CreateOrganizationRequest.md
   - docs/models/operations/CreateOrganizationResponse.md
@@ -863,6 +866,7 @@ generatedFiles:
   - docs/sdks/admin/README.md
   - docs/sdks/databricks/README.md
   - docs/sdks/featureflags/README.md
+  - docs/sdks/azuremarketplace/README.md
   - docs/sdks/membership/README.md
   - docs/sdks/notificationsettings/README.md
   - docs/sdks/organizations/README.md

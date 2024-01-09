@@ -22,6 +22,50 @@ public class Internal {
 	}
 
     /**
+     * Endpoint for Azure Marketplace webhooks
+     * Endpoint for Azure Marketplace webhooks
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public ai.whylabs.WhyLabs.models.operations.AzureMarketplaceWebhookResponse azureMarketplaceWebhook(String request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(baseUrl, "/v0/marketplace/azure/webhook");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = ai.whylabs.WhyLabs.utils.Utils.serializeRequestBody(request, "request", "json");
+        if (serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
+        req.setBody(serializedRequestBody);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+        
+        ai.whylabs.WhyLabs.models.operations.AzureMarketplaceWebhookResponse res = new ai.whylabs.WhyLabs.models.operations.AzureMarketplaceWebhookResponse(contentType, httpRes.statusCode(), httpRes) {{
+            response = null;
+        }};
+        
+        if (true) {
+            if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                ai.whylabs.WhyLabs.models.shared.Response out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), ai.whylabs.WhyLabs.models.shared.Response.class);
+                res.response = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
      * Create an account user
      * Create an account user
      * @param request the request object containing all of the parameters for the API call

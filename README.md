@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'ai.whylabs.WhyLabs:Songbird:2.1.1'
+implementation 'ai.whylabs.WhyLabs:Songbird:2.1.2'
 ```
 <!-- End SDK Installation [installation] -->
 
@@ -75,6 +75,7 @@ public class Application {
 
 ### [internal](docs/sdks/internal/README.md)
 
+* [azureMarketplaceWebhook](docs/sdks/internal/README.md#azuremarketplacewebhook) - Endpoint for Azure Marketplace webhooks
 * [createAccountUser](docs/sdks/internal/README.md#createaccountuser) - Create an account user
 * [createMembership](docs/sdks/internal/README.md#createmembership) - Create a membership for a user, making them apart of an organization. Uses the user's current email address.
 * [createOrganization](docs/sdks/internal/README.md#createorganization) - Create an organization
@@ -147,6 +148,10 @@ public class Application {
 ### [featureFlags](docs/sdks/featureflags/README.md)
 
 * [getFeatureFlags](docs/sdks/featureflags/README.md#getfeatureflags) - Get feature flags for the specified user/org
+
+### [azureMarketplace](docs/sdks/azuremarketplace/README.md)
+
+* [azureMarketplaceWebhook](docs/sdks/azuremarketplace/README.md#azuremarketplacewebhook) - Endpoint for Azure Marketplace webhooks
 
 ### [membership](docs/sdks/membership/README.md)
 

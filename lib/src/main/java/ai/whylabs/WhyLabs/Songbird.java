@@ -23,6 +23,7 @@ public class Songbird {
     public Admin admin;
     public Databricks databricks;
     public FeatureFlags featureFlags;
+    public AzureMarketplace azureMarketplace;
     public Membership membership;
     public NotificationSettings notificationSettings;
     public Organizations organizations;
@@ -158,6 +159,8 @@ public class Songbird {
 		this.databricks = new Databricks(this.sdkConfiguration);
 		
 		this.featureFlags = new FeatureFlags(this.sdkConfiguration);
+		
+		this.azureMarketplace = new AzureMarketplace(this.sdkConfiguration);
 		
 		this.membership = new Membership(this.sdkConfiguration);
 		
