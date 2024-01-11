@@ -3,6 +3,7 @@
 
 ### Available Operations
 
+* [activateAzureSubscription](#activateazuresubscription) - Endpoint to activate Azure Marketplace subscriptions
 * [azureMarketplaceWebhook](#azuremarketplacewebhook) - Endpoint for Azure Marketplace webhooks
 * [createAccountUser](#createaccountuser) - Create an account user
 * [createMembership](#createmembership) - Create a membership for a user, making them apart of an organization. Uses the user's current email address.
@@ -59,6 +60,63 @@
 * [updateUser](#updateuser) - Update a user.
 * [whyLabsSearch](#whylabssearch) - WhyLabs Search
 * [whyLabsSearchIndexing](#whylabssearchindexing) - WhyLabs Search Indexing
+
+## activateAzureSubscription
+
+Endpoint to activate Azure Marketplace subscriptions
+
+### Example Usage
+
+```java
+package hello.world;
+
+import ai.whylabs.WhyLabs.Songbird;
+import ai.whylabs.WhyLabs.models.operations.ActivateAzureSubscriptionResponse;
+import ai.whylabs.WhyLabs.models.shared.ActivateAzureSubscriptionRequest;
+import ai.whylabs.WhyLabs.models.shared.Security;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            Songbird sdk = Songbird.builder()
+                .setSecurity(new Security(
+                ){{
+                    apiKeyAuth = "<YOUR_API_KEY_HERE>";
+                }})
+                .build();
+
+            ai.whylabs.WhyLabs.models.shared.ActivateAzureSubscriptionRequest req = new ActivateAzureSubscriptionRequest(
+                "string",
+                "string",
+                "string"){{
+                expectExisting = false;
+                modelName = "string";
+
+            }};
+
+            ai.whylabs.WhyLabs.models.operations.ActivateAzureSubscriptionResponse res = sdk.internal.activateAzureSubscription(req);
+
+            if (res.statusCode == 200) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                    | [ai.whylabs.WhyLabs.models.shared.ActivateAzureSubscriptionRequest](../../models/shared/ActivateAzureSubscriptionRequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
+
+
+### Response
+
+**[ai.whylabs.WhyLabs.models.operations.ActivateAzureSubscriptionResponse](../../models/operations/ActivateAzureSubscriptionResponse.md)**
+
 
 ## azureMarketplaceWebhook
 
@@ -1784,7 +1842,7 @@ public class Application {
                 notificationEmailAddress = "notifications@acme.ai";
                 observatoryUrl = "https://hub.whylabsapp.com";
                 slackWebhook = "https://hooks.slack.com/services/foo/bar";
-                subscriptionTier = SubscriptionTier.PAID;
+                subscriptionTier = SubscriptionTier.AWS_MARKETPLACE;
 
             }};
 
@@ -1848,7 +1906,7 @@ public class Application {
                 parentOrgId = "abc-def-ghi-jkl";
                 slackWebhook = "https://hooks.slack.com/services/foo/bar";
                 storageBucketOverride = "https://s3.us-west-2.amazonaws.com/whylabs-public/";
-                subscriptionTier = SubscriptionTier.PAID;
+                subscriptionTier = SubscriptionTier.AWS_MARKETPLACE;
 
             }};
 
@@ -2118,7 +2176,7 @@ public class Application {
                 "string",
                 "string",
                 "string",
-                SubscriptionTier.AWS_MARKETPLACE){{
+                SubscriptionTier.AZURE_MARKETPLACE){{
                 expectExisting = false;
 
             }};
@@ -2913,7 +2971,7 @@ public class Application {
                 pagerDutyKey = "abc-def-ghi-jkl";
                 parentOrgId = "org-123";
                 slackWebhook = "https://hooks.slack.com/services/foo/bar";
-                subscriptionTier = SubscriptionTier.AWS_MARKETPLACE;
+                subscriptionTier = SubscriptionTier.AZURE_MARKETPLACE;
 
             }};
 

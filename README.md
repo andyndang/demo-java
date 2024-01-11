@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'ai.whylabs.WhyLabs:Songbird:2.1.2'
+implementation 'ai.whylabs.WhyLabs:Songbird:2.1.3'
 ```
 <!-- End SDK Installation [installation] -->
 
@@ -75,6 +75,7 @@ public class Application {
 
 ### [internal](docs/sdks/internal/README.md)
 
+* [activateAzureSubscription](docs/sdks/internal/README.md#activateazuresubscription) - Endpoint to activate Azure Marketplace subscriptions
 * [azureMarketplaceWebhook](docs/sdks/internal/README.md#azuremarketplacewebhook) - Endpoint for Azure Marketplace webhooks
 * [createAccountUser](docs/sdks/internal/README.md#createaccountuser) - Create an account user
 * [createMembership](docs/sdks/internal/README.md#createmembership) - Create a membership for a user, making them apart of an organization. Uses the user's current email address.
@@ -148,10 +149,6 @@ public class Application {
 ### [featureFlags](docs/sdks/featureflags/README.md)
 
 * [getFeatureFlags](docs/sdks/featureflags/README.md#getfeatureflags) - Get feature flags for the specified user/org
-
-### [azureMarketplace](docs/sdks/azuremarketplace/README.md)
-
-* [azureMarketplaceWebhook](docs/sdks/azuremarketplace/README.md#azuremarketplacewebhook) - Endpoint for Azure Marketplace webhooks
 
 ### [membership](docs/sdks/membership/README.md)
 
@@ -312,6 +309,11 @@ public class Application {
 * [getUser](docs/sdks/user/README.md#getuser) - Get a user by their id.
 * [getUserByEmail](docs/sdks/user/README.md#getuserbyemail) - Get a user by their email.
 * [updateUser](docs/sdks/user/README.md#updateuser) - Update a user.
+
+### [azureMarketplace](docs/sdks/azuremarketplace/README.md)
+
+* [activateAzureSubscription](docs/sdks/azuremarketplace/README.md#activateazuresubscription) - Endpoint to activate Azure Marketplace subscriptions
+* [azureMarketplaceWebhook](docs/sdks/azuremarketplace/README.md#azuremarketplacewebhook) - Endpoint for Azure Marketplace webhooks
 
 ### [traces](docs/sdks/traces/README.md)
 

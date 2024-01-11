@@ -56,7 +56,7 @@ publishing {
         maven(MavenPublication) {
             groupId = 'ai.whylabs'
             artifactId = 'WhyLabs'
-            version = '2.1.2'
+            version = '2.1.3'
 
             from components.java
 

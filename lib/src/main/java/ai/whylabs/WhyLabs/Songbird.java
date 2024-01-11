@@ -23,7 +23,6 @@ public class Songbird {
     public Admin admin;
     public Databricks databricks;
     public FeatureFlags featureFlags;
-    public AzureMarketplace azureMarketplace;
     public Membership membership;
     public NotificationSettings notificationSettings;
     public Organizations organizations;
@@ -42,6 +41,7 @@ public class Songbird {
     public Sessions sessions;
     public Subscription subscription;
     public User user;
+    public AzureMarketplace azureMarketplace;
     public Traces traces;
     public Transactions transactions;	
 
@@ -160,8 +160,6 @@ public class Songbird {
 		
 		this.featureFlags = new FeatureFlags(this.sdkConfiguration);
 		
-		this.azureMarketplace = new AzureMarketplace(this.sdkConfiguration);
-		
 		this.membership = new Membership(this.sdkConfiguration);
 		
 		this.notificationSettings = new NotificationSettings(this.sdkConfiguration);
@@ -197,6 +195,8 @@ public class Songbird {
 		this.subscription = new Subscription(this.sdkConfiguration);
 		
 		this.user = new User(this.sdkConfiguration);
+		
+		this.azureMarketplace = new AzureMarketplace(this.sdkConfiguration);
 		
 		this.traces = new Traces(this.sdkConfiguration);
 		
