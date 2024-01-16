@@ -147,7 +147,7 @@ public class Application {
                 "string",
                 "string",
                 "string",
-                SubscriptionTier.AZURE_MARKETPLACE){{
+                SubscriptionTier.AWS_MARKETPLACE){{
                 expectExisting = false;
 
             }};

@@ -10,7 +10,6 @@ public enum SubscriptionTier {
     FREE("FREE"),
     PAID("PAID"),
     AWS_MARKETPLACE("AWS_MARKETPLACE"),
-    AZURE_MARKETPLACE("AZURE_MARKETPLACE"),
     SUBSCRIPTION("SUBSCRIPTION");
 
     @JsonValue

@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 4aba9800-f1da-4241-afe1-651f3bb84b2f
 management:
-  docChecksum: 98be55e7e884eafdc3619224bd55a850
+  docChecksum: 987276e89238f56b496d414376315eb5
   docVersion: "0.1"
   speakeasyVersion: internal
-  generationVersion: 2.230.3
-  releaseVersion: 2.1.3
-  configChecksum: d3667990cc87ee2a18212d8954c174a4
+  generationVersion: 2.233.2
+  releaseVersion: 3.0.0
+  configChecksum: 38abd0705fb0bea11552d2b0e08e1007
   repoURL: https://github.com/andyndang/demo-java.git
   repoSubDirectory: .
   published: true
