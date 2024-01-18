@@ -7,7 +7,7 @@ generation:
   fixes:
     nameResolutionDec2023: false
 java:
-  version: 3.0.0
+  version: 3.0.1
   artifactID: WhyLabs
   companyEmail: info@whylabs.ai
   companyName: WhyLabs

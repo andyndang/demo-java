@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'ai.whylabs.WhyLabs:Songbird:3.0.0'
+implementation 'ai.whylabs.WhyLabs:Songbird:3.0.1'
 ```
 <!-- End SDK Installation [installation] -->
 
@@ -76,6 +76,7 @@ public class Application {
 ### [internal](docs/sdks/internal/README.md)
 
 * [activateAzureSubscription](docs/sdks/internal/README.md#activateazuresubscription) - Endpoint to activate Azure Marketplace subscriptions
+* [activateMarketplaceSubscriptionInternal](docs/sdks/internal/README.md#activatemarketplacesubscriptioninternal) - Activate Azure Marketplace subscription to an existing organization.
 * [azureMarketplaceWebhook](docs/sdks/internal/README.md#azuremarketplacewebhook) - Endpoint for Azure Marketplace webhooks
 * [createAccountUser](docs/sdks/internal/README.md#createaccountuser) - Create an account user
 * [createMembership](docs/sdks/internal/README.md#createmembership) - Create a membership for a user, making them apart of an organization. Uses the user's current email address.
@@ -104,6 +105,7 @@ public class Application {
 * [hideSegments](docs/sdks/internal/README.md#hidesegments) - Hides a list of segments
 * [listAccountUsers](docs/sdks/internal/README.md#listaccountusers) - List users in an account
 * [listApiKeys](docs/sdks/internal/README.md#listapikeys) - List API key metadata for a given organization and user
+* [listAzureMarketplaceSubscriptions](docs/sdks/internal/README.md#listazuremarketplacesubscriptions) - List Azure Marketplace subscriptions
 * [listJobs](docs/sdks/internal/README.md#listjobs) - List all of the jobs in a workspace.
 * [listManagedOrganizations](docs/sdks/internal/README.md#listmanagedorganizations) - List managed organizations for a parent organization
 * [listMonitorConfigV3Versions](docs/sdks/internal/README.md#listmonitorconfigv3versions) - List the monitor config document versions for a given dataset.
@@ -135,7 +137,9 @@ public class Application {
 
 ### [admin](docs/sdks/admin/README.md)
 
+* [activateMarketplaceSubscriptionInternal](docs/sdks/admin/README.md#activatemarketplacesubscriptioninternal) - Activate Azure Marketplace subscription to an existing organization.
 * [generateReport](docs/sdks/admin/README.md#generatereport) - Generate an admin report
+* [listAzureMarketplaceSubscriptions](docs/sdks/admin/README.md#listazuremarketplacesubscriptions) - List Azure Marketplace subscriptions
 * [postMonitorConfigValidationJob](docs/sdks/admin/README.md#postmonitorconfigvalidationjob) - Create a monitor config validation job for all configs
 
 ### [databricks](docs/sdks/databricks/README.md)

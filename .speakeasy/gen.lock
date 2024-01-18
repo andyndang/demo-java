@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 4aba9800-f1da-4241-afe1-651f3bb84b2f
 management:
-  docChecksum: 987276e89238f56b496d414376315eb5
+  docChecksum: b0f84bea80b1ddb3221da988856ffa5b
   docVersion: "0.1"
   speakeasyVersion: internal
-  generationVersion: 2.233.2
-  releaseVersion: 3.0.0
-  configChecksum: 38abd0705fb0bea11552d2b0e08e1007
+  generationVersion: 2.235.3
+  releaseVersion: 3.0.1
+  configChecksum: 9a140ad8a21499e237bb5f005054b265
   repoURL: https://github.com/andyndang/demo-java.git
   repoSubDirectory: .
   published: true
@@ -95,6 +95,8 @@ generatedFiles:
   - lib/src/main/java/ai/whylabs/WhyLabs/models/operations/UpdateAccountUserRequest.java
   - lib/src/main/java/ai/whylabs/WhyLabs/models/operations/UpdateAccountUserResponse.java
   - lib/src/main/java/ai/whylabs/WhyLabs/models/operations/ActivateAzureSubscriptionResponse.java
+  - lib/src/main/java/ai/whylabs/WhyLabs/models/operations/ActivateMarketplaceSubscriptionInternalRequest.java
+  - lib/src/main/java/ai/whylabs/WhyLabs/models/operations/ActivateMarketplaceSubscriptionInternalResponse.java
   - lib/src/main/java/ai/whylabs/WhyLabs/models/operations/AzureMarketplaceWebhookResponse.java
   - lib/src/main/java/ai/whylabs/WhyLabs/models/operations/CreateMembershipResponse.java
   - lib/src/main/java/ai/whylabs/WhyLabs/models/operations/CreateOrganizationRequest.java
@@ -135,6 +137,7 @@ generatedFiles:
   - lib/src/main/java/ai/whylabs/WhyLabs/models/operations/HideSegmentsResponse.java
   - lib/src/main/java/ai/whylabs/WhyLabs/models/operations/ListApiKeysRequest.java
   - lib/src/main/java/ai/whylabs/WhyLabs/models/operations/ListApiKeysResponse.java
+  - lib/src/main/java/ai/whylabs/WhyLabs/models/operations/ListAzureMarketplaceSubscriptionsResponse.java
   - lib/src/main/java/ai/whylabs/WhyLabs/models/operations/ListJobsResponse.java
   - lib/src/main/java/ai/whylabs/WhyLabs/models/operations/ListMonitorConfigV3VersionsRequest.java
   - lib/src/main/java/ai/whylabs/WhyLabs/models/operations/ListMonitorConfigV3VersionsResponse.java
@@ -361,6 +364,8 @@ generatedFiles:
   - lib/src/main/java/ai/whylabs/WhyLabs/models/shared/SubscriptionProductFeature.java
   - lib/src/main/java/ai/whylabs/WhyLabs/models/shared/SegmentsListRequest.java
   - lib/src/main/java/ai/whylabs/WhyLabs/models/shared/ListUserApiKeys.java
+  - lib/src/main/java/ai/whylabs/WhyLabs/models/shared/AzureMarketplaceSubscriptionDetails.java
+  - lib/src/main/java/ai/whylabs/WhyLabs/models/shared/AzureMarketplaceContactPayload.java
   - lib/src/main/java/ai/whylabs/WhyLabs/models/shared/ListJobsResponse.java
   - lib/src/main/java/ai/whylabs/WhyLabs/models/shared/DTOJobsJobDTO.java
   - lib/src/main/java/ai/whylabs/WhyLabs/models/shared/Libraries.java
@@ -491,6 +496,8 @@ generatedFiles:
   - docs/models/operations/UpdateAccountUserRequest.md
   - docs/models/operations/UpdateAccountUserResponse.md
   - docs/models/operations/ActivateAzureSubscriptionResponse.md
+  - docs/models/operations/ActivateMarketplaceSubscriptionInternalRequest.md
+  - docs/models/operations/ActivateMarketplaceSubscriptionInternalResponse.md
   - docs/models/operations/AzureMarketplaceWebhookResponse.md
   - docs/models/operations/CreateMembershipResponse.md
   - docs/models/operations/CreateOrganizationRequest.md
@@ -531,6 +538,7 @@ generatedFiles:
   - docs/models/operations/HideSegmentsResponse.md
   - docs/models/operations/ListApiKeysRequest.md
   - docs/models/operations/ListApiKeysResponse.md
+  - docs/models/operations/ListAzureMarketplaceSubscriptionsResponse.md
   - docs/models/operations/ListJobsResponse.md
   - docs/models/operations/ListMonitorConfigV3VersionsRequest.md
   - docs/models/operations/ListMonitorConfigV3VersionsResponse.md
@@ -757,6 +765,8 @@ generatedFiles:
   - docs/models/shared/SubscriptionProductFeature.md
   - docs/models/shared/SegmentsListRequest.md
   - docs/models/shared/ListUserApiKeys.md
+  - docs/models/shared/AzureMarketplaceSubscriptionDetails.md
+  - docs/models/shared/AzureMarketplaceContactPayload.md
   - docs/models/shared/ListJobsResponse.md
   - docs/models/shared/DTOJobsJobDTO.md
   - docs/models/shared/Libraries.md
