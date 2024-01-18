@@ -24,11 +24,10 @@ public class ApiKey {
      * Generate an API key for a user.
      * Generates an API key for a given user. Must be called either by system administrator or by the user themselves
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.CreateApiKeyResponse createApiKey(ai.whylabs.WhyLabs.models.operations.CreateApiKeyRequest request, ai.whylabs.WhyLabs.models.operations.CreateApiKeySecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.CreateApiKeyResponse createApiKey(ai.whylabs.WhyLabs.models.operations.CreateApiKeyRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.CreateApiKeyRequest.class, baseUrl, "/v0/organizations/{org_id}/api-key", request, null);
         
@@ -37,7 +36,7 @@ public class ApiKey {
         req.setURL(url);
 
         req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         java.util.List<NameValuePair> queryParams = ai.whylabs.WhyLabs.utils.Utils.getQueryParams(ai.whylabs.WhyLabs.models.operations.CreateApiKeyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
@@ -45,16 +44,15 @@ public class ApiKey {
             }
         }
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.CreateApiKeyResponse res = new ai.whylabs.WhyLabs.models.operations.CreateApiKeyResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.CreateApiKeyResponse res = new ai.whylabs.WhyLabs.models.operations.CreateApiKeyResponse(contentType, httpRes.statusCode(), httpRes) {{
             userApiKey = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -71,11 +69,10 @@ public class ApiKey {
      * Get an api key by its id
      * Get an api key by its id
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.GetApiKeyResponse getApiKey(ai.whylabs.WhyLabs.models.operations.GetApiKeyRequest request, ai.whylabs.WhyLabs.models.operations.GetApiKeySecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.GetApiKeyResponse getApiKey(ai.whylabs.WhyLabs.models.operations.GetApiKeyRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.GetApiKeyRequest.class, baseUrl, "/v0/organizations/{org_id}/api-key/{key_id}", request, null);
         
@@ -84,18 +81,17 @@ public class ApiKey {
         req.setURL(url);
 
         req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.GetApiKeyResponse res = new ai.whylabs.WhyLabs.models.operations.GetApiKeyResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.GetApiKeyResponse res = new ai.whylabs.WhyLabs.models.operations.GetApiKeyResponse(contentType, httpRes.statusCode(), httpRes) {{
             userApiKeyResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -112,11 +108,10 @@ public class ApiKey {
      * List API key metadata for a given organization and user
      * Returns the API key metadata for a given organization and user
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.ListApiKeysResponse listApiKeys(ai.whylabs.WhyLabs.models.operations.ListApiKeysRequest request, ai.whylabs.WhyLabs.models.operations.ListApiKeysSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.ListApiKeysResponse listApiKeys(ai.whylabs.WhyLabs.models.operations.ListApiKeysRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.ListApiKeysRequest.class, baseUrl, "/v0/organizations/{org_id}/api-key", request, null);
         
@@ -125,7 +120,7 @@ public class ApiKey {
         req.setURL(url);
 
         req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         java.util.List<NameValuePair> queryParams = ai.whylabs.WhyLabs.utils.Utils.getQueryParams(ai.whylabs.WhyLabs.models.operations.ListApiKeysRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
@@ -133,16 +128,15 @@ public class ApiKey {
             }
         }
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.ListApiKeysResponse res = new ai.whylabs.WhyLabs.models.operations.ListApiKeysResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.ListApiKeysResponse res = new ai.whylabs.WhyLabs.models.operations.ListApiKeysResponse(contentType, httpRes.statusCode(), httpRes) {{
             listUserApiKeys = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -159,11 +153,10 @@ public class ApiKey {
      * Revoke the given API Key, removing its ability to access WhyLabs systems
      * Revokes the given API Key
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.RevokeApiKeyResponse revokeApiKey(ai.whylabs.WhyLabs.models.operations.RevokeApiKeyRequest request, ai.whylabs.WhyLabs.models.operations.RevokeApiKeySecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.RevokeApiKeyResponse revokeApiKey(ai.whylabs.WhyLabs.models.operations.RevokeApiKeyRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.RevokeApiKeyRequest.class, baseUrl, "/v0/organizations/{org_id}/api-key", request, null);
         
@@ -172,7 +165,7 @@ public class ApiKey {
         req.setURL(url);
 
         req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         java.util.List<NameValuePair> queryParams = ai.whylabs.WhyLabs.utils.Utils.getQueryParams(ai.whylabs.WhyLabs.models.operations.RevokeApiKeyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
@@ -180,16 +173,15 @@ public class ApiKey {
             }
         }
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.RevokeApiKeyResponse res = new ai.whylabs.WhyLabs.models.operations.RevokeApiKeyResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.RevokeApiKeyResponse res = new ai.whylabs.WhyLabs.models.operations.RevokeApiKeyResponse(contentType, httpRes.statusCode(), httpRes) {{
             userApiKey = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {

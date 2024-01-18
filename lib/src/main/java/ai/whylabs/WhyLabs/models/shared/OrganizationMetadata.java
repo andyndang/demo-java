@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * OrganizationMetadata - Metadata about an organization
  */
+
 public class OrganizationMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTime")
@@ -105,11 +106,38 @@ public class OrganizationMetadata {
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("parentOrgId")
+    public String parentOrgId;
+
+    public OrganizationMetadata withParentOrgId(String parentOrgId) {
+        this.parentOrgId = parentOrgId;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slackWebhook")
     public String slackWebhook;
 
     public OrganizationMetadata withSlackWebhook(String slackWebhook) {
         this.slackWebhook = slackWebhook;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("storageBucketOverride")
+    public String storageBucketOverride;
+
+    public OrganizationMetadata withStorageBucketOverride(String storageBucketOverride) {
+        this.storageBucketOverride = storageBucketOverride;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("subscriptionId")
+    public String subscriptionId;
+
+    public OrganizationMetadata withSubscriptionId(String subscriptionId) {
+        this.subscriptionId = subscriptionId;
         return this;
     }
     

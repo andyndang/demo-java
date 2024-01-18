@@ -13,9 +13,7 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import java.time.OffsetDateTime;
 
-/**
- * NotificationAction - GetNotificationAction default response
- */
+
 public class NotificationAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonSerialize(using = DateTimeSerializer.class)
@@ -59,10 +57,19 @@ public class NotificationAction {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payload")
-    public java.util.Map<String, Object> payload;
+    public NotificationActionPayload payload;
 
-    public NotificationAction withPayload(java.util.Map<String, Object> payload) {
+    public NotificationAction withPayload(NotificationActionPayload payload) {
         this.payload = payload;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("references")
+    public NotificationRelationshipItem[] references;
+
+    public NotificationAction withReferences(NotificationRelationshipItem[] references) {
+        this.references = references;
         return this;
     }
     

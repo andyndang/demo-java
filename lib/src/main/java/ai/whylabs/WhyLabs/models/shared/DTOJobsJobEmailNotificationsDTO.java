@@ -8,6 +8,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+
 public class DTOJobsJobEmailNotificationsDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("noAlertForSkippedRuns")
@@ -20,27 +21,27 @@ public class DTOJobsJobEmailNotificationsDTO {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onFailure")
-    public java.util.Map<String, Object>[] onFailure;
+    public OnFailure[] onFailure;
 
-    public DTOJobsJobEmailNotificationsDTO withOnFailure(java.util.Map<String, Object>[] onFailure) {
+    public DTOJobsJobEmailNotificationsDTO withOnFailure(OnFailure[] onFailure) {
         this.onFailure = onFailure;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onStart")
-    public java.util.Map<String, Object>[] onStart;
+    public OnStart[] onStart;
 
-    public DTOJobsJobEmailNotificationsDTO withOnStart(java.util.Map<String, Object>[] onStart) {
+    public DTOJobsJobEmailNotificationsDTO withOnStart(OnStart[] onStart) {
         this.onStart = onStart;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onSuccess")
-    public java.util.Map<String, Object>[] onSuccess;
+    public OnSuccess[] onSuccess;
 
-    public DTOJobsJobEmailNotificationsDTO withOnSuccess(java.util.Map<String, Object>[] onSuccess) {
+    public DTOJobsJobEmailNotificationsDTO withOnSuccess(OnSuccess[] onSuccess) {
         this.onSuccess = onSuccess;
         return this;
     }

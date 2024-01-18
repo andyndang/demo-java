@@ -7,7 +7,11 @@ package ai.whylabs.WhyLabs.models.operations;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
+
 public class ListSegmentsResponse {
+    /**
+     * HTTP response content type for this operation
+     */
     
     public String contentType;
 
@@ -17,7 +21,7 @@ public class ListSegmentsResponse {
     }
     
     /**
-     * The metadata for the summarized dataset profile including paths to JSON and protobuf data
+     * The list of segments for the dataset profile
      */
     
     public ai.whylabs.WhyLabs.models.shared.SegmentListResponse segmentListResponse;
@@ -27,6 +31,9 @@ public class ListSegmentsResponse {
         return this;
     }
     
+    /**
+     * HTTP response status code for this operation
+     */
     
     public Integer statusCode;
 
@@ -35,6 +42,9 @@ public class ListSegmentsResponse {
         return this;
     }
     
+    /**
+     * Raw HTTP response; suitable for custom response parsing
+     */
     
     public HttpResponse<byte[]> rawResponse;
 
@@ -43,8 +53,9 @@ public class ListSegmentsResponse {
         return this;
     }
     
-    public ListSegmentsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+    public ListSegmentsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode, @JsonProperty("RawResponse") HttpResponse<byte[]> rawResponse) {
         this.contentType = contentType;
         this.statusCode = statusCode;
+        this.rawResponse = rawResponse;
   }
 }

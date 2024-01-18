@@ -8,6 +8,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+
 public class DTOJobsNewClusterDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("artifactPaths")
@@ -101,9 +102,9 @@ public class DTOJobsNewClusterDTO {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("initScripts")
-    public java.util.Map<String, Object>[] initScripts;
+    public InitScripts[] initScripts;
 
-    public DTOJobsNewClusterDTO withInitScripts(java.util.Map<String, Object>[] initScripts) {
+    public DTOJobsNewClusterDTO withInitScripts(InitScripts[] initScripts) {
         this.initScripts = initScripts;
         return this;
     }
@@ -182,9 +183,9 @@ public class DTOJobsNewClusterDTO {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sshPublicKeys")
-    public java.util.Map<String, Object>[] sshPublicKeys;
+    public SshPublicKeys[] sshPublicKeys;
 
-    public DTOJobsNewClusterDTO withSshPublicKeys(java.util.Map<String, Object>[] sshPublicKeys) {
+    public DTOJobsNewClusterDTO withSshPublicKeys(SshPublicKeys[] sshPublicKeys) {
         this.sshPublicKeys = sshPublicKeys;
         return this;
     }

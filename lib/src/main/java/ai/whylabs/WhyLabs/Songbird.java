@@ -18,26 +18,32 @@ public class Songbird {
         "https://api.whylabsapp.com",
 	};
   	
-    public Admin admin;
-    public ApiKey apiKey;
-    public Databricks databricks;
-    public DatasetMetadata datasetMetadata;
-    public DatasetProfile datasetProfile;
-    public FeatureWeights featureWeights;
-    public FeatureFlags featureFlags;
+    public Account account;
     public Internal internal;
-    public Log log;
+    public Admin admin;
+    public Databricks databricks;
+    public FeatureFlags featureFlags;
     public Membership membership;
-    public Models models;
-    public Monitor monitor;
     public NotificationSettings notificationSettings;
     public Organizations organizations;
+    public ApiKey apiKey;
+    public DatasetProfile datasetProfile;
+    public DatasetMetadata datasetMetadata;
+    public FeatureWeights featureWeights;
+    public DebugEvents debugEvents;
+    public Log log;
+    public Models models;
+    public Monitor monitor;
+    public Schema schema;
     public Payment payment;
     public Provision provision;
-    public Schema schema;
     public Search search;
     public Sessions sessions;
-    public User user;	
+    public Subscription subscription;
+    public User user;
+    public AzureMarketplace azureMarketplace;
+    public Traces traces;
+    public Transactions transactions;	
 
 	private SDKConfiguration sdkConfiguration;
 
@@ -57,6 +63,16 @@ public class Songbird {
 		 */
 		public Builder setClient(HTTPClient client) {
 			this.sdkConfiguration.defaultClient = client;
+			return this;
+		}
+		
+		/**
+		 * Configures the SDK to use the provided security details.
+		 * @param security The security details to use for all requests.
+		 * @return The builder instance.
+		 */
+		public Builder setSecurity(ai.whylabs.WhyLabs.models.shared.Security security) {
+			this.sdkConfiguration.security = security;
 			return this;
 		}
 		
@@ -102,6 +118,10 @@ public class Songbird {
 				this.sdkConfiguration.defaultClient = new SpeakeasyHTTPClient();
 			}
 			
+			if (this.sdkConfiguration.security != null) {
+				this.sdkConfiguration.securityClient = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, this.sdkConfiguration.security);
+			}
+			
 			if (this.sdkConfiguration.securityClient == null) {
 				this.sdkConfiguration.securityClient = this.sdkConfiguration.defaultClient;
 			}
@@ -130,44 +150,56 @@ public class Songbird {
 	private Songbird(SDKConfiguration sdkConfiguration) throws Exception {
 		this.sdkConfiguration = sdkConfiguration;
 		
-		this.admin = new Admin(this.sdkConfiguration);
-		
-		this.apiKey = new ApiKey(this.sdkConfiguration);
-		
-		this.databricks = new Databricks(this.sdkConfiguration);
-		
-		this.datasetMetadata = new DatasetMetadata(this.sdkConfiguration);
-		
-		this.datasetProfile = new DatasetProfile(this.sdkConfiguration);
-		
-		this.featureWeights = new FeatureWeights(this.sdkConfiguration);
-		
-		this.featureFlags = new FeatureFlags(this.sdkConfiguration);
+		this.account = new Account(this.sdkConfiguration);
 		
 		this.internal = new Internal(this.sdkConfiguration);
 		
-		this.log = new Log(this.sdkConfiguration);
+		this.admin = new Admin(this.sdkConfiguration);
+		
+		this.databricks = new Databricks(this.sdkConfiguration);
+		
+		this.featureFlags = new FeatureFlags(this.sdkConfiguration);
 		
 		this.membership = new Membership(this.sdkConfiguration);
-		
-		this.models = new Models(this.sdkConfiguration);
-		
-		this.monitor = new Monitor(this.sdkConfiguration);
 		
 		this.notificationSettings = new NotificationSettings(this.sdkConfiguration);
 		
 		this.organizations = new Organizations(this.sdkConfiguration);
 		
+		this.apiKey = new ApiKey(this.sdkConfiguration);
+		
+		this.datasetProfile = new DatasetProfile(this.sdkConfiguration);
+		
+		this.datasetMetadata = new DatasetMetadata(this.sdkConfiguration);
+		
+		this.featureWeights = new FeatureWeights(this.sdkConfiguration);
+		
+		this.debugEvents = new DebugEvents(this.sdkConfiguration);
+		
+		this.log = new Log(this.sdkConfiguration);
+		
+		this.models = new Models(this.sdkConfiguration);
+		
+		this.monitor = new Monitor(this.sdkConfiguration);
+		
+		this.schema = new Schema(this.sdkConfiguration);
+		
 		this.payment = new Payment(this.sdkConfiguration);
 		
 		this.provision = new Provision(this.sdkConfiguration);
-		
-		this.schema = new Schema(this.sdkConfiguration);
 		
 		this.search = new Search(this.sdkConfiguration);
 		
 		this.sessions = new Sessions(this.sdkConfiguration);
 		
+		this.subscription = new Subscription(this.sdkConfiguration);
+		
 		this.user = new User(this.sdkConfiguration);
+		
+		this.azureMarketplace = new AzureMarketplace(this.sdkConfiguration);
+		
+		this.traces = new Traces(this.sdkConfiguration);
+		
+		this.transactions = new Transactions(this.sdkConfiguration);
 	}
 }

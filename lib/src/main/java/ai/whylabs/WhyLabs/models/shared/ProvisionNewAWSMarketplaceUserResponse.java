@@ -6,9 +6,7 @@ package ai.whylabs.WhyLabs.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-/**
- * ProvisionNewAWSMarketplaceUserResponse - ProvisionAWSMarketplaceNewUser default response
- */
+
 public class ProvisionNewAWSMarketplaceUserResponse {
     @JsonProperty("customerId")
     public String customerId;

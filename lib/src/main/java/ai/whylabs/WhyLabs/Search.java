@@ -25,11 +25,10 @@ public class Search {
      * WhyLabs Search
      * WhyLabs Search
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.WhyLabsSearchResponse whyLabsSearch(ai.whylabs.WhyLabs.models.operations.WhyLabsSearchRequest request, ai.whylabs.WhyLabs.models.operations.WhyLabsSearchSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.WhyLabsSearchResponse whyLabsSearch(ai.whylabs.WhyLabs.models.operations.WhyLabsSearchRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(baseUrl, "/v0/search");
         
@@ -38,7 +37,7 @@ public class Search {
         req.setURL(url);
 
         req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         java.util.List<NameValuePair> queryParams = ai.whylabs.WhyLabs.utils.Utils.getQueryParams(ai.whylabs.WhyLabs.models.operations.WhyLabsSearchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
@@ -46,16 +45,15 @@ public class Search {
             }
         }
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.WhyLabsSearchResponse res = new ai.whylabs.WhyLabs.models.operations.WhyLabsSearchResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.WhyLabsSearchResponse res = new ai.whylabs.WhyLabs.models.operations.WhyLabsSearchResponse(contentType, httpRes.statusCode(), httpRes) {{
             searchResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -72,11 +70,10 @@ public class Search {
      * WhyLabs Search Indexing
      * WhyLabs Search Indexing
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.WhyLabsSearchIndexingResponse whyLabsSearchIndexing(ai.whylabs.WhyLabs.models.shared.SearchIndexRequest request, ai.whylabs.WhyLabs.models.operations.WhyLabsSearchIndexingSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.WhyLabsSearchIndexingResponse whyLabsSearchIndexing(ai.whylabs.WhyLabs.models.shared.SearchIndexRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(baseUrl, "/v0/search/index");
         
@@ -90,18 +87,17 @@ public class Search {
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.WhyLabsSearchIndexingResponse res = new ai.whylabs.WhyLabs.models.operations.WhyLabsSearchIndexingResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.WhyLabsSearchIndexingResponse res = new ai.whylabs.WhyLabs.models.operations.WhyLabsSearchIndexingResponse(contentType, httpRes.statusCode(), httpRes) {{
             response = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {

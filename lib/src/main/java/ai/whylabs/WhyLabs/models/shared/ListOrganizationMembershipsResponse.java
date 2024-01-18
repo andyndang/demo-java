@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * ListOrganizationMembershipsResponse - Response for the ListOrganizationMemberships API
  */
+
 public class ListOrganizationMembershipsResponse {
     /**
      * A list of all memberships in an organization.

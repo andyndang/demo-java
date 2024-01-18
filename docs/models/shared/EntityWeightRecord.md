@@ -1,0 +1,9 @@
+# EntityWeightRecord
+
+
+## Fields
+
+| Field                                                                                                            | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `metadata`                                                                                                       | [ai.whylabs.WhyLabs.models.shared.EntityWeightRecordMetadata](../../models/shared/EntityWeightRecordMetadata.md) | :heavy_minus_sign:                                                                                               | N/A                                                                                                              |
+| `segmentWeights`                                                                                                 | List<[ai.whylabs.WhyLabs.models.shared.SegmentWeight](../../models/shared/SegmentWeight.md)>                     | :heavy_minus_sign:                                                                                               | A list of entity weights for a segment                                                                           |

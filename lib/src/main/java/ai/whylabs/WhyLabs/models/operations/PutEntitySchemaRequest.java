@@ -7,6 +7,7 @@ package ai.whylabs.WhyLabs.models.operations;
 import ai.whylabs.WhyLabs.utils.SpeakeasyMetadata;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+
 public class PutEntitySchemaRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public ai.whylabs.WhyLabs.models.shared.EntitySchema entitySchema;

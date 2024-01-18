@@ -1,0 +1,10 @@
+# DTOJobsSparkJarTaskDTO
+
+
+## Fields
+
+| Field                                                                                  | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `jarUri`                                                                               | *String*                                                                               | :heavy_minus_sign:                                                                     | N/A                                                                                    |
+| `mainClassName`                                                                        | *String*                                                                               | :heavy_minus_sign:                                                                     | N/A                                                                                    |
+| `parameters`                                                                           | List<[ai.whylabs.WhyLabs.models.shared.Parameters](../../models/shared/Parameters.md)> | :heavy_minus_sign:                                                                     | N/A                                                                                    |

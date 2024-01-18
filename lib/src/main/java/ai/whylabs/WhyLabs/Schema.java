@@ -21,11 +21,10 @@ public class Schema {
      * Get the current supported schema of the monitor configuration
      * Get the current supported schema of the  monitor configuration
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.GetMonitorConfigSchemaResponse getMonitorConfigSchema(ai.whylabs.WhyLabs.models.operations.GetMonitorConfigSchemaRequest request, ai.whylabs.WhyLabs.models.operations.GetMonitorConfigSchemaSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.GetMonitorConfigSchemaResponse getMonitorConfigSchema(ai.whylabs.WhyLabs.models.operations.GetMonitorConfigSchemaRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.GetMonitorConfigSchemaRequest.class, baseUrl, "/v0/organizations/{org_id}/schema/monitor-config", request, null);
         
@@ -34,23 +33,22 @@ public class Schema {
         req.setURL(url);
 
         req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.GetMonitorConfigSchemaResponse res = new ai.whylabs.WhyLabs.models.operations.GetMonitorConfigSchemaResponse(contentType, httpRes.statusCode()) {{
-            getMonitorConfigSchemaDefaultApplicationJSONString = null;
+        
+        ai.whylabs.WhyLabs.models.operations.GetMonitorConfigSchemaResponse res = new ai.whylabs.WhyLabs.models.operations.GetMonitorConfigSchemaResponse(contentType, httpRes.statusCode(), httpRes) {{
+            res = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
                 String out = new String(httpRes.body(), StandardCharsets.UTF_8);
-                res.getMonitorConfigSchemaDefaultApplicationJSONString = out;
+                res.res = out;
             }
         }
 

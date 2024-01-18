@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * CreateReferenceProfileRequest - Request payload for CreateReferenceProfile.
  */
+
 public class CreateReferenceProfileRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alias")
@@ -27,6 +28,15 @@ public class CreateReferenceProfileRequest {
 
     public CreateReferenceProfileRequest withDatasetTimestamp(Long datasetTimestamp) {
         this.datasetTimestamp = datasetTimestamp;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("region")
+    public String region;
+
+    public CreateReferenceProfileRequest withRegion(String region) {
+        this.region = region;
         return this;
     }
     

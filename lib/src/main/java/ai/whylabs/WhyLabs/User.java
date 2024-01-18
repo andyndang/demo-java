@@ -25,11 +25,10 @@ public class User {
      * Create a user.
      * Create a user.
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.CreateUserResponse createUser(ai.whylabs.WhyLabs.models.shared.CreateUserRequest request, ai.whylabs.WhyLabs.models.operations.CreateUserSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.CreateUserResponse createUser(ai.whylabs.WhyLabs.models.shared.CreateUserRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(baseUrl, "/v0/user");
         
@@ -43,18 +42,17 @@ public class User {
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.CreateUserResponse res = new ai.whylabs.WhyLabs.models.operations.CreateUserResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.CreateUserResponse res = new ai.whylabs.WhyLabs.models.operations.CreateUserResponse(contentType, httpRes.statusCode(), httpRes) {{
             user = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -71,11 +69,10 @@ public class User {
      * Get a user by their id.
      * Get a user by their id.
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.GetUserResponse getUser(ai.whylabs.WhyLabs.models.operations.GetUserRequest request, ai.whylabs.WhyLabs.models.operations.GetUserSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.GetUserResponse getUser(ai.whylabs.WhyLabs.models.operations.GetUserRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.GetUserRequest.class, baseUrl, "/v0/user/{user_id}", request, null);
         
@@ -84,18 +81,17 @@ public class User {
         req.setURL(url);
 
         req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.GetUserResponse res = new ai.whylabs.WhyLabs.models.operations.GetUserResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.GetUserResponse res = new ai.whylabs.WhyLabs.models.operations.GetUserResponse(contentType, httpRes.statusCode(), httpRes) {{
             user = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -112,11 +108,10 @@ public class User {
      * Get a user by their email.
      * Get a user by their email.
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.GetUserByEmailResponse getUserByEmail(ai.whylabs.WhyLabs.models.operations.GetUserByEmailRequest request, ai.whylabs.WhyLabs.models.operations.GetUserByEmailSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.GetUserByEmailResponse getUserByEmail(ai.whylabs.WhyLabs.models.operations.GetUserByEmailRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(baseUrl, "/v0/user");
         
@@ -125,7 +120,7 @@ public class User {
         req.setURL(url);
 
         req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         java.util.List<NameValuePair> queryParams = ai.whylabs.WhyLabs.utils.Utils.getQueryParams(ai.whylabs.WhyLabs.models.operations.GetUserByEmailRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
@@ -133,16 +128,15 @@ public class User {
             }
         }
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.GetUserByEmailResponse res = new ai.whylabs.WhyLabs.models.operations.GetUserByEmailResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.GetUserByEmailResponse res = new ai.whylabs.WhyLabs.models.operations.GetUserByEmailResponse(contentType, httpRes.statusCode(), httpRes) {{
             user = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -159,11 +153,10 @@ public class User {
      * Update a user.
      * Update a user.
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.UpdateUserResponse updateUser(ai.whylabs.WhyLabs.models.shared.User request, ai.whylabs.WhyLabs.models.operations.UpdateUserSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.UpdateUserResponse updateUser(ai.whylabs.WhyLabs.models.shared.User request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(baseUrl, "/v0/user");
         
@@ -177,18 +170,17 @@ public class User {
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.UpdateUserResponse res = new ai.whylabs.WhyLabs.models.operations.UpdateUserResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.UpdateUserResponse res = new ai.whylabs.WhyLabs.models.operations.UpdateUserResponse(contentType, httpRes.statusCode(), httpRes) {{
             user = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {

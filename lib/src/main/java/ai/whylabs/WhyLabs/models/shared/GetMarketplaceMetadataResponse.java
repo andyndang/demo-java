@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * GetMarketplaceMetadataResponse - Response for listing organization
  */
+
 public class GetMarketplaceMetadataResponse {
     @JsonProperty("metadata")
     public AWSMarketplaceMetadata metadata;

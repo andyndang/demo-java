@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * EntitySchema - Entity schema for a dataset
  */
+
 public class EntitySchema {
     /**
      * Column schema for a given column

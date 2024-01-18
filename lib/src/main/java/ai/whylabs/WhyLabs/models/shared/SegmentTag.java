@@ -4,12 +4,13 @@
 
 package ai.whylabs.WhyLabs.models.shared;
 
-import com.fasterxml.jackson.annotation.JsonInclude.Include;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+/**
+ * SegmentTag - A key value tag
+ */
+
 public class SegmentTag {
-    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
 
@@ -18,7 +19,6 @@ public class SegmentTag {
         return this;
     }
     
-    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
 
@@ -27,5 +27,8 @@ public class SegmentTag {
         return this;
     }
     
-    public SegmentTag(){}
+    public SegmentTag(@JsonProperty("key") String key, @JsonProperty("value") String value) {
+        this.key = key;
+        this.value = value;
+  }
 }

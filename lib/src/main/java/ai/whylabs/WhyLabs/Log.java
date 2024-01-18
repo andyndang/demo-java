@@ -21,14 +21,57 @@ public class Log {
 	}
 
     /**
-     * Like /log, except this api doesn't take the actual profile content. It returns an upload link that can be used to upload the profile to.
-     * Like /log, except this api doesn't take the actual profile content. It returns an upload link that can be used to upload the profile to.
+     * Get observatory links for profiles in a given org/model. A max of 3 profiles can be viewed a a time.
+     * Get observatory links for profiles in a given org/model. A max of 3 profiles can be viewed a a time.
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.LogAsyncResponse logAsync(ai.whylabs.WhyLabs.models.operations.LogAsyncRequest request, ai.whylabs.WhyLabs.models.operations.LogAsyncSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.GetProfileObservatoryLinkResponse getProfileObservatoryLink(ai.whylabs.WhyLabs.models.operations.GetProfileObservatoryLinkRequest request) throws Exception {
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.GetProfileObservatoryLinkRequest.class, baseUrl, "/v0/organizations/{org_id}/log/observatory-link/{dataset_id}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = ai.whylabs.WhyLabs.utils.Utils.serializeRequestBody(request, "getProfileObservatoryLinkRequest", "json");
+        if (serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
+        req.setBody(serializedRequestBody);
+
+        req.addHeader("Accept", "application/json");
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
+        
+        HTTPClient client = this.sdkConfiguration.securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+        
+        ai.whylabs.WhyLabs.models.operations.GetProfileObservatoryLinkResponse res = new ai.whylabs.WhyLabs.models.operations.GetProfileObservatoryLinkResponse(contentType, httpRes.statusCode(), httpRes) {{
+            getProfileObservatoryLinkResponse = null;
+        }};
+        
+        if (true) {
+            if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                ai.whylabs.WhyLabs.models.shared.GetProfileObservatoryLinkResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), ai.whylabs.WhyLabs.models.shared.GetProfileObservatoryLinkResponse.class);
+                res.getProfileObservatoryLinkResponse = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Like /log, except this api doesn't take the actual profile content. It returns an upload link that can be used to upload the profile to.
+     * Like /log, except this api doesn't take the actual profile content. It returns an upload link that can be used to upload the profile to.
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public ai.whylabs.WhyLabs.models.operations.LogAsyncResponse logAsync(ai.whylabs.WhyLabs.models.operations.LogAsyncRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.LogAsyncRequest.class, baseUrl, "/v0/organizations/{org_id}/log/async/{dataset_id}", request, null);
         
@@ -42,18 +85,17 @@ public class Log {
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.LogAsyncResponse res = new ai.whylabs.WhyLabs.models.operations.LogAsyncResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.LogAsyncResponse res = new ai.whylabs.WhyLabs.models.operations.LogAsyncResponse(contentType, httpRes.statusCode(), httpRes) {{
             asyncLogResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -70,11 +112,10 @@ public class Log {
      * Returns a presigned URL for uploading the reference profile to.
      * Reference profiles can be used for.
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.LogReferenceResponse logReference(ai.whylabs.WhyLabs.models.operations.LogReferenceRequest request, ai.whylabs.WhyLabs.models.operations.LogReferenceSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.LogReferenceResponse logReference(ai.whylabs.WhyLabs.models.operations.LogReferenceRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.LogReferenceRequest.class, baseUrl, "/v0/organizations/{org_id}/log/reference/{model_id}", request, null);
         
@@ -88,18 +129,17 @@ public class Log {
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.LogReferenceResponse res = new ai.whylabs.WhyLabs.models.operations.LogReferenceResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.LogReferenceResponse res = new ai.whylabs.WhyLabs.models.operations.LogReferenceResponse(contentType, httpRes.statusCode(), httpRes) {{
             logReferenceResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {

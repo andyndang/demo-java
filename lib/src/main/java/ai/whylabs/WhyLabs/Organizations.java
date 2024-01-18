@@ -25,11 +25,10 @@ public class Organizations {
      * Create an organization
      * Create an organization
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.CreateOrganizationResponse createOrganization(ai.whylabs.WhyLabs.models.operations.CreateOrganizationRequest request, ai.whylabs.WhyLabs.models.operations.CreateOrganizationSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.CreateOrganizationResponse createOrganization(ai.whylabs.WhyLabs.models.operations.CreateOrganizationRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(baseUrl, "/v0/organizations");
         
@@ -38,7 +37,7 @@ public class Organizations {
         req.setURL(url);
 
         req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         java.util.List<NameValuePair> queryParams = ai.whylabs.WhyLabs.utils.Utils.getQueryParams(ai.whylabs.WhyLabs.models.operations.CreateOrganizationRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
@@ -46,16 +45,15 @@ public class Organizations {
             }
         }
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.CreateOrganizationResponse res = new ai.whylabs.WhyLabs.models.operations.CreateOrganizationResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.CreateOrganizationResponse res = new ai.whylabs.WhyLabs.models.operations.CreateOrganizationResponse(contentType, httpRes.statusCode(), httpRes) {{
             organizationSummary = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -72,11 +70,10 @@ public class Organizations {
      * Delete an org
      * Delete an org
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.DeleteOrganizationResponse deleteOrganization(ai.whylabs.WhyLabs.models.operations.DeleteOrganizationRequest request, ai.whylabs.WhyLabs.models.operations.DeleteOrganizationSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.DeleteOrganizationResponse deleteOrganization(ai.whylabs.WhyLabs.models.operations.DeleteOrganizationRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.DeleteOrganizationRequest.class, baseUrl, "/v0/organizations/{org_id}", request, null);
         
@@ -85,18 +82,17 @@ public class Organizations {
         req.setURL(url);
 
         req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.DeleteOrganizationResponse res = new ai.whylabs.WhyLabs.models.operations.DeleteOrganizationResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.DeleteOrganizationResponse res = new ai.whylabs.WhyLabs.models.operations.DeleteOrganizationResponse(contentType, httpRes.statusCode(), httpRes) {{
             response = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -113,11 +109,10 @@ public class Organizations {
      * Get marketplace metadata for an org if any exists.
      * Get marketplace metadata for an org if any exists.
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.GetAWSMarketplaceMetadataResponse getAWSMarketplaceMetadata(ai.whylabs.WhyLabs.models.operations.GetAWSMarketplaceMetadataRequest request, ai.whylabs.WhyLabs.models.operations.GetAWSMarketplaceMetadataSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.GetAWSMarketplaceMetadataResponse getAWSMarketplaceMetadata(ai.whylabs.WhyLabs.models.operations.GetAWSMarketplaceMetadataRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.GetAWSMarketplaceMetadataRequest.class, baseUrl, "/v0/organizations/{org_id}/marketplace-metadata/", request, null);
         
@@ -126,18 +121,17 @@ public class Organizations {
         req.setURL(url);
 
         req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.GetAWSMarketplaceMetadataResponse res = new ai.whylabs.WhyLabs.models.operations.GetAWSMarketplaceMetadataResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.GetAWSMarketplaceMetadataResponse res = new ai.whylabs.WhyLabs.models.operations.GetAWSMarketplaceMetadataResponse(contentType, httpRes.statusCode(), httpRes) {{
             getMarketplaceMetadataResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -154,11 +148,10 @@ public class Organizations {
      * Get the metadata about an organization.
      * Returns various metadata about an organization
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.GetOrganizationResponse getOrganization(ai.whylabs.WhyLabs.models.operations.GetOrganizationRequest request, ai.whylabs.WhyLabs.models.operations.GetOrganizationSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.GetOrganizationResponse getOrganization(ai.whylabs.WhyLabs.models.operations.GetOrganizationRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.GetOrganizationRequest.class, baseUrl, "/v0/organizations/{org_id}", request, null);
         
@@ -167,18 +160,17 @@ public class Organizations {
         req.setURL(url);
 
         req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.GetOrganizationResponse res = new ai.whylabs.WhyLabs.models.operations.GetOrganizationResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.GetOrganizationResponse res = new ai.whylabs.WhyLabs.models.operations.GetOrganizationResponse(contentType, httpRes.statusCode(), httpRes) {{
             organizationMetadata = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -194,11 +186,10 @@ public class Organizations {
     /**
      * Get a list of all of the organization ids.
      * Get a list of all of the organization ids.
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.ListOrganizationsResponse listOrganizations(ai.whylabs.WhyLabs.models.operations.ListOrganizationsSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.ListOrganizationsResponse listOrganizations() throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(baseUrl, "/v0/organizations");
         
@@ -207,18 +198,17 @@ public class Organizations {
         req.setURL(url);
 
         req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.ListOrganizationsResponse res = new ai.whylabs.WhyLabs.models.operations.ListOrganizationsResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.ListOrganizationsResponse res = new ai.whylabs.WhyLabs.models.operations.ListOrganizationsResponse(contentType, httpRes.statusCode(), httpRes) {{
             listOrganizationsResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -235,13 +225,12 @@ public class Organizations {
      * Update some fields of an organization to non-null values
      * Update some fields of an organization to non-null values, leaving all other existing values the same
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
-     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
      */
     @Deprecated
-    public ai.whylabs.WhyLabs.models.operations.PartiallyUpdateOrgResponse partiallyUpdateOrg(ai.whylabs.WhyLabs.models.operations.PartiallyUpdateOrgRequest request, ai.whylabs.WhyLabs.models.operations.PartiallyUpdateOrgSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.PartiallyUpdateOrgResponse partiallyUpdateOrg(ai.whylabs.WhyLabs.models.operations.PartiallyUpdateOrgRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(baseUrl, "/v0/organizations/partial/");
         
@@ -255,7 +244,7 @@ public class Organizations {
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         java.util.List<NameValuePair> queryParams = ai.whylabs.WhyLabs.utils.Utils.getQueryParams(ai.whylabs.WhyLabs.models.operations.PartiallyUpdateOrgRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
@@ -263,16 +252,15 @@ public class Organizations {
             }
         }
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.PartiallyUpdateOrgResponse res = new ai.whylabs.WhyLabs.models.operations.PartiallyUpdateOrgResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.PartiallyUpdateOrgResponse res = new ai.whylabs.WhyLabs.models.operations.PartiallyUpdateOrgResponse(contentType, httpRes.statusCode(), httpRes) {{
             organizationSummary = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -289,11 +277,10 @@ public class Organizations {
      * Update some fields of an organization to non-null values
      * Update some fields of an organization to non-null values, leaving all other existing values the same
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.PartiallyUpdateOrganizationResponse partiallyUpdateOrganization(ai.whylabs.WhyLabs.models.operations.PartiallyUpdateOrganizationRequest request, ai.whylabs.WhyLabs.models.operations.PartiallyUpdateOrganizationSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.PartiallyUpdateOrganizationResponse partiallyUpdateOrganization(ai.whylabs.WhyLabs.models.operations.PartiallyUpdateOrganizationRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.PartiallyUpdateOrganizationRequest.class, baseUrl, "/v0/organizations/partial/{org_id}", request, null);
         
@@ -302,7 +289,7 @@ public class Organizations {
         req.setURL(url);
 
         req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         java.util.List<NameValuePair> queryParams = ai.whylabs.WhyLabs.utils.Utils.getQueryParams(ai.whylabs.WhyLabs.models.operations.PartiallyUpdateOrganizationRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
@@ -310,16 +297,15 @@ public class Organizations {
             }
         }
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.PartiallyUpdateOrganizationResponse res = new ai.whylabs.WhyLabs.models.operations.PartiallyUpdateOrganizationResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.PartiallyUpdateOrganizationResponse res = new ai.whylabs.WhyLabs.models.operations.PartiallyUpdateOrganizationResponse(contentType, httpRes.statusCode(), httpRes) {{
             organizationSummary = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -336,13 +322,12 @@ public class Organizations {
      * Update an existing organization
      * Update all fields of an existing organization
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
-     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
      */
     @Deprecated
-    public ai.whylabs.WhyLabs.models.operations.UpdateOrgResponse updateOrg(ai.whylabs.WhyLabs.models.operations.UpdateOrgRequest request, ai.whylabs.WhyLabs.models.operations.UpdateOrgSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.UpdateOrgResponse updateOrg(ai.whylabs.WhyLabs.models.operations.UpdateOrgRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(baseUrl, "/v0/organizations");
         
@@ -356,7 +341,7 @@ public class Organizations {
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         java.util.List<NameValuePair> queryParams = ai.whylabs.WhyLabs.utils.Utils.getQueryParams(ai.whylabs.WhyLabs.models.operations.UpdateOrgRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
@@ -364,16 +349,15 @@ public class Organizations {
             }
         }
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.UpdateOrgResponse res = new ai.whylabs.WhyLabs.models.operations.UpdateOrgResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.UpdateOrgResponse res = new ai.whylabs.WhyLabs.models.operations.UpdateOrgResponse(contentType, httpRes.statusCode(), httpRes) {{
             organizationSummary = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {
@@ -390,11 +374,10 @@ public class Organizations {
      * Update an existing organization
      * Update all fields of an existing organization
      * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public ai.whylabs.WhyLabs.models.operations.UpdateOrganizationResponse updateOrganization(ai.whylabs.WhyLabs.models.operations.UpdateOrganizationRequest request, ai.whylabs.WhyLabs.models.operations.UpdateOrganizationSecurity security) throws Exception {
+    public ai.whylabs.WhyLabs.models.operations.UpdateOrganizationResponse updateOrganization(ai.whylabs.WhyLabs.models.operations.UpdateOrganizationRequest request) throws Exception {
         String baseUrl = this.sdkConfiguration.serverUrl;
         String url = ai.whylabs.WhyLabs.utils.Utils.generateURL(ai.whylabs.WhyLabs.models.operations.UpdateOrganizationRequest.class, baseUrl, "/v0/organizations/{org_id}", request, null);
         
@@ -403,7 +386,7 @@ public class Organizations {
         req.setURL(url);
 
         req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         java.util.List<NameValuePair> queryParams = ai.whylabs.WhyLabs.utils.Utils.getQueryParams(ai.whylabs.WhyLabs.models.operations.UpdateOrganizationRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
@@ -411,16 +394,15 @@ public class Organizations {
             }
         }
         
-        HTTPClient client = ai.whylabs.WhyLabs.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        ai.whylabs.WhyLabs.models.operations.UpdateOrganizationResponse res = new ai.whylabs.WhyLabs.models.operations.UpdateOrganizationResponse(contentType, httpRes.statusCode()) {{
+        
+        ai.whylabs.WhyLabs.models.operations.UpdateOrganizationResponse res = new ai.whylabs.WhyLabs.models.operations.UpdateOrganizationResponse(contentType, httpRes.statusCode(), httpRes) {{
             organizationSummary = null;
         }};
-        res.rawResponse = httpRes;
         
         if (true) {
             if (ai.whylabs.WhyLabs.utils.Utils.matchContentType(contentType, "application/json")) {

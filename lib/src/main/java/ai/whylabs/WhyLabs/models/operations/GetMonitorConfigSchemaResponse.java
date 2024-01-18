@@ -7,7 +7,11 @@ package ai.whylabs.WhyLabs.models.operations;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
+
 public class GetMonitorConfigSchemaResponse {
+    /**
+     * HTTP response content type for this operation
+     */
     
     public String contentType;
 
@@ -17,16 +21,8 @@ public class GetMonitorConfigSchemaResponse {
     }
     
     /**
-     * GetMonitorConfigSchema default response
+     * HTTP response status code for this operation
      */
-    
-    public String getMonitorConfigSchemaDefaultApplicationJSONString;
-
-    public GetMonitorConfigSchemaResponse withGetMonitorConfigSchemaDefaultApplicationJSONString(String getMonitorConfigSchemaDefaultApplicationJSONString) {
-        this.getMonitorConfigSchemaDefaultApplicationJSONString = getMonitorConfigSchemaDefaultApplicationJSONString;
-        return this;
-    }
-    
     
     public Integer statusCode;
 
@@ -35,6 +31,9 @@ public class GetMonitorConfigSchemaResponse {
         return this;
     }
     
+    /**
+     * Raw HTTP response; suitable for custom response parsing
+     */
     
     public HttpResponse<byte[]> rawResponse;
 
@@ -43,8 +42,20 @@ public class GetMonitorConfigSchemaResponse {
         return this;
     }
     
-    public GetMonitorConfigSchemaResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+    /**
+     * GetMonitorConfigSchema default response
+     */
+    
+    public String res;
+
+    public GetMonitorConfigSchemaResponse withRes(String res) {
+        this.res = res;
+        return this;
+    }
+    
+    public GetMonitorConfigSchemaResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode, @JsonProperty("RawResponse") HttpResponse<byte[]> rawResponse) {
         this.contentType = contentType;
         this.statusCode = statusCode;
+        this.rawResponse = rawResponse;
   }
 }

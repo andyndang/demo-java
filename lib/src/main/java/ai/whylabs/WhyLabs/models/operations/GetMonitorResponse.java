@@ -7,7 +7,11 @@ package ai.whylabs.WhyLabs.models.operations;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
+
 public class GetMonitorResponse {
+    /**
+     * HTTP response content type for this operation
+     */
     
     public String contentType;
 
@@ -17,16 +21,8 @@ public class GetMonitorResponse {
     }
     
     /**
-     * GetMonitor default response
+     * HTTP response status code for this operation
      */
-    
-    public String getMonitorDefaultApplicationJSONString;
-
-    public GetMonitorResponse withGetMonitorDefaultApplicationJSONString(String getMonitorDefaultApplicationJSONString) {
-        this.getMonitorDefaultApplicationJSONString = getMonitorDefaultApplicationJSONString;
-        return this;
-    }
-    
     
     public Integer statusCode;
 
@@ -35,6 +31,9 @@ public class GetMonitorResponse {
         return this;
     }
     
+    /**
+     * Raw HTTP response; suitable for custom response parsing
+     */
     
     public HttpResponse<byte[]> rawResponse;
 
@@ -43,8 +42,20 @@ public class GetMonitorResponse {
         return this;
     }
     
-    public GetMonitorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+    /**
+     * GetMonitor default response
+     */
+    
+    public String res;
+
+    public GetMonitorResponse withRes(String res) {
+        this.res = res;
+        return this;
+    }
+    
+    public GetMonitorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode, @JsonProperty("RawResponse") HttpResponse<byte[]> rawResponse) {
         this.contentType = contentType;
         this.statusCode = statusCode;
+        this.rawResponse = rawResponse;
   }
 }

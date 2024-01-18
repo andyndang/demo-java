@@ -7,7 +7,11 @@ package ai.whylabs.WhyLabs.models.operations;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
+
 public class GetAnalyzerResponse {
+    /**
+     * HTTP response content type for this operation
+     */
     
     public String contentType;
 
@@ -17,16 +21,8 @@ public class GetAnalyzerResponse {
     }
     
     /**
-     * GetAnalyzer default response
+     * HTTP response status code for this operation
      */
-    
-    public String getAnalyzerDefaultApplicationJSONString;
-
-    public GetAnalyzerResponse withGetAnalyzerDefaultApplicationJSONString(String getAnalyzerDefaultApplicationJSONString) {
-        this.getAnalyzerDefaultApplicationJSONString = getAnalyzerDefaultApplicationJSONString;
-        return this;
-    }
-    
     
     public Integer statusCode;
 
@@ -35,6 +31,9 @@ public class GetAnalyzerResponse {
         return this;
     }
     
+    /**
+     * Raw HTTP response; suitable for custom response parsing
+     */
     
     public HttpResponse<byte[]> rawResponse;
 
@@ -43,8 +42,20 @@ public class GetAnalyzerResponse {
         return this;
     }
     
-    public GetAnalyzerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+    /**
+     * GetAnalyzer default response
+     */
+    
+    public String res;
+
+    public GetAnalyzerResponse withRes(String res) {
+        this.res = res;
+        return this;
+    }
+    
+    public GetAnalyzerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode, @JsonProperty("RawResponse") HttpResponse<byte[]> rawResponse) {
         this.contentType = contentType;
         this.statusCode = statusCode;
+        this.rawResponse = rawResponse;
   }
 }

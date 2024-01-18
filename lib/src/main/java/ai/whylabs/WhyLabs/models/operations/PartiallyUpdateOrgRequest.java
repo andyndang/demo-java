@@ -7,6 +7,7 @@ package ai.whylabs.WhyLabs.models.operations;
 import ai.whylabs.WhyLabs.utils.SpeakeasyMetadata;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+
 public class PartiallyUpdateOrgRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public PartiallyUpdateOrgRequestBody requestBody;

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * LogAsyncRequest - Request payload for LogAsync.
  */
+
 public class LogAsyncRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datasetTimestamp")
@@ -18,6 +19,15 @@ public class LogAsyncRequest {
 
     public LogAsyncRequest withDatasetTimestamp(Long datasetTimestamp) {
         this.datasetTimestamp = datasetTimestamp;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("region")
+    public String region;
+
+    public LogAsyncRequest withRegion(String region) {
+        this.region = region;
         return this;
     }
     

@@ -7,7 +7,11 @@ package ai.whylabs.WhyLabs.models.operations;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
+
 public class UpdateNotificationActionResponse {
+    /**
+     * HTTP response content type for this operation
+     */
     
     public String contentType;
 
@@ -16,6 +20,9 @@ public class UpdateNotificationActionResponse {
         return this;
     }
     
+    /**
+     * HTTP response status code for this operation
+     */
     
     public Integer statusCode;
 
@@ -24,6 +31,9 @@ public class UpdateNotificationActionResponse {
         return this;
     }
     
+    /**
+     * Raw HTTP response; suitable for custom response parsing
+     */
     
     public HttpResponse<byte[]> rawResponse;
 
@@ -36,15 +46,16 @@ public class UpdateNotificationActionResponse {
      * UpdateNotificationAction default response
      */
     
-    public java.util.Map<String, Object> void_;
+    public ai.whylabs.WhyLabs.models.shared.Void void_;
 
-    public UpdateNotificationActionResponse withVoid(java.util.Map<String, Object> void_) {
+    public UpdateNotificationActionResponse withVoid(ai.whylabs.WhyLabs.models.shared.Void void_) {
         this.void_ = void_;
         return this;
     }
     
-    public UpdateNotificationActionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+    public UpdateNotificationActionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode, @JsonProperty("RawResponse") HttpResponse<byte[]> rawResponse) {
         this.contentType = contentType;
         this.statusCode = statusCode;
+        this.rawResponse = rawResponse;
   }
 }

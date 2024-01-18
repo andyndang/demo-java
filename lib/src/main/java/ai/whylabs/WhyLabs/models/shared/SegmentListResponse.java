@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * SegmentListResponse - A segment list response.
  */
+
 public class SegmentListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modelId")

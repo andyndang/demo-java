@@ -7,7 +7,11 @@ package ai.whylabs.WhyLabs.models.operations;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
+
 public class ListReferenceProfilesResponse {
+    /**
+     * HTTP response content type for this operation
+     */
     
     public String contentType;
 
@@ -17,16 +21,8 @@ public class ListReferenceProfilesResponse {
     }
     
     /**
-     * The metadata for the summarized dataset profile including paths to JSON and protobuf data
+     * HTTP response status code for this operation
      */
-    
-    public ai.whylabs.WhyLabs.models.shared.ReferenceProfileItemResponse[] referenceProfileItemResponses;
-
-    public ListReferenceProfilesResponse withReferenceProfileItemResponses(ai.whylabs.WhyLabs.models.shared.ReferenceProfileItemResponse[] referenceProfileItemResponses) {
-        this.referenceProfileItemResponses = referenceProfileItemResponses;
-        return this;
-    }
-    
     
     public Integer statusCode;
 
@@ -35,6 +31,9 @@ public class ListReferenceProfilesResponse {
         return this;
     }
     
+    /**
+     * Raw HTTP response; suitable for custom response parsing
+     */
     
     public HttpResponse<byte[]> rawResponse;
 
@@ -43,8 +42,20 @@ public class ListReferenceProfilesResponse {
         return this;
     }
     
-    public ListReferenceProfilesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+    /**
+     * The metadata for the summarized dataset profile including paths to JSON and protobuf data
+     */
+    
+    public ai.whylabs.WhyLabs.models.shared.ReferenceProfileItemResponse[] classes;
+
+    public ListReferenceProfilesResponse withClasses(ai.whylabs.WhyLabs.models.shared.ReferenceProfileItemResponse[] classes) {
+        this.classes = classes;
+        return this;
+    }
+    
+    public ListReferenceProfilesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode, @JsonProperty("RawResponse") HttpResponse<byte[]> rawResponse) {
         this.contentType = contentType;
         this.statusCode = statusCode;
+        this.rawResponse = rawResponse;
   }
 }

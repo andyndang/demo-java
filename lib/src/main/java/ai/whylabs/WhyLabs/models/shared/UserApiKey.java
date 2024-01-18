@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * UserApiKey - Response when creating an API key successfully
  */
+
 public class UserApiKey {
     /**
      * Human-readable alias for the key

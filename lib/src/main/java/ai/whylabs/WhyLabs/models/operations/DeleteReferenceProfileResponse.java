@@ -7,7 +7,11 @@ package ai.whylabs.WhyLabs.models.operations;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
+
 public class DeleteReferenceProfileResponse {
+    /**
+     * HTTP response content type for this operation
+     */
     
     public String contentType;
 
@@ -17,16 +21,8 @@ public class DeleteReferenceProfileResponse {
     }
     
     /**
-     * true if successful, false if we encounter failures
+     * HTTP response status code for this operation
      */
-    
-    public Boolean deleteReferenceProfileDefaultApplicationJSONBoolean;
-
-    public DeleteReferenceProfileResponse withDeleteReferenceProfileDefaultApplicationJSONBoolean(Boolean deleteReferenceProfileDefaultApplicationJSONBoolean) {
-        this.deleteReferenceProfileDefaultApplicationJSONBoolean = deleteReferenceProfileDefaultApplicationJSONBoolean;
-        return this;
-    }
-    
     
     public Integer statusCode;
 
@@ -35,6 +31,9 @@ public class DeleteReferenceProfileResponse {
         return this;
     }
     
+    /**
+     * Raw HTTP response; suitable for custom response parsing
+     */
     
     public HttpResponse<byte[]> rawResponse;
 
@@ -43,8 +42,20 @@ public class DeleteReferenceProfileResponse {
         return this;
     }
     
-    public DeleteReferenceProfileResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+    /**
+     * true if successful, false if we encounter failures
+     */
+    
+    public Boolean boolean_;
+
+    public DeleteReferenceProfileResponse withBoolean(Boolean boolean_) {
+        this.boolean_ = boolean_;
+        return this;
+    }
+    
+    public DeleteReferenceProfileResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode, @JsonProperty("RawResponse") HttpResponse<byte[]> rawResponse) {
         this.contentType = contentType;
         this.statusCode = statusCode;
+        this.rawResponse = rawResponse;
   }
 }

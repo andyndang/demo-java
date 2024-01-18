@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * LogReferenceRequest - Request payload for LogReference.
  */
+
 public class LogReferenceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alias")
@@ -27,6 +28,15 @@ public class LogReferenceRequest {
 
     public LogReferenceRequest withDatasetTimestamp(Long datasetTimestamp) {
         this.datasetTimestamp = datasetTimestamp;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("region")
+    public String region;
+
+    public LogReferenceRequest withRegion(String region) {
+        this.region = region;
         return this;
     }
     

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * AsyncLogResponse - Response payload for LogAsync.
  */
+
 public class AsyncLogResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")

@@ -6,9 +6,7 @@ package ai.whylabs.WhyLabs.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-/**
- * RefreshConnectionByOrgIdResponse - RefreshConnection default response
- */
+
 public class RefreshConnectionByOrgIdResponse {
     @JsonProperty("connection")
     public DatabricksConnection connection;

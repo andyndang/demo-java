@@ -1,20 +1,34 @@
-<!-- Start SDK Example Usage -->
+<!-- Start SDK Example Usage [usage] -->
 ```java
 package hello.world;
 
 import ai.whylabs.WhyLabs.Songbird;
-import ai.whylabs.WhyLabs.models.operations.PostMonitorConfigValidationJobResponse;
-import ai.whylabs.WhyLabs.models.operations.PostMonitorConfigValidationJobSecurity;
+import ai.whylabs.WhyLabs.models.operations.CreateAccountUserRequest;
+import ai.whylabs.WhyLabs.models.operations.CreateAccountUserResponse;
+import ai.whylabs.WhyLabs.models.shared.CreateAccountUserRequest;
+import ai.whylabs.WhyLabs.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Songbird sdk = Songbird.builder()
+                .setSecurity(new Security(
+                ){{
+                    apiKeyAuth = "<YOUR_API_KEY_HERE>";
+                }})
                 .build();
 
-            PostMonitorConfigValidationJobResponse res = sdk.admin.postMonitorConfigValidationJob(new PostMonitorConfigValidationJobSecurity("corrupti") {{
-                apiKeyAuth = "YOUR_API_KEY_HERE";
-            }});
+            ai.whylabs.WhyLabs.models.operations.CreateAccountUserRequest req = new CreateAccountUserRequest(
+                new CreateAccountUserRequest(
+                    "string"){{
+                    active = false;
+                    externalId = "string";
+                    userSchema = "string";
+
+                }},
+                "org-123");
+
+            ai.whylabs.WhyLabs.models.operations.CreateAccountUserResponse res = sdk.account.createAccountUser(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -25,4 +39,4 @@ public class Application {
     }
 }
 ```
-<!-- End SDK Example Usage -->
+<!-- End SDK Example Usage [usage] -->

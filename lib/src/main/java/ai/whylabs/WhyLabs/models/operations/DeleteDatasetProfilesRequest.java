@@ -7,6 +7,7 @@ package ai.whylabs.WhyLabs.models.operations;
 import ai.whylabs.WhyLabs.utils.SpeakeasyMetadata;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+
 public class DeleteDatasetProfilesRequest {
     /**
      * Optional, scope deleting profiles uploaded prior to the timestamp
@@ -53,7 +54,7 @@ public class DeleteDatasetProfilesRequest {
     }
     
     /**
-     * Optional, scope deleting profiles more recently than the timestamp
+     * Optional, scope deleting profiles from and more recent than the timestamp
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=profile_start_timestamp")
     public Long profileStartTimestamp;

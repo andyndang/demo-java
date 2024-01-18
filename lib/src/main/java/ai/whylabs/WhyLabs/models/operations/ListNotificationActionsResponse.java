@@ -7,7 +7,11 @@ package ai.whylabs.WhyLabs.models.operations;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
+
 public class ListNotificationActionsResponse {
+    /**
+     * HTTP response content type for this operation
+     */
     
     public String contentType;
 
@@ -17,16 +21,8 @@ public class ListNotificationActionsResponse {
     }
     
     /**
-     * ListNotificationActions default response
+     * HTTP response status code for this operation
      */
-    
-    public ai.whylabs.WhyLabs.models.shared.NotificationAction[] notificationActions;
-
-    public ListNotificationActionsResponse withNotificationActions(ai.whylabs.WhyLabs.models.shared.NotificationAction[] notificationActions) {
-        this.notificationActions = notificationActions;
-        return this;
-    }
-    
     
     public Integer statusCode;
 
@@ -35,6 +31,9 @@ public class ListNotificationActionsResponse {
         return this;
     }
     
+    /**
+     * Raw HTTP response; suitable for custom response parsing
+     */
     
     public HttpResponse<byte[]> rawResponse;
 
@@ -43,8 +42,20 @@ public class ListNotificationActionsResponse {
         return this;
     }
     
-    public ListNotificationActionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+    /**
+     * ListNotificationActions default response
+     */
+    
+    public ai.whylabs.WhyLabs.models.shared.NotificationAction[] classes;
+
+    public ListNotificationActionsResponse withClasses(ai.whylabs.WhyLabs.models.shared.NotificationAction[] classes) {
+        this.classes = classes;
+        return this;
+    }
+    
+    public ListNotificationActionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode, @JsonProperty("RawResponse") HttpResponse<byte[]> rawResponse) {
         this.contentType = contentType;
         this.statusCode = statusCode;
+        this.rawResponse = rawResponse;
   }
 }

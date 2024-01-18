@@ -7,6 +7,7 @@ package ai.whylabs.WhyLabs.models.operations;
 import ai.whylabs.WhyLabs.utils.SpeakeasyMetadata;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+
 public class CreateReferenceProfileRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public ai.whylabs.WhyLabs.models.shared.CreateReferenceProfileRequest createReferenceProfileRequest;

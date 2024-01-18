@@ -7,7 +7,11 @@ package ai.whylabs.WhyLabs.models.operations;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
+
 public class DeleteEntitySchemaMetricResponse {
+    /**
+     * HTTP response content type for this operation
+     */
     
     public String contentType;
 
@@ -27,6 +31,9 @@ public class DeleteEntitySchemaMetricResponse {
         return this;
     }
     
+    /**
+     * HTTP response status code for this operation
+     */
     
     public Integer statusCode;
 
@@ -35,6 +42,9 @@ public class DeleteEntitySchemaMetricResponse {
         return this;
     }
     
+    /**
+     * Raw HTTP response; suitable for custom response parsing
+     */
     
     public HttpResponse<byte[]> rawResponse;
 
@@ -43,8 +53,9 @@ public class DeleteEntitySchemaMetricResponse {
         return this;
     }
     
-    public DeleteEntitySchemaMetricResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+    public DeleteEntitySchemaMetricResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode, @JsonProperty("RawResponse") HttpResponse<byte[]> rawResponse) {
         this.contentType = contentType;
         this.statusCode = statusCode;
+        this.rawResponse = rawResponse;
   }
 }

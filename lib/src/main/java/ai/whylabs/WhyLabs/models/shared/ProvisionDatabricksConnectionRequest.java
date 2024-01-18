@@ -6,6 +6,7 @@ package ai.whylabs.WhyLabs.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+
 public class ProvisionDatabricksConnectionRequest {
     @JsonProperty("email")
     public String email;

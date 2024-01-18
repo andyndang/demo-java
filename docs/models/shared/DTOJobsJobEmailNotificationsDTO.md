@@ -1,0 +1,11 @@
+# DTOJobsJobEmailNotificationsDTO
+
+
+## Fields
+
+| Field                                                                                | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `noAlertForSkippedRuns`                                                              | *Boolean*                                                                            | :heavy_minus_sign:                                                                   | N/A                                                                                  |
+| `onFailure`                                                                          | List<[ai.whylabs.WhyLabs.models.shared.OnFailure](../../models/shared/OnFailure.md)> | :heavy_minus_sign:                                                                   | N/A                                                                                  |
+| `onStart`                                                                            | List<[ai.whylabs.WhyLabs.models.shared.OnStart](../../models/shared/OnStart.md)>     | :heavy_minus_sign:                                                                   | N/A                                                                                  |
+| `onSuccess`                                                                          | List<[ai.whylabs.WhyLabs.models.shared.OnSuccess](../../models/shared/OnSuccess.md)> | :heavy_minus_sign:                                                                   | N/A                                                                                  |

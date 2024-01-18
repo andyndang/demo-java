@@ -1,0 +1,11 @@
+# LogTransactionMetadata
+
+
+## Fields
+
+| Field                                                                                     | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `datasetId`                                                                               | *String*                                                                                  | :heavy_minus_sign:                                                                        | N/A                                                                                       |
+| `expirationTime`                                                                          | [OffsetDateTime](https://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html) | :heavy_minus_sign:                                                                        | N/A                                                                                       |
+| `orgId`                                                                                   | *String*                                                                                  | :heavy_minus_sign:                                                                        | N/A                                                                                       |
+| `transactionId`                                                                           | *String*                                                                                  | :heavy_minus_sign:                                                                        | N/A                                                                                       |

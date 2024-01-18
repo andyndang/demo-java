@@ -7,6 +7,7 @@ package ai.whylabs.WhyLabs.models.operations;
 import ai.whylabs.WhyLabs.utils.SpeakeasyMetadata;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+
 public class CreateOrganizationRequest {
     /**
      * Domain associated with this organization
@@ -82,6 +83,14 @@ public class CreateOrganizationRequest {
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parent_org_id")
+    public String parentOrgId;
+
+    public CreateOrganizationRequest withParentOrgId(String parentOrgId) {
+        this.parentOrgId = parentOrgId;
+        return this;
+    }
+    
     /**
      * Slack Webhook that should be used for notifications for this organization
      */
@@ -90,6 +99,14 @@ public class CreateOrganizationRequest {
 
     public CreateOrganizationRequest withSlackWebhook(String slackWebhook) {
         this.slackWebhook = slackWebhook;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=storage_bucket_override")
+    public String storageBucketOverride;
+
+    public CreateOrganizationRequest withStorageBucketOverride(String storageBucketOverride) {
+        this.storageBucketOverride = storageBucketOverride;
         return this;
     }
     
